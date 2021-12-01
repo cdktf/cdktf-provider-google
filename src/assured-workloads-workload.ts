@@ -95,7 +95,7 @@ export interface AssuredWorkloadsWorkloadKmsSettings {
   readonly rotationPeriod: string;
 }
 
-function assuredWorkloadsWorkloadKmsSettingsToTerraform(struct?: AssuredWorkloadsWorkloadKmsSettingsOutputReference | AssuredWorkloadsWorkloadKmsSettings): any {
+export function assuredWorkloadsWorkloadKmsSettingsToTerraform(struct?: AssuredWorkloadsWorkloadKmsSettingsOutputReference | AssuredWorkloadsWorkloadKmsSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,6 +116,31 @@ export class AssuredWorkloadsWorkloadKmsSettingsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AssuredWorkloadsWorkloadKmsSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nextRotationTime) {
+      hasAnyValues = true;
+      internalValueResult.nextRotationTime = this._nextRotationTime;
+    }
+    if (this._rotationPeriod) {
+      hasAnyValues = true;
+      internalValueResult.rotationPeriod = this._rotationPeriod;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadKmsSettings | undefined) {
+    if (value === undefined) {
+      this._nextRotationTime = undefined;
+      this._rotationPeriod = undefined;
+    }
+    else {
+      this._nextRotationTime = value.nextRotationTime;
+      this._rotationPeriod = value.rotationPeriod;
+    }
+  }
+
   // next_rotation_time - computed: false, optional: false, required: true
   private _nextRotationTime?: string; 
   public get nextRotationTime() {
@@ -126,7 +151,7 @@ export class AssuredWorkloadsWorkloadKmsSettingsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get nextRotationTimeInput() {
-    return this._nextRotationTime
+    return this._nextRotationTime;
   }
 
   // rotation_period - computed: false, optional: false, required: true
@@ -139,7 +164,7 @@ export class AssuredWorkloadsWorkloadKmsSettingsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get rotationPeriodInput() {
-    return this._rotationPeriod
+    return this._rotationPeriod;
   }
 }
 export interface AssuredWorkloadsWorkloadResourceSettings {
@@ -157,7 +182,7 @@ export interface AssuredWorkloadsWorkloadResourceSettings {
   readonly resourceType?: string;
 }
 
-function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: AssuredWorkloadsWorkloadResourceSettings): any {
+export function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: AssuredWorkloadsWorkloadResourceSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -183,7 +208,7 @@ export interface AssuredWorkloadsWorkloadTimeouts {
   readonly update?: string;
 }
 
-function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWorkloadTimeoutsOutputReference | AssuredWorkloadsWorkloadTimeouts): any {
+export function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWorkloadsWorkloadTimeoutsOutputReference | AssuredWorkloadsWorkloadTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -205,12 +230,43 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AssuredWorkloadsWorkloadTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -218,15 +274,15 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -234,15 +290,15 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -250,7 +306,7 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -293,9 +349,9 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     this._location = config.location;
     this._organization = config.organization;
     this._provisionedResourcesParent = config.provisionedResourcesParent;
-    this._kmsSettings = config.kmsSettings;
+    this._kmsSettings.internalValue = config.kmsSettings;
     this._resourceSettings = config.resourceSettings;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -312,7 +368,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get billingAccountInput() {
-    return this._billingAccount
+    return this._billingAccount;
   }
 
   // compliance_regime - computed: false, optional: false, required: true
@@ -325,7 +381,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get complianceRegimeInput() {
-    return this._complianceRegime
+    return this._complianceRegime;
   }
 
   // create_time - computed: true, optional: false, required: false
@@ -343,7 +399,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -352,12 +408,12 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -365,7 +421,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // location - computed: false, optional: false, required: true
@@ -378,7 +434,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: true, optional: false, required: false
@@ -396,15 +452,15 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get organizationInput() {
-    return this._organization
+    return this._organization;
   }
 
   // provisioned_resources_parent - computed: false, optional: true, required: false
-  private _provisionedResourcesParent?: string | undefined; 
+  private _provisionedResourcesParent?: string; 
   public get provisionedResourcesParent() {
     return this.getStringAttribute('provisioned_resources_parent');
   }
-  public set provisionedResourcesParent(value: string | undefined) {
+  public set provisionedResourcesParent(value: string) {
     this._provisionedResourcesParent = value;
   }
   public resetProvisionedResourcesParent() {
@@ -412,7 +468,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get provisionedResourcesParentInput() {
-    return this._provisionedResourcesParent
+    return this._provisionedResourcesParent;
   }
 
   // resources - computed: true, optional: false, required: false
@@ -421,29 +477,28 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // kms_settings - computed: false, optional: true, required: false
-  private _kmsSettings?: AssuredWorkloadsWorkloadKmsSettings | undefined; 
-  private __kmsSettingsOutput = new AssuredWorkloadsWorkloadKmsSettingsOutputReference(this as any, "kms_settings", true);
+  private _kmsSettings = new AssuredWorkloadsWorkloadKmsSettingsOutputReference(this as any, "kms_settings", true);
   public get kmsSettings() {
-    return this.__kmsSettingsOutput;
+    return this._kmsSettings;
   }
-  public putKmsSettings(value: AssuredWorkloadsWorkloadKmsSettings | undefined) {
-    this._kmsSettings = value;
+  public putKmsSettings(value: AssuredWorkloadsWorkloadKmsSettings) {
+    this._kmsSettings.internalValue = value;
   }
   public resetKmsSettings() {
-    this._kmsSettings = undefined;
+    this._kmsSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kmsSettingsInput() {
-    return this._kmsSettings
+    return this._kmsSettings.internalValue;
   }
 
   // resource_settings - computed: false, optional: true, required: false
-  private _resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[] | undefined; 
+  private _resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[]; 
   public get resourceSettings() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('resource_settings') as any;
   }
-  public set resourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[] | undefined) {
+  public set resourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[]) {
     this._resourceSettings = value;
   }
   public resetResourceSettings() {
@@ -451,24 +506,23 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceSettingsInput() {
-    return this._resourceSettings
+    return this._resourceSettings;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AssuredWorkloadsWorkloadTimeouts | undefined; 
-  private __timeoutsOutput = new AssuredWorkloadsWorkloadTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AssuredWorkloadsWorkloadTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AssuredWorkloadsWorkloadTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AssuredWorkloadsWorkloadTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -484,9 +538,9 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       organization: cdktf.stringToTerraform(this._organization),
       provisioned_resources_parent: cdktf.stringToTerraform(this._provisionedResourcesParent),
-      kms_settings: assuredWorkloadsWorkloadKmsSettingsToTerraform(this._kmsSettings),
+      kms_settings: assuredWorkloadsWorkloadKmsSettingsToTerraform(this._kmsSettings.internalValue),
       resource_settings: cdktf.listMapper(assuredWorkloadsWorkloadResourceSettingsToTerraform)(this._resourceSettings),
-      timeouts: assuredWorkloadsWorkloadTimeoutsToTerraform(this._timeouts),
+      timeouts: assuredWorkloadsWorkloadTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

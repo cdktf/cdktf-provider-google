@@ -83,11 +83,11 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -95,15 +95,15 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -111,7 +111,7 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // release_channel_default_version - computed: true, optional: false, required: false
@@ -130,11 +130,11 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
 
   // version_prefix - computed: false, optional: true, required: false
-  private _versionPrefix?: string | undefined; 
+  private _versionPrefix?: string; 
   public get versionPrefix() {
     return this.getStringAttribute('version_prefix');
   }
-  public set versionPrefix(value: string | undefined) {
+  public set versionPrefix(value: string) {
     this._versionPrefix = value;
   }
   public resetVersionPrefix() {
@@ -142,7 +142,7 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get versionPrefixInput() {
-    return this._versionPrefix
+    return this._versionPrefix;
   }
 
   // =========

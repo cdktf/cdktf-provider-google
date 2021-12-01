@@ -48,7 +48,7 @@ export interface ApigeeEnvgroupTimeouts {
   readonly update?: string;
 }
 
-function apigeeEnvgroupTimeoutsToTerraform(struct?: ApigeeEnvgroupTimeoutsOutputReference | ApigeeEnvgroupTimeouts): any {
+export function apigeeEnvgroupTimeoutsToTerraform(struct?: ApigeeEnvgroupTimeoutsOutputReference | ApigeeEnvgroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -70,12 +70,43 @@ export class ApigeeEnvgroupTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApigeeEnvgroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApigeeEnvgroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -83,15 +114,15 @@ export class ApigeeEnvgroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -99,15 +130,15 @@ export class ApigeeEnvgroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -115,7 +146,7 @@ export class ApigeeEnvgroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -154,7 +185,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
     this._hostnames = config.hostnames;
     this._name = config.name;
     this._orgId = config.orgId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -162,11 +193,11 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
   // ==========
 
   // hostnames - computed: false, optional: true, required: false
-  private _hostnames?: string[] | undefined; 
+  private _hostnames?: string[]; 
   public get hostnames() {
     return this.getListAttribute('hostnames');
   }
-  public set hostnames(value: string[] | undefined) {
+  public set hostnames(value: string[]) {
     this._hostnames = value;
   }
   public resetHostnames() {
@@ -174,7 +205,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get hostnamesInput() {
-    return this._hostnames
+    return this._hostnames;
   }
 
   // id - computed: true, optional: true, required: false
@@ -192,7 +223,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // org_id - computed: false, optional: false, required: true
@@ -205,24 +236,23 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get orgIdInput() {
-    return this._orgId
+    return this._orgId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApigeeEnvgroupTimeouts | undefined; 
-  private __timeoutsOutput = new ApigeeEnvgroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApigeeEnvgroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApigeeEnvgroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApigeeEnvgroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -234,7 +264,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
       hostnames: cdktf.listMapper(cdktf.stringToTerraform)(this._hostnames),
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),
-      timeouts: apigeeEnvgroupTimeoutsToTerraform(this._timeouts),
+      timeouts: apigeeEnvgroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

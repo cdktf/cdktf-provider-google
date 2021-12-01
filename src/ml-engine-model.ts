@@ -70,7 +70,7 @@ export interface MlEngineModelDefaultVersion {
   readonly name: string;
 }
 
-function mlEngineModelDefaultVersionToTerraform(struct?: MlEngineModelDefaultVersionOutputReference | MlEngineModelDefaultVersion): any {
+export function mlEngineModelDefaultVersionToTerraform(struct?: MlEngineModelDefaultVersionOutputReference | MlEngineModelDefaultVersion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,6 +90,25 @@ export class MlEngineModelDefaultVersionOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MlEngineModelDefaultVersion | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MlEngineModelDefaultVersion | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -100,7 +119,7 @@ export class MlEngineModelDefaultVersionOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface MlEngineModelTimeouts {
@@ -114,7 +133,7 @@ export interface MlEngineModelTimeouts {
   readonly delete?: string;
 }
 
-function mlEngineModelTimeoutsToTerraform(struct?: MlEngineModelTimeoutsOutputReference | MlEngineModelTimeouts): any {
+export function mlEngineModelTimeoutsToTerraform(struct?: MlEngineModelTimeoutsOutputReference | MlEngineModelTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -135,12 +154,37 @@ export class MlEngineModelTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MlEngineModelTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MlEngineModelTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -148,15 +192,15 @@ export class MlEngineModelTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -164,7 +208,7 @@ export class MlEngineModelTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -207,8 +251,8 @@ export class MlEngineModel extends cdktf.TerraformResource {
     this._onlinePredictionLogging = config.onlinePredictionLogging;
     this._project = config.project;
     this._regions = config.regions;
-    this._defaultVersion = config.defaultVersion;
-    this._timeouts = config.timeouts;
+    this._defaultVersion.internalValue = config.defaultVersion;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -216,11 +260,11 @@ export class MlEngineModel extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -228,7 +272,7 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -237,12 +281,12 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -250,7 +294,7 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -263,15 +307,15 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // online_prediction_console_logging - computed: false, optional: true, required: false
-  private _onlinePredictionConsoleLogging?: boolean | cdktf.IResolvable | undefined; 
+  private _onlinePredictionConsoleLogging?: boolean | cdktf.IResolvable; 
   public get onlinePredictionConsoleLogging() {
     return this.getBooleanAttribute('online_prediction_console_logging') as any;
   }
-  public set onlinePredictionConsoleLogging(value: boolean | cdktf.IResolvable | undefined) {
+  public set onlinePredictionConsoleLogging(value: boolean | cdktf.IResolvable) {
     this._onlinePredictionConsoleLogging = value;
   }
   public resetOnlinePredictionConsoleLogging() {
@@ -279,15 +323,15 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get onlinePredictionConsoleLoggingInput() {
-    return this._onlinePredictionConsoleLogging
+    return this._onlinePredictionConsoleLogging;
   }
 
   // online_prediction_logging - computed: false, optional: true, required: false
-  private _onlinePredictionLogging?: boolean | cdktf.IResolvable | undefined; 
+  private _onlinePredictionLogging?: boolean | cdktf.IResolvable; 
   public get onlinePredictionLogging() {
     return this.getBooleanAttribute('online_prediction_logging') as any;
   }
-  public set onlinePredictionLogging(value: boolean | cdktf.IResolvable | undefined) {
+  public set onlinePredictionLogging(value: boolean | cdktf.IResolvable) {
     this._onlinePredictionLogging = value;
   }
   public resetOnlinePredictionLogging() {
@@ -295,15 +339,15 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get onlinePredictionLoggingInput() {
-    return this._onlinePredictionLogging
+    return this._onlinePredictionLogging;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -311,15 +355,15 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // regions - computed: false, optional: true, required: false
-  private _regions?: string[] | undefined; 
+  private _regions?: string[]; 
   public get regions() {
     return this.getListAttribute('regions');
   }
-  public set regions(value: string[] | undefined) {
+  public set regions(value: string[]) {
     this._regions = value;
   }
   public resetRegions() {
@@ -327,41 +371,39 @@ export class MlEngineModel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionsInput() {
-    return this._regions
+    return this._regions;
   }
 
   // default_version - computed: false, optional: true, required: false
-  private _defaultVersion?: MlEngineModelDefaultVersion | undefined; 
-  private __defaultVersionOutput = new MlEngineModelDefaultVersionOutputReference(this as any, "default_version", true);
+  private _defaultVersion = new MlEngineModelDefaultVersionOutputReference(this as any, "default_version", true);
   public get defaultVersion() {
-    return this.__defaultVersionOutput;
+    return this._defaultVersion;
   }
-  public putDefaultVersion(value: MlEngineModelDefaultVersion | undefined) {
-    this._defaultVersion = value;
+  public putDefaultVersion(value: MlEngineModelDefaultVersion) {
+    this._defaultVersion.internalValue = value;
   }
   public resetDefaultVersion() {
-    this._defaultVersion = undefined;
+    this._defaultVersion.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultVersionInput() {
-    return this._defaultVersion
+    return this._defaultVersion.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MlEngineModelTimeouts | undefined; 
-  private __timeoutsOutput = new MlEngineModelTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MlEngineModelTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MlEngineModelTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MlEngineModelTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -377,8 +419,8 @@ export class MlEngineModel extends cdktf.TerraformResource {
       online_prediction_logging: cdktf.booleanToTerraform(this._onlinePredictionLogging),
       project: cdktf.stringToTerraform(this._project),
       regions: cdktf.listMapper(cdktf.stringToTerraform)(this._regions),
-      default_version: mlEngineModelDefaultVersionToTerraform(this._defaultVersion),
-      timeouts: mlEngineModelTimeoutsToTerraform(this._timeouts),
+      default_version: mlEngineModelDefaultVersionToTerraform(this._defaultVersion.internalValue),
+      timeouts: mlEngineModelTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

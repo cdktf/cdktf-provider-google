@@ -109,11 +109,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -121,7 +121,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: true, optional: false, required: false
@@ -135,12 +135,12 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -148,7 +148,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: true, optional: false, required: false
@@ -157,11 +157,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -169,7 +169,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // sensitive_labels - computed: true, optional: false, required: false
@@ -178,11 +178,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -190,16 +190,16 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
   public get userLabels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -207,7 +207,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get userLabelsInput() {
-    return this._userLabels
+    return this._userLabels;
   }
 
   // verification_status - computed: true, optional: false, required: false

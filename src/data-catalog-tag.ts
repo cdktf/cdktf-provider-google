@@ -82,7 +82,7 @@ export interface DataCatalogTagFields {
   readonly timestampValue?: string;
 }
 
-function dataCatalogTagFieldsToTerraform(struct?: DataCatalogTagFields): any {
+export function dataCatalogTagFieldsToTerraform(struct?: DataCatalogTagFields): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,7 +112,7 @@ export interface DataCatalogTagTimeouts {
   readonly update?: string;
 }
 
-function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeoutsOutputReference | DataCatalogTagTimeouts): any {
+export function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeoutsOutputReference | DataCatalogTagTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -134,12 +134,43 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataCatalogTagTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogTagTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -147,15 +178,15 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -163,15 +194,15 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -179,7 +210,7 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -219,7 +250,7 @@ export class DataCatalogTag extends cdktf.TerraformResource {
     this._parent = config.parent;
     this._template = config.template;
     this._fields = config.fields;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -227,11 +258,11 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   // ==========
 
   // column - computed: false, optional: true, required: false
-  private _column?: string | undefined; 
+  private _column?: string; 
   public get column() {
     return this.getStringAttribute('column');
   }
-  public set column(value: string | undefined) {
+  public set column(value: string) {
     this._column = value;
   }
   public resetColumn() {
@@ -239,7 +270,7 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get columnInput() {
-    return this._column
+    return this._column;
   }
 
   // id - computed: true, optional: true, required: false
@@ -253,11 +284,11 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: true, required: false
-  private _parent?: string | undefined; 
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
-  public set parent(value: string | undefined) {
+  public set parent(value: string) {
     this._parent = value;
   }
   public resetParent() {
@@ -265,7 +296,7 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // template - computed: false, optional: false, required: true
@@ -278,7 +309,7 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get templateInput() {
-    return this._template
+    return this._template;
   }
 
   // template_displayname - computed: true, optional: false, required: false
@@ -297,24 +328,23 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get fieldsInput() {
-    return this._fields
+    return this._fields;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataCatalogTagTimeouts | undefined; 
-  private __timeoutsOutput = new DataCatalogTagTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataCatalogTagTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataCatalogTagTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataCatalogTagTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -327,7 +357,7 @@ export class DataCatalogTag extends cdktf.TerraformResource {
       parent: cdktf.stringToTerraform(this._parent),
       template: cdktf.stringToTerraform(this._template),
       fields: cdktf.listMapper(dataCatalogTagFieldsToTerraform)(this._fields),
-      timeouts: dataCatalogTagTimeoutsToTerraform(this._timeouts),
+      timeouts: dataCatalogTagTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

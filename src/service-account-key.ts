@@ -91,12 +91,12 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // keepers - computed: false, optional: true, required: false
-  private _keepers?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _keepers?: { [key: string]: string } | cdktf.IResolvable; 
   public get keepers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('keepers') as any;
   }
-  public set keepers(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set keepers(value: { [key: string]: string } | cdktf.IResolvable) {
     this._keepers = value;
   }
   public resetKeepers() {
@@ -104,15 +104,15 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keepersInput() {
-    return this._keepers
+    return this._keepers;
   }
 
   // key_algorithm - computed: false, optional: true, required: false
-  private _keyAlgorithm?: string | undefined; 
+  private _keyAlgorithm?: string; 
   public get keyAlgorithm() {
     return this.getStringAttribute('key_algorithm');
   }
-  public set keyAlgorithm(value: string | undefined) {
+  public set keyAlgorithm(value: string) {
     this._keyAlgorithm = value;
   }
   public resetKeyAlgorithm() {
@@ -120,7 +120,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyAlgorithmInput() {
-    return this._keyAlgorithm
+    return this._keyAlgorithm;
   }
 
   // name - computed: true, optional: false, required: false
@@ -134,11 +134,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // private_key_type - computed: false, optional: true, required: false
-  private _privateKeyType?: string | undefined; 
+  private _privateKeyType?: string; 
   public get privateKeyType() {
     return this.getStringAttribute('private_key_type');
   }
-  public set privateKeyType(value: string | undefined) {
+  public set privateKeyType(value: string) {
     this._privateKeyType = value;
   }
   public resetPrivateKeyType() {
@@ -146,7 +146,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyTypeInput() {
-    return this._privateKeyType
+    return this._privateKeyType;
   }
 
   // public_key - computed: true, optional: false, required: false
@@ -155,11 +155,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // public_key_data - computed: false, optional: true, required: false
-  private _publicKeyData?: string | undefined; 
+  private _publicKeyData?: string; 
   public get publicKeyData() {
     return this.getStringAttribute('public_key_data');
   }
-  public set publicKeyData(value: string | undefined) {
+  public set publicKeyData(value: string) {
     this._publicKeyData = value;
   }
   public resetPublicKeyData() {
@@ -167,15 +167,15 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicKeyDataInput() {
-    return this._publicKeyData
+    return this._publicKeyData;
   }
 
   // public_key_type - computed: false, optional: true, required: false
-  private _publicKeyType?: string | undefined; 
+  private _publicKeyType?: string; 
   public get publicKeyType() {
     return this.getStringAttribute('public_key_type');
   }
-  public set publicKeyType(value: string | undefined) {
+  public set publicKeyType(value: string) {
     this._publicKeyType = value;
   }
   public resetPublicKeyType() {
@@ -183,7 +183,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicKeyTypeInput() {
-    return this._publicKeyType
+    return this._publicKeyType;
   }
 
   // service_account_id - computed: false, optional: false, required: true
@@ -196,7 +196,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountIdInput() {
-    return this._serviceAccountId
+    return this._serviceAccountId;
   }
 
   // valid_after - computed: true, optional: false, required: false

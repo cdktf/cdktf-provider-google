@@ -139,7 +139,7 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // =========

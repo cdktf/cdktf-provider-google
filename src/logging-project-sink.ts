@@ -71,7 +71,7 @@ export interface LoggingProjectSinkBigqueryOptions {
   readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
 
-function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingProjectSinkBigqueryOptionsOutputReference | LoggingProjectSinkBigqueryOptions): any {
+export function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingProjectSinkBigqueryOptionsOutputReference | LoggingProjectSinkBigqueryOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -91,6 +91,25 @@ export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingProjectSinkBigqueryOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._usePartitionedTables) {
+      hasAnyValues = true;
+      internalValueResult.usePartitionedTables = this._usePartitionedTables;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingProjectSinkBigqueryOptions | undefined) {
+    if (value === undefined) {
+      this._usePartitionedTables = undefined;
+    }
+    else {
+      this._usePartitionedTables = value.usePartitionedTables;
+    }
+  }
+
   // use_partitioned_tables - computed: false, optional: false, required: true
   private _usePartitionedTables?: boolean | cdktf.IResolvable; 
   public get usePartitionedTables() {
@@ -101,7 +120,7 @@ export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get usePartitionedTablesInput() {
-    return this._usePartitionedTables
+    return this._usePartitionedTables;
   }
 }
 export interface LoggingProjectSinkExclusions {
@@ -131,7 +150,7 @@ export interface LoggingProjectSinkExclusions {
   readonly name: string;
 }
 
-function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectSinkExclusions): any {
+export function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectSinkExclusions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -184,7 +203,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._uniqueWriterIdentity = config.uniqueWriterIdentity;
-    this._bigqueryOptions = config.bigqueryOptions;
+    this._bigqueryOptions.internalValue = config.bigqueryOptions;
     this._exclusions = config.exclusions;
   }
 
@@ -193,11 +212,11 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -205,7 +224,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // destination - computed: false, optional: false, required: true
@@ -218,15 +237,15 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -234,15 +253,15 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string | undefined; 
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string) {
     this._filter = value;
   }
   public resetFilter() {
@@ -250,7 +269,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -268,15 +287,15 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -284,15 +303,15 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // unique_writer_identity - computed: false, optional: true, required: false
-  private _uniqueWriterIdentity?: boolean | cdktf.IResolvable | undefined; 
+  private _uniqueWriterIdentity?: boolean | cdktf.IResolvable; 
   public get uniqueWriterIdentity() {
     return this.getBooleanAttribute('unique_writer_identity') as any;
   }
-  public set uniqueWriterIdentity(value: boolean | cdktf.IResolvable | undefined) {
+  public set uniqueWriterIdentity(value: boolean | cdktf.IResolvable) {
     this._uniqueWriterIdentity = value;
   }
   public resetUniqueWriterIdentity() {
@@ -300,7 +319,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get uniqueWriterIdentityInput() {
-    return this._uniqueWriterIdentity
+    return this._uniqueWriterIdentity;
   }
 
   // writer_identity - computed: true, optional: false, required: false
@@ -309,29 +328,28 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
 
   // bigquery_options - computed: false, optional: true, required: false
-  private _bigqueryOptions?: LoggingProjectSinkBigqueryOptions | undefined; 
-  private __bigqueryOptionsOutput = new LoggingProjectSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
+  private _bigqueryOptions = new LoggingProjectSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
   public get bigqueryOptions() {
-    return this.__bigqueryOptionsOutput;
+    return this._bigqueryOptions;
   }
-  public putBigqueryOptions(value: LoggingProjectSinkBigqueryOptions | undefined) {
-    this._bigqueryOptions = value;
+  public putBigqueryOptions(value: LoggingProjectSinkBigqueryOptions) {
+    this._bigqueryOptions.internalValue = value;
   }
   public resetBigqueryOptions() {
-    this._bigqueryOptions = undefined;
+    this._bigqueryOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bigqueryOptionsInput() {
-    return this._bigqueryOptions
+    return this._bigqueryOptions.internalValue;
   }
 
   // exclusions - computed: false, optional: true, required: false
-  private _exclusions?: LoggingProjectSinkExclusions[] | undefined; 
+  private _exclusions?: LoggingProjectSinkExclusions[]; 
   public get exclusions() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('exclusions') as any;
   }
-  public set exclusions(value: LoggingProjectSinkExclusions[] | undefined) {
+  public set exclusions(value: LoggingProjectSinkExclusions[]) {
     this._exclusions = value;
   }
   public resetExclusions() {
@@ -339,7 +357,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get exclusionsInput() {
-    return this._exclusions
+    return this._exclusions;
   }
 
   // =========
@@ -355,7 +373,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       unique_writer_identity: cdktf.booleanToTerraform(this._uniqueWriterIdentity),
-      bigquery_options: loggingProjectSinkBigqueryOptionsToTerraform(this._bigqueryOptions),
+      bigquery_options: loggingProjectSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
       exclusions: cdktf.listMapper(loggingProjectSinkExclusionsToTerraform)(this._exclusions),
     };
   }

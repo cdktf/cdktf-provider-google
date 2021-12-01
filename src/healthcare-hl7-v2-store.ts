@@ -78,7 +78,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
   readonly pubsubTopic: string;
 }
 
-function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigOutputReference | HealthcareHl7V2StoreNotificationConfig): any {
+export function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigOutputReference | HealthcareHl7V2StoreNotificationConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -98,6 +98,25 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HealthcareHl7V2StoreNotificationConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._pubsubTopic) {
+      hasAnyValues = true;
+      internalValueResult.pubsubTopic = this._pubsubTopic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareHl7V2StoreNotificationConfig | undefined) {
+    if (value === undefined) {
+      this._pubsubTopic = undefined;
+    }
+    else {
+      this._pubsubTopic = value.pubsubTopic;
+    }
+  }
+
   // pubsub_topic - computed: false, optional: false, required: true
   private _pubsubTopic?: string; 
   public get pubsubTopic() {
@@ -108,7 +127,7 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubTopicInput() {
-    return this._pubsubTopic
+    return this._pubsubTopic;
   }
 }
 export interface HealthcareHl7V2StoreNotificationConfigs {
@@ -143,7 +162,7 @@ If a notification cannot be published to Cloud Pub/Sub, errors will be logged to
   readonly pubsubTopic: string;
 }
 
-function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigs): any {
+export function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -184,7 +203,7 @@ A base64-encoded string.
   readonly version?: string;
 }
 
-function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfigOutputReference | HealthcareHl7V2StoreParserConfig): any {
+export function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfigOutputReference | HealthcareHl7V2StoreParserConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -207,12 +226,49 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HealthcareHl7V2StoreParserConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowNullHeader) {
+      hasAnyValues = true;
+      internalValueResult.allowNullHeader = this._allowNullHeader;
+    }
+    if (this._schema) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._segmentTerminator) {
+      hasAnyValues = true;
+      internalValueResult.segmentTerminator = this._segmentTerminator;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareHl7V2StoreParserConfig | undefined) {
+    if (value === undefined) {
+      this._allowNullHeader = undefined;
+      this._schema = undefined;
+      this._segmentTerminator = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._allowNullHeader = value.allowNullHeader;
+      this._schema = value.schema;
+      this._segmentTerminator = value.segmentTerminator;
+      this._version = value.version;
+    }
+  }
+
   // allow_null_header - computed: false, optional: true, required: false
-  private _allowNullHeader?: boolean | cdktf.IResolvable | undefined; 
+  private _allowNullHeader?: boolean | cdktf.IResolvable; 
   public get allowNullHeader() {
     return this.getBooleanAttribute('allow_null_header') as any;
   }
-  public set allowNullHeader(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowNullHeader(value: boolean | cdktf.IResolvable) {
     this._allowNullHeader = value;
   }
   public resetAllowNullHeader() {
@@ -220,15 +276,15 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get allowNullHeaderInput() {
-    return this._allowNullHeader
+    return this._allowNullHeader;
   }
 
   // schema - computed: false, optional: true, required: false
-  private _schema?: string | undefined; 
+  private _schema?: string; 
   public get schema() {
     return this.getStringAttribute('schema');
   }
-  public set schema(value: string | undefined) {
+  public set schema(value: string) {
     this._schema = value;
   }
   public resetSchema() {
@@ -236,15 +292,15 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get schemaInput() {
-    return this._schema
+    return this._schema;
   }
 
   // segment_terminator - computed: false, optional: true, required: false
-  private _segmentTerminator?: string | undefined; 
+  private _segmentTerminator?: string; 
   public get segmentTerminator() {
     return this.getStringAttribute('segment_terminator');
   }
-  public set segmentTerminator(value: string | undefined) {
+  public set segmentTerminator(value: string) {
     this._segmentTerminator = value;
   }
   public resetSegmentTerminator() {
@@ -252,15 +308,15 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get segmentTerminatorInput() {
-    return this._segmentTerminator
+    return this._segmentTerminator;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -268,7 +324,7 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface HealthcareHl7V2StoreTimeouts {
@@ -286,7 +342,7 @@ export interface HealthcareHl7V2StoreTimeouts {
   readonly update?: string;
 }
 
-function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeoutsOutputReference | HealthcareHl7V2StoreTimeouts): any {
+export function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeoutsOutputReference | HealthcareHl7V2StoreTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -308,12 +364,43 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HealthcareHl7V2StoreTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareHl7V2StoreTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -321,15 +408,15 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -337,15 +424,15 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -353,7 +440,7 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -392,10 +479,10 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
     this._dataset = config.dataset;
     this._labels = config.labels;
     this._name = config.name;
-    this._notificationConfig = config.notificationConfig;
+    this._notificationConfig.internalValue = config.notificationConfig;
     this._notificationConfigs = config.notificationConfigs;
-    this._parserConfig = config.parserConfig;
-    this._timeouts = config.timeouts;
+    this._parserConfig.internalValue = config.parserConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -412,7 +499,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetInput() {
-    return this._dataset
+    return this._dataset;
   }
 
   // id - computed: true, optional: true, required: false
@@ -421,12 +508,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -434,7 +521,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -447,7 +534,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -456,29 +543,28 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig?: HealthcareHl7V2StoreNotificationConfig | undefined; 
-  private __notificationConfigOutput = new HealthcareHl7V2StoreNotificationConfigOutputReference(this as any, "notification_config", true);
+  private _notificationConfig = new HealthcareHl7V2StoreNotificationConfigOutputReference(this as any, "notification_config", true);
   public get notificationConfig() {
-    return this.__notificationConfigOutput;
+    return this._notificationConfig;
   }
-  public putNotificationConfig(value: HealthcareHl7V2StoreNotificationConfig | undefined) {
-    this._notificationConfig = value;
+  public putNotificationConfig(value: HealthcareHl7V2StoreNotificationConfig) {
+    this._notificationConfig.internalValue = value;
   }
   public resetNotificationConfig() {
-    this._notificationConfig = undefined;
+    this._notificationConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get notificationConfigInput() {
-    return this._notificationConfig
+    return this._notificationConfig.internalValue;
   }
 
   // notification_configs - computed: false, optional: true, required: false
-  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[] | undefined; 
+  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[]; 
   public get notificationConfigs() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('notification_configs') as any;
   }
-  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[] | undefined) {
+  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[]) {
     this._notificationConfigs = value;
   }
   public resetNotificationConfigs() {
@@ -486,41 +572,39 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationConfigsInput() {
-    return this._notificationConfigs
+    return this._notificationConfigs;
   }
 
   // parser_config - computed: false, optional: true, required: false
-  private _parserConfig?: HealthcareHl7V2StoreParserConfig | undefined; 
-  private __parserConfigOutput = new HealthcareHl7V2StoreParserConfigOutputReference(this as any, "parser_config", true);
+  private _parserConfig = new HealthcareHl7V2StoreParserConfigOutputReference(this as any, "parser_config", true);
   public get parserConfig() {
-    return this.__parserConfigOutput;
+    return this._parserConfig;
   }
-  public putParserConfig(value: HealthcareHl7V2StoreParserConfig | undefined) {
-    this._parserConfig = value;
+  public putParserConfig(value: HealthcareHl7V2StoreParserConfig) {
+    this._parserConfig.internalValue = value;
   }
   public resetParserConfig() {
-    this._parserConfig = undefined;
+    this._parserConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get parserConfigInput() {
-    return this._parserConfig
+    return this._parserConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HealthcareHl7V2StoreTimeouts | undefined; 
-  private __timeoutsOutput = new HealthcareHl7V2StoreTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareHl7V2StoreTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: HealthcareHl7V2StoreTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: HealthcareHl7V2StoreTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -532,10 +616,10 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       dataset: cdktf.stringToTerraform(this._dataset),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
-      notification_config: healthcareHl7V2StoreNotificationConfigToTerraform(this._notificationConfig),
+      notification_config: healthcareHl7V2StoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
       notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs),
-      parser_config: healthcareHl7V2StoreParserConfigToTerraform(this._parserConfig),
-      timeouts: healthcareHl7V2StoreTimeoutsToTerraform(this._timeouts),
+      parser_config: healthcareHl7V2StoreParserConfigToTerraform(this._parserConfig.internalValue),
+      timeouts: healthcareHl7V2StoreTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

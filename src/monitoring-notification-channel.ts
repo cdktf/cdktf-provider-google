@@ -87,7 +87,7 @@ export interface MonitoringNotificationChannelSensitiveLabels {
   readonly serviceKey?: string;
 }
 
-function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: MonitoringNotificationChannelSensitiveLabelsOutputReference | MonitoringNotificationChannelSensitiveLabels): any {
+export function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: MonitoringNotificationChannelSensitiveLabelsOutputReference | MonitoringNotificationChannelSensitiveLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -109,12 +109,43 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringNotificationChannelSensitiveLabels | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._authToken) {
+      hasAnyValues = true;
+      internalValueResult.authToken = this._authToken;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._serviceKey) {
+      hasAnyValues = true;
+      internalValueResult.serviceKey = this._serviceKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringNotificationChannelSensitiveLabels | undefined) {
+    if (value === undefined) {
+      this._authToken = undefined;
+      this._password = undefined;
+      this._serviceKey = undefined;
+    }
+    else {
+      this._authToken = value.authToken;
+      this._password = value.password;
+      this._serviceKey = value.serviceKey;
+    }
+  }
+
   // auth_token - computed: false, optional: true, required: false
-  private _authToken?: string | undefined; 
+  private _authToken?: string; 
   public get authToken() {
     return this.getStringAttribute('auth_token');
   }
-  public set authToken(value: string | undefined) {
+  public set authToken(value: string) {
     this._authToken = value;
   }
   public resetAuthToken() {
@@ -122,15 +153,15 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get authTokenInput() {
-    return this._authToken
+    return this._authToken;
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -138,15 +169,15 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // service_key - computed: false, optional: true, required: false
-  private _serviceKey?: string | undefined; 
+  private _serviceKey?: string; 
   public get serviceKey() {
     return this.getStringAttribute('service_key');
   }
-  public set serviceKey(value: string | undefined) {
+  public set serviceKey(value: string) {
     this._serviceKey = value;
   }
   public resetServiceKey() {
@@ -154,7 +185,7 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get serviceKeyInput() {
-    return this._serviceKey
+    return this._serviceKey;
   }
 }
 export interface MonitoringNotificationChannelTimeouts {
@@ -172,7 +203,7 @@ export interface MonitoringNotificationChannelTimeouts {
   readonly update?: string;
 }
 
-function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeoutsOutputReference | MonitoringNotificationChannelTimeouts): any {
+export function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeoutsOutputReference | MonitoringNotificationChannelTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -194,12 +225,43 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringNotificationChannelTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringNotificationChannelTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -207,15 +269,15 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -223,15 +285,15 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -239,7 +301,7 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -282,8 +344,8 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
     this._project = config.project;
     this._type = config.type;
     this._userLabels = config.userLabels;
-    this._sensitiveLabels = config.sensitiveLabels;
-    this._timeouts = config.timeouts;
+    this._sensitiveLabels.internalValue = config.sensitiveLabels;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -291,11 +353,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -303,15 +365,15 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -319,15 +381,15 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -335,7 +397,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -344,12 +406,12 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -357,7 +419,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: true, optional: false, required: false
@@ -366,11 +428,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -378,7 +440,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // type - computed: false, optional: false, required: true
@@ -391,16 +453,16 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
   public get userLabels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -408,7 +470,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get userLabelsInput() {
-    return this._userLabels
+    return this._userLabels;
   }
 
   // verification_status - computed: true, optional: false, required: false
@@ -417,37 +479,35 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // sensitive_labels - computed: false, optional: true, required: false
-  private _sensitiveLabels?: MonitoringNotificationChannelSensitiveLabels | undefined; 
-  private __sensitiveLabelsOutput = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this as any, "sensitive_labels", true);
+  private _sensitiveLabels = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this as any, "sensitive_labels", true);
   public get sensitiveLabels() {
-    return this.__sensitiveLabelsOutput;
+    return this._sensitiveLabels;
   }
-  public putSensitiveLabels(value: MonitoringNotificationChannelSensitiveLabels | undefined) {
-    this._sensitiveLabels = value;
+  public putSensitiveLabels(value: MonitoringNotificationChannelSensitiveLabels) {
+    this._sensitiveLabels.internalValue = value;
   }
   public resetSensitiveLabels() {
-    this._sensitiveLabels = undefined;
+    this._sensitiveLabels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sensitiveLabelsInput() {
-    return this._sensitiveLabels
+    return this._sensitiveLabels.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringNotificationChannelTimeouts | undefined; 
-  private __timeoutsOutput = new MonitoringNotificationChannelTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringNotificationChannelTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitoringNotificationChannelTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitoringNotificationChannelTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -463,8 +523,8 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
       user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
-      sensitive_labels: monitoringNotificationChannelSensitiveLabelsToTerraform(this._sensitiveLabels),
-      timeouts: monitoringNotificationChannelTimeoutsToTerraform(this._timeouts),
+      sensitive_labels: monitoringNotificationChannelSensitiveLabelsToTerraform(this._sensitiveLabels.internalValue),
+      timeouts: monitoringNotificationChannelTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

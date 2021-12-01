@@ -114,11 +114,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // ==========
 
   // config - computed: false, optional: true, required: false
-  private _config?: string | undefined; 
+  private _config?: string; 
   public get config() {
     return this.getStringAttribute('config');
   }
-  public set config(value: string | undefined) {
+  public set config(value: string) {
     this._config = value;
   }
   public resetConfig() {
@@ -126,15 +126,15 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get configInput() {
-    return this._config
+    return this._config;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -142,15 +142,15 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy') as any;
   }
-  public set forceDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -158,7 +158,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get forceDestroyInput() {
-    return this._forceDestroy
+    return this._forceDestroy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -167,12 +167,12 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -180,7 +180,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -193,15 +193,15 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // num_nodes - computed: true, optional: true, required: false
-  private _numNodes?: number | undefined; 
+  private _numNodes?: number; 
   public get numNodes() {
     return this.getNumberAttribute('num_nodes');
   }
-  public set numNodes(value: number | undefined) {
+  public set numNodes(value: number) {
     this._numNodes = value;
   }
   public resetNumNodes() {
@@ -209,15 +209,15 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get numNodesInput() {
-    return this._numNodes
+    return this._numNodes;
   }
 
   // processing_units - computed: true, optional: true, required: false
-  private _processingUnits?: number | undefined; 
+  private _processingUnits?: number; 
   public get processingUnits() {
     return this.getNumberAttribute('processing_units');
   }
-  public set processingUnits(value: number | undefined) {
+  public set processingUnits(value: number) {
     this._processingUnits = value;
   }
   public resetProcessingUnits() {
@@ -225,15 +225,15 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get processingUnitsInput() {
-    return this._processingUnits
+    return this._processingUnits;
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -241,7 +241,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // state - computed: true, optional: false, required: false

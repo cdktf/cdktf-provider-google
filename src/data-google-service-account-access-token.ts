@@ -73,11 +73,11 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
 
   // delegates - computed: false, optional: true, required: false
-  private _delegates?: string[] | undefined; 
+  private _delegates?: string[]; 
   public get delegates() {
     return this.getListAttribute('delegates');
   }
-  public set delegates(value: string[] | undefined) {
+  public set delegates(value: string[]) {
     this._delegates = value;
   }
   public resetDelegates() {
@@ -85,7 +85,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get delegatesInput() {
-    return this._delegates
+    return this._delegates;
   }
 
   // id - computed: true, optional: true, required: false
@@ -94,11 +94,11 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
 
   // lifetime - computed: false, optional: true, required: false
-  private _lifetime?: string | undefined; 
+  private _lifetime?: string; 
   public get lifetime() {
     return this.getStringAttribute('lifetime');
   }
-  public set lifetime(value: string | undefined) {
+  public set lifetime(value: string) {
     this._lifetime = value;
   }
   public resetLifetime() {
@@ -106,7 +106,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get lifetimeInput() {
-    return this._lifetime
+    return this._lifetime;
   }
 
   // scopes - computed: false, optional: false, required: true
@@ -119,7 +119,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get scopesInput() {
-    return this._scopes
+    return this._scopes;
   }
 
   // target_service_account - computed: false, optional: false, required: true
@@ -132,7 +132,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get targetServiceAccountInput() {
-    return this._targetServiceAccount
+    return this._targetServiceAccount;
   }
 
   // =========

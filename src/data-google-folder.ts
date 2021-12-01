@@ -77,7 +77,7 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderInput() {
-    return this._folder
+    return this._folder;
   }
 
   // folder_id - computed: true, optional: false, required: false
@@ -96,11 +96,11 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   }
 
   // lookup_organization - computed: false, optional: true, required: false
-  private _lookupOrganization?: boolean | cdktf.IResolvable | undefined; 
+  private _lookupOrganization?: boolean | cdktf.IResolvable; 
   public get lookupOrganization() {
     return this.getBooleanAttribute('lookup_organization') as any;
   }
-  public set lookupOrganization(value: boolean | cdktf.IResolvable | undefined) {
+  public set lookupOrganization(value: boolean | cdktf.IResolvable) {
     this._lookupOrganization = value;
   }
   public resetLookupOrganization() {
@@ -108,7 +108,7 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get lookupOrganizationInput() {
-    return this._lookupOrganization
+    return this._lookupOrganization;
   }
 
   // name - computed: true, optional: false, required: false

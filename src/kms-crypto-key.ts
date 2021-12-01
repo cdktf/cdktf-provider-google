@@ -91,7 +91,7 @@ export interface KmsCryptoKeyTimeouts {
   readonly update?: string;
 }
 
-function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeoutsOutputReference | KmsCryptoKeyTimeouts): any {
+export function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeoutsOutputReference | KmsCryptoKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -113,12 +113,43 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KmsCryptoKeyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KmsCryptoKeyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -126,15 +157,15 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -142,15 +173,15 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -158,7 +189,7 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface KmsCryptoKeyVersionTemplate {
@@ -177,7 +208,7 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
   readonly protectionLevel?: string;
 }
 
-function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemplateOutputReference | KmsCryptoKeyVersionTemplate): any {
+export function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemplateOutputReference | KmsCryptoKeyVersionTemplate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -198,6 +229,31 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KmsCryptoKeyVersionTemplate | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._algorithm) {
+      hasAnyValues = true;
+      internalValueResult.algorithm = this._algorithm;
+    }
+    if (this._protectionLevel) {
+      hasAnyValues = true;
+      internalValueResult.protectionLevel = this._protectionLevel;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KmsCryptoKeyVersionTemplate | undefined) {
+    if (value === undefined) {
+      this._algorithm = undefined;
+      this._protectionLevel = undefined;
+    }
+    else {
+      this._algorithm = value.algorithm;
+      this._protectionLevel = value.protectionLevel;
+    }
+  }
+
   // algorithm - computed: false, optional: false, required: true
   private _algorithm?: string; 
   public get algorithm() {
@@ -208,15 +264,15 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get algorithmInput() {
-    return this._algorithm
+    return this._algorithm;
   }
 
   // protection_level - computed: false, optional: true, required: false
-  private _protectionLevel?: string | undefined; 
+  private _protectionLevel?: string; 
   public get protectionLevel() {
     return this.getStringAttribute('protection_level');
   }
-  public set protectionLevel(value: string | undefined) {
+  public set protectionLevel(value: string) {
     this._protectionLevel = value;
   }
   public resetProtectionLevel() {
@@ -224,7 +280,7 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get protectionLevelInput() {
-    return this._protectionLevel
+    return this._protectionLevel;
   }
 }
 
@@ -268,8 +324,8 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
     this._purpose = config.purpose;
     this._rotationPeriod = config.rotationPeriod;
     this._skipInitialVersionCreation = config.skipInitialVersionCreation;
-    this._timeouts = config.timeouts;
-    this._versionTemplate = config.versionTemplate;
+    this._timeouts.internalValue = config.timeouts;
+    this._versionTemplate.internalValue = config.versionTemplate;
   }
 
   // ==========
@@ -277,11 +333,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // ==========
 
   // destroy_scheduled_duration - computed: true, optional: true, required: false
-  private _destroyScheduledDuration?: string | undefined; 
+  private _destroyScheduledDuration?: string; 
   public get destroyScheduledDuration() {
     return this.getStringAttribute('destroy_scheduled_duration');
   }
-  public set destroyScheduledDuration(value: string | undefined) {
+  public set destroyScheduledDuration(value: string) {
     this._destroyScheduledDuration = value;
   }
   public resetDestroyScheduledDuration() {
@@ -289,7 +345,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destroyScheduledDurationInput() {
-    return this._destroyScheduledDuration
+    return this._destroyScheduledDuration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -298,11 +354,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // import_only - computed: true, optional: true, required: false
-  private _importOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _importOnly?: boolean | cdktf.IResolvable; 
   public get importOnly() {
     return this.getBooleanAttribute('import_only') as any;
   }
-  public set importOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set importOnly(value: boolean | cdktf.IResolvable) {
     this._importOnly = value;
   }
   public resetImportOnly() {
@@ -310,7 +366,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get importOnlyInput() {
-    return this._importOnly
+    return this._importOnly;
   }
 
   // key_ring - computed: false, optional: false, required: true
@@ -323,16 +379,16 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyRingInput() {
-    return this._keyRing
+    return this._keyRing;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -340,7 +396,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -353,15 +409,15 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // purpose - computed: false, optional: true, required: false
-  private _purpose?: string | undefined; 
+  private _purpose?: string; 
   public get purpose() {
     return this.getStringAttribute('purpose');
   }
-  public set purpose(value: string | undefined) {
+  public set purpose(value: string) {
     this._purpose = value;
   }
   public resetPurpose() {
@@ -369,15 +425,15 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get purposeInput() {
-    return this._purpose
+    return this._purpose;
   }
 
   // rotation_period - computed: false, optional: true, required: false
-  private _rotationPeriod?: string | undefined; 
+  private _rotationPeriod?: string; 
   public get rotationPeriod() {
     return this.getStringAttribute('rotation_period');
   }
-  public set rotationPeriod(value: string | undefined) {
+  public set rotationPeriod(value: string) {
     this._rotationPeriod = value;
   }
   public resetRotationPeriod() {
@@ -385,7 +441,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rotationPeriodInput() {
-    return this._rotationPeriod
+    return this._rotationPeriod;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -394,11 +450,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // skip_initial_version_creation - computed: false, optional: true, required: false
-  private _skipInitialVersionCreation?: boolean | cdktf.IResolvable | undefined; 
+  private _skipInitialVersionCreation?: boolean | cdktf.IResolvable; 
   public get skipInitialVersionCreation() {
     return this.getBooleanAttribute('skip_initial_version_creation') as any;
   }
-  public set skipInitialVersionCreation(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipInitialVersionCreation(value: boolean | cdktf.IResolvable) {
     this._skipInitialVersionCreation = value;
   }
   public resetSkipInitialVersionCreation() {
@@ -406,41 +462,39 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skipInitialVersionCreationInput() {
-    return this._skipInitialVersionCreation
+    return this._skipInitialVersionCreation;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KmsCryptoKeyTimeouts | undefined; 
-  private __timeoutsOutput = new KmsCryptoKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KmsCryptoKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: KmsCryptoKeyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: KmsCryptoKeyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // version_template - computed: false, optional: true, required: false
-  private _versionTemplate?: KmsCryptoKeyVersionTemplate | undefined; 
-  private __versionTemplateOutput = new KmsCryptoKeyVersionTemplateOutputReference(this as any, "version_template", true);
+  private _versionTemplate = new KmsCryptoKeyVersionTemplateOutputReference(this as any, "version_template", true);
   public get versionTemplate() {
-    return this.__versionTemplateOutput;
+    return this._versionTemplate;
   }
-  public putVersionTemplate(value: KmsCryptoKeyVersionTemplate | undefined) {
-    this._versionTemplate = value;
+  public putVersionTemplate(value: KmsCryptoKeyVersionTemplate) {
+    this._versionTemplate.internalValue = value;
   }
   public resetVersionTemplate() {
-    this._versionTemplate = undefined;
+    this._versionTemplate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get versionTemplateInput() {
-    return this._versionTemplate
+    return this._versionTemplate.internalValue;
   }
 
   // =========
@@ -457,8 +511,8 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       purpose: cdktf.stringToTerraform(this._purpose),
       rotation_period: cdktf.stringToTerraform(this._rotationPeriod),
       skip_initial_version_creation: cdktf.booleanToTerraform(this._skipInitialVersionCreation),
-      timeouts: kmsCryptoKeyTimeoutsToTerraform(this._timeouts),
-      version_template: kmsCryptoKeyVersionTemplateToTerraform(this._versionTemplate),
+      timeouts: kmsCryptoKeyTimeoutsToTerraform(this._timeouts.internalValue),
+      version_template: kmsCryptoKeyVersionTemplateToTerraform(this._versionTemplate.internalValue),
     };
   }
 }

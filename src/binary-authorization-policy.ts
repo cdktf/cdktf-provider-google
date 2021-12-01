@@ -62,7 +62,7 @@ part.
   readonly namePattern: string;
 }
 
-function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(struct?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns): any {
+export function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(struct?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,7 +105,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
   readonly requireAttestationsBy?: string[];
 }
 
-function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct?: BinaryAuthorizationPolicyClusterAdmissionRules): any {
+export function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct?: BinaryAuthorizationPolicyClusterAdmissionRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -147,7 +147,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
   readonly requireAttestationsBy?: string[];
 }
 
-function binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(struct?: BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference | BinaryAuthorizationPolicyDefaultAdmissionRule): any {
+export function binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(struct?: BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference | BinaryAuthorizationPolicyDefaultAdmissionRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -169,6 +169,37 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BinaryAuthorizationPolicyDefaultAdmissionRule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enforcementMode) {
+      hasAnyValues = true;
+      internalValueResult.enforcementMode = this._enforcementMode;
+    }
+    if (this._evaluationMode) {
+      hasAnyValues = true;
+      internalValueResult.evaluationMode = this._evaluationMode;
+    }
+    if (this._requireAttestationsBy) {
+      hasAnyValues = true;
+      internalValueResult.requireAttestationsBy = this._requireAttestationsBy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationPolicyDefaultAdmissionRule | undefined) {
+    if (value === undefined) {
+      this._enforcementMode = undefined;
+      this._evaluationMode = undefined;
+      this._requireAttestationsBy = undefined;
+    }
+    else {
+      this._enforcementMode = value.enforcementMode;
+      this._evaluationMode = value.evaluationMode;
+      this._requireAttestationsBy = value.requireAttestationsBy;
+    }
+  }
+
   // enforcement_mode - computed: false, optional: false, required: true
   private _enforcementMode?: string; 
   public get enforcementMode() {
@@ -179,7 +210,7 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get enforcementModeInput() {
-    return this._enforcementMode
+    return this._enforcementMode;
   }
 
   // evaluation_mode - computed: false, optional: false, required: true
@@ -192,15 +223,15 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get evaluationModeInput() {
-    return this._evaluationMode
+    return this._evaluationMode;
   }
 
   // require_attestations_by - computed: false, optional: true, required: false
-  private _requireAttestationsBy?: string[] | undefined; 
+  private _requireAttestationsBy?: string[]; 
   public get requireAttestationsBy() {
     return this.getListAttribute('require_attestations_by');
   }
-  public set requireAttestationsBy(value: string[] | undefined) {
+  public set requireAttestationsBy(value: string[]) {
     this._requireAttestationsBy = value;
   }
   public resetRequireAttestationsBy() {
@@ -208,7 +239,7 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get requireAttestationsByInput() {
-    return this._requireAttestationsBy
+    return this._requireAttestationsBy;
   }
 }
 export interface BinaryAuthorizationPolicyTimeouts {
@@ -226,7 +257,7 @@ export interface BinaryAuthorizationPolicyTimeouts {
   readonly update?: string;
 }
 
-function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuthorizationPolicyTimeoutsOutputReference | BinaryAuthorizationPolicyTimeouts): any {
+export function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuthorizationPolicyTimeoutsOutputReference | BinaryAuthorizationPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -248,12 +279,43 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BinaryAuthorizationPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -261,15 +323,15 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -277,15 +339,15 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -293,7 +355,7 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -334,8 +396,8 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
     this._project = config.project;
     this._admissionWhitelistPatterns = config.admissionWhitelistPatterns;
     this._clusterAdmissionRules = config.clusterAdmissionRules;
-    this._defaultAdmissionRule = config.defaultAdmissionRule;
-    this._timeouts = config.timeouts;
+    this._defaultAdmissionRule.internalValue = config.defaultAdmissionRule;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -343,11 +405,11 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -355,15 +417,15 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // global_policy_evaluation_mode - computed: true, optional: true, required: false
-  private _globalPolicyEvaluationMode?: string | undefined; 
+  private _globalPolicyEvaluationMode?: string; 
   public get globalPolicyEvaluationMode() {
     return this.getStringAttribute('global_policy_evaluation_mode');
   }
-  public set globalPolicyEvaluationMode(value: string | undefined) {
+  public set globalPolicyEvaluationMode(value: string) {
     this._globalPolicyEvaluationMode = value;
   }
   public resetGlobalPolicyEvaluationMode() {
@@ -371,7 +433,7 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get globalPolicyEvaluationModeInput() {
-    return this._globalPolicyEvaluationMode
+    return this._globalPolicyEvaluationMode;
   }
 
   // id - computed: true, optional: true, required: false
@@ -380,11 +442,11 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -392,16 +454,16 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // admission_whitelist_patterns - computed: false, optional: true, required: false
-  private _admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | undefined; 
+  private _admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[]; 
   public get admissionWhitelistPatterns() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('admission_whitelist_patterns') as any;
   }
-  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | undefined) {
+  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[]) {
     this._admissionWhitelistPatterns = value;
   }
   public resetAdmissionWhitelistPatterns() {
@@ -409,16 +471,16 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get admissionWhitelistPatternsInput() {
-    return this._admissionWhitelistPatterns
+    return this._admissionWhitelistPatterns;
   }
 
   // cluster_admission_rules - computed: false, optional: true, required: false
-  private _clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[] | undefined; 
+  private _clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[]; 
   public get clusterAdmissionRules() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cluster_admission_rules') as any;
   }
-  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[] | undefined) {
+  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[]) {
     this._clusterAdmissionRules = value;
   }
   public resetClusterAdmissionRules() {
@@ -426,38 +488,36 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterAdmissionRulesInput() {
-    return this._clusterAdmissionRules
+    return this._clusterAdmissionRules;
   }
 
   // default_admission_rule - computed: false, optional: false, required: true
-  private _defaultAdmissionRule?: BinaryAuthorizationPolicyDefaultAdmissionRule; 
-  private __defaultAdmissionRuleOutput = new BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference(this as any, "default_admission_rule", true);
+  private _defaultAdmissionRule = new BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference(this as any, "default_admission_rule", true);
   public get defaultAdmissionRule() {
-    return this.__defaultAdmissionRuleOutput;
+    return this._defaultAdmissionRule;
   }
   public putDefaultAdmissionRule(value: BinaryAuthorizationPolicyDefaultAdmissionRule) {
-    this._defaultAdmissionRule = value;
+    this._defaultAdmissionRule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultAdmissionRuleInput() {
-    return this._defaultAdmissionRule
+    return this._defaultAdmissionRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BinaryAuthorizationPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new BinaryAuthorizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BinaryAuthorizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BinaryAuthorizationPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BinaryAuthorizationPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -471,8 +531,8 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       admission_whitelist_patterns: cdktf.listMapper(binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform)(this._admissionWhitelistPatterns),
       cluster_admission_rules: cdktf.listMapper(binaryAuthorizationPolicyClusterAdmissionRulesToTerraform)(this._clusterAdmissionRules),
-      default_admission_rule: binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(this._defaultAdmissionRule),
-      timeouts: binaryAuthorizationPolicyTimeoutsToTerraform(this._timeouts),
+      default_admission_rule: binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(this._defaultAdmissionRule.internalValue),
+      timeouts: binaryAuthorizationPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

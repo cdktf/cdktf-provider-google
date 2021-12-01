@@ -52,7 +52,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -77,7 +77,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly commonCharactersToIgnore?: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -118,7 +118,7 @@ input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
   readonly charactersToIgnore?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore[];
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -141,12 +141,49 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maskingCharacter) {
+      hasAnyValues = true;
+      internalValueResult.maskingCharacter = this._maskingCharacter;
+    }
+    if (this._numberToMask) {
+      hasAnyValues = true;
+      internalValueResult.numberToMask = this._numberToMask;
+    }
+    if (this._reverseOrder) {
+      hasAnyValues = true;
+      internalValueResult.reverseOrder = this._reverseOrder;
+    }
+    if (this._charactersToIgnore) {
+      hasAnyValues = true;
+      internalValueResult.charactersToIgnore = this._charactersToIgnore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined) {
+    if (value === undefined) {
+      this._maskingCharacter = undefined;
+      this._numberToMask = undefined;
+      this._reverseOrder = undefined;
+      this._charactersToIgnore = undefined;
+    }
+    else {
+      this._maskingCharacter = value.maskingCharacter;
+      this._numberToMask = value.numberToMask;
+      this._reverseOrder = value.reverseOrder;
+      this._charactersToIgnore = value.charactersToIgnore;
+    }
+  }
+
   // masking_character - computed: false, optional: true, required: false
-  private _maskingCharacter?: string | undefined; 
+  private _maskingCharacter?: string; 
   public get maskingCharacter() {
     return this.getStringAttribute('masking_character');
   }
-  public set maskingCharacter(value: string | undefined) {
+  public set maskingCharacter(value: string) {
     this._maskingCharacter = value;
   }
   public resetMaskingCharacter() {
@@ -154,15 +191,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get maskingCharacterInput() {
-    return this._maskingCharacter
+    return this._maskingCharacter;
   }
 
   // number_to_mask - computed: false, optional: true, required: false
-  private _numberToMask?: number | undefined; 
+  private _numberToMask?: number; 
   public get numberToMask() {
     return this.getNumberAttribute('number_to_mask');
   }
-  public set numberToMask(value: number | undefined) {
+  public set numberToMask(value: number) {
     this._numberToMask = value;
   }
   public resetNumberToMask() {
@@ -170,15 +207,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get numberToMaskInput() {
-    return this._numberToMask
+    return this._numberToMask;
   }
 
   // reverse_order - computed: false, optional: true, required: false
-  private _reverseOrder?: boolean | cdktf.IResolvable | undefined; 
+  private _reverseOrder?: boolean | cdktf.IResolvable; 
   public get reverseOrder() {
     return this.getBooleanAttribute('reverse_order') as any;
   }
-  public set reverseOrder(value: boolean | cdktf.IResolvable | undefined) {
+  public set reverseOrder(value: boolean | cdktf.IResolvable) {
     this._reverseOrder = value;
   }
   public resetReverseOrder() {
@@ -186,16 +223,16 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get reverseOrderInput() {
-    return this._reverseOrder
+    return this._reverseOrder;
   }
 
   // characters_to_ignore - computed: false, optional: true, required: false
-  private _charactersToIgnore?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore[] | undefined; 
+  private _charactersToIgnore?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore[]; 
   public get charactersToIgnore() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('characters_to_ignore') as any;
   }
-  public set charactersToIgnore(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore[] | undefined) {
+  public set charactersToIgnore(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore[]) {
     this._charactersToIgnore = value;
   }
   public resetCharactersToIgnore() {
@@ -203,7 +240,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get charactersToIgnoreInput() {
-    return this._charactersToIgnore
+    return this._charactersToIgnore;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext {
@@ -215,7 +252,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name?: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -235,12 +272,31 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -248,7 +304,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped {
@@ -268,7 +324,7 @@ A base64-encoded string.
   readonly wrappedKey: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -289,6 +345,31 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cryptoKeyName) {
+      hasAnyValues = true;
+      internalValueResult.cryptoKeyName = this._cryptoKeyName;
+    }
+    if (this._wrappedKey) {
+      hasAnyValues = true;
+      internalValueResult.wrappedKey = this._wrappedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined) {
+    if (value === undefined) {
+      this._cryptoKeyName = undefined;
+      this._wrappedKey = undefined;
+    }
+    else {
+      this._cryptoKeyName = value.cryptoKeyName;
+      this._wrappedKey = value.wrappedKey;
+    }
+  }
+
   // crypto_key_name - computed: false, optional: false, required: true
   private _cryptoKeyName?: string; 
   public get cryptoKeyName() {
@@ -299,7 +380,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyNameInput() {
-    return this._cryptoKeyName
+    return this._cryptoKeyName;
   }
 
   // wrapped_key - computed: false, optional: false, required: true
@@ -312,7 +393,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get wrappedKeyInput() {
-    return this._wrappedKey
+    return this._wrappedKey;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient {
@@ -324,7 +405,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -344,6 +425,25 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -354,7 +454,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped {
@@ -368,7 +468,7 @@ A base64-encoded string.
   readonly key: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -388,6 +488,25 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._key) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined) {
+    if (value === undefined) {
+      this._key = undefined;
+    }
+    else {
+      this._key = value.key;
+    }
+  }
+
   // key - computed: false, optional: false, required: true
   private _key?: string; 
   public get key() {
@@ -398,7 +517,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
-    return this._key
+    return this._key;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey {
@@ -422,7 +541,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly unwrapped?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -444,55 +563,83 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // kms_wrapped - computed: false, optional: true, required: false
-  private _kmsWrapped?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined; 
-  private __kmsWrappedOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference(this as any, "kms_wrapped", true);
-  public get kmsWrapped() {
-    return this.__kmsWrappedOutput;
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsWrapped) {
+      hasAnyValues = true;
+      internalValueResult.kmsWrapped = this._kmsWrapped?.internalValue;
+    }
+    if (this._transient) {
+      hasAnyValues = true;
+      internalValueResult.transient = this._transient?.internalValue;
+    }
+    if (this._unwrapped) {
+      hasAnyValues = true;
+      internalValueResult.unwrapped = this._unwrapped?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putKmsWrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined) {
-    this._kmsWrapped = value;
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined) {
+    if (value === undefined) {
+      this._kmsWrapped.internalValue = undefined;
+      this._transient.internalValue = undefined;
+      this._unwrapped.internalValue = undefined;
+    }
+    else {
+      this._kmsWrapped.internalValue = value.kmsWrapped;
+      this._transient.internalValue = value.transient;
+      this._unwrapped.internalValue = value.unwrapped;
+    }
+  }
+
+  // kms_wrapped - computed: false, optional: true, required: false
+  private _kmsWrapped = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference(this as any, "kms_wrapped", true);
+  public get kmsWrapped() {
+    return this._kmsWrapped;
+  }
+  public putKmsWrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped) {
+    this._kmsWrapped.internalValue = value;
   }
   public resetKmsWrapped() {
-    this._kmsWrapped = undefined;
+    this._kmsWrapped.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kmsWrappedInput() {
-    return this._kmsWrapped
+    return this._kmsWrapped.internalValue;
   }
 
   // transient - computed: false, optional: true, required: false
-  private _transient?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined; 
-  private __transientOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference(this as any, "transient", true);
+  private _transient = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference(this as any, "transient", true);
   public get transient() {
-    return this.__transientOutput;
+    return this._transient;
   }
-  public putTransient(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined) {
-    this._transient = value;
+  public putTransient(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient) {
+    this._transient.internalValue = value;
   }
   public resetTransient() {
-    this._transient = undefined;
+    this._transient.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get transientInput() {
-    return this._transient
+    return this._transient.internalValue;
   }
 
   // unwrapped - computed: false, optional: true, required: false
-  private _unwrapped?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined; 
-  private __unwrappedOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference(this as any, "unwrapped", true);
+  private _unwrapped = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference(this as any, "unwrapped", true);
   public get unwrapped() {
-    return this.__unwrappedOutput;
+    return this._unwrapped;
   }
-  public putUnwrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined) {
-    this._unwrapped = value;
+  public putUnwrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped) {
+    this._unwrapped.internalValue = value;
   }
   public resetUnwrapped() {
-    this._unwrapped = undefined;
+    this._unwrapped.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get unwrappedInput() {
-    return this._unwrapped
+    return this._unwrapped.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType {
@@ -504,7 +651,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name?: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -524,12 +671,31 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -537,7 +703,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig {
@@ -561,7 +727,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly surrogateInfoType?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -583,55 +749,83 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // context - computed: false, optional: true, required: false
-  private _context?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined; 
-  private __contextOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference(this as any, "context", true);
-  public get context() {
-    return this.__contextOutput;
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._context) {
+      hasAnyValues = true;
+      internalValueResult.context = this._context?.internalValue;
+    }
+    if (this._cryptoKey) {
+      hasAnyValues = true;
+      internalValueResult.cryptoKey = this._cryptoKey?.internalValue;
+    }
+    if (this._surrogateInfoType) {
+      hasAnyValues = true;
+      internalValueResult.surrogateInfoType = this._surrogateInfoType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putContext(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined) {
-    this._context = value;
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined) {
+    if (value === undefined) {
+      this._context.internalValue = undefined;
+      this._cryptoKey.internalValue = undefined;
+      this._surrogateInfoType.internalValue = undefined;
+    }
+    else {
+      this._context.internalValue = value.context;
+      this._cryptoKey.internalValue = value.cryptoKey;
+      this._surrogateInfoType.internalValue = value.surrogateInfoType;
+    }
+  }
+
+  // context - computed: false, optional: true, required: false
+  private _context = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference(this as any, "context", true);
+  public get context() {
+    return this._context;
+  }
+  public putContext(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext) {
+    this._context.internalValue = value;
   }
   public resetContext() {
-    this._context = undefined;
+    this._context.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get contextInput() {
-    return this._context
+    return this._context.internalValue;
   }
 
   // crypto_key - computed: false, optional: true, required: false
-  private _cryptoKey?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined; 
-  private __cryptoKeyOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference(this as any, "crypto_key", true);
+  private _cryptoKey = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference(this as any, "crypto_key", true);
   public get cryptoKey() {
-    return this.__cryptoKeyOutput;
+    return this._cryptoKey;
   }
-  public putCryptoKey(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined) {
-    this._cryptoKey = value;
+  public putCryptoKey(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey) {
+    this._cryptoKey.internalValue = value;
   }
   public resetCryptoKey() {
-    this._cryptoKey = undefined;
+    this._cryptoKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyInput() {
-    return this._cryptoKey
+    return this._cryptoKey.internalValue;
   }
 
   // surrogate_info_type - computed: false, optional: true, required: false
-  private _surrogateInfoType?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined; 
-  private __surrogateInfoTypeOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference(this as any, "surrogate_info_type", true);
+  private _surrogateInfoType = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference(this as any, "surrogate_info_type", true);
   public get surrogateInfoType() {
-    return this.__surrogateInfoTypeOutput;
+    return this._surrogateInfoType;
   }
-  public putSurrogateInfoType(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined) {
-    this._surrogateInfoType = value;
+  public putSurrogateInfoType(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType) {
+    this._surrogateInfoType.internalValue = value;
   }
   public resetSurrogateInfoType() {
-    this._surrogateInfoType = undefined;
+    this._surrogateInfoType.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get surrogateInfoTypeInput() {
-    return this._surrogateInfoType
+    return this._surrogateInfoType.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext {
@@ -643,7 +837,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name?: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -663,12 +857,31 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -676,7 +889,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped {
@@ -696,7 +909,7 @@ A base64-encoded string.
   readonly wrappedKey: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -717,6 +930,31 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cryptoKeyName) {
+      hasAnyValues = true;
+      internalValueResult.cryptoKeyName = this._cryptoKeyName;
+    }
+    if (this._wrappedKey) {
+      hasAnyValues = true;
+      internalValueResult.wrappedKey = this._wrappedKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined) {
+    if (value === undefined) {
+      this._cryptoKeyName = undefined;
+      this._wrappedKey = undefined;
+    }
+    else {
+      this._cryptoKeyName = value.cryptoKeyName;
+      this._wrappedKey = value.wrappedKey;
+    }
+  }
+
   // crypto_key_name - computed: false, optional: false, required: true
   private _cryptoKeyName?: string; 
   public get cryptoKeyName() {
@@ -727,7 +965,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyNameInput() {
-    return this._cryptoKeyName
+    return this._cryptoKeyName;
   }
 
   // wrapped_key - computed: false, optional: false, required: true
@@ -740,7 +978,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get wrappedKeyInput() {
-    return this._wrappedKey
+    return this._wrappedKey;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient {
@@ -752,7 +990,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -772,6 +1010,25 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -782,7 +1039,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped {
@@ -796,7 +1053,7 @@ A base64-encoded string.
   readonly key: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -816,6 +1073,25 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._key) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined) {
+    if (value === undefined) {
+      this._key = undefined;
+    }
+    else {
+      this._key = value.key;
+    }
+  }
+
   // key - computed: false, optional: false, required: true
   private _key?: string; 
   public get key() {
@@ -826,7 +1102,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
-    return this._key
+    return this._key;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey {
@@ -850,7 +1126,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly unwrapped?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -872,55 +1148,83 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // kms_wrapped - computed: false, optional: true, required: false
-  private _kmsWrapped?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined; 
-  private __kmsWrappedOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference(this as any, "kms_wrapped", true);
-  public get kmsWrapped() {
-    return this.__kmsWrappedOutput;
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsWrapped) {
+      hasAnyValues = true;
+      internalValueResult.kmsWrapped = this._kmsWrapped?.internalValue;
+    }
+    if (this._transient) {
+      hasAnyValues = true;
+      internalValueResult.transient = this._transient?.internalValue;
+    }
+    if (this._unwrapped) {
+      hasAnyValues = true;
+      internalValueResult.unwrapped = this._unwrapped?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putKmsWrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined) {
-    this._kmsWrapped = value;
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined) {
+    if (value === undefined) {
+      this._kmsWrapped.internalValue = undefined;
+      this._transient.internalValue = undefined;
+      this._unwrapped.internalValue = undefined;
+    }
+    else {
+      this._kmsWrapped.internalValue = value.kmsWrapped;
+      this._transient.internalValue = value.transient;
+      this._unwrapped.internalValue = value.unwrapped;
+    }
+  }
+
+  // kms_wrapped - computed: false, optional: true, required: false
+  private _kmsWrapped = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference(this as any, "kms_wrapped", true);
+  public get kmsWrapped() {
+    return this._kmsWrapped;
+  }
+  public putKmsWrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped) {
+    this._kmsWrapped.internalValue = value;
   }
   public resetKmsWrapped() {
-    this._kmsWrapped = undefined;
+    this._kmsWrapped.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kmsWrappedInput() {
-    return this._kmsWrapped
+    return this._kmsWrapped.internalValue;
   }
 
   // transient - computed: false, optional: true, required: false
-  private _transient?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined; 
-  private __transientOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference(this as any, "transient", true);
+  private _transient = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference(this as any, "transient", true);
   public get transient() {
-    return this.__transientOutput;
+    return this._transient;
   }
-  public putTransient(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined) {
-    this._transient = value;
+  public putTransient(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient) {
+    this._transient.internalValue = value;
   }
   public resetTransient() {
-    this._transient = undefined;
+    this._transient.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get transientInput() {
-    return this._transient
+    return this._transient.internalValue;
   }
 
   // unwrapped - computed: false, optional: true, required: false
-  private _unwrapped?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined; 
-  private __unwrappedOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference(this as any, "unwrapped", true);
+  private _unwrapped = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference(this as any, "unwrapped", true);
   public get unwrapped() {
-    return this.__unwrappedOutput;
+    return this._unwrapped;
   }
-  public putUnwrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined) {
-    this._unwrapped = value;
+  public putUnwrapped(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped) {
+    this._unwrapped.internalValue = value;
   }
   public resetUnwrapped() {
-    this._unwrapped = undefined;
+    this._unwrapped.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get unwrappedInput() {
-    return this._unwrapped
+    return this._unwrapped.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType {
@@ -932,7 +1236,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly name?: string;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -952,12 +1256,31 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -965,7 +1288,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig {
@@ -1009,7 +1332,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly surrogateInfoType?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1034,12 +1357,61 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._commonAlphabet) {
+      hasAnyValues = true;
+      internalValueResult.commonAlphabet = this._commonAlphabet;
+    }
+    if (this._customAlphabet) {
+      hasAnyValues = true;
+      internalValueResult.customAlphabet = this._customAlphabet;
+    }
+    if (this._radix) {
+      hasAnyValues = true;
+      internalValueResult.radix = this._radix;
+    }
+    if (this._context) {
+      hasAnyValues = true;
+      internalValueResult.context = this._context?.internalValue;
+    }
+    if (this._cryptoKey) {
+      hasAnyValues = true;
+      internalValueResult.cryptoKey = this._cryptoKey?.internalValue;
+    }
+    if (this._surrogateInfoType) {
+      hasAnyValues = true;
+      internalValueResult.surrogateInfoType = this._surrogateInfoType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined) {
+    if (value === undefined) {
+      this._commonAlphabet = undefined;
+      this._customAlphabet = undefined;
+      this._radix = undefined;
+      this._context.internalValue = undefined;
+      this._cryptoKey.internalValue = undefined;
+      this._surrogateInfoType.internalValue = undefined;
+    }
+    else {
+      this._commonAlphabet = value.commonAlphabet;
+      this._customAlphabet = value.customAlphabet;
+      this._radix = value.radix;
+      this._context.internalValue = value.context;
+      this._cryptoKey.internalValue = value.cryptoKey;
+      this._surrogateInfoType.internalValue = value.surrogateInfoType;
+    }
+  }
+
   // common_alphabet - computed: false, optional: true, required: false
-  private _commonAlphabet?: string | undefined; 
+  private _commonAlphabet?: string; 
   public get commonAlphabet() {
     return this.getStringAttribute('common_alphabet');
   }
-  public set commonAlphabet(value: string | undefined) {
+  public set commonAlphabet(value: string) {
     this._commonAlphabet = value;
   }
   public resetCommonAlphabet() {
@@ -1047,15 +1419,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get commonAlphabetInput() {
-    return this._commonAlphabet
+    return this._commonAlphabet;
   }
 
   // custom_alphabet - computed: false, optional: true, required: false
-  private _customAlphabet?: string | undefined; 
+  private _customAlphabet?: string; 
   public get customAlphabet() {
     return this.getStringAttribute('custom_alphabet');
   }
-  public set customAlphabet(value: string | undefined) {
+  public set customAlphabet(value: string) {
     this._customAlphabet = value;
   }
   public resetCustomAlphabet() {
@@ -1063,15 +1435,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get customAlphabetInput() {
-    return this._customAlphabet
+    return this._customAlphabet;
   }
 
   // radix - computed: false, optional: true, required: false
-  private _radix?: number | undefined; 
+  private _radix?: number; 
   public get radix() {
     return this.getNumberAttribute('radix');
   }
-  public set radix(value: number | undefined) {
+  public set radix(value: number) {
     this._radix = value;
   }
   public resetRadix() {
@@ -1079,58 +1451,55 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get radixInput() {
-    return this._radix
+    return this._radix;
   }
 
   // context - computed: false, optional: true, required: false
-  private _context?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined; 
-  private __contextOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference(this as any, "context", true);
+  private _context = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference(this as any, "context", true);
   public get context() {
-    return this.__contextOutput;
+    return this._context;
   }
-  public putContext(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined) {
-    this._context = value;
+  public putContext(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext) {
+    this._context.internalValue = value;
   }
   public resetContext() {
-    this._context = undefined;
+    this._context.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get contextInput() {
-    return this._context
+    return this._context.internalValue;
   }
 
   // crypto_key - computed: false, optional: true, required: false
-  private _cryptoKey?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined; 
-  private __cryptoKeyOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference(this as any, "crypto_key", true);
+  private _cryptoKey = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference(this as any, "crypto_key", true);
   public get cryptoKey() {
-    return this.__cryptoKeyOutput;
+    return this._cryptoKey;
   }
-  public putCryptoKey(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined) {
-    this._cryptoKey = value;
+  public putCryptoKey(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey) {
+    this._cryptoKey.internalValue = value;
   }
   public resetCryptoKey() {
-    this._cryptoKey = undefined;
+    this._cryptoKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyInput() {
-    return this._cryptoKey
+    return this._cryptoKey.internalValue;
   }
 
   // surrogate_info_type - computed: false, optional: true, required: false
-  private _surrogateInfoType?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined; 
-  private __surrogateInfoTypeOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference(this as any, "surrogate_info_type", true);
+  private _surrogateInfoType = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference(this as any, "surrogate_info_type", true);
   public get surrogateInfoType() {
-    return this.__surrogateInfoTypeOutput;
+    return this._surrogateInfoType;
   }
-  public putSurrogateInfoType(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined) {
-    this._surrogateInfoType = value;
+  public putSurrogateInfoType(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType) {
+    this._surrogateInfoType.internalValue = value;
   }
   public resetSurrogateInfoType() {
-    this._surrogateInfoType = undefined;
+    this._surrogateInfoType.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get surrogateInfoTypeInput() {
-    return this._surrogateInfoType
+    return this._surrogateInfoType.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue {
@@ -1155,7 +1524,7 @@ year by itself or a year and month where the day is not significant.
   readonly year?: number;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1177,12 +1546,43 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._day) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._month) {
+      hasAnyValues = true;
+      internalValueResult.month = this._month;
+    }
+    if (this._year) {
+      hasAnyValues = true;
+      internalValueResult.year = this._year;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined) {
+    if (value === undefined) {
+      this._day = undefined;
+      this._month = undefined;
+      this._year = undefined;
+    }
+    else {
+      this._day = value.day;
+      this._month = value.month;
+      this._year = value.year;
+    }
+  }
+
   // day - computed: false, optional: true, required: false
-  private _day?: number | undefined; 
+  private _day?: number; 
   public get day() {
     return this.getNumberAttribute('day');
   }
-  public set day(value: number | undefined) {
+  public set day(value: number) {
     this._day = value;
   }
   public resetDay() {
@@ -1190,15 +1590,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get dayInput() {
-    return this._day
+    return this._day;
   }
 
   // month - computed: false, optional: true, required: false
-  private _month?: number | undefined; 
+  private _month?: number; 
   public get month() {
     return this.getNumberAttribute('month');
   }
-  public set month(value: number | undefined) {
+  public set month(value: number) {
     this._month = value;
   }
   public resetMonth() {
@@ -1206,15 +1606,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get monthInput() {
-    return this._month
+    return this._month;
   }
 
   // year - computed: false, optional: true, required: false
-  private _year?: number | undefined; 
+  private _year?: number; 
   public get year() {
     return this.getNumberAttribute('year');
   }
-  public set year(value: number | undefined) {
+  public set year(value: number) {
     this._year = value;
   }
   public resetYear() {
@@ -1222,7 +1622,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get yearInput() {
-    return this._year
+    return this._year;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue {
@@ -1252,7 +1652,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly seconds?: number;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1275,12 +1675,49 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hours) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined) {
+    if (value === undefined) {
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // hours - computed: false, optional: true, required: false
-  private _hours?: number | undefined; 
+  private _hours?: number; 
   public get hours() {
     return this.getNumberAttribute('hours');
   }
-  public set hours(value: number | undefined) {
+  public set hours(value: number) {
     this._hours = value;
   }
   public resetHours() {
@@ -1288,15 +1725,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get hoursInput() {
-    return this._hours
+    return this._hours;
   }
 
   // minutes - computed: false, optional: true, required: false
-  private _minutes?: number | undefined; 
+  private _minutes?: number; 
   public get minutes() {
     return this.getNumberAttribute('minutes');
   }
-  public set minutes(value: number | undefined) {
+  public set minutes(value: number) {
     this._minutes = value;
   }
   public resetMinutes() {
@@ -1304,15 +1741,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get minutesInput() {
-    return this._minutes
+    return this._minutes;
   }
 
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -1320,15 +1757,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: number | undefined; 
+  private _seconds?: number; 
   public get seconds() {
     return this.getNumberAttribute('seconds');
   }
-  public set seconds(value: number | undefined) {
+  public set seconds(value: number) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -1336,7 +1773,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue {
@@ -1391,7 +1828,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
   readonly timeValue?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1418,12 +1855,73 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._booleanValue) {
+      hasAnyValues = true;
+      internalValueResult.booleanValue = this._booleanValue;
+    }
+    if (this._dayOfWeekValue) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeekValue = this._dayOfWeekValue;
+    }
+    if (this._floatValue) {
+      hasAnyValues = true;
+      internalValueResult.floatValue = this._floatValue;
+    }
+    if (this._integerValue) {
+      hasAnyValues = true;
+      internalValueResult.integerValue = this._integerValue;
+    }
+    if (this._stringValue) {
+      hasAnyValues = true;
+      internalValueResult.stringValue = this._stringValue;
+    }
+    if (this._timestampValue) {
+      hasAnyValues = true;
+      internalValueResult.timestampValue = this._timestampValue;
+    }
+    if (this._dateValue) {
+      hasAnyValues = true;
+      internalValueResult.dateValue = this._dateValue?.internalValue;
+    }
+    if (this._timeValue) {
+      hasAnyValues = true;
+      internalValueResult.timeValue = this._timeValue?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue | undefined) {
+    if (value === undefined) {
+      this._booleanValue = undefined;
+      this._dayOfWeekValue = undefined;
+      this._floatValue = undefined;
+      this._integerValue = undefined;
+      this._stringValue = undefined;
+      this._timestampValue = undefined;
+      this._dateValue.internalValue = undefined;
+      this._timeValue.internalValue = undefined;
+    }
+    else {
+      this._booleanValue = value.booleanValue;
+      this._dayOfWeekValue = value.dayOfWeekValue;
+      this._floatValue = value.floatValue;
+      this._integerValue = value.integerValue;
+      this._stringValue = value.stringValue;
+      this._timestampValue = value.timestampValue;
+      this._dateValue.internalValue = value.dateValue;
+      this._timeValue.internalValue = value.timeValue;
+    }
+  }
+
   // boolean_value - computed: false, optional: true, required: false
-  private _booleanValue?: boolean | cdktf.IResolvable | undefined; 
+  private _booleanValue?: boolean | cdktf.IResolvable; 
   public get booleanValue() {
     return this.getBooleanAttribute('boolean_value') as any;
   }
-  public set booleanValue(value: boolean | cdktf.IResolvable | undefined) {
+  public set booleanValue(value: boolean | cdktf.IResolvable) {
     this._booleanValue = value;
   }
   public resetBooleanValue() {
@@ -1431,15 +1929,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get booleanValueInput() {
-    return this._booleanValue
+    return this._booleanValue;
   }
 
   // day_of_week_value - computed: false, optional: true, required: false
-  private _dayOfWeekValue?: string | undefined; 
+  private _dayOfWeekValue?: string; 
   public get dayOfWeekValue() {
     return this.getStringAttribute('day_of_week_value');
   }
-  public set dayOfWeekValue(value: string | undefined) {
+  public set dayOfWeekValue(value: string) {
     this._dayOfWeekValue = value;
   }
   public resetDayOfWeekValue() {
@@ -1447,15 +1945,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get dayOfWeekValueInput() {
-    return this._dayOfWeekValue
+    return this._dayOfWeekValue;
   }
 
   // float_value - computed: false, optional: true, required: false
-  private _floatValue?: number | undefined; 
+  private _floatValue?: number; 
   public get floatValue() {
     return this.getNumberAttribute('float_value');
   }
-  public set floatValue(value: number | undefined) {
+  public set floatValue(value: number) {
     this._floatValue = value;
   }
   public resetFloatValue() {
@@ -1463,15 +1961,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get floatValueInput() {
-    return this._floatValue
+    return this._floatValue;
   }
 
   // integer_value - computed: false, optional: true, required: false
-  private _integerValue?: number | undefined; 
+  private _integerValue?: number; 
   public get integerValue() {
     return this.getNumberAttribute('integer_value');
   }
-  public set integerValue(value: number | undefined) {
+  public set integerValue(value: number) {
     this._integerValue = value;
   }
   public resetIntegerValue() {
@@ -1479,15 +1977,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get integerValueInput() {
-    return this._integerValue
+    return this._integerValue;
   }
 
   // string_value - computed: false, optional: true, required: false
-  private _stringValue?: string | undefined; 
+  private _stringValue?: string; 
   public get stringValue() {
     return this.getStringAttribute('string_value');
   }
-  public set stringValue(value: string | undefined) {
+  public set stringValue(value: string) {
     this._stringValue = value;
   }
   public resetStringValue() {
@@ -1495,15 +1993,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get stringValueInput() {
-    return this._stringValue
+    return this._stringValue;
   }
 
   // timestamp_value - computed: false, optional: true, required: false
-  private _timestampValue?: string | undefined; 
+  private _timestampValue?: string; 
   public get timestampValue() {
     return this.getStringAttribute('timestamp_value');
   }
-  public set timestampValue(value: string | undefined) {
+  public set timestampValue(value: string) {
     this._timestampValue = value;
   }
   public resetTimestampValue() {
@@ -1511,41 +2009,39 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get timestampValueInput() {
-    return this._timestampValue
+    return this._timestampValue;
   }
 
   // date_value - computed: false, optional: true, required: false
-  private _dateValue?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined; 
-  private __dateValueOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference(this as any, "date_value", true);
+  private _dateValue = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference(this as any, "date_value", true);
   public get dateValue() {
-    return this.__dateValueOutput;
+    return this._dateValue;
   }
-  public putDateValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined) {
-    this._dateValue = value;
+  public putDateValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue) {
+    this._dateValue.internalValue = value;
   }
   public resetDateValue() {
-    this._dateValue = undefined;
+    this._dateValue.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dateValueInput() {
-    return this._dateValue
+    return this._dateValue.internalValue;
   }
 
   // time_value - computed: false, optional: true, required: false
-  private _timeValue?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined; 
-  private __timeValueOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference(this as any, "time_value", true);
+  private _timeValue = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference(this as any, "time_value", true);
   public get timeValue() {
-    return this.__timeValueOutput;
+    return this._timeValue;
   }
-  public putTimeValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined) {
-    this._timeValue = value;
+  public putTimeValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue) {
+    this._timeValue.internalValue = value;
   }
   public resetTimeValue() {
-    this._timeValue = undefined;
+    this._timeValue.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeValueInput() {
-    return this._timeValue
+    return this._timeValue.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig {
@@ -1557,7 +2053,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly newValue: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1577,18 +2073,36 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._newValue) {
+      hasAnyValues = true;
+      internalValueResult.newValue = this._newValue?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined) {
+    if (value === undefined) {
+      this._newValue.internalValue = undefined;
+    }
+    else {
+      this._newValue.internalValue = value.newValue;
+    }
+  }
+
   // new_value - computed: false, optional: false, required: true
-  private _newValue?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue; 
-  private __newValueOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference(this as any, "new_value", true);
+  private _newValue = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference(this as any, "new_value", true);
   public get newValue() {
-    return this.__newValueOutput;
+    return this._newValue;
   }
   public putNewValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue) {
-    this._newValue = value;
+    this._newValue.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get newValueInput() {
-    return this._newValue
+    return this._newValue.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation {
@@ -1624,7 +2138,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly replaceConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1648,12 +2162,55 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._replaceWithInfoTypeConfig) {
+      hasAnyValues = true;
+      internalValueResult.replaceWithInfoTypeConfig = this._replaceWithInfoTypeConfig;
+    }
+    if (this._characterMaskConfig) {
+      hasAnyValues = true;
+      internalValueResult.characterMaskConfig = this._characterMaskConfig?.internalValue;
+    }
+    if (this._cryptoDeterministicConfig) {
+      hasAnyValues = true;
+      internalValueResult.cryptoDeterministicConfig = this._cryptoDeterministicConfig?.internalValue;
+    }
+    if (this._cryptoReplaceFfxFpeConfig) {
+      hasAnyValues = true;
+      internalValueResult.cryptoReplaceFfxFpeConfig = this._cryptoReplaceFfxFpeConfig?.internalValue;
+    }
+    if (this._replaceConfig) {
+      hasAnyValues = true;
+      internalValueResult.replaceConfig = this._replaceConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation | undefined) {
+    if (value === undefined) {
+      this._replaceWithInfoTypeConfig = undefined;
+      this._characterMaskConfig.internalValue = undefined;
+      this._cryptoDeterministicConfig.internalValue = undefined;
+      this._cryptoReplaceFfxFpeConfig.internalValue = undefined;
+      this._replaceConfig.internalValue = undefined;
+    }
+    else {
+      this._replaceWithInfoTypeConfig = value.replaceWithInfoTypeConfig;
+      this._characterMaskConfig.internalValue = value.characterMaskConfig;
+      this._cryptoDeterministicConfig.internalValue = value.cryptoDeterministicConfig;
+      this._cryptoReplaceFfxFpeConfig.internalValue = value.cryptoReplaceFfxFpeConfig;
+      this._replaceConfig.internalValue = value.replaceConfig;
+    }
+  }
+
   // replace_with_info_type_config - computed: false, optional: true, required: false
-  private _replaceWithInfoTypeConfig?: boolean | cdktf.IResolvable | undefined; 
+  private _replaceWithInfoTypeConfig?: boolean | cdktf.IResolvable; 
   public get replaceWithInfoTypeConfig() {
     return this.getBooleanAttribute('replace_with_info_type_config') as any;
   }
-  public set replaceWithInfoTypeConfig(value: boolean | cdktf.IResolvable | undefined) {
+  public set replaceWithInfoTypeConfig(value: boolean | cdktf.IResolvable) {
     this._replaceWithInfoTypeConfig = value;
   }
   public resetReplaceWithInfoTypeConfig() {
@@ -1661,75 +2218,71 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get replaceWithInfoTypeConfigInput() {
-    return this._replaceWithInfoTypeConfig
+    return this._replaceWithInfoTypeConfig;
   }
 
   // character_mask_config - computed: false, optional: true, required: false
-  private _characterMaskConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined; 
-  private __characterMaskConfigOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference(this as any, "character_mask_config", true);
+  private _characterMaskConfig = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference(this as any, "character_mask_config", true);
   public get characterMaskConfig() {
-    return this.__characterMaskConfigOutput;
+    return this._characterMaskConfig;
   }
-  public putCharacterMaskConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined) {
-    this._characterMaskConfig = value;
+  public putCharacterMaskConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig) {
+    this._characterMaskConfig.internalValue = value;
   }
   public resetCharacterMaskConfig() {
-    this._characterMaskConfig = undefined;
+    this._characterMaskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get characterMaskConfigInput() {
-    return this._characterMaskConfig
+    return this._characterMaskConfig.internalValue;
   }
 
   // crypto_deterministic_config - computed: false, optional: true, required: false
-  private _cryptoDeterministicConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined; 
-  private __cryptoDeterministicConfigOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference(this as any, "crypto_deterministic_config", true);
+  private _cryptoDeterministicConfig = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference(this as any, "crypto_deterministic_config", true);
   public get cryptoDeterministicConfig() {
-    return this.__cryptoDeterministicConfigOutput;
+    return this._cryptoDeterministicConfig;
   }
-  public putCryptoDeterministicConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined) {
-    this._cryptoDeterministicConfig = value;
+  public putCryptoDeterministicConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig) {
+    this._cryptoDeterministicConfig.internalValue = value;
   }
   public resetCryptoDeterministicConfig() {
-    this._cryptoDeterministicConfig = undefined;
+    this._cryptoDeterministicConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoDeterministicConfigInput() {
-    return this._cryptoDeterministicConfig
+    return this._cryptoDeterministicConfig.internalValue;
   }
 
   // crypto_replace_ffx_fpe_config - computed: false, optional: true, required: false
-  private _cryptoReplaceFfxFpeConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined; 
-  private __cryptoReplaceFfxFpeConfigOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference(this as any, "crypto_replace_ffx_fpe_config", true);
+  private _cryptoReplaceFfxFpeConfig = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference(this as any, "crypto_replace_ffx_fpe_config", true);
   public get cryptoReplaceFfxFpeConfig() {
-    return this.__cryptoReplaceFfxFpeConfigOutput;
+    return this._cryptoReplaceFfxFpeConfig;
   }
-  public putCryptoReplaceFfxFpeConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined) {
-    this._cryptoReplaceFfxFpeConfig = value;
+  public putCryptoReplaceFfxFpeConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig) {
+    this._cryptoReplaceFfxFpeConfig.internalValue = value;
   }
   public resetCryptoReplaceFfxFpeConfig() {
-    this._cryptoReplaceFfxFpeConfig = undefined;
+    this._cryptoReplaceFfxFpeConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cryptoReplaceFfxFpeConfigInput() {
-    return this._cryptoReplaceFfxFpeConfig
+    return this._cryptoReplaceFfxFpeConfig.internalValue;
   }
 
   // replace_config - computed: false, optional: true, required: false
-  private _replaceConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined; 
-  private __replaceConfigOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference(this as any, "replace_config", true);
+  private _replaceConfig = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference(this as any, "replace_config", true);
   public get replaceConfig() {
-    return this.__replaceConfigOutput;
+    return this._replaceConfig;
   }
-  public putReplaceConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined) {
-    this._replaceConfig = value;
+  public putReplaceConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig) {
+    this._replaceConfig.internalValue = value;
   }
   public resetReplaceConfig() {
-    this._replaceConfig = undefined;
+    this._replaceConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get replaceConfigInput() {
-    return this._replaceConfig
+    return this._replaceConfig.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations {
@@ -1747,7 +2300,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly primitiveTransformation: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1767,7 +2320,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   readonly transformations: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations[];
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1787,6 +2340,25 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._transformations) {
+      hasAnyValues = true;
+      internalValueResult.transformations = this._transformations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations | undefined) {
+    if (value === undefined) {
+      this._transformations = undefined;
+    }
+    else {
+      this._transformations = value.transformations;
+    }
+  }
+
   // transformations - computed: false, optional: false, required: true
   private _transformations?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations[]; 
   public get transformations() {
@@ -1798,7 +2370,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
   // Temporarily expose input value. Use with caution.
   public get transformationsInput() {
-    return this._transformations
+    return this._transformations;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateDeidentifyConfig {
@@ -1810,7 +2382,7 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfig {
   readonly infoTypeTransformations: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations;
 }
 
-function dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfig): any {
+export function dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(struct?: DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference | DataLossPreventionDeidentifyTemplateDeidentifyConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1830,18 +2402,36 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._infoTypeTransformations) {
+      hasAnyValues = true;
+      internalValueResult.infoTypeTransformations = this._infoTypeTransformations?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfig | undefined) {
+    if (value === undefined) {
+      this._infoTypeTransformations.internalValue = undefined;
+    }
+    else {
+      this._infoTypeTransformations.internalValue = value.infoTypeTransformations;
+    }
+  }
+
   // info_type_transformations - computed: false, optional: false, required: true
-  private _infoTypeTransformations?: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations; 
-  private __infoTypeTransformationsOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference(this as any, "info_type_transformations", true);
+  private _infoTypeTransformations = new DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference(this as any, "info_type_transformations", true);
   public get infoTypeTransformations() {
-    return this.__infoTypeTransformationsOutput;
+    return this._infoTypeTransformations;
   }
   public putInfoTypeTransformations(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations) {
-    this._infoTypeTransformations = value;
+    this._infoTypeTransformations.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get infoTypeTransformationsInput() {
-    return this._infoTypeTransformations
+    return this._infoTypeTransformations.internalValue;
   }
 }
 export interface DataLossPreventionDeidentifyTemplateTimeouts {
@@ -1859,7 +2449,7 @@ export interface DataLossPreventionDeidentifyTemplateTimeouts {
   readonly update?: string;
 }
 
-function dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(struct?: DataLossPreventionDeidentifyTemplateTimeoutsOutputReference | DataLossPreventionDeidentifyTemplateTimeouts): any {
+export function dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(struct?: DataLossPreventionDeidentifyTemplateTimeoutsOutputReference | DataLossPreventionDeidentifyTemplateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1881,12 +2471,43 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataLossPreventionDeidentifyTemplateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionDeidentifyTemplateTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1894,15 +2515,15 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1910,15 +2531,15 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1926,7 +2547,7 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1965,8 +2586,8 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
     this._description = config.description;
     this._displayName = config.displayName;
     this._parent = config.parent;
-    this._deidentifyConfig = config.deidentifyConfig;
-    this._timeouts = config.timeouts;
+    this._deidentifyConfig.internalValue = config.deidentifyConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1974,11 +2595,11 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1986,15 +2607,15 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -2002,7 +2623,7 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2025,38 +2646,36 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // deidentify_config - computed: false, optional: false, required: true
-  private _deidentifyConfig?: DataLossPreventionDeidentifyTemplateDeidentifyConfig; 
-  private __deidentifyConfigOutput = new DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference(this as any, "deidentify_config", true);
+  private _deidentifyConfig = new DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference(this as any, "deidentify_config", true);
   public get deidentifyConfig() {
-    return this.__deidentifyConfigOutput;
+    return this._deidentifyConfig;
   }
   public putDeidentifyConfig(value: DataLossPreventionDeidentifyTemplateDeidentifyConfig) {
-    this._deidentifyConfig = value;
+    this._deidentifyConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get deidentifyConfigInput() {
-    return this._deidentifyConfig
+    return this._deidentifyConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataLossPreventionDeidentifyTemplateTimeouts | undefined; 
-  private __timeoutsOutput = new DataLossPreventionDeidentifyTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataLossPreventionDeidentifyTemplateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataLossPreventionDeidentifyTemplateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataLossPreventionDeidentifyTemplateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2068,8 +2687,8 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       parent: cdktf.stringToTerraform(this._parent),
-      deidentify_config: dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(this._deidentifyConfig),
-      timeouts: dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(this._timeouts),
+      deidentify_config: dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(this._deidentifyConfig.internalValue),
+      timeouts: dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

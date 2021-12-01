@@ -163,7 +163,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
   readonly rawKey?: string;
 }
 
-function computeDiskDiskEncryptionKeyToTerraform(struct?: ComputeDiskDiskEncryptionKeyOutputReference | ComputeDiskDiskEncryptionKey): any {
+export function computeDiskDiskEncryptionKeyToTerraform(struct?: ComputeDiskDiskEncryptionKeyOutputReference | ComputeDiskDiskEncryptionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -185,12 +185,43 @@ export class ComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeDiskDiskEncryptionKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeDiskDiskEncryptionKey | undefined) {
+    if (value === undefined) {
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+    }
+    else {
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+    }
+  }
+
   // kms_key_self_link - computed: false, optional: true, required: false
-  private _kmsKeySelfLink?: string | undefined; 
+  private _kmsKeySelfLink?: string; 
   public get kmsKeySelfLink() {
     return this.getStringAttribute('kms_key_self_link');
   }
-  public set kmsKeySelfLink(value: string | undefined) {
+  public set kmsKeySelfLink(value: string) {
     this._kmsKeySelfLink = value;
   }
   public resetKmsKeySelfLink() {
@@ -198,15 +229,15 @@ export class ComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeySelfLinkInput() {
-    return this._kmsKeySelfLink
+    return this._kmsKeySelfLink;
   }
 
   // kms_key_service_account - computed: false, optional: true, required: false
-  private _kmsKeyServiceAccount?: string | undefined; 
+  private _kmsKeyServiceAccount?: string; 
   public get kmsKeyServiceAccount() {
     return this.getStringAttribute('kms_key_service_account');
   }
-  public set kmsKeyServiceAccount(value: string | undefined) {
+  public set kmsKeyServiceAccount(value: string) {
     this._kmsKeyServiceAccount = value;
   }
   public resetKmsKeyServiceAccount() {
@@ -214,15 +245,15 @@ export class ComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyServiceAccountInput() {
-    return this._kmsKeyServiceAccount
+    return this._kmsKeyServiceAccount;
   }
 
   // raw_key - computed: false, optional: true, required: false
-  private _rawKey?: string | undefined; 
+  private _rawKey?: string; 
   public get rawKey() {
     return this.getStringAttribute('raw_key');
   }
-  public set rawKey(value: string | undefined) {
+  public set rawKey(value: string) {
     this._rawKey = value;
   }
   public resetRawKey() {
@@ -230,7 +261,7 @@ export class ComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get rawKeyInput() {
-    return this._rawKey
+    return this._rawKey;
   }
 }
 export interface ComputeDiskSourceImageEncryptionKey {
@@ -260,7 +291,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
   readonly rawKey?: string;
 }
 
-function computeDiskSourceImageEncryptionKeyToTerraform(struct?: ComputeDiskSourceImageEncryptionKeyOutputReference | ComputeDiskSourceImageEncryptionKey): any {
+export function computeDiskSourceImageEncryptionKeyToTerraform(struct?: ComputeDiskSourceImageEncryptionKeyOutputReference | ComputeDiskSourceImageEncryptionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -282,12 +313,43 @@ export class ComputeDiskSourceImageEncryptionKeyOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeDiskSourceImageEncryptionKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeDiskSourceImageEncryptionKey | undefined) {
+    if (value === undefined) {
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+    }
+    else {
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+    }
+  }
+
   // kms_key_self_link - computed: false, optional: true, required: false
-  private _kmsKeySelfLink?: string | undefined; 
+  private _kmsKeySelfLink?: string; 
   public get kmsKeySelfLink() {
     return this.getStringAttribute('kms_key_self_link');
   }
-  public set kmsKeySelfLink(value: string | undefined) {
+  public set kmsKeySelfLink(value: string) {
     this._kmsKeySelfLink = value;
   }
   public resetKmsKeySelfLink() {
@@ -295,15 +357,15 @@ export class ComputeDiskSourceImageEncryptionKeyOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeySelfLinkInput() {
-    return this._kmsKeySelfLink
+    return this._kmsKeySelfLink;
   }
 
   // kms_key_service_account - computed: false, optional: true, required: false
-  private _kmsKeyServiceAccount?: string | undefined; 
+  private _kmsKeyServiceAccount?: string; 
   public get kmsKeyServiceAccount() {
     return this.getStringAttribute('kms_key_service_account');
   }
-  public set kmsKeyServiceAccount(value: string | undefined) {
+  public set kmsKeyServiceAccount(value: string) {
     this._kmsKeyServiceAccount = value;
   }
   public resetKmsKeyServiceAccount() {
@@ -311,15 +373,15 @@ export class ComputeDiskSourceImageEncryptionKeyOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyServiceAccountInput() {
-    return this._kmsKeyServiceAccount
+    return this._kmsKeyServiceAccount;
   }
 
   // raw_key - computed: false, optional: true, required: false
-  private _rawKey?: string | undefined; 
+  private _rawKey?: string; 
   public get rawKey() {
     return this.getStringAttribute('raw_key');
   }
-  public set rawKey(value: string | undefined) {
+  public set rawKey(value: string) {
     this._rawKey = value;
   }
   public resetRawKey() {
@@ -327,7 +389,7 @@ export class ComputeDiskSourceImageEncryptionKeyOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get rawKeyInput() {
-    return this._rawKey
+    return this._rawKey;
   }
 }
 export interface ComputeDiskSourceSnapshotEncryptionKey {
@@ -357,7 +419,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
   readonly rawKey?: string;
 }
 
-function computeDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeDiskSourceSnapshotEncryptionKeyOutputReference | ComputeDiskSourceSnapshotEncryptionKey): any {
+export function computeDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeDiskSourceSnapshotEncryptionKeyOutputReference | ComputeDiskSourceSnapshotEncryptionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -379,12 +441,43 @@ export class ComputeDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeDiskSourceSnapshotEncryptionKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    if (this._rawKey) {
+      hasAnyValues = true;
+      internalValueResult.rawKey = this._rawKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeDiskSourceSnapshotEncryptionKey | undefined) {
+    if (value === undefined) {
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+      this._rawKey = undefined;
+    }
+    else {
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+      this._rawKey = value.rawKey;
+    }
+  }
+
   // kms_key_self_link - computed: false, optional: true, required: false
-  private _kmsKeySelfLink?: string | undefined; 
+  private _kmsKeySelfLink?: string; 
   public get kmsKeySelfLink() {
     return this.getStringAttribute('kms_key_self_link');
   }
-  public set kmsKeySelfLink(value: string | undefined) {
+  public set kmsKeySelfLink(value: string) {
     this._kmsKeySelfLink = value;
   }
   public resetKmsKeySelfLink() {
@@ -392,15 +485,15 @@ export class ComputeDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeySelfLinkInput() {
-    return this._kmsKeySelfLink
+    return this._kmsKeySelfLink;
   }
 
   // kms_key_service_account - computed: false, optional: true, required: false
-  private _kmsKeyServiceAccount?: string | undefined; 
+  private _kmsKeyServiceAccount?: string; 
   public get kmsKeyServiceAccount() {
     return this.getStringAttribute('kms_key_service_account');
   }
-  public set kmsKeyServiceAccount(value: string | undefined) {
+  public set kmsKeyServiceAccount(value: string) {
     this._kmsKeyServiceAccount = value;
   }
   public resetKmsKeyServiceAccount() {
@@ -408,15 +501,15 @@ export class ComputeDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyServiceAccountInput() {
-    return this._kmsKeyServiceAccount
+    return this._kmsKeyServiceAccount;
   }
 
   // raw_key - computed: false, optional: true, required: false
-  private _rawKey?: string | undefined; 
+  private _rawKey?: string; 
   public get rawKey() {
     return this.getStringAttribute('raw_key');
   }
-  public set rawKey(value: string | undefined) {
+  public set rawKey(value: string) {
     this._rawKey = value;
   }
   public resetRawKey() {
@@ -424,7 +517,7 @@ export class ComputeDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get rawKeyInput() {
-    return this._rawKey
+    return this._rawKey;
   }
 }
 export interface ComputeDiskTimeouts {
@@ -442,7 +535,7 @@ export interface ComputeDiskTimeouts {
   readonly update?: string;
 }
 
-function computeDiskTimeoutsToTerraform(struct?: ComputeDiskTimeoutsOutputReference | ComputeDiskTimeouts): any {
+export function computeDiskTimeoutsToTerraform(struct?: ComputeDiskTimeoutsOutputReference | ComputeDiskTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -464,12 +557,43 @@ export class ComputeDiskTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeDiskTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeDiskTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -477,15 +601,15 @@ export class ComputeDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -493,15 +617,15 @@ export class ComputeDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -509,7 +633,7 @@ export class ComputeDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -556,10 +680,10 @@ export class ComputeDisk extends cdktf.TerraformResource {
     this._snapshot = config.snapshot;
     this._type = config.type;
     this._zone = config.zone;
-    this._diskEncryptionKey = config.diskEncryptionKey;
-    this._sourceImageEncryptionKey = config.sourceImageEncryptionKey;
-    this._sourceSnapshotEncryptionKey = config.sourceSnapshotEncryptionKey;
-    this._timeouts = config.timeouts;
+    this._diskEncryptionKey.internalValue = config.diskEncryptionKey;
+    this._sourceImageEncryptionKey.internalValue = config.sourceImageEncryptionKey;
+    this._sourceSnapshotEncryptionKey.internalValue = config.sourceSnapshotEncryptionKey;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -572,11 +696,11 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -584,7 +708,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -593,11 +717,11 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // image - computed: false, optional: true, required: false
-  private _image?: string | undefined; 
+  private _image?: string; 
   public get image() {
     return this.getStringAttribute('image');
   }
-  public set image(value: string | undefined) {
+  public set image(value: string) {
     this._image = value;
   }
   public resetImage() {
@@ -605,7 +729,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get imageInput() {
-    return this._image
+    return this._image;
   }
 
   // label_fingerprint - computed: true, optional: false, required: false
@@ -614,12 +738,12 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -627,7 +751,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // last_attach_timestamp - computed: true, optional: false, required: false
@@ -650,15 +774,15 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // physical_block_size_bytes - computed: true, optional: true, required: false
-  private _physicalBlockSizeBytes?: number | undefined; 
+  private _physicalBlockSizeBytes?: number; 
   public get physicalBlockSizeBytes() {
     return this.getNumberAttribute('physical_block_size_bytes');
   }
-  public set physicalBlockSizeBytes(value: number | undefined) {
+  public set physicalBlockSizeBytes(value: number) {
     this._physicalBlockSizeBytes = value;
   }
   public resetPhysicalBlockSizeBytes() {
@@ -666,15 +790,15 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get physicalBlockSizeBytesInput() {
-    return this._physicalBlockSizeBytes
+    return this._physicalBlockSizeBytes;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -682,15 +806,15 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // provisioned_iops - computed: false, optional: true, required: false
-  private _provisionedIops?: number | undefined; 
+  private _provisionedIops?: number; 
   public get provisionedIops() {
     return this.getNumberAttribute('provisioned_iops');
   }
-  public set provisionedIops(value: number | undefined) {
+  public set provisionedIops(value: number) {
     this._provisionedIops = value;
   }
   public resetProvisionedIops() {
@@ -698,7 +822,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get provisionedIopsInput() {
-    return this._provisionedIops
+    return this._provisionedIops;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -707,11 +831,11 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // size - computed: true, optional: true, required: false
-  private _size?: number | undefined; 
+  private _size?: number; 
   public get size() {
     return this.getNumberAttribute('size');
   }
-  public set size(value: number | undefined) {
+  public set size(value: number) {
     this._size = value;
   }
   public resetSize() {
@@ -719,15 +843,15 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sizeInput() {
-    return this._size
+    return this._size;
   }
 
   // snapshot - computed: false, optional: true, required: false
-  private _snapshot?: string | undefined; 
+  private _snapshot?: string; 
   public get snapshot() {
     return this.getStringAttribute('snapshot');
   }
-  public set snapshot(value: string | undefined) {
+  public set snapshot(value: string) {
     this._snapshot = value;
   }
   public resetSnapshot() {
@@ -735,7 +859,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get snapshotInput() {
-    return this._snapshot
+    return this._snapshot;
   }
 
   // source_image_id - computed: true, optional: false, required: false
@@ -749,11 +873,11 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -761,7 +885,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // users - computed: true, optional: false, required: false
@@ -770,11 +894,11 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -782,75 +906,71 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
-  private _diskEncryptionKey?: ComputeDiskDiskEncryptionKey | undefined; 
-  private __diskEncryptionKeyOutput = new ComputeDiskDiskEncryptionKeyOutputReference(this as any, "disk_encryption_key", true);
+  private _diskEncryptionKey = new ComputeDiskDiskEncryptionKeyOutputReference(this as any, "disk_encryption_key", true);
   public get diskEncryptionKey() {
-    return this.__diskEncryptionKeyOutput;
+    return this._diskEncryptionKey;
   }
-  public putDiskEncryptionKey(value: ComputeDiskDiskEncryptionKey | undefined) {
-    this._diskEncryptionKey = value;
+  public putDiskEncryptionKey(value: ComputeDiskDiskEncryptionKey) {
+    this._diskEncryptionKey.internalValue = value;
   }
   public resetDiskEncryptionKey() {
-    this._diskEncryptionKey = undefined;
+    this._diskEncryptionKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionKeyInput() {
-    return this._diskEncryptionKey
+    return this._diskEncryptionKey.internalValue;
   }
 
   // source_image_encryption_key - computed: false, optional: true, required: false
-  private _sourceImageEncryptionKey?: ComputeDiskSourceImageEncryptionKey | undefined; 
-  private __sourceImageEncryptionKeyOutput = new ComputeDiskSourceImageEncryptionKeyOutputReference(this as any, "source_image_encryption_key", true);
+  private _sourceImageEncryptionKey = new ComputeDiskSourceImageEncryptionKeyOutputReference(this as any, "source_image_encryption_key", true);
   public get sourceImageEncryptionKey() {
-    return this.__sourceImageEncryptionKeyOutput;
+    return this._sourceImageEncryptionKey;
   }
-  public putSourceImageEncryptionKey(value: ComputeDiskSourceImageEncryptionKey | undefined) {
-    this._sourceImageEncryptionKey = value;
+  public putSourceImageEncryptionKey(value: ComputeDiskSourceImageEncryptionKey) {
+    this._sourceImageEncryptionKey.internalValue = value;
   }
   public resetSourceImageEncryptionKey() {
-    this._sourceImageEncryptionKey = undefined;
+    this._sourceImageEncryptionKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceImageEncryptionKeyInput() {
-    return this._sourceImageEncryptionKey
+    return this._sourceImageEncryptionKey.internalValue;
   }
 
   // source_snapshot_encryption_key - computed: false, optional: true, required: false
-  private _sourceSnapshotEncryptionKey?: ComputeDiskSourceSnapshotEncryptionKey | undefined; 
-  private __sourceSnapshotEncryptionKeyOutput = new ComputeDiskSourceSnapshotEncryptionKeyOutputReference(this as any, "source_snapshot_encryption_key", true);
+  private _sourceSnapshotEncryptionKey = new ComputeDiskSourceSnapshotEncryptionKeyOutputReference(this as any, "source_snapshot_encryption_key", true);
   public get sourceSnapshotEncryptionKey() {
-    return this.__sourceSnapshotEncryptionKeyOutput;
+    return this._sourceSnapshotEncryptionKey;
   }
-  public putSourceSnapshotEncryptionKey(value: ComputeDiskSourceSnapshotEncryptionKey | undefined) {
-    this._sourceSnapshotEncryptionKey = value;
+  public putSourceSnapshotEncryptionKey(value: ComputeDiskSourceSnapshotEncryptionKey) {
+    this._sourceSnapshotEncryptionKey.internalValue = value;
   }
   public resetSourceSnapshotEncryptionKey() {
-    this._sourceSnapshotEncryptionKey = undefined;
+    this._sourceSnapshotEncryptionKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceSnapshotEncryptionKeyInput() {
-    return this._sourceSnapshotEncryptionKey
+    return this._sourceSnapshotEncryptionKey.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeDiskTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeDiskTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeDiskTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeDiskTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeDiskTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -870,10 +990,10 @@ export class ComputeDisk extends cdktf.TerraformResource {
       snapshot: cdktf.stringToTerraform(this._snapshot),
       type: cdktf.stringToTerraform(this._type),
       zone: cdktf.stringToTerraform(this._zone),
-      disk_encryption_key: computeDiskDiskEncryptionKeyToTerraform(this._diskEncryptionKey),
-      source_image_encryption_key: computeDiskSourceImageEncryptionKeyToTerraform(this._sourceImageEncryptionKey),
-      source_snapshot_encryption_key: computeDiskSourceSnapshotEncryptionKeyToTerraform(this._sourceSnapshotEncryptionKey),
-      timeouts: computeDiskTimeoutsToTerraform(this._timeouts),
+      disk_encryption_key: computeDiskDiskEncryptionKeyToTerraform(this._diskEncryptionKey.internalValue),
+      source_image_encryption_key: computeDiskSourceImageEncryptionKeyToTerraform(this._sourceImageEncryptionKey.internalValue),
+      source_snapshot_encryption_key: computeDiskSourceSnapshotEncryptionKeyToTerraform(this._sourceSnapshotEncryptionKey.internalValue),
+      timeouts: computeDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

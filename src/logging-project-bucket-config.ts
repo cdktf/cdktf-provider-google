@@ -92,15 +92,15 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bucketIdInput() {
-    return this._bucketId
+    return this._bucketId;
   }
 
   // description - computed: true, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -108,7 +108,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -131,7 +131,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: true, optional: false, required: false
@@ -149,15 +149,15 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // retention_days - computed: false, optional: true, required: false
-  private _retentionDays?: number | undefined; 
+  private _retentionDays?: number; 
   public get retentionDays() {
     return this.getNumberAttribute('retention_days');
   }
-  public set retentionDays(value: number | undefined) {
+  public set retentionDays(value: number) {
     this._retentionDays = value;
   }
   public resetRetentionDays() {
@@ -165,7 +165,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get retentionDaysInput() {
-    return this._retentionDays
+    return this._retentionDays;
   }
 
   // =========

@@ -84,7 +84,7 @@ export interface MonitoringSloBasicSliAvailability {
   readonly enabled?: boolean | cdktf.IResolvable;
 }
 
-function monitoringSloBasicSliAvailabilityToTerraform(struct?: MonitoringSloBasicSliAvailabilityOutputReference | MonitoringSloBasicSliAvailability): any {
+export function monitoringSloBasicSliAvailabilityToTerraform(struct?: MonitoringSloBasicSliAvailabilityOutputReference | MonitoringSloBasicSliAvailability): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -104,12 +104,31 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloBasicSliAvailability | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloBasicSliAvailability | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -117,7 +136,7 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface MonitoringSloBasicSliLatency {
@@ -131,7 +150,7 @@ this service that return in no more than threshold.
   readonly threshold: string;
 }
 
-function monitoringSloBasicSliLatencyToTerraform(struct?: MonitoringSloBasicSliLatencyOutputReference | MonitoringSloBasicSliLatency): any {
+export function monitoringSloBasicSliLatencyToTerraform(struct?: MonitoringSloBasicSliLatencyOutputReference | MonitoringSloBasicSliLatency): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -151,6 +170,25 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloBasicSliLatency | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._threshold) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloBasicSliLatency | undefined) {
+    if (value === undefined) {
+      this._threshold = undefined;
+    }
+    else {
+      this._threshold = value.threshold;
+    }
+  }
+
   // threshold - computed: false, optional: false, required: true
   private _threshold?: string; 
   public get threshold() {
@@ -161,7 +199,7 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdInput() {
-    return this._threshold
+    return this._threshold;
   }
 }
 export interface MonitoringSloBasicSli {
@@ -212,7 +250,7 @@ field will result in an error.
   readonly latency?: MonitoringSloBasicSliLatency;
 }
 
-function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSliOutputReference | MonitoringSloBasicSli): any {
+export function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSliOutputReference | MonitoringSloBasicSli): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -236,12 +274,55 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloBasicSli | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._location) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._method) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._availability) {
+      hasAnyValues = true;
+      internalValueResult.availability = this._availability?.internalValue;
+    }
+    if (this._latency) {
+      hasAnyValues = true;
+      internalValueResult.latency = this._latency?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloBasicSli | undefined) {
+    if (value === undefined) {
+      this._location = undefined;
+      this._method = undefined;
+      this._version = undefined;
+      this._availability.internalValue = undefined;
+      this._latency.internalValue = undefined;
+    }
+    else {
+      this._location = value.location;
+      this._method = value.method;
+      this._version = value.version;
+      this._availability.internalValue = value.availability;
+      this._latency.internalValue = value.latency;
+    }
+  }
+
   // location - computed: false, optional: true, required: false
-  private _location?: string[] | undefined; 
+  private _location?: string[]; 
   public get location() {
     return this.getListAttribute('location');
   }
-  public set location(value: string[] | undefined) {
+  public set location(value: string[]) {
     this._location = value;
   }
   public resetLocation() {
@@ -249,15 +330,15 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // method - computed: false, optional: true, required: false
-  private _method?: string[] | undefined; 
+  private _method?: string[]; 
   public get method() {
     return this.getListAttribute('method');
   }
-  public set method(value: string[] | undefined) {
+  public set method(value: string[]) {
     this._method = value;
   }
   public resetMethod() {
@@ -265,15 +346,15 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get methodInput() {
-    return this._method
+    return this._method;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string[] | undefined; 
+  private _version?: string[]; 
   public get version() {
     return this.getListAttribute('version');
   }
-  public set version(value: string[] | undefined) {
+  public set version(value: string[]) {
     this._version = value;
   }
   public resetVersion() {
@@ -281,41 +362,39 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // availability - computed: false, optional: true, required: false
-  private _availability?: MonitoringSloBasicSliAvailability | undefined; 
-  private __availabilityOutput = new MonitoringSloBasicSliAvailabilityOutputReference(this as any, "availability", true);
+  private _availability = new MonitoringSloBasicSliAvailabilityOutputReference(this as any, "availability", true);
   public get availability() {
-    return this.__availabilityOutput;
+    return this._availability;
   }
-  public putAvailability(value: MonitoringSloBasicSliAvailability | undefined) {
-    this._availability = value;
+  public putAvailability(value: MonitoringSloBasicSliAvailability) {
+    this._availability.internalValue = value;
   }
   public resetAvailability() {
-    this._availability = undefined;
+    this._availability.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get availabilityInput() {
-    return this._availability
+    return this._availability.internalValue;
   }
 
   // latency - computed: false, optional: true, required: false
-  private _latency?: MonitoringSloBasicSliLatency | undefined; 
-  private __latencyOutput = new MonitoringSloBasicSliLatencyOutputReference(this as any, "latency", true);
+  private _latency = new MonitoringSloBasicSliLatencyOutputReference(this as any, "latency", true);
   public get latency() {
-    return this.__latencyOutput;
+    return this._latency;
   }
-  public putLatency(value: MonitoringSloBasicSliLatency | undefined) {
-    this._latency = value;
+  public putLatency(value: MonitoringSloBasicSliLatency) {
+    this._latency.internalValue = value;
   }
   public resetLatency() {
-    this._latency = undefined;
+    this._latency.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get latencyInput() {
-    return this._latency
+    return this._latency.internalValue;
   }
 }
 export interface MonitoringSloRequestBasedSliDistributionCutRange {
@@ -337,7 +416,7 @@ will be set to "-infinity", defining an open range
   readonly min?: number;
 }
 
-function monitoringSloRequestBasedSliDistributionCutRangeToTerraform(struct?: MonitoringSloRequestBasedSliDistributionCutRangeOutputReference | MonitoringSloRequestBasedSliDistributionCutRange): any {
+export function monitoringSloRequestBasedSliDistributionCutRangeToTerraform(struct?: MonitoringSloRequestBasedSliDistributionCutRangeOutputReference | MonitoringSloRequestBasedSliDistributionCutRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -358,12 +437,37 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloRequestBasedSliDistributionCutRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._max) {
+      hasAnyValues = true;
+      internalValueResult.max = this._max;
+    }
+    if (this._min) {
+      hasAnyValues = true;
+      internalValueResult.min = this._min;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloRequestBasedSliDistributionCutRange | undefined) {
+    if (value === undefined) {
+      this._max = undefined;
+      this._min = undefined;
+    }
+    else {
+      this._max = value.max;
+      this._min = value.min;
+    }
+  }
+
   // max - computed: false, optional: true, required: false
-  private _max?: number | undefined; 
+  private _max?: number; 
   public get max() {
     return this.getNumberAttribute('max');
   }
-  public set max(value: number | undefined) {
+  public set max(value: number) {
     this._max = value;
   }
   public resetMax() {
@@ -371,15 +475,15 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get maxInput() {
-    return this._max
+    return this._max;
   }
 
   // min - computed: false, optional: true, required: false
-  private _min?: number | undefined; 
+  private _min?: number; 
   public get min() {
     return this.getNumberAttribute('min');
   }
-  public set min(value: number | undefined) {
+  public set min(value: number) {
     this._min = value;
   }
   public resetMin() {
@@ -387,7 +491,7 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get minInput() {
-    return this._min
+    return this._min;
   }
 }
 export interface MonitoringSloRequestBasedSliDistributionCut {
@@ -409,7 +513,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
   readonly range: MonitoringSloRequestBasedSliDistributionCutRange;
 }
 
-function monitoringSloRequestBasedSliDistributionCutToTerraform(struct?: MonitoringSloRequestBasedSliDistributionCutOutputReference | MonitoringSloRequestBasedSliDistributionCut): any {
+export function monitoringSloRequestBasedSliDistributionCutToTerraform(struct?: MonitoringSloRequestBasedSliDistributionCutOutputReference | MonitoringSloRequestBasedSliDistributionCut): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -430,6 +534,31 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloRequestBasedSliDistributionCut | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._distributionFilter) {
+      hasAnyValues = true;
+      internalValueResult.distributionFilter = this._distributionFilter;
+    }
+    if (this._range) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloRequestBasedSliDistributionCut | undefined) {
+    if (value === undefined) {
+      this._distributionFilter = undefined;
+      this._range.internalValue = undefined;
+    }
+    else {
+      this._distributionFilter = value.distributionFilter;
+      this._range.internalValue = value.range;
+    }
+  }
+
   // distribution_filter - computed: false, optional: false, required: true
   private _distributionFilter?: string; 
   public get distributionFilter() {
@@ -440,21 +569,20 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get distributionFilterInput() {
-    return this._distributionFilter
+    return this._distributionFilter;
   }
 
   // range - computed: false, optional: false, required: true
-  private _range?: MonitoringSloRequestBasedSliDistributionCutRange; 
-  private __rangeOutput = new MonitoringSloRequestBasedSliDistributionCutRangeOutputReference(this as any, "range", true);
+  private _range = new MonitoringSloRequestBasedSliDistributionCutRangeOutputReference(this as any, "range", true);
   public get range() {
-    return this.__rangeOutput;
+    return this._range;
   }
   public putRange(value: MonitoringSloRequestBasedSliDistributionCutRange) {
-    this._range = value;
+    this._range.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rangeInput() {
-    return this._range
+    return this._range.internalValue;
   }
 }
 export interface MonitoringSloRequestBasedSliGoodTotalRatio {
@@ -500,7 +628,7 @@ must be set (good + bad = total is assumed).
   readonly totalServiceFilter?: string;
 }
 
-function monitoringSloRequestBasedSliGoodTotalRatioToTerraform(struct?: MonitoringSloRequestBasedSliGoodTotalRatioOutputReference | MonitoringSloRequestBasedSliGoodTotalRatio): any {
+export function monitoringSloRequestBasedSliGoodTotalRatioToTerraform(struct?: MonitoringSloRequestBasedSliGoodTotalRatioOutputReference | MonitoringSloRequestBasedSliGoodTotalRatio): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -522,12 +650,43 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloRequestBasedSliGoodTotalRatio | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._badServiceFilter) {
+      hasAnyValues = true;
+      internalValueResult.badServiceFilter = this._badServiceFilter;
+    }
+    if (this._goodServiceFilter) {
+      hasAnyValues = true;
+      internalValueResult.goodServiceFilter = this._goodServiceFilter;
+    }
+    if (this._totalServiceFilter) {
+      hasAnyValues = true;
+      internalValueResult.totalServiceFilter = this._totalServiceFilter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloRequestBasedSliGoodTotalRatio | undefined) {
+    if (value === undefined) {
+      this._badServiceFilter = undefined;
+      this._goodServiceFilter = undefined;
+      this._totalServiceFilter = undefined;
+    }
+    else {
+      this._badServiceFilter = value.badServiceFilter;
+      this._goodServiceFilter = value.goodServiceFilter;
+      this._totalServiceFilter = value.totalServiceFilter;
+    }
+  }
+
   // bad_service_filter - computed: false, optional: true, required: false
-  private _badServiceFilter?: string | undefined; 
+  private _badServiceFilter?: string; 
   public get badServiceFilter() {
     return this.getStringAttribute('bad_service_filter');
   }
-  public set badServiceFilter(value: string | undefined) {
+  public set badServiceFilter(value: string) {
     this._badServiceFilter = value;
   }
   public resetBadServiceFilter() {
@@ -535,15 +694,15 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get badServiceFilterInput() {
-    return this._badServiceFilter
+    return this._badServiceFilter;
   }
 
   // good_service_filter - computed: false, optional: true, required: false
-  private _goodServiceFilter?: string | undefined; 
+  private _goodServiceFilter?: string; 
   public get goodServiceFilter() {
     return this.getStringAttribute('good_service_filter');
   }
-  public set goodServiceFilter(value: string | undefined) {
+  public set goodServiceFilter(value: string) {
     this._goodServiceFilter = value;
   }
   public resetGoodServiceFilter() {
@@ -551,15 +710,15 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get goodServiceFilterInput() {
-    return this._goodServiceFilter
+    return this._goodServiceFilter;
   }
 
   // total_service_filter - computed: false, optional: true, required: false
-  private _totalServiceFilter?: string | undefined; 
+  private _totalServiceFilter?: string; 
   public get totalServiceFilter() {
     return this.getStringAttribute('total_service_filter');
   }
-  public set totalServiceFilter(value: string | undefined) {
+  public set totalServiceFilter(value: string) {
     this._totalServiceFilter = value;
   }
   public resetTotalServiceFilter() {
@@ -567,7 +726,7 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get totalServiceFilterInput() {
-    return this._totalServiceFilter
+    return this._totalServiceFilter;
   }
 }
 export interface MonitoringSloRequestBasedSli {
@@ -585,7 +744,7 @@ export interface MonitoringSloRequestBasedSli {
   readonly goodTotalRatio?: MonitoringSloRequestBasedSliGoodTotalRatio;
 }
 
-function monitoringSloRequestBasedSliToTerraform(struct?: MonitoringSloRequestBasedSliOutputReference | MonitoringSloRequestBasedSli): any {
+export function monitoringSloRequestBasedSliToTerraform(struct?: MonitoringSloRequestBasedSliOutputReference | MonitoringSloRequestBasedSli): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -606,38 +765,61 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // distribution_cut - computed: false, optional: true, required: false
-  private _distributionCut?: MonitoringSloRequestBasedSliDistributionCut | undefined; 
-  private __distributionCutOutput = new MonitoringSloRequestBasedSliDistributionCutOutputReference(this as any, "distribution_cut", true);
-  public get distributionCut() {
-    return this.__distributionCutOutput;
+  public get internalValue(): MonitoringSloRequestBasedSli | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._distributionCut) {
+      hasAnyValues = true;
+      internalValueResult.distributionCut = this._distributionCut?.internalValue;
+    }
+    if (this._goodTotalRatio) {
+      hasAnyValues = true;
+      internalValueResult.goodTotalRatio = this._goodTotalRatio?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putDistributionCut(value: MonitoringSloRequestBasedSliDistributionCut | undefined) {
-    this._distributionCut = value;
+
+  public set internalValue(value: MonitoringSloRequestBasedSli | undefined) {
+    if (value === undefined) {
+      this._distributionCut.internalValue = undefined;
+      this._goodTotalRatio.internalValue = undefined;
+    }
+    else {
+      this._distributionCut.internalValue = value.distributionCut;
+      this._goodTotalRatio.internalValue = value.goodTotalRatio;
+    }
+  }
+
+  // distribution_cut - computed: false, optional: true, required: false
+  private _distributionCut = new MonitoringSloRequestBasedSliDistributionCutOutputReference(this as any, "distribution_cut", true);
+  public get distributionCut() {
+    return this._distributionCut;
+  }
+  public putDistributionCut(value: MonitoringSloRequestBasedSliDistributionCut) {
+    this._distributionCut.internalValue = value;
   }
   public resetDistributionCut() {
-    this._distributionCut = undefined;
+    this._distributionCut.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get distributionCutInput() {
-    return this._distributionCut
+    return this._distributionCut.internalValue;
   }
 
   // good_total_ratio - computed: false, optional: true, required: false
-  private _goodTotalRatio?: MonitoringSloRequestBasedSliGoodTotalRatio | undefined; 
-  private __goodTotalRatioOutput = new MonitoringSloRequestBasedSliGoodTotalRatioOutputReference(this as any, "good_total_ratio", true);
+  private _goodTotalRatio = new MonitoringSloRequestBasedSliGoodTotalRatioOutputReference(this as any, "good_total_ratio", true);
   public get goodTotalRatio() {
-    return this.__goodTotalRatioOutput;
+    return this._goodTotalRatio;
   }
-  public putGoodTotalRatio(value: MonitoringSloRequestBasedSliGoodTotalRatio | undefined) {
-    this._goodTotalRatio = value;
+  public putGoodTotalRatio(value: MonitoringSloRequestBasedSliGoodTotalRatio) {
+    this._goodTotalRatio.internalValue = value;
   }
   public resetGoodTotalRatio() {
-    this._goodTotalRatio = undefined;
+    this._goodTotalRatio.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get goodTotalRatioInput() {
-    return this._goodTotalRatio
+    return this._goodTotalRatio.internalValue;
   }
 }
 export interface MonitoringSloTimeouts {
@@ -655,7 +837,7 @@ export interface MonitoringSloTimeouts {
   readonly update?: string;
 }
 
-function monitoringSloTimeoutsToTerraform(struct?: MonitoringSloTimeoutsOutputReference | MonitoringSloTimeouts): any {
+export function monitoringSloTimeoutsToTerraform(struct?: MonitoringSloTimeoutsOutputReference | MonitoringSloTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -677,12 +859,43 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -690,15 +903,15 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -706,15 +919,15 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -722,7 +935,7 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability {
@@ -734,7 +947,7 @@ export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerf
   readonly enabled?: boolean | cdktf.IResolvable;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -754,12 +967,31 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -767,7 +999,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
@@ -781,7 +1013,7 @@ this service that return in no more than threshold.
   readonly threshold: string;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -801,6 +1033,25 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._threshold) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined) {
+    if (value === undefined) {
+      this._threshold = undefined;
+    }
+    else {
+      this._threshold = value.threshold;
+    }
+  }
+
   // threshold - computed: false, optional: false, required: true
   private _threshold?: string; 
   public get threshold() {
@@ -811,7 +1062,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdInput() {
-    return this._threshold
+    return this._threshold;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
@@ -862,7 +1113,7 @@ field will result in an error.
   readonly latency?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -886,12 +1137,55 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._location) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._method) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._availability) {
+      hasAnyValues = true;
+      internalValueResult.availability = this._availability?.internalValue;
+    }
+    if (this._latency) {
+      hasAnyValues = true;
+      internalValueResult.latency = this._latency?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined) {
+    if (value === undefined) {
+      this._location = undefined;
+      this._method = undefined;
+      this._version = undefined;
+      this._availability.internalValue = undefined;
+      this._latency.internalValue = undefined;
+    }
+    else {
+      this._location = value.location;
+      this._method = value.method;
+      this._version = value.version;
+      this._availability.internalValue = value.availability;
+      this._latency.internalValue = value.latency;
+    }
+  }
+
   // location - computed: false, optional: true, required: false
-  private _location?: string[] | undefined; 
+  private _location?: string[]; 
   public get location() {
     return this.getListAttribute('location');
   }
-  public set location(value: string[] | undefined) {
+  public set location(value: string[]) {
     this._location = value;
   }
   public resetLocation() {
@@ -899,15 +1193,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // method - computed: false, optional: true, required: false
-  private _method?: string[] | undefined; 
+  private _method?: string[]; 
   public get method() {
     return this.getListAttribute('method');
   }
-  public set method(value: string[] | undefined) {
+  public set method(value: string[]) {
     this._method = value;
   }
   public resetMethod() {
@@ -915,15 +1209,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
   // Temporarily expose input value. Use with caution.
   public get methodInput() {
-    return this._method
+    return this._method;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string[] | undefined; 
+  private _version?: string[]; 
   public get version() {
     return this.getListAttribute('version');
   }
-  public set version(value: string[] | undefined) {
+  public set version(value: string[]) {
     this._version = value;
   }
   public resetVersion() {
@@ -931,41 +1225,39 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // availability - computed: false, optional: true, required: false
-  private _availability?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined; 
-  private __availabilityOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference(this as any, "availability", true);
+  private _availability = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference(this as any, "availability", true);
   public get availability() {
-    return this.__availabilityOutput;
+    return this._availability;
   }
-  public putAvailability(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined) {
-    this._availability = value;
+  public putAvailability(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability) {
+    this._availability.internalValue = value;
   }
   public resetAvailability() {
-    this._availability = undefined;
+    this._availability.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get availabilityInput() {
-    return this._availability
+    return this._availability.internalValue;
   }
 
   // latency - computed: false, optional: true, required: false
-  private _latency?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined; 
-  private __latencyOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference(this as any, "latency", true);
+  private _latency = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference(this as any, "latency", true);
   public get latency() {
-    return this.__latencyOutput;
+    return this._latency;
   }
-  public putLatency(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined) {
-    this._latency = value;
+  public putLatency(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency) {
+    this._latency.internalValue = value;
   }
   public resetLatency() {
-    this._latency = undefined;
+    this._latency.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get latencyInput() {
-    return this._latency
+    return this._latency.internalValue;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
@@ -987,7 +1279,7 @@ will be set to "-infinity", defining an open range
   readonly min?: number;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1008,12 +1300,37 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._max) {
+      hasAnyValues = true;
+      internalValueResult.max = this._max;
+    }
+    if (this._min) {
+      hasAnyValues = true;
+      internalValueResult.min = this._min;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange | undefined) {
+    if (value === undefined) {
+      this._max = undefined;
+      this._min = undefined;
+    }
+    else {
+      this._max = value.max;
+      this._min = value.min;
+    }
+  }
+
   // max - computed: false, optional: true, required: false
-  private _max?: number | undefined; 
+  private _max?: number; 
   public get max() {
     return this.getNumberAttribute('max');
   }
-  public set max(value: number | undefined) {
+  public set max(value: number) {
     this._max = value;
   }
   public resetMax() {
@@ -1021,15 +1338,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   }
   // Temporarily expose input value. Use with caution.
   public get maxInput() {
-    return this._max
+    return this._max;
   }
 
   // min - computed: false, optional: true, required: false
-  private _min?: number | undefined; 
+  private _min?: number; 
   public get min() {
     return this.getNumberAttribute('min');
   }
-  public set min(value: number | undefined) {
+  public set min(value: number) {
     this._min = value;
   }
   public resetMin() {
@@ -1037,7 +1354,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   }
   // Temporarily expose input value. Use with caution.
   public get minInput() {
-    return this._min
+    return this._min;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
@@ -1059,7 +1376,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
   readonly range: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1080,6 +1397,31 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._distributionFilter) {
+      hasAnyValues = true;
+      internalValueResult.distributionFilter = this._distributionFilter;
+    }
+    if (this._range) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined) {
+    if (value === undefined) {
+      this._distributionFilter = undefined;
+      this._range.internalValue = undefined;
+    }
+    else {
+      this._distributionFilter = value.distributionFilter;
+      this._range.internalValue = value.range;
+    }
+  }
+
   // distribution_filter - computed: false, optional: false, required: true
   private _distributionFilter?: string; 
   public get distributionFilter() {
@@ -1090,21 +1432,20 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   }
   // Temporarily expose input value. Use with caution.
   public get distributionFilterInput() {
-    return this._distributionFilter
+    return this._distributionFilter;
   }
 
   // range - computed: false, optional: false, required: true
-  private _range?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange; 
-  private __rangeOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference(this as any, "range", true);
+  private _range = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference(this as any, "range", true);
   public get range() {
-    return this.__rangeOutput;
+    return this._range;
   }
   public putRange(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange) {
-    this._range = value;
+    this._range.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rangeInput() {
-    return this._range
+    return this._range.internalValue;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
@@ -1148,7 +1489,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
   readonly totalServiceFilter?: string;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1170,12 +1511,43 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._badServiceFilter) {
+      hasAnyValues = true;
+      internalValueResult.badServiceFilter = this._badServiceFilter;
+    }
+    if (this._goodServiceFilter) {
+      hasAnyValues = true;
+      internalValueResult.goodServiceFilter = this._goodServiceFilter;
+    }
+    if (this._totalServiceFilter) {
+      hasAnyValues = true;
+      internalValueResult.totalServiceFilter = this._totalServiceFilter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined) {
+    if (value === undefined) {
+      this._badServiceFilter = undefined;
+      this._goodServiceFilter = undefined;
+      this._totalServiceFilter = undefined;
+    }
+    else {
+      this._badServiceFilter = value.badServiceFilter;
+      this._goodServiceFilter = value.goodServiceFilter;
+      this._totalServiceFilter = value.totalServiceFilter;
+    }
+  }
+
   // bad_service_filter - computed: false, optional: true, required: false
-  private _badServiceFilter?: string | undefined; 
+  private _badServiceFilter?: string; 
   public get badServiceFilter() {
     return this.getStringAttribute('bad_service_filter');
   }
-  public set badServiceFilter(value: string | undefined) {
+  public set badServiceFilter(value: string) {
     this._badServiceFilter = value;
   }
   public resetBadServiceFilter() {
@@ -1183,15 +1555,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
   }
   // Temporarily expose input value. Use with caution.
   public get badServiceFilterInput() {
-    return this._badServiceFilter
+    return this._badServiceFilter;
   }
 
   // good_service_filter - computed: false, optional: true, required: false
-  private _goodServiceFilter?: string | undefined; 
+  private _goodServiceFilter?: string; 
   public get goodServiceFilter() {
     return this.getStringAttribute('good_service_filter');
   }
-  public set goodServiceFilter(value: string | undefined) {
+  public set goodServiceFilter(value: string) {
     this._goodServiceFilter = value;
   }
   public resetGoodServiceFilter() {
@@ -1199,15 +1571,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
   }
   // Temporarily expose input value. Use with caution.
   public get goodServiceFilterInput() {
-    return this._goodServiceFilter
+    return this._goodServiceFilter;
   }
 
   // total_service_filter - computed: false, optional: true, required: false
-  private _totalServiceFilter?: string | undefined; 
+  private _totalServiceFilter?: string; 
   public get totalServiceFilter() {
     return this.getStringAttribute('total_service_filter');
   }
-  public set totalServiceFilter(value: string | undefined) {
+  public set totalServiceFilter(value: string) {
     this._totalServiceFilter = value;
   }
   public resetTotalServiceFilter() {
@@ -1215,7 +1587,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
   }
   // Temporarily expose input value. Use with caution.
   public get totalServiceFilterInput() {
-    return this._totalServiceFilter
+    return this._totalServiceFilter;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance {
@@ -1233,7 +1605,7 @@ export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance 
   readonly goodTotalRatio?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1254,38 +1626,61 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // distribution_cut - computed: false, optional: true, required: false
-  private _distributionCut?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined; 
-  private __distributionCutOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference(this as any, "distribution_cut", true);
-  public get distributionCut() {
-    return this.__distributionCutOutput;
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._distributionCut) {
+      hasAnyValues = true;
+      internalValueResult.distributionCut = this._distributionCut?.internalValue;
+    }
+    if (this._goodTotalRatio) {
+      hasAnyValues = true;
+      internalValueResult.goodTotalRatio = this._goodTotalRatio?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putDistributionCut(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined) {
-    this._distributionCut = value;
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined) {
+    if (value === undefined) {
+      this._distributionCut.internalValue = undefined;
+      this._goodTotalRatio.internalValue = undefined;
+    }
+    else {
+      this._distributionCut.internalValue = value.distributionCut;
+      this._goodTotalRatio.internalValue = value.goodTotalRatio;
+    }
+  }
+
+  // distribution_cut - computed: false, optional: true, required: false
+  private _distributionCut = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference(this as any, "distribution_cut", true);
+  public get distributionCut() {
+    return this._distributionCut;
+  }
+  public putDistributionCut(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut) {
+    this._distributionCut.internalValue = value;
   }
   public resetDistributionCut() {
-    this._distributionCut = undefined;
+    this._distributionCut.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get distributionCutInput() {
-    return this._distributionCut
+    return this._distributionCut.internalValue;
   }
 
   // good_total_ratio - computed: false, optional: true, required: false
-  private _goodTotalRatio?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined; 
-  private __goodTotalRatioOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference(this as any, "good_total_ratio", true);
+  private _goodTotalRatio = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference(this as any, "good_total_ratio", true);
   public get goodTotalRatio() {
-    return this.__goodTotalRatioOutput;
+    return this._goodTotalRatio;
   }
-  public putGoodTotalRatio(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined) {
-    this._goodTotalRatio = value;
+  public putGoodTotalRatio(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio) {
+    this._goodTotalRatio.internalValue = value;
   }
   public resetGoodTotalRatio() {
-    this._goodTotalRatio = undefined;
+    this._goodTotalRatio.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get goodTotalRatioInput() {
-    return this._goodTotalRatio
+    return this._goodTotalRatio.internalValue;
   }
 }
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThreshold {
@@ -1310,7 +1705,7 @@ as good.
   readonly performance?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance;
 }
 
-function monitoringSloWindowsBasedSliGoodTotalRatioThresholdToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThreshold): any {
+export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdToTerraform(struct?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference | MonitoringSloWindowsBasedSliGoodTotalRatioThreshold): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1332,12 +1727,43 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._threshold) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    if (this._basicSliPerformance) {
+      hasAnyValues = true;
+      internalValueResult.basicSliPerformance = this._basicSliPerformance?.internalValue;
+    }
+    if (this._performance) {
+      hasAnyValues = true;
+      internalValueResult.performance = this._performance?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined) {
+    if (value === undefined) {
+      this._threshold = undefined;
+      this._basicSliPerformance.internalValue = undefined;
+      this._performance.internalValue = undefined;
+    }
+    else {
+      this._threshold = value.threshold;
+      this._basicSliPerformance.internalValue = value.basicSliPerformance;
+      this._performance.internalValue = value.performance;
+    }
+  }
+
   // threshold - computed: false, optional: true, required: false
-  private _threshold?: number | undefined; 
+  private _threshold?: number; 
   public get threshold() {
     return this.getNumberAttribute('threshold');
   }
-  public set threshold(value: number | undefined) {
+  public set threshold(value: number) {
     this._threshold = value;
   }
   public resetThreshold() {
@@ -1345,41 +1771,39 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdInput() {
-    return this._threshold
+    return this._threshold;
   }
 
   // basic_sli_performance - computed: false, optional: true, required: false
-  private _basicSliPerformance?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined; 
-  private __basicSliPerformanceOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference(this as any, "basic_sli_performance", true);
+  private _basicSliPerformance = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference(this as any, "basic_sli_performance", true);
   public get basicSliPerformance() {
-    return this.__basicSliPerformanceOutput;
+    return this._basicSliPerformance;
   }
-  public putBasicSliPerformance(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined) {
-    this._basicSliPerformance = value;
+  public putBasicSliPerformance(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance) {
+    this._basicSliPerformance.internalValue = value;
   }
   public resetBasicSliPerformance() {
-    this._basicSliPerformance = undefined;
+    this._basicSliPerformance.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get basicSliPerformanceInput() {
-    return this._basicSliPerformance
+    return this._basicSliPerformance.internalValue;
   }
 
   // performance - computed: false, optional: true, required: false
-  private _performance?: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined; 
-  private __performanceOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference(this as any, "performance", true);
+  private _performance = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference(this as any, "performance", true);
   public get performance() {
-    return this.__performanceOutput;
+    return this._performance;
   }
-  public putPerformance(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined) {
-    this._performance = value;
+  public putPerformance(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance) {
+    this._performance.internalValue = value;
   }
   public resetPerformance() {
-    this._performance = undefined;
+    this._performance.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get performanceInput() {
-    return this._performance
+    return this._performance.internalValue;
   }
 }
 export interface MonitoringSloWindowsBasedSliMetricMeanInRangeRange {
@@ -1401,7 +1825,7 @@ will be set to "-infinity", defining an open range
   readonly min?: number;
 }
 
-function monitoringSloWindowsBasedSliMetricMeanInRangeRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference | MonitoringSloWindowsBasedSliMetricMeanInRangeRange): any {
+export function monitoringSloWindowsBasedSliMetricMeanInRangeRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference | MonitoringSloWindowsBasedSliMetricMeanInRangeRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1422,12 +1846,37 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRangeRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._max) {
+      hasAnyValues = true;
+      internalValueResult.max = this._max;
+    }
+    if (this._min) {
+      hasAnyValues = true;
+      internalValueResult.min = this._min;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliMetricMeanInRangeRange | undefined) {
+    if (value === undefined) {
+      this._max = undefined;
+      this._min = undefined;
+    }
+    else {
+      this._max = value.max;
+      this._min = value.min;
+    }
+  }
+
   // max - computed: false, optional: true, required: false
-  private _max?: number | undefined; 
+  private _max?: number; 
   public get max() {
     return this.getNumberAttribute('max');
   }
-  public set max(value: number | undefined) {
+  public set max(value: number) {
     this._max = value;
   }
   public resetMax() {
@@ -1435,15 +1884,15 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get maxInput() {
-    return this._max
+    return this._max;
   }
 
   // min - computed: false, optional: true, required: false
-  private _min?: number | undefined; 
+  private _min?: number; 
   public get min() {
     return this.getNumberAttribute('min');
   }
-  public set min(value: number | undefined) {
+  public set min(value: number) {
     this._min = value;
   }
   public resetMin() {
@@ -1451,7 +1900,7 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get minInput() {
-    return this._min
+    return this._min;
   }
 }
 export interface MonitoringSloWindowsBasedSliMetricMeanInRange {
@@ -1474,7 +1923,7 @@ under good service.
   readonly range: MonitoringSloWindowsBasedSliMetricMeanInRangeRange;
 }
 
-function monitoringSloWindowsBasedSliMetricMeanInRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference | MonitoringSloWindowsBasedSliMetricMeanInRange): any {
+export function monitoringSloWindowsBasedSliMetricMeanInRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference | MonitoringSloWindowsBasedSliMetricMeanInRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1495,6 +1944,31 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._timeSeries) {
+      hasAnyValues = true;
+      internalValueResult.timeSeries = this._timeSeries;
+    }
+    if (this._range) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliMetricMeanInRange | undefined) {
+    if (value === undefined) {
+      this._timeSeries = undefined;
+      this._range.internalValue = undefined;
+    }
+    else {
+      this._timeSeries = value.timeSeries;
+      this._range.internalValue = value.range;
+    }
+  }
+
   // time_series - computed: false, optional: false, required: true
   private _timeSeries?: string; 
   public get timeSeries() {
@@ -1505,21 +1979,20 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get timeSeriesInput() {
-    return this._timeSeries
+    return this._timeSeries;
   }
 
   // range - computed: false, optional: false, required: true
-  private _range?: MonitoringSloWindowsBasedSliMetricMeanInRangeRange; 
-  private __rangeOutput = new MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference(this as any, "range", true);
+  private _range = new MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference(this as any, "range", true);
   public get range() {
-    return this.__rangeOutput;
+    return this._range;
   }
   public putRange(value: MonitoringSloWindowsBasedSliMetricMeanInRangeRange) {
-    this._range = value;
+    this._range.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rangeInput() {
-    return this._range
+    return this._range.internalValue;
   }
 }
 export interface MonitoringSloWindowsBasedSliMetricSumInRangeRange {
@@ -1541,7 +2014,7 @@ will be set to "-infinity", defining an open range
   readonly min?: number;
 }
 
-function monitoringSloWindowsBasedSliMetricSumInRangeRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference | MonitoringSloWindowsBasedSliMetricSumInRangeRange): any {
+export function monitoringSloWindowsBasedSliMetricSumInRangeRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference | MonitoringSloWindowsBasedSliMetricSumInRangeRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1562,12 +2035,37 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRangeRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._max) {
+      hasAnyValues = true;
+      internalValueResult.max = this._max;
+    }
+    if (this._min) {
+      hasAnyValues = true;
+      internalValueResult.min = this._min;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliMetricSumInRangeRange | undefined) {
+    if (value === undefined) {
+      this._max = undefined;
+      this._min = undefined;
+    }
+    else {
+      this._max = value.max;
+      this._min = value.min;
+    }
+  }
+
   // max - computed: false, optional: true, required: false
-  private _max?: number | undefined; 
+  private _max?: number; 
   public get max() {
     return this.getNumberAttribute('max');
   }
-  public set max(value: number | undefined) {
+  public set max(value: number) {
     this._max = value;
   }
   public resetMax() {
@@ -1575,15 +2073,15 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get maxInput() {
-    return this._max
+    return this._max;
   }
 
   // min - computed: false, optional: true, required: false
-  private _min?: number | undefined; 
+  private _min?: number; 
   public get min() {
     return this.getNumberAttribute('min');
   }
-  public set min(value: number | undefined) {
+  public set min(value: number) {
     this._min = value;
   }
   public resetMin() {
@@ -1591,7 +2089,7 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get minInput() {
-    return this._min
+    return this._min;
   }
 }
 export interface MonitoringSloWindowsBasedSliMetricSumInRange {
@@ -1616,7 +2114,7 @@ Summed value 'X' should satisfy
   readonly range: MonitoringSloWindowsBasedSliMetricSumInRangeRange;
 }
 
-function monitoringSloWindowsBasedSliMetricSumInRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference | MonitoringSloWindowsBasedSliMetricSumInRange): any {
+export function monitoringSloWindowsBasedSliMetricSumInRangeToTerraform(struct?: MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference | MonitoringSloWindowsBasedSliMetricSumInRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1637,6 +2135,31 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._timeSeries) {
+      hasAnyValues = true;
+      internalValueResult.timeSeries = this._timeSeries;
+    }
+    if (this._range) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSliMetricSumInRange | undefined) {
+    if (value === undefined) {
+      this._timeSeries = undefined;
+      this._range.internalValue = undefined;
+    }
+    else {
+      this._timeSeries = value.timeSeries;
+      this._range.internalValue = value.range;
+    }
+  }
+
   // time_series - computed: false, optional: false, required: true
   private _timeSeries?: string; 
   public get timeSeries() {
@@ -1647,21 +2170,20 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get timeSeriesInput() {
-    return this._timeSeries
+    return this._timeSeries;
   }
 
   // range - computed: false, optional: false, required: true
-  private _range?: MonitoringSloWindowsBasedSliMetricSumInRangeRange; 
-  private __rangeOutput = new MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference(this as any, "range", true);
+  private _range = new MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference(this as any, "range", true);
   public get range() {
-    return this.__rangeOutput;
+    return this._range;
   }
   public putRange(value: MonitoringSloWindowsBasedSliMetricSumInRangeRange) {
-    this._range = value;
+    this._range.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rangeInput() {
-    return this._range
+    return this._range.internalValue;
   }
 }
 export interface MonitoringSloWindowsBasedSli {
@@ -1703,7 +2225,7 @@ integer fraction of a day and at least 60s.
   readonly metricSumInRange?: MonitoringSloWindowsBasedSliMetricSumInRange;
 }
 
-function monitoringSloWindowsBasedSliToTerraform(struct?: MonitoringSloWindowsBasedSliOutputReference | MonitoringSloWindowsBasedSli): any {
+export function monitoringSloWindowsBasedSliToTerraform(struct?: MonitoringSloWindowsBasedSliOutputReference | MonitoringSloWindowsBasedSli): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1727,12 +2249,55 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringSloWindowsBasedSli | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._goodBadMetricFilter) {
+      hasAnyValues = true;
+      internalValueResult.goodBadMetricFilter = this._goodBadMetricFilter;
+    }
+    if (this._windowPeriod) {
+      hasAnyValues = true;
+      internalValueResult.windowPeriod = this._windowPeriod;
+    }
+    if (this._goodTotalRatioThreshold) {
+      hasAnyValues = true;
+      internalValueResult.goodTotalRatioThreshold = this._goodTotalRatioThreshold?.internalValue;
+    }
+    if (this._metricMeanInRange) {
+      hasAnyValues = true;
+      internalValueResult.metricMeanInRange = this._metricMeanInRange?.internalValue;
+    }
+    if (this._metricSumInRange) {
+      hasAnyValues = true;
+      internalValueResult.metricSumInRange = this._metricSumInRange?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringSloWindowsBasedSli | undefined) {
+    if (value === undefined) {
+      this._goodBadMetricFilter = undefined;
+      this._windowPeriod = undefined;
+      this._goodTotalRatioThreshold.internalValue = undefined;
+      this._metricMeanInRange.internalValue = undefined;
+      this._metricSumInRange.internalValue = undefined;
+    }
+    else {
+      this._goodBadMetricFilter = value.goodBadMetricFilter;
+      this._windowPeriod = value.windowPeriod;
+      this._goodTotalRatioThreshold.internalValue = value.goodTotalRatioThreshold;
+      this._metricMeanInRange.internalValue = value.metricMeanInRange;
+      this._metricSumInRange.internalValue = value.metricSumInRange;
+    }
+  }
+
   // good_bad_metric_filter - computed: false, optional: true, required: false
-  private _goodBadMetricFilter?: string | undefined; 
+  private _goodBadMetricFilter?: string; 
   public get goodBadMetricFilter() {
     return this.getStringAttribute('good_bad_metric_filter');
   }
-  public set goodBadMetricFilter(value: string | undefined) {
+  public set goodBadMetricFilter(value: string) {
     this._goodBadMetricFilter = value;
   }
   public resetGoodBadMetricFilter() {
@@ -1740,15 +2305,15 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get goodBadMetricFilterInput() {
-    return this._goodBadMetricFilter
+    return this._goodBadMetricFilter;
   }
 
   // window_period - computed: false, optional: true, required: false
-  private _windowPeriod?: string | undefined; 
+  private _windowPeriod?: string; 
   public get windowPeriod() {
     return this.getStringAttribute('window_period');
   }
-  public set windowPeriod(value: string | undefined) {
+  public set windowPeriod(value: string) {
     this._windowPeriod = value;
   }
   public resetWindowPeriod() {
@@ -1756,58 +2321,55 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get windowPeriodInput() {
-    return this._windowPeriod
+    return this._windowPeriod;
   }
 
   // good_total_ratio_threshold - computed: false, optional: true, required: false
-  private _goodTotalRatioThreshold?: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined; 
-  private __goodTotalRatioThresholdOutput = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference(this as any, "good_total_ratio_threshold", true);
+  private _goodTotalRatioThreshold = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference(this as any, "good_total_ratio_threshold", true);
   public get goodTotalRatioThreshold() {
-    return this.__goodTotalRatioThresholdOutput;
+    return this._goodTotalRatioThreshold;
   }
-  public putGoodTotalRatioThreshold(value: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined) {
-    this._goodTotalRatioThreshold = value;
+  public putGoodTotalRatioThreshold(value: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold) {
+    this._goodTotalRatioThreshold.internalValue = value;
   }
   public resetGoodTotalRatioThreshold() {
-    this._goodTotalRatioThreshold = undefined;
+    this._goodTotalRatioThreshold.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get goodTotalRatioThresholdInput() {
-    return this._goodTotalRatioThreshold
+    return this._goodTotalRatioThreshold.internalValue;
   }
 
   // metric_mean_in_range - computed: false, optional: true, required: false
-  private _metricMeanInRange?: MonitoringSloWindowsBasedSliMetricMeanInRange | undefined; 
-  private __metricMeanInRangeOutput = new MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference(this as any, "metric_mean_in_range", true);
+  private _metricMeanInRange = new MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference(this as any, "metric_mean_in_range", true);
   public get metricMeanInRange() {
-    return this.__metricMeanInRangeOutput;
+    return this._metricMeanInRange;
   }
-  public putMetricMeanInRange(value: MonitoringSloWindowsBasedSliMetricMeanInRange | undefined) {
-    this._metricMeanInRange = value;
+  public putMetricMeanInRange(value: MonitoringSloWindowsBasedSliMetricMeanInRange) {
+    this._metricMeanInRange.internalValue = value;
   }
   public resetMetricMeanInRange() {
-    this._metricMeanInRange = undefined;
+    this._metricMeanInRange.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metricMeanInRangeInput() {
-    return this._metricMeanInRange
+    return this._metricMeanInRange.internalValue;
   }
 
   // metric_sum_in_range - computed: false, optional: true, required: false
-  private _metricSumInRange?: MonitoringSloWindowsBasedSliMetricSumInRange | undefined; 
-  private __metricSumInRangeOutput = new MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference(this as any, "metric_sum_in_range", true);
+  private _metricSumInRange = new MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference(this as any, "metric_sum_in_range", true);
   public get metricSumInRange() {
-    return this.__metricSumInRangeOutput;
+    return this._metricSumInRange;
   }
-  public putMetricSumInRange(value: MonitoringSloWindowsBasedSliMetricSumInRange | undefined) {
-    this._metricSumInRange = value;
+  public putMetricSumInRange(value: MonitoringSloWindowsBasedSliMetricSumInRange) {
+    this._metricSumInRange.internalValue = value;
   }
   public resetMetricSumInRange() {
-    this._metricSumInRange = undefined;
+    this._metricSumInRange.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metricSumInRangeInput() {
-    return this._metricSumInRange
+    return this._metricSumInRange.internalValue;
   }
 }
 
@@ -1850,10 +2412,10 @@ export class MonitoringSlo extends cdktf.TerraformResource {
     this._rollingPeriodDays = config.rollingPeriodDays;
     this._service = config.service;
     this._sloId = config.sloId;
-    this._basicSli = config.basicSli;
-    this._requestBasedSli = config.requestBasedSli;
-    this._timeouts = config.timeouts;
-    this._windowsBasedSli = config.windowsBasedSli;
+    this._basicSli.internalValue = config.basicSli;
+    this._requestBasedSli.internalValue = config.requestBasedSli;
+    this._timeouts.internalValue = config.timeouts;
+    this._windowsBasedSli.internalValue = config.windowsBasedSli;
   }
 
   // ==========
@@ -1861,11 +2423,11 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   // ==========
 
   // calendar_period - computed: false, optional: true, required: false
-  private _calendarPeriod?: string | undefined; 
+  private _calendarPeriod?: string; 
   public get calendarPeriod() {
     return this.getStringAttribute('calendar_period');
   }
-  public set calendarPeriod(value: string | undefined) {
+  public set calendarPeriod(value: string) {
     this._calendarPeriod = value;
   }
   public resetCalendarPeriod() {
@@ -1873,15 +2435,15 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get calendarPeriodInput() {
-    return this._calendarPeriod
+    return this._calendarPeriod;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -1889,7 +2451,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // goal - computed: false, optional: false, required: true
@@ -1902,7 +2464,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get goalInput() {
-    return this._goal
+    return this._goal;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1916,11 +2478,11 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1928,15 +2490,15 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // rolling_period_days - computed: false, optional: true, required: false
-  private _rollingPeriodDays?: number | undefined; 
+  private _rollingPeriodDays?: number; 
   public get rollingPeriodDays() {
     return this.getNumberAttribute('rolling_period_days');
   }
-  public set rollingPeriodDays(value: number | undefined) {
+  public set rollingPeriodDays(value: number) {
     this._rollingPeriodDays = value;
   }
   public resetRollingPeriodDays() {
@@ -1944,7 +2506,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rollingPeriodDaysInput() {
-    return this._rollingPeriodDays
+    return this._rollingPeriodDays;
   }
 
   // service - computed: false, optional: false, required: true
@@ -1957,15 +2519,15 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // slo_id - computed: true, optional: true, required: false
-  private _sloId?: string | undefined; 
+  private _sloId?: string; 
   public get sloId() {
     return this.getStringAttribute('slo_id');
   }
-  public set sloId(value: string | undefined) {
+  public set sloId(value: string) {
     this._sloId = value;
   }
   public resetSloId() {
@@ -1973,75 +2535,71 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sloIdInput() {
-    return this._sloId
+    return this._sloId;
   }
 
   // basic_sli - computed: false, optional: true, required: false
-  private _basicSli?: MonitoringSloBasicSli | undefined; 
-  private __basicSliOutput = new MonitoringSloBasicSliOutputReference(this as any, "basic_sli", true);
+  private _basicSli = new MonitoringSloBasicSliOutputReference(this as any, "basic_sli", true);
   public get basicSli() {
-    return this.__basicSliOutput;
+    return this._basicSli;
   }
-  public putBasicSli(value: MonitoringSloBasicSli | undefined) {
-    this._basicSli = value;
+  public putBasicSli(value: MonitoringSloBasicSli) {
+    this._basicSli.internalValue = value;
   }
   public resetBasicSli() {
-    this._basicSli = undefined;
+    this._basicSli.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get basicSliInput() {
-    return this._basicSli
+    return this._basicSli.internalValue;
   }
 
   // request_based_sli - computed: false, optional: true, required: false
-  private _requestBasedSli?: MonitoringSloRequestBasedSli | undefined; 
-  private __requestBasedSliOutput = new MonitoringSloRequestBasedSliOutputReference(this as any, "request_based_sli", true);
+  private _requestBasedSli = new MonitoringSloRequestBasedSliOutputReference(this as any, "request_based_sli", true);
   public get requestBasedSli() {
-    return this.__requestBasedSliOutput;
+    return this._requestBasedSli;
   }
-  public putRequestBasedSli(value: MonitoringSloRequestBasedSli | undefined) {
-    this._requestBasedSli = value;
+  public putRequestBasedSli(value: MonitoringSloRequestBasedSli) {
+    this._requestBasedSli.internalValue = value;
   }
   public resetRequestBasedSli() {
-    this._requestBasedSli = undefined;
+    this._requestBasedSli.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestBasedSliInput() {
-    return this._requestBasedSli
+    return this._requestBasedSli.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringSloTimeouts | undefined; 
-  private __timeoutsOutput = new MonitoringSloTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringSloTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitoringSloTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitoringSloTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // windows_based_sli - computed: false, optional: true, required: false
-  private _windowsBasedSli?: MonitoringSloWindowsBasedSli | undefined; 
-  private __windowsBasedSliOutput = new MonitoringSloWindowsBasedSliOutputReference(this as any, "windows_based_sli", true);
+  private _windowsBasedSli = new MonitoringSloWindowsBasedSliOutputReference(this as any, "windows_based_sli", true);
   public get windowsBasedSli() {
-    return this.__windowsBasedSliOutput;
+    return this._windowsBasedSli;
   }
-  public putWindowsBasedSli(value: MonitoringSloWindowsBasedSli | undefined) {
-    this._windowsBasedSli = value;
+  public putWindowsBasedSli(value: MonitoringSloWindowsBasedSli) {
+    this._windowsBasedSli.internalValue = value;
   }
   public resetWindowsBasedSli() {
-    this._windowsBasedSli = undefined;
+    this._windowsBasedSli.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get windowsBasedSliInput() {
-    return this._windowsBasedSli
+    return this._windowsBasedSli.internalValue;
   }
 
   // =========
@@ -2057,10 +2615,10 @@ export class MonitoringSlo extends cdktf.TerraformResource {
       rolling_period_days: cdktf.numberToTerraform(this._rollingPeriodDays),
       service: cdktf.stringToTerraform(this._service),
       slo_id: cdktf.stringToTerraform(this._sloId),
-      basic_sli: monitoringSloBasicSliToTerraform(this._basicSli),
-      request_based_sli: monitoringSloRequestBasedSliToTerraform(this._requestBasedSli),
-      timeouts: monitoringSloTimeoutsToTerraform(this._timeouts),
-      windows_based_sli: monitoringSloWindowsBasedSliToTerraform(this._windowsBasedSli),
+      basic_sli: monitoringSloBasicSliToTerraform(this._basicSli.internalValue),
+      request_based_sli: monitoringSloRequestBasedSliToTerraform(this._requestBasedSli.internalValue),
+      timeouts: monitoringSloTimeoutsToTerraform(this._timeouts.internalValue),
+      windows_based_sli: monitoringSloWindowsBasedSliToTerraform(this._windowsBasedSli.internalValue),
     };
   }
 }

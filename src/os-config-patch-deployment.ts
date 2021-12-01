@@ -81,7 +81,7 @@ export interface OsConfigPatchDeploymentInstanceFilterGroupLabels {
   readonly labels: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels): any {
+export function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -127,7 +127,7 @@ VMs when targeting configs, for example prefix="prod-".
   readonly groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[];
 }
 
-function osConfigPatchDeploymentInstanceFilterToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterOutputReference | OsConfigPatchDeploymentInstanceFilter): any {
+export function osConfigPatchDeploymentInstanceFilterToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterOutputReference | OsConfigPatchDeploymentInstanceFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -151,12 +151,55 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentInstanceFilter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._all) {
+      hasAnyValues = true;
+      internalValueResult.all = this._all;
+    }
+    if (this._instanceNamePrefixes) {
+      hasAnyValues = true;
+      internalValueResult.instanceNamePrefixes = this._instanceNamePrefixes;
+    }
+    if (this._instances) {
+      hasAnyValues = true;
+      internalValueResult.instances = this._instances;
+    }
+    if (this._zones) {
+      hasAnyValues = true;
+      internalValueResult.zones = this._zones;
+    }
+    if (this._groupLabels) {
+      hasAnyValues = true;
+      internalValueResult.groupLabels = this._groupLabels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentInstanceFilter | undefined) {
+    if (value === undefined) {
+      this._all = undefined;
+      this._instanceNamePrefixes = undefined;
+      this._instances = undefined;
+      this._zones = undefined;
+      this._groupLabels = undefined;
+    }
+    else {
+      this._all = value.all;
+      this._instanceNamePrefixes = value.instanceNamePrefixes;
+      this._instances = value.instances;
+      this._zones = value.zones;
+      this._groupLabels = value.groupLabels;
+    }
+  }
+
   // all - computed: false, optional: true, required: false
-  private _all?: boolean | cdktf.IResolvable | undefined; 
+  private _all?: boolean | cdktf.IResolvable; 
   public get all() {
     return this.getBooleanAttribute('all') as any;
   }
-  public set all(value: boolean | cdktf.IResolvable | undefined) {
+  public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
   }
   public resetAll() {
@@ -164,15 +207,15 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get allInput() {
-    return this._all
+    return this._all;
   }
 
   // instance_name_prefixes - computed: false, optional: true, required: false
-  private _instanceNamePrefixes?: string[] | undefined; 
+  private _instanceNamePrefixes?: string[]; 
   public get instanceNamePrefixes() {
     return this.getListAttribute('instance_name_prefixes');
   }
-  public set instanceNamePrefixes(value: string[] | undefined) {
+  public set instanceNamePrefixes(value: string[]) {
     this._instanceNamePrefixes = value;
   }
   public resetInstanceNamePrefixes() {
@@ -180,15 +223,15 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get instanceNamePrefixesInput() {
-    return this._instanceNamePrefixes
+    return this._instanceNamePrefixes;
   }
 
   // instances - computed: false, optional: true, required: false
-  private _instances?: string[] | undefined; 
+  private _instances?: string[]; 
   public get instances() {
     return this.getListAttribute('instances');
   }
-  public set instances(value: string[] | undefined) {
+  public set instances(value: string[]) {
     this._instances = value;
   }
   public resetInstances() {
@@ -196,15 +239,15 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get instancesInput() {
-    return this._instances
+    return this._instances;
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  private _zones?: string[]; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -212,16 +255,16 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
-    return this._zones
+    return this._zones;
   }
 
   // group_labels - computed: false, optional: true, required: false
-  private _groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | undefined; 
+  private _groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[]; 
   public get groupLabels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('group_labels') as any;
   }
-  public set groupLabels(value: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | undefined) {
+  public set groupLabels(value: OsConfigPatchDeploymentInstanceFilterGroupLabels[]) {
     this._groupLabels = value;
   }
   public resetGroupLabels() {
@@ -229,7 +272,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get groupLabelsInput() {
-    return this._groupLabels
+    return this._groupLabels;
   }
 }
 export interface OsConfigPatchDeploymentOneTimeSchedule {
@@ -242,7 +285,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   readonly executeTime: string;
 }
 
-function osConfigPatchDeploymentOneTimeScheduleToTerraform(struct?: OsConfigPatchDeploymentOneTimeScheduleOutputReference | OsConfigPatchDeploymentOneTimeSchedule): any {
+export function osConfigPatchDeploymentOneTimeScheduleToTerraform(struct?: OsConfigPatchDeploymentOneTimeScheduleOutputReference | OsConfigPatchDeploymentOneTimeSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -262,6 +305,25 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentOneTimeSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._executeTime) {
+      hasAnyValues = true;
+      internalValueResult.executeTime = this._executeTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentOneTimeSchedule | undefined) {
+    if (value === undefined) {
+      this._executeTime = undefined;
+    }
+    else {
+      this._executeTime = value.executeTime;
+    }
+  }
+
   // execute_time - computed: false, optional: false, required: true
   private _executeTime?: string; 
   public get executeTime() {
@@ -272,7 +334,7 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get executeTimeInput() {
-    return this._executeTime
+    return this._executeTime;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigApt {
@@ -298,7 +360,7 @@ any other patch configuration fields.
   readonly type?: string;
 }
 
-function osConfigPatchDeploymentPatchConfigAptToTerraform(struct?: OsConfigPatchDeploymentPatchConfigAptOutputReference | OsConfigPatchDeploymentPatchConfigApt): any {
+export function osConfigPatchDeploymentPatchConfigAptToTerraform(struct?: OsConfigPatchDeploymentPatchConfigAptOutputReference | OsConfigPatchDeploymentPatchConfigApt): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -320,12 +382,43 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigApt | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._excludes) {
+      hasAnyValues = true;
+      internalValueResult.excludes = this._excludes;
+    }
+    if (this._exclusivePackages) {
+      hasAnyValues = true;
+      internalValueResult.exclusivePackages = this._exclusivePackages;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigApt | undefined) {
+    if (value === undefined) {
+      this._excludes = undefined;
+      this._exclusivePackages = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._excludes = value.excludes;
+      this._exclusivePackages = value.exclusivePackages;
+      this._type = value.type;
+    }
+  }
+
   // excludes - computed: false, optional: true, required: false
-  private _excludes?: string[] | undefined; 
+  private _excludes?: string[]; 
   public get excludes() {
     return this.getListAttribute('excludes');
   }
-  public set excludes(value: string[] | undefined) {
+  public set excludes(value: string[]) {
     this._excludes = value;
   }
   public resetExcludes() {
@@ -333,15 +426,15 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get excludesInput() {
-    return this._excludes
+    return this._excludes;
   }
 
   // exclusive_packages - computed: false, optional: true, required: false
-  private _exclusivePackages?: string[] | undefined; 
+  private _exclusivePackages?: string[]; 
   public get exclusivePackages() {
     return this.getListAttribute('exclusive_packages');
   }
-  public set exclusivePackages(value: string[] | undefined) {
+  public set exclusivePackages(value: string[]) {
     this._exclusivePackages = value;
   }
   public resetExclusivePackages() {
@@ -349,15 +442,15 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get exclusivePackagesInput() {
-    return this._exclusivePackages
+    return this._exclusivePackages;
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -365,7 +458,7 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigGoo {
@@ -377,7 +470,7 @@ export interface OsConfigPatchDeploymentPatchConfigGoo {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConfigPatchDeploymentPatchConfigGooOutputReference | OsConfigPatchDeploymentPatchConfigGoo): any {
+export function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConfigPatchDeploymentPatchConfigGooOutputReference | OsConfigPatchDeploymentPatchConfigGoo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -397,6 +490,25 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigGoo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigGoo | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -407,7 +519,7 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject {
@@ -431,7 +543,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGc
   readonly object: string;
 }
 
-function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject): any {
+export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -453,6 +565,37 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucket) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._generationNumber) {
+      hasAnyValues = true;
+      internalValueResult.generationNumber = this._generationNumber;
+    }
+    if (this._object) {
+      hasAnyValues = true;
+      internalValueResult.object = this._object;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined) {
+    if (value === undefined) {
+      this._bucket = undefined;
+      this._generationNumber = undefined;
+      this._object = undefined;
+    }
+    else {
+      this._bucket = value.bucket;
+      this._generationNumber = value.generationNumber;
+      this._object = value.object;
+    }
+  }
+
   // bucket - computed: false, optional: false, required: true
   private _bucket?: string; 
   public get bucket() {
@@ -463,7 +606,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // generation_number - computed: false, optional: false, required: true
@@ -476,7 +619,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   }
   // Temporarily expose input value. Use with caution.
   public get generationNumberInput() {
-    return this._generationNumber
+    return this._generationNumber;
   }
 
   // object - computed: false, optional: false, required: true
@@ -489,7 +632,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   }
   // Temporarily expose input value. Use with caution.
   public get objectInput() {
-    return this._object
+    return this._object;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
@@ -520,7 +663,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject;
 }
 
-function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig): any {
+export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -543,13 +686,50 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedSuccessCodes) {
+      hasAnyValues = true;
+      internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
+    }
+    if (this._interpreter) {
+      hasAnyValues = true;
+      internalValueResult.interpreter = this._interpreter;
+    }
+    if (this._localPath) {
+      hasAnyValues = true;
+      internalValueResult.localPath = this._localPath;
+    }
+    if (this._gcsObject) {
+      hasAnyValues = true;
+      internalValueResult.gcsObject = this._gcsObject?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined) {
+    if (value === undefined) {
+      this._allowedSuccessCodes = undefined;
+      this._interpreter = undefined;
+      this._localPath = undefined;
+      this._gcsObject.internalValue = undefined;
+    }
+    else {
+      this._allowedSuccessCodes = value.allowedSuccessCodes;
+      this._interpreter = value.interpreter;
+      this._localPath = value.localPath;
+      this._gcsObject.internalValue = value.gcsObject;
+    }
+  }
+
   // allowed_success_codes - computed: false, optional: true, required: false
-  private _allowedSuccessCodes?: number[] | undefined; 
+  private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allowed_success_codes') as any;
   }
-  public set allowedSuccessCodes(value: number[] | undefined) {
+  public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
   }
   public resetAllowedSuccessCodes() {
@@ -557,15 +737,15 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   }
   // Temporarily expose input value. Use with caution.
   public get allowedSuccessCodesInput() {
-    return this._allowedSuccessCodes
+    return this._allowedSuccessCodes;
   }
 
   // interpreter - computed: false, optional: true, required: false
-  private _interpreter?: string | undefined; 
+  private _interpreter?: string; 
   public get interpreter() {
     return this.getStringAttribute('interpreter');
   }
-  public set interpreter(value: string | undefined) {
+  public set interpreter(value: string) {
     this._interpreter = value;
   }
   public resetInterpreter() {
@@ -573,15 +753,15 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   }
   // Temporarily expose input value. Use with caution.
   public get interpreterInput() {
-    return this._interpreter
+    return this._interpreter;
   }
 
   // local_path - computed: false, optional: true, required: false
-  private _localPath?: string | undefined; 
+  private _localPath?: string; 
   public get localPath() {
     return this.getStringAttribute('local_path');
   }
-  public set localPath(value: string | undefined) {
+  public set localPath(value: string) {
     this._localPath = value;
   }
   public resetLocalPath() {
@@ -589,24 +769,23 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   }
   // Temporarily expose input value. Use with caution.
   public get localPathInput() {
-    return this._localPath
+    return this._localPath;
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined; 
-  private __gcsObjectOutput = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
   public get gcsObject() {
-    return this.__gcsObjectOutput;
+    return this._gcsObject;
   }
-  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined) {
-    this._gcsObject = value;
+  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject) {
+    this._gcsObject.internalValue = value;
   }
   public resetGcsObject() {
-    this._gcsObject = undefined;
+    this._gcsObject.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcsObjectInput() {
-    return this._gcsObject
+    return this._gcsObject.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject {
@@ -630,7 +809,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig
   readonly object: string;
 }
 
-function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject): any {
+export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -652,6 +831,37 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucket) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._generationNumber) {
+      hasAnyValues = true;
+      internalValueResult.generationNumber = this._generationNumber;
+    }
+    if (this._object) {
+      hasAnyValues = true;
+      internalValueResult.object = this._object;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined) {
+    if (value === undefined) {
+      this._bucket = undefined;
+      this._generationNumber = undefined;
+      this._object = undefined;
+    }
+    else {
+      this._bucket = value.bucket;
+      this._generationNumber = value.generationNumber;
+      this._object = value.object;
+    }
+  }
+
   // bucket - computed: false, optional: false, required: true
   private _bucket?: string; 
   public get bucket() {
@@ -662,7 +872,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // generation_number - computed: false, optional: false, required: true
@@ -675,7 +885,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   }
   // Temporarily expose input value. Use with caution.
   public get generationNumberInput() {
-    return this._generationNumber
+    return this._generationNumber;
   }
 
   // object - computed: false, optional: false, required: true
@@ -688,7 +898,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   }
   // Temporarily expose input value. Use with caution.
   public get objectInput() {
-    return this._object
+    return this._object;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig {
@@ -719,7 +929,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject;
 }
 
-function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig): any {
+export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -742,13 +952,50 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedSuccessCodes) {
+      hasAnyValues = true;
+      internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
+    }
+    if (this._interpreter) {
+      hasAnyValues = true;
+      internalValueResult.interpreter = this._interpreter;
+    }
+    if (this._localPath) {
+      hasAnyValues = true;
+      internalValueResult.localPath = this._localPath;
+    }
+    if (this._gcsObject) {
+      hasAnyValues = true;
+      internalValueResult.gcsObject = this._gcsObject?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined) {
+    if (value === undefined) {
+      this._allowedSuccessCodes = undefined;
+      this._interpreter = undefined;
+      this._localPath = undefined;
+      this._gcsObject.internalValue = undefined;
+    }
+    else {
+      this._allowedSuccessCodes = value.allowedSuccessCodes;
+      this._interpreter = value.interpreter;
+      this._localPath = value.localPath;
+      this._gcsObject.internalValue = value.gcsObject;
+    }
+  }
+
   // allowed_success_codes - computed: false, optional: true, required: false
-  private _allowedSuccessCodes?: number[] | undefined; 
+  private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allowed_success_codes') as any;
   }
-  public set allowedSuccessCodes(value: number[] | undefined) {
+  public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
   }
   public resetAllowedSuccessCodes() {
@@ -756,15 +1003,15 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   }
   // Temporarily expose input value. Use with caution.
   public get allowedSuccessCodesInput() {
-    return this._allowedSuccessCodes
+    return this._allowedSuccessCodes;
   }
 
   // interpreter - computed: false, optional: true, required: false
-  private _interpreter?: string | undefined; 
+  private _interpreter?: string; 
   public get interpreter() {
     return this.getStringAttribute('interpreter');
   }
-  public set interpreter(value: string | undefined) {
+  public set interpreter(value: string) {
     this._interpreter = value;
   }
   public resetInterpreter() {
@@ -772,15 +1019,15 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   }
   // Temporarily expose input value. Use with caution.
   public get interpreterInput() {
-    return this._interpreter
+    return this._interpreter;
   }
 
   // local_path - computed: false, optional: true, required: false
-  private _localPath?: string | undefined; 
+  private _localPath?: string; 
   public get localPath() {
     return this.getStringAttribute('local_path');
   }
-  public set localPath(value: string | undefined) {
+  public set localPath(value: string) {
     this._localPath = value;
   }
   public resetLocalPath() {
@@ -788,24 +1035,23 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   }
   // Temporarily expose input value. Use with caution.
   public get localPathInput() {
-    return this._localPath
+    return this._localPath;
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined; 
-  private __gcsObjectOutput = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
   public get gcsObject() {
-    return this.__gcsObjectOutput;
+    return this._gcsObject;
   }
-  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined) {
-    this._gcsObject = value;
+  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject) {
+    this._gcsObject.internalValue = value;
   }
   public resetGcsObject() {
-    this._gcsObject = undefined;
+    this._gcsObject.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcsObjectInput() {
-    return this._gcsObject
+    return this._gcsObject.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPostStep {
@@ -823,7 +1069,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStep {
   readonly windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig;
 }
 
-function osConfigPatchDeploymentPatchConfigPostStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepOutputReference | OsConfigPatchDeploymentPatchConfigPostStep): any {
+export function osConfigPatchDeploymentPatchConfigPostStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepOutputReference | OsConfigPatchDeploymentPatchConfigPostStep): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -844,38 +1090,61 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // linux_exec_step_config - computed: false, optional: true, required: false
-  private _linuxExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined; 
-  private __linuxExecStepConfigOutput = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(this as any, "linux_exec_step_config", true);
-  public get linuxExecStepConfig() {
-    return this.__linuxExecStepConfigOutput;
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStep | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linuxExecStepConfig) {
+      hasAnyValues = true;
+      internalValueResult.linuxExecStepConfig = this._linuxExecStepConfig?.internalValue;
+    }
+    if (this._windowsExecStepConfig) {
+      hasAnyValues = true;
+      internalValueResult.windowsExecStepConfig = this._windowsExecStepConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putLinuxExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined) {
-    this._linuxExecStepConfig = value;
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStep | undefined) {
+    if (value === undefined) {
+      this._linuxExecStepConfig.internalValue = undefined;
+      this._windowsExecStepConfig.internalValue = undefined;
+    }
+    else {
+      this._linuxExecStepConfig.internalValue = value.linuxExecStepConfig;
+      this._windowsExecStepConfig.internalValue = value.windowsExecStepConfig;
+    }
+  }
+
+  // linux_exec_step_config - computed: false, optional: true, required: false
+  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(this as any, "linux_exec_step_config", true);
+  public get linuxExecStepConfig() {
+    return this._linuxExecStepConfig;
+  }
+  public putLinuxExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig) {
+    this._linuxExecStepConfig.internalValue = value;
   }
   public resetLinuxExecStepConfig() {
-    this._linuxExecStepConfig = undefined;
+    this._linuxExecStepConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linuxExecStepConfigInput() {
-    return this._linuxExecStepConfig
+    return this._linuxExecStepConfig.internalValue;
   }
 
   // windows_exec_step_config - computed: false, optional: true, required: false
-  private _windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined; 
-  private __windowsExecStepConfigOutput = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(this as any, "windows_exec_step_config", true);
+  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(this as any, "windows_exec_step_config", true);
   public get windowsExecStepConfig() {
-    return this.__windowsExecStepConfigOutput;
+    return this._windowsExecStepConfig;
   }
-  public putWindowsExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined) {
-    this._windowsExecStepConfig = value;
+  public putWindowsExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig) {
+    this._windowsExecStepConfig.internalValue = value;
   }
   public resetWindowsExecStepConfig() {
-    this._windowsExecStepConfig = undefined;
+    this._windowsExecStepConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get windowsExecStepConfigInput() {
-    return this._windowsExecStepConfig
+    return this._windowsExecStepConfig.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject {
@@ -899,7 +1168,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcs
   readonly object: string;
 }
 
-function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject): any {
+export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -921,6 +1190,37 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucket) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._generationNumber) {
+      hasAnyValues = true;
+      internalValueResult.generationNumber = this._generationNumber;
+    }
+    if (this._object) {
+      hasAnyValues = true;
+      internalValueResult.object = this._object;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined) {
+    if (value === undefined) {
+      this._bucket = undefined;
+      this._generationNumber = undefined;
+      this._object = undefined;
+    }
+    else {
+      this._bucket = value.bucket;
+      this._generationNumber = value.generationNumber;
+      this._object = value.object;
+    }
+  }
+
   // bucket - computed: false, optional: false, required: true
   private _bucket?: string; 
   public get bucket() {
@@ -931,7 +1231,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // generation_number - computed: false, optional: false, required: true
@@ -944,7 +1244,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   }
   // Temporarily expose input value. Use with caution.
   public get generationNumberInput() {
-    return this._generationNumber
+    return this._generationNumber;
   }
 
   // object - computed: false, optional: false, required: true
@@ -957,7 +1257,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   }
   // Temporarily expose input value. Use with caution.
   public get objectInput() {
-    return this._object
+    return this._object;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig {
@@ -988,7 +1288,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject;
 }
 
-function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig): any {
+export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1011,13 +1311,50 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedSuccessCodes) {
+      hasAnyValues = true;
+      internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
+    }
+    if (this._interpreter) {
+      hasAnyValues = true;
+      internalValueResult.interpreter = this._interpreter;
+    }
+    if (this._localPath) {
+      hasAnyValues = true;
+      internalValueResult.localPath = this._localPath;
+    }
+    if (this._gcsObject) {
+      hasAnyValues = true;
+      internalValueResult.gcsObject = this._gcsObject?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined) {
+    if (value === undefined) {
+      this._allowedSuccessCodes = undefined;
+      this._interpreter = undefined;
+      this._localPath = undefined;
+      this._gcsObject.internalValue = undefined;
+    }
+    else {
+      this._allowedSuccessCodes = value.allowedSuccessCodes;
+      this._interpreter = value.interpreter;
+      this._localPath = value.localPath;
+      this._gcsObject.internalValue = value.gcsObject;
+    }
+  }
+
   // allowed_success_codes - computed: false, optional: true, required: false
-  private _allowedSuccessCodes?: number[] | undefined; 
+  private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allowed_success_codes') as any;
   }
-  public set allowedSuccessCodes(value: number[] | undefined) {
+  public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
   }
   public resetAllowedSuccessCodes() {
@@ -1025,15 +1362,15 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   }
   // Temporarily expose input value. Use with caution.
   public get allowedSuccessCodesInput() {
-    return this._allowedSuccessCodes
+    return this._allowedSuccessCodes;
   }
 
   // interpreter - computed: false, optional: true, required: false
-  private _interpreter?: string | undefined; 
+  private _interpreter?: string; 
   public get interpreter() {
     return this.getStringAttribute('interpreter');
   }
-  public set interpreter(value: string | undefined) {
+  public set interpreter(value: string) {
     this._interpreter = value;
   }
   public resetInterpreter() {
@@ -1041,15 +1378,15 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   }
   // Temporarily expose input value. Use with caution.
   public get interpreterInput() {
-    return this._interpreter
+    return this._interpreter;
   }
 
   // local_path - computed: false, optional: true, required: false
-  private _localPath?: string | undefined; 
+  private _localPath?: string; 
   public get localPath() {
     return this.getStringAttribute('local_path');
   }
-  public set localPath(value: string | undefined) {
+  public set localPath(value: string) {
     this._localPath = value;
   }
   public resetLocalPath() {
@@ -1057,24 +1394,23 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   }
   // Temporarily expose input value. Use with caution.
   public get localPathInput() {
-    return this._localPath
+    return this._localPath;
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined; 
-  private __gcsObjectOutput = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
   public get gcsObject() {
-    return this.__gcsObjectOutput;
+    return this._gcsObject;
   }
-  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined) {
-    this._gcsObject = value;
+  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject) {
+    this._gcsObject.internalValue = value;
   }
   public resetGcsObject() {
-    this._gcsObject = undefined;
+    this._gcsObject.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcsObjectInput() {
-    return this._gcsObject
+    return this._gcsObject.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject {
@@ -1098,7 +1434,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigG
   readonly object: string;
 }
 
-function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject): any {
+export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1120,6 +1456,37 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bucket) {
+      hasAnyValues = true;
+      internalValueResult.bucket = this._bucket;
+    }
+    if (this._generationNumber) {
+      hasAnyValues = true;
+      internalValueResult.generationNumber = this._generationNumber;
+    }
+    if (this._object) {
+      hasAnyValues = true;
+      internalValueResult.object = this._object;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined) {
+    if (value === undefined) {
+      this._bucket = undefined;
+      this._generationNumber = undefined;
+      this._object = undefined;
+    }
+    else {
+      this._bucket = value.bucket;
+      this._generationNumber = value.generationNumber;
+      this._object = value.object;
+    }
+  }
+
   // bucket - computed: false, optional: false, required: true
   private _bucket?: string; 
   public get bucket() {
@@ -1130,7 +1497,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // generation_number - computed: false, optional: false, required: true
@@ -1143,7 +1510,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   }
   // Temporarily expose input value. Use with caution.
   public get generationNumberInput() {
-    return this._generationNumber
+    return this._generationNumber;
   }
 
   // object - computed: false, optional: false, required: true
@@ -1156,7 +1523,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   }
   // Temporarily expose input value. Use with caution.
   public get objectInput() {
-    return this._object
+    return this._object;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
@@ -1187,7 +1554,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
   readonly gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject;
 }
 
-function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig): any {
+export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1210,13 +1577,50 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedSuccessCodes) {
+      hasAnyValues = true;
+      internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
+    }
+    if (this._interpreter) {
+      hasAnyValues = true;
+      internalValueResult.interpreter = this._interpreter;
+    }
+    if (this._localPath) {
+      hasAnyValues = true;
+      internalValueResult.localPath = this._localPath;
+    }
+    if (this._gcsObject) {
+      hasAnyValues = true;
+      internalValueResult.gcsObject = this._gcsObject?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined) {
+    if (value === undefined) {
+      this._allowedSuccessCodes = undefined;
+      this._interpreter = undefined;
+      this._localPath = undefined;
+      this._gcsObject.internalValue = undefined;
+    }
+    else {
+      this._allowedSuccessCodes = value.allowedSuccessCodes;
+      this._interpreter = value.interpreter;
+      this._localPath = value.localPath;
+      this._gcsObject.internalValue = value.gcsObject;
+    }
+  }
+
   // allowed_success_codes - computed: false, optional: true, required: false
-  private _allowedSuccessCodes?: number[] | undefined; 
+  private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allowed_success_codes') as any;
   }
-  public set allowedSuccessCodes(value: number[] | undefined) {
+  public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
   }
   public resetAllowedSuccessCodes() {
@@ -1224,15 +1628,15 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get allowedSuccessCodesInput() {
-    return this._allowedSuccessCodes
+    return this._allowedSuccessCodes;
   }
 
   // interpreter - computed: false, optional: true, required: false
-  private _interpreter?: string | undefined; 
+  private _interpreter?: string; 
   public get interpreter() {
     return this.getStringAttribute('interpreter');
   }
-  public set interpreter(value: string | undefined) {
+  public set interpreter(value: string) {
     this._interpreter = value;
   }
   public resetInterpreter() {
@@ -1240,15 +1644,15 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get interpreterInput() {
-    return this._interpreter
+    return this._interpreter;
   }
 
   // local_path - computed: false, optional: true, required: false
-  private _localPath?: string | undefined; 
+  private _localPath?: string; 
   public get localPath() {
     return this.getStringAttribute('local_path');
   }
-  public set localPath(value: string | undefined) {
+  public set localPath(value: string) {
     this._localPath = value;
   }
   public resetLocalPath() {
@@ -1256,24 +1660,23 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get localPathInput() {
-    return this._localPath
+    return this._localPath;
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined; 
-  private __gcsObjectOutput = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
   public get gcsObject() {
-    return this.__gcsObjectOutput;
+    return this._gcsObject;
   }
-  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined) {
-    this._gcsObject = value;
+  public putGcsObject(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject) {
+    this._gcsObject.internalValue = value;
   }
   public resetGcsObject() {
-    this._gcsObject = undefined;
+    this._gcsObject.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcsObjectInput() {
-    return this._gcsObject
+    return this._gcsObject.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigPreStep {
@@ -1291,7 +1694,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStep {
   readonly windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig;
 }
 
-function osConfigPatchDeploymentPatchConfigPreStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepOutputReference | OsConfigPatchDeploymentPatchConfigPreStep): any {
+export function osConfigPatchDeploymentPatchConfigPreStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepOutputReference | OsConfigPatchDeploymentPatchConfigPreStep): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1312,38 +1715,61 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // linux_exec_step_config - computed: false, optional: true, required: false
-  private _linuxExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined; 
-  private __linuxExecStepConfigOutput = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(this as any, "linux_exec_step_config", true);
-  public get linuxExecStepConfig() {
-    return this.__linuxExecStepConfigOutput;
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStep | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linuxExecStepConfig) {
+      hasAnyValues = true;
+      internalValueResult.linuxExecStepConfig = this._linuxExecStepConfig?.internalValue;
+    }
+    if (this._windowsExecStepConfig) {
+      hasAnyValues = true;
+      internalValueResult.windowsExecStepConfig = this._windowsExecStepConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putLinuxExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined) {
-    this._linuxExecStepConfig = value;
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStep | undefined) {
+    if (value === undefined) {
+      this._linuxExecStepConfig.internalValue = undefined;
+      this._windowsExecStepConfig.internalValue = undefined;
+    }
+    else {
+      this._linuxExecStepConfig.internalValue = value.linuxExecStepConfig;
+      this._windowsExecStepConfig.internalValue = value.windowsExecStepConfig;
+    }
+  }
+
+  // linux_exec_step_config - computed: false, optional: true, required: false
+  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(this as any, "linux_exec_step_config", true);
+  public get linuxExecStepConfig() {
+    return this._linuxExecStepConfig;
+  }
+  public putLinuxExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig) {
+    this._linuxExecStepConfig.internalValue = value;
   }
   public resetLinuxExecStepConfig() {
-    this._linuxExecStepConfig = undefined;
+    this._linuxExecStepConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linuxExecStepConfigInput() {
-    return this._linuxExecStepConfig
+    return this._linuxExecStepConfig.internalValue;
   }
 
   // windows_exec_step_config - computed: false, optional: true, required: false
-  private _windowsExecStepConfig?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined; 
-  private __windowsExecStepConfigOutput = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(this as any, "windows_exec_step_config", true);
+  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(this as any, "windows_exec_step_config", true);
   public get windowsExecStepConfig() {
-    return this.__windowsExecStepConfigOutput;
+    return this._windowsExecStepConfig;
   }
-  public putWindowsExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined) {
-    this._windowsExecStepConfig = value;
+  public putWindowsExecStepConfig(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig) {
+    this._windowsExecStepConfig.internalValue = value;
   }
   public resetWindowsExecStepConfig() {
-    this._windowsExecStepConfig = undefined;
+    this._windowsExecStepConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get windowsExecStepConfigInput() {
-    return this._windowsExecStepConfig
+    return this._windowsExecStepConfig.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigWindowsUpdate {
@@ -1368,7 +1794,7 @@ This field must not be used with other patch configurations.
   readonly exclusivePatches?: string[];
 }
 
-function osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform(struct?: OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference | OsConfigPatchDeploymentPatchConfigWindowsUpdate): any {
+export function osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform(struct?: OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference | OsConfigPatchDeploymentPatchConfigWindowsUpdate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1390,12 +1816,43 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._classifications) {
+      hasAnyValues = true;
+      internalValueResult.classifications = this._classifications;
+    }
+    if (this._excludes) {
+      hasAnyValues = true;
+      internalValueResult.excludes = this._excludes;
+    }
+    if (this._exclusivePatches) {
+      hasAnyValues = true;
+      internalValueResult.exclusivePatches = this._exclusivePatches;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined) {
+    if (value === undefined) {
+      this._classifications = undefined;
+      this._excludes = undefined;
+      this._exclusivePatches = undefined;
+    }
+    else {
+      this._classifications = value.classifications;
+      this._excludes = value.excludes;
+      this._exclusivePatches = value.exclusivePatches;
+    }
+  }
+
   // classifications - computed: false, optional: true, required: false
-  private _classifications?: string[] | undefined; 
+  private _classifications?: string[]; 
   public get classifications() {
     return this.getListAttribute('classifications');
   }
-  public set classifications(value: string[] | undefined) {
+  public set classifications(value: string[]) {
     this._classifications = value;
   }
   public resetClassifications() {
@@ -1403,15 +1860,15 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get classificationsInput() {
-    return this._classifications
+    return this._classifications;
   }
 
   // excludes - computed: false, optional: true, required: false
-  private _excludes?: string[] | undefined; 
+  private _excludes?: string[]; 
   public get excludes() {
     return this.getListAttribute('excludes');
   }
-  public set excludes(value: string[] | undefined) {
+  public set excludes(value: string[]) {
     this._excludes = value;
   }
   public resetExcludes() {
@@ -1419,15 +1876,15 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get excludesInput() {
-    return this._excludes
+    return this._excludes;
   }
 
   // exclusive_patches - computed: false, optional: true, required: false
-  private _exclusivePatches?: string[] | undefined; 
+  private _exclusivePatches?: string[]; 
   public get exclusivePatches() {
     return this.getListAttribute('exclusive_patches');
   }
-  public set exclusivePatches(value: string[] | undefined) {
+  public set exclusivePatches(value: string[]) {
     this._exclusivePatches = value;
   }
   public resetExclusivePatches() {
@@ -1435,7 +1892,7 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get exclusivePatchesInput() {
-    return this._exclusivePatches
+    return this._exclusivePatches;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigYum {
@@ -1467,7 +1924,7 @@ any other patch configuration fields.
   readonly security?: boolean | cdktf.IResolvable;
 }
 
-function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConfigPatchDeploymentPatchConfigYumOutputReference | OsConfigPatchDeploymentPatchConfigYum): any {
+export function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConfigPatchDeploymentPatchConfigYumOutputReference | OsConfigPatchDeploymentPatchConfigYum): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1490,12 +1947,49 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigYum | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._excludes) {
+      hasAnyValues = true;
+      internalValueResult.excludes = this._excludes;
+    }
+    if (this._exclusivePackages) {
+      hasAnyValues = true;
+      internalValueResult.exclusivePackages = this._exclusivePackages;
+    }
+    if (this._minimal) {
+      hasAnyValues = true;
+      internalValueResult.minimal = this._minimal;
+    }
+    if (this._security) {
+      hasAnyValues = true;
+      internalValueResult.security = this._security;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigYum | undefined) {
+    if (value === undefined) {
+      this._excludes = undefined;
+      this._exclusivePackages = undefined;
+      this._minimal = undefined;
+      this._security = undefined;
+    }
+    else {
+      this._excludes = value.excludes;
+      this._exclusivePackages = value.exclusivePackages;
+      this._minimal = value.minimal;
+      this._security = value.security;
+    }
+  }
+
   // excludes - computed: false, optional: true, required: false
-  private _excludes?: string[] | undefined; 
+  private _excludes?: string[]; 
   public get excludes() {
     return this.getListAttribute('excludes');
   }
-  public set excludes(value: string[] | undefined) {
+  public set excludes(value: string[]) {
     this._excludes = value;
   }
   public resetExcludes() {
@@ -1503,15 +1997,15 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get excludesInput() {
-    return this._excludes
+    return this._excludes;
   }
 
   // exclusive_packages - computed: false, optional: true, required: false
-  private _exclusivePackages?: string[] | undefined; 
+  private _exclusivePackages?: string[]; 
   public get exclusivePackages() {
     return this.getListAttribute('exclusive_packages');
   }
-  public set exclusivePackages(value: string[] | undefined) {
+  public set exclusivePackages(value: string[]) {
     this._exclusivePackages = value;
   }
   public resetExclusivePackages() {
@@ -1519,15 +2013,15 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get exclusivePackagesInput() {
-    return this._exclusivePackages
+    return this._exclusivePackages;
   }
 
   // minimal - computed: false, optional: true, required: false
-  private _minimal?: boolean | cdktf.IResolvable | undefined; 
+  private _minimal?: boolean | cdktf.IResolvable; 
   public get minimal() {
     return this.getBooleanAttribute('minimal') as any;
   }
-  public set minimal(value: boolean | cdktf.IResolvable | undefined) {
+  public set minimal(value: boolean | cdktf.IResolvable) {
     this._minimal = value;
   }
   public resetMinimal() {
@@ -1535,15 +2029,15 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get minimalInput() {
-    return this._minimal
+    return this._minimal;
   }
 
   // security - computed: false, optional: true, required: false
-  private _security?: boolean | cdktf.IResolvable | undefined; 
+  private _security?: boolean | cdktf.IResolvable; 
   public get security() {
     return this.getBooleanAttribute('security') as any;
   }
-  public set security(value: boolean | cdktf.IResolvable | undefined) {
+  public set security(value: boolean | cdktf.IResolvable) {
     this._security = value;
   }
   public resetSecurity() {
@@ -1551,7 +2045,7 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get securityInput() {
-    return this._security
+    return this._security;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfigZypper {
@@ -1594,7 +2088,7 @@ This field must not be used with any other patch configuration fields.
   readonly withUpdate?: boolean | cdktf.IResolvable;
 }
 
-function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsConfigPatchDeploymentPatchConfigZypperOutputReference | OsConfigPatchDeploymentPatchConfigZypper): any {
+export function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsConfigPatchDeploymentPatchConfigZypperOutputReference | OsConfigPatchDeploymentPatchConfigZypper): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1619,12 +2113,61 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfigZypper | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._categories) {
+      hasAnyValues = true;
+      internalValueResult.categories = this._categories;
+    }
+    if (this._excludes) {
+      hasAnyValues = true;
+      internalValueResult.excludes = this._excludes;
+    }
+    if (this._exclusivePatches) {
+      hasAnyValues = true;
+      internalValueResult.exclusivePatches = this._exclusivePatches;
+    }
+    if (this._severities) {
+      hasAnyValues = true;
+      internalValueResult.severities = this._severities;
+    }
+    if (this._withOptional) {
+      hasAnyValues = true;
+      internalValueResult.withOptional = this._withOptional;
+    }
+    if (this._withUpdate) {
+      hasAnyValues = true;
+      internalValueResult.withUpdate = this._withUpdate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfigZypper | undefined) {
+    if (value === undefined) {
+      this._categories = undefined;
+      this._excludes = undefined;
+      this._exclusivePatches = undefined;
+      this._severities = undefined;
+      this._withOptional = undefined;
+      this._withUpdate = undefined;
+    }
+    else {
+      this._categories = value.categories;
+      this._excludes = value.excludes;
+      this._exclusivePatches = value.exclusivePatches;
+      this._severities = value.severities;
+      this._withOptional = value.withOptional;
+      this._withUpdate = value.withUpdate;
+    }
+  }
+
   // categories - computed: false, optional: true, required: false
-  private _categories?: string[] | undefined; 
+  private _categories?: string[]; 
   public get categories() {
     return this.getListAttribute('categories');
   }
-  public set categories(value: string[] | undefined) {
+  public set categories(value: string[]) {
     this._categories = value;
   }
   public resetCategories() {
@@ -1632,15 +2175,15 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get categoriesInput() {
-    return this._categories
+    return this._categories;
   }
 
   // excludes - computed: false, optional: true, required: false
-  private _excludes?: string[] | undefined; 
+  private _excludes?: string[]; 
   public get excludes() {
     return this.getListAttribute('excludes');
   }
-  public set excludes(value: string[] | undefined) {
+  public set excludes(value: string[]) {
     this._excludes = value;
   }
   public resetExcludes() {
@@ -1648,15 +2191,15 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get excludesInput() {
-    return this._excludes
+    return this._excludes;
   }
 
   // exclusive_patches - computed: false, optional: true, required: false
-  private _exclusivePatches?: string[] | undefined; 
+  private _exclusivePatches?: string[]; 
   public get exclusivePatches() {
     return this.getListAttribute('exclusive_patches');
   }
-  public set exclusivePatches(value: string[] | undefined) {
+  public set exclusivePatches(value: string[]) {
     this._exclusivePatches = value;
   }
   public resetExclusivePatches() {
@@ -1664,15 +2207,15 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get exclusivePatchesInput() {
-    return this._exclusivePatches
+    return this._exclusivePatches;
   }
 
   // severities - computed: false, optional: true, required: false
-  private _severities?: string[] | undefined; 
+  private _severities?: string[]; 
   public get severities() {
     return this.getListAttribute('severities');
   }
-  public set severities(value: string[] | undefined) {
+  public set severities(value: string[]) {
     this._severities = value;
   }
   public resetSeverities() {
@@ -1680,15 +2223,15 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get severitiesInput() {
-    return this._severities
+    return this._severities;
   }
 
   // with_optional - computed: false, optional: true, required: false
-  private _withOptional?: boolean | cdktf.IResolvable | undefined; 
+  private _withOptional?: boolean | cdktf.IResolvable; 
   public get withOptional() {
     return this.getBooleanAttribute('with_optional') as any;
   }
-  public set withOptional(value: boolean | cdktf.IResolvable | undefined) {
+  public set withOptional(value: boolean | cdktf.IResolvable) {
     this._withOptional = value;
   }
   public resetWithOptional() {
@@ -1696,15 +2239,15 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get withOptionalInput() {
-    return this._withOptional
+    return this._withOptional;
   }
 
   // with_update - computed: false, optional: true, required: false
-  private _withUpdate?: boolean | cdktf.IResolvable | undefined; 
+  private _withUpdate?: boolean | cdktf.IResolvable; 
   public get withUpdate() {
     return this.getBooleanAttribute('with_update') as any;
   }
-  public set withUpdate(value: boolean | cdktf.IResolvable | undefined) {
+  public set withUpdate(value: boolean | cdktf.IResolvable) {
     this._withUpdate = value;
   }
   public resetWithUpdate() {
@@ -1712,7 +2255,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get withUpdateInput() {
-    return this._withUpdate
+    return this._withUpdate;
   }
 }
 export interface OsConfigPatchDeploymentPatchConfig {
@@ -1766,7 +2309,7 @@ export interface OsConfigPatchDeploymentPatchConfig {
   readonly zypper?: OsConfigPatchDeploymentPatchConfigZypper;
 }
 
-function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigOutputReference | OsConfigPatchDeploymentPatchConfig): any {
+export function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigOutputReference | OsConfigPatchDeploymentPatchConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1793,12 +2336,73 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentPatchConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._rebootConfig) {
+      hasAnyValues = true;
+      internalValueResult.rebootConfig = this._rebootConfig;
+    }
+    if (this._apt) {
+      hasAnyValues = true;
+      internalValueResult.apt = this._apt?.internalValue;
+    }
+    if (this._goo) {
+      hasAnyValues = true;
+      internalValueResult.goo = this._goo?.internalValue;
+    }
+    if (this._postStep) {
+      hasAnyValues = true;
+      internalValueResult.postStep = this._postStep?.internalValue;
+    }
+    if (this._preStep) {
+      hasAnyValues = true;
+      internalValueResult.preStep = this._preStep?.internalValue;
+    }
+    if (this._windowsUpdate) {
+      hasAnyValues = true;
+      internalValueResult.windowsUpdate = this._windowsUpdate?.internalValue;
+    }
+    if (this._yum) {
+      hasAnyValues = true;
+      internalValueResult.yum = this._yum?.internalValue;
+    }
+    if (this._zypper) {
+      hasAnyValues = true;
+      internalValueResult.zypper = this._zypper?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentPatchConfig | undefined) {
+    if (value === undefined) {
+      this._rebootConfig = undefined;
+      this._apt.internalValue = undefined;
+      this._goo.internalValue = undefined;
+      this._postStep.internalValue = undefined;
+      this._preStep.internalValue = undefined;
+      this._windowsUpdate.internalValue = undefined;
+      this._yum.internalValue = undefined;
+      this._zypper.internalValue = undefined;
+    }
+    else {
+      this._rebootConfig = value.rebootConfig;
+      this._apt.internalValue = value.apt;
+      this._goo.internalValue = value.goo;
+      this._postStep.internalValue = value.postStep;
+      this._preStep.internalValue = value.preStep;
+      this._windowsUpdate.internalValue = value.windowsUpdate;
+      this._yum.internalValue = value.yum;
+      this._zypper.internalValue = value.zypper;
+    }
+  }
+
   // reboot_config - computed: false, optional: true, required: false
-  private _rebootConfig?: string | undefined; 
+  private _rebootConfig?: string; 
   public get rebootConfig() {
     return this.getStringAttribute('reboot_config');
   }
-  public set rebootConfig(value: string | undefined) {
+  public set rebootConfig(value: string) {
     this._rebootConfig = value;
   }
   public resetRebootConfig() {
@@ -1806,126 +2410,119 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get rebootConfigInput() {
-    return this._rebootConfig
+    return this._rebootConfig;
   }
 
   // apt - computed: false, optional: true, required: false
-  private _apt?: OsConfigPatchDeploymentPatchConfigApt | undefined; 
-  private __aptOutput = new OsConfigPatchDeploymentPatchConfigAptOutputReference(this as any, "apt", true);
+  private _apt = new OsConfigPatchDeploymentPatchConfigAptOutputReference(this as any, "apt", true);
   public get apt() {
-    return this.__aptOutput;
+    return this._apt;
   }
-  public putApt(value: OsConfigPatchDeploymentPatchConfigApt | undefined) {
-    this._apt = value;
+  public putApt(value: OsConfigPatchDeploymentPatchConfigApt) {
+    this._apt.internalValue = value;
   }
   public resetApt() {
-    this._apt = undefined;
+    this._apt.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aptInput() {
-    return this._apt
+    return this._apt.internalValue;
   }
 
   // goo - computed: false, optional: true, required: false
-  private _goo?: OsConfigPatchDeploymentPatchConfigGoo | undefined; 
-  private __gooOutput = new OsConfigPatchDeploymentPatchConfigGooOutputReference(this as any, "goo", true);
+  private _goo = new OsConfigPatchDeploymentPatchConfigGooOutputReference(this as any, "goo", true);
   public get goo() {
-    return this.__gooOutput;
+    return this._goo;
   }
-  public putGoo(value: OsConfigPatchDeploymentPatchConfigGoo | undefined) {
-    this._goo = value;
+  public putGoo(value: OsConfigPatchDeploymentPatchConfigGoo) {
+    this._goo.internalValue = value;
   }
   public resetGoo() {
-    this._goo = undefined;
+    this._goo.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gooInput() {
-    return this._goo
+    return this._goo.internalValue;
   }
 
   // post_step - computed: false, optional: true, required: false
-  private _postStep?: OsConfigPatchDeploymentPatchConfigPostStep | undefined; 
-  private __postStepOutput = new OsConfigPatchDeploymentPatchConfigPostStepOutputReference(this as any, "post_step", true);
+  private _postStep = new OsConfigPatchDeploymentPatchConfigPostStepOutputReference(this as any, "post_step", true);
   public get postStep() {
-    return this.__postStepOutput;
+    return this._postStep;
   }
-  public putPostStep(value: OsConfigPatchDeploymentPatchConfigPostStep | undefined) {
-    this._postStep = value;
+  public putPostStep(value: OsConfigPatchDeploymentPatchConfigPostStep) {
+    this._postStep.internalValue = value;
   }
   public resetPostStep() {
-    this._postStep = undefined;
+    this._postStep.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get postStepInput() {
-    return this._postStep
+    return this._postStep.internalValue;
   }
 
   // pre_step - computed: false, optional: true, required: false
-  private _preStep?: OsConfigPatchDeploymentPatchConfigPreStep | undefined; 
-  private __preStepOutput = new OsConfigPatchDeploymentPatchConfigPreStepOutputReference(this as any, "pre_step", true);
+  private _preStep = new OsConfigPatchDeploymentPatchConfigPreStepOutputReference(this as any, "pre_step", true);
   public get preStep() {
-    return this.__preStepOutput;
+    return this._preStep;
   }
-  public putPreStep(value: OsConfigPatchDeploymentPatchConfigPreStep | undefined) {
-    this._preStep = value;
+  public putPreStep(value: OsConfigPatchDeploymentPatchConfigPreStep) {
+    this._preStep.internalValue = value;
   }
   public resetPreStep() {
-    this._preStep = undefined;
+    this._preStep.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get preStepInput() {
-    return this._preStep
+    return this._preStep.internalValue;
   }
 
   // windows_update - computed: false, optional: true, required: false
-  private _windowsUpdate?: OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined; 
-  private __windowsUpdateOutput = new OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(this as any, "windows_update", true);
+  private _windowsUpdate = new OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(this as any, "windows_update", true);
   public get windowsUpdate() {
-    return this.__windowsUpdateOutput;
+    return this._windowsUpdate;
   }
-  public putWindowsUpdate(value: OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined) {
-    this._windowsUpdate = value;
+  public putWindowsUpdate(value: OsConfigPatchDeploymentPatchConfigWindowsUpdate) {
+    this._windowsUpdate.internalValue = value;
   }
   public resetWindowsUpdate() {
-    this._windowsUpdate = undefined;
+    this._windowsUpdate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get windowsUpdateInput() {
-    return this._windowsUpdate
+    return this._windowsUpdate.internalValue;
   }
 
   // yum - computed: false, optional: true, required: false
-  private _yum?: OsConfigPatchDeploymentPatchConfigYum | undefined; 
-  private __yumOutput = new OsConfigPatchDeploymentPatchConfigYumOutputReference(this as any, "yum", true);
+  private _yum = new OsConfigPatchDeploymentPatchConfigYumOutputReference(this as any, "yum", true);
   public get yum() {
-    return this.__yumOutput;
+    return this._yum;
   }
-  public putYum(value: OsConfigPatchDeploymentPatchConfigYum | undefined) {
-    this._yum = value;
+  public putYum(value: OsConfigPatchDeploymentPatchConfigYum) {
+    this._yum.internalValue = value;
   }
   public resetYum() {
-    this._yum = undefined;
+    this._yum.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get yumInput() {
-    return this._yum
+    return this._yum.internalValue;
   }
 
   // zypper - computed: false, optional: true, required: false
-  private _zypper?: OsConfigPatchDeploymentPatchConfigZypper | undefined; 
-  private __zypperOutput = new OsConfigPatchDeploymentPatchConfigZypperOutputReference(this as any, "zypper", true);
+  private _zypper = new OsConfigPatchDeploymentPatchConfigZypperOutputReference(this as any, "zypper", true);
   public get zypper() {
-    return this.__zypperOutput;
+    return this._zypper;
   }
-  public putZypper(value: OsConfigPatchDeploymentPatchConfigZypper | undefined) {
-    this._zypper = value;
+  public putZypper(value: OsConfigPatchDeploymentPatchConfigZypper) {
+    this._zypper.internalValue = value;
   }
   public resetZypper() {
-    this._zypper = undefined;
+    this._zypper.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get zypperInput() {
-    return this._zypper
+    return this._zypper.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
@@ -1943,7 +2540,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
   readonly weekOrdinal: number;
 }
 
-function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth): any {
+export function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1964,6 +2561,31 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._weekOrdinal) {
+      hasAnyValues = true;
+      internalValueResult.weekOrdinal = this._weekOrdinal;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined) {
+    if (value === undefined) {
+      this._dayOfWeek = undefined;
+      this._weekOrdinal = undefined;
+    }
+    else {
+      this._dayOfWeek = value.dayOfWeek;
+      this._weekOrdinal = value.weekOrdinal;
+    }
+  }
+
   // day_of_week - computed: false, optional: false, required: true
   private _dayOfWeek?: string; 
   public get dayOfWeek() {
@@ -1974,7 +2596,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
   }
   // Temporarily expose input value. Use with caution.
   public get dayOfWeekInput() {
-    return this._dayOfWeek
+    return this._dayOfWeek;
   }
 
   // week_ordinal - computed: false, optional: false, required: true
@@ -1987,7 +2609,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
   }
   // Temporarily expose input value. Use with caution.
   public get weekOrdinalInput() {
-    return this._weekOrdinal
+    return this._weekOrdinal;
   }
 }
 export interface OsConfigPatchDeploymentRecurringScheduleMonthly {
@@ -2007,7 +2629,7 @@ will not run in February, April, June, etc.
   readonly weekDayOfMonth?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth;
 }
 
-function osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthly): any {
+export function osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2028,12 +2650,37 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthly | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._monthDay) {
+      hasAnyValues = true;
+      internalValueResult.monthDay = this._monthDay;
+    }
+    if (this._weekDayOfMonth) {
+      hasAnyValues = true;
+      internalValueResult.weekDayOfMonth = this._weekDayOfMonth?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleMonthly | undefined) {
+    if (value === undefined) {
+      this._monthDay = undefined;
+      this._weekDayOfMonth.internalValue = undefined;
+    }
+    else {
+      this._monthDay = value.monthDay;
+      this._weekDayOfMonth.internalValue = value.weekDayOfMonth;
+    }
+  }
+
   // month_day - computed: false, optional: true, required: false
-  private _monthDay?: number | undefined; 
+  private _monthDay?: number; 
   public get monthDay() {
     return this.getNumberAttribute('month_day');
   }
-  public set monthDay(value: number | undefined) {
+  public set monthDay(value: number) {
     this._monthDay = value;
   }
   public resetMonthDay() {
@@ -2041,24 +2688,23 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get monthDayInput() {
-    return this._monthDay
+    return this._monthDay;
   }
 
   // week_day_of_month - computed: false, optional: true, required: false
-  private _weekDayOfMonth?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined; 
-  private __weekDayOfMonthOutput = new OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(this as any, "week_day_of_month", true);
+  private _weekDayOfMonth = new OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(this as any, "week_day_of_month", true);
   public get weekDayOfMonth() {
-    return this.__weekDayOfMonthOutput;
+    return this._weekDayOfMonth;
   }
-  public putWeekDayOfMonth(value: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined) {
-    this._weekDayOfMonth = value;
+  public putWeekDayOfMonth(value: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth) {
+    this._weekDayOfMonth.internalValue = value;
   }
   public resetWeekDayOfMonth() {
-    this._weekDayOfMonth = undefined;
+    this._weekDayOfMonth.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weekDayOfMonthInput() {
-    return this._weekDayOfMonth
+    return this._weekDayOfMonth.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentRecurringScheduleTimeOfDay {
@@ -2089,7 +2735,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
   readonly seconds?: number;
 }
 
-function osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeOfDay): any {
+export function osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeOfDay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2112,12 +2758,49 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeOfDay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hours) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleTimeOfDay | undefined) {
+    if (value === undefined) {
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // hours - computed: false, optional: true, required: false
-  private _hours?: number | undefined; 
+  private _hours?: number; 
   public get hours() {
     return this.getNumberAttribute('hours');
   }
-  public set hours(value: number | undefined) {
+  public set hours(value: number) {
     this._hours = value;
   }
   public resetHours() {
@@ -2125,15 +2808,15 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get hoursInput() {
-    return this._hours
+    return this._hours;
   }
 
   // minutes - computed: false, optional: true, required: false
-  private _minutes?: number | undefined; 
+  private _minutes?: number; 
   public get minutes() {
     return this.getNumberAttribute('minutes');
   }
-  public set minutes(value: number | undefined) {
+  public set minutes(value: number) {
     this._minutes = value;
   }
   public resetMinutes() {
@@ -2141,15 +2824,15 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get minutesInput() {
-    return this._minutes
+    return this._minutes;
   }
 
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -2157,15 +2840,15 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: number | undefined; 
+  private _seconds?: number; 
   public get seconds() {
     return this.getNumberAttribute('seconds');
   }
-  public set seconds(value: number | undefined) {
+  public set seconds(value: number) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -2173,7 +2856,7 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
@@ -2191,7 +2874,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
   readonly version?: string;
 }
 
-function osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeZone): any {
+export function osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeZone): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2212,6 +2895,31 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeZone | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._id) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleTimeZone | undefined) {
+    if (value === undefined) {
+      this._id = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._id = value.id;
+      this._version = value.version;
+    }
+  }
+
   // id - computed: false, optional: false, required: true
   private _id?: string; 
   public get id() {
@@ -2222,15 +2930,15 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get idInput() {
-    return this._id
+    return this._id;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -2238,7 +2946,7 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface OsConfigPatchDeploymentRecurringScheduleWeekly {
@@ -2250,7 +2958,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleWeekly {
   readonly dayOfWeek: string;
 }
 
-function osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference | OsConfigPatchDeploymentRecurringScheduleWeekly): any {
+export function osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference | OsConfigPatchDeploymentRecurringScheduleWeekly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2270,6 +2978,25 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRecurringScheduleWeekly | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleWeekly | undefined) {
+    if (value === undefined) {
+      this._dayOfWeek = undefined;
+    }
+    else {
+      this._dayOfWeek = value.dayOfWeek;
+    }
+  }
+
   // day_of_week - computed: false, optional: false, required: true
   private _dayOfWeek?: string; 
   public get dayOfWeek() {
@@ -2280,7 +3007,7 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get dayOfWeekInput() {
-    return this._dayOfWeek
+    return this._dayOfWeek;
   }
 }
 export interface OsConfigPatchDeploymentRecurringSchedule {
@@ -2324,7 +3051,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
   readonly weekly?: OsConfigPatchDeploymentRecurringScheduleWeekly;
 }
 
-function osConfigPatchDeploymentRecurringScheduleToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleOutputReference | OsConfigPatchDeploymentRecurringSchedule): any {
+export function osConfigPatchDeploymentRecurringScheduleToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleOutputReference | OsConfigPatchDeploymentRecurringSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2349,12 +3076,61 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRecurringSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._endTime) {
+      hasAnyValues = true;
+      internalValueResult.endTime = this._endTime;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    if (this._monthly) {
+      hasAnyValues = true;
+      internalValueResult.monthly = this._monthly?.internalValue;
+    }
+    if (this._timeOfDay) {
+      hasAnyValues = true;
+      internalValueResult.timeOfDay = this._timeOfDay?.internalValue;
+    }
+    if (this._timeZone) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone?.internalValue;
+    }
+    if (this._weekly) {
+      hasAnyValues = true;
+      internalValueResult.weekly = this._weekly?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRecurringSchedule | undefined) {
+    if (value === undefined) {
+      this._endTime = undefined;
+      this._startTime = undefined;
+      this._monthly.internalValue = undefined;
+      this._timeOfDay.internalValue = undefined;
+      this._timeZone.internalValue = undefined;
+      this._weekly.internalValue = undefined;
+    }
+    else {
+      this._endTime = value.endTime;
+      this._startTime = value.startTime;
+      this._monthly.internalValue = value.monthly;
+      this._timeOfDay.internalValue = value.timeOfDay;
+      this._timeZone.internalValue = value.timeZone;
+      this._weekly.internalValue = value.weekly;
+    }
+  }
+
   // end_time - computed: false, optional: true, required: false
-  private _endTime?: string | undefined; 
+  private _endTime?: string; 
   public get endTime() {
     return this.getStringAttribute('end_time');
   }
-  public set endTime(value: string | undefined) {
+  public set endTime(value: string) {
     this._endTime = value;
   }
   public resetEndTime() {
@@ -2362,15 +3138,15 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get endTimeInput() {
-    return this._endTime
+    return this._endTime;
   }
 
   // start_time - computed: false, optional: true, required: false
-  private _startTime?: string | undefined; 
+  private _startTime?: string; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -2378,69 +3154,65 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly?: OsConfigPatchDeploymentRecurringScheduleMonthly | undefined; 
-  private __monthlyOutput = new OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(this as any, "monthly", true);
+  private _monthly = new OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(this as any, "monthly", true);
   public get monthly() {
-    return this.__monthlyOutput;
+    return this._monthly;
   }
-  public putMonthly(value: OsConfigPatchDeploymentRecurringScheduleMonthly | undefined) {
-    this._monthly = value;
+  public putMonthly(value: OsConfigPatchDeploymentRecurringScheduleMonthly) {
+    this._monthly.internalValue = value;
   }
   public resetMonthly() {
-    this._monthly = undefined;
+    this._monthly.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monthlyInput() {
-    return this._monthly
+    return this._monthly.internalValue;
   }
 
   // time_of_day - computed: false, optional: false, required: true
-  private _timeOfDay?: OsConfigPatchDeploymentRecurringScheduleTimeOfDay; 
-  private __timeOfDayOutput = new OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(this as any, "time_of_day", true);
+  private _timeOfDay = new OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(this as any, "time_of_day", true);
   public get timeOfDay() {
-    return this.__timeOfDayOutput;
+    return this._timeOfDay;
   }
   public putTimeOfDay(value: OsConfigPatchDeploymentRecurringScheduleTimeOfDay) {
-    this._timeOfDay = value;
+    this._timeOfDay.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get timeOfDayInput() {
-    return this._timeOfDay
+    return this._timeOfDay.internalValue;
   }
 
   // time_zone - computed: false, optional: false, required: true
-  private _timeZone?: OsConfigPatchDeploymentRecurringScheduleTimeZone; 
-  private __timeZoneOutput = new OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(this as any, "time_zone", true);
+  private _timeZone = new OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(this as any, "time_zone", true);
   public get timeZone() {
-    return this.__timeZoneOutput;
+    return this._timeZone;
   }
   public putTimeZone(value: OsConfigPatchDeploymentRecurringScheduleTimeZone) {
-    this._timeZone = value;
+    this._timeZone.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get timeZoneInput() {
-    return this._timeZone
+    return this._timeZone.internalValue;
   }
 
   // weekly - computed: false, optional: true, required: false
-  private _weekly?: OsConfigPatchDeploymentRecurringScheduleWeekly | undefined; 
-  private __weeklyOutput = new OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(this as any, "weekly", true);
+  private _weekly = new OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(this as any, "weekly", true);
   public get weekly() {
-    return this.__weeklyOutput;
+    return this._weekly;
   }
-  public putWeekly(value: OsConfigPatchDeploymentRecurringScheduleWeekly | undefined) {
-    this._weekly = value;
+  public putWeekly(value: OsConfigPatchDeploymentRecurringScheduleWeekly) {
+    this._weekly.internalValue = value;
   }
   public resetWeekly() {
-    this._weekly = undefined;
+    this._weekly.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weeklyInput() {
-    return this._weekly
+    return this._weekly.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentRolloutDisruptionBudget {
@@ -2458,7 +3230,7 @@ export interface OsConfigPatchDeploymentRolloutDisruptionBudget {
   readonly percentage?: number;
 }
 
-function osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform(struct?: OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference | OsConfigPatchDeploymentRolloutDisruptionBudget): any {
+export function osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform(struct?: OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference | OsConfigPatchDeploymentRolloutDisruptionBudget): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2479,12 +3251,37 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRolloutDisruptionBudget | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fixed) {
+      hasAnyValues = true;
+      internalValueResult.fixed = this._fixed;
+    }
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRolloutDisruptionBudget | undefined) {
+    if (value === undefined) {
+      this._fixed = undefined;
+      this._percentage = undefined;
+    }
+    else {
+      this._fixed = value.fixed;
+      this._percentage = value.percentage;
+    }
+  }
+
   // fixed - computed: false, optional: true, required: false
-  private _fixed?: number | undefined; 
+  private _fixed?: number; 
   public get fixed() {
     return this.getNumberAttribute('fixed');
   }
-  public set fixed(value: number | undefined) {
+  public set fixed(value: number) {
     this._fixed = value;
   }
   public resetFixed() {
@@ -2492,15 +3289,15 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get fixedInput() {
-    return this._fixed
+    return this._fixed;
   }
 
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -2508,7 +3305,7 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 }
 export interface OsConfigPatchDeploymentRollout {
@@ -2526,7 +3323,7 @@ export interface OsConfigPatchDeploymentRollout {
   readonly disruptionBudget: OsConfigPatchDeploymentRolloutDisruptionBudget;
 }
 
-function osConfigPatchDeploymentRolloutToTerraform(struct?: OsConfigPatchDeploymentRolloutOutputReference | OsConfigPatchDeploymentRollout): any {
+export function osConfigPatchDeploymentRolloutToTerraform(struct?: OsConfigPatchDeploymentRolloutOutputReference | OsConfigPatchDeploymentRollout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2547,6 +3344,31 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentRollout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._disruptionBudget) {
+      hasAnyValues = true;
+      internalValueResult.disruptionBudget = this._disruptionBudget?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentRollout | undefined) {
+    if (value === undefined) {
+      this._mode = undefined;
+      this._disruptionBudget.internalValue = undefined;
+    }
+    else {
+      this._mode = value.mode;
+      this._disruptionBudget.internalValue = value.disruptionBudget;
+    }
+  }
+
   // mode - computed: false, optional: false, required: true
   private _mode?: string; 
   public get mode() {
@@ -2557,21 +3379,20 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // disruption_budget - computed: false, optional: false, required: true
-  private _disruptionBudget?: OsConfigPatchDeploymentRolloutDisruptionBudget; 
-  private __disruptionBudgetOutput = new OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(this as any, "disruption_budget", true);
+  private _disruptionBudget = new OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(this as any, "disruption_budget", true);
   public get disruptionBudget() {
-    return this.__disruptionBudgetOutput;
+    return this._disruptionBudget;
   }
   public putDisruptionBudget(value: OsConfigPatchDeploymentRolloutDisruptionBudget) {
-    this._disruptionBudget = value;
+    this._disruptionBudget.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get disruptionBudgetInput() {
-    return this._disruptionBudget
+    return this._disruptionBudget.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentTimeouts {
@@ -2585,7 +3406,7 @@ export interface OsConfigPatchDeploymentTimeouts {
   readonly delete?: string;
 }
 
-function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatchDeploymentTimeoutsOutputReference | OsConfigPatchDeploymentTimeouts): any {
+export function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatchDeploymentTimeoutsOutputReference | OsConfigPatchDeploymentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2606,12 +3427,37 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): OsConfigPatchDeploymentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -2619,15 +3465,15 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -2635,7 +3481,7 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -2675,12 +3521,12 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
     this._duration = config.duration;
     this._patchDeploymentId = config.patchDeploymentId;
     this._project = config.project;
-    this._instanceFilter = config.instanceFilter;
-    this._oneTimeSchedule = config.oneTimeSchedule;
-    this._patchConfig = config.patchConfig;
-    this._recurringSchedule = config.recurringSchedule;
-    this._rollout = config.rollout;
-    this._timeouts = config.timeouts;
+    this._instanceFilter.internalValue = config.instanceFilter;
+    this._oneTimeSchedule.internalValue = config.oneTimeSchedule;
+    this._patchConfig.internalValue = config.patchConfig;
+    this._recurringSchedule.internalValue = config.recurringSchedule;
+    this._rollout.internalValue = config.rollout;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -2693,11 +3539,11 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -2705,15 +3551,15 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // duration - computed: false, optional: true, required: false
-  private _duration?: string | undefined; 
+  private _duration?: string; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string) {
     this._duration = value;
   }
   public resetDuration() {
@@ -2721,7 +3567,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2749,15 +3595,15 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get patchDeploymentIdInput() {
-    return this._patchDeploymentId
+    return this._patchDeploymentId;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -2765,7 +3611,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -2774,102 +3620,96 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // instance_filter - computed: false, optional: false, required: true
-  private _instanceFilter?: OsConfigPatchDeploymentInstanceFilter; 
-  private __instanceFilterOutput = new OsConfigPatchDeploymentInstanceFilterOutputReference(this as any, "instance_filter", true);
+  private _instanceFilter = new OsConfigPatchDeploymentInstanceFilterOutputReference(this as any, "instance_filter", true);
   public get instanceFilter() {
-    return this.__instanceFilterOutput;
+    return this._instanceFilter;
   }
   public putInstanceFilter(value: OsConfigPatchDeploymentInstanceFilter) {
-    this._instanceFilter = value;
+    this._instanceFilter.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get instanceFilterInput() {
-    return this._instanceFilter
+    return this._instanceFilter.internalValue;
   }
 
   // one_time_schedule - computed: false, optional: true, required: false
-  private _oneTimeSchedule?: OsConfigPatchDeploymentOneTimeSchedule | undefined; 
-  private __oneTimeScheduleOutput = new OsConfigPatchDeploymentOneTimeScheduleOutputReference(this as any, "one_time_schedule", true);
+  private _oneTimeSchedule = new OsConfigPatchDeploymentOneTimeScheduleOutputReference(this as any, "one_time_schedule", true);
   public get oneTimeSchedule() {
-    return this.__oneTimeScheduleOutput;
+    return this._oneTimeSchedule;
   }
-  public putOneTimeSchedule(value: OsConfigPatchDeploymentOneTimeSchedule | undefined) {
-    this._oneTimeSchedule = value;
+  public putOneTimeSchedule(value: OsConfigPatchDeploymentOneTimeSchedule) {
+    this._oneTimeSchedule.internalValue = value;
   }
   public resetOneTimeSchedule() {
-    this._oneTimeSchedule = undefined;
+    this._oneTimeSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get oneTimeScheduleInput() {
-    return this._oneTimeSchedule
+    return this._oneTimeSchedule.internalValue;
   }
 
   // patch_config - computed: false, optional: true, required: false
-  private _patchConfig?: OsConfigPatchDeploymentPatchConfig | undefined; 
-  private __patchConfigOutput = new OsConfigPatchDeploymentPatchConfigOutputReference(this as any, "patch_config", true);
+  private _patchConfig = new OsConfigPatchDeploymentPatchConfigOutputReference(this as any, "patch_config", true);
   public get patchConfig() {
-    return this.__patchConfigOutput;
+    return this._patchConfig;
   }
-  public putPatchConfig(value: OsConfigPatchDeploymentPatchConfig | undefined) {
-    this._patchConfig = value;
+  public putPatchConfig(value: OsConfigPatchDeploymentPatchConfig) {
+    this._patchConfig.internalValue = value;
   }
   public resetPatchConfig() {
-    this._patchConfig = undefined;
+    this._patchConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get patchConfigInput() {
-    return this._patchConfig
+    return this._patchConfig.internalValue;
   }
 
   // recurring_schedule - computed: false, optional: true, required: false
-  private _recurringSchedule?: OsConfigPatchDeploymentRecurringSchedule | undefined; 
-  private __recurringScheduleOutput = new OsConfigPatchDeploymentRecurringScheduleOutputReference(this as any, "recurring_schedule", true);
+  private _recurringSchedule = new OsConfigPatchDeploymentRecurringScheduleOutputReference(this as any, "recurring_schedule", true);
   public get recurringSchedule() {
-    return this.__recurringScheduleOutput;
+    return this._recurringSchedule;
   }
-  public putRecurringSchedule(value: OsConfigPatchDeploymentRecurringSchedule | undefined) {
-    this._recurringSchedule = value;
+  public putRecurringSchedule(value: OsConfigPatchDeploymentRecurringSchedule) {
+    this._recurringSchedule.internalValue = value;
   }
   public resetRecurringSchedule() {
-    this._recurringSchedule = undefined;
+    this._recurringSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get recurringScheduleInput() {
-    return this._recurringSchedule
+    return this._recurringSchedule.internalValue;
   }
 
   // rollout - computed: false, optional: true, required: false
-  private _rollout?: OsConfigPatchDeploymentRollout | undefined; 
-  private __rolloutOutput = new OsConfigPatchDeploymentRolloutOutputReference(this as any, "rollout", true);
+  private _rollout = new OsConfigPatchDeploymentRolloutOutputReference(this as any, "rollout", true);
   public get rollout() {
-    return this.__rolloutOutput;
+    return this._rollout;
   }
-  public putRollout(value: OsConfigPatchDeploymentRollout | undefined) {
-    this._rollout = value;
+  public putRollout(value: OsConfigPatchDeploymentRollout) {
+    this._rollout.internalValue = value;
   }
   public resetRollout() {
-    this._rollout = undefined;
+    this._rollout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rolloutInput() {
-    return this._rollout
+    return this._rollout.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: OsConfigPatchDeploymentTimeouts | undefined; 
-  private __timeoutsOutput = new OsConfigPatchDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new OsConfigPatchDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: OsConfigPatchDeploymentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: OsConfigPatchDeploymentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2882,12 +3722,12 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
       duration: cdktf.stringToTerraform(this._duration),
       patch_deployment_id: cdktf.stringToTerraform(this._patchDeploymentId),
       project: cdktf.stringToTerraform(this._project),
-      instance_filter: osConfigPatchDeploymentInstanceFilterToTerraform(this._instanceFilter),
-      one_time_schedule: osConfigPatchDeploymentOneTimeScheduleToTerraform(this._oneTimeSchedule),
-      patch_config: osConfigPatchDeploymentPatchConfigToTerraform(this._patchConfig),
-      recurring_schedule: osConfigPatchDeploymentRecurringScheduleToTerraform(this._recurringSchedule),
-      rollout: osConfigPatchDeploymentRolloutToTerraform(this._rollout),
-      timeouts: osConfigPatchDeploymentTimeoutsToTerraform(this._timeouts),
+      instance_filter: osConfigPatchDeploymentInstanceFilterToTerraform(this._instanceFilter.internalValue),
+      one_time_schedule: osConfigPatchDeploymentOneTimeScheduleToTerraform(this._oneTimeSchedule.internalValue),
+      patch_config: osConfigPatchDeploymentPatchConfigToTerraform(this._patchConfig.internalValue),
+      recurring_schedule: osConfigPatchDeploymentRecurringScheduleToTerraform(this._recurringSchedule.internalValue),
+      rollout: osConfigPatchDeploymentRolloutToTerraform(this._rollout.internalValue),
+      timeouts: osConfigPatchDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

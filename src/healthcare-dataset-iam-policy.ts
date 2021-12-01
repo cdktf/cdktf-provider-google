@@ -67,7 +67,7 @@ export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetIdInput() {
-    return this._datasetId
+    return this._datasetId;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -90,7 +90,7 @@ export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

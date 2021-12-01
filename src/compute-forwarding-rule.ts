@@ -165,7 +165,7 @@ export interface ComputeForwardingRuleTimeouts {
   readonly update?: string;
 }
 
-function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRuleTimeoutsOutputReference | ComputeForwardingRuleTimeouts): any {
+export function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRuleTimeoutsOutputReference | ComputeForwardingRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -187,12 +187,43 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeForwardingRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeForwardingRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -200,15 +231,15 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -216,15 +247,15 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -232,7 +263,7 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -287,7 +318,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     this._serviceLabel = config.serviceLabel;
     this._subnetwork = config.subnetwork;
     this._target = config.target;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -295,11 +326,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // ==========
 
   // all_ports - computed: false, optional: true, required: false
-  private _allPorts?: boolean | cdktf.IResolvable | undefined; 
+  private _allPorts?: boolean | cdktf.IResolvable; 
   public get allPorts() {
     return this.getBooleanAttribute('all_ports') as any;
   }
-  public set allPorts(value: boolean | cdktf.IResolvable | undefined) {
+  public set allPorts(value: boolean | cdktf.IResolvable) {
     this._allPorts = value;
   }
   public resetAllPorts() {
@@ -307,15 +338,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allPortsInput() {
-    return this._allPorts
+    return this._allPorts;
   }
 
   // allow_global_access - computed: false, optional: true, required: false
-  private _allowGlobalAccess?: boolean | cdktf.IResolvable | undefined; 
+  private _allowGlobalAccess?: boolean | cdktf.IResolvable; 
   public get allowGlobalAccess() {
     return this.getBooleanAttribute('allow_global_access') as any;
   }
-  public set allowGlobalAccess(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowGlobalAccess(value: boolean | cdktf.IResolvable) {
     this._allowGlobalAccess = value;
   }
   public resetAllowGlobalAccess() {
@@ -323,15 +354,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowGlobalAccessInput() {
-    return this._allowGlobalAccess
+    return this._allowGlobalAccess;
   }
 
   // backend_service - computed: false, optional: true, required: false
-  private _backendService?: string | undefined; 
+  private _backendService?: string; 
   public get backendService() {
     return this.getStringAttribute('backend_service');
   }
-  public set backendService(value: string | undefined) {
+  public set backendService(value: string) {
     this._backendService = value;
   }
   public resetBackendService() {
@@ -339,7 +370,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
-    return this._backendService
+    return this._backendService;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -348,11 +379,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -360,7 +391,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -369,11 +400,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // ip_address - computed: true, optional: true, required: false
-  private _ipAddress?: string | undefined; 
+  private _ipAddress?: string; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string | undefined) {
+  public set ipAddress(value: string) {
     this._ipAddress = value;
   }
   public resetIpAddress() {
@@ -381,15 +412,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
-    return this._ipAddress
+    return this._ipAddress;
   }
 
   // ip_protocol - computed: true, optional: true, required: false
-  private _ipProtocol?: string | undefined; 
+  private _ipProtocol?: string; 
   public get ipProtocol() {
     return this.getStringAttribute('ip_protocol');
   }
-  public set ipProtocol(value: string | undefined) {
+  public set ipProtocol(value: string) {
     this._ipProtocol = value;
   }
   public resetIpProtocol() {
@@ -397,15 +428,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipProtocolInput() {
-    return this._ipProtocol
+    return this._ipProtocol;
   }
 
   // is_mirroring_collector - computed: false, optional: true, required: false
-  private _isMirroringCollector?: boolean | cdktf.IResolvable | undefined; 
+  private _isMirroringCollector?: boolean | cdktf.IResolvable; 
   public get isMirroringCollector() {
     return this.getBooleanAttribute('is_mirroring_collector') as any;
   }
-  public set isMirroringCollector(value: boolean | cdktf.IResolvable | undefined) {
+  public set isMirroringCollector(value: boolean | cdktf.IResolvable) {
     this._isMirroringCollector = value;
   }
   public resetIsMirroringCollector() {
@@ -413,7 +444,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isMirroringCollectorInput() {
-    return this._isMirroringCollector
+    return this._isMirroringCollector;
   }
 
   // label_fingerprint - computed: true, optional: false, required: false
@@ -422,12 +453,12 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -435,15 +466,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
-  private _loadBalancingScheme?: string | undefined; 
+  private _loadBalancingScheme?: string; 
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string | undefined) {
+  public set loadBalancingScheme(value: string) {
     this._loadBalancingScheme = value;
   }
   public resetLoadBalancingScheme() {
@@ -451,7 +482,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancingSchemeInput() {
-    return this._loadBalancingScheme
+    return this._loadBalancingScheme;
   }
 
   // name - computed: false, optional: false, required: true
@@ -464,15 +495,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: true, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -480,15 +511,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // network_tier - computed: true, optional: true, required: false
-  private _networkTier?: string | undefined; 
+  private _networkTier?: string; 
   public get networkTier() {
     return this.getStringAttribute('network_tier');
   }
-  public set networkTier(value: string | undefined) {
+  public set networkTier(value: string) {
     this._networkTier = value;
   }
   public resetNetworkTier() {
@@ -496,15 +527,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkTierInput() {
-    return this._networkTier
+    return this._networkTier;
   }
 
   // port_range - computed: false, optional: true, required: false
-  private _portRange?: string | undefined; 
+  private _portRange?: string; 
   public get portRange() {
     return this.getStringAttribute('port_range');
   }
-  public set portRange(value: string | undefined) {
+  public set portRange(value: string) {
     this._portRange = value;
   }
   public resetPortRange() {
@@ -512,15 +543,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portRangeInput() {
-    return this._portRange
+    return this._portRange;
   }
 
   // ports - computed: false, optional: true, required: false
-  private _ports?: string[] | undefined; 
+  private _ports?: string[]; 
   public get ports() {
     return this.getListAttribute('ports');
   }
-  public set ports(value: string[] | undefined) {
+  public set ports(value: string[]) {
     this._ports = value;
   }
   public resetPorts() {
@@ -528,15 +559,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portsInput() {
-    return this._ports
+    return this._ports;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -544,15 +575,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -560,7 +591,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -569,11 +600,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // service_label - computed: false, optional: true, required: false
-  private _serviceLabel?: string | undefined; 
+  private _serviceLabel?: string; 
   public get serviceLabel() {
     return this.getStringAttribute('service_label');
   }
-  public set serviceLabel(value: string | undefined) {
+  public set serviceLabel(value: string) {
     this._serviceLabel = value;
   }
   public resetServiceLabel() {
@@ -581,7 +612,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceLabelInput() {
-    return this._serviceLabel
+    return this._serviceLabel;
   }
 
   // service_name - computed: true, optional: false, required: false
@@ -590,11 +621,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // subnetwork - computed: true, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -602,15 +633,15 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // target - computed: false, optional: true, required: false
-  private _target?: string | undefined; 
+  private _target?: string; 
   public get target() {
     return this.getStringAttribute('target');
   }
-  public set target(value: string | undefined) {
+  public set target(value: string) {
     this._target = value;
   }
   public resetTarget() {
@@ -618,24 +649,23 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetInput() {
-    return this._target
+    return this._target;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeForwardingRuleTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeForwardingRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeForwardingRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeForwardingRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeForwardingRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -663,7 +693,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       service_label: cdktf.stringToTerraform(this._serviceLabel),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       target: cdktf.stringToTerraform(this._target),
-      timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

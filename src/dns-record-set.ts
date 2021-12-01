@@ -104,7 +104,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managedZoneInput() {
-    return this._managedZone
+    return this._managedZone;
   }
 
   // name - computed: false, optional: false, required: true
@@ -117,15 +117,15 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -133,7 +133,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // rrdatas - computed: false, optional: false, required: true
@@ -146,15 +146,15 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rrdatasInput() {
-    return this._rrdatas
+    return this._rrdatas;
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl?: number | undefined; 
+  private _ttl?: number; 
   public get ttl() {
     return this.getNumberAttribute('ttl');
   }
-  public set ttl(value: number | undefined) {
+  public set ttl(value: number) {
     this._ttl = value;
   }
   public resetTtl() {
@@ -162,7 +162,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
-    return this._ttl
+    return this._ttl;
   }
 
   // type - computed: false, optional: false, required: true
@@ -175,7 +175,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // =========

@@ -134,7 +134,7 @@ This translates to the Access-Control-Max-Age header.
   readonly maxAge?: number;
 }
 
-function computeUrlMapDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference | ComputeUrlMapDefaultRouteActionCorsPolicy): any {
+export function computeUrlMapDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference | ComputeUrlMapDefaultRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -161,12 +161,73 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionCorsPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowCredentials) {
+      hasAnyValues = true;
+      internalValueResult.allowCredentials = this._allowCredentials;
+    }
+    if (this._allowHeaders) {
+      hasAnyValues = true;
+      internalValueResult.allowHeaders = this._allowHeaders;
+    }
+    if (this._allowMethods) {
+      hasAnyValues = true;
+      internalValueResult.allowMethods = this._allowMethods;
+    }
+    if (this._allowOriginRegexes) {
+      hasAnyValues = true;
+      internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
+    }
+    if (this._allowOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowOrigins = this._allowOrigins;
+    }
+    if (this._disabled) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    if (this._exposeHeaders) {
+      hasAnyValues = true;
+      internalValueResult.exposeHeaders = this._exposeHeaders;
+    }
+    if (this._maxAge) {
+      hasAnyValues = true;
+      internalValueResult.maxAge = this._maxAge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionCorsPolicy | undefined) {
+    if (value === undefined) {
+      this._allowCredentials = undefined;
+      this._allowHeaders = undefined;
+      this._allowMethods = undefined;
+      this._allowOriginRegexes = undefined;
+      this._allowOrigins = undefined;
+      this._disabled = undefined;
+      this._exposeHeaders = undefined;
+      this._maxAge = undefined;
+    }
+    else {
+      this._allowCredentials = value.allowCredentials;
+      this._allowHeaders = value.allowHeaders;
+      this._allowMethods = value.allowMethods;
+      this._allowOriginRegexes = value.allowOriginRegexes;
+      this._allowOrigins = value.allowOrigins;
+      this._disabled = value.disabled;
+      this._exposeHeaders = value.exposeHeaders;
+      this._maxAge = value.maxAge;
+    }
+  }
+
   // allow_credentials - computed: false, optional: true, required: false
-  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
     return this.getBooleanAttribute('allow_credentials') as any;
   }
-  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
   }
   public resetAllowCredentials() {
@@ -174,15 +235,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get allowCredentialsInput() {
-    return this._allowCredentials
+    return this._allowCredentials;
   }
 
   // allow_headers - computed: false, optional: true, required: false
-  private _allowHeaders?: string[] | undefined; 
+  private _allowHeaders?: string[]; 
   public get allowHeaders() {
     return this.getListAttribute('allow_headers');
   }
-  public set allowHeaders(value: string[] | undefined) {
+  public set allowHeaders(value: string[]) {
     this._allowHeaders = value;
   }
   public resetAllowHeaders() {
@@ -190,15 +251,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get allowHeadersInput() {
-    return this._allowHeaders
+    return this._allowHeaders;
   }
 
   // allow_methods - computed: false, optional: true, required: false
-  private _allowMethods?: string[] | undefined; 
+  private _allowMethods?: string[]; 
   public get allowMethods() {
     return this.getListAttribute('allow_methods');
   }
-  public set allowMethods(value: string[] | undefined) {
+  public set allowMethods(value: string[]) {
     this._allowMethods = value;
   }
   public resetAllowMethods() {
@@ -206,15 +267,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get allowMethodsInput() {
-    return this._allowMethods
+    return this._allowMethods;
   }
 
   // allow_origin_regexes - computed: false, optional: true, required: false
-  private _allowOriginRegexes?: string[] | undefined; 
+  private _allowOriginRegexes?: string[]; 
   public get allowOriginRegexes() {
     return this.getListAttribute('allow_origin_regexes');
   }
-  public set allowOriginRegexes(value: string[] | undefined) {
+  public set allowOriginRegexes(value: string[]) {
     this._allowOriginRegexes = value;
   }
   public resetAllowOriginRegexes() {
@@ -222,15 +283,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginRegexesInput() {
-    return this._allowOriginRegexes
+    return this._allowOriginRegexes;
   }
 
   // allow_origins - computed: false, optional: true, required: false
-  private _allowOrigins?: string[] | undefined; 
+  private _allowOrigins?: string[]; 
   public get allowOrigins() {
     return this.getListAttribute('allow_origins');
   }
-  public set allowOrigins(value: string[] | undefined) {
+  public set allowOrigins(value: string[]) {
     this._allowOrigins = value;
   }
   public resetAllowOrigins() {
@@ -238,15 +299,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginsInput() {
-    return this._allowOrigins
+    return this._allowOrigins;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -254,15 +315,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // expose_headers - computed: false, optional: true, required: false
-  private _exposeHeaders?: string[] | undefined; 
+  private _exposeHeaders?: string[]; 
   public get exposeHeaders() {
     return this.getListAttribute('expose_headers');
   }
-  public set exposeHeaders(value: string[] | undefined) {
+  public set exposeHeaders(value: string[]) {
     this._exposeHeaders = value;
   }
   public resetExposeHeaders() {
@@ -270,15 +331,15 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get exposeHeadersInput() {
-    return this._exposeHeaders
+    return this._exposeHeaders;
   }
 
   // max_age - computed: false, optional: true, required: false
-  private _maxAge?: number | undefined; 
+  private _maxAge?: number; 
   public get maxAge() {
     return this.getNumberAttribute('max_age');
   }
-  public set maxAge(value: number | undefined) {
+  public set maxAge(value: number) {
     this._maxAge = value;
   }
   public resetMaxAge() {
@@ -286,7 +347,7 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInput() {
-    return this._maxAge
+    return this._maxAge;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort {
@@ -306,7 +367,7 @@ The value must be between 0.0 and 100.0 inclusive.
   readonly percentage?: number;
 }
 
-function computeUrlMapDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort): any {
+export function computeUrlMapDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -327,12 +388,37 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._httpStatus) {
+      hasAnyValues = true;
+      internalValueResult.httpStatus = this._httpStatus;
+    }
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort | undefined) {
+    if (value === undefined) {
+      this._httpStatus = undefined;
+      this._percentage = undefined;
+    }
+    else {
+      this._httpStatus = value.httpStatus;
+      this._percentage = value.percentage;
+    }
+  }
+
   // http_status - computed: false, optional: true, required: false
-  private _httpStatus?: number | undefined; 
+  private _httpStatus?: number; 
   public get httpStatus() {
     return this.getNumberAttribute('http_status');
   }
-  public set httpStatus(value: number | undefined) {
+  public set httpStatus(value: number) {
     this._httpStatus = value;
   }
   public resetHttpStatus() {
@@ -340,15 +426,15 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get httpStatusInput() {
-    return this._httpStatus
+    return this._httpStatus;
   }
 
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -356,7 +442,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
@@ -376,7 +462,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
   readonly seconds?: string;
 }
 
-function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+export function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -397,12 +483,37 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -410,15 +521,15 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayO
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: string | undefined; 
+  private _seconds?: string; 
   public get seconds() {
     return this.getStringAttribute('seconds');
   }
-  public set seconds(value: string | undefined) {
+  public set seconds(value: string) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -426,7 +537,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayO
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay {
@@ -445,7 +556,7 @@ The value must be between 0.0 and 100.0 inclusive.
   readonly fixedDelay?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 
-function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay): any {
+export function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -466,12 +577,37 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    if (this._fixedDelay) {
+      hasAnyValues = true;
+      internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay | undefined) {
+    if (value === undefined) {
+      this._percentage = undefined;
+      this._fixedDelay.internalValue = undefined;
+    }
+    else {
+      this._percentage = value.percentage;
+      this._fixedDelay.internalValue = value.fixedDelay;
+    }
+  }
+
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -479,24 +615,23 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined; 
-  private __fixedDelayOutput = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
   public get fixedDelay() {
-    return this.__fixedDelayOutput;
+    return this._fixedDelay;
   }
-  public putFixedDelay(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
-    this._fixedDelay = value;
+  public putFixedDelay(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay) {
+    this._fixedDelay.internalValue = value;
   }
   public resetFixedDelay() {
-    this._fixedDelay = undefined;
+    this._fixedDelay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get fixedDelayInput() {
-    return this._fixedDelay
+    return this._fixedDelay.internalValue;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicy {
@@ -514,7 +649,7 @@ export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicy {
   readonly delay?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay;
 }
 
-function computeUrlMapDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicy): any {
+export function computeUrlMapDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -535,38 +670,61 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // abort - computed: false, optional: true, required: false
-  private _abort?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort | undefined; 
-  private __abortOutput = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
-  public get abort() {
-    return this.__abortOutput;
+  public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._abort) {
+      hasAnyValues = true;
+      internalValueResult.abort = this._abort?.internalValue;
+    }
+    if (this._delay) {
+      hasAnyValues = true;
+      internalValueResult.delay = this._delay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAbort(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort | undefined) {
-    this._abort = value;
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicy | undefined) {
+    if (value === undefined) {
+      this._abort.internalValue = undefined;
+      this._delay.internalValue = undefined;
+    }
+    else {
+      this._abort.internalValue = value.abort;
+      this._delay.internalValue = value.delay;
+    }
+  }
+
+  // abort - computed: false, optional: true, required: false
+  private _abort = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  public get abort() {
+    return this._abort;
+  }
+  public putAbort(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort) {
+    this._abort.internalValue = value;
   }
   public resetAbort() {
-    this._abort = undefined;
+    this._abort.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get abortInput() {
-    return this._abort
+    return this._abort.internalValue;
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay | undefined; 
-  private __delayOutput = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
   public get delay() {
-    return this.__delayOutput;
+    return this._delay;
   }
-  public putDelay(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay | undefined) {
-    this._delay = value;
+  public putDelay(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay) {
+    this._delay.internalValue = value;
   }
   public resetDelay() {
-    this._delay = undefined;
+    this._delay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get delayInput() {
-    return this._delay
+    return this._delay.internalValue;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionRequestMirrorPolicy {
@@ -578,7 +736,7 @@ export interface ComputeUrlMapDefaultRouteActionRequestMirrorPolicy {
   readonly backendService: string;
 }
 
-function computeUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapDefaultRouteActionRequestMirrorPolicy): any {
+export function computeUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapDefaultRouteActionRequestMirrorPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -598,6 +756,25 @@ export class ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionRequestMirrorPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._backendService) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionRequestMirrorPolicy | undefined) {
+    if (value === undefined) {
+      this._backendService = undefined;
+    }
+    else {
+      this._backendService = value.backendService;
+    }
+  }
+
   // backend_service - computed: false, optional: false, required: true
   private _backendService?: string; 
   public get backendService() {
@@ -608,7 +785,7 @@ export class ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
-    return this._backendService
+    return this._backendService;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout {
@@ -628,7 +805,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
   readonly seconds?: string;
 }
 
-function computeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout): any {
+export function computeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -649,12 +826,37 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -662,15 +864,15 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: string | undefined; 
+  private _seconds?: string; 
   public get seconds() {
     return this.getStringAttribute('seconds');
   }
-  public set seconds(value: string | undefined) {
+  public set seconds(value: string) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -678,7 +880,7 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionRetryPolicy {
@@ -717,7 +919,7 @@ export interface ComputeUrlMapDefaultRouteActionRetryPolicy {
   readonly perTryTimeout?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout;
 }
 
-function computeUrlMapDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference | ComputeUrlMapDefaultRouteActionRetryPolicy): any {
+export function computeUrlMapDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference | ComputeUrlMapDefaultRouteActionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -739,12 +941,43 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionRetryPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._numRetries) {
+      hasAnyValues = true;
+      internalValueResult.numRetries = this._numRetries;
+    }
+    if (this._retryConditions) {
+      hasAnyValues = true;
+      internalValueResult.retryConditions = this._retryConditions;
+    }
+    if (this._perTryTimeout) {
+      hasAnyValues = true;
+      internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionRetryPolicy | undefined) {
+    if (value === undefined) {
+      this._numRetries = undefined;
+      this._retryConditions = undefined;
+      this._perTryTimeout.internalValue = undefined;
+    }
+    else {
+      this._numRetries = value.numRetries;
+      this._retryConditions = value.retryConditions;
+      this._perTryTimeout.internalValue = value.perTryTimeout;
+    }
+  }
+
   // num_retries - computed: false, optional: true, required: false
-  private _numRetries?: number | undefined; 
+  private _numRetries?: number; 
   public get numRetries() {
     return this.getNumberAttribute('num_retries');
   }
-  public set numRetries(value: number | undefined) {
+  public set numRetries(value: number) {
     this._numRetries = value;
   }
   public resetNumRetries() {
@@ -752,15 +985,15 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get numRetriesInput() {
-    return this._numRetries
+    return this._numRetries;
   }
 
   // retry_conditions - computed: false, optional: true, required: false
-  private _retryConditions?: string[] | undefined; 
+  private _retryConditions?: string[]; 
   public get retryConditions() {
     return this.getListAttribute('retry_conditions');
   }
-  public set retryConditions(value: string[] | undefined) {
+  public set retryConditions(value: string[]) {
     this._retryConditions = value;
   }
   public resetRetryConditions() {
@@ -768,24 +1001,23 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get retryConditionsInput() {
-    return this._retryConditions
+    return this._retryConditions;
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined; 
-  private __perTryTimeoutOutput = new ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
   public get perTryTimeout() {
-    return this.__perTryTimeoutOutput;
+    return this._perTryTimeout;
   }
-  public putPerTryTimeout(value: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined) {
-    this._perTryTimeout = value;
+  public putPerTryTimeout(value: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout) {
+    this._perTryTimeout.internalValue = value;
   }
   public resetPerTryTimeout() {
-    this._perTryTimeout = undefined;
+    this._perTryTimeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get perTryTimeoutInput() {
-    return this._perTryTimeout
+    return this._perTryTimeout.internalValue;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionTimeout {
@@ -805,7 +1037,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
   readonly seconds?: string;
 }
 
-function computeUrlMapDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionTimeoutOutputReference | ComputeUrlMapDefaultRouteActionTimeout): any {
+export function computeUrlMapDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionTimeoutOutputReference | ComputeUrlMapDefaultRouteActionTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -826,12 +1058,37 @@ export class ComputeUrlMapDefaultRouteActionTimeoutOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -839,15 +1096,15 @@ export class ComputeUrlMapDefaultRouteActionTimeoutOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: string | undefined; 
+  private _seconds?: string; 
   public get seconds() {
     return this.getStringAttribute('seconds');
   }
-  public set seconds(value: string | undefined) {
+  public set seconds(value: string) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -855,7 +1112,7 @@ export class ComputeUrlMapDefaultRouteActionTimeoutOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionUrlRewrite {
@@ -879,7 +1136,7 @@ The value must be between 1 and 1024 characters.
   readonly pathPrefixRewrite?: string;
 }
 
-function computeUrlMapDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference | ComputeUrlMapDefaultRouteActionUrlRewrite): any {
+export function computeUrlMapDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference | ComputeUrlMapDefaultRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -900,12 +1157,37 @@ export class ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionUrlRewrite | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRewrite) {
+      hasAnyValues = true;
+      internalValueResult.hostRewrite = this._hostRewrite;
+    }
+    if (this._pathPrefixRewrite) {
+      hasAnyValues = true;
+      internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionUrlRewrite | undefined) {
+    if (value === undefined) {
+      this._hostRewrite = undefined;
+      this._pathPrefixRewrite = undefined;
+    }
+    else {
+      this._hostRewrite = value.hostRewrite;
+      this._pathPrefixRewrite = value.pathPrefixRewrite;
+    }
+  }
+
   // host_rewrite - computed: false, optional: true, required: false
-  private _hostRewrite?: string | undefined; 
+  private _hostRewrite?: string; 
   public get hostRewrite() {
     return this.getStringAttribute('host_rewrite');
   }
-  public set hostRewrite(value: string | undefined) {
+  public set hostRewrite(value: string) {
     this._hostRewrite = value;
   }
   public resetHostRewrite() {
@@ -913,15 +1195,15 @@ export class ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get hostRewriteInput() {
-    return this._hostRewrite
+    return this._hostRewrite;
   }
 
   // path_prefix_rewrite - computed: false, optional: true, required: false
-  private _pathPrefixRewrite?: string | undefined; 
+  private _pathPrefixRewrite?: string; 
   public get pathPrefixRewrite() {
     return this.getStringAttribute('path_prefix_rewrite');
   }
-  public set pathPrefixRewrite(value: string | undefined) {
+  public set pathPrefixRewrite(value: string) {
     this._pathPrefixRewrite = value;
   }
   public resetPathPrefixRewrite() {
@@ -929,7 +1211,7 @@ export class ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get pathPrefixRewriteInput() {
-    return this._pathPrefixRewrite
+    return this._pathPrefixRewrite;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
@@ -954,7 +1236,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -988,7 +1270,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1029,7 +1311,7 @@ response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction): any {
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1052,12 +1334,49 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -1065,15 +1384,15 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -1081,16 +1400,16 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -1098,16 +1417,16 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -1115,7 +1434,7 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapDefaultRouteActionWeightedBackendServices {
@@ -1148,7 +1467,7 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction;
 }
 
-function computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServices): any {
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1205,7 +1524,7 @@ export interface ComputeUrlMapDefaultRouteAction {
   readonly weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[];
 }
 
-function computeUrlMapDefaultRouteActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionOutputReference | ComputeUrlMapDefaultRouteAction): any {
+export function computeUrlMapDefaultRouteActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionOutputReference | ComputeUrlMapDefaultRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1231,115 +1550,164 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy?: ComputeUrlMapDefaultRouteActionCorsPolicy | undefined; 
-  private __corsPolicyOutput = new ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
-  public get corsPolicy() {
-    return this.__corsPolicyOutput;
+  public get internalValue(): ComputeUrlMapDefaultRouteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._corsPolicy) {
+      hasAnyValues = true;
+      internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
+    }
+    if (this._faultInjectionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
+    }
+    if (this._requestMirrorPolicy) {
+      hasAnyValues = true;
+      internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
+    }
+    if (this._retryPolicy) {
+      hasAnyValues = true;
+      internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout?.internalValue;
+    }
+    if (this._urlRewrite) {
+      hasAnyValues = true;
+      internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
+    }
+    if (this._weightedBackendServices) {
+      hasAnyValues = true;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCorsPolicy(value: ComputeUrlMapDefaultRouteActionCorsPolicy | undefined) {
-    this._corsPolicy = value;
+
+  public set internalValue(value: ComputeUrlMapDefaultRouteAction | undefined) {
+    if (value === undefined) {
+      this._corsPolicy.internalValue = undefined;
+      this._faultInjectionPolicy.internalValue = undefined;
+      this._requestMirrorPolicy.internalValue = undefined;
+      this._retryPolicy.internalValue = undefined;
+      this._timeout.internalValue = undefined;
+      this._urlRewrite.internalValue = undefined;
+      this._weightedBackendServices = undefined;
+    }
+    else {
+      this._corsPolicy.internalValue = value.corsPolicy;
+      this._faultInjectionPolicy.internalValue = value.faultInjectionPolicy;
+      this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
+      this._retryPolicy.internalValue = value.retryPolicy;
+      this._timeout.internalValue = value.timeout;
+      this._urlRewrite.internalValue = value.urlRewrite;
+      this._weightedBackendServices = value.weightedBackendServices;
+    }
+  }
+
+  // cors_policy - computed: false, optional: true, required: false
+  private _corsPolicy = new ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  public get corsPolicy() {
+    return this._corsPolicy;
+  }
+  public putCorsPolicy(value: ComputeUrlMapDefaultRouteActionCorsPolicy) {
+    this._corsPolicy.internalValue = value;
   }
   public resetCorsPolicy() {
-    this._corsPolicy = undefined;
+    this._corsPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsPolicyInput() {
-    return this._corsPolicy
+    return this._corsPolicy.internalValue;
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicy | undefined; 
-  private __faultInjectionPolicyOutput = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
-    return this.__faultInjectionPolicyOutput;
+    return this._faultInjectionPolicy;
   }
-  public putFaultInjectionPolicy(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicy | undefined) {
-    this._faultInjectionPolicy = value;
+  public putFaultInjectionPolicy(value: ComputeUrlMapDefaultRouteActionFaultInjectionPolicy) {
+    this._faultInjectionPolicy.internalValue = value;
   }
   public resetFaultInjectionPolicy() {
-    this._faultInjectionPolicy = undefined;
+    this._faultInjectionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get faultInjectionPolicyInput() {
-    return this._faultInjectionPolicy
+    return this._faultInjectionPolicy.internalValue;
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy?: ComputeUrlMapDefaultRouteActionRequestMirrorPolicy | undefined; 
-  private __requestMirrorPolicyOutput = new ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
-    return this.__requestMirrorPolicyOutput;
+    return this._requestMirrorPolicy;
   }
-  public putRequestMirrorPolicy(value: ComputeUrlMapDefaultRouteActionRequestMirrorPolicy | undefined) {
-    this._requestMirrorPolicy = value;
+  public putRequestMirrorPolicy(value: ComputeUrlMapDefaultRouteActionRequestMirrorPolicy) {
+    this._requestMirrorPolicy.internalValue = value;
   }
   public resetRequestMirrorPolicy() {
-    this._requestMirrorPolicy = undefined;
+    this._requestMirrorPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestMirrorPolicyInput() {
-    return this._requestMirrorPolicy
+    return this._requestMirrorPolicy.internalValue;
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy?: ComputeUrlMapDefaultRouteActionRetryPolicy | undefined; 
-  private __retryPolicyOutput = new ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
   public get retryPolicy() {
-    return this.__retryPolicyOutput;
+    return this._retryPolicy;
   }
-  public putRetryPolicy(value: ComputeUrlMapDefaultRouteActionRetryPolicy | undefined) {
-    this._retryPolicy = value;
+  public putRetryPolicy(value: ComputeUrlMapDefaultRouteActionRetryPolicy) {
+    this._retryPolicy.internalValue = value;
   }
   public resetRetryPolicy() {
-    this._retryPolicy = undefined;
+    this._retryPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retryPolicyInput() {
-    return this._retryPolicy
+    return this._retryPolicy.internalValue;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: ComputeUrlMapDefaultRouteActionTimeout | undefined; 
-  private __timeoutOutput = new ComputeUrlMapDefaultRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapDefaultRouteActionTimeoutOutputReference(this as any, "timeout", true);
   public get timeout() {
-    return this.__timeoutOutput;
+    return this._timeout;
   }
-  public putTimeout(value: ComputeUrlMapDefaultRouteActionTimeout | undefined) {
-    this._timeout = value;
+  public putTimeout(value: ComputeUrlMapDefaultRouteActionTimeout) {
+    this._timeout.internalValue = value;
   }
   public resetTimeout() {
-    this._timeout = undefined;
+    this._timeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout.internalValue;
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite?: ComputeUrlMapDefaultRouteActionUrlRewrite | undefined; 
-  private __urlRewriteOutput = new ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
   public get urlRewrite() {
-    return this.__urlRewriteOutput;
+    return this._urlRewrite;
   }
-  public putUrlRewrite(value: ComputeUrlMapDefaultRouteActionUrlRewrite | undefined) {
-    this._urlRewrite = value;
+  public putUrlRewrite(value: ComputeUrlMapDefaultRouteActionUrlRewrite) {
+    this._urlRewrite.internalValue = value;
   }
   public resetUrlRewrite() {
-    this._urlRewrite = undefined;
+    this._urlRewrite.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRewriteInput() {
-    return this._urlRewrite
+    return this._urlRewrite.internalValue;
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[] | undefined; 
+  private _weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[]; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('weighted_backend_services') as any;
   }
-  public set weightedBackendServices(value: ComputeUrlMapDefaultRouteActionWeightedBackendServices[] | undefined) {
+  public set weightedBackendServices(value: ComputeUrlMapDefaultRouteActionWeightedBackendServices[]) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -1347,7 +1715,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get weightedBackendServicesInput() {
-    return this._weightedBackendServices
+    return this._weightedBackendServices;
   }
 }
 export interface ComputeUrlMapDefaultUrlRedirect {
@@ -1416,7 +1784,7 @@ retained. The default is set to false.
   readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapDefaultUrlRedirectOutputReference | ComputeUrlMapDefaultUrlRedirect): any {
+export function computeUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapDefaultUrlRedirectOutputReference | ComputeUrlMapDefaultUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1441,12 +1809,61 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapDefaultUrlRedirect | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRedirect) {
+      hasAnyValues = true;
+      internalValueResult.hostRedirect = this._hostRedirect;
+    }
+    if (this._httpsRedirect) {
+      hasAnyValues = true;
+      internalValueResult.httpsRedirect = this._httpsRedirect;
+    }
+    if (this._pathRedirect) {
+      hasAnyValues = true;
+      internalValueResult.pathRedirect = this._pathRedirect;
+    }
+    if (this._prefixRedirect) {
+      hasAnyValues = true;
+      internalValueResult.prefixRedirect = this._prefixRedirect;
+    }
+    if (this._redirectResponseCode) {
+      hasAnyValues = true;
+      internalValueResult.redirectResponseCode = this._redirectResponseCode;
+    }
+    if (this._stripQuery) {
+      hasAnyValues = true;
+      internalValueResult.stripQuery = this._stripQuery;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapDefaultUrlRedirect | undefined) {
+    if (value === undefined) {
+      this._hostRedirect = undefined;
+      this._httpsRedirect = undefined;
+      this._pathRedirect = undefined;
+      this._prefixRedirect = undefined;
+      this._redirectResponseCode = undefined;
+      this._stripQuery = undefined;
+    }
+    else {
+      this._hostRedirect = value.hostRedirect;
+      this._httpsRedirect = value.httpsRedirect;
+      this._pathRedirect = value.pathRedirect;
+      this._prefixRedirect = value.prefixRedirect;
+      this._redirectResponseCode = value.redirectResponseCode;
+      this._stripQuery = value.stripQuery;
+    }
+  }
+
   // host_redirect - computed: false, optional: true, required: false
-  private _hostRedirect?: string | undefined; 
+  private _hostRedirect?: string; 
   public get hostRedirect() {
     return this.getStringAttribute('host_redirect');
   }
-  public set hostRedirect(value: string | undefined) {
+  public set hostRedirect(value: string) {
     this._hostRedirect = value;
   }
   public resetHostRedirect() {
@@ -1454,15 +1871,15 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get hostRedirectInput() {
-    return this._hostRedirect
+    return this._hostRedirect;
   }
 
   // https_redirect - computed: false, optional: true, required: false
-  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
     return this.getBooleanAttribute('https_redirect') as any;
   }
-  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
   }
   public resetHttpsRedirect() {
@@ -1470,15 +1887,15 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get httpsRedirectInput() {
-    return this._httpsRedirect
+    return this._httpsRedirect;
   }
 
   // path_redirect - computed: false, optional: true, required: false
-  private _pathRedirect?: string | undefined; 
+  private _pathRedirect?: string; 
   public get pathRedirect() {
     return this.getStringAttribute('path_redirect');
   }
-  public set pathRedirect(value: string | undefined) {
+  public set pathRedirect(value: string) {
     this._pathRedirect = value;
   }
   public resetPathRedirect() {
@@ -1486,15 +1903,15 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get pathRedirectInput() {
-    return this._pathRedirect
+    return this._pathRedirect;
   }
 
   // prefix_redirect - computed: false, optional: true, required: false
-  private _prefixRedirect?: string | undefined; 
+  private _prefixRedirect?: string; 
   public get prefixRedirect() {
     return this.getStringAttribute('prefix_redirect');
   }
-  public set prefixRedirect(value: string | undefined) {
+  public set prefixRedirect(value: string) {
     this._prefixRedirect = value;
   }
   public resetPrefixRedirect() {
@@ -1502,15 +1919,15 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get prefixRedirectInput() {
-    return this._prefixRedirect
+    return this._prefixRedirect;
   }
 
   // redirect_response_code - computed: false, optional: true, required: false
-  private _redirectResponseCode?: string | undefined; 
+  private _redirectResponseCode?: string; 
   public get redirectResponseCode() {
     return this.getStringAttribute('redirect_response_code');
   }
-  public set redirectResponseCode(value: string | undefined) {
+  public set redirectResponseCode(value: string) {
     this._redirectResponseCode = value;
   }
   public resetRedirectResponseCode() {
@@ -1518,7 +1935,7 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get redirectResponseCodeInput() {
-    return this._redirectResponseCode
+    return this._redirectResponseCode;
   }
 
   // strip_query - computed: false, optional: false, required: true
@@ -1531,7 +1948,7 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get stripQueryInput() {
-    return this._stripQuery
+    return this._stripQuery;
   }
 }
 export interface ComputeUrlMapHeaderActionRequestHeadersToAdd {
@@ -1557,7 +1974,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1592,7 +2009,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1633,7 +2050,7 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapHeaderActionToTerraform(struct?: ComputeUrlMapHeaderActionOutputReference | ComputeUrlMapHeaderAction): any {
+export function computeUrlMapHeaderActionToTerraform(struct?: ComputeUrlMapHeaderActionOutputReference | ComputeUrlMapHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1656,12 +2073,49 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -1669,15 +2123,15 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -1685,16 +2139,16 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -1702,16 +2156,16 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -1719,7 +2173,7 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapHostRule {
@@ -1747,7 +2201,7 @@ hostRule matches the URL's host portion.
   readonly pathMatcher: string;
 }
 
-function computeUrlMapHostRuleToTerraform(struct?: ComputeUrlMapHostRule): any {
+export function computeUrlMapHostRuleToTerraform(struct?: ComputeUrlMapHostRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1815,7 +2269,7 @@ This translates to the Access-Control-Max-Age header.
   readonly maxAge?: number;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy): any {
+export function computeUrlMapPathMatcherDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1842,12 +2296,73 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowCredentials) {
+      hasAnyValues = true;
+      internalValueResult.allowCredentials = this._allowCredentials;
+    }
+    if (this._allowHeaders) {
+      hasAnyValues = true;
+      internalValueResult.allowHeaders = this._allowHeaders;
+    }
+    if (this._allowMethods) {
+      hasAnyValues = true;
+      internalValueResult.allowMethods = this._allowMethods;
+    }
+    if (this._allowOriginRegexes) {
+      hasAnyValues = true;
+      internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
+    }
+    if (this._allowOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowOrigins = this._allowOrigins;
+    }
+    if (this._disabled) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    if (this._exposeHeaders) {
+      hasAnyValues = true;
+      internalValueResult.exposeHeaders = this._exposeHeaders;
+    }
+    if (this._maxAge) {
+      hasAnyValues = true;
+      internalValueResult.maxAge = this._maxAge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy | undefined) {
+    if (value === undefined) {
+      this._allowCredentials = undefined;
+      this._allowHeaders = undefined;
+      this._allowMethods = undefined;
+      this._allowOriginRegexes = undefined;
+      this._allowOrigins = undefined;
+      this._disabled = undefined;
+      this._exposeHeaders = undefined;
+      this._maxAge = undefined;
+    }
+    else {
+      this._allowCredentials = value.allowCredentials;
+      this._allowHeaders = value.allowHeaders;
+      this._allowMethods = value.allowMethods;
+      this._allowOriginRegexes = value.allowOriginRegexes;
+      this._allowOrigins = value.allowOrigins;
+      this._disabled = value.disabled;
+      this._exposeHeaders = value.exposeHeaders;
+      this._maxAge = value.maxAge;
+    }
+  }
+
   // allow_credentials - computed: false, optional: true, required: false
-  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
     return this.getBooleanAttribute('allow_credentials') as any;
   }
-  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
   }
   public resetAllowCredentials() {
@@ -1855,15 +2370,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowCredentialsInput() {
-    return this._allowCredentials
+    return this._allowCredentials;
   }
 
   // allow_headers - computed: false, optional: true, required: false
-  private _allowHeaders?: string[] | undefined; 
+  private _allowHeaders?: string[]; 
   public get allowHeaders() {
     return this.getListAttribute('allow_headers');
   }
-  public set allowHeaders(value: string[] | undefined) {
+  public set allowHeaders(value: string[]) {
     this._allowHeaders = value;
   }
   public resetAllowHeaders() {
@@ -1871,15 +2386,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowHeadersInput() {
-    return this._allowHeaders
+    return this._allowHeaders;
   }
 
   // allow_methods - computed: false, optional: true, required: false
-  private _allowMethods?: string[] | undefined; 
+  private _allowMethods?: string[]; 
   public get allowMethods() {
     return this.getListAttribute('allow_methods');
   }
-  public set allowMethods(value: string[] | undefined) {
+  public set allowMethods(value: string[]) {
     this._allowMethods = value;
   }
   public resetAllowMethods() {
@@ -1887,15 +2402,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowMethodsInput() {
-    return this._allowMethods
+    return this._allowMethods;
   }
 
   // allow_origin_regexes - computed: false, optional: true, required: false
-  private _allowOriginRegexes?: string[] | undefined; 
+  private _allowOriginRegexes?: string[]; 
   public get allowOriginRegexes() {
     return this.getListAttribute('allow_origin_regexes');
   }
-  public set allowOriginRegexes(value: string[] | undefined) {
+  public set allowOriginRegexes(value: string[]) {
     this._allowOriginRegexes = value;
   }
   public resetAllowOriginRegexes() {
@@ -1903,15 +2418,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginRegexesInput() {
-    return this._allowOriginRegexes
+    return this._allowOriginRegexes;
   }
 
   // allow_origins - computed: false, optional: true, required: false
-  private _allowOrigins?: string[] | undefined; 
+  private _allowOrigins?: string[]; 
   public get allowOrigins() {
     return this.getListAttribute('allow_origins');
   }
-  public set allowOrigins(value: string[] | undefined) {
+  public set allowOrigins(value: string[]) {
     this._allowOrigins = value;
   }
   public resetAllowOrigins() {
@@ -1919,15 +2434,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginsInput() {
-    return this._allowOrigins
+    return this._allowOrigins;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -1935,15 +2450,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // expose_headers - computed: false, optional: true, required: false
-  private _exposeHeaders?: string[] | undefined; 
+  private _exposeHeaders?: string[]; 
   public get exposeHeaders() {
     return this.getListAttribute('expose_headers');
   }
-  public set exposeHeaders(value: string[] | undefined) {
+  public set exposeHeaders(value: string[]) {
     this._exposeHeaders = value;
   }
   public resetExposeHeaders() {
@@ -1951,15 +2466,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get exposeHeadersInput() {
-    return this._exposeHeaders
+    return this._exposeHeaders;
   }
 
   // max_age - computed: false, optional: true, required: false
-  private _maxAge?: number | undefined; 
+  private _maxAge?: number; 
   public get maxAge() {
     return this.getNumberAttribute('max_age');
   }
-  public set maxAge(value: number | undefined) {
+  public set maxAge(value: number) {
     this._maxAge = value;
   }
   public resetMaxAge() {
@@ -1967,7 +2482,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInput() {
-    return this._maxAge
+    return this._maxAge;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort {
@@ -1987,7 +2502,7 @@ The value must be between 0.0 and 100.0 inclusive.
   readonly percentage?: number;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort): any {
+export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2008,12 +2523,37 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._httpStatus) {
+      hasAnyValues = true;
+      internalValueResult.httpStatus = this._httpStatus;
+    }
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort | undefined) {
+    if (value === undefined) {
+      this._httpStatus = undefined;
+      this._percentage = undefined;
+    }
+    else {
+      this._httpStatus = value.httpStatus;
+      this._percentage = value.percentage;
+    }
+  }
+
   // http_status - computed: false, optional: true, required: false
-  private _httpStatus?: number | undefined; 
+  private _httpStatus?: number; 
   public get httpStatus() {
     return this.getNumberAttribute('http_status');
   }
-  public set httpStatus(value: number | undefined) {
+  public set httpStatus(value: number) {
     this._httpStatus = value;
   }
   public resetHttpStatus() {
@@ -2021,15 +2561,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
   }
   // Temporarily expose input value. Use with caution.
   public get httpStatusInput() {
-    return this._httpStatus
+    return this._httpStatus;
   }
 
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -2037,7 +2577,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
@@ -2057,7 +2597,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
   readonly seconds?: string;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2078,12 +2618,37 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -2091,15 +2656,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: string | undefined; 
+  private _seconds?: string; 
   public get seconds() {
     return this.getStringAttribute('seconds');
   }
-  public set seconds(value: string | undefined) {
+  public set seconds(value: string) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -2107,7 +2672,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay {
@@ -2126,7 +2691,7 @@ The value must be between 0.0 and 100.0 inclusive.
   readonly fixedDelay?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay): any {
+export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2147,12 +2712,37 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    if (this._fixedDelay) {
+      hasAnyValues = true;
+      internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay | undefined) {
+    if (value === undefined) {
+      this._percentage = undefined;
+      this._fixedDelay.internalValue = undefined;
+    }
+    else {
+      this._percentage = value.percentage;
+      this._fixedDelay.internalValue = value.fixedDelay;
+    }
+  }
+
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -2160,24 +2750,23 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined; 
-  private __fixedDelayOutput = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
   public get fixedDelay() {
-    return this.__fixedDelayOutput;
+    return this._fixedDelay;
   }
-  public putFixedDelay(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
-    this._fixedDelay = value;
+  public putFixedDelay(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay) {
+    this._fixedDelay.internalValue = value;
   }
   public resetFixedDelay() {
-    this._fixedDelay = undefined;
+    this._fixedDelay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get fixedDelayInput() {
-    return this._fixedDelay
+    return this._fixedDelay.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
@@ -2195,7 +2784,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy 
   readonly delay?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy): any {
+export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2216,38 +2805,61 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // abort - computed: false, optional: true, required: false
-  private _abort?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort | undefined; 
-  private __abortOutput = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
-  public get abort() {
-    return this.__abortOutput;
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._abort) {
+      hasAnyValues = true;
+      internalValueResult.abort = this._abort?.internalValue;
+    }
+    if (this._delay) {
+      hasAnyValues = true;
+      internalValueResult.delay = this._delay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAbort(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort | undefined) {
-    this._abort = value;
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy | undefined) {
+    if (value === undefined) {
+      this._abort.internalValue = undefined;
+      this._delay.internalValue = undefined;
+    }
+    else {
+      this._abort.internalValue = value.abort;
+      this._delay.internalValue = value.delay;
+    }
+  }
+
+  // abort - computed: false, optional: true, required: false
+  private _abort = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  public get abort() {
+    return this._abort;
+  }
+  public putAbort(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort) {
+    this._abort.internalValue = value;
   }
   public resetAbort() {
-    this._abort = undefined;
+    this._abort.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get abortInput() {
-    return this._abort
+    return this._abort.internalValue;
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay | undefined; 
-  private __delayOutput = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
   public get delay() {
-    return this.__delayOutput;
+    return this._delay;
   }
-  public putDelay(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay | undefined) {
-    this._delay = value;
+  public putDelay(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay) {
+    this._delay.internalValue = value;
   }
   public resetDelay() {
-    this._delay = undefined;
+    this._delay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get delayInput() {
-    return this._delay
+    return this._delay.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy {
@@ -2259,7 +2871,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy {
   readonly backendService: string;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy): any {
+export function computeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2279,6 +2891,25 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._backendService) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy | undefined) {
+    if (value === undefined) {
+      this._backendService = undefined;
+    }
+    else {
+      this._backendService = value.backendService;
+    }
+  }
+
   // backend_service - computed: false, optional: false, required: true
   private _backendService?: string; 
   public get backendService() {
@@ -2289,7 +2920,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutput
   }
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
-    return this._backendService
+    return this._backendService;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout {
@@ -2309,7 +2940,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
   readonly seconds?: string;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout): any {
+export function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2330,12 +2961,37 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -2343,15 +2999,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutO
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: string | undefined; 
+  private _seconds?: string; 
   public get seconds() {
     return this.getStringAttribute('seconds');
   }
-  public set seconds(value: string | undefined) {
+  public set seconds(value: string) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -2359,7 +3015,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutO
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy {
@@ -2398,7 +3054,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy {
   readonly perTryTimeout?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy): any {
+export function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2420,12 +3076,43 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._numRetries) {
+      hasAnyValues = true;
+      internalValueResult.numRetries = this._numRetries;
+    }
+    if (this._retryConditions) {
+      hasAnyValues = true;
+      internalValueResult.retryConditions = this._retryConditions;
+    }
+    if (this._perTryTimeout) {
+      hasAnyValues = true;
+      internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy | undefined) {
+    if (value === undefined) {
+      this._numRetries = undefined;
+      this._retryConditions = undefined;
+      this._perTryTimeout.internalValue = undefined;
+    }
+    else {
+      this._numRetries = value.numRetries;
+      this._retryConditions = value.retryConditions;
+      this._perTryTimeout.internalValue = value.perTryTimeout;
+    }
+  }
+
   // num_retries - computed: false, optional: true, required: false
-  private _numRetries?: number | undefined; 
+  private _numRetries?: number; 
   public get numRetries() {
     return this.getNumberAttribute('num_retries');
   }
-  public set numRetries(value: number | undefined) {
+  public set numRetries(value: number) {
     this._numRetries = value;
   }
   public resetNumRetries() {
@@ -2433,15 +3120,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get numRetriesInput() {
-    return this._numRetries
+    return this._numRetries;
   }
 
   // retry_conditions - computed: false, optional: true, required: false
-  private _retryConditions?: string[] | undefined; 
+  private _retryConditions?: string[]; 
   public get retryConditions() {
     return this.getListAttribute('retry_conditions');
   }
-  public set retryConditions(value: string[] | undefined) {
+  public set retryConditions(value: string[]) {
     this._retryConditions = value;
   }
   public resetRetryConditions() {
@@ -2449,24 +3136,23 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get retryConditionsInput() {
-    return this._retryConditions
+    return this._retryConditions;
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout | undefined; 
-  private __perTryTimeoutOutput = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
   public get perTryTimeout() {
-    return this.__perTryTimeoutOutput;
+    return this._perTryTimeout;
   }
-  public putPerTryTimeout(value: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout | undefined) {
-    this._perTryTimeout = value;
+  public putPerTryTimeout(value: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout) {
+    this._perTryTimeout.internalValue = value;
   }
   public resetPerTryTimeout() {
-    this._perTryTimeout = undefined;
+    this._perTryTimeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get perTryTimeoutInput() {
-    return this._perTryTimeout
+    return this._perTryTimeout.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionTimeout {
@@ -2486,7 +3172,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
   readonly seconds?: string;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionTimeout): any {
+export function computeUrlMapPathMatcherDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2507,12 +3193,37 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -2520,15 +3231,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: true, required: false
-  private _seconds?: string | undefined; 
+  private _seconds?: string; 
   public get seconds() {
     return this.getStringAttribute('seconds');
   }
-  public set seconds(value: string | undefined) {
+  public set seconds(value: string) {
     this._seconds = value;
   }
   public resetSeconds() {
@@ -2536,7 +3247,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite {
@@ -2560,7 +3271,7 @@ The value must be between 1 and 1024 characters.
   readonly pathPrefixRewrite?: string;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite): any {
+export function computeUrlMapPathMatcherDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2581,12 +3292,37 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRewrite) {
+      hasAnyValues = true;
+      internalValueResult.hostRewrite = this._hostRewrite;
+    }
+    if (this._pathPrefixRewrite) {
+      hasAnyValues = true;
+      internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite | undefined) {
+    if (value === undefined) {
+      this._hostRewrite = undefined;
+      this._pathPrefixRewrite = undefined;
+    }
+    else {
+      this._hostRewrite = value.hostRewrite;
+      this._pathPrefixRewrite = value.pathPrefixRewrite;
+    }
+  }
+
   // host_rewrite - computed: false, optional: true, required: false
-  private _hostRewrite?: string | undefined; 
+  private _hostRewrite?: string; 
   public get hostRewrite() {
     return this.getStringAttribute('host_rewrite');
   }
-  public set hostRewrite(value: string | undefined) {
+  public set hostRewrite(value: string) {
     this._hostRewrite = value;
   }
   public resetHostRewrite() {
@@ -2594,15 +3330,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get hostRewriteInput() {
-    return this._hostRewrite
+    return this._hostRewrite;
   }
 
   // path_prefix_rewrite - computed: false, optional: true, required: false
-  private _pathPrefixRewrite?: string | undefined; 
+  private _pathPrefixRewrite?: string; 
   public get pathPrefixRewrite() {
     return this.getStringAttribute('path_prefix_rewrite');
   }
-  public set pathPrefixRewrite(value: string | undefined) {
+  public set pathPrefixRewrite(value: string) {
     this._pathPrefixRewrite = value;
   }
   public resetPathPrefixRewrite() {
@@ -2610,7 +3346,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get pathPrefixRewriteInput() {
-    return this._pathPrefixRewrite
+    return this._pathPrefixRewrite;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
@@ -2635,7 +3371,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2669,7 +3405,7 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2710,7 +3446,7 @@ response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction): any {
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2733,12 +3469,49 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -2746,15 +3519,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -2762,16 +3535,16 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -2779,16 +3552,16 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -2796,7 +3569,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices {
@@ -2829,7 +3602,7 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction;
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices): any {
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2886,7 +3659,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteAction {
   readonly weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[];
 }
 
-function computeUrlMapPathMatcherDefaultRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionOutputReference | ComputeUrlMapPathMatcherDefaultRouteAction): any {
+export function computeUrlMapPathMatcherDefaultRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionOutputReference | ComputeUrlMapPathMatcherDefaultRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2912,115 +3685,164 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy?: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy | undefined; 
-  private __corsPolicyOutput = new ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
-  public get corsPolicy() {
-    return this.__corsPolicyOutput;
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._corsPolicy) {
+      hasAnyValues = true;
+      internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
+    }
+    if (this._faultInjectionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
+    }
+    if (this._requestMirrorPolicy) {
+      hasAnyValues = true;
+      internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
+    }
+    if (this._retryPolicy) {
+      hasAnyValues = true;
+      internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout?.internalValue;
+    }
+    if (this._urlRewrite) {
+      hasAnyValues = true;
+      internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
+    }
+    if (this._weightedBackendServices) {
+      hasAnyValues = true;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCorsPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy | undefined) {
-    this._corsPolicy = value;
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultRouteAction | undefined) {
+    if (value === undefined) {
+      this._corsPolicy.internalValue = undefined;
+      this._faultInjectionPolicy.internalValue = undefined;
+      this._requestMirrorPolicy.internalValue = undefined;
+      this._retryPolicy.internalValue = undefined;
+      this._timeout.internalValue = undefined;
+      this._urlRewrite.internalValue = undefined;
+      this._weightedBackendServices = undefined;
+    }
+    else {
+      this._corsPolicy.internalValue = value.corsPolicy;
+      this._faultInjectionPolicy.internalValue = value.faultInjectionPolicy;
+      this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
+      this._retryPolicy.internalValue = value.retryPolicy;
+      this._timeout.internalValue = value.timeout;
+      this._urlRewrite.internalValue = value.urlRewrite;
+      this._weightedBackendServices = value.weightedBackendServices;
+    }
+  }
+
+  // cors_policy - computed: false, optional: true, required: false
+  private _corsPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  public get corsPolicy() {
+    return this._corsPolicy;
+  }
+  public putCorsPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy) {
+    this._corsPolicy.internalValue = value;
   }
   public resetCorsPolicy() {
-    this._corsPolicy = undefined;
+    this._corsPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsPolicyInput() {
-    return this._corsPolicy
+    return this._corsPolicy.internalValue;
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy | undefined; 
-  private __faultInjectionPolicyOutput = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
-    return this.__faultInjectionPolicyOutput;
+    return this._faultInjectionPolicy;
   }
-  public putFaultInjectionPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy | undefined) {
-    this._faultInjectionPolicy = value;
+  public putFaultInjectionPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy) {
+    this._faultInjectionPolicy.internalValue = value;
   }
   public resetFaultInjectionPolicy() {
-    this._faultInjectionPolicy = undefined;
+    this._faultInjectionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get faultInjectionPolicyInput() {
-    return this._faultInjectionPolicy
+    return this._faultInjectionPolicy.internalValue;
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy?: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy | undefined; 
-  private __requestMirrorPolicyOutput = new ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
-    return this.__requestMirrorPolicyOutput;
+    return this._requestMirrorPolicy;
   }
-  public putRequestMirrorPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy | undefined) {
-    this._requestMirrorPolicy = value;
+  public putRequestMirrorPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy) {
+    this._requestMirrorPolicy.internalValue = value;
   }
   public resetRequestMirrorPolicy() {
-    this._requestMirrorPolicy = undefined;
+    this._requestMirrorPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestMirrorPolicyInput() {
-    return this._requestMirrorPolicy
+    return this._requestMirrorPolicy.internalValue;
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy | undefined; 
-  private __retryPolicyOutput = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
   public get retryPolicy() {
-    return this.__retryPolicyOutput;
+    return this._retryPolicy;
   }
-  public putRetryPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy | undefined) {
-    this._retryPolicy = value;
+  public putRetryPolicy(value: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy) {
+    this._retryPolicy.internalValue = value;
   }
   public resetRetryPolicy() {
-    this._retryPolicy = undefined;
+    this._retryPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retryPolicyInput() {
-    return this._retryPolicy
+    return this._retryPolicy.internalValue;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: ComputeUrlMapPathMatcherDefaultRouteActionTimeout | undefined; 
-  private __timeoutOutput = new ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(this as any, "timeout", true);
   public get timeout() {
-    return this.__timeoutOutput;
+    return this._timeout;
   }
-  public putTimeout(value: ComputeUrlMapPathMatcherDefaultRouteActionTimeout | undefined) {
-    this._timeout = value;
+  public putTimeout(value: ComputeUrlMapPathMatcherDefaultRouteActionTimeout) {
+    this._timeout.internalValue = value;
   }
   public resetTimeout() {
-    this._timeout = undefined;
+    this._timeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout.internalValue;
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite?: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite | undefined; 
-  private __urlRewriteOutput = new ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
   public get urlRewrite() {
-    return this.__urlRewriteOutput;
+    return this._urlRewrite;
   }
-  public putUrlRewrite(value: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite | undefined) {
-    this._urlRewrite = value;
+  public putUrlRewrite(value: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite) {
+    this._urlRewrite.internalValue = value;
   }
   public resetUrlRewrite() {
-    this._urlRewrite = undefined;
+    this._urlRewrite.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRewriteInput() {
-    return this._urlRewrite
+    return this._urlRewrite.internalValue;
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[] | undefined; 
+  private _weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[]; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('weighted_backend_services') as any;
   }
-  public set weightedBackendServices(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[] | undefined) {
+  public set weightedBackendServices(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[]) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -3028,7 +3850,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get weightedBackendServicesInput() {
-    return this._weightedBackendServices
+    return this._weightedBackendServices;
   }
 }
 export interface ComputeUrlMapPathMatcherDefaultUrlRedirect {
@@ -3097,7 +3919,7 @@ retained.
   readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference | ComputeUrlMapPathMatcherDefaultUrlRedirect): any {
+export function computeUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference | ComputeUrlMapPathMatcherDefaultUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3122,12 +3944,61 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherDefaultUrlRedirect | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRedirect) {
+      hasAnyValues = true;
+      internalValueResult.hostRedirect = this._hostRedirect;
+    }
+    if (this._httpsRedirect) {
+      hasAnyValues = true;
+      internalValueResult.httpsRedirect = this._httpsRedirect;
+    }
+    if (this._pathRedirect) {
+      hasAnyValues = true;
+      internalValueResult.pathRedirect = this._pathRedirect;
+    }
+    if (this._prefixRedirect) {
+      hasAnyValues = true;
+      internalValueResult.prefixRedirect = this._prefixRedirect;
+    }
+    if (this._redirectResponseCode) {
+      hasAnyValues = true;
+      internalValueResult.redirectResponseCode = this._redirectResponseCode;
+    }
+    if (this._stripQuery) {
+      hasAnyValues = true;
+      internalValueResult.stripQuery = this._stripQuery;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherDefaultUrlRedirect | undefined) {
+    if (value === undefined) {
+      this._hostRedirect = undefined;
+      this._httpsRedirect = undefined;
+      this._pathRedirect = undefined;
+      this._prefixRedirect = undefined;
+      this._redirectResponseCode = undefined;
+      this._stripQuery = undefined;
+    }
+    else {
+      this._hostRedirect = value.hostRedirect;
+      this._httpsRedirect = value.httpsRedirect;
+      this._pathRedirect = value.pathRedirect;
+      this._prefixRedirect = value.prefixRedirect;
+      this._redirectResponseCode = value.redirectResponseCode;
+      this._stripQuery = value.stripQuery;
+    }
+  }
+
   // host_redirect - computed: false, optional: true, required: false
-  private _hostRedirect?: string | undefined; 
+  private _hostRedirect?: string; 
   public get hostRedirect() {
     return this.getStringAttribute('host_redirect');
   }
-  public set hostRedirect(value: string | undefined) {
+  public set hostRedirect(value: string) {
     this._hostRedirect = value;
   }
   public resetHostRedirect() {
@@ -3135,15 +4006,15 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get hostRedirectInput() {
-    return this._hostRedirect
+    return this._hostRedirect;
   }
 
   // https_redirect - computed: false, optional: true, required: false
-  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
     return this.getBooleanAttribute('https_redirect') as any;
   }
-  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
   }
   public resetHttpsRedirect() {
@@ -3151,15 +4022,15 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get httpsRedirectInput() {
-    return this._httpsRedirect
+    return this._httpsRedirect;
   }
 
   // path_redirect - computed: false, optional: true, required: false
-  private _pathRedirect?: string | undefined; 
+  private _pathRedirect?: string; 
   public get pathRedirect() {
     return this.getStringAttribute('path_redirect');
   }
-  public set pathRedirect(value: string | undefined) {
+  public set pathRedirect(value: string) {
     this._pathRedirect = value;
   }
   public resetPathRedirect() {
@@ -3167,15 +4038,15 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get pathRedirectInput() {
-    return this._pathRedirect
+    return this._pathRedirect;
   }
 
   // prefix_redirect - computed: false, optional: true, required: false
-  private _prefixRedirect?: string | undefined; 
+  private _prefixRedirect?: string; 
   public get prefixRedirect() {
     return this.getStringAttribute('prefix_redirect');
   }
-  public set prefixRedirect(value: string | undefined) {
+  public set prefixRedirect(value: string) {
     this._prefixRedirect = value;
   }
   public resetPrefixRedirect() {
@@ -3183,15 +4054,15 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get prefixRedirectInput() {
-    return this._prefixRedirect
+    return this._prefixRedirect;
   }
 
   // redirect_response_code - computed: false, optional: true, required: false
-  private _redirectResponseCode?: string | undefined; 
+  private _redirectResponseCode?: string; 
   public get redirectResponseCode() {
     return this.getStringAttribute('redirect_response_code');
   }
-  public set redirectResponseCode(value: string | undefined) {
+  public set redirectResponseCode(value: string) {
     this._redirectResponseCode = value;
   }
   public resetRedirectResponseCode() {
@@ -3199,7 +4070,7 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get redirectResponseCodeInput() {
-    return this._redirectResponseCode
+    return this._redirectResponseCode;
   }
 
   // strip_query - computed: false, optional: false, required: true
@@ -3212,7 +4083,7 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get stripQueryInput() {
-    return this._stripQuery
+    return this._stripQuery;
   }
 }
 export interface ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd {
@@ -3238,7 +4109,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3273,7 +4144,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3314,7 +4185,7 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapPathMatcherHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionOutputReference | ComputeUrlMapPathMatcherHeaderAction): any {
+export function computeUrlMapPathMatcherHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionOutputReference | ComputeUrlMapPathMatcherHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3337,12 +4208,49 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -3350,15 +4258,15 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -3366,16 +4274,16 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -3383,16 +4291,16 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -3400,7 +4308,7 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
@@ -3460,7 +4368,7 @@ translates to the content for the Access-Control-Max-Age header.
   readonly maxAge?: number;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3487,12 +4395,73 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowCredentials) {
+      hasAnyValues = true;
+      internalValueResult.allowCredentials = this._allowCredentials;
+    }
+    if (this._allowHeaders) {
+      hasAnyValues = true;
+      internalValueResult.allowHeaders = this._allowHeaders;
+    }
+    if (this._allowMethods) {
+      hasAnyValues = true;
+      internalValueResult.allowMethods = this._allowMethods;
+    }
+    if (this._allowOriginRegexes) {
+      hasAnyValues = true;
+      internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
+    }
+    if (this._allowOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowOrigins = this._allowOrigins;
+    }
+    if (this._disabled) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    if (this._exposeHeaders) {
+      hasAnyValues = true;
+      internalValueResult.exposeHeaders = this._exposeHeaders;
+    }
+    if (this._maxAge) {
+      hasAnyValues = true;
+      internalValueResult.maxAge = this._maxAge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined) {
+    if (value === undefined) {
+      this._allowCredentials = undefined;
+      this._allowHeaders = undefined;
+      this._allowMethods = undefined;
+      this._allowOriginRegexes = undefined;
+      this._allowOrigins = undefined;
+      this._disabled = undefined;
+      this._exposeHeaders = undefined;
+      this._maxAge = undefined;
+    }
+    else {
+      this._allowCredentials = value.allowCredentials;
+      this._allowHeaders = value.allowHeaders;
+      this._allowMethods = value.allowMethods;
+      this._allowOriginRegexes = value.allowOriginRegexes;
+      this._allowOrigins = value.allowOrigins;
+      this._disabled = value.disabled;
+      this._exposeHeaders = value.exposeHeaders;
+      this._maxAge = value.maxAge;
+    }
+  }
+
   // allow_credentials - computed: false, optional: true, required: false
-  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
     return this.getBooleanAttribute('allow_credentials') as any;
   }
-  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
   }
   public resetAllowCredentials() {
@@ -3500,15 +4469,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get allowCredentialsInput() {
-    return this._allowCredentials
+    return this._allowCredentials;
   }
 
   // allow_headers - computed: false, optional: true, required: false
-  private _allowHeaders?: string[] | undefined; 
+  private _allowHeaders?: string[]; 
   public get allowHeaders() {
     return this.getListAttribute('allow_headers');
   }
-  public set allowHeaders(value: string[] | undefined) {
+  public set allowHeaders(value: string[]) {
     this._allowHeaders = value;
   }
   public resetAllowHeaders() {
@@ -3516,15 +4485,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get allowHeadersInput() {
-    return this._allowHeaders
+    return this._allowHeaders;
   }
 
   // allow_methods - computed: false, optional: true, required: false
-  private _allowMethods?: string[] | undefined; 
+  private _allowMethods?: string[]; 
   public get allowMethods() {
     return this.getListAttribute('allow_methods');
   }
-  public set allowMethods(value: string[] | undefined) {
+  public set allowMethods(value: string[]) {
     this._allowMethods = value;
   }
   public resetAllowMethods() {
@@ -3532,15 +4501,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get allowMethodsInput() {
-    return this._allowMethods
+    return this._allowMethods;
   }
 
   // allow_origin_regexes - computed: false, optional: true, required: false
-  private _allowOriginRegexes?: string[] | undefined; 
+  private _allowOriginRegexes?: string[]; 
   public get allowOriginRegexes() {
     return this.getListAttribute('allow_origin_regexes');
   }
-  public set allowOriginRegexes(value: string[] | undefined) {
+  public set allowOriginRegexes(value: string[]) {
     this._allowOriginRegexes = value;
   }
   public resetAllowOriginRegexes() {
@@ -3548,15 +4517,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginRegexesInput() {
-    return this._allowOriginRegexes
+    return this._allowOriginRegexes;
   }
 
   // allow_origins - computed: false, optional: true, required: false
-  private _allowOrigins?: string[] | undefined; 
+  private _allowOrigins?: string[]; 
   public get allowOrigins() {
     return this.getListAttribute('allow_origins');
   }
-  public set allowOrigins(value: string[] | undefined) {
+  public set allowOrigins(value: string[]) {
     this._allowOrigins = value;
   }
   public resetAllowOrigins() {
@@ -3564,7 +4533,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginsInput() {
-    return this._allowOrigins
+    return this._allowOrigins;
   }
 
   // disabled - computed: false, optional: false, required: true
@@ -3577,15 +4546,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // expose_headers - computed: false, optional: true, required: false
-  private _exposeHeaders?: string[] | undefined; 
+  private _exposeHeaders?: string[]; 
   public get exposeHeaders() {
     return this.getListAttribute('expose_headers');
   }
-  public set exposeHeaders(value: string[] | undefined) {
+  public set exposeHeaders(value: string[]) {
     this._exposeHeaders = value;
   }
   public resetExposeHeaders() {
@@ -3593,15 +4562,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get exposeHeadersInput() {
-    return this._exposeHeaders
+    return this._exposeHeaders;
   }
 
   // max_age - computed: false, optional: true, required: false
-  private _maxAge?: number | undefined; 
+  private _maxAge?: number; 
   public get maxAge() {
     return this.getNumberAttribute('max_age');
   }
-  public set maxAge(value: number | undefined) {
+  public set maxAge(value: number) {
     this._maxAge = value;
   }
   public resetMaxAge() {
@@ -3609,7 +4578,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInput() {
-    return this._maxAge
+    return this._maxAge;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
@@ -3630,7 +4599,7 @@ inclusive.
   readonly percentage: number;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3651,6 +4620,31 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbor
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._httpStatus) {
+      hasAnyValues = true;
+      internalValueResult.httpStatus = this._httpStatus;
+    }
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined) {
+    if (value === undefined) {
+      this._httpStatus = undefined;
+      this._percentage = undefined;
+    }
+    else {
+      this._httpStatus = value.httpStatus;
+      this._percentage = value.percentage;
+    }
+  }
+
   // http_status - computed: false, optional: false, required: true
   private _httpStatus?: number; 
   public get httpStatus() {
@@ -3661,7 +4655,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbor
   }
   // Temporarily expose input value. Use with caution.
   public get httpStatusInput() {
-    return this._httpStatus
+    return this._httpStatus;
   }
 
   // percentage - computed: false, optional: false, required: true
@@ -3674,7 +4668,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbor
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay {
@@ -3695,7 +4689,7 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3716,12 +4710,37 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -3729,7 +4748,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -3742,7 +4761,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
@@ -3762,7 +4781,7 @@ be introduced as part of fault injection. The value must be between 0.0 and
   readonly fixedDelay: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3783,6 +4802,31 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    if (this._fixedDelay) {
+      hasAnyValues = true;
+      internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined) {
+    if (value === undefined) {
+      this._percentage = undefined;
+      this._fixedDelay.internalValue = undefined;
+    }
+    else {
+      this._percentage = value.percentage;
+      this._fixedDelay.internalValue = value.fixedDelay;
+    }
+  }
+
   // percentage - computed: false, optional: false, required: true
   private _percentage?: number; 
   public get percentage() {
@@ -3793,21 +4837,20 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 
   // fixed_delay - computed: false, optional: false, required: true
-  private _fixedDelay?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay; 
-  private __fixedDelayOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
   public get fixedDelay() {
-    return this.__fixedDelayOutput;
+    return this._fixedDelay;
   }
   public putFixedDelay(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay) {
-    this._fixedDelay = value;
+    this._fixedDelay.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get fixedDelayInput() {
-    return this._fixedDelay
+    return this._fixedDelay.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
@@ -3825,7 +4868,7 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy
   readonly delay?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3846,38 +4889,61 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // abort - computed: false, optional: true, required: false
-  private _abort?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined; 
-  private __abortOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
-  public get abort() {
-    return this.__abortOutput;
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._abort) {
+      hasAnyValues = true;
+      internalValueResult.abort = this._abort?.internalValue;
+    }
+    if (this._delay) {
+      hasAnyValues = true;
+      internalValueResult.delay = this._delay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAbort(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined) {
-    this._abort = value;
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined) {
+    if (value === undefined) {
+      this._abort.internalValue = undefined;
+      this._delay.internalValue = undefined;
+    }
+    else {
+      this._abort.internalValue = value.abort;
+      this._delay.internalValue = value.delay;
+    }
+  }
+
+  // abort - computed: false, optional: true, required: false
+  private _abort = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  public get abort() {
+    return this._abort;
+  }
+  public putAbort(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort) {
+    this._abort.internalValue = value;
   }
   public resetAbort() {
-    this._abort = undefined;
+    this._abort.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get abortInput() {
-    return this._abort
+    return this._abort.internalValue;
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined; 
-  private __delayOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
   public get delay() {
-    return this.__delayOutput;
+    return this._delay;
   }
-  public putDelay(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined) {
-    this._delay = value;
+  public putDelay(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay) {
+    this._delay.internalValue = value;
   }
   public resetDelay() {
-    this._delay = undefined;
+    this._delay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get delayInput() {
-    return this._delay
+    return this._delay.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
@@ -3889,7 +4955,7 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy 
   readonly backendService: string;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3909,6 +4975,25 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutpu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._backendService) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined) {
+    if (value === undefined) {
+      this._backendService = undefined;
+    }
+    else {
+      this._backendService = value.backendService;
+    }
+  }
+
   // backend_service - computed: false, optional: false, required: true
   private _backendService?: string; 
   public get backendService() {
@@ -3919,7 +5004,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutpu
   }
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
-    return this._backendService
+    return this._backendService;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout {
@@ -3940,7 +5025,7 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3961,12 +5046,37 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -3974,7 +5084,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -3987,7 +5097,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
@@ -4032,7 +5142,7 @@ the gRPC status code in the response header is set to unavailable
   readonly perTryTimeout?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4054,12 +5164,43 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._numRetries) {
+      hasAnyValues = true;
+      internalValueResult.numRetries = this._numRetries;
+    }
+    if (this._retryConditions) {
+      hasAnyValues = true;
+      internalValueResult.retryConditions = this._retryConditions;
+    }
+    if (this._perTryTimeout) {
+      hasAnyValues = true;
+      internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined) {
+    if (value === undefined) {
+      this._numRetries = undefined;
+      this._retryConditions = undefined;
+      this._perTryTimeout.internalValue = undefined;
+    }
+    else {
+      this._numRetries = value.numRetries;
+      this._retryConditions = value.retryConditions;
+      this._perTryTimeout.internalValue = value.perTryTimeout;
+    }
+  }
+
   // num_retries - computed: false, optional: true, required: false
-  private _numRetries?: number | undefined; 
+  private _numRetries?: number; 
   public get numRetries() {
     return this.getNumberAttribute('num_retries');
   }
-  public set numRetries(value: number | undefined) {
+  public set numRetries(value: number) {
     this._numRetries = value;
   }
   public resetNumRetries() {
@@ -4067,15 +5208,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get numRetriesInput() {
-    return this._numRetries
+    return this._numRetries;
   }
 
   // retry_conditions - computed: false, optional: true, required: false
-  private _retryConditions?: string[] | undefined; 
+  private _retryConditions?: string[]; 
   public get retryConditions() {
     return this.getListAttribute('retry_conditions');
   }
-  public set retryConditions(value: string[] | undefined) {
+  public set retryConditions(value: string[]) {
     this._retryConditions = value;
   }
   public resetRetryConditions() {
@@ -4083,24 +5224,23 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get retryConditionsInput() {
-    return this._retryConditions
+    return this._retryConditions;
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined; 
-  private __perTryTimeoutOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
   public get perTryTimeout() {
-    return this.__perTryTimeoutOutput;
+    return this._perTryTimeout;
   }
-  public putPerTryTimeout(value: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined) {
-    this._perTryTimeout = value;
+  public putPerTryTimeout(value: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout) {
+    this._perTryTimeout.internalValue = value;
   }
   public resetPerTryTimeout() {
-    this._perTryTimeout = undefined;
+    this._perTryTimeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get perTryTimeoutInput() {
-    return this._perTryTimeout
+    return this._perTryTimeout.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionTimeout {
@@ -4121,7 +5261,7 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionTimeout): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4142,12 +5282,37 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -4155,7 +5320,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -4168,7 +5333,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
@@ -4190,7 +5355,7 @@ be between 1 and 1024 characters.
   readonly pathPrefixRewrite?: string;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4211,12 +5376,37 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRewrite) {
+      hasAnyValues = true;
+      internalValueResult.hostRewrite = this._hostRewrite;
+    }
+    if (this._pathPrefixRewrite) {
+      hasAnyValues = true;
+      internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined) {
+    if (value === undefined) {
+      this._hostRewrite = undefined;
+      this._pathPrefixRewrite = undefined;
+    }
+    else {
+      this._hostRewrite = value.hostRewrite;
+      this._pathPrefixRewrite = value.pathPrefixRewrite;
+    }
+  }
+
   // host_rewrite - computed: false, optional: true, required: false
-  private _hostRewrite?: string | undefined; 
+  private _hostRewrite?: string; 
   public get hostRewrite() {
     return this.getStringAttribute('host_rewrite');
   }
-  public set hostRewrite(value: string | undefined) {
+  public set hostRewrite(value: string) {
     this._hostRewrite = value;
   }
   public resetHostRewrite() {
@@ -4224,15 +5414,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get hostRewriteInput() {
-    return this._hostRewrite
+    return this._hostRewrite;
   }
 
   // path_prefix_rewrite - computed: false, optional: true, required: false
-  private _pathPrefixRewrite?: string | undefined; 
+  private _pathPrefixRewrite?: string; 
   public get pathPrefixRewrite() {
     return this.getStringAttribute('path_prefix_rewrite');
   }
-  public set pathPrefixRewrite(value: string | undefined) {
+  public set pathPrefixRewrite(value: string) {
     this._pathPrefixRewrite = value;
   }
   public resetPathPrefixRewrite() {
@@ -4240,7 +5430,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get pathPrefixRewriteInput() {
-    return this._pathPrefixRewrite
+    return this._pathPrefixRewrite;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
@@ -4266,7 +5456,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4301,7 +5491,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4342,7 +5532,7 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4365,12 +5555,49 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -4378,15 +5605,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -4394,16 +5621,16 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -4411,16 +5638,16 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -4428,7 +5655,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices {
@@ -4459,7 +5686,7 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction;
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4516,7 +5743,7 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteAction {
   readonly weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[];
 }
 
-function computeUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference | ComputeUrlMapPathMatcherPathRuleRouteAction): any {
+export function computeUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference | ComputeUrlMapPathMatcherPathRuleRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4542,115 +5769,164 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy?: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined; 
-  private __corsPolicyOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
-  public get corsPolicy() {
-    return this.__corsPolicyOutput;
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._corsPolicy) {
+      hasAnyValues = true;
+      internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
+    }
+    if (this._faultInjectionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
+    }
+    if (this._requestMirrorPolicy) {
+      hasAnyValues = true;
+      internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
+    }
+    if (this._retryPolicy) {
+      hasAnyValues = true;
+      internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout?.internalValue;
+    }
+    if (this._urlRewrite) {
+      hasAnyValues = true;
+      internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
+    }
+    if (this._weightedBackendServices) {
+      hasAnyValues = true;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCorsPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined) {
-    this._corsPolicy = value;
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleRouteAction | undefined) {
+    if (value === undefined) {
+      this._corsPolicy.internalValue = undefined;
+      this._faultInjectionPolicy.internalValue = undefined;
+      this._requestMirrorPolicy.internalValue = undefined;
+      this._retryPolicy.internalValue = undefined;
+      this._timeout.internalValue = undefined;
+      this._urlRewrite.internalValue = undefined;
+      this._weightedBackendServices = undefined;
+    }
+    else {
+      this._corsPolicy.internalValue = value.corsPolicy;
+      this._faultInjectionPolicy.internalValue = value.faultInjectionPolicy;
+      this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
+      this._retryPolicy.internalValue = value.retryPolicy;
+      this._timeout.internalValue = value.timeout;
+      this._urlRewrite.internalValue = value.urlRewrite;
+      this._weightedBackendServices = value.weightedBackendServices;
+    }
+  }
+
+  // cors_policy - computed: false, optional: true, required: false
+  private _corsPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  public get corsPolicy() {
+    return this._corsPolicy;
+  }
+  public putCorsPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy) {
+    this._corsPolicy.internalValue = value;
   }
   public resetCorsPolicy() {
-    this._corsPolicy = undefined;
+    this._corsPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsPolicyInput() {
-    return this._corsPolicy
+    return this._corsPolicy.internalValue;
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined; 
-  private __faultInjectionPolicyOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
-    return this.__faultInjectionPolicyOutput;
+    return this._faultInjectionPolicy;
   }
-  public putFaultInjectionPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined) {
-    this._faultInjectionPolicy = value;
+  public putFaultInjectionPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy) {
+    this._faultInjectionPolicy.internalValue = value;
   }
   public resetFaultInjectionPolicy() {
-    this._faultInjectionPolicy = undefined;
+    this._faultInjectionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get faultInjectionPolicyInput() {
-    return this._faultInjectionPolicy
+    return this._faultInjectionPolicy.internalValue;
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy?: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined; 
-  private __requestMirrorPolicyOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
-    return this.__requestMirrorPolicyOutput;
+    return this._requestMirrorPolicy;
   }
-  public putRequestMirrorPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined) {
-    this._requestMirrorPolicy = value;
+  public putRequestMirrorPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy) {
+    this._requestMirrorPolicy.internalValue = value;
   }
   public resetRequestMirrorPolicy() {
-    this._requestMirrorPolicy = undefined;
+    this._requestMirrorPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestMirrorPolicyInput() {
-    return this._requestMirrorPolicy
+    return this._requestMirrorPolicy.internalValue;
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined; 
-  private __retryPolicyOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
   public get retryPolicy() {
-    return this.__retryPolicyOutput;
+    return this._retryPolicy;
   }
-  public putRetryPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined) {
-    this._retryPolicy = value;
+  public putRetryPolicy(value: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy) {
+    this._retryPolicy.internalValue = value;
   }
   public resetRetryPolicy() {
-    this._retryPolicy = undefined;
+    this._retryPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retryPolicyInput() {
-    return this._retryPolicy
+    return this._retryPolicy.internalValue;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: ComputeUrlMapPathMatcherPathRuleRouteActionTimeout | undefined; 
-  private __timeoutOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this as any, "timeout", true);
   public get timeout() {
-    return this.__timeoutOutput;
+    return this._timeout;
   }
-  public putTimeout(value: ComputeUrlMapPathMatcherPathRuleRouteActionTimeout | undefined) {
-    this._timeout = value;
+  public putTimeout(value: ComputeUrlMapPathMatcherPathRuleRouteActionTimeout) {
+    this._timeout.internalValue = value;
   }
   public resetTimeout() {
-    this._timeout = undefined;
+    this._timeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout.internalValue;
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite?: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined; 
-  private __urlRewriteOutput = new ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
   public get urlRewrite() {
-    return this.__urlRewriteOutput;
+    return this._urlRewrite;
   }
-  public putUrlRewrite(value: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined) {
-    this._urlRewrite = value;
+  public putUrlRewrite(value: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite) {
+    this._urlRewrite.internalValue = value;
   }
   public resetUrlRewrite() {
-    this._urlRewrite = undefined;
+    this._urlRewrite.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRewriteInput() {
-    return this._urlRewrite
+    return this._urlRewrite.internalValue;
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | undefined; 
+  private _weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[]; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('weighted_backend_services') as any;
   }
-  public set weightedBackendServices(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | undefined) {
+  public set weightedBackendServices(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[]) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -4658,7 +5934,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get weightedBackendServicesInput() {
-    return this._weightedBackendServices
+    return this._weightedBackendServices;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRuleUrlRedirect {
@@ -4730,7 +6006,7 @@ portion of the original URL is retained.
   readonly stripQuery: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference | ComputeUrlMapPathMatcherPathRuleUrlRedirect): any {
+export function computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference | ComputeUrlMapPathMatcherPathRuleUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4755,12 +6031,61 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherPathRuleUrlRedirect | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRedirect) {
+      hasAnyValues = true;
+      internalValueResult.hostRedirect = this._hostRedirect;
+    }
+    if (this._httpsRedirect) {
+      hasAnyValues = true;
+      internalValueResult.httpsRedirect = this._httpsRedirect;
+    }
+    if (this._pathRedirect) {
+      hasAnyValues = true;
+      internalValueResult.pathRedirect = this._pathRedirect;
+    }
+    if (this._prefixRedirect) {
+      hasAnyValues = true;
+      internalValueResult.prefixRedirect = this._prefixRedirect;
+    }
+    if (this._redirectResponseCode) {
+      hasAnyValues = true;
+      internalValueResult.redirectResponseCode = this._redirectResponseCode;
+    }
+    if (this._stripQuery) {
+      hasAnyValues = true;
+      internalValueResult.stripQuery = this._stripQuery;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherPathRuleUrlRedirect | undefined) {
+    if (value === undefined) {
+      this._hostRedirect = undefined;
+      this._httpsRedirect = undefined;
+      this._pathRedirect = undefined;
+      this._prefixRedirect = undefined;
+      this._redirectResponseCode = undefined;
+      this._stripQuery = undefined;
+    }
+    else {
+      this._hostRedirect = value.hostRedirect;
+      this._httpsRedirect = value.httpsRedirect;
+      this._pathRedirect = value.pathRedirect;
+      this._prefixRedirect = value.prefixRedirect;
+      this._redirectResponseCode = value.redirectResponseCode;
+      this._stripQuery = value.stripQuery;
+    }
+  }
+
   // host_redirect - computed: false, optional: true, required: false
-  private _hostRedirect?: string | undefined; 
+  private _hostRedirect?: string; 
   public get hostRedirect() {
     return this.getStringAttribute('host_redirect');
   }
-  public set hostRedirect(value: string | undefined) {
+  public set hostRedirect(value: string) {
     this._hostRedirect = value;
   }
   public resetHostRedirect() {
@@ -4768,15 +6093,15 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get hostRedirectInput() {
-    return this._hostRedirect
+    return this._hostRedirect;
   }
 
   // https_redirect - computed: false, optional: true, required: false
-  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
     return this.getBooleanAttribute('https_redirect') as any;
   }
-  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
   }
   public resetHttpsRedirect() {
@@ -4784,15 +6109,15 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get httpsRedirectInput() {
-    return this._httpsRedirect
+    return this._httpsRedirect;
   }
 
   // path_redirect - computed: false, optional: true, required: false
-  private _pathRedirect?: string | undefined; 
+  private _pathRedirect?: string; 
   public get pathRedirect() {
     return this.getStringAttribute('path_redirect');
   }
-  public set pathRedirect(value: string | undefined) {
+  public set pathRedirect(value: string) {
     this._pathRedirect = value;
   }
   public resetPathRedirect() {
@@ -4800,15 +6125,15 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get pathRedirectInput() {
-    return this._pathRedirect
+    return this._pathRedirect;
   }
 
   // prefix_redirect - computed: false, optional: true, required: false
-  private _prefixRedirect?: string | undefined; 
+  private _prefixRedirect?: string; 
   public get prefixRedirect() {
     return this.getStringAttribute('prefix_redirect');
   }
-  public set prefixRedirect(value: string | undefined) {
+  public set prefixRedirect(value: string) {
     this._prefixRedirect = value;
   }
   public resetPrefixRedirect() {
@@ -4816,15 +6141,15 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get prefixRedirectInput() {
-    return this._prefixRedirect
+    return this._prefixRedirect;
   }
 
   // redirect_response_code - computed: false, optional: true, required: false
-  private _redirectResponseCode?: string | undefined; 
+  private _redirectResponseCode?: string; 
   public get redirectResponseCode() {
     return this.getStringAttribute('redirect_response_code');
   }
-  public set redirectResponseCode(value: string | undefined) {
+  public set redirectResponseCode(value: string) {
     this._redirectResponseCode = value;
   }
   public resetRedirectResponseCode() {
@@ -4832,7 +6157,7 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get redirectResponseCodeInput() {
-    return this._redirectResponseCode
+    return this._redirectResponseCode;
   }
 
   // strip_query - computed: false, optional: false, required: true
@@ -4845,7 +6170,7 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get stripQueryInput() {
-    return this._stripQuery
+    return this._stripQuery;
   }
 }
 export interface ComputeUrlMapPathMatcherPathRule {
@@ -4878,7 +6203,7 @@ allowed here.
   readonly urlRedirect?: ComputeUrlMapPathMatcherPathRuleUrlRedirect;
 }
 
-function computeUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeUrlMapPathMatcherPathRule): any {
+export function computeUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeUrlMapPathMatcherPathRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4914,7 +6239,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4949,7 +6274,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4990,7 +6315,7 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference | ComputeUrlMapPathMatcherRouteRulesHeaderAction): any {
+export function computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference | ComputeUrlMapPathMatcherRouteRulesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5013,12 +6338,49 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -5026,15 +6388,15 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -5042,16 +6404,16 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -5059,16 +6421,16 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -5076,7 +6438,7 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
@@ -5094,7 +6456,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeM
   readonly rangeStart: number;
 }
 
-function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference | ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch): any {
+export function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference | ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5115,6 +6477,31 @@ export class ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._rangeEnd) {
+      hasAnyValues = true;
+      internalValueResult.rangeEnd = this._rangeEnd;
+    }
+    if (this._rangeStart) {
+      hasAnyValues = true;
+      internalValueResult.rangeStart = this._rangeStart;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined) {
+    if (value === undefined) {
+      this._rangeEnd = undefined;
+      this._rangeStart = undefined;
+    }
+    else {
+      this._rangeEnd = value.rangeEnd;
+      this._rangeStart = value.rangeStart;
+    }
+  }
+
   // range_end - computed: false, optional: false, required: true
   private _rangeEnd?: number; 
   public get rangeEnd() {
@@ -5125,7 +6512,7 @@ export class ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
   }
   // Temporarily expose input value. Use with caution.
   public get rangeEndInput() {
-    return this._rangeEnd
+    return this._rangeEnd;
   }
 
   // range_start - computed: false, optional: false, required: true
@@ -5138,7 +6525,7 @@ export class ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
   }
   // Temporarily expose input value. Use with caution.
   public get rangeStartInput() {
-    return this._rangeStart
+    return this._rangeStart;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches {
@@ -5209,7 +6596,7 @@ must be set.
   readonly rangeMatch?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch;
 }
 
-function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches): any {
+export function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5243,7 +6630,7 @@ length of 1024 characters.
   readonly value: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels): any {
+export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5274,7 +6661,7 @@ the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
   readonly filterLabels: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[];
 }
 
-function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters): any {
+export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5320,7 +6707,7 @@ exactMatch and regexMatch must be set.
   readonly regexMatch?: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches): any {
+export function computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5390,7 +6777,7 @@ fullPathMatch or regexMatch must be specified.
   readonly queryParameterMatches?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[];
 }
 
-function computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRules): any {
+export function computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5464,7 +6851,7 @@ translates to the content for the Access-Control-Max-Age header.
   readonly maxAge?: number;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5491,12 +6878,73 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowCredentials) {
+      hasAnyValues = true;
+      internalValueResult.allowCredentials = this._allowCredentials;
+    }
+    if (this._allowHeaders) {
+      hasAnyValues = true;
+      internalValueResult.allowHeaders = this._allowHeaders;
+    }
+    if (this._allowMethods) {
+      hasAnyValues = true;
+      internalValueResult.allowMethods = this._allowMethods;
+    }
+    if (this._allowOriginRegexes) {
+      hasAnyValues = true;
+      internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
+    }
+    if (this._allowOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowOrigins = this._allowOrigins;
+    }
+    if (this._disabled) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    if (this._exposeHeaders) {
+      hasAnyValues = true;
+      internalValueResult.exposeHeaders = this._exposeHeaders;
+    }
+    if (this._maxAge) {
+      hasAnyValues = true;
+      internalValueResult.maxAge = this._maxAge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined) {
+    if (value === undefined) {
+      this._allowCredentials = undefined;
+      this._allowHeaders = undefined;
+      this._allowMethods = undefined;
+      this._allowOriginRegexes = undefined;
+      this._allowOrigins = undefined;
+      this._disabled = undefined;
+      this._exposeHeaders = undefined;
+      this._maxAge = undefined;
+    }
+    else {
+      this._allowCredentials = value.allowCredentials;
+      this._allowHeaders = value.allowHeaders;
+      this._allowMethods = value.allowMethods;
+      this._allowOriginRegexes = value.allowOriginRegexes;
+      this._allowOrigins = value.allowOrigins;
+      this._disabled = value.disabled;
+      this._exposeHeaders = value.exposeHeaders;
+      this._maxAge = value.maxAge;
+    }
+  }
+
   // allow_credentials - computed: false, optional: true, required: false
-  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
     return this.getBooleanAttribute('allow_credentials') as any;
   }
-  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
   }
   public resetAllowCredentials() {
@@ -5504,15 +6952,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get allowCredentialsInput() {
-    return this._allowCredentials
+    return this._allowCredentials;
   }
 
   // allow_headers - computed: false, optional: true, required: false
-  private _allowHeaders?: string[] | undefined; 
+  private _allowHeaders?: string[]; 
   public get allowHeaders() {
     return this.getListAttribute('allow_headers');
   }
-  public set allowHeaders(value: string[] | undefined) {
+  public set allowHeaders(value: string[]) {
     this._allowHeaders = value;
   }
   public resetAllowHeaders() {
@@ -5520,15 +6968,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get allowHeadersInput() {
-    return this._allowHeaders
+    return this._allowHeaders;
   }
 
   // allow_methods - computed: false, optional: true, required: false
-  private _allowMethods?: string[] | undefined; 
+  private _allowMethods?: string[]; 
   public get allowMethods() {
     return this.getListAttribute('allow_methods');
   }
-  public set allowMethods(value: string[] | undefined) {
+  public set allowMethods(value: string[]) {
     this._allowMethods = value;
   }
   public resetAllowMethods() {
@@ -5536,15 +6984,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get allowMethodsInput() {
-    return this._allowMethods
+    return this._allowMethods;
   }
 
   // allow_origin_regexes - computed: false, optional: true, required: false
-  private _allowOriginRegexes?: string[] | undefined; 
+  private _allowOriginRegexes?: string[]; 
   public get allowOriginRegexes() {
     return this.getListAttribute('allow_origin_regexes');
   }
-  public set allowOriginRegexes(value: string[] | undefined) {
+  public set allowOriginRegexes(value: string[]) {
     this._allowOriginRegexes = value;
   }
   public resetAllowOriginRegexes() {
@@ -5552,15 +7000,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginRegexesInput() {
-    return this._allowOriginRegexes
+    return this._allowOriginRegexes;
   }
 
   // allow_origins - computed: false, optional: true, required: false
-  private _allowOrigins?: string[] | undefined; 
+  private _allowOrigins?: string[]; 
   public get allowOrigins() {
     return this.getListAttribute('allow_origins');
   }
-  public set allowOrigins(value: string[] | undefined) {
+  public set allowOrigins(value: string[]) {
     this._allowOrigins = value;
   }
   public resetAllowOrigins() {
@@ -5568,15 +7016,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginsInput() {
-    return this._allowOrigins
+    return this._allowOrigins;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -5584,15 +7032,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // expose_headers - computed: false, optional: true, required: false
-  private _exposeHeaders?: string[] | undefined; 
+  private _exposeHeaders?: string[]; 
   public get exposeHeaders() {
     return this.getListAttribute('expose_headers');
   }
-  public set exposeHeaders(value: string[] | undefined) {
+  public set exposeHeaders(value: string[]) {
     this._exposeHeaders = value;
   }
   public resetExposeHeaders() {
@@ -5600,15 +7048,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get exposeHeadersInput() {
-    return this._exposeHeaders
+    return this._exposeHeaders;
   }
 
   // max_age - computed: false, optional: true, required: false
-  private _maxAge?: number | undefined; 
+  private _maxAge?: number; 
   public get maxAge() {
     return this.getNumberAttribute('max_age');
   }
-  public set maxAge(value: number | undefined) {
+  public set maxAge(value: number) {
     this._maxAge = value;
   }
   public resetMaxAge() {
@@ -5616,7 +7064,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInput() {
-    return this._maxAge
+    return this._maxAge;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort {
@@ -5637,7 +7085,7 @@ inclusive.
   readonly percentage?: number;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5658,12 +7106,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._httpStatus) {
+      hasAnyValues = true;
+      internalValueResult.httpStatus = this._httpStatus;
+    }
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined) {
+    if (value === undefined) {
+      this._httpStatus = undefined;
+      this._percentage = undefined;
+    }
+    else {
+      this._httpStatus = value.httpStatus;
+      this._percentage = value.percentage;
+    }
+  }
+
   // http_status - computed: false, optional: true, required: false
-  private _httpStatus?: number | undefined; 
+  private _httpStatus?: number; 
   public get httpStatus() {
     return this.getNumberAttribute('http_status');
   }
-  public set httpStatus(value: number | undefined) {
+  public set httpStatus(value: number) {
     this._httpStatus = value;
   }
   public resetHttpStatus() {
@@ -5671,15 +7144,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAb
   }
   // Temporarily expose input value. Use with caution.
   public get httpStatusInput() {
-    return this._httpStatus
+    return this._httpStatus;
   }
 
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -5687,7 +7160,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAb
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay {
@@ -5708,7 +7181,7 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5729,12 +7202,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -5742,7 +7240,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -5755,7 +7253,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay {
@@ -5775,7 +7273,7 @@ be introduced as part of fault injection. The value must be between 0.0 and
   readonly fixedDelay?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5796,12 +7294,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._percentage) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    if (this._fixedDelay) {
+      hasAnyValues = true;
+      internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined) {
+    if (value === undefined) {
+      this._percentage = undefined;
+      this._fixedDelay.internalValue = undefined;
+    }
+    else {
+      this._percentage = value.percentage;
+      this._fixedDelay.internalValue = value.fixedDelay;
+    }
+  }
+
   // percentage - computed: false, optional: true, required: false
-  private _percentage?: number | undefined; 
+  private _percentage?: number; 
   public get percentage() {
     return this.getNumberAttribute('percentage');
   }
-  public set percentage(value: number | undefined) {
+  public set percentage(value: number) {
     this._percentage = value;
   }
   public resetPercentage() {
@@ -5809,24 +7332,23 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   }
   // Temporarily expose input value. Use with caution.
   public get percentageInput() {
-    return this._percentage
+    return this._percentage;
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined; 
-  private __fixedDelayOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
   public get fixedDelay() {
-    return this.__fixedDelayOutput;
+    return this._fixedDelay;
   }
-  public putFixedDelay(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
-    this._fixedDelay = value;
+  public putFixedDelay(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay) {
+    this._fixedDelay.internalValue = value;
   }
   public resetFixedDelay() {
-    this._fixedDelay = undefined;
+    this._fixedDelay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get fixedDelayInput() {
-    return this._fixedDelay
+    return this._fixedDelay.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
@@ -5844,7 +7366,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPoli
   readonly delay?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5865,38 +7387,61 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // abort - computed: false, optional: true, required: false
-  private _abort?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined; 
-  private __abortOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
-  public get abort() {
-    return this.__abortOutput;
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._abort) {
+      hasAnyValues = true;
+      internalValueResult.abort = this._abort?.internalValue;
+    }
+    if (this._delay) {
+      hasAnyValues = true;
+      internalValueResult.delay = this._delay?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAbort(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined) {
-    this._abort = value;
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined) {
+    if (value === undefined) {
+      this._abort.internalValue = undefined;
+      this._delay.internalValue = undefined;
+    }
+    else {
+      this._abort.internalValue = value.abort;
+      this._delay.internalValue = value.delay;
+    }
+  }
+
+  // abort - computed: false, optional: true, required: false
+  private _abort = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  public get abort() {
+    return this._abort;
+  }
+  public putAbort(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort) {
+    this._abort.internalValue = value;
   }
   public resetAbort() {
-    this._abort = undefined;
+    this._abort.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get abortInput() {
-    return this._abort
+    return this._abort.internalValue;
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined; 
-  private __delayOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
   public get delay() {
-    return this.__delayOutput;
+    return this._delay;
   }
-  public putDelay(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined) {
-    this._delay = value;
+  public putDelay(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay) {
+    this._delay.internalValue = value;
   }
   public resetDelay() {
-    this._delay = undefined;
+    this._delay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get delayInput() {
-    return this._delay
+    return this._delay.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
@@ -5908,7 +7453,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolic
   readonly backendService: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5928,6 +7473,25 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._backendService) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined) {
+    if (value === undefined) {
+      this._backendService = undefined;
+    }
+    else {
+      this._backendService = value.backendService;
+    }
+  }
+
   // backend_service - computed: false, optional: false, required: true
   private _backendService?: string; 
   public get backendService() {
@@ -5938,7 +7502,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOut
   }
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
-    return this._backendService
+    return this._backendService;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout {
@@ -5959,7 +7523,7 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -5980,12 +7544,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeo
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -5993,7 +7582,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeo
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -6006,7 +7595,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeo
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
@@ -6051,7 +7640,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
   readonly perTryTimeout?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6073,6 +7662,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._numRetries) {
+      hasAnyValues = true;
+      internalValueResult.numRetries = this._numRetries;
+    }
+    if (this._retryConditions) {
+      hasAnyValues = true;
+      internalValueResult.retryConditions = this._retryConditions;
+    }
+    if (this._perTryTimeout) {
+      hasAnyValues = true;
+      internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined) {
+    if (value === undefined) {
+      this._numRetries = undefined;
+      this._retryConditions = undefined;
+      this._perTryTimeout.internalValue = undefined;
+    }
+    else {
+      this._numRetries = value.numRetries;
+      this._retryConditions = value.retryConditions;
+      this._perTryTimeout.internalValue = value.perTryTimeout;
+    }
+  }
+
   // num_retries - computed: false, optional: false, required: true
   private _numRetries?: number; 
   public get numRetries() {
@@ -6083,15 +7703,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get numRetriesInput() {
-    return this._numRetries
+    return this._numRetries;
   }
 
   // retry_conditions - computed: false, optional: true, required: false
-  private _retryConditions?: string[] | undefined; 
+  private _retryConditions?: string[]; 
   public get retryConditions() {
     return this.getListAttribute('retry_conditions');
   }
-  public set retryConditions(value: string[] | undefined) {
+  public set retryConditions(value: string[]) {
     this._retryConditions = value;
   }
   public resetRetryConditions() {
@@ -6099,24 +7719,23 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get retryConditionsInput() {
-    return this._retryConditions
+    return this._retryConditions;
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined; 
-  private __perTryTimeoutOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
   public get perTryTimeout() {
-    return this.__perTryTimeoutOutput;
+    return this._perTryTimeout;
   }
-  public putPerTryTimeout(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined) {
-    this._perTryTimeout = value;
+  public putPerTryTimeout(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout) {
+    this._perTryTimeout.internalValue = value;
   }
   public resetPerTryTimeout() {
-    this._perTryTimeout = undefined;
+    this._perTryTimeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get perTryTimeoutInput() {
-    return this._perTryTimeout
+    return this._perTryTimeout.internalValue;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout {
@@ -6137,7 +7756,7 @@ inclusive.
   readonly seconds: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6158,12 +7777,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -6171,7 +7815,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -6184,7 +7828,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite {
@@ -6206,7 +7850,7 @@ be between 1 and 1024 characters.
   readonly pathPrefixRewrite?: string;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6227,12 +7871,37 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRewrite) {
+      hasAnyValues = true;
+      internalValueResult.hostRewrite = this._hostRewrite;
+    }
+    if (this._pathPrefixRewrite) {
+      hasAnyValues = true;
+      internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined) {
+    if (value === undefined) {
+      this._hostRewrite = undefined;
+      this._pathPrefixRewrite = undefined;
+    }
+    else {
+      this._hostRewrite = value.hostRewrite;
+      this._pathPrefixRewrite = value.pathPrefixRewrite;
+    }
+  }
+
   // host_rewrite - computed: false, optional: true, required: false
-  private _hostRewrite?: string | undefined; 
+  private _hostRewrite?: string; 
   public get hostRewrite() {
     return this.getStringAttribute('host_rewrite');
   }
-  public set hostRewrite(value: string | undefined) {
+  public set hostRewrite(value: string) {
     this._hostRewrite = value;
   }
   public resetHostRewrite() {
@@ -6240,15 +7909,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get hostRewriteInput() {
-    return this._hostRewrite
+    return this._hostRewrite;
   }
 
   // path_prefix_rewrite - computed: false, optional: true, required: false
-  private _pathPrefixRewrite?: string | undefined; 
+  private _pathPrefixRewrite?: string; 
   public get pathPrefixRewrite() {
     return this.getStringAttribute('path_prefix_rewrite');
   }
-  public set pathPrefixRewrite(value: string | undefined) {
+  public set pathPrefixRewrite(value: string) {
     this._pathPrefixRewrite = value;
   }
   public resetPathPrefixRewrite() {
@@ -6256,7 +7925,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get pathPrefixRewriteInput() {
-    return this._pathPrefixRewrite
+    return this._pathPrefixRewrite;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
@@ -6282,7 +7951,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6317,7 +7986,7 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6358,7 +8027,7 @@ prior to sending the response back to the client.
   readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6381,12 +8050,49 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+    }
+    if (this._responseHeadersToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd = undefined;
+      this._responseHeadersToAdd = undefined;
+    }
+    else {
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd = value.requestHeadersToAdd;
+      this._responseHeadersToAdd = value.responseHeadersToAdd;
+    }
+  }
+
   // request_headers_to_remove - computed: false, optional: true, required: false
-  private _requestHeadersToRemove?: string[] | undefined; 
+  private _requestHeadersToRemove?: string[]; 
   public get requestHeadersToRemove() {
     return this.getListAttribute('request_headers_to_remove');
   }
-  public set requestHeadersToRemove(value: string[] | undefined) {
+  public set requestHeadersToRemove(value: string[]) {
     this._requestHeadersToRemove = value;
   }
   public resetRequestHeadersToRemove() {
@@ -6394,15 +8100,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToRemoveInput() {
-    return this._requestHeadersToRemove
+    return this._requestHeadersToRemove;
   }
 
   // response_headers_to_remove - computed: false, optional: true, required: false
-  private _responseHeadersToRemove?: string[] | undefined; 
+  private _responseHeadersToRemove?: string[]; 
   public get responseHeadersToRemove() {
     return this.getListAttribute('response_headers_to_remove');
   }
-  public set responseHeadersToRemove(value: string[] | undefined) {
+  public set responseHeadersToRemove(value: string[]) {
     this._responseHeadersToRemove = value;
   }
   public resetResponseHeadersToRemove() {
@@ -6410,16 +8116,16 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToRemoveInput() {
-    return this._responseHeadersToRemove
+    return this._responseHeadersToRemove;
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_headers_to_add') as any;
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | undefined) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -6427,16 +8133,16 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd
+    return this._requestHeadersToAdd;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_headers_to_add') as any;
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | undefined) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -6444,7 +8150,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd
+    return this._responseHeadersToAdd;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices {
@@ -6475,7 +8181,7 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction;
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6532,7 +8238,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteAction {
   readonly weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[];
 }
 
-function computeUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteAction): any {
+export function computeUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6558,115 +8264,164 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy?: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined; 
-  private __corsPolicyOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
-  public get corsPolicy() {
-    return this.__corsPolicyOutput;
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._corsPolicy) {
+      hasAnyValues = true;
+      internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
+    }
+    if (this._faultInjectionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
+    }
+    if (this._requestMirrorPolicy) {
+      hasAnyValues = true;
+      internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
+    }
+    if (this._retryPolicy) {
+      hasAnyValues = true;
+      internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout?.internalValue;
+    }
+    if (this._urlRewrite) {
+      hasAnyValues = true;
+      internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
+    }
+    if (this._weightedBackendServices) {
+      hasAnyValues = true;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCorsPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined) {
-    this._corsPolicy = value;
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesRouteAction | undefined) {
+    if (value === undefined) {
+      this._corsPolicy.internalValue = undefined;
+      this._faultInjectionPolicy.internalValue = undefined;
+      this._requestMirrorPolicy.internalValue = undefined;
+      this._retryPolicy.internalValue = undefined;
+      this._timeout.internalValue = undefined;
+      this._urlRewrite.internalValue = undefined;
+      this._weightedBackendServices = undefined;
+    }
+    else {
+      this._corsPolicy.internalValue = value.corsPolicy;
+      this._faultInjectionPolicy.internalValue = value.faultInjectionPolicy;
+      this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
+      this._retryPolicy.internalValue = value.retryPolicy;
+      this._timeout.internalValue = value.timeout;
+      this._urlRewrite.internalValue = value.urlRewrite;
+      this._weightedBackendServices = value.weightedBackendServices;
+    }
+  }
+
+  // cors_policy - computed: false, optional: true, required: false
+  private _corsPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  public get corsPolicy() {
+    return this._corsPolicy;
+  }
+  public putCorsPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy) {
+    this._corsPolicy.internalValue = value;
   }
   public resetCorsPolicy() {
-    this._corsPolicy = undefined;
+    this._corsPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsPolicyInput() {
-    return this._corsPolicy
+    return this._corsPolicy.internalValue;
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined; 
-  private __faultInjectionPolicyOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
-    return this.__faultInjectionPolicyOutput;
+    return this._faultInjectionPolicy;
   }
-  public putFaultInjectionPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined) {
-    this._faultInjectionPolicy = value;
+  public putFaultInjectionPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy) {
+    this._faultInjectionPolicy.internalValue = value;
   }
   public resetFaultInjectionPolicy() {
-    this._faultInjectionPolicy = undefined;
+    this._faultInjectionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get faultInjectionPolicyInput() {
-    return this._faultInjectionPolicy
+    return this._faultInjectionPolicy.internalValue;
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy?: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined; 
-  private __requestMirrorPolicyOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
-    return this.__requestMirrorPolicyOutput;
+    return this._requestMirrorPolicy;
   }
-  public putRequestMirrorPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined) {
-    this._requestMirrorPolicy = value;
+  public putRequestMirrorPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy) {
+    this._requestMirrorPolicy.internalValue = value;
   }
   public resetRequestMirrorPolicy() {
-    this._requestMirrorPolicy = undefined;
+    this._requestMirrorPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestMirrorPolicyInput() {
-    return this._requestMirrorPolicy
+    return this._requestMirrorPolicy.internalValue;
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined; 
-  private __retryPolicyOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
   public get retryPolicy() {
-    return this.__retryPolicyOutput;
+    return this._retryPolicy;
   }
-  public putRetryPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined) {
-    this._retryPolicy = value;
+  public putRetryPolicy(value: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy) {
+    this._retryPolicy.internalValue = value;
   }
   public resetRetryPolicy() {
-    this._retryPolicy = undefined;
+    this._retryPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retryPolicyInput() {
-    return this._retryPolicy
+    return this._retryPolicy.internalValue;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined; 
-  private __timeoutOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this as any, "timeout", true);
   public get timeout() {
-    return this.__timeoutOutput;
+    return this._timeout;
   }
-  public putTimeout(value: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined) {
-    this._timeout = value;
+  public putTimeout(value: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout) {
+    this._timeout.internalValue = value;
   }
   public resetTimeout() {
-    this._timeout = undefined;
+    this._timeout.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout.internalValue;
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite?: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined; 
-  private __urlRewriteOutput = new ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
   public get urlRewrite() {
-    return this.__urlRewriteOutput;
+    return this._urlRewrite;
   }
-  public putUrlRewrite(value: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined) {
-    this._urlRewrite = value;
+  public putUrlRewrite(value: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite) {
+    this._urlRewrite.internalValue = value;
   }
   public resetUrlRewrite() {
-    this._urlRewrite = undefined;
+    this._urlRewrite.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRewriteInput() {
-    return this._urlRewrite
+    return this._urlRewrite.internalValue;
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | undefined; 
+  private _weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[]; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('weighted_backend_services') as any;
   }
-  public set weightedBackendServices(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | undefined) {
+  public set weightedBackendServices(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[]) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -6674,7 +8429,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get weightedBackendServicesInput() {
-    return this._weightedBackendServices
+    return this._weightedBackendServices;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRulesUrlRedirect {
@@ -6735,7 +8490,7 @@ original URL is retained. Defaults to false.
   readonly stripQuery?: boolean | cdktf.IResolvable;
 }
 
-function computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference | ComputeUrlMapPathMatcherRouteRulesUrlRedirect): any {
+export function computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference | ComputeUrlMapPathMatcherRouteRulesUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6760,12 +8515,61 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapPathMatcherRouteRulesUrlRedirect | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRedirect) {
+      hasAnyValues = true;
+      internalValueResult.hostRedirect = this._hostRedirect;
+    }
+    if (this._httpsRedirect) {
+      hasAnyValues = true;
+      internalValueResult.httpsRedirect = this._httpsRedirect;
+    }
+    if (this._pathRedirect) {
+      hasAnyValues = true;
+      internalValueResult.pathRedirect = this._pathRedirect;
+    }
+    if (this._prefixRedirect) {
+      hasAnyValues = true;
+      internalValueResult.prefixRedirect = this._prefixRedirect;
+    }
+    if (this._redirectResponseCode) {
+      hasAnyValues = true;
+      internalValueResult.redirectResponseCode = this._redirectResponseCode;
+    }
+    if (this._stripQuery) {
+      hasAnyValues = true;
+      internalValueResult.stripQuery = this._stripQuery;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapPathMatcherRouteRulesUrlRedirect | undefined) {
+    if (value === undefined) {
+      this._hostRedirect = undefined;
+      this._httpsRedirect = undefined;
+      this._pathRedirect = undefined;
+      this._prefixRedirect = undefined;
+      this._redirectResponseCode = undefined;
+      this._stripQuery = undefined;
+    }
+    else {
+      this._hostRedirect = value.hostRedirect;
+      this._httpsRedirect = value.httpsRedirect;
+      this._pathRedirect = value.pathRedirect;
+      this._prefixRedirect = value.prefixRedirect;
+      this._redirectResponseCode = value.redirectResponseCode;
+      this._stripQuery = value.stripQuery;
+    }
+  }
+
   // host_redirect - computed: false, optional: true, required: false
-  private _hostRedirect?: string | undefined; 
+  private _hostRedirect?: string; 
   public get hostRedirect() {
     return this.getStringAttribute('host_redirect');
   }
-  public set hostRedirect(value: string | undefined) {
+  public set hostRedirect(value: string) {
     this._hostRedirect = value;
   }
   public resetHostRedirect() {
@@ -6773,15 +8577,15 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get hostRedirectInput() {
-    return this._hostRedirect
+    return this._hostRedirect;
   }
 
   // https_redirect - computed: false, optional: true, required: false
-  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
     return this.getBooleanAttribute('https_redirect') as any;
   }
-  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
   }
   public resetHttpsRedirect() {
@@ -6789,15 +8593,15 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get httpsRedirectInput() {
-    return this._httpsRedirect
+    return this._httpsRedirect;
   }
 
   // path_redirect - computed: false, optional: true, required: false
-  private _pathRedirect?: string | undefined; 
+  private _pathRedirect?: string; 
   public get pathRedirect() {
     return this.getStringAttribute('path_redirect');
   }
-  public set pathRedirect(value: string | undefined) {
+  public set pathRedirect(value: string) {
     this._pathRedirect = value;
   }
   public resetPathRedirect() {
@@ -6805,15 +8609,15 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get pathRedirectInput() {
-    return this._pathRedirect
+    return this._pathRedirect;
   }
 
   // prefix_redirect - computed: false, optional: true, required: false
-  private _prefixRedirect?: string | undefined; 
+  private _prefixRedirect?: string; 
   public get prefixRedirect() {
     return this.getStringAttribute('prefix_redirect');
   }
-  public set prefixRedirect(value: string | undefined) {
+  public set prefixRedirect(value: string) {
     this._prefixRedirect = value;
   }
   public resetPrefixRedirect() {
@@ -6821,15 +8625,15 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get prefixRedirectInput() {
-    return this._prefixRedirect
+    return this._prefixRedirect;
   }
 
   // redirect_response_code - computed: false, optional: true, required: false
-  private _redirectResponseCode?: string | undefined; 
+  private _redirectResponseCode?: string; 
   public get redirectResponseCode() {
     return this.getStringAttribute('redirect_response_code');
   }
-  public set redirectResponseCode(value: string | undefined) {
+  public set redirectResponseCode(value: string) {
     this._redirectResponseCode = value;
   }
   public resetRedirectResponseCode() {
@@ -6837,15 +8641,15 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get redirectResponseCodeInput() {
-    return this._redirectResponseCode
+    return this._redirectResponseCode;
   }
 
   // strip_query - computed: false, optional: true, required: false
-  private _stripQuery?: boolean | cdktf.IResolvable | undefined; 
+  private _stripQuery?: boolean | cdktf.IResolvable; 
   public get stripQuery() {
     return this.getBooleanAttribute('strip_query') as any;
   }
-  public set stripQuery(value: boolean | cdktf.IResolvable | undefined) {
+  public set stripQuery(value: boolean | cdktf.IResolvable) {
     this._stripQuery = value;
   }
   public resetStripQuery() {
@@ -6853,7 +8657,7 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get stripQueryInput() {
-    return this._stripQuery
+    return this._stripQuery;
   }
 }
 export interface ComputeUrlMapPathMatcherRouteRules {
@@ -6915,7 +8719,7 @@ service or routeAction.weightedBackendService must be set.
   readonly urlRedirect?: ComputeUrlMapPathMatcherRouteRulesUrlRedirect;
 }
 
-function computeUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRules): any {
+export function computeUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -6982,7 +8786,7 @@ the resource.
   readonly routeRules?: ComputeUrlMapPathMatcherRouteRules[];
 }
 
-function computeUrlMapPathMatcherToTerraform(struct?: ComputeUrlMapPathMatcher): any {
+export function computeUrlMapPathMatcherToTerraform(struct?: ComputeUrlMapPathMatcher): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -7026,7 +8830,7 @@ export interface ComputeUrlMapTest {
   readonly service: string;
 }
 
-function computeUrlMapTestToTerraform(struct?: ComputeUrlMapTest): any {
+export function computeUrlMapTestToTerraform(struct?: ComputeUrlMapTest): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -7054,7 +8858,7 @@ export interface ComputeUrlMapTimeouts {
   readonly update?: string;
 }
 
-function computeUrlMapTimeoutsToTerraform(struct?: ComputeUrlMapTimeoutsOutputReference | ComputeUrlMapTimeouts): any {
+export function computeUrlMapTimeoutsToTerraform(struct?: ComputeUrlMapTimeoutsOutputReference | ComputeUrlMapTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -7076,12 +8880,43 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeUrlMapTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeUrlMapTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -7089,15 +8924,15 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -7105,15 +8940,15 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -7121,7 +8956,7 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -7161,13 +8996,13 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._project = config.project;
-    this._defaultRouteAction = config.defaultRouteAction;
-    this._defaultUrlRedirect = config.defaultUrlRedirect;
-    this._headerAction = config.headerAction;
+    this._defaultRouteAction.internalValue = config.defaultRouteAction;
+    this._defaultUrlRedirect.internalValue = config.defaultUrlRedirect;
+    this._headerAction.internalValue = config.headerAction;
     this._hostRule = config.hostRule;
     this._pathMatcher = config.pathMatcher;
     this._test = config.test;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -7180,11 +9015,11 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // default_service - computed: false, optional: true, required: false
-  private _defaultService?: string | undefined; 
+  private _defaultService?: string; 
   public get defaultService() {
     return this.getStringAttribute('default_service');
   }
-  public set defaultService(value: string | undefined) {
+  public set defaultService(value: string) {
     this._defaultService = value;
   }
   public resetDefaultService() {
@@ -7192,15 +9027,15 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultServiceInput() {
-    return this._defaultService
+    return this._defaultService;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -7208,7 +9043,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -7236,15 +9071,15 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -7252,7 +9087,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -7261,63 +9096,60 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // default_route_action - computed: false, optional: true, required: false
-  private _defaultRouteAction?: ComputeUrlMapDefaultRouteAction | undefined; 
-  private __defaultRouteActionOutput = new ComputeUrlMapDefaultRouteActionOutputReference(this as any, "default_route_action", true);
+  private _defaultRouteAction = new ComputeUrlMapDefaultRouteActionOutputReference(this as any, "default_route_action", true);
   public get defaultRouteAction() {
-    return this.__defaultRouteActionOutput;
+    return this._defaultRouteAction;
   }
-  public putDefaultRouteAction(value: ComputeUrlMapDefaultRouteAction | undefined) {
-    this._defaultRouteAction = value;
+  public putDefaultRouteAction(value: ComputeUrlMapDefaultRouteAction) {
+    this._defaultRouteAction.internalValue = value;
   }
   public resetDefaultRouteAction() {
-    this._defaultRouteAction = undefined;
+    this._defaultRouteAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultRouteActionInput() {
-    return this._defaultRouteAction
+    return this._defaultRouteAction.internalValue;
   }
 
   // default_url_redirect - computed: false, optional: true, required: false
-  private _defaultUrlRedirect?: ComputeUrlMapDefaultUrlRedirect | undefined; 
-  private __defaultUrlRedirectOutput = new ComputeUrlMapDefaultUrlRedirectOutputReference(this as any, "default_url_redirect", true);
+  private _defaultUrlRedirect = new ComputeUrlMapDefaultUrlRedirectOutputReference(this as any, "default_url_redirect", true);
   public get defaultUrlRedirect() {
-    return this.__defaultUrlRedirectOutput;
+    return this._defaultUrlRedirect;
   }
-  public putDefaultUrlRedirect(value: ComputeUrlMapDefaultUrlRedirect | undefined) {
-    this._defaultUrlRedirect = value;
+  public putDefaultUrlRedirect(value: ComputeUrlMapDefaultUrlRedirect) {
+    this._defaultUrlRedirect.internalValue = value;
   }
   public resetDefaultUrlRedirect() {
-    this._defaultUrlRedirect = undefined;
+    this._defaultUrlRedirect.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultUrlRedirectInput() {
-    return this._defaultUrlRedirect
+    return this._defaultUrlRedirect.internalValue;
   }
 
   // header_action - computed: false, optional: true, required: false
-  private _headerAction?: ComputeUrlMapHeaderAction | undefined; 
-  private __headerActionOutput = new ComputeUrlMapHeaderActionOutputReference(this as any, "header_action", true);
+  private _headerAction = new ComputeUrlMapHeaderActionOutputReference(this as any, "header_action", true);
   public get headerAction() {
-    return this.__headerActionOutput;
+    return this._headerAction;
   }
-  public putHeaderAction(value: ComputeUrlMapHeaderAction | undefined) {
-    this._headerAction = value;
+  public putHeaderAction(value: ComputeUrlMapHeaderAction) {
+    this._headerAction.internalValue = value;
   }
   public resetHeaderAction() {
-    this._headerAction = undefined;
+    this._headerAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get headerActionInput() {
-    return this._headerAction
+    return this._headerAction.internalValue;
   }
 
   // host_rule - computed: false, optional: true, required: false
-  private _hostRule?: ComputeUrlMapHostRule[] | undefined; 
+  private _hostRule?: ComputeUrlMapHostRule[]; 
   public get hostRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('host_rule') as any;
   }
-  public set hostRule(value: ComputeUrlMapHostRule[] | undefined) {
+  public set hostRule(value: ComputeUrlMapHostRule[]) {
     this._hostRule = value;
   }
   public resetHostRule() {
@@ -7325,16 +9157,16 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get hostRuleInput() {
-    return this._hostRule
+    return this._hostRule;
   }
 
   // path_matcher - computed: false, optional: true, required: false
-  private _pathMatcher?: ComputeUrlMapPathMatcher[] | undefined; 
+  private _pathMatcher?: ComputeUrlMapPathMatcher[]; 
   public get pathMatcher() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('path_matcher') as any;
   }
-  public set pathMatcher(value: ComputeUrlMapPathMatcher[] | undefined) {
+  public set pathMatcher(value: ComputeUrlMapPathMatcher[]) {
     this._pathMatcher = value;
   }
   public resetPathMatcher() {
@@ -7342,16 +9174,16 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get pathMatcherInput() {
-    return this._pathMatcher
+    return this._pathMatcher;
   }
 
   // test - computed: false, optional: true, required: false
-  private _test?: ComputeUrlMapTest[] | undefined; 
+  private _test?: ComputeUrlMapTest[]; 
   public get test() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('test') as any;
   }
-  public set test(value: ComputeUrlMapTest[] | undefined) {
+  public set test(value: ComputeUrlMapTest[]) {
     this._test = value;
   }
   public resetTest() {
@@ -7359,24 +9191,23 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get testInput() {
-    return this._test
+    return this._test;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeUrlMapTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeUrlMapTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeUrlMapTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeUrlMapTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeUrlMapTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -7389,13 +9220,13 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      default_route_action: computeUrlMapDefaultRouteActionToTerraform(this._defaultRouteAction),
-      default_url_redirect: computeUrlMapDefaultUrlRedirectToTerraform(this._defaultUrlRedirect),
-      header_action: computeUrlMapHeaderActionToTerraform(this._headerAction),
+      default_route_action: computeUrlMapDefaultRouteActionToTerraform(this._defaultRouteAction.internalValue),
+      default_url_redirect: computeUrlMapDefaultUrlRedirectToTerraform(this._defaultUrlRedirect.internalValue),
+      header_action: computeUrlMapHeaderActionToTerraform(this._headerAction.internalValue),
       host_rule: cdktf.listMapper(computeUrlMapHostRuleToTerraform)(this._hostRule),
       path_matcher: cdktf.listMapper(computeUrlMapPathMatcherToTerraform)(this._pathMatcher),
       test: cdktf.listMapper(computeUrlMapTestToTerraform)(this._test),
-      timeouts: computeUrlMapTimeoutsToTerraform(this._timeouts),
+      timeouts: computeUrlMapTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

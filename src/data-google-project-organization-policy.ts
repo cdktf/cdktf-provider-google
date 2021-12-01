@@ -138,7 +138,7 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get constraintInput() {
-    return this._constraint
+    return this._constraint;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -166,7 +166,7 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // restore_policy - computed: true, optional: false, required: false

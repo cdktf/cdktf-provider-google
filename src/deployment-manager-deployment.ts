@@ -91,7 +91,7 @@ export interface DeploymentManagerDeploymentLabels {
   readonly value?: string;
 }
 
-function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManagerDeploymentLabels): any {
+export function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManagerDeploymentLabels): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -111,7 +111,7 @@ export interface DeploymentManagerDeploymentTargetConfig {
   readonly content: string;
 }
 
-function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentManagerDeploymentTargetConfigOutputReference | DeploymentManagerDeploymentTargetConfig): any {
+export function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentManagerDeploymentTargetConfigOutputReference | DeploymentManagerDeploymentTargetConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -131,6 +131,25 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DeploymentManagerDeploymentTargetConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._content) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeploymentManagerDeploymentTargetConfig | undefined) {
+    if (value === undefined) {
+      this._content = undefined;
+    }
+    else {
+      this._content = value.content;
+    }
+  }
+
   // content - computed: false, optional: false, required: true
   private _content?: string; 
   public get content() {
@@ -141,7 +160,7 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get contentInput() {
-    return this._content
+    return this._content;
   }
 }
 export interface DeploymentManagerDeploymentTargetImports {
@@ -160,7 +179,7 @@ configuration.
   readonly name?: string;
 }
 
-function deploymentManagerDeploymentTargetImportsToTerraform(struct?: DeploymentManagerDeploymentTargetImports): any {
+export function deploymentManagerDeploymentTargetImportsToTerraform(struct?: DeploymentManagerDeploymentTargetImports): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -186,7 +205,7 @@ export interface DeploymentManagerDeploymentTarget {
   readonly imports?: DeploymentManagerDeploymentTargetImports[];
 }
 
-function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManagerDeploymentTargetOutputReference | DeploymentManagerDeploymentTarget): any {
+export function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManagerDeploymentTargetOutputReference | DeploymentManagerDeploymentTarget): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -207,27 +226,51 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DeploymentManagerDeploymentTarget | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._config) {
+      hasAnyValues = true;
+      internalValueResult.config = this._config?.internalValue;
+    }
+    if (this._imports) {
+      hasAnyValues = true;
+      internalValueResult.imports = this._imports;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeploymentManagerDeploymentTarget | undefined) {
+    if (value === undefined) {
+      this._config.internalValue = undefined;
+      this._imports = undefined;
+    }
+    else {
+      this._config.internalValue = value.config;
+      this._imports = value.imports;
+    }
+  }
+
   // config - computed: false, optional: false, required: true
-  private _config?: DeploymentManagerDeploymentTargetConfig; 
-  private __configOutput = new DeploymentManagerDeploymentTargetConfigOutputReference(this as any, "config", true);
+  private _config = new DeploymentManagerDeploymentTargetConfigOutputReference(this as any, "config", true);
   public get config() {
-    return this.__configOutput;
+    return this._config;
   }
   public putConfig(value: DeploymentManagerDeploymentTargetConfig) {
-    this._config = value;
+    this._config.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get configInput() {
-    return this._config
+    return this._config.internalValue;
   }
 
   // imports - computed: false, optional: true, required: false
-  private _imports?: DeploymentManagerDeploymentTargetImports[] | undefined; 
+  private _imports?: DeploymentManagerDeploymentTargetImports[]; 
   public get imports() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('imports') as any;
   }
-  public set imports(value: DeploymentManagerDeploymentTargetImports[] | undefined) {
+  public set imports(value: DeploymentManagerDeploymentTargetImports[]) {
     this._imports = value;
   }
   public resetImports() {
@@ -235,7 +278,7 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get importsInput() {
-    return this._imports
+    return this._imports;
   }
 }
 export interface DeploymentManagerDeploymentTimeouts {
@@ -253,7 +296,7 @@ export interface DeploymentManagerDeploymentTimeouts {
   readonly update?: string;
 }
 
-function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeoutsOutputReference | DeploymentManagerDeploymentTimeouts): any {
+export function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeoutsOutputReference | DeploymentManagerDeploymentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -275,12 +318,43 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DeploymentManagerDeploymentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeploymentManagerDeploymentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -288,15 +362,15 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -304,15 +378,15 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -320,7 +394,7 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -363,8 +437,8 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
     this._preview = config.preview;
     this._project = config.project;
     this._labels = config.labels;
-    this._target = config.target;
-    this._timeouts = config.timeouts;
+    this._target.internalValue = config.target;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -372,11 +446,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   // ==========
 
   // create_policy - computed: false, optional: true, required: false
-  private _createPolicy?: string | undefined; 
+  private _createPolicy?: string; 
   public get createPolicy() {
     return this.getStringAttribute('create_policy');
   }
-  public set createPolicy(value: string | undefined) {
+  public set createPolicy(value: string) {
     this._createPolicy = value;
   }
   public resetCreatePolicy() {
@@ -384,15 +458,15 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get createPolicyInput() {
-    return this._createPolicy
+    return this._createPolicy;
   }
 
   // delete_policy - computed: false, optional: true, required: false
-  private _deletePolicy?: string | undefined; 
+  private _deletePolicy?: string; 
   public get deletePolicy() {
     return this.getStringAttribute('delete_policy');
   }
-  public set deletePolicy(value: string | undefined) {
+  public set deletePolicy(value: string) {
     this._deletePolicy = value;
   }
   public resetDeletePolicy() {
@@ -400,7 +474,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deletePolicyInput() {
-    return this._deletePolicy
+    return this._deletePolicy;
   }
 
   // deployment_id - computed: true, optional: false, required: false
@@ -409,11 +483,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -421,7 +495,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -444,15 +518,15 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // preview - computed: false, optional: true, required: false
-  private _preview?: boolean | cdktf.IResolvable | undefined; 
+  private _preview?: boolean | cdktf.IResolvable; 
   public get preview() {
     return this.getBooleanAttribute('preview') as any;
   }
-  public set preview(value: boolean | cdktf.IResolvable | undefined) {
+  public set preview(value: boolean | cdktf.IResolvable) {
     this._preview = value;
   }
   public resetPreview() {
@@ -460,15 +534,15 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get previewInput() {
-    return this._preview
+    return this._preview;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -476,7 +550,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -485,12 +559,12 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: DeploymentManagerDeploymentLabels[] | undefined; 
+  private _labels?: DeploymentManagerDeploymentLabels[]; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: DeploymentManagerDeploymentLabels[] | undefined) {
+  public set labels(value: DeploymentManagerDeploymentLabels[]) {
     this._labels = value;
   }
   public resetLabels() {
@@ -498,38 +572,36 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // target - computed: false, optional: false, required: true
-  private _target?: DeploymentManagerDeploymentTarget; 
-  private __targetOutput = new DeploymentManagerDeploymentTargetOutputReference(this as any, "target", true);
+  private _target = new DeploymentManagerDeploymentTargetOutputReference(this as any, "target", true);
   public get target() {
-    return this.__targetOutput;
+    return this._target;
   }
   public putTarget(value: DeploymentManagerDeploymentTarget) {
-    this._target = value;
+    this._target.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get targetInput() {
-    return this._target
+    return this._target.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DeploymentManagerDeploymentTimeouts | undefined; 
-  private __timeoutsOutput = new DeploymentManagerDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DeploymentManagerDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DeploymentManagerDeploymentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DeploymentManagerDeploymentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -545,8 +617,8 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       preview: cdktf.booleanToTerraform(this._preview),
       project: cdktf.stringToTerraform(this._project),
       labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform)(this._labels),
-      target: deploymentManagerDeploymentTargetToTerraform(this._target),
-      timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts),
+      target: deploymentManagerDeploymentTargetToTerraform(this._target.internalValue),
+      timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

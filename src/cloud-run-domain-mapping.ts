@@ -136,7 +136,7 @@ project ID or project number.
   readonly namespace: string;
 }
 
-function cloudRunDomainMappingMetadataToTerraform(struct?: CloudRunDomainMappingMetadataOutputReference | CloudRunDomainMappingMetadata): any {
+export function cloudRunDomainMappingMetadataToTerraform(struct?: CloudRunDomainMappingMetadataOutputReference | CloudRunDomainMappingMetadata): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -158,13 +158,44 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudRunDomainMappingMetadata | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._annotations) {
+      hasAnyValues = true;
+      internalValueResult.annotations = this._annotations;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    if (this._namespace) {
+      hasAnyValues = true;
+      internalValueResult.namespace = this._namespace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunDomainMappingMetadata | undefined) {
+    if (value === undefined) {
+      this._annotations = undefined;
+      this._labels = undefined;
+      this._namespace = undefined;
+    }
+    else {
+      this._annotations = value.annotations;
+      this._labels = value.labels;
+      this._namespace = value.namespace;
+    }
+  }
+
   // annotations - computed: true, optional: true, required: false
-  private _annotations?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _annotations?: { [key: string]: string } | cdktf.IResolvable; 
   public get annotations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('annotations') as any;
   }
-  public set annotations(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set annotations(value: { [key: string]: string } | cdktf.IResolvable) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -172,16 +203,16 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -189,7 +220,7 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // namespace - computed: false, optional: false, required: true
@@ -202,7 +233,7 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceInput() {
-    return this._namespace
+    return this._namespace;
   }
 }
 export interface CloudRunDomainMappingSpec {
@@ -230,7 +261,7 @@ The route must exist.
   readonly routeName: string;
 }
 
-function cloudRunDomainMappingSpecToTerraform(struct?: CloudRunDomainMappingSpecOutputReference | CloudRunDomainMappingSpec): any {
+export function cloudRunDomainMappingSpecToTerraform(struct?: CloudRunDomainMappingSpecOutputReference | CloudRunDomainMappingSpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -252,12 +283,43 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudRunDomainMappingSpec | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._certificateMode) {
+      hasAnyValues = true;
+      internalValueResult.certificateMode = this._certificateMode;
+    }
+    if (this._forceOverride) {
+      hasAnyValues = true;
+      internalValueResult.forceOverride = this._forceOverride;
+    }
+    if (this._routeName) {
+      hasAnyValues = true;
+      internalValueResult.routeName = this._routeName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunDomainMappingSpec | undefined) {
+    if (value === undefined) {
+      this._certificateMode = undefined;
+      this._forceOverride = undefined;
+      this._routeName = undefined;
+    }
+    else {
+      this._certificateMode = value.certificateMode;
+      this._forceOverride = value.forceOverride;
+      this._routeName = value.routeName;
+    }
+  }
+
   // certificate_mode - computed: false, optional: true, required: false
-  private _certificateMode?: string | undefined; 
+  private _certificateMode?: string; 
   public get certificateMode() {
     return this.getStringAttribute('certificate_mode');
   }
-  public set certificateMode(value: string | undefined) {
+  public set certificateMode(value: string) {
     this._certificateMode = value;
   }
   public resetCertificateMode() {
@@ -265,15 +327,15 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get certificateModeInput() {
-    return this._certificateMode
+    return this._certificateMode;
   }
 
   // force_override - computed: false, optional: true, required: false
-  private _forceOverride?: boolean | cdktf.IResolvable | undefined; 
+  private _forceOverride?: boolean | cdktf.IResolvable; 
   public get forceOverride() {
     return this.getBooleanAttribute('force_override') as any;
   }
-  public set forceOverride(value: boolean | cdktf.IResolvable | undefined) {
+  public set forceOverride(value: boolean | cdktf.IResolvable) {
     this._forceOverride = value;
   }
   public resetForceOverride() {
@@ -281,7 +343,7 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get forceOverrideInput() {
-    return this._forceOverride
+    return this._forceOverride;
   }
 
   // route_name - computed: false, optional: false, required: true
@@ -294,7 +356,7 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get routeNameInput() {
-    return this._routeName
+    return this._routeName;
   }
 }
 export interface CloudRunDomainMappingTimeouts {
@@ -308,7 +370,7 @@ export interface CloudRunDomainMappingTimeouts {
   readonly delete?: string;
 }
 
-function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomainMappingTimeoutsOutputReference | CloudRunDomainMappingTimeouts): any {
+export function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomainMappingTimeoutsOutputReference | CloudRunDomainMappingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -329,12 +391,37 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudRunDomainMappingTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunDomainMappingTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -342,15 +429,15 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -358,7 +445,7 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -397,9 +484,9 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
-    this._metadata = config.metadata;
-    this._spec = config.spec;
-    this._timeouts = config.timeouts;
+    this._metadata.internalValue = config.metadata;
+    this._spec.internalValue = config.spec;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -421,7 +508,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -434,15 +521,15 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -450,7 +537,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // status - computed: true, optional: false, required: false
@@ -459,48 +546,45 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: false, required: true
-  private _metadata?: CloudRunDomainMappingMetadata; 
-  private __metadataOutput = new CloudRunDomainMappingMetadataOutputReference(this as any, "metadata", true);
+  private _metadata = new CloudRunDomainMappingMetadataOutputReference(this as any, "metadata", true);
   public get metadata() {
-    return this.__metadataOutput;
+    return this._metadata;
   }
   public putMetadata(value: CloudRunDomainMappingMetadata) {
-    this._metadata = value;
+    this._metadata.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata.internalValue;
   }
 
   // spec - computed: false, optional: false, required: true
-  private _spec?: CloudRunDomainMappingSpec; 
-  private __specOutput = new CloudRunDomainMappingSpecOutputReference(this as any, "spec", true);
+  private _spec = new CloudRunDomainMappingSpecOutputReference(this as any, "spec", true);
   public get spec() {
-    return this.__specOutput;
+    return this._spec;
   }
   public putSpec(value: CloudRunDomainMappingSpec) {
-    this._spec = value;
+    this._spec.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get specInput() {
-    return this._spec
+    return this._spec.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudRunDomainMappingTimeouts | undefined; 
-  private __timeoutsOutput = new CloudRunDomainMappingTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudRunDomainMappingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CloudRunDomainMappingTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CloudRunDomainMappingTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -512,9 +596,9 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      metadata: cloudRunDomainMappingMetadataToTerraform(this._metadata),
-      spec: cloudRunDomainMappingSpecToTerraform(this._spec),
-      timeouts: cloudRunDomainMappingTimeoutsToTerraform(this._timeouts),
+      metadata: cloudRunDomainMappingMetadataToTerraform(this._metadata.internalValue),
+      spec: cloudRunDomainMappingSpecToTerraform(this._spec.internalValue),
+      timeouts: cloudRunDomainMappingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

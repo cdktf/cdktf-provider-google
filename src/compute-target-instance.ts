@@ -71,7 +71,7 @@ export interface ComputeTargetInstanceTimeouts {
   readonly delete?: string;
 }
 
-function computeTargetInstanceTimeoutsToTerraform(struct?: ComputeTargetInstanceTimeoutsOutputReference | ComputeTargetInstanceTimeouts): any {
+export function computeTargetInstanceTimeoutsToTerraform(struct?: ComputeTargetInstanceTimeoutsOutputReference | ComputeTargetInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,12 +92,37 @@ export class ComputeTargetInstanceTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeTargetInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeTargetInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -105,15 +130,15 @@ export class ComputeTargetInstanceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -121,7 +146,7 @@ export class ComputeTargetInstanceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -163,7 +188,7 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
     this._natPolicy = config.natPolicy;
     this._project = config.project;
     this._zone = config.zone;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -176,11 +201,11 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -188,7 +213,7 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -206,7 +231,7 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // name - computed: false, optional: false, required: true
@@ -219,15 +244,15 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // nat_policy - computed: false, optional: true, required: false
-  private _natPolicy?: string | undefined; 
+  private _natPolicy?: string; 
   public get natPolicy() {
     return this.getStringAttribute('nat_policy');
   }
-  public set natPolicy(value: string | undefined) {
+  public set natPolicy(value: string) {
     this._natPolicy = value;
   }
   public resetNatPolicy() {
@@ -235,15 +260,15 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get natPolicyInput() {
-    return this._natPolicy
+    return this._natPolicy;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -251,7 +276,7 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -260,11 +285,11 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -272,24 +297,23 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeTargetInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeTargetInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeTargetInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeTargetInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeTargetInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -304,7 +328,7 @@ export class ComputeTargetInstance extends cdktf.TerraformResource {
       nat_policy: cdktf.stringToTerraform(this._natPolicy),
       project: cdktf.stringToTerraform(this._project),
       zone: cdktf.stringToTerraform(this._zone),
-      timeouts: computeTargetInstanceTimeoutsToTerraform(this._timeouts),
+      timeouts: computeTargetInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

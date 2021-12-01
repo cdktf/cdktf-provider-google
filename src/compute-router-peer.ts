@@ -132,7 +132,7 @@ CIDR-formatted string.
   readonly range: string;
 }
 
-function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeRouterPeerAdvertisedIpRanges): any {
+export function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeRouterPeerAdvertisedIpRanges): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -158,7 +158,7 @@ export interface ComputeRouterPeerTimeouts {
   readonly update?: string;
 }
 
-function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeoutsOutputReference | ComputeRouterPeerTimeouts): any {
+export function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeoutsOutputReference | ComputeRouterPeerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -180,12 +180,43 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRouterPeerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterPeerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -193,15 +224,15 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -209,15 +240,15 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -225,7 +256,7 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -274,7 +305,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._region = config.region;
     this._router = config.router;
     this._advertisedIpRanges = config.advertisedIpRanges;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -282,11 +313,11 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   // ==========
 
   // advertise_mode - computed: false, optional: true, required: false
-  private _advertiseMode?: string | undefined; 
+  private _advertiseMode?: string; 
   public get advertiseMode() {
     return this.getStringAttribute('advertise_mode');
   }
-  public set advertiseMode(value: string | undefined) {
+  public set advertiseMode(value: string) {
     this._advertiseMode = value;
   }
   public resetAdvertiseMode() {
@@ -294,15 +325,15 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get advertiseModeInput() {
-    return this._advertiseMode
+    return this._advertiseMode;
   }
 
   // advertised_groups - computed: false, optional: true, required: false
-  private _advertisedGroups?: string[] | undefined; 
+  private _advertisedGroups?: string[]; 
   public get advertisedGroups() {
     return this.getListAttribute('advertised_groups');
   }
-  public set advertisedGroups(value: string[] | undefined) {
+  public set advertisedGroups(value: string[]) {
     this._advertisedGroups = value;
   }
   public resetAdvertisedGroups() {
@@ -310,15 +341,15 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get advertisedGroupsInput() {
-    return this._advertisedGroups
+    return this._advertisedGroups;
   }
 
   // advertised_route_priority - computed: false, optional: true, required: false
-  private _advertisedRoutePriority?: number | undefined; 
+  private _advertisedRoutePriority?: number; 
   public get advertisedRoutePriority() {
     return this.getNumberAttribute('advertised_route_priority');
   }
-  public set advertisedRoutePriority(value: number | undefined) {
+  public set advertisedRoutePriority(value: number) {
     this._advertisedRoutePriority = value;
   }
   public resetAdvertisedRoutePriority() {
@@ -326,15 +357,15 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get advertisedRoutePriorityInput() {
-    return this._advertisedRoutePriority
+    return this._advertisedRoutePriority;
   }
 
   // enable - computed: false, optional: true, required: false
-  private _enable?: boolean | cdktf.IResolvable | undefined; 
+  private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
     return this.getBooleanAttribute('enable') as any;
   }
-  public set enable(value: boolean | cdktf.IResolvable | undefined) {
+  public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
   }
   public resetEnable() {
@@ -342,7 +373,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableInput() {
-    return this._enable
+    return this._enable;
   }
 
   // id - computed: true, optional: true, required: false
@@ -360,15 +391,15 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get interfaceInput() {
-    return this._interface
+    return this._interface;
   }
 
   // ip_address - computed: true, optional: true, required: false
-  private _ipAddress?: string | undefined; 
+  private _ipAddress?: string; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string | undefined) {
+  public set ipAddress(value: string) {
     this._ipAddress = value;
   }
   public resetIpAddress() {
@@ -376,7 +407,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
-    return this._ipAddress
+    return this._ipAddress;
   }
 
   // management_type - computed: true, optional: false, required: false
@@ -394,7 +425,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // peer_asn - computed: false, optional: false, required: true
@@ -407,7 +438,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get peerAsnInput() {
-    return this._peerAsn
+    return this._peerAsn;
   }
 
   // peer_ip_address - computed: false, optional: false, required: true
@@ -420,15 +451,15 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get peerIpAddressInput() {
-    return this._peerIpAddress
+    return this._peerIpAddress;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -436,15 +467,15 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -452,7 +483,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // router - computed: false, optional: false, required: true
@@ -465,16 +496,16 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routerInput() {
-    return this._router
+    return this._router;
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
-  private _advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | undefined; 
+  private _advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[]; 
   public get advertisedIpRanges() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('advertised_ip_ranges') as any;
   }
-  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[] | undefined) {
+  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[]) {
     this._advertisedIpRanges = value;
   }
   public resetAdvertisedIpRanges() {
@@ -482,24 +513,23 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get advertisedIpRangesInput() {
-    return this._advertisedIpRanges
+    return this._advertisedIpRanges;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRouterPeerTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeRouterPeerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRouterPeerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeRouterPeerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeRouterPeerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -521,7 +551,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
       advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform)(this._advertisedIpRanges),
-      timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts),
+      timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

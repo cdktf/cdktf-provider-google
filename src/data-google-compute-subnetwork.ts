@@ -100,11 +100,11 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -112,7 +112,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: true, optional: false, required: false
@@ -126,11 +126,11 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -138,15 +138,15 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -154,7 +154,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // secondary_ip_range - computed: true, optional: false, required: false
@@ -163,11 +163,11 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // self_link - computed: true, optional: true, required: false
-  private _selfLink?: string | undefined; 
+  private _selfLink?: string; 
   public get selfLink() {
     return this.getStringAttribute('self_link');
   }
-  public set selfLink(value: string | undefined) {
+  public set selfLink(value: string) {
     this._selfLink = value;
   }
   public resetSelfLink() {
@@ -175,7 +175,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get selfLinkInput() {
-    return this._selfLink
+    return this._selfLink;
   }
 
   // =========

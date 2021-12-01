@@ -81,7 +81,7 @@ By default, the task is sent to the version which is the default version when th
   readonly version?: string;
 }
 
-function cloudTasksQueueAppEngineRoutingOverrideToTerraform(struct?: CloudTasksQueueAppEngineRoutingOverrideOutputReference | CloudTasksQueueAppEngineRoutingOverride): any {
+export function cloudTasksQueueAppEngineRoutingOverrideToTerraform(struct?: CloudTasksQueueAppEngineRoutingOverrideOutputReference | CloudTasksQueueAppEngineRoutingOverride): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -103,12 +103,43 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudTasksQueueAppEngineRoutingOverride | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._instance) {
+      hasAnyValues = true;
+      internalValueResult.instance = this._instance;
+    }
+    if (this._service) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueAppEngineRoutingOverride | undefined) {
+    if (value === undefined) {
+      this._instance = undefined;
+      this._service = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._instance = value.instance;
+      this._service = value.service;
+      this._version = value.version;
+    }
+  }
+
   // instance - computed: false, optional: true, required: false
-  private _instance?: string | undefined; 
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
-  public set instance(value: string | undefined) {
+  public set instance(value: string) {
     this._instance = value;
   }
   public resetInstance() {
@@ -116,15 +147,15 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // service - computed: false, optional: true, required: false
-  private _service?: string | undefined; 
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
-  public set service(value: string | undefined) {
+  public set service(value: string) {
     this._service = value;
   }
   public resetService() {
@@ -132,15 +163,15 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -148,7 +179,7 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface CloudTasksQueueRateLimits {
@@ -171,7 +202,7 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
   readonly maxDispatchesPerSecond?: number;
 }
 
-function cloudTasksQueueRateLimitsToTerraform(struct?: CloudTasksQueueRateLimitsOutputReference | CloudTasksQueueRateLimits): any {
+export function cloudTasksQueueRateLimitsToTerraform(struct?: CloudTasksQueueRateLimitsOutputReference | CloudTasksQueueRateLimits): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -192,12 +223,37 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudTasksQueueRateLimits | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxConcurrentDispatches) {
+      hasAnyValues = true;
+      internalValueResult.maxConcurrentDispatches = this._maxConcurrentDispatches;
+    }
+    if (this._maxDispatchesPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.maxDispatchesPerSecond = this._maxDispatchesPerSecond;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueRateLimits | undefined) {
+    if (value === undefined) {
+      this._maxConcurrentDispatches = undefined;
+      this._maxDispatchesPerSecond = undefined;
+    }
+    else {
+      this._maxConcurrentDispatches = value.maxConcurrentDispatches;
+      this._maxDispatchesPerSecond = value.maxDispatchesPerSecond;
+    }
+  }
+
   // max_concurrent_dispatches - computed: true, optional: true, required: false
-  private _maxConcurrentDispatches?: number | undefined; 
+  private _maxConcurrentDispatches?: number; 
   public get maxConcurrentDispatches() {
     return this.getNumberAttribute('max_concurrent_dispatches');
   }
-  public set maxConcurrentDispatches(value: number | undefined) {
+  public set maxConcurrentDispatches(value: number) {
     this._maxConcurrentDispatches = value;
   }
   public resetMaxConcurrentDispatches() {
@@ -205,15 +261,15 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get maxConcurrentDispatchesInput() {
-    return this._maxConcurrentDispatches
+    return this._maxConcurrentDispatches;
   }
 
   // max_dispatches_per_second - computed: true, optional: true, required: false
-  private _maxDispatchesPerSecond?: number | undefined; 
+  private _maxDispatchesPerSecond?: number; 
   public get maxDispatchesPerSecond() {
     return this.getNumberAttribute('max_dispatches_per_second');
   }
-  public set maxDispatchesPerSecond(value: number | undefined) {
+  public set maxDispatchesPerSecond(value: number) {
     this._maxDispatchesPerSecond = value;
   }
   public resetMaxDispatchesPerSecond() {
@@ -221,7 +277,7 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get maxDispatchesPerSecondInput() {
-    return this._maxDispatchesPerSecond
+    return this._maxDispatchesPerSecond;
   }
 }
 export interface CloudTasksQueueRetryConfig {
@@ -280,7 +336,7 @@ specifies that the task should be retried.
   readonly minBackoff?: string;
 }
 
-function cloudTasksQueueRetryConfigToTerraform(struct?: CloudTasksQueueRetryConfigOutputReference | CloudTasksQueueRetryConfig): any {
+export function cloudTasksQueueRetryConfigToTerraform(struct?: CloudTasksQueueRetryConfigOutputReference | CloudTasksQueueRetryConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -304,12 +360,55 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudTasksQueueRetryConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxAttempts) {
+      hasAnyValues = true;
+      internalValueResult.maxAttempts = this._maxAttempts;
+    }
+    if (this._maxBackoff) {
+      hasAnyValues = true;
+      internalValueResult.maxBackoff = this._maxBackoff;
+    }
+    if (this._maxDoublings) {
+      hasAnyValues = true;
+      internalValueResult.maxDoublings = this._maxDoublings;
+    }
+    if (this._maxRetryDuration) {
+      hasAnyValues = true;
+      internalValueResult.maxRetryDuration = this._maxRetryDuration;
+    }
+    if (this._minBackoff) {
+      hasAnyValues = true;
+      internalValueResult.minBackoff = this._minBackoff;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueRetryConfig | undefined) {
+    if (value === undefined) {
+      this._maxAttempts = undefined;
+      this._maxBackoff = undefined;
+      this._maxDoublings = undefined;
+      this._maxRetryDuration = undefined;
+      this._minBackoff = undefined;
+    }
+    else {
+      this._maxAttempts = value.maxAttempts;
+      this._maxBackoff = value.maxBackoff;
+      this._maxDoublings = value.maxDoublings;
+      this._maxRetryDuration = value.maxRetryDuration;
+      this._minBackoff = value.minBackoff;
+    }
+  }
+
   // max_attempts - computed: true, optional: true, required: false
-  private _maxAttempts?: number | undefined; 
+  private _maxAttempts?: number; 
   public get maxAttempts() {
     return this.getNumberAttribute('max_attempts');
   }
-  public set maxAttempts(value: number | undefined) {
+  public set maxAttempts(value: number) {
     this._maxAttempts = value;
   }
   public resetMaxAttempts() {
@@ -317,15 +416,15 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get maxAttemptsInput() {
-    return this._maxAttempts
+    return this._maxAttempts;
   }
 
   // max_backoff - computed: true, optional: true, required: false
-  private _maxBackoff?: string | undefined; 
+  private _maxBackoff?: string; 
   public get maxBackoff() {
     return this.getStringAttribute('max_backoff');
   }
-  public set maxBackoff(value: string | undefined) {
+  public set maxBackoff(value: string) {
     this._maxBackoff = value;
   }
   public resetMaxBackoff() {
@@ -333,15 +432,15 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get maxBackoffInput() {
-    return this._maxBackoff
+    return this._maxBackoff;
   }
 
   // max_doublings - computed: true, optional: true, required: false
-  private _maxDoublings?: number | undefined; 
+  private _maxDoublings?: number; 
   public get maxDoublings() {
     return this.getNumberAttribute('max_doublings');
   }
-  public set maxDoublings(value: number | undefined) {
+  public set maxDoublings(value: number) {
     this._maxDoublings = value;
   }
   public resetMaxDoublings() {
@@ -349,15 +448,15 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get maxDoublingsInput() {
-    return this._maxDoublings
+    return this._maxDoublings;
   }
 
   // max_retry_duration - computed: true, optional: true, required: false
-  private _maxRetryDuration?: string | undefined; 
+  private _maxRetryDuration?: string; 
   public get maxRetryDuration() {
     return this.getStringAttribute('max_retry_duration');
   }
-  public set maxRetryDuration(value: string | undefined) {
+  public set maxRetryDuration(value: string) {
     this._maxRetryDuration = value;
   }
   public resetMaxRetryDuration() {
@@ -365,15 +464,15 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get maxRetryDurationInput() {
-    return this._maxRetryDuration
+    return this._maxRetryDuration;
   }
 
   // min_backoff - computed: true, optional: true, required: false
-  private _minBackoff?: string | undefined; 
+  private _minBackoff?: string; 
   public get minBackoff() {
     return this.getStringAttribute('min_backoff');
   }
-  public set minBackoff(value: string | undefined) {
+  public set minBackoff(value: string) {
     this._minBackoff = value;
   }
   public resetMinBackoff() {
@@ -381,7 +480,7 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get minBackoffInput() {
-    return this._minBackoff
+    return this._minBackoff;
   }
 }
 export interface CloudTasksQueueStackdriverLoggingConfig {
@@ -395,7 +494,7 @@ default and means that no operations are logged.
   readonly samplingRatio: number;
 }
 
-function cloudTasksQueueStackdriverLoggingConfigToTerraform(struct?: CloudTasksQueueStackdriverLoggingConfigOutputReference | CloudTasksQueueStackdriverLoggingConfig): any {
+export function cloudTasksQueueStackdriverLoggingConfigToTerraform(struct?: CloudTasksQueueStackdriverLoggingConfigOutputReference | CloudTasksQueueStackdriverLoggingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -415,6 +514,25 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudTasksQueueStackdriverLoggingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._samplingRatio) {
+      hasAnyValues = true;
+      internalValueResult.samplingRatio = this._samplingRatio;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueStackdriverLoggingConfig | undefined) {
+    if (value === undefined) {
+      this._samplingRatio = undefined;
+    }
+    else {
+      this._samplingRatio = value.samplingRatio;
+    }
+  }
+
   // sampling_ratio - computed: false, optional: false, required: true
   private _samplingRatio?: number; 
   public get samplingRatio() {
@@ -425,7 +543,7 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get samplingRatioInput() {
-    return this._samplingRatio
+    return this._samplingRatio;
   }
 }
 export interface CloudTasksQueueTimeouts {
@@ -443,7 +561,7 @@ export interface CloudTasksQueueTimeouts {
   readonly update?: string;
 }
 
-function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeoutsOutputReference | CloudTasksQueueTimeouts): any {
+export function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeoutsOutputReference | CloudTasksQueueTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -465,12 +583,43 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudTasksQueueTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudTasksQueueTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -478,15 +627,15 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -494,15 +643,15 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -510,7 +659,7 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -549,11 +698,11 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
-    this._appEngineRoutingOverride = config.appEngineRoutingOverride;
-    this._rateLimits = config.rateLimits;
-    this._retryConfig = config.retryConfig;
-    this._stackdriverLoggingConfig = config.stackdriverLoggingConfig;
-    this._timeouts = config.timeouts;
+    this._appEngineRoutingOverride.internalValue = config.appEngineRoutingOverride;
+    this._rateLimits.internalValue = config.rateLimits;
+    this._retryConfig.internalValue = config.retryConfig;
+    this._stackdriverLoggingConfig.internalValue = config.stackdriverLoggingConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -575,15 +724,15 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -591,15 +740,15 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -607,92 +756,87 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // app_engine_routing_override - computed: false, optional: true, required: false
-  private _appEngineRoutingOverride?: CloudTasksQueueAppEngineRoutingOverride | undefined; 
-  private __appEngineRoutingOverrideOutput = new CloudTasksQueueAppEngineRoutingOverrideOutputReference(this as any, "app_engine_routing_override", true);
+  private _appEngineRoutingOverride = new CloudTasksQueueAppEngineRoutingOverrideOutputReference(this as any, "app_engine_routing_override", true);
   public get appEngineRoutingOverride() {
-    return this.__appEngineRoutingOverrideOutput;
+    return this._appEngineRoutingOverride;
   }
-  public putAppEngineRoutingOverride(value: CloudTasksQueueAppEngineRoutingOverride | undefined) {
-    this._appEngineRoutingOverride = value;
+  public putAppEngineRoutingOverride(value: CloudTasksQueueAppEngineRoutingOverride) {
+    this._appEngineRoutingOverride.internalValue = value;
   }
   public resetAppEngineRoutingOverride() {
-    this._appEngineRoutingOverride = undefined;
+    this._appEngineRoutingOverride.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get appEngineRoutingOverrideInput() {
-    return this._appEngineRoutingOverride
+    return this._appEngineRoutingOverride.internalValue;
   }
 
   // rate_limits - computed: false, optional: true, required: false
-  private _rateLimits?: CloudTasksQueueRateLimits | undefined; 
-  private __rateLimitsOutput = new CloudTasksQueueRateLimitsOutputReference(this as any, "rate_limits", true);
+  private _rateLimits = new CloudTasksQueueRateLimitsOutputReference(this as any, "rate_limits", true);
   public get rateLimits() {
-    return this.__rateLimitsOutput;
+    return this._rateLimits;
   }
-  public putRateLimits(value: CloudTasksQueueRateLimits | undefined) {
-    this._rateLimits = value;
+  public putRateLimits(value: CloudTasksQueueRateLimits) {
+    this._rateLimits.internalValue = value;
   }
   public resetRateLimits() {
-    this._rateLimits = undefined;
+    this._rateLimits.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rateLimitsInput() {
-    return this._rateLimits
+    return this._rateLimits.internalValue;
   }
 
   // retry_config - computed: false, optional: true, required: false
-  private _retryConfig?: CloudTasksQueueRetryConfig | undefined; 
-  private __retryConfigOutput = new CloudTasksQueueRetryConfigOutputReference(this as any, "retry_config", true);
+  private _retryConfig = new CloudTasksQueueRetryConfigOutputReference(this as any, "retry_config", true);
   public get retryConfig() {
-    return this.__retryConfigOutput;
+    return this._retryConfig;
   }
-  public putRetryConfig(value: CloudTasksQueueRetryConfig | undefined) {
-    this._retryConfig = value;
+  public putRetryConfig(value: CloudTasksQueueRetryConfig) {
+    this._retryConfig.internalValue = value;
   }
   public resetRetryConfig() {
-    this._retryConfig = undefined;
+    this._retryConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retryConfigInput() {
-    return this._retryConfig
+    return this._retryConfig.internalValue;
   }
 
   // stackdriver_logging_config - computed: false, optional: true, required: false
-  private _stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig | undefined; 
-  private __stackdriverLoggingConfigOutput = new CloudTasksQueueStackdriverLoggingConfigOutputReference(this as any, "stackdriver_logging_config", true);
+  private _stackdriverLoggingConfig = new CloudTasksQueueStackdriverLoggingConfigOutputReference(this as any, "stackdriver_logging_config", true);
   public get stackdriverLoggingConfig() {
-    return this.__stackdriverLoggingConfigOutput;
+    return this._stackdriverLoggingConfig;
   }
-  public putStackdriverLoggingConfig(value: CloudTasksQueueStackdriverLoggingConfig | undefined) {
-    this._stackdriverLoggingConfig = value;
+  public putStackdriverLoggingConfig(value: CloudTasksQueueStackdriverLoggingConfig) {
+    this._stackdriverLoggingConfig.internalValue = value;
   }
   public resetStackdriverLoggingConfig() {
-    this._stackdriverLoggingConfig = undefined;
+    this._stackdriverLoggingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stackdriverLoggingConfigInput() {
-    return this._stackdriverLoggingConfig
+    return this._stackdriverLoggingConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudTasksQueueTimeouts | undefined; 
-  private __timeoutsOutput = new CloudTasksQueueTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudTasksQueueTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CloudTasksQueueTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CloudTasksQueueTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -704,11 +848,11 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      app_engine_routing_override: cloudTasksQueueAppEngineRoutingOverrideToTerraform(this._appEngineRoutingOverride),
-      rate_limits: cloudTasksQueueRateLimitsToTerraform(this._rateLimits),
-      retry_config: cloudTasksQueueRetryConfigToTerraform(this._retryConfig),
-      stackdriver_logging_config: cloudTasksQueueStackdriverLoggingConfigToTerraform(this._stackdriverLoggingConfig),
-      timeouts: cloudTasksQueueTimeoutsToTerraform(this._timeouts),
+      app_engine_routing_override: cloudTasksQueueAppEngineRoutingOverrideToTerraform(this._appEngineRoutingOverride.internalValue),
+      rate_limits: cloudTasksQueueRateLimitsToTerraform(this._rateLimits.internalValue),
+      retry_config: cloudTasksQueueRetryConfigToTerraform(this._retryConfig.internalValue),
+      stackdriver_logging_config: cloudTasksQueueStackdriverLoggingConfigToTerraform(this._stackdriverLoggingConfig.internalValue),
+      timeouts: cloudTasksQueueTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -66,7 +66,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
   readonly pubsubTopic: string;
 }
 
-function healthcareDicomStoreNotificationConfigToTerraform(struct?: HealthcareDicomStoreNotificationConfigOutputReference | HealthcareDicomStoreNotificationConfig): any {
+export function healthcareDicomStoreNotificationConfigToTerraform(struct?: HealthcareDicomStoreNotificationConfigOutputReference | HealthcareDicomStoreNotificationConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,6 +86,25 @@ export class HealthcareDicomStoreNotificationConfigOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HealthcareDicomStoreNotificationConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._pubsubTopic) {
+      hasAnyValues = true;
+      internalValueResult.pubsubTopic = this._pubsubTopic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareDicomStoreNotificationConfig | undefined) {
+    if (value === undefined) {
+      this._pubsubTopic = undefined;
+    }
+    else {
+      this._pubsubTopic = value.pubsubTopic;
+    }
+  }
+
   // pubsub_topic - computed: false, optional: false, required: true
   private _pubsubTopic?: string; 
   public get pubsubTopic() {
@@ -96,7 +115,7 @@ export class HealthcareDicomStoreNotificationConfigOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubTopicInput() {
-    return this._pubsubTopic
+    return this._pubsubTopic;
   }
 }
 export interface HealthcareDicomStoreTimeouts {
@@ -114,7 +133,7 @@ export interface HealthcareDicomStoreTimeouts {
   readonly update?: string;
 }
 
-function healthcareDicomStoreTimeoutsToTerraform(struct?: HealthcareDicomStoreTimeoutsOutputReference | HealthcareDicomStoreTimeouts): any {
+export function healthcareDicomStoreTimeoutsToTerraform(struct?: HealthcareDicomStoreTimeoutsOutputReference | HealthcareDicomStoreTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -136,12 +155,43 @@ export class HealthcareDicomStoreTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HealthcareDicomStoreTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareDicomStoreTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -149,15 +199,15 @@ export class HealthcareDicomStoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -165,15 +215,15 @@ export class HealthcareDicomStoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -181,7 +231,7 @@ export class HealthcareDicomStoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -220,8 +270,8 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
     this._dataset = config.dataset;
     this._labels = config.labels;
     this._name = config.name;
-    this._notificationConfig = config.notificationConfig;
-    this._timeouts = config.timeouts;
+    this._notificationConfig.internalValue = config.notificationConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -238,7 +288,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetInput() {
-    return this._dataset
+    return this._dataset;
   }
 
   // id - computed: true, optional: true, required: false
@@ -247,12 +297,12 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -260,7 +310,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -273,7 +323,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -282,37 +332,35 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig?: HealthcareDicomStoreNotificationConfig | undefined; 
-  private __notificationConfigOutput = new HealthcareDicomStoreNotificationConfigOutputReference(this as any, "notification_config", true);
+  private _notificationConfig = new HealthcareDicomStoreNotificationConfigOutputReference(this as any, "notification_config", true);
   public get notificationConfig() {
-    return this.__notificationConfigOutput;
+    return this._notificationConfig;
   }
-  public putNotificationConfig(value: HealthcareDicomStoreNotificationConfig | undefined) {
-    this._notificationConfig = value;
+  public putNotificationConfig(value: HealthcareDicomStoreNotificationConfig) {
+    this._notificationConfig.internalValue = value;
   }
   public resetNotificationConfig() {
-    this._notificationConfig = undefined;
+    this._notificationConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get notificationConfigInput() {
-    return this._notificationConfig
+    return this._notificationConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HealthcareDicomStoreTimeouts | undefined; 
-  private __timeoutsOutput = new HealthcareDicomStoreTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareDicomStoreTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: HealthcareDicomStoreTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: HealthcareDicomStoreTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -324,8 +372,8 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
       dataset: cdktf.stringToTerraform(this._dataset),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
-      notification_config: healthcareDicomStoreNotificationConfigToTerraform(this._notificationConfig),
-      timeouts: healthcareDicomStoreTimeoutsToTerraform(this._timeouts),
+      notification_config: healthcareDicomStoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
+      timeouts: healthcareDicomStoreTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

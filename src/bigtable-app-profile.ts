@@ -72,7 +72,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
   readonly clusterId: string;
 }
 
-function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: BigtableAppProfileSingleClusterRoutingOutputReference | BigtableAppProfileSingleClusterRouting): any {
+export function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: BigtableAppProfileSingleClusterRoutingOutputReference | BigtableAppProfileSingleClusterRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -93,12 +93,37 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigtableAppProfileSingleClusterRouting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowTransactionalWrites) {
+      hasAnyValues = true;
+      internalValueResult.allowTransactionalWrites = this._allowTransactionalWrites;
+    }
+    if (this._clusterId) {
+      hasAnyValues = true;
+      internalValueResult.clusterId = this._clusterId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigtableAppProfileSingleClusterRouting | undefined) {
+    if (value === undefined) {
+      this._allowTransactionalWrites = undefined;
+      this._clusterId = undefined;
+    }
+    else {
+      this._allowTransactionalWrites = value.allowTransactionalWrites;
+      this._clusterId = value.clusterId;
+    }
+  }
+
   // allow_transactional_writes - computed: false, optional: true, required: false
-  private _allowTransactionalWrites?: boolean | cdktf.IResolvable | undefined; 
+  private _allowTransactionalWrites?: boolean | cdktf.IResolvable; 
   public get allowTransactionalWrites() {
     return this.getBooleanAttribute('allow_transactional_writes') as any;
   }
-  public set allowTransactionalWrites(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowTransactionalWrites(value: boolean | cdktf.IResolvable) {
     this._allowTransactionalWrites = value;
   }
   public resetAllowTransactionalWrites() {
@@ -106,7 +131,7 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get allowTransactionalWritesInput() {
-    return this._allowTransactionalWrites
+    return this._allowTransactionalWrites;
   }
 
   // cluster_id - computed: false, optional: false, required: true
@@ -119,7 +144,7 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get clusterIdInput() {
-    return this._clusterId
+    return this._clusterId;
   }
 }
 export interface BigtableAppProfileTimeouts {
@@ -137,7 +162,7 @@ export interface BigtableAppProfileTimeouts {
   readonly update?: string;
 }
 
-function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeoutsOutputReference | BigtableAppProfileTimeouts): any {
+export function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeoutsOutputReference | BigtableAppProfileTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -159,12 +184,43 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigtableAppProfileTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigtableAppProfileTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -172,15 +228,15 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -188,15 +244,15 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -204,7 +260,7 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -246,8 +302,8 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
     this._instance = config.instance;
     this._multiClusterRoutingUseAny = config.multiClusterRoutingUseAny;
     this._project = config.project;
-    this._singleClusterRouting = config.singleClusterRouting;
-    this._timeouts = config.timeouts;
+    this._singleClusterRouting.internalValue = config.singleClusterRouting;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -264,15 +320,15 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appProfileIdInput() {
-    return this._appProfileId
+    return this._appProfileId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -280,7 +336,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -289,11 +345,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // ignore_warnings - computed: false, optional: true, required: false
-  private _ignoreWarnings?: boolean | cdktf.IResolvable | undefined; 
+  private _ignoreWarnings?: boolean | cdktf.IResolvable; 
   public get ignoreWarnings() {
     return this.getBooleanAttribute('ignore_warnings') as any;
   }
-  public set ignoreWarnings(value: boolean | cdktf.IResolvable | undefined) {
+  public set ignoreWarnings(value: boolean | cdktf.IResolvable) {
     this._ignoreWarnings = value;
   }
   public resetIgnoreWarnings() {
@@ -301,15 +357,15 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ignoreWarningsInput() {
-    return this._ignoreWarnings
+    return this._ignoreWarnings;
   }
 
   // instance - computed: false, optional: true, required: false
-  private _instance?: string | undefined; 
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
-  public set instance(value: string | undefined) {
+  public set instance(value: string) {
     this._instance = value;
   }
   public resetInstance() {
@@ -317,15 +373,15 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // multi_cluster_routing_use_any - computed: false, optional: true, required: false
-  private _multiClusterRoutingUseAny?: boolean | cdktf.IResolvable | undefined; 
+  private _multiClusterRoutingUseAny?: boolean | cdktf.IResolvable; 
   public get multiClusterRoutingUseAny() {
     return this.getBooleanAttribute('multi_cluster_routing_use_any') as any;
   }
-  public set multiClusterRoutingUseAny(value: boolean | cdktf.IResolvable | undefined) {
+  public set multiClusterRoutingUseAny(value: boolean | cdktf.IResolvable) {
     this._multiClusterRoutingUseAny = value;
   }
   public resetMultiClusterRoutingUseAny() {
@@ -333,7 +389,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get multiClusterRoutingUseAnyInput() {
-    return this._multiClusterRoutingUseAny
+    return this._multiClusterRoutingUseAny;
   }
 
   // name - computed: true, optional: false, required: false
@@ -342,11 +398,11 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -354,41 +410,39 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // single_cluster_routing - computed: false, optional: true, required: false
-  private _singleClusterRouting?: BigtableAppProfileSingleClusterRouting | undefined; 
-  private __singleClusterRoutingOutput = new BigtableAppProfileSingleClusterRoutingOutputReference(this as any, "single_cluster_routing", true);
+  private _singleClusterRouting = new BigtableAppProfileSingleClusterRoutingOutputReference(this as any, "single_cluster_routing", true);
   public get singleClusterRouting() {
-    return this.__singleClusterRoutingOutput;
+    return this._singleClusterRouting;
   }
-  public putSingleClusterRouting(value: BigtableAppProfileSingleClusterRouting | undefined) {
-    this._singleClusterRouting = value;
+  public putSingleClusterRouting(value: BigtableAppProfileSingleClusterRouting) {
+    this._singleClusterRouting.internalValue = value;
   }
   public resetSingleClusterRouting() {
-    this._singleClusterRouting = undefined;
+    this._singleClusterRouting.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get singleClusterRoutingInput() {
-    return this._singleClusterRouting
+    return this._singleClusterRouting.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BigtableAppProfileTimeouts | undefined; 
-  private __timeoutsOutput = new BigtableAppProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigtableAppProfileTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BigtableAppProfileTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BigtableAppProfileTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -403,8 +457,8 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       instance: cdktf.stringToTerraform(this._instance),
       multi_cluster_routing_use_any: cdktf.booleanToTerraform(this._multiClusterRoutingUseAny),
       project: cdktf.stringToTerraform(this._project),
-      single_cluster_routing: bigtableAppProfileSingleClusterRoutingToTerraform(this._singleClusterRouting),
-      timeouts: bigtableAppProfileTimeoutsToTerraform(this._timeouts),
+      single_cluster_routing: bigtableAppProfileSingleClusterRoutingToTerraform(this._singleClusterRouting.internalValue),
+      timeouts: bigtableAppProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -86,7 +86,7 @@ deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER
   readonly source: string;
 }
 
-function computePerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputePerInstanceConfigPreservedStateDisk): any {
+export function computePerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputePerInstanceConfigPreservedStateDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -114,7 +114,7 @@ export interface ComputePerInstanceConfigPreservedState {
   readonly disk?: ComputePerInstanceConfigPreservedStateDisk[];
 }
 
-function computePerInstanceConfigPreservedStateToTerraform(struct?: ComputePerInstanceConfigPreservedStateOutputReference | ComputePerInstanceConfigPreservedState): any {
+export function computePerInstanceConfigPreservedStateToTerraform(struct?: ComputePerInstanceConfigPreservedStateOutputReference | ComputePerInstanceConfigPreservedState): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -135,13 +135,38 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputePerInstanceConfigPreservedState | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._disk) {
+      hasAnyValues = true;
+      internalValueResult.disk = this._disk;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePerInstanceConfigPreservedState | undefined) {
+    if (value === undefined) {
+      this._metadata = undefined;
+      this._disk = undefined;
+    }
+    else {
+      this._metadata = value.metadata;
+      this._disk = value.disk;
+    }
+  }
+
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -149,16 +174,16 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // disk - computed: false, optional: true, required: false
-  private _disk?: ComputePerInstanceConfigPreservedStateDisk[] | undefined; 
+  private _disk?: ComputePerInstanceConfigPreservedStateDisk[]; 
   public get disk() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('disk') as any;
   }
-  public set disk(value: ComputePerInstanceConfigPreservedStateDisk[] | undefined) {
+  public set disk(value: ComputePerInstanceConfigPreservedStateDisk[]) {
     this._disk = value;
   }
   public resetDisk() {
@@ -166,7 +191,7 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get diskInput() {
-    return this._disk
+    return this._disk;
   }
 }
 export interface ComputePerInstanceConfigTimeouts {
@@ -184,7 +209,7 @@ export interface ComputePerInstanceConfigTimeouts {
   readonly update?: string;
 }
 
-function computePerInstanceConfigTimeoutsToTerraform(struct?: ComputePerInstanceConfigTimeoutsOutputReference | ComputePerInstanceConfigTimeouts): any {
+export function computePerInstanceConfigTimeoutsToTerraform(struct?: ComputePerInstanceConfigTimeoutsOutputReference | ComputePerInstanceConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -206,12 +231,43 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputePerInstanceConfigTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePerInstanceConfigTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -219,15 +275,15 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -235,15 +291,15 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -251,7 +307,7 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -294,8 +350,8 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
     this._project = config.project;
     this._removeInstanceStateOnDestroy = config.removeInstanceStateOnDestroy;
     this._zone = config.zone;
-    this._preservedState = config.preservedState;
-    this._timeouts = config.timeouts;
+    this._preservedState.internalValue = config.preservedState;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -317,15 +373,15 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceGroupManagerInput() {
-    return this._instanceGroupManager
+    return this._instanceGroupManager;
   }
 
   // minimal_action - computed: false, optional: true, required: false
-  private _minimalAction?: string | undefined; 
+  private _minimalAction?: string; 
   public get minimalAction() {
     return this.getStringAttribute('minimal_action');
   }
-  public set minimalAction(value: string | undefined) {
+  public set minimalAction(value: string) {
     this._minimalAction = value;
   }
   public resetMinimalAction() {
@@ -333,15 +389,15 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minimalActionInput() {
-    return this._minimalAction
+    return this._minimalAction;
   }
 
   // most_disruptive_allowed_action - computed: false, optional: true, required: false
-  private _mostDisruptiveAllowedAction?: string | undefined; 
+  private _mostDisruptiveAllowedAction?: string; 
   public get mostDisruptiveAllowedAction() {
     return this.getStringAttribute('most_disruptive_allowed_action');
   }
-  public set mostDisruptiveAllowedAction(value: string | undefined) {
+  public set mostDisruptiveAllowedAction(value: string) {
     this._mostDisruptiveAllowedAction = value;
   }
   public resetMostDisruptiveAllowedAction() {
@@ -349,7 +405,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mostDisruptiveAllowedActionInput() {
-    return this._mostDisruptiveAllowedAction
+    return this._mostDisruptiveAllowedAction;
   }
 
   // name - computed: false, optional: false, required: true
@@ -362,15 +418,15 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -378,15 +434,15 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // remove_instance_state_on_destroy - computed: false, optional: true, required: false
-  private _removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable; 
   public get removeInstanceStateOnDestroy() {
     return this.getBooleanAttribute('remove_instance_state_on_destroy') as any;
   }
-  public set removeInstanceStateOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set removeInstanceStateOnDestroy(value: boolean | cdktf.IResolvable) {
     this._removeInstanceStateOnDestroy = value;
   }
   public resetRemoveInstanceStateOnDestroy() {
@@ -394,15 +450,15 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get removeInstanceStateOnDestroyInput() {
-    return this._removeInstanceStateOnDestroy
+    return this._removeInstanceStateOnDestroy;
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -410,41 +466,39 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // preserved_state - computed: false, optional: true, required: false
-  private _preservedState?: ComputePerInstanceConfigPreservedState | undefined; 
-  private __preservedStateOutput = new ComputePerInstanceConfigPreservedStateOutputReference(this as any, "preserved_state", true);
+  private _preservedState = new ComputePerInstanceConfigPreservedStateOutputReference(this as any, "preserved_state", true);
   public get preservedState() {
-    return this.__preservedStateOutput;
+    return this._preservedState;
   }
-  public putPreservedState(value: ComputePerInstanceConfigPreservedState | undefined) {
-    this._preservedState = value;
+  public putPreservedState(value: ComputePerInstanceConfigPreservedState) {
+    this._preservedState.internalValue = value;
   }
   public resetPreservedState() {
-    this._preservedState = undefined;
+    this._preservedState.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get preservedStateInput() {
-    return this._preservedState
+    return this._preservedState.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputePerInstanceConfigTimeouts | undefined; 
-  private __timeoutsOutput = new ComputePerInstanceConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputePerInstanceConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputePerInstanceConfigTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputePerInstanceConfigTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -460,8 +514,8 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       remove_instance_state_on_destroy: cdktf.booleanToTerraform(this._removeInstanceStateOnDestroy),
       zone: cdktf.stringToTerraform(this._zone),
-      preserved_state: computePerInstanceConfigPreservedStateToTerraform(this._preservedState),
-      timeouts: computePerInstanceConfigTimeoutsToTerraform(this._timeouts),
+      preserved_state: computePerInstanceConfigPreservedStateToTerraform(this._preservedState.internalValue),
+      timeouts: computePerInstanceConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

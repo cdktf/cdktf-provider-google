@@ -75,7 +75,7 @@ export interface IdentityPlatformTenantOauthIdpConfigTimeouts {
   readonly update?: string;
 }
 
-function identityPlatformTenantOauthIdpConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference | IdentityPlatformTenantOauthIdpConfigTimeouts): any {
+export function identityPlatformTenantOauthIdpConfigTimeoutsToTerraform(struct?: IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference | IdentityPlatformTenantOauthIdpConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,12 +97,43 @@ export class IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IdentityPlatformTenantOauthIdpConfigTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantOauthIdpConfigTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -110,15 +141,15 @@ export class IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -126,15 +157,15 @@ export class IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -142,7 +173,7 @@ export class IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -186,7 +217,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
     this._name = config.name;
     this._project = config.project;
     this._tenant = config.tenant;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -203,15 +234,15 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: true, required: false
-  private _clientSecret?: string | undefined; 
+  private _clientSecret?: string; 
   public get clientSecret() {
     return this.getStringAttribute('client_secret');
   }
-  public set clientSecret(value: string | undefined) {
+  public set clientSecret(value: string) {
     this._clientSecret = value;
   }
   public resetClientSecret() {
@@ -219,7 +250,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -232,15 +263,15 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -248,7 +279,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -266,7 +297,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get issuerInput() {
-    return this._issuer
+    return this._issuer;
   }
 
   // name - computed: false, optional: false, required: true
@@ -279,15 +310,15 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -295,7 +326,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // tenant - computed: false, optional: false, required: true
@@ -308,24 +339,23 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get tenantInput() {
-    return this._tenant
+    return this._tenant;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IdentityPlatformTenantOauthIdpConfigTimeouts | undefined; 
-  private __timeoutsOutput = new IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IdentityPlatformTenantOauthIdpConfigTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IdentityPlatformTenantOauthIdpConfigTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -342,7 +372,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       tenant: cdktf.stringToTerraform(this._tenant),
-      timeouts: identityPlatformTenantOauthIdpConfigTimeoutsToTerraform(this._timeouts),
+      timeouts: identityPlatformTenantOauthIdpConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

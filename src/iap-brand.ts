@@ -45,7 +45,7 @@ export interface IapBrandTimeouts {
   readonly delete?: string;
 }
 
-function iapBrandTimeoutsToTerraform(struct?: IapBrandTimeoutsOutputReference | IapBrandTimeouts): any {
+export function iapBrandTimeoutsToTerraform(struct?: IapBrandTimeoutsOutputReference | IapBrandTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -66,12 +66,37 @@ export class IapBrandTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IapBrandTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IapBrandTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -79,15 +104,15 @@ export class IapBrandTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -95,7 +120,7 @@ export class IapBrandTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -134,7 +159,7 @@ export class IapBrand extends cdktf.TerraformResource {
     this._applicationTitle = config.applicationTitle;
     this._project = config.project;
     this._supportEmail = config.supportEmail;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -151,7 +176,7 @@ export class IapBrand extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get applicationTitleInput() {
-    return this._applicationTitle
+    return this._applicationTitle;
   }
 
   // id - computed: true, optional: true, required: false
@@ -170,11 +195,11 @@ export class IapBrand extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -182,7 +207,7 @@ export class IapBrand extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // support_email - computed: false, optional: false, required: true
@@ -195,24 +220,23 @@ export class IapBrand extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get supportEmailInput() {
-    return this._supportEmail
+    return this._supportEmail;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IapBrandTimeouts | undefined; 
-  private __timeoutsOutput = new IapBrandTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IapBrandTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IapBrandTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IapBrandTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -224,7 +248,7 @@ export class IapBrand extends cdktf.TerraformResource {
       application_title: cdktf.stringToTerraform(this._applicationTitle),
       project: cdktf.stringToTerraform(this._project),
       support_email: cdktf.stringToTerraform(this._supportEmail),
-      timeouts: iapBrandTimeoutsToTerraform(this._timeouts),
+      timeouts: iapBrandTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

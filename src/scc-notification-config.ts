@@ -79,7 +79,7 @@ for information on how to write a filter.
   readonly filter: string;
 }
 
-function sccNotificationConfigStreamingConfigToTerraform(struct?: SccNotificationConfigStreamingConfigOutputReference | SccNotificationConfigStreamingConfig): any {
+export function sccNotificationConfigStreamingConfigToTerraform(struct?: SccNotificationConfigStreamingConfigOutputReference | SccNotificationConfigStreamingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -99,6 +99,25 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SccNotificationConfigStreamingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._filter) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SccNotificationConfigStreamingConfig | undefined) {
+    if (value === undefined) {
+      this._filter = undefined;
+    }
+    else {
+      this._filter = value.filter;
+    }
+  }
+
   // filter - computed: false, optional: false, required: true
   private _filter?: string; 
   public get filter() {
@@ -109,7 +128,7 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 }
 export interface SccNotificationConfigTimeouts {
@@ -127,7 +146,7 @@ export interface SccNotificationConfigTimeouts {
   readonly update?: string;
 }
 
-function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfigTimeoutsOutputReference | SccNotificationConfigTimeouts): any {
+export function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfigTimeoutsOutputReference | SccNotificationConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -149,12 +168,43 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SccNotificationConfigTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SccNotificationConfigTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -162,15 +212,15 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -178,15 +228,15 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -194,7 +244,7 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -234,8 +284,8 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
     this._description = config.description;
     this._organization = config.organization;
     this._pubsubTopic = config.pubsubTopic;
-    this._streamingConfig = config.streamingConfig;
-    this._timeouts = config.timeouts;
+    this._streamingConfig.internalValue = config.streamingConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -252,15 +302,15 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get configIdInput() {
-    return this._configId
+    return this._configId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -268,7 +318,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -291,7 +341,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get organizationInput() {
-    return this._organization
+    return this._organization;
   }
 
   // pubsub_topic - computed: false, optional: false, required: true
@@ -304,7 +354,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubTopicInput() {
-    return this._pubsubTopic
+    return this._pubsubTopic;
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -313,34 +363,32 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // streaming_config - computed: false, optional: false, required: true
-  private _streamingConfig?: SccNotificationConfigStreamingConfig; 
-  private __streamingConfigOutput = new SccNotificationConfigStreamingConfigOutputReference(this as any, "streaming_config", true);
+  private _streamingConfig = new SccNotificationConfigStreamingConfigOutputReference(this as any, "streaming_config", true);
   public get streamingConfig() {
-    return this.__streamingConfigOutput;
+    return this._streamingConfig;
   }
   public putStreamingConfig(value: SccNotificationConfigStreamingConfig) {
-    this._streamingConfig = value;
+    this._streamingConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get streamingConfigInput() {
-    return this._streamingConfig
+    return this._streamingConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SccNotificationConfigTimeouts | undefined; 
-  private __timeoutsOutput = new SccNotificationConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SccNotificationConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SccNotificationConfigTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SccNotificationConfigTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -353,8 +401,8 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       organization: cdktf.stringToTerraform(this._organization),
       pubsub_topic: cdktf.stringToTerraform(this._pubsubTopic),
-      streaming_config: sccNotificationConfigStreamingConfigToTerraform(this._streamingConfig),
-      timeouts: sccNotificationConfigTimeoutsToTerraform(this._timeouts),
+      streaming_config: sccNotificationConfigStreamingConfigToTerraform(this._streamingConfig.internalValue),
+      timeouts: sccNotificationConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -215,7 +215,7 @@ export interface AppEngineFlexibleAppVersionApiConfig {
   readonly url?: string;
 }
 
-function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngineFlexibleAppVersionApiConfigOutputReference | AppEngineFlexibleAppVersionApiConfig): any {
+export function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngineFlexibleAppVersionApiConfigOutputReference | AppEngineFlexibleAppVersionApiConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -239,12 +239,55 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionApiConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._authFailAction) {
+      hasAnyValues = true;
+      internalValueResult.authFailAction = this._authFailAction;
+    }
+    if (this._login) {
+      hasAnyValues = true;
+      internalValueResult.login = this._login;
+    }
+    if (this._script) {
+      hasAnyValues = true;
+      internalValueResult.script = this._script;
+    }
+    if (this._securityLevel) {
+      hasAnyValues = true;
+      internalValueResult.securityLevel = this._securityLevel;
+    }
+    if (this._url) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionApiConfig | undefined) {
+    if (value === undefined) {
+      this._authFailAction = undefined;
+      this._login = undefined;
+      this._script = undefined;
+      this._securityLevel = undefined;
+      this._url = undefined;
+    }
+    else {
+      this._authFailAction = value.authFailAction;
+      this._login = value.login;
+      this._script = value.script;
+      this._securityLevel = value.securityLevel;
+      this._url = value.url;
+    }
+  }
+
   // auth_fail_action - computed: false, optional: true, required: false
-  private _authFailAction?: string | undefined; 
+  private _authFailAction?: string; 
   public get authFailAction() {
     return this.getStringAttribute('auth_fail_action');
   }
-  public set authFailAction(value: string | undefined) {
+  public set authFailAction(value: string) {
     this._authFailAction = value;
   }
   public resetAuthFailAction() {
@@ -252,15 +295,15 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get authFailActionInput() {
-    return this._authFailAction
+    return this._authFailAction;
   }
 
   // login - computed: false, optional: true, required: false
-  private _login?: string | undefined; 
+  private _login?: string; 
   public get login() {
     return this.getStringAttribute('login');
   }
-  public set login(value: string | undefined) {
+  public set login(value: string) {
     this._login = value;
   }
   public resetLogin() {
@@ -268,7 +311,7 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get loginInput() {
-    return this._login
+    return this._login;
   }
 
   // script - computed: false, optional: false, required: true
@@ -281,15 +324,15 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get scriptInput() {
-    return this._script
+    return this._script;
   }
 
   // security_level - computed: false, optional: true, required: false
-  private _securityLevel?: string | undefined; 
+  private _securityLevel?: string; 
   public get securityLevel() {
     return this.getStringAttribute('security_level');
   }
-  public set securityLevel(value: string | undefined) {
+  public set securityLevel(value: string) {
     this._securityLevel = value;
   }
   public resetSecurityLevel() {
@@ -297,15 +340,15 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get securityLevelInput() {
-    return this._securityLevel
+    return this._securityLevel;
   }
 
   // url - computed: false, optional: true, required: false
-  private _url?: string | undefined; 
+  private _url?: string; 
   public get url() {
     return this.getStringAttribute('url');
   }
-  public set url(value: string | undefined) {
+  public set url(value: string) {
     this._url = value;
   }
   public resetUrl() {
@@ -313,7 +356,7 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 }
 export interface AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization {
@@ -331,7 +374,7 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization {
   readonly targetUtilization: number;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization): any {
+export function appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -352,12 +395,37 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._aggregationWindowLength) {
+      hasAnyValues = true;
+      internalValueResult.aggregationWindowLength = this._aggregationWindowLength;
+    }
+    if (this._targetUtilization) {
+      hasAnyValues = true;
+      internalValueResult.targetUtilization = this._targetUtilization;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization | undefined) {
+    if (value === undefined) {
+      this._aggregationWindowLength = undefined;
+      this._targetUtilization = undefined;
+    }
+    else {
+      this._aggregationWindowLength = value.aggregationWindowLength;
+      this._targetUtilization = value.targetUtilization;
+    }
+  }
+
   // aggregation_window_length - computed: false, optional: true, required: false
-  private _aggregationWindowLength?: string | undefined; 
+  private _aggregationWindowLength?: string; 
   public get aggregationWindowLength() {
     return this.getStringAttribute('aggregation_window_length');
   }
-  public set aggregationWindowLength(value: string | undefined) {
+  public set aggregationWindowLength(value: string) {
     this._aggregationWindowLength = value;
   }
   public resetAggregationWindowLength() {
@@ -365,7 +433,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationWindowLengthInput() {
-    return this._aggregationWindowLength
+    return this._aggregationWindowLength;
   }
 
   // target_utilization - computed: false, optional: false, required: true
@@ -378,7 +446,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get targetUtilizationInput() {
-    return this._targetUtilization
+    return this._targetUtilization;
   }
 }
 export interface AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
@@ -408,7 +476,7 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
   readonly targetWriteOpsPerSecond?: number;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization): any {
+export function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -431,12 +499,49 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._targetReadBytesPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetReadBytesPerSecond = this._targetReadBytesPerSecond;
+    }
+    if (this._targetReadOpsPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetReadOpsPerSecond = this._targetReadOpsPerSecond;
+    }
+    if (this._targetWriteBytesPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetWriteBytesPerSecond = this._targetWriteBytesPerSecond;
+    }
+    if (this._targetWriteOpsPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetWriteOpsPerSecond = this._targetWriteOpsPerSecond;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined) {
+    if (value === undefined) {
+      this._targetReadBytesPerSecond = undefined;
+      this._targetReadOpsPerSecond = undefined;
+      this._targetWriteBytesPerSecond = undefined;
+      this._targetWriteOpsPerSecond = undefined;
+    }
+    else {
+      this._targetReadBytesPerSecond = value.targetReadBytesPerSecond;
+      this._targetReadOpsPerSecond = value.targetReadOpsPerSecond;
+      this._targetWriteBytesPerSecond = value.targetWriteBytesPerSecond;
+      this._targetWriteOpsPerSecond = value.targetWriteOpsPerSecond;
+    }
+  }
+
   // target_read_bytes_per_second - computed: false, optional: true, required: false
-  private _targetReadBytesPerSecond?: number | undefined; 
+  private _targetReadBytesPerSecond?: number; 
   public get targetReadBytesPerSecond() {
     return this.getNumberAttribute('target_read_bytes_per_second');
   }
-  public set targetReadBytesPerSecond(value: number | undefined) {
+  public set targetReadBytesPerSecond(value: number) {
     this._targetReadBytesPerSecond = value;
   }
   public resetTargetReadBytesPerSecond() {
@@ -444,15 +549,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get targetReadBytesPerSecondInput() {
-    return this._targetReadBytesPerSecond
+    return this._targetReadBytesPerSecond;
   }
 
   // target_read_ops_per_second - computed: false, optional: true, required: false
-  private _targetReadOpsPerSecond?: number | undefined; 
+  private _targetReadOpsPerSecond?: number; 
   public get targetReadOpsPerSecond() {
     return this.getNumberAttribute('target_read_ops_per_second');
   }
-  public set targetReadOpsPerSecond(value: number | undefined) {
+  public set targetReadOpsPerSecond(value: number) {
     this._targetReadOpsPerSecond = value;
   }
   public resetTargetReadOpsPerSecond() {
@@ -460,15 +565,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get targetReadOpsPerSecondInput() {
-    return this._targetReadOpsPerSecond
+    return this._targetReadOpsPerSecond;
   }
 
   // target_write_bytes_per_second - computed: false, optional: true, required: false
-  private _targetWriteBytesPerSecond?: number | undefined; 
+  private _targetWriteBytesPerSecond?: number; 
   public get targetWriteBytesPerSecond() {
     return this.getNumberAttribute('target_write_bytes_per_second');
   }
-  public set targetWriteBytesPerSecond(value: number | undefined) {
+  public set targetWriteBytesPerSecond(value: number) {
     this._targetWriteBytesPerSecond = value;
   }
   public resetTargetWriteBytesPerSecond() {
@@ -476,15 +581,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get targetWriteBytesPerSecondInput() {
-    return this._targetWriteBytesPerSecond
+    return this._targetWriteBytesPerSecond;
   }
 
   // target_write_ops_per_second - computed: false, optional: true, required: false
-  private _targetWriteOpsPerSecond?: number | undefined; 
+  private _targetWriteOpsPerSecond?: number; 
   public get targetWriteOpsPerSecond() {
     return this.getNumberAttribute('target_write_ops_per_second');
   }
-  public set targetWriteOpsPerSecond(value: number | undefined) {
+  public set targetWriteOpsPerSecond(value: number) {
     this._targetWriteOpsPerSecond = value;
   }
   public resetTargetWriteOpsPerSecond() {
@@ -492,7 +597,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get targetWriteOpsPerSecondInput() {
-    return this._targetWriteOpsPerSecond
+    return this._targetWriteOpsPerSecond;
   }
 }
 export interface AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
@@ -522,7 +627,7 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
   readonly targetSentPacketsPerSecond?: number;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization): any {
+export function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -545,12 +650,49 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._targetReceivedBytesPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetReceivedBytesPerSecond = this._targetReceivedBytesPerSecond;
+    }
+    if (this._targetReceivedPacketsPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetReceivedPacketsPerSecond = this._targetReceivedPacketsPerSecond;
+    }
+    if (this._targetSentBytesPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetSentBytesPerSecond = this._targetSentBytesPerSecond;
+    }
+    if (this._targetSentPacketsPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetSentPacketsPerSecond = this._targetSentPacketsPerSecond;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined) {
+    if (value === undefined) {
+      this._targetReceivedBytesPerSecond = undefined;
+      this._targetReceivedPacketsPerSecond = undefined;
+      this._targetSentBytesPerSecond = undefined;
+      this._targetSentPacketsPerSecond = undefined;
+    }
+    else {
+      this._targetReceivedBytesPerSecond = value.targetReceivedBytesPerSecond;
+      this._targetReceivedPacketsPerSecond = value.targetReceivedPacketsPerSecond;
+      this._targetSentBytesPerSecond = value.targetSentBytesPerSecond;
+      this._targetSentPacketsPerSecond = value.targetSentPacketsPerSecond;
+    }
+  }
+
   // target_received_bytes_per_second - computed: false, optional: true, required: false
-  private _targetReceivedBytesPerSecond?: number | undefined; 
+  private _targetReceivedBytesPerSecond?: number; 
   public get targetReceivedBytesPerSecond() {
     return this.getNumberAttribute('target_received_bytes_per_second');
   }
-  public set targetReceivedBytesPerSecond(value: number | undefined) {
+  public set targetReceivedBytesPerSecond(value: number) {
     this._targetReceivedBytesPerSecond = value;
   }
   public resetTargetReceivedBytesPerSecond() {
@@ -558,15 +700,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get targetReceivedBytesPerSecondInput() {
-    return this._targetReceivedBytesPerSecond
+    return this._targetReceivedBytesPerSecond;
   }
 
   // target_received_packets_per_second - computed: false, optional: true, required: false
-  private _targetReceivedPacketsPerSecond?: number | undefined; 
+  private _targetReceivedPacketsPerSecond?: number; 
   public get targetReceivedPacketsPerSecond() {
     return this.getNumberAttribute('target_received_packets_per_second');
   }
-  public set targetReceivedPacketsPerSecond(value: number | undefined) {
+  public set targetReceivedPacketsPerSecond(value: number) {
     this._targetReceivedPacketsPerSecond = value;
   }
   public resetTargetReceivedPacketsPerSecond() {
@@ -574,15 +716,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get targetReceivedPacketsPerSecondInput() {
-    return this._targetReceivedPacketsPerSecond
+    return this._targetReceivedPacketsPerSecond;
   }
 
   // target_sent_bytes_per_second - computed: false, optional: true, required: false
-  private _targetSentBytesPerSecond?: number | undefined; 
+  private _targetSentBytesPerSecond?: number; 
   public get targetSentBytesPerSecond() {
     return this.getNumberAttribute('target_sent_bytes_per_second');
   }
-  public set targetSentBytesPerSecond(value: number | undefined) {
+  public set targetSentBytesPerSecond(value: number) {
     this._targetSentBytesPerSecond = value;
   }
   public resetTargetSentBytesPerSecond() {
@@ -590,15 +732,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get targetSentBytesPerSecondInput() {
-    return this._targetSentBytesPerSecond
+    return this._targetSentBytesPerSecond;
   }
 
   // target_sent_packets_per_second - computed: false, optional: true, required: false
-  private _targetSentPacketsPerSecond?: number | undefined; 
+  private _targetSentPacketsPerSecond?: number; 
   public get targetSentPacketsPerSecond() {
     return this.getNumberAttribute('target_sent_packets_per_second');
   }
-  public set targetSentPacketsPerSecond(value: number | undefined) {
+  public set targetSentPacketsPerSecond(value: number) {
     this._targetSentPacketsPerSecond = value;
   }
   public resetTargetSentPacketsPerSecond() {
@@ -606,7 +748,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get targetSentPacketsPerSecondInput() {
-    return this._targetSentPacketsPerSecond
+    return this._targetSentPacketsPerSecond;
   }
 }
 export interface AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization {
@@ -624,7 +766,7 @@ export interface AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization {
   readonly targetRequestCountPerSecond?: string;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization): any {
+export function appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference | AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -645,12 +787,37 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._targetConcurrentRequests) {
+      hasAnyValues = true;
+      internalValueResult.targetConcurrentRequests = this._targetConcurrentRequests;
+    }
+    if (this._targetRequestCountPerSecond) {
+      hasAnyValues = true;
+      internalValueResult.targetRequestCountPerSecond = this._targetRequestCountPerSecond;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined) {
+    if (value === undefined) {
+      this._targetConcurrentRequests = undefined;
+      this._targetRequestCountPerSecond = undefined;
+    }
+    else {
+      this._targetConcurrentRequests = value.targetConcurrentRequests;
+      this._targetRequestCountPerSecond = value.targetRequestCountPerSecond;
+    }
+  }
+
   // target_concurrent_requests - computed: false, optional: true, required: false
-  private _targetConcurrentRequests?: number | undefined; 
+  private _targetConcurrentRequests?: number; 
   public get targetConcurrentRequests() {
     return this.getNumberAttribute('target_concurrent_requests');
   }
-  public set targetConcurrentRequests(value: number | undefined) {
+  public set targetConcurrentRequests(value: number) {
     this._targetConcurrentRequests = value;
   }
   public resetTargetConcurrentRequests() {
@@ -658,15 +825,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get targetConcurrentRequestsInput() {
-    return this._targetConcurrentRequests
+    return this._targetConcurrentRequests;
   }
 
   // target_request_count_per_second - computed: false, optional: true, required: false
-  private _targetRequestCountPerSecond?: string | undefined; 
+  private _targetRequestCountPerSecond?: string; 
   public get targetRequestCountPerSecond() {
     return this.getStringAttribute('target_request_count_per_second');
   }
-  public set targetRequestCountPerSecond(value: string | undefined) {
+  public set targetRequestCountPerSecond(value: string) {
     this._targetRequestCountPerSecond = value;
   }
   public resetTargetRequestCountPerSecond() {
@@ -674,7 +841,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
   }
   // Temporarily expose input value. Use with caution.
   public get targetRequestCountPerSecondInput() {
-    return this._targetRequestCountPerSecond
+    return this._targetRequestCountPerSecond;
   }
 }
 export interface AppEngineFlexibleAppVersionAutomaticScaling {
@@ -756,7 +923,7 @@ Defaults to a runtime-specific value.
   readonly requestUtilization?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization;
 }
 
-function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingOutputReference | AppEngineFlexibleAppVersionAutomaticScaling): any {
+export function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: AppEngineFlexibleAppVersionAutomaticScalingOutputReference | AppEngineFlexibleAppVersionAutomaticScaling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -787,12 +954,97 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionAutomaticScaling | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._coolDownPeriod) {
+      hasAnyValues = true;
+      internalValueResult.coolDownPeriod = this._coolDownPeriod;
+    }
+    if (this._maxConcurrentRequests) {
+      hasAnyValues = true;
+      internalValueResult.maxConcurrentRequests = this._maxConcurrentRequests;
+    }
+    if (this._maxIdleInstances) {
+      hasAnyValues = true;
+      internalValueResult.maxIdleInstances = this._maxIdleInstances;
+    }
+    if (this._maxPendingLatency) {
+      hasAnyValues = true;
+      internalValueResult.maxPendingLatency = this._maxPendingLatency;
+    }
+    if (this._maxTotalInstances) {
+      hasAnyValues = true;
+      internalValueResult.maxTotalInstances = this._maxTotalInstances;
+    }
+    if (this._minIdleInstances) {
+      hasAnyValues = true;
+      internalValueResult.minIdleInstances = this._minIdleInstances;
+    }
+    if (this._minPendingLatency) {
+      hasAnyValues = true;
+      internalValueResult.minPendingLatency = this._minPendingLatency;
+    }
+    if (this._minTotalInstances) {
+      hasAnyValues = true;
+      internalValueResult.minTotalInstances = this._minTotalInstances;
+    }
+    if (this._cpuUtilization) {
+      hasAnyValues = true;
+      internalValueResult.cpuUtilization = this._cpuUtilization?.internalValue;
+    }
+    if (this._diskUtilization) {
+      hasAnyValues = true;
+      internalValueResult.diskUtilization = this._diskUtilization?.internalValue;
+    }
+    if (this._networkUtilization) {
+      hasAnyValues = true;
+      internalValueResult.networkUtilization = this._networkUtilization?.internalValue;
+    }
+    if (this._requestUtilization) {
+      hasAnyValues = true;
+      internalValueResult.requestUtilization = this._requestUtilization?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScaling | undefined) {
+    if (value === undefined) {
+      this._coolDownPeriod = undefined;
+      this._maxConcurrentRequests = undefined;
+      this._maxIdleInstances = undefined;
+      this._maxPendingLatency = undefined;
+      this._maxTotalInstances = undefined;
+      this._minIdleInstances = undefined;
+      this._minPendingLatency = undefined;
+      this._minTotalInstances = undefined;
+      this._cpuUtilization.internalValue = undefined;
+      this._diskUtilization.internalValue = undefined;
+      this._networkUtilization.internalValue = undefined;
+      this._requestUtilization.internalValue = undefined;
+    }
+    else {
+      this._coolDownPeriod = value.coolDownPeriod;
+      this._maxConcurrentRequests = value.maxConcurrentRequests;
+      this._maxIdleInstances = value.maxIdleInstances;
+      this._maxPendingLatency = value.maxPendingLatency;
+      this._maxTotalInstances = value.maxTotalInstances;
+      this._minIdleInstances = value.minIdleInstances;
+      this._minPendingLatency = value.minPendingLatency;
+      this._minTotalInstances = value.minTotalInstances;
+      this._cpuUtilization.internalValue = value.cpuUtilization;
+      this._diskUtilization.internalValue = value.diskUtilization;
+      this._networkUtilization.internalValue = value.networkUtilization;
+      this._requestUtilization.internalValue = value.requestUtilization;
+    }
+  }
+
   // cool_down_period - computed: false, optional: true, required: false
-  private _coolDownPeriod?: string | undefined; 
+  private _coolDownPeriod?: string; 
   public get coolDownPeriod() {
     return this.getStringAttribute('cool_down_period');
   }
-  public set coolDownPeriod(value: string | undefined) {
+  public set coolDownPeriod(value: string) {
     this._coolDownPeriod = value;
   }
   public resetCoolDownPeriod() {
@@ -800,15 +1052,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get coolDownPeriodInput() {
-    return this._coolDownPeriod
+    return this._coolDownPeriod;
   }
 
   // max_concurrent_requests - computed: true, optional: true, required: false
-  private _maxConcurrentRequests?: number | undefined; 
+  private _maxConcurrentRequests?: number; 
   public get maxConcurrentRequests() {
     return this.getNumberAttribute('max_concurrent_requests');
   }
-  public set maxConcurrentRequests(value: number | undefined) {
+  public set maxConcurrentRequests(value: number) {
     this._maxConcurrentRequests = value;
   }
   public resetMaxConcurrentRequests() {
@@ -816,15 +1068,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get maxConcurrentRequestsInput() {
-    return this._maxConcurrentRequests
+    return this._maxConcurrentRequests;
   }
 
   // max_idle_instances - computed: false, optional: true, required: false
-  private _maxIdleInstances?: number | undefined; 
+  private _maxIdleInstances?: number; 
   public get maxIdleInstances() {
     return this.getNumberAttribute('max_idle_instances');
   }
-  public set maxIdleInstances(value: number | undefined) {
+  public set maxIdleInstances(value: number) {
     this._maxIdleInstances = value;
   }
   public resetMaxIdleInstances() {
@@ -832,15 +1084,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get maxIdleInstancesInput() {
-    return this._maxIdleInstances
+    return this._maxIdleInstances;
   }
 
   // max_pending_latency - computed: false, optional: true, required: false
-  private _maxPendingLatency?: string | undefined; 
+  private _maxPendingLatency?: string; 
   public get maxPendingLatency() {
     return this.getStringAttribute('max_pending_latency');
   }
-  public set maxPendingLatency(value: string | undefined) {
+  public set maxPendingLatency(value: string) {
     this._maxPendingLatency = value;
   }
   public resetMaxPendingLatency() {
@@ -848,15 +1100,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get maxPendingLatencyInput() {
-    return this._maxPendingLatency
+    return this._maxPendingLatency;
   }
 
   // max_total_instances - computed: false, optional: true, required: false
-  private _maxTotalInstances?: number | undefined; 
+  private _maxTotalInstances?: number; 
   public get maxTotalInstances() {
     return this.getNumberAttribute('max_total_instances');
   }
-  public set maxTotalInstances(value: number | undefined) {
+  public set maxTotalInstances(value: number) {
     this._maxTotalInstances = value;
   }
   public resetMaxTotalInstances() {
@@ -864,15 +1116,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get maxTotalInstancesInput() {
-    return this._maxTotalInstances
+    return this._maxTotalInstances;
   }
 
   // min_idle_instances - computed: false, optional: true, required: false
-  private _minIdleInstances?: number | undefined; 
+  private _minIdleInstances?: number; 
   public get minIdleInstances() {
     return this.getNumberAttribute('min_idle_instances');
   }
-  public set minIdleInstances(value: number | undefined) {
+  public set minIdleInstances(value: number) {
     this._minIdleInstances = value;
   }
   public resetMinIdleInstances() {
@@ -880,15 +1132,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get minIdleInstancesInput() {
-    return this._minIdleInstances
+    return this._minIdleInstances;
   }
 
   // min_pending_latency - computed: false, optional: true, required: false
-  private _minPendingLatency?: string | undefined; 
+  private _minPendingLatency?: string; 
   public get minPendingLatency() {
     return this.getStringAttribute('min_pending_latency');
   }
-  public set minPendingLatency(value: string | undefined) {
+  public set minPendingLatency(value: string) {
     this._minPendingLatency = value;
   }
   public resetMinPendingLatency() {
@@ -896,15 +1148,15 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get minPendingLatencyInput() {
-    return this._minPendingLatency
+    return this._minPendingLatency;
   }
 
   // min_total_instances - computed: false, optional: true, required: false
-  private _minTotalInstances?: number | undefined; 
+  private _minTotalInstances?: number; 
   public get minTotalInstances() {
     return this.getNumberAttribute('min_total_instances');
   }
-  public set minTotalInstances(value: number | undefined) {
+  public set minTotalInstances(value: number) {
     this._minTotalInstances = value;
   }
   public resetMinTotalInstances() {
@@ -912,72 +1164,68 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get minTotalInstancesInput() {
-    return this._minTotalInstances
+    return this._minTotalInstances;
   }
 
   // cpu_utilization - computed: false, optional: false, required: true
-  private _cpuUtilization?: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization; 
-  private __cpuUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
+  private _cpuUtilization = new AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
   public get cpuUtilization() {
-    return this.__cpuUtilizationOutput;
+    return this._cpuUtilization;
   }
   public putCpuUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization) {
-    this._cpuUtilization = value;
+    this._cpuUtilization.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get cpuUtilizationInput() {
-    return this._cpuUtilization
+    return this._cpuUtilization.internalValue;
   }
 
   // disk_utilization - computed: false, optional: true, required: false
-  private _diskUtilization?: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined; 
-  private __diskUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference(this as any, "disk_utilization", true);
+  private _diskUtilization = new AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference(this as any, "disk_utilization", true);
   public get diskUtilization() {
-    return this.__diskUtilizationOutput;
+    return this._diskUtilization;
   }
-  public putDiskUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined) {
-    this._diskUtilization = value;
+  public putDiskUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization) {
+    this._diskUtilization.internalValue = value;
   }
   public resetDiskUtilization() {
-    this._diskUtilization = undefined;
+    this._diskUtilization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskUtilizationInput() {
-    return this._diskUtilization
+    return this._diskUtilization.internalValue;
   }
 
   // network_utilization - computed: false, optional: true, required: false
-  private _networkUtilization?: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined; 
-  private __networkUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference(this as any, "network_utilization", true);
+  private _networkUtilization = new AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference(this as any, "network_utilization", true);
   public get networkUtilization() {
-    return this.__networkUtilizationOutput;
+    return this._networkUtilization;
   }
-  public putNetworkUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined) {
-    this._networkUtilization = value;
+  public putNetworkUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization) {
+    this._networkUtilization.internalValue = value;
   }
   public resetNetworkUtilization() {
-    this._networkUtilization = undefined;
+    this._networkUtilization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkUtilizationInput() {
-    return this._networkUtilization
+    return this._networkUtilization.internalValue;
   }
 
   // request_utilization - computed: false, optional: true, required: false
-  private _requestUtilization?: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined; 
-  private __requestUtilizationOutput = new AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference(this as any, "request_utilization", true);
+  private _requestUtilization = new AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference(this as any, "request_utilization", true);
   public get requestUtilization() {
-    return this.__requestUtilizationOutput;
+    return this._requestUtilization;
   }
-  public putRequestUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined) {
-    this._requestUtilization = value;
+  public putRequestUtilization(value: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization) {
+    this._requestUtilization.internalValue = value;
   }
   public resetRequestUtilization() {
-    this._requestUtilization = undefined;
+    this._requestUtilization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestUtilizationInput() {
-    return this._requestUtilization
+    return this._requestUtilization.internalValue;
   }
 }
 export interface AppEngineFlexibleAppVersionDeploymentCloudBuildOptions {
@@ -997,7 +1245,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly cloudBuildTimeout?: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference | AppEngineFlexibleAppVersionDeploymentCloudBuildOptions): any {
+export function appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference | AppEngineFlexibleAppVersionDeploymentCloudBuildOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1018,6 +1266,31 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._appYamlPath) {
+      hasAnyValues = true;
+      internalValueResult.appYamlPath = this._appYamlPath;
+    }
+    if (this._cloudBuildTimeout) {
+      hasAnyValues = true;
+      internalValueResult.cloudBuildTimeout = this._cloudBuildTimeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined) {
+    if (value === undefined) {
+      this._appYamlPath = undefined;
+      this._cloudBuildTimeout = undefined;
+    }
+    else {
+      this._appYamlPath = value.appYamlPath;
+      this._cloudBuildTimeout = value.cloudBuildTimeout;
+    }
+  }
+
   // app_yaml_path - computed: false, optional: false, required: true
   private _appYamlPath?: string; 
   public get appYamlPath() {
@@ -1028,15 +1301,15 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get appYamlPathInput() {
-    return this._appYamlPath
+    return this._appYamlPath;
   }
 
   // cloud_build_timeout - computed: false, optional: true, required: false
-  private _cloudBuildTimeout?: string | undefined; 
+  private _cloudBuildTimeout?: string; 
   public get cloudBuildTimeout() {
     return this.getStringAttribute('cloud_build_timeout');
   }
-  public set cloudBuildTimeout(value: string | undefined) {
+  public set cloudBuildTimeout(value: string) {
     this._cloudBuildTimeout = value;
   }
   public resetCloudBuildTimeout() {
@@ -1044,7 +1317,7 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get cloudBuildTimeoutInput() {
-    return this._cloudBuildTimeout
+    return this._cloudBuildTimeout;
   }
 }
 export interface AppEngineFlexibleAppVersionDeploymentContainer {
@@ -1057,7 +1330,7 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
   readonly image: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentContainerOutputReference | AppEngineFlexibleAppVersionDeploymentContainer): any {
+export function appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentContainerOutputReference | AppEngineFlexibleAppVersionDeploymentContainer): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1077,6 +1350,25 @@ export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionDeploymentContainer | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._image) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionDeploymentContainer | undefined) {
+    if (value === undefined) {
+      this._image = undefined;
+    }
+    else {
+      this._image = value.image;
+    }
+  }
+
   // image - computed: false, optional: false, required: true
   private _image?: string; 
   public get image() {
@@ -1087,7 +1379,7 @@ export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get imageInput() {
-    return this._image
+    return this._image;
   }
 }
 export interface AppEngineFlexibleAppVersionDeploymentFiles {
@@ -1109,7 +1401,7 @@ export interface AppEngineFlexibleAppVersionDeploymentFiles {
   readonly sourceUrl: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentFilesToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentFiles): any {
+export function appEngineFlexibleAppVersionDeploymentFilesToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentFiles): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1136,7 +1428,7 @@ export interface AppEngineFlexibleAppVersionDeploymentZip {
   readonly sourceUrl: string;
 }
 
-function appEngineFlexibleAppVersionDeploymentZipToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentZipOutputReference | AppEngineFlexibleAppVersionDeploymentZip): any {
+export function appEngineFlexibleAppVersionDeploymentZipToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentZipOutputReference | AppEngineFlexibleAppVersionDeploymentZip): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1157,12 +1449,37 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionDeploymentZip | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._filesCount) {
+      hasAnyValues = true;
+      internalValueResult.filesCount = this._filesCount;
+    }
+    if (this._sourceUrl) {
+      hasAnyValues = true;
+      internalValueResult.sourceUrl = this._sourceUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionDeploymentZip | undefined) {
+    if (value === undefined) {
+      this._filesCount = undefined;
+      this._sourceUrl = undefined;
+    }
+    else {
+      this._filesCount = value.filesCount;
+      this._sourceUrl = value.sourceUrl;
+    }
+  }
+
   // files_count - computed: false, optional: true, required: false
-  private _filesCount?: number | undefined; 
+  private _filesCount?: number; 
   public get filesCount() {
     return this.getNumberAttribute('files_count');
   }
-  public set filesCount(value: number | undefined) {
+  public set filesCount(value: number) {
     this._filesCount = value;
   }
   public resetFilesCount() {
@@ -1170,7 +1487,7 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get filesCountInput() {
-    return this._filesCount
+    return this._filesCount;
   }
 
   // source_url - computed: false, optional: false, required: true
@@ -1183,7 +1500,7 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get sourceUrlInput() {
-    return this._sourceUrl
+    return this._sourceUrl;
   }
 }
 export interface AppEngineFlexibleAppVersionDeployment {
@@ -1213,7 +1530,7 @@ export interface AppEngineFlexibleAppVersionDeployment {
   readonly zip?: AppEngineFlexibleAppVersionDeploymentZip;
 }
 
-function appEngineFlexibleAppVersionDeploymentToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentOutputReference | AppEngineFlexibleAppVersionDeployment): any {
+export function appEngineFlexibleAppVersionDeploymentToTerraform(struct?: AppEngineFlexibleAppVersionDeploymentOutputReference | AppEngineFlexibleAppVersionDeployment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1236,47 +1553,82 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cloud_build_options - computed: false, optional: true, required: false
-  private _cloudBuildOptions?: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined; 
-  private __cloudBuildOptionsOutput = new AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference(this as any, "cloud_build_options", true);
-  public get cloudBuildOptions() {
-    return this.__cloudBuildOptionsOutput;
+  public get internalValue(): AppEngineFlexibleAppVersionDeployment | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cloudBuildOptions) {
+      hasAnyValues = true;
+      internalValueResult.cloudBuildOptions = this._cloudBuildOptions?.internalValue;
+    }
+    if (this._container) {
+      hasAnyValues = true;
+      internalValueResult.container = this._container?.internalValue;
+    }
+    if (this._files) {
+      hasAnyValues = true;
+      internalValueResult.files = this._files;
+    }
+    if (this._zip) {
+      hasAnyValues = true;
+      internalValueResult.zip = this._zip?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCloudBuildOptions(value: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined) {
-    this._cloudBuildOptions = value;
+
+  public set internalValue(value: AppEngineFlexibleAppVersionDeployment | undefined) {
+    if (value === undefined) {
+      this._cloudBuildOptions.internalValue = undefined;
+      this._container.internalValue = undefined;
+      this._files = undefined;
+      this._zip.internalValue = undefined;
+    }
+    else {
+      this._cloudBuildOptions.internalValue = value.cloudBuildOptions;
+      this._container.internalValue = value.container;
+      this._files = value.files;
+      this._zip.internalValue = value.zip;
+    }
+  }
+
+  // cloud_build_options - computed: false, optional: true, required: false
+  private _cloudBuildOptions = new AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference(this as any, "cloud_build_options", true);
+  public get cloudBuildOptions() {
+    return this._cloudBuildOptions;
+  }
+  public putCloudBuildOptions(value: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions) {
+    this._cloudBuildOptions.internalValue = value;
   }
   public resetCloudBuildOptions() {
-    this._cloudBuildOptions = undefined;
+    this._cloudBuildOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cloudBuildOptionsInput() {
-    return this._cloudBuildOptions
+    return this._cloudBuildOptions.internalValue;
   }
 
   // container - computed: false, optional: true, required: false
-  private _container?: AppEngineFlexibleAppVersionDeploymentContainer | undefined; 
-  private __containerOutput = new AppEngineFlexibleAppVersionDeploymentContainerOutputReference(this as any, "container", true);
+  private _container = new AppEngineFlexibleAppVersionDeploymentContainerOutputReference(this as any, "container", true);
   public get container() {
-    return this.__containerOutput;
+    return this._container;
   }
-  public putContainer(value: AppEngineFlexibleAppVersionDeploymentContainer | undefined) {
-    this._container = value;
+  public putContainer(value: AppEngineFlexibleAppVersionDeploymentContainer) {
+    this._container.internalValue = value;
   }
   public resetContainer() {
-    this._container = undefined;
+    this._container.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container
+    return this._container.internalValue;
   }
 
   // files - computed: false, optional: true, required: false
-  private _files?: AppEngineFlexibleAppVersionDeploymentFiles[] | undefined; 
+  private _files?: AppEngineFlexibleAppVersionDeploymentFiles[]; 
   public get files() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('files') as any;
   }
-  public set files(value: AppEngineFlexibleAppVersionDeploymentFiles[] | undefined) {
+  public set files(value: AppEngineFlexibleAppVersionDeploymentFiles[]) {
     this._files = value;
   }
   public resetFiles() {
@@ -1284,24 +1636,23 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get filesInput() {
-    return this._files
+    return this._files;
   }
 
   // zip - computed: false, optional: true, required: false
-  private _zip?: AppEngineFlexibleAppVersionDeploymentZip | undefined; 
-  private __zipOutput = new AppEngineFlexibleAppVersionDeploymentZipOutputReference(this as any, "zip", true);
+  private _zip = new AppEngineFlexibleAppVersionDeploymentZipOutputReference(this as any, "zip", true);
   public get zip() {
-    return this.__zipOutput;
+    return this._zip;
   }
-  public putZip(value: AppEngineFlexibleAppVersionDeploymentZip | undefined) {
-    this._zip = value;
+  public putZip(value: AppEngineFlexibleAppVersionDeploymentZip) {
+    this._zip.internalValue = value;
   }
   public resetZip() {
-    this._zip = undefined;
+    this._zip.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get zipInput() {
-    return this._zip
+    return this._zip.internalValue;
   }
 }
 export interface AppEngineFlexibleAppVersionEndpointsApiService {
@@ -1339,7 +1690,7 @@ For example "myapi.endpoints.myproject.cloud.goog"
   readonly rolloutStrategy?: string;
 }
 
-function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct?: AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference | AppEngineFlexibleAppVersionEndpointsApiService): any {
+export function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct?: AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference | AppEngineFlexibleAppVersionEndpointsApiService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1362,12 +1713,49 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionEndpointsApiService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._configId) {
+      hasAnyValues = true;
+      internalValueResult.configId = this._configId;
+    }
+    if (this._disableTraceSampling) {
+      hasAnyValues = true;
+      internalValueResult.disableTraceSampling = this._disableTraceSampling;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._rolloutStrategy) {
+      hasAnyValues = true;
+      internalValueResult.rolloutStrategy = this._rolloutStrategy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionEndpointsApiService | undefined) {
+    if (value === undefined) {
+      this._configId = undefined;
+      this._disableTraceSampling = undefined;
+      this._name = undefined;
+      this._rolloutStrategy = undefined;
+    }
+    else {
+      this._configId = value.configId;
+      this._disableTraceSampling = value.disableTraceSampling;
+      this._name = value.name;
+      this._rolloutStrategy = value.rolloutStrategy;
+    }
+  }
+
   // config_id - computed: false, optional: true, required: false
-  private _configId?: string | undefined; 
+  private _configId?: string; 
   public get configId() {
     return this.getStringAttribute('config_id');
   }
-  public set configId(value: string | undefined) {
+  public set configId(value: string) {
     this._configId = value;
   }
   public resetConfigId() {
@@ -1375,15 +1763,15 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get configIdInput() {
-    return this._configId
+    return this._configId;
   }
 
   // disable_trace_sampling - computed: false, optional: true, required: false
-  private _disableTraceSampling?: boolean | cdktf.IResolvable | undefined; 
+  private _disableTraceSampling?: boolean | cdktf.IResolvable; 
   public get disableTraceSampling() {
     return this.getBooleanAttribute('disable_trace_sampling') as any;
   }
-  public set disableTraceSampling(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableTraceSampling(value: boolean | cdktf.IResolvable) {
     this._disableTraceSampling = value;
   }
   public resetDisableTraceSampling() {
@@ -1391,7 +1779,7 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get disableTraceSamplingInput() {
-    return this._disableTraceSampling
+    return this._disableTraceSampling;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1404,15 +1792,15 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // rollout_strategy - computed: false, optional: true, required: false
-  private _rolloutStrategy?: string | undefined; 
+  private _rolloutStrategy?: string; 
   public get rolloutStrategy() {
     return this.getStringAttribute('rollout_strategy');
   }
-  public set rolloutStrategy(value: string | undefined) {
+  public set rolloutStrategy(value: string) {
     this._rolloutStrategy = value;
   }
   public resetRolloutStrategy() {
@@ -1420,7 +1808,7 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get rolloutStrategyInput() {
-    return this._rolloutStrategy
+    return this._rolloutStrategy;
   }
 }
 export interface AppEngineFlexibleAppVersionEntrypoint {
@@ -1432,7 +1820,7 @@ export interface AppEngineFlexibleAppVersionEntrypoint {
   readonly shell: string;
 }
 
-function appEngineFlexibleAppVersionEntrypointToTerraform(struct?: AppEngineFlexibleAppVersionEntrypointOutputReference | AppEngineFlexibleAppVersionEntrypoint): any {
+export function appEngineFlexibleAppVersionEntrypointToTerraform(struct?: AppEngineFlexibleAppVersionEntrypointOutputReference | AppEngineFlexibleAppVersionEntrypoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1452,6 +1840,25 @@ export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionEntrypoint | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._shell) {
+      hasAnyValues = true;
+      internalValueResult.shell = this._shell;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionEntrypoint | undefined) {
+    if (value === undefined) {
+      this._shell = undefined;
+    }
+    else {
+      this._shell = value.shell;
+    }
+  }
+
   // shell - computed: false, optional: false, required: true
   private _shell?: string; 
   public get shell() {
@@ -1462,7 +1869,7 @@ export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get shellInput() {
-    return this._shell
+    return this._shell;
   }
 }
 export interface AppEngineFlexibleAppVersionHandlersScript {
@@ -1474,7 +1881,7 @@ export interface AppEngineFlexibleAppVersionHandlersScript {
   readonly scriptPath: string;
 }
 
-function appEngineFlexibleAppVersionHandlersScriptToTerraform(struct?: AppEngineFlexibleAppVersionHandlersScriptOutputReference | AppEngineFlexibleAppVersionHandlersScript): any {
+export function appEngineFlexibleAppVersionHandlersScriptToTerraform(struct?: AppEngineFlexibleAppVersionHandlersScriptOutputReference | AppEngineFlexibleAppVersionHandlersScript): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1494,6 +1901,25 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionHandlersScript | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._scriptPath) {
+      hasAnyValues = true;
+      internalValueResult.scriptPath = this._scriptPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionHandlersScript | undefined) {
+    if (value === undefined) {
+      this._scriptPath = undefined;
+    }
+    else {
+      this._scriptPath = value.scriptPath;
+    }
+  }
+
   // script_path - computed: false, optional: false, required: true
   private _scriptPath?: string; 
   public get scriptPath() {
@@ -1504,7 +1930,7 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get scriptPathInput() {
-    return this._scriptPath
+    return this._scriptPath;
   }
 }
 export interface AppEngineFlexibleAppVersionHandlersStaticFiles {
@@ -1559,7 +1985,7 @@ The path can refer to text matched in groupings in the URL pattern.
   readonly uploadPathRegex?: string;
 }
 
-function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct?: AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference | AppEngineFlexibleAppVersionHandlersStaticFiles): any {
+export function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct?: AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference | AppEngineFlexibleAppVersionHandlersStaticFiles): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1585,12 +2011,67 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionHandlersStaticFiles | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._applicationReadable) {
+      hasAnyValues = true;
+      internalValueResult.applicationReadable = this._applicationReadable;
+    }
+    if (this._expiration) {
+      hasAnyValues = true;
+      internalValueResult.expiration = this._expiration;
+    }
+    if (this._httpHeaders) {
+      hasAnyValues = true;
+      internalValueResult.httpHeaders = this._httpHeaders;
+    }
+    if (this._mimeType) {
+      hasAnyValues = true;
+      internalValueResult.mimeType = this._mimeType;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._requireMatchingFile) {
+      hasAnyValues = true;
+      internalValueResult.requireMatchingFile = this._requireMatchingFile;
+    }
+    if (this._uploadPathRegex) {
+      hasAnyValues = true;
+      internalValueResult.uploadPathRegex = this._uploadPathRegex;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionHandlersStaticFiles | undefined) {
+    if (value === undefined) {
+      this._applicationReadable = undefined;
+      this._expiration = undefined;
+      this._httpHeaders = undefined;
+      this._mimeType = undefined;
+      this._path = undefined;
+      this._requireMatchingFile = undefined;
+      this._uploadPathRegex = undefined;
+    }
+    else {
+      this._applicationReadable = value.applicationReadable;
+      this._expiration = value.expiration;
+      this._httpHeaders = value.httpHeaders;
+      this._mimeType = value.mimeType;
+      this._path = value.path;
+      this._requireMatchingFile = value.requireMatchingFile;
+      this._uploadPathRegex = value.uploadPathRegex;
+    }
+  }
+
   // application_readable - computed: false, optional: true, required: false
-  private _applicationReadable?: boolean | cdktf.IResolvable | undefined; 
+  private _applicationReadable?: boolean | cdktf.IResolvable; 
   public get applicationReadable() {
     return this.getBooleanAttribute('application_readable') as any;
   }
-  public set applicationReadable(value: boolean | cdktf.IResolvable | undefined) {
+  public set applicationReadable(value: boolean | cdktf.IResolvable) {
     this._applicationReadable = value;
   }
   public resetApplicationReadable() {
@@ -1598,15 +2079,15 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get applicationReadableInput() {
-    return this._applicationReadable
+    return this._applicationReadable;
   }
 
   // expiration - computed: false, optional: true, required: false
-  private _expiration?: string | undefined; 
+  private _expiration?: string; 
   public get expiration() {
     return this.getStringAttribute('expiration');
   }
-  public set expiration(value: string | undefined) {
+  public set expiration(value: string) {
     this._expiration = value;
   }
   public resetExpiration() {
@@ -1614,16 +2095,16 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get expirationInput() {
-    return this._expiration
+    return this._expiration;
   }
 
   // http_headers - computed: false, optional: true, required: false
-  private _httpHeaders?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _httpHeaders?: { [key: string]: string } | cdktf.IResolvable; 
   public get httpHeaders() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('http_headers') as any;
   }
-  public set httpHeaders(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set httpHeaders(value: { [key: string]: string } | cdktf.IResolvable) {
     this._httpHeaders = value;
   }
   public resetHttpHeaders() {
@@ -1631,15 +2112,15 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get httpHeadersInput() {
-    return this._httpHeaders
+    return this._httpHeaders;
   }
 
   // mime_type - computed: false, optional: true, required: false
-  private _mimeType?: string | undefined; 
+  private _mimeType?: string; 
   public get mimeType() {
     return this.getStringAttribute('mime_type');
   }
-  public set mimeType(value: string | undefined) {
+  public set mimeType(value: string) {
     this._mimeType = value;
   }
   public resetMimeType() {
@@ -1647,15 +2128,15 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get mimeTypeInput() {
-    return this._mimeType
+    return this._mimeType;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -1663,15 +2144,15 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // require_matching_file - computed: false, optional: true, required: false
-  private _requireMatchingFile?: boolean | cdktf.IResolvable | undefined; 
+  private _requireMatchingFile?: boolean | cdktf.IResolvable; 
   public get requireMatchingFile() {
     return this.getBooleanAttribute('require_matching_file') as any;
   }
-  public set requireMatchingFile(value: boolean | cdktf.IResolvable | undefined) {
+  public set requireMatchingFile(value: boolean | cdktf.IResolvable) {
     this._requireMatchingFile = value;
   }
   public resetRequireMatchingFile() {
@@ -1679,15 +2160,15 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get requireMatchingFileInput() {
-    return this._requireMatchingFile
+    return this._requireMatchingFile;
   }
 
   // upload_path_regex - computed: false, optional: true, required: false
-  private _uploadPathRegex?: string | undefined; 
+  private _uploadPathRegex?: string; 
   public get uploadPathRegex() {
     return this.getStringAttribute('upload_path_regex');
   }
-  public set uploadPathRegex(value: string | undefined) {
+  public set uploadPathRegex(value: string) {
     this._uploadPathRegex = value;
   }
   public resetUploadPathRegex() {
@@ -1695,7 +2176,7 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get uploadPathRegexInput() {
-    return this._uploadPathRegex
+    return this._uploadPathRegex;
   }
 }
 export interface AppEngineFlexibleAppVersionHandlers {
@@ -1744,7 +2225,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
   readonly staticFiles?: AppEngineFlexibleAppVersionHandlersStaticFiles;
 }
 
-function appEngineFlexibleAppVersionHandlersToTerraform(struct?: AppEngineFlexibleAppVersionHandlers): any {
+export function appEngineFlexibleAppVersionHandlersToTerraform(struct?: AppEngineFlexibleAppVersionHandlers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1805,7 +2286,7 @@ export interface AppEngineFlexibleAppVersionLivenessCheck {
   readonly timeout?: string;
 }
 
-function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: AppEngineFlexibleAppVersionLivenessCheckOutputReference | AppEngineFlexibleAppVersionLivenessCheck): any {
+export function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: AppEngineFlexibleAppVersionLivenessCheckOutputReference | AppEngineFlexibleAppVersionLivenessCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1831,12 +2312,67 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionLivenessCheck | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._checkInterval) {
+      hasAnyValues = true;
+      internalValueResult.checkInterval = this._checkInterval;
+    }
+    if (this._failureThreshold) {
+      hasAnyValues = true;
+      internalValueResult.failureThreshold = this._failureThreshold;
+    }
+    if (this._host) {
+      hasAnyValues = true;
+      internalValueResult.host = this._host;
+    }
+    if (this._initialDelay) {
+      hasAnyValues = true;
+      internalValueResult.initialDelay = this._initialDelay;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._successThreshold) {
+      hasAnyValues = true;
+      internalValueResult.successThreshold = this._successThreshold;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionLivenessCheck | undefined) {
+    if (value === undefined) {
+      this._checkInterval = undefined;
+      this._failureThreshold = undefined;
+      this._host = undefined;
+      this._initialDelay = undefined;
+      this._path = undefined;
+      this._successThreshold = undefined;
+      this._timeout = undefined;
+    }
+    else {
+      this._checkInterval = value.checkInterval;
+      this._failureThreshold = value.failureThreshold;
+      this._host = value.host;
+      this._initialDelay = value.initialDelay;
+      this._path = value.path;
+      this._successThreshold = value.successThreshold;
+      this._timeout = value.timeout;
+    }
+  }
+
   // check_interval - computed: false, optional: true, required: false
-  private _checkInterval?: string | undefined; 
+  private _checkInterval?: string; 
   public get checkInterval() {
     return this.getStringAttribute('check_interval');
   }
-  public set checkInterval(value: string | undefined) {
+  public set checkInterval(value: string) {
     this._checkInterval = value;
   }
   public resetCheckInterval() {
@@ -1844,15 +2380,15 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get checkIntervalInput() {
-    return this._checkInterval
+    return this._checkInterval;
   }
 
   // failure_threshold - computed: false, optional: true, required: false
-  private _failureThreshold?: number | undefined; 
+  private _failureThreshold?: number; 
   public get failureThreshold() {
     return this.getNumberAttribute('failure_threshold');
   }
-  public set failureThreshold(value: number | undefined) {
+  public set failureThreshold(value: number) {
     this._failureThreshold = value;
   }
   public resetFailureThreshold() {
@@ -1860,15 +2396,15 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get failureThresholdInput() {
-    return this._failureThreshold
+    return this._failureThreshold;
   }
 
   // host - computed: false, optional: true, required: false
-  private _host?: string | undefined; 
+  private _host?: string; 
   public get host() {
     return this.getStringAttribute('host');
   }
-  public set host(value: string | undefined) {
+  public set host(value: string) {
     this._host = value;
   }
   public resetHost() {
@@ -1876,15 +2412,15 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get hostInput() {
-    return this._host
+    return this._host;
   }
 
   // initial_delay - computed: false, optional: true, required: false
-  private _initialDelay?: string | undefined; 
+  private _initialDelay?: string; 
   public get initialDelay() {
     return this.getStringAttribute('initial_delay');
   }
-  public set initialDelay(value: string | undefined) {
+  public set initialDelay(value: string) {
     this._initialDelay = value;
   }
   public resetInitialDelay() {
@@ -1892,7 +2428,7 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get initialDelayInput() {
-    return this._initialDelay
+    return this._initialDelay;
   }
 
   // path - computed: false, optional: false, required: true
@@ -1905,15 +2441,15 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // success_threshold - computed: false, optional: true, required: false
-  private _successThreshold?: number | undefined; 
+  private _successThreshold?: number; 
   public get successThreshold() {
     return this.getNumberAttribute('success_threshold');
   }
-  public set successThreshold(value: number | undefined) {
+  public set successThreshold(value: number) {
     this._successThreshold = value;
   }
   public resetSuccessThreshold() {
@@ -1921,15 +2457,15 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get successThresholdInput() {
-    return this._successThreshold
+    return this._successThreshold;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: string | undefined; 
+  private _timeout?: string; 
   public get timeout() {
     return this.getStringAttribute('timeout');
   }
-  public set timeout(value: string | undefined) {
+  public set timeout(value: string) {
     this._timeout = value;
   }
   public resetTimeout() {
@@ -1937,7 +2473,7 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout;
   }
 }
 export interface AppEngineFlexibleAppVersionManualScaling {
@@ -1952,7 +2488,7 @@ Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manua
   readonly instances: number;
 }
 
-function appEngineFlexibleAppVersionManualScalingToTerraform(struct?: AppEngineFlexibleAppVersionManualScalingOutputReference | AppEngineFlexibleAppVersionManualScaling): any {
+export function appEngineFlexibleAppVersionManualScalingToTerraform(struct?: AppEngineFlexibleAppVersionManualScalingOutputReference | AppEngineFlexibleAppVersionManualScaling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1972,6 +2508,25 @@ export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionManualScaling | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._instances) {
+      hasAnyValues = true;
+      internalValueResult.instances = this._instances;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionManualScaling | undefined) {
+    if (value === undefined) {
+      this._instances = undefined;
+    }
+    else {
+      this._instances = value.instances;
+    }
+  }
+
   // instances - computed: false, optional: false, required: true
   private _instances?: number; 
   public get instances() {
@@ -1982,7 +2537,7 @@ export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get instancesInput() {
-    return this._instances
+    return this._instances;
   }
 }
 export interface AppEngineFlexibleAppVersionNetwork {
@@ -2023,7 +2578,7 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
   readonly subnetwork?: string;
 }
 
-function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngineFlexibleAppVersionNetworkOutputReference | AppEngineFlexibleAppVersionNetwork): any {
+export function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngineFlexibleAppVersionNetworkOutputReference | AppEngineFlexibleAppVersionNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2047,12 +2602,55 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionNetwork | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._forwardedPorts) {
+      hasAnyValues = true;
+      internalValueResult.forwardedPorts = this._forwardedPorts;
+    }
+    if (this._instanceTag) {
+      hasAnyValues = true;
+      internalValueResult.instanceTag = this._instanceTag;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sessionAffinity) {
+      hasAnyValues = true;
+      internalValueResult.sessionAffinity = this._sessionAffinity;
+    }
+    if (this._subnetwork) {
+      hasAnyValues = true;
+      internalValueResult.subnetwork = this._subnetwork;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionNetwork | undefined) {
+    if (value === undefined) {
+      this._forwardedPorts = undefined;
+      this._instanceTag = undefined;
+      this._name = undefined;
+      this._sessionAffinity = undefined;
+      this._subnetwork = undefined;
+    }
+    else {
+      this._forwardedPorts = value.forwardedPorts;
+      this._instanceTag = value.instanceTag;
+      this._name = value.name;
+      this._sessionAffinity = value.sessionAffinity;
+      this._subnetwork = value.subnetwork;
+    }
+  }
+
   // forwarded_ports - computed: false, optional: true, required: false
-  private _forwardedPorts?: string[] | undefined; 
+  private _forwardedPorts?: string[]; 
   public get forwardedPorts() {
     return this.getListAttribute('forwarded_ports');
   }
-  public set forwardedPorts(value: string[] | undefined) {
+  public set forwardedPorts(value: string[]) {
     this._forwardedPorts = value;
   }
   public resetForwardedPorts() {
@@ -2060,15 +2658,15 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get forwardedPortsInput() {
-    return this._forwardedPorts
+    return this._forwardedPorts;
   }
 
   // instance_tag - computed: false, optional: true, required: false
-  private _instanceTag?: string | undefined; 
+  private _instanceTag?: string; 
   public get instanceTag() {
     return this.getStringAttribute('instance_tag');
   }
-  public set instanceTag(value: string | undefined) {
+  public set instanceTag(value: string) {
     this._instanceTag = value;
   }
   public resetInstanceTag() {
@@ -2076,7 +2674,7 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get instanceTagInput() {
-    return this._instanceTag
+    return this._instanceTag;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2089,15 +2687,15 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // session_affinity - computed: false, optional: true, required: false
-  private _sessionAffinity?: boolean | cdktf.IResolvable | undefined; 
+  private _sessionAffinity?: boolean | cdktf.IResolvable; 
   public get sessionAffinity() {
     return this.getBooleanAttribute('session_affinity') as any;
   }
-  public set sessionAffinity(value: boolean | cdktf.IResolvable | undefined) {
+  public set sessionAffinity(value: boolean | cdktf.IResolvable) {
     this._sessionAffinity = value;
   }
   public resetSessionAffinity() {
@@ -2105,15 +2703,15 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get sessionAffinityInput() {
-    return this._sessionAffinity
+    return this._sessionAffinity;
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -2121,7 +2719,7 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 }
 export interface AppEngineFlexibleAppVersionReadinessCheck {
@@ -2170,7 +2768,7 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
   readonly timeout?: string;
 }
 
-function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: AppEngineFlexibleAppVersionReadinessCheckOutputReference | AppEngineFlexibleAppVersionReadinessCheck): any {
+export function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: AppEngineFlexibleAppVersionReadinessCheckOutputReference | AppEngineFlexibleAppVersionReadinessCheck): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2196,12 +2794,67 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionReadinessCheck | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._appStartTimeout) {
+      hasAnyValues = true;
+      internalValueResult.appStartTimeout = this._appStartTimeout;
+    }
+    if (this._checkInterval) {
+      hasAnyValues = true;
+      internalValueResult.checkInterval = this._checkInterval;
+    }
+    if (this._failureThreshold) {
+      hasAnyValues = true;
+      internalValueResult.failureThreshold = this._failureThreshold;
+    }
+    if (this._host) {
+      hasAnyValues = true;
+      internalValueResult.host = this._host;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._successThreshold) {
+      hasAnyValues = true;
+      internalValueResult.successThreshold = this._successThreshold;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionReadinessCheck | undefined) {
+    if (value === undefined) {
+      this._appStartTimeout = undefined;
+      this._checkInterval = undefined;
+      this._failureThreshold = undefined;
+      this._host = undefined;
+      this._path = undefined;
+      this._successThreshold = undefined;
+      this._timeout = undefined;
+    }
+    else {
+      this._appStartTimeout = value.appStartTimeout;
+      this._checkInterval = value.checkInterval;
+      this._failureThreshold = value.failureThreshold;
+      this._host = value.host;
+      this._path = value.path;
+      this._successThreshold = value.successThreshold;
+      this._timeout = value.timeout;
+    }
+  }
+
   // app_start_timeout - computed: false, optional: true, required: false
-  private _appStartTimeout?: string | undefined; 
+  private _appStartTimeout?: string; 
   public get appStartTimeout() {
     return this.getStringAttribute('app_start_timeout');
   }
-  public set appStartTimeout(value: string | undefined) {
+  public set appStartTimeout(value: string) {
     this._appStartTimeout = value;
   }
   public resetAppStartTimeout() {
@@ -2209,15 +2862,15 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get appStartTimeoutInput() {
-    return this._appStartTimeout
+    return this._appStartTimeout;
   }
 
   // check_interval - computed: false, optional: true, required: false
-  private _checkInterval?: string | undefined; 
+  private _checkInterval?: string; 
   public get checkInterval() {
     return this.getStringAttribute('check_interval');
   }
-  public set checkInterval(value: string | undefined) {
+  public set checkInterval(value: string) {
     this._checkInterval = value;
   }
   public resetCheckInterval() {
@@ -2225,15 +2878,15 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get checkIntervalInput() {
-    return this._checkInterval
+    return this._checkInterval;
   }
 
   // failure_threshold - computed: false, optional: true, required: false
-  private _failureThreshold?: number | undefined; 
+  private _failureThreshold?: number; 
   public get failureThreshold() {
     return this.getNumberAttribute('failure_threshold');
   }
-  public set failureThreshold(value: number | undefined) {
+  public set failureThreshold(value: number) {
     this._failureThreshold = value;
   }
   public resetFailureThreshold() {
@@ -2241,15 +2894,15 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get failureThresholdInput() {
-    return this._failureThreshold
+    return this._failureThreshold;
   }
 
   // host - computed: false, optional: true, required: false
-  private _host?: string | undefined; 
+  private _host?: string; 
   public get host() {
     return this.getStringAttribute('host');
   }
-  public set host(value: string | undefined) {
+  public set host(value: string) {
     this._host = value;
   }
   public resetHost() {
@@ -2257,7 +2910,7 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get hostInput() {
-    return this._host
+    return this._host;
   }
 
   // path - computed: false, optional: false, required: true
@@ -2270,15 +2923,15 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // success_threshold - computed: false, optional: true, required: false
-  private _successThreshold?: number | undefined; 
+  private _successThreshold?: number; 
   public get successThreshold() {
     return this.getNumberAttribute('success_threshold');
   }
-  public set successThreshold(value: number | undefined) {
+  public set successThreshold(value: number) {
     this._successThreshold = value;
   }
   public resetSuccessThreshold() {
@@ -2286,15 +2939,15 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get successThresholdInput() {
-    return this._successThreshold
+    return this._successThreshold;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: string | undefined; 
+  private _timeout?: string; 
   public get timeout() {
     return this.getStringAttribute('timeout');
   }
-  public set timeout(value: string | undefined) {
+  public set timeout(value: string) {
     this._timeout = value;
   }
   public resetTimeout() {
@@ -2302,7 +2955,7 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout;
   }
 }
 export interface AppEngineFlexibleAppVersionResourcesVolumes {
@@ -2326,7 +2979,7 @@ export interface AppEngineFlexibleAppVersionResourcesVolumes {
   readonly volumeType: string;
 }
 
-function appEngineFlexibleAppVersionResourcesVolumesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesVolumes): any {
+export function appEngineFlexibleAppVersionResourcesVolumesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesVolumes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2365,7 +3018,7 @@ export interface AppEngineFlexibleAppVersionResources {
   readonly volumes?: AppEngineFlexibleAppVersionResourcesVolumes[];
 }
 
-function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesOutputReference | AppEngineFlexibleAppVersionResources): any {
+export function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngineFlexibleAppVersionResourcesOutputReference | AppEngineFlexibleAppVersionResources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2388,12 +3041,49 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionResources | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cpu) {
+      hasAnyValues = true;
+      internalValueResult.cpu = this._cpu;
+    }
+    if (this._diskGb) {
+      hasAnyValues = true;
+      internalValueResult.diskGb = this._diskGb;
+    }
+    if (this._memoryGb) {
+      hasAnyValues = true;
+      internalValueResult.memoryGb = this._memoryGb;
+    }
+    if (this._volumes) {
+      hasAnyValues = true;
+      internalValueResult.volumes = this._volumes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionResources | undefined) {
+    if (value === undefined) {
+      this._cpu = undefined;
+      this._diskGb = undefined;
+      this._memoryGb = undefined;
+      this._volumes = undefined;
+    }
+    else {
+      this._cpu = value.cpu;
+      this._diskGb = value.diskGb;
+      this._memoryGb = value.memoryGb;
+      this._volumes = value.volumes;
+    }
+  }
+
   // cpu - computed: false, optional: true, required: false
-  private _cpu?: number | undefined; 
+  private _cpu?: number; 
   public get cpu() {
     return this.getNumberAttribute('cpu');
   }
-  public set cpu(value: number | undefined) {
+  public set cpu(value: number) {
     this._cpu = value;
   }
   public resetCpu() {
@@ -2401,15 +3091,15 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get cpuInput() {
-    return this._cpu
+    return this._cpu;
   }
 
   // disk_gb - computed: false, optional: true, required: false
-  private _diskGb?: number | undefined; 
+  private _diskGb?: number; 
   public get diskGb() {
     return this.getNumberAttribute('disk_gb');
   }
-  public set diskGb(value: number | undefined) {
+  public set diskGb(value: number) {
     this._diskGb = value;
   }
   public resetDiskGb() {
@@ -2417,15 +3107,15 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get diskGbInput() {
-    return this._diskGb
+    return this._diskGb;
   }
 
   // memory_gb - computed: false, optional: true, required: false
-  private _memoryGb?: number | undefined; 
+  private _memoryGb?: number; 
   public get memoryGb() {
     return this.getNumberAttribute('memory_gb');
   }
-  public set memoryGb(value: number | undefined) {
+  public set memoryGb(value: number) {
     this._memoryGb = value;
   }
   public resetMemoryGb() {
@@ -2433,16 +3123,16 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get memoryGbInput() {
-    return this._memoryGb
+    return this._memoryGb;
   }
 
   // volumes - computed: false, optional: true, required: false
-  private _volumes?: AppEngineFlexibleAppVersionResourcesVolumes[] | undefined; 
+  private _volumes?: AppEngineFlexibleAppVersionResourcesVolumes[]; 
   public get volumes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('volumes') as any;
   }
-  public set volumes(value: AppEngineFlexibleAppVersionResourcesVolumes[] | undefined) {
+  public set volumes(value: AppEngineFlexibleAppVersionResourcesVolumes[]) {
     this._volumes = value;
   }
   public resetVolumes() {
@@ -2450,7 +3140,7 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get volumesInput() {
-    return this._volumes
+    return this._volumes;
   }
 }
 export interface AppEngineFlexibleAppVersionTimeouts {
@@ -2468,7 +3158,7 @@ export interface AppEngineFlexibleAppVersionTimeouts {
   readonly update?: string;
 }
 
-function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngineFlexibleAppVersionTimeoutsOutputReference | AppEngineFlexibleAppVersionTimeouts): any {
+export function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngineFlexibleAppVersionTimeoutsOutputReference | AppEngineFlexibleAppVersionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2490,12 +3180,43 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -2503,15 +3224,15 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -2519,15 +3240,15 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -2535,7 +3256,7 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface AppEngineFlexibleAppVersionVpcAccessConnector {
@@ -2547,7 +3268,7 @@ export interface AppEngineFlexibleAppVersionVpcAccessConnector {
   readonly name: string;
 }
 
-function appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(struct?: AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference | AppEngineFlexibleAppVersionVpcAccessConnector): any {
+export function appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(struct?: AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference | AppEngineFlexibleAppVersionVpcAccessConnector): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2567,6 +3288,25 @@ export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineFlexibleAppVersionVpcAccessConnector | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionVpcAccessConnector | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+    }
+    else {
+      this._name = value.name;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -2577,7 +3317,7 @@ export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 
@@ -2629,19 +3369,19 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
     this._service = config.service;
     this._servingStatus = config.servingStatus;
     this._versionId = config.versionId;
-    this._apiConfig = config.apiConfig;
-    this._automaticScaling = config.automaticScaling;
-    this._deployment = config.deployment;
-    this._endpointsApiService = config.endpointsApiService;
-    this._entrypoint = config.entrypoint;
+    this._apiConfig.internalValue = config.apiConfig;
+    this._automaticScaling.internalValue = config.automaticScaling;
+    this._deployment.internalValue = config.deployment;
+    this._endpointsApiService.internalValue = config.endpointsApiService;
+    this._entrypoint.internalValue = config.entrypoint;
     this._handlers = config.handlers;
-    this._livenessCheck = config.livenessCheck;
-    this._manualScaling = config.manualScaling;
-    this._network = config.network;
-    this._readinessCheck = config.readinessCheck;
-    this._resources = config.resources;
-    this._timeouts = config.timeouts;
-    this._vpcAccessConnector = config.vpcAccessConnector;
+    this._livenessCheck.internalValue = config.livenessCheck;
+    this._manualScaling.internalValue = config.manualScaling;
+    this._network.internalValue = config.network;
+    this._readinessCheck.internalValue = config.readinessCheck;
+    this._resources.internalValue = config.resources;
+    this._timeouts.internalValue = config.timeouts;
+    this._vpcAccessConnector.internalValue = config.vpcAccessConnector;
   }
 
   // ==========
@@ -2649,12 +3389,12 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   // ==========
 
   // beta_settings - computed: false, optional: true, required: false
-  private _betaSettings?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _betaSettings?: { [key: string]: string } | cdktf.IResolvable; 
   public get betaSettings() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('beta_settings') as any;
   }
-  public set betaSettings(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set betaSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._betaSettings = value;
   }
   public resetBetaSettings() {
@@ -2662,15 +3402,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get betaSettingsInput() {
-    return this._betaSettings
+    return this._betaSettings;
   }
 
   // default_expiration - computed: false, optional: true, required: false
-  private _defaultExpiration?: string | undefined; 
+  private _defaultExpiration?: string; 
   public get defaultExpiration() {
     return this.getStringAttribute('default_expiration');
   }
-  public set defaultExpiration(value: string | undefined) {
+  public set defaultExpiration(value: string) {
     this._defaultExpiration = value;
   }
   public resetDefaultExpiration() {
@@ -2678,15 +3418,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultExpirationInput() {
-    return this._defaultExpiration
+    return this._defaultExpiration;
   }
 
   // delete_service_on_destroy - computed: false, optional: true, required: false
-  private _deleteServiceOnDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _deleteServiceOnDestroy?: boolean | cdktf.IResolvable; 
   public get deleteServiceOnDestroy() {
     return this.getBooleanAttribute('delete_service_on_destroy') as any;
   }
-  public set deleteServiceOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set deleteServiceOnDestroy(value: boolean | cdktf.IResolvable) {
     this._deleteServiceOnDestroy = value;
   }
   public resetDeleteServiceOnDestroy() {
@@ -2694,16 +3434,16 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteServiceOnDestroyInput() {
-    return this._deleteServiceOnDestroy
+    return this._deleteServiceOnDestroy;
   }
 
   // env_variables - computed: false, optional: true, required: false
-  private _envVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _envVariables?: { [key: string]: string } | cdktf.IResolvable; 
   public get envVariables() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('env_variables') as any;
   }
-  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable) {
     this._envVariables = value;
   }
   public resetEnvVariables() {
@@ -2711,7 +3451,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get envVariablesInput() {
-    return this._envVariables
+    return this._envVariables;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2720,11 +3460,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // inbound_services - computed: false, optional: true, required: false
-  private _inboundServices?: string[] | undefined; 
+  private _inboundServices?: string[]; 
   public get inboundServices() {
     return this.getListAttribute('inbound_services');
   }
-  public set inboundServices(value: string[] | undefined) {
+  public set inboundServices(value: string[]) {
     this._inboundServices = value;
   }
   public resetInboundServices() {
@@ -2732,15 +3472,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get inboundServicesInput() {
-    return this._inboundServices
+    return this._inboundServices;
   }
 
   // instance_class - computed: false, optional: true, required: false
-  private _instanceClass?: string | undefined; 
+  private _instanceClass?: string; 
   public get instanceClass() {
     return this.getStringAttribute('instance_class');
   }
-  public set instanceClass(value: string | undefined) {
+  public set instanceClass(value: string) {
     this._instanceClass = value;
   }
   public resetInstanceClass() {
@@ -2748,7 +3488,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceClassInput() {
-    return this._instanceClass
+    return this._instanceClass;
   }
 
   // name - computed: true, optional: false, required: false
@@ -2757,11 +3497,11 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // nobuild_files_regex - computed: false, optional: true, required: false
-  private _nobuildFilesRegex?: string | undefined; 
+  private _nobuildFilesRegex?: string; 
   public get nobuildFilesRegex() {
     return this.getStringAttribute('nobuild_files_regex');
   }
-  public set nobuildFilesRegex(value: string | undefined) {
+  public set nobuildFilesRegex(value: string) {
     this._nobuildFilesRegex = value;
   }
   public resetNobuildFilesRegex() {
@@ -2769,15 +3509,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nobuildFilesRegexInput() {
-    return this._nobuildFilesRegex
+    return this._nobuildFilesRegex;
   }
 
   // noop_on_destroy - computed: false, optional: true, required: false
-  private _noopOnDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _noopOnDestroy?: boolean | cdktf.IResolvable; 
   public get noopOnDestroy() {
     return this.getBooleanAttribute('noop_on_destroy') as any;
   }
-  public set noopOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set noopOnDestroy(value: boolean | cdktf.IResolvable) {
     this._noopOnDestroy = value;
   }
   public resetNoopOnDestroy() {
@@ -2785,15 +3525,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get noopOnDestroyInput() {
-    return this._noopOnDestroy
+    return this._noopOnDestroy;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -2801,7 +3541,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // runtime - computed: false, optional: false, required: true
@@ -2814,15 +3554,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runtimeInput() {
-    return this._runtime
+    return this._runtime;
   }
 
   // runtime_api_version - computed: true, optional: true, required: false
-  private _runtimeApiVersion?: string | undefined; 
+  private _runtimeApiVersion?: string; 
   public get runtimeApiVersion() {
     return this.getStringAttribute('runtime_api_version');
   }
-  public set runtimeApiVersion(value: string | undefined) {
+  public set runtimeApiVersion(value: string) {
     this._runtimeApiVersion = value;
   }
   public resetRuntimeApiVersion() {
@@ -2830,15 +3570,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runtimeApiVersionInput() {
-    return this._runtimeApiVersion
+    return this._runtimeApiVersion;
   }
 
   // runtime_channel - computed: false, optional: true, required: false
-  private _runtimeChannel?: string | undefined; 
+  private _runtimeChannel?: string; 
   public get runtimeChannel() {
     return this.getStringAttribute('runtime_channel');
   }
-  public set runtimeChannel(value: string | undefined) {
+  public set runtimeChannel(value: string) {
     this._runtimeChannel = value;
   }
   public resetRuntimeChannel() {
@@ -2846,15 +3586,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runtimeChannelInput() {
-    return this._runtimeChannel
+    return this._runtimeChannel;
   }
 
   // runtime_main_executable_path - computed: false, optional: true, required: false
-  private _runtimeMainExecutablePath?: string | undefined; 
+  private _runtimeMainExecutablePath?: string; 
   public get runtimeMainExecutablePath() {
     return this.getStringAttribute('runtime_main_executable_path');
   }
-  public set runtimeMainExecutablePath(value: string | undefined) {
+  public set runtimeMainExecutablePath(value: string) {
     this._runtimeMainExecutablePath = value;
   }
   public resetRuntimeMainExecutablePath() {
@@ -2862,7 +3602,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runtimeMainExecutablePathInput() {
-    return this._runtimeMainExecutablePath
+    return this._runtimeMainExecutablePath;
   }
 
   // service - computed: false, optional: false, required: true
@@ -2875,15 +3615,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // serving_status - computed: false, optional: true, required: false
-  private _servingStatus?: string | undefined; 
+  private _servingStatus?: string; 
   public get servingStatus() {
     return this.getStringAttribute('serving_status');
   }
-  public set servingStatus(value: string | undefined) {
+  public set servingStatus(value: string) {
     this._servingStatus = value;
   }
   public resetServingStatus() {
@@ -2891,15 +3631,15 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get servingStatusInput() {
-    return this._servingStatus
+    return this._servingStatus;
   }
 
   // version_id - computed: false, optional: true, required: false
-  private _versionId?: string | undefined; 
+  private _versionId?: string; 
   public get versionId() {
     return this.getStringAttribute('version_id');
   }
-  public set versionId(value: string | undefined) {
+  public set versionId(value: string) {
     this._versionId = value;
   }
   public resetVersionId() {
@@ -2907,101 +3647,96 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionIdInput() {
-    return this._versionId
+    return this._versionId;
   }
 
   // api_config - computed: false, optional: true, required: false
-  private _apiConfig?: AppEngineFlexibleAppVersionApiConfig | undefined; 
-  private __apiConfigOutput = new AppEngineFlexibleAppVersionApiConfigOutputReference(this as any, "api_config", true);
+  private _apiConfig = new AppEngineFlexibleAppVersionApiConfigOutputReference(this as any, "api_config", true);
   public get apiConfig() {
-    return this.__apiConfigOutput;
+    return this._apiConfig;
   }
-  public putApiConfig(value: AppEngineFlexibleAppVersionApiConfig | undefined) {
-    this._apiConfig = value;
+  public putApiConfig(value: AppEngineFlexibleAppVersionApiConfig) {
+    this._apiConfig.internalValue = value;
   }
   public resetApiConfig() {
-    this._apiConfig = undefined;
+    this._apiConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get apiConfigInput() {
-    return this._apiConfig
+    return this._apiConfig.internalValue;
   }
 
   // automatic_scaling - computed: false, optional: true, required: false
-  private _automaticScaling?: AppEngineFlexibleAppVersionAutomaticScaling | undefined; 
-  private __automaticScalingOutput = new AppEngineFlexibleAppVersionAutomaticScalingOutputReference(this as any, "automatic_scaling", true);
+  private _automaticScaling = new AppEngineFlexibleAppVersionAutomaticScalingOutputReference(this as any, "automatic_scaling", true);
   public get automaticScaling() {
-    return this.__automaticScalingOutput;
+    return this._automaticScaling;
   }
-  public putAutomaticScaling(value: AppEngineFlexibleAppVersionAutomaticScaling | undefined) {
-    this._automaticScaling = value;
+  public putAutomaticScaling(value: AppEngineFlexibleAppVersionAutomaticScaling) {
+    this._automaticScaling.internalValue = value;
   }
   public resetAutomaticScaling() {
-    this._automaticScaling = undefined;
+    this._automaticScaling.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get automaticScalingInput() {
-    return this._automaticScaling
+    return this._automaticScaling.internalValue;
   }
 
   // deployment - computed: false, optional: true, required: false
-  private _deployment?: AppEngineFlexibleAppVersionDeployment | undefined; 
-  private __deploymentOutput = new AppEngineFlexibleAppVersionDeploymentOutputReference(this as any, "deployment", true);
+  private _deployment = new AppEngineFlexibleAppVersionDeploymentOutputReference(this as any, "deployment", true);
   public get deployment() {
-    return this.__deploymentOutput;
+    return this._deployment;
   }
-  public putDeployment(value: AppEngineFlexibleAppVersionDeployment | undefined) {
-    this._deployment = value;
+  public putDeployment(value: AppEngineFlexibleAppVersionDeployment) {
+    this._deployment.internalValue = value;
   }
   public resetDeployment() {
-    this._deployment = undefined;
+    this._deployment.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get deploymentInput() {
-    return this._deployment
+    return this._deployment.internalValue;
   }
 
   // endpoints_api_service - computed: false, optional: true, required: false
-  private _endpointsApiService?: AppEngineFlexibleAppVersionEndpointsApiService | undefined; 
-  private __endpointsApiServiceOutput = new AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference(this as any, "endpoints_api_service", true);
+  private _endpointsApiService = new AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference(this as any, "endpoints_api_service", true);
   public get endpointsApiService() {
-    return this.__endpointsApiServiceOutput;
+    return this._endpointsApiService;
   }
-  public putEndpointsApiService(value: AppEngineFlexibleAppVersionEndpointsApiService | undefined) {
-    this._endpointsApiService = value;
+  public putEndpointsApiService(value: AppEngineFlexibleAppVersionEndpointsApiService) {
+    this._endpointsApiService.internalValue = value;
   }
   public resetEndpointsApiService() {
-    this._endpointsApiService = undefined;
+    this._endpointsApiService.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get endpointsApiServiceInput() {
-    return this._endpointsApiService
+    return this._endpointsApiService.internalValue;
   }
 
   // entrypoint - computed: false, optional: true, required: false
-  private _entrypoint?: AppEngineFlexibleAppVersionEntrypoint | undefined; 
-  private __entrypointOutput = new AppEngineFlexibleAppVersionEntrypointOutputReference(this as any, "entrypoint", true);
+  private _entrypoint = new AppEngineFlexibleAppVersionEntrypointOutputReference(this as any, "entrypoint", true);
   public get entrypoint() {
-    return this.__entrypointOutput;
+    return this._entrypoint;
   }
-  public putEntrypoint(value: AppEngineFlexibleAppVersionEntrypoint | undefined) {
-    this._entrypoint = value;
+  public putEntrypoint(value: AppEngineFlexibleAppVersionEntrypoint) {
+    this._entrypoint.internalValue = value;
   }
   public resetEntrypoint() {
-    this._entrypoint = undefined;
+    this._entrypoint.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get entrypointInput() {
-    return this._entrypoint
+    return this._entrypoint.internalValue;
   }
 
   // handlers - computed: false, optional: true, required: false
-  private _handlers?: AppEngineFlexibleAppVersionHandlers[] | undefined; 
+  private _handlers?: AppEngineFlexibleAppVersionHandlers[]; 
   public get handlers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('handlers') as any;
   }
-  public set handlers(value: AppEngineFlexibleAppVersionHandlers[] | undefined) {
+  public set handlers(value: AppEngineFlexibleAppVersionHandlers[]) {
     this._handlers = value;
   }
   public resetHandlers() {
@@ -3009,120 +3744,113 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get handlersInput() {
-    return this._handlers
+    return this._handlers;
   }
 
   // liveness_check - computed: false, optional: false, required: true
-  private _livenessCheck?: AppEngineFlexibleAppVersionLivenessCheck; 
-  private __livenessCheckOutput = new AppEngineFlexibleAppVersionLivenessCheckOutputReference(this as any, "liveness_check", true);
+  private _livenessCheck = new AppEngineFlexibleAppVersionLivenessCheckOutputReference(this as any, "liveness_check", true);
   public get livenessCheck() {
-    return this.__livenessCheckOutput;
+    return this._livenessCheck;
   }
   public putLivenessCheck(value: AppEngineFlexibleAppVersionLivenessCheck) {
-    this._livenessCheck = value;
+    this._livenessCheck.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get livenessCheckInput() {
-    return this._livenessCheck
+    return this._livenessCheck.internalValue;
   }
 
   // manual_scaling - computed: false, optional: true, required: false
-  private _manualScaling?: AppEngineFlexibleAppVersionManualScaling | undefined; 
-  private __manualScalingOutput = new AppEngineFlexibleAppVersionManualScalingOutputReference(this as any, "manual_scaling", true);
+  private _manualScaling = new AppEngineFlexibleAppVersionManualScalingOutputReference(this as any, "manual_scaling", true);
   public get manualScaling() {
-    return this.__manualScalingOutput;
+    return this._manualScaling;
   }
-  public putManualScaling(value: AppEngineFlexibleAppVersionManualScaling | undefined) {
-    this._manualScaling = value;
+  public putManualScaling(value: AppEngineFlexibleAppVersionManualScaling) {
+    this._manualScaling.internalValue = value;
   }
   public resetManualScaling() {
-    this._manualScaling = undefined;
+    this._manualScaling.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get manualScalingInput() {
-    return this._manualScaling
+    return this._manualScaling.internalValue;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: AppEngineFlexibleAppVersionNetwork | undefined; 
-  private __networkOutput = new AppEngineFlexibleAppVersionNetworkOutputReference(this as any, "network", true);
+  private _network = new AppEngineFlexibleAppVersionNetworkOutputReference(this as any, "network", true);
   public get network() {
-    return this.__networkOutput;
+    return this._network;
   }
-  public putNetwork(value: AppEngineFlexibleAppVersionNetwork | undefined) {
-    this._network = value;
+  public putNetwork(value: AppEngineFlexibleAppVersionNetwork) {
+    this._network.internalValue = value;
   }
   public resetNetwork() {
-    this._network = undefined;
+    this._network.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network.internalValue;
   }
 
   // readiness_check - computed: false, optional: false, required: true
-  private _readinessCheck?: AppEngineFlexibleAppVersionReadinessCheck; 
-  private __readinessCheckOutput = new AppEngineFlexibleAppVersionReadinessCheckOutputReference(this as any, "readiness_check", true);
+  private _readinessCheck = new AppEngineFlexibleAppVersionReadinessCheckOutputReference(this as any, "readiness_check", true);
   public get readinessCheck() {
-    return this.__readinessCheckOutput;
+    return this._readinessCheck;
   }
   public putReadinessCheck(value: AppEngineFlexibleAppVersionReadinessCheck) {
-    this._readinessCheck = value;
+    this._readinessCheck.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get readinessCheckInput() {
-    return this._readinessCheck
+    return this._readinessCheck.internalValue;
   }
 
   // resources - computed: false, optional: true, required: false
-  private _resources?: AppEngineFlexibleAppVersionResources | undefined; 
-  private __resourcesOutput = new AppEngineFlexibleAppVersionResourcesOutputReference(this as any, "resources", true);
+  private _resources = new AppEngineFlexibleAppVersionResourcesOutputReference(this as any, "resources", true);
   public get resources() {
-    return this.__resourcesOutput;
+    return this._resources;
   }
-  public putResources(value: AppEngineFlexibleAppVersionResources | undefined) {
-    this._resources = value;
+  public putResources(value: AppEngineFlexibleAppVersionResources) {
+    this._resources.internalValue = value;
   }
   public resetResources() {
-    this._resources = undefined;
+    this._resources.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourcesInput() {
-    return this._resources
+    return this._resources.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineFlexibleAppVersionTimeouts | undefined; 
-  private __timeoutsOutput = new AppEngineFlexibleAppVersionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineFlexibleAppVersionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppEngineFlexibleAppVersionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppEngineFlexibleAppVersionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // vpc_access_connector - computed: false, optional: true, required: false
-  private _vpcAccessConnector?: AppEngineFlexibleAppVersionVpcAccessConnector | undefined; 
-  private __vpcAccessConnectorOutput = new AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference(this as any, "vpc_access_connector", true);
+  private _vpcAccessConnector = new AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference(this as any, "vpc_access_connector", true);
   public get vpcAccessConnector() {
-    return this.__vpcAccessConnectorOutput;
+    return this._vpcAccessConnector;
   }
-  public putVpcAccessConnector(value: AppEngineFlexibleAppVersionVpcAccessConnector | undefined) {
-    this._vpcAccessConnector = value;
+  public putVpcAccessConnector(value: AppEngineFlexibleAppVersionVpcAccessConnector) {
+    this._vpcAccessConnector.internalValue = value;
   }
   public resetVpcAccessConnector() {
-    this._vpcAccessConnector = undefined;
+    this._vpcAccessConnector.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vpcAccessConnectorInput() {
-    return this._vpcAccessConnector
+    return this._vpcAccessConnector.internalValue;
   }
 
   // =========
@@ -3147,19 +3875,19 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       service: cdktf.stringToTerraform(this._service),
       serving_status: cdktf.stringToTerraform(this._servingStatus),
       version_id: cdktf.stringToTerraform(this._versionId),
-      api_config: appEngineFlexibleAppVersionApiConfigToTerraform(this._apiConfig),
-      automatic_scaling: appEngineFlexibleAppVersionAutomaticScalingToTerraform(this._automaticScaling),
-      deployment: appEngineFlexibleAppVersionDeploymentToTerraform(this._deployment),
-      endpoints_api_service: appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(this._endpointsApiService),
-      entrypoint: appEngineFlexibleAppVersionEntrypointToTerraform(this._entrypoint),
+      api_config: appEngineFlexibleAppVersionApiConfigToTerraform(this._apiConfig.internalValue),
+      automatic_scaling: appEngineFlexibleAppVersionAutomaticScalingToTerraform(this._automaticScaling.internalValue),
+      deployment: appEngineFlexibleAppVersionDeploymentToTerraform(this._deployment.internalValue),
+      endpoints_api_service: appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(this._endpointsApiService.internalValue),
+      entrypoint: appEngineFlexibleAppVersionEntrypointToTerraform(this._entrypoint.internalValue),
       handlers: cdktf.listMapper(appEngineFlexibleAppVersionHandlersToTerraform)(this._handlers),
-      liveness_check: appEngineFlexibleAppVersionLivenessCheckToTerraform(this._livenessCheck),
-      manual_scaling: appEngineFlexibleAppVersionManualScalingToTerraform(this._manualScaling),
-      network: appEngineFlexibleAppVersionNetworkToTerraform(this._network),
-      readiness_check: appEngineFlexibleAppVersionReadinessCheckToTerraform(this._readinessCheck),
-      resources: appEngineFlexibleAppVersionResourcesToTerraform(this._resources),
-      timeouts: appEngineFlexibleAppVersionTimeoutsToTerraform(this._timeouts),
-      vpc_access_connector: appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(this._vpcAccessConnector),
+      liveness_check: appEngineFlexibleAppVersionLivenessCheckToTerraform(this._livenessCheck.internalValue),
+      manual_scaling: appEngineFlexibleAppVersionManualScalingToTerraform(this._manualScaling.internalValue),
+      network: appEngineFlexibleAppVersionNetworkToTerraform(this._network.internalValue),
+      readiness_check: appEngineFlexibleAppVersionReadinessCheckToTerraform(this._readinessCheck.internalValue),
+      resources: appEngineFlexibleAppVersionResourcesToTerraform(this._resources.internalValue),
+      timeouts: appEngineFlexibleAppVersionTimeoutsToTerraform(this._timeouts.internalValue),
+      vpc_access_connector: appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(this._vpcAccessConnector.internalValue),
     };
   }
 }

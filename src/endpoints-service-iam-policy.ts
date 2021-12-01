@@ -77,7 +77,7 @@ export class EndpointsServiceIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // service_name - computed: false, optional: false, required: true
@@ -90,7 +90,7 @@ export class EndpointsServiceIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNameInput() {
-    return this._serviceName
+    return this._serviceName;
   }
 
   // =========

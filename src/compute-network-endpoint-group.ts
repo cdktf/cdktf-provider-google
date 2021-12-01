@@ -80,7 +80,7 @@ export interface ComputeNetworkEndpointGroupTimeouts {
   readonly delete?: string;
 }
 
-function computeNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeNetworkEndpointGroupTimeoutsOutputReference | ComputeNetworkEndpointGroupTimeouts): any {
+export function computeNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeNetworkEndpointGroupTimeoutsOutputReference | ComputeNetworkEndpointGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -101,12 +101,37 @@ export class ComputeNetworkEndpointGroupTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeNetworkEndpointGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeNetworkEndpointGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -114,15 +139,15 @@ export class ComputeNetworkEndpointGroupTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -130,7 +155,7 @@ export class ComputeNetworkEndpointGroupTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -174,7 +199,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
     this._project = config.project;
     this._subnetwork = config.subnetwork;
     this._zone = config.zone;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -182,11 +207,11 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   // ==========
 
   // default_port - computed: false, optional: true, required: false
-  private _defaultPort?: number | undefined; 
+  private _defaultPort?: number; 
   public get defaultPort() {
     return this.getNumberAttribute('default_port');
   }
-  public set defaultPort(value: number | undefined) {
+  public set defaultPort(value: number) {
     this._defaultPort = value;
   }
   public resetDefaultPort() {
@@ -194,15 +219,15 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultPortInput() {
-    return this._defaultPort
+    return this._defaultPort;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -210,7 +235,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -228,7 +253,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: false, required: true
@@ -241,15 +266,15 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // network_endpoint_type - computed: false, optional: true, required: false
-  private _networkEndpointType?: string | undefined; 
+  private _networkEndpointType?: string; 
   public get networkEndpointType() {
     return this.getStringAttribute('network_endpoint_type');
   }
-  public set networkEndpointType(value: string | undefined) {
+  public set networkEndpointType(value: string) {
     this._networkEndpointType = value;
   }
   public resetNetworkEndpointType() {
@@ -257,15 +282,15 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkEndpointTypeInput() {
-    return this._networkEndpointType
+    return this._networkEndpointType;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -273,7 +298,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -287,11 +312,11 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -299,15 +324,15 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -315,24 +340,23 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeNetworkEndpointGroupTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeNetworkEndpointGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeNetworkEndpointGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeNetworkEndpointGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeNetworkEndpointGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -349,7 +373,7 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       zone: cdktf.stringToTerraform(this._zone),
-      timeouts: computeNetworkEndpointGroupTimeoutsToTerraform(this._timeouts),
+      timeouts: computeNetworkEndpointGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

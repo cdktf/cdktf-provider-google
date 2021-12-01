@@ -332,7 +332,7 @@ CPU utilization target for the group. Valid range is [0.0, 1.0].
   readonly maxUtilization?: number;
 }
 
-function computeBackendServiceBackendToTerraform(struct?: ComputeBackendServiceBackend): any {
+export function computeBackendServiceBackendToTerraform(struct?: ComputeBackendServiceBackend): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -401,7 +401,7 @@ delimiters.
   readonly queryStringWhitelist?: string[];
 }
 
-function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeBackendServiceCdnPolicyCacheKeyPolicy): any {
+export function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeBackendServiceCdnPolicyCacheKeyPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -425,12 +425,55 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceCdnPolicyCacheKeyPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._includeHost) {
+      hasAnyValues = true;
+      internalValueResult.includeHost = this._includeHost;
+    }
+    if (this._includeProtocol) {
+      hasAnyValues = true;
+      internalValueResult.includeProtocol = this._includeProtocol;
+    }
+    if (this._includeQueryString) {
+      hasAnyValues = true;
+      internalValueResult.includeQueryString = this._includeQueryString;
+    }
+    if (this._queryStringBlacklist) {
+      hasAnyValues = true;
+      internalValueResult.queryStringBlacklist = this._queryStringBlacklist;
+    }
+    if (this._queryStringWhitelist) {
+      hasAnyValues = true;
+      internalValueResult.queryStringWhitelist = this._queryStringWhitelist;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceCdnPolicyCacheKeyPolicy | undefined) {
+    if (value === undefined) {
+      this._includeHost = undefined;
+      this._includeProtocol = undefined;
+      this._includeQueryString = undefined;
+      this._queryStringBlacklist = undefined;
+      this._queryStringWhitelist = undefined;
+    }
+    else {
+      this._includeHost = value.includeHost;
+      this._includeProtocol = value.includeProtocol;
+      this._includeQueryString = value.includeQueryString;
+      this._queryStringBlacklist = value.queryStringBlacklist;
+      this._queryStringWhitelist = value.queryStringWhitelist;
+    }
+  }
+
   // include_host - computed: false, optional: true, required: false
-  private _includeHost?: boolean | cdktf.IResolvable | undefined; 
+  private _includeHost?: boolean | cdktf.IResolvable; 
   public get includeHost() {
     return this.getBooleanAttribute('include_host') as any;
   }
-  public set includeHost(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeHost(value: boolean | cdktf.IResolvable) {
     this._includeHost = value;
   }
   public resetIncludeHost() {
@@ -438,15 +481,15 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get includeHostInput() {
-    return this._includeHost
+    return this._includeHost;
   }
 
   // include_protocol - computed: false, optional: true, required: false
-  private _includeProtocol?: boolean | cdktf.IResolvable | undefined; 
+  private _includeProtocol?: boolean | cdktf.IResolvable; 
   public get includeProtocol() {
     return this.getBooleanAttribute('include_protocol') as any;
   }
-  public set includeProtocol(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeProtocol(value: boolean | cdktf.IResolvable) {
     this._includeProtocol = value;
   }
   public resetIncludeProtocol() {
@@ -454,15 +497,15 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get includeProtocolInput() {
-    return this._includeProtocol
+    return this._includeProtocol;
   }
 
   // include_query_string - computed: false, optional: true, required: false
-  private _includeQueryString?: boolean | cdktf.IResolvable | undefined; 
+  private _includeQueryString?: boolean | cdktf.IResolvable; 
   public get includeQueryString() {
     return this.getBooleanAttribute('include_query_string') as any;
   }
-  public set includeQueryString(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeQueryString(value: boolean | cdktf.IResolvable) {
     this._includeQueryString = value;
   }
   public resetIncludeQueryString() {
@@ -470,15 +513,15 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get includeQueryStringInput() {
-    return this._includeQueryString
+    return this._includeQueryString;
   }
 
   // query_string_blacklist - computed: false, optional: true, required: false
-  private _queryStringBlacklist?: string[] | undefined; 
+  private _queryStringBlacklist?: string[]; 
   public get queryStringBlacklist() {
     return this.getListAttribute('query_string_blacklist');
   }
-  public set queryStringBlacklist(value: string[] | undefined) {
+  public set queryStringBlacklist(value: string[]) {
     this._queryStringBlacklist = value;
   }
   public resetQueryStringBlacklist() {
@@ -486,15 +529,15 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringBlacklistInput() {
-    return this._queryStringBlacklist
+    return this._queryStringBlacklist;
   }
 
   // query_string_whitelist - computed: false, optional: true, required: false
-  private _queryStringWhitelist?: string[] | undefined; 
+  private _queryStringWhitelist?: string[]; 
   public get queryStringWhitelist() {
     return this.getListAttribute('query_string_whitelist');
   }
-  public set queryStringWhitelist(value: string[] | undefined) {
+  public set queryStringWhitelist(value: string[]) {
     this._queryStringWhitelist = value;
   }
   public resetQueryStringWhitelist() {
@@ -502,7 +545,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringWhitelistInput() {
-    return this._queryStringWhitelist
+    return this._queryStringWhitelist;
   }
 }
 export interface ComputeBackendServiceCdnPolicyNegativeCachingPolicy {
@@ -522,7 +565,7 @@ can be specified as values, and you cannot specify a status code more than once.
   readonly ttl?: number;
 }
 
-function computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy): any {
+export function computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -601,7 +644,7 @@ responses will not be altered.
   readonly negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[];
 }
 
-function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyOutputReference | ComputeBackendServiceCdnPolicy): any {
+export function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyOutputReference | ComputeBackendServiceCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -629,12 +672,79 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceCdnPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cacheMode) {
+      hasAnyValues = true;
+      internalValueResult.cacheMode = this._cacheMode;
+    }
+    if (this._clientTtl) {
+      hasAnyValues = true;
+      internalValueResult.clientTtl = this._clientTtl;
+    }
+    if (this._defaultTtl) {
+      hasAnyValues = true;
+      internalValueResult.defaultTtl = this._defaultTtl;
+    }
+    if (this._maxTtl) {
+      hasAnyValues = true;
+      internalValueResult.maxTtl = this._maxTtl;
+    }
+    if (this._negativeCaching) {
+      hasAnyValues = true;
+      internalValueResult.negativeCaching = this._negativeCaching;
+    }
+    if (this._serveWhileStale) {
+      hasAnyValues = true;
+      internalValueResult.serveWhileStale = this._serveWhileStale;
+    }
+    if (this._signedUrlCacheMaxAgeSec) {
+      hasAnyValues = true;
+      internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
+    }
+    if (this._cacheKeyPolicy) {
+      hasAnyValues = true;
+      internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
+    }
+    if (this._negativeCachingPolicy) {
+      hasAnyValues = true;
+      internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceCdnPolicy | undefined) {
+    if (value === undefined) {
+      this._cacheMode = undefined;
+      this._clientTtl = undefined;
+      this._defaultTtl = undefined;
+      this._maxTtl = undefined;
+      this._negativeCaching = undefined;
+      this._serveWhileStale = undefined;
+      this._signedUrlCacheMaxAgeSec = undefined;
+      this._cacheKeyPolicy.internalValue = undefined;
+      this._negativeCachingPolicy = undefined;
+    }
+    else {
+      this._cacheMode = value.cacheMode;
+      this._clientTtl = value.clientTtl;
+      this._defaultTtl = value.defaultTtl;
+      this._maxTtl = value.maxTtl;
+      this._negativeCaching = value.negativeCaching;
+      this._serveWhileStale = value.serveWhileStale;
+      this._signedUrlCacheMaxAgeSec = value.signedUrlCacheMaxAgeSec;
+      this._cacheKeyPolicy.internalValue = value.cacheKeyPolicy;
+      this._negativeCachingPolicy = value.negativeCachingPolicy;
+    }
+  }
+
   // cache_mode - computed: true, optional: true, required: false
-  private _cacheMode?: string | undefined; 
+  private _cacheMode?: string; 
   public get cacheMode() {
     return this.getStringAttribute('cache_mode');
   }
-  public set cacheMode(value: string | undefined) {
+  public set cacheMode(value: string) {
     this._cacheMode = value;
   }
   public resetCacheMode() {
@@ -642,15 +752,15 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get cacheModeInput() {
-    return this._cacheMode
+    return this._cacheMode;
   }
 
   // client_ttl - computed: true, optional: true, required: false
-  private _clientTtl?: number | undefined; 
+  private _clientTtl?: number; 
   public get clientTtl() {
     return this.getNumberAttribute('client_ttl');
   }
-  public set clientTtl(value: number | undefined) {
+  public set clientTtl(value: number) {
     this._clientTtl = value;
   }
   public resetClientTtl() {
@@ -658,15 +768,15 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get clientTtlInput() {
-    return this._clientTtl
+    return this._clientTtl;
   }
 
   // default_ttl - computed: true, optional: true, required: false
-  private _defaultTtl?: number | undefined; 
+  private _defaultTtl?: number; 
   public get defaultTtl() {
     return this.getNumberAttribute('default_ttl');
   }
-  public set defaultTtl(value: number | undefined) {
+  public set defaultTtl(value: number) {
     this._defaultTtl = value;
   }
   public resetDefaultTtl() {
@@ -674,15 +784,15 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlInput() {
-    return this._defaultTtl
+    return this._defaultTtl;
   }
 
   // max_ttl - computed: true, optional: true, required: false
-  private _maxTtl?: number | undefined; 
+  private _maxTtl?: number; 
   public get maxTtl() {
     return this.getNumberAttribute('max_ttl');
   }
-  public set maxTtl(value: number | undefined) {
+  public set maxTtl(value: number) {
     this._maxTtl = value;
   }
   public resetMaxTtl() {
@@ -690,15 +800,15 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get maxTtlInput() {
-    return this._maxTtl
+    return this._maxTtl;
   }
 
   // negative_caching - computed: true, optional: true, required: false
-  private _negativeCaching?: boolean | cdktf.IResolvable | undefined; 
+  private _negativeCaching?: boolean | cdktf.IResolvable; 
   public get negativeCaching() {
     return this.getBooleanAttribute('negative_caching') as any;
   }
-  public set negativeCaching(value: boolean | cdktf.IResolvable | undefined) {
+  public set negativeCaching(value: boolean | cdktf.IResolvable) {
     this._negativeCaching = value;
   }
   public resetNegativeCaching() {
@@ -706,15 +816,15 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get negativeCachingInput() {
-    return this._negativeCaching
+    return this._negativeCaching;
   }
 
   // serve_while_stale - computed: true, optional: true, required: false
-  private _serveWhileStale?: number | undefined; 
+  private _serveWhileStale?: number; 
   public get serveWhileStale() {
     return this.getNumberAttribute('serve_while_stale');
   }
-  public set serveWhileStale(value: number | undefined) {
+  public set serveWhileStale(value: number) {
     this._serveWhileStale = value;
   }
   public resetServeWhileStale() {
@@ -722,15 +832,15 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get serveWhileStaleInput() {
-    return this._serveWhileStale
+    return this._serveWhileStale;
   }
 
   // signed_url_cache_max_age_sec - computed: false, optional: true, required: false
-  private _signedUrlCacheMaxAgeSec?: number | undefined; 
+  private _signedUrlCacheMaxAgeSec?: number; 
   public get signedUrlCacheMaxAgeSec() {
     return this.getNumberAttribute('signed_url_cache_max_age_sec');
   }
-  public set signedUrlCacheMaxAgeSec(value: number | undefined) {
+  public set signedUrlCacheMaxAgeSec(value: number) {
     this._signedUrlCacheMaxAgeSec = value;
   }
   public resetSignedUrlCacheMaxAgeSec() {
@@ -738,33 +848,32 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get signedUrlCacheMaxAgeSecInput() {
-    return this._signedUrlCacheMaxAgeSec
+    return this._signedUrlCacheMaxAgeSec;
   }
 
   // cache_key_policy - computed: false, optional: true, required: false
-  private _cacheKeyPolicy?: ComputeBackendServiceCdnPolicyCacheKeyPolicy | undefined; 
-  private __cacheKeyPolicyOutput = new ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
+  private _cacheKeyPolicy = new ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
   public get cacheKeyPolicy() {
-    return this.__cacheKeyPolicyOutput;
+    return this._cacheKeyPolicy;
   }
-  public putCacheKeyPolicy(value: ComputeBackendServiceCdnPolicyCacheKeyPolicy | undefined) {
-    this._cacheKeyPolicy = value;
+  public putCacheKeyPolicy(value: ComputeBackendServiceCdnPolicyCacheKeyPolicy) {
+    this._cacheKeyPolicy.internalValue = value;
   }
   public resetCacheKeyPolicy() {
-    this._cacheKeyPolicy = undefined;
+    this._cacheKeyPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cacheKeyPolicyInput() {
-    return this._cacheKeyPolicy
+    return this._cacheKeyPolicy.internalValue;
   }
 
   // negative_caching_policy - computed: false, optional: true, required: false
-  private _negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] | undefined; 
+  private _negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[]; 
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('negative_caching_policy') as any;
   }
-  public set negativeCachingPolicy(value: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] | undefined) {
+  public set negativeCachingPolicy(value: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[]) {
     this._negativeCachingPolicy = value;
   }
   public resetNegativeCachingPolicy() {
@@ -772,7 +881,7 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get negativeCachingPolicyInput() {
-    return this._negativeCachingPolicy
+    return this._negativeCachingPolicy;
   }
 }
 export interface ComputeBackendServiceCircuitBreakers {
@@ -815,7 +924,7 @@ Defaults to 3.
   readonly maxRetries?: number;
 }
 
-function computeBackendServiceCircuitBreakersToTerraform(struct?: ComputeBackendServiceCircuitBreakersOutputReference | ComputeBackendServiceCircuitBreakers): any {
+export function computeBackendServiceCircuitBreakersToTerraform(struct?: ComputeBackendServiceCircuitBreakersOutputReference | ComputeBackendServiceCircuitBreakers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -839,12 +948,55 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceCircuitBreakers | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxConnections) {
+      hasAnyValues = true;
+      internalValueResult.maxConnections = this._maxConnections;
+    }
+    if (this._maxPendingRequests) {
+      hasAnyValues = true;
+      internalValueResult.maxPendingRequests = this._maxPendingRequests;
+    }
+    if (this._maxRequests) {
+      hasAnyValues = true;
+      internalValueResult.maxRequests = this._maxRequests;
+    }
+    if (this._maxRequestsPerConnection) {
+      hasAnyValues = true;
+      internalValueResult.maxRequestsPerConnection = this._maxRequestsPerConnection;
+    }
+    if (this._maxRetries) {
+      hasAnyValues = true;
+      internalValueResult.maxRetries = this._maxRetries;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceCircuitBreakers | undefined) {
+    if (value === undefined) {
+      this._maxConnections = undefined;
+      this._maxPendingRequests = undefined;
+      this._maxRequests = undefined;
+      this._maxRequestsPerConnection = undefined;
+      this._maxRetries = undefined;
+    }
+    else {
+      this._maxConnections = value.maxConnections;
+      this._maxPendingRequests = value.maxPendingRequests;
+      this._maxRequests = value.maxRequests;
+      this._maxRequestsPerConnection = value.maxRequestsPerConnection;
+      this._maxRetries = value.maxRetries;
+    }
+  }
+
   // max_connections - computed: false, optional: true, required: false
-  private _maxConnections?: number | undefined; 
+  private _maxConnections?: number; 
   public get maxConnections() {
     return this.getNumberAttribute('max_connections');
   }
-  public set maxConnections(value: number | undefined) {
+  public set maxConnections(value: number) {
     this._maxConnections = value;
   }
   public resetMaxConnections() {
@@ -852,15 +1004,15 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get maxConnectionsInput() {
-    return this._maxConnections
+    return this._maxConnections;
   }
 
   // max_pending_requests - computed: false, optional: true, required: false
-  private _maxPendingRequests?: number | undefined; 
+  private _maxPendingRequests?: number; 
   public get maxPendingRequests() {
     return this.getNumberAttribute('max_pending_requests');
   }
-  public set maxPendingRequests(value: number | undefined) {
+  public set maxPendingRequests(value: number) {
     this._maxPendingRequests = value;
   }
   public resetMaxPendingRequests() {
@@ -868,15 +1020,15 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get maxPendingRequestsInput() {
-    return this._maxPendingRequests
+    return this._maxPendingRequests;
   }
 
   // max_requests - computed: false, optional: true, required: false
-  private _maxRequests?: number | undefined; 
+  private _maxRequests?: number; 
   public get maxRequests() {
     return this.getNumberAttribute('max_requests');
   }
-  public set maxRequests(value: number | undefined) {
+  public set maxRequests(value: number) {
     this._maxRequests = value;
   }
   public resetMaxRequests() {
@@ -884,15 +1036,15 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get maxRequestsInput() {
-    return this._maxRequests
+    return this._maxRequests;
   }
 
   // max_requests_per_connection - computed: false, optional: true, required: false
-  private _maxRequestsPerConnection?: number | undefined; 
+  private _maxRequestsPerConnection?: number; 
   public get maxRequestsPerConnection() {
     return this.getNumberAttribute('max_requests_per_connection');
   }
-  public set maxRequestsPerConnection(value: number | undefined) {
+  public set maxRequestsPerConnection(value: number) {
     this._maxRequestsPerConnection = value;
   }
   public resetMaxRequestsPerConnection() {
@@ -900,15 +1052,15 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get maxRequestsPerConnectionInput() {
-    return this._maxRequestsPerConnection
+    return this._maxRequestsPerConnection;
   }
 
   // max_retries - computed: false, optional: true, required: false
-  private _maxRetries?: number | undefined; 
+  private _maxRetries?: number; 
   public get maxRetries() {
     return this.getNumberAttribute('max_retries');
   }
-  public set maxRetries(value: number | undefined) {
+  public set maxRetries(value: number) {
     this._maxRetries = value;
   }
   public resetMaxRetries() {
@@ -916,7 +1068,7 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get maxRetriesInput() {
-    return this._maxRetries
+    return this._maxRetries;
   }
 }
 export interface ComputeBackendServiceConsistentHashHttpCookieTtl {
@@ -938,7 +1090,7 @@ Must be from 0 to 315,576,000,000 inclusive.
   readonly seconds: number;
 }
 
-function computeBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeBackendServiceConsistentHashHttpCookieTtl): any {
+export function computeBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeBackendServiceConsistentHashHttpCookieTtl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -959,12 +1111,37 @@ export class ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceConsistentHashHttpCookieTtl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceConsistentHashHttpCookieTtl | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -972,7 +1149,7 @@ export class ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -985,7 +1162,7 @@ export class ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeBackendServiceConsistentHashHttpCookie {
@@ -1009,7 +1186,7 @@ export interface ComputeBackendServiceConsistentHashHttpCookie {
   readonly ttl?: ComputeBackendServiceConsistentHashHttpCookieTtl;
 }
 
-function computeBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieOutputReference | ComputeBackendServiceConsistentHashHttpCookie): any {
+export function computeBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieOutputReference | ComputeBackendServiceConsistentHashHttpCookie): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1031,12 +1208,43 @@ export class ComputeBackendServiceConsistentHashHttpCookieOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceConsistentHashHttpCookie | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._ttl) {
+      hasAnyValues = true;
+      internalValueResult.ttl = this._ttl?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceConsistentHashHttpCookie | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._path = undefined;
+      this._ttl.internalValue = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._path = value.path;
+      this._ttl.internalValue = value.ttl;
+    }
+  }
+
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -1044,15 +1252,15 @@ export class ComputeBackendServiceConsistentHashHttpCookieOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -1060,24 +1268,23 @@ export class ComputeBackendServiceConsistentHashHttpCookieOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl?: ComputeBackendServiceConsistentHashHttpCookieTtl | undefined; 
-  private __ttlOutput = new ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference(this as any, "ttl", true);
+  private _ttl = new ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference(this as any, "ttl", true);
   public get ttl() {
-    return this.__ttlOutput;
+    return this._ttl;
   }
-  public putTtl(value: ComputeBackendServiceConsistentHashHttpCookieTtl | undefined) {
-    this._ttl = value;
+  public putTtl(value: ComputeBackendServiceConsistentHashHttpCookieTtl) {
+    this._ttl.internalValue = value;
   }
   public resetTtl() {
-    this._ttl = undefined;
+    this._ttl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
-    return this._ttl
+    return this._ttl.internalValue;
   }
 }
 export interface ComputeBackendServiceConsistentHash {
@@ -1107,7 +1314,7 @@ Defaults to 1024.
   readonly httpCookie?: ComputeBackendServiceConsistentHashHttpCookie;
 }
 
-function computeBackendServiceConsistentHashToTerraform(struct?: ComputeBackendServiceConsistentHashOutputReference | ComputeBackendServiceConsistentHash): any {
+export function computeBackendServiceConsistentHashToTerraform(struct?: ComputeBackendServiceConsistentHashOutputReference | ComputeBackendServiceConsistentHash): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1129,12 +1336,43 @@ export class ComputeBackendServiceConsistentHashOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceConsistentHash | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._httpHeaderName) {
+      hasAnyValues = true;
+      internalValueResult.httpHeaderName = this._httpHeaderName;
+    }
+    if (this._minimumRingSize) {
+      hasAnyValues = true;
+      internalValueResult.minimumRingSize = this._minimumRingSize;
+    }
+    if (this._httpCookie) {
+      hasAnyValues = true;
+      internalValueResult.httpCookie = this._httpCookie?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceConsistentHash | undefined) {
+    if (value === undefined) {
+      this._httpHeaderName = undefined;
+      this._minimumRingSize = undefined;
+      this._httpCookie.internalValue = undefined;
+    }
+    else {
+      this._httpHeaderName = value.httpHeaderName;
+      this._minimumRingSize = value.minimumRingSize;
+      this._httpCookie.internalValue = value.httpCookie;
+    }
+  }
+
   // http_header_name - computed: false, optional: true, required: false
-  private _httpHeaderName?: string | undefined; 
+  private _httpHeaderName?: string; 
   public get httpHeaderName() {
     return this.getStringAttribute('http_header_name');
   }
-  public set httpHeaderName(value: string | undefined) {
+  public set httpHeaderName(value: string) {
     this._httpHeaderName = value;
   }
   public resetHttpHeaderName() {
@@ -1142,15 +1380,15 @@ export class ComputeBackendServiceConsistentHashOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get httpHeaderNameInput() {
-    return this._httpHeaderName
+    return this._httpHeaderName;
   }
 
   // minimum_ring_size - computed: false, optional: true, required: false
-  private _minimumRingSize?: number | undefined; 
+  private _minimumRingSize?: number; 
   public get minimumRingSize() {
     return this.getNumberAttribute('minimum_ring_size');
   }
-  public set minimumRingSize(value: number | undefined) {
+  public set minimumRingSize(value: number) {
     this._minimumRingSize = value;
   }
   public resetMinimumRingSize() {
@@ -1158,24 +1396,23 @@ export class ComputeBackendServiceConsistentHashOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get minimumRingSizeInput() {
-    return this._minimumRingSize
+    return this._minimumRingSize;
   }
 
   // http_cookie - computed: false, optional: true, required: false
-  private _httpCookie?: ComputeBackendServiceConsistentHashHttpCookie | undefined; 
-  private __httpCookieOutput = new ComputeBackendServiceConsistentHashHttpCookieOutputReference(this as any, "http_cookie", true);
+  private _httpCookie = new ComputeBackendServiceConsistentHashHttpCookieOutputReference(this as any, "http_cookie", true);
   public get httpCookie() {
-    return this.__httpCookieOutput;
+    return this._httpCookie;
   }
-  public putHttpCookie(value: ComputeBackendServiceConsistentHashHttpCookie | undefined) {
-    this._httpCookie = value;
+  public putHttpCookie(value: ComputeBackendServiceConsistentHashHttpCookie) {
+    this._httpCookie.internalValue = value;
   }
   public resetHttpCookie() {
-    this._httpCookie = undefined;
+    this._httpCookie.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpCookieInput() {
-    return this._httpCookie
+    return this._httpCookie.internalValue;
   }
 }
 export interface ComputeBackendServiceIap {
@@ -1193,7 +1430,7 @@ export interface ComputeBackendServiceIap {
   readonly oauth2ClientSecret: string;
 }
 
-function computeBackendServiceIapToTerraform(struct?: ComputeBackendServiceIapOutputReference | ComputeBackendServiceIap): any {
+export function computeBackendServiceIapToTerraform(struct?: ComputeBackendServiceIapOutputReference | ComputeBackendServiceIap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1214,6 +1451,31 @@ export class ComputeBackendServiceIapOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceIap | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._oauth2ClientId) {
+      hasAnyValues = true;
+      internalValueResult.oauth2ClientId = this._oauth2ClientId;
+    }
+    if (this._oauth2ClientSecret) {
+      hasAnyValues = true;
+      internalValueResult.oauth2ClientSecret = this._oauth2ClientSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceIap | undefined) {
+    if (value === undefined) {
+      this._oauth2ClientId = undefined;
+      this._oauth2ClientSecret = undefined;
+    }
+    else {
+      this._oauth2ClientId = value.oauth2ClientId;
+      this._oauth2ClientSecret = value.oauth2ClientSecret;
+    }
+  }
+
   // oauth2_client_id - computed: false, optional: false, required: true
   private _oauth2ClientId?: string; 
   public get oauth2ClientId() {
@@ -1224,7 +1486,7 @@ export class ComputeBackendServiceIapOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get oauth2ClientIdInput() {
-    return this._oauth2ClientId
+    return this._oauth2ClientId;
   }
 
   // oauth2_client_secret - computed: false, optional: false, required: true
@@ -1237,7 +1499,7 @@ export class ComputeBackendServiceIapOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get oauth2ClientSecretInput() {
-    return this._oauth2ClientSecret
+    return this._oauth2ClientSecret;
   }
 }
 export interface ComputeBackendServiceLogConfig {
@@ -1258,7 +1520,7 @@ The default value is 1.0.
   readonly sampleRate?: number;
 }
 
-function computeBackendServiceLogConfigToTerraform(struct?: ComputeBackendServiceLogConfigOutputReference | ComputeBackendServiceLogConfig): any {
+export function computeBackendServiceLogConfigToTerraform(struct?: ComputeBackendServiceLogConfigOutputReference | ComputeBackendServiceLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1279,12 +1541,37 @@ export class ComputeBackendServiceLogConfigOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceLogConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enable) {
+      hasAnyValues = true;
+      internalValueResult.enable = this._enable;
+    }
+    if (this._sampleRate) {
+      hasAnyValues = true;
+      internalValueResult.sampleRate = this._sampleRate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceLogConfig | undefined) {
+    if (value === undefined) {
+      this._enable = undefined;
+      this._sampleRate = undefined;
+    }
+    else {
+      this._enable = value.enable;
+      this._sampleRate = value.sampleRate;
+    }
+  }
+
   // enable - computed: false, optional: true, required: false
-  private _enable?: boolean | cdktf.IResolvable | undefined; 
+  private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
     return this.getBooleanAttribute('enable') as any;
   }
-  public set enable(value: boolean | cdktf.IResolvable | undefined) {
+  public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
   }
   public resetEnable() {
@@ -1292,15 +1579,15 @@ export class ComputeBackendServiceLogConfigOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get enableInput() {
-    return this._enable
+    return this._enable;
   }
 
   // sample_rate - computed: false, optional: true, required: false
-  private _sampleRate?: number | undefined; 
+  private _sampleRate?: number; 
   public get sampleRate() {
     return this.getNumberAttribute('sample_rate');
   }
-  public set sampleRate(value: number | undefined) {
+  public set sampleRate(value: number) {
     this._sampleRate = value;
   }
   public resetSampleRate() {
@@ -1308,7 +1595,7 @@ export class ComputeBackendServiceLogConfigOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get sampleRateInput() {
-    return this._sampleRate
+    return this._sampleRate;
   }
 }
 export interface ComputeBackendServiceOutlierDetectionBaseEjectionTime {
@@ -1329,7 +1616,7 @@ inclusive.
   readonly seconds: number;
 }
 
-function computeBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeBackendServiceOutlierDetectionBaseEjectionTime): any {
+export function computeBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeBackendServiceOutlierDetectionBaseEjectionTime): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1350,12 +1637,37 @@ export class ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceOutlierDetectionBaseEjectionTime | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceOutlierDetectionBaseEjectionTime | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -1363,7 +1675,7 @@ export class ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -1376,7 +1688,7 @@ export class ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeBackendServiceOutlierDetectionInterval {
@@ -1397,7 +1709,7 @@ inclusive.
   readonly seconds: number;
 }
 
-function computeBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeBackendServiceOutlierDetectionIntervalOutputReference | ComputeBackendServiceOutlierDetectionInterval): any {
+export function computeBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeBackendServiceOutlierDetectionIntervalOutputReference | ComputeBackendServiceOutlierDetectionInterval): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1418,12 +1730,37 @@ export class ComputeBackendServiceOutlierDetectionIntervalOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceOutlierDetectionInterval | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nanos) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceOutlierDetectionInterval | undefined) {
+    if (value === undefined) {
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
   // nanos - computed: false, optional: true, required: false
-  private _nanos?: number | undefined; 
+  private _nanos?: number; 
   public get nanos() {
     return this.getNumberAttribute('nanos');
   }
-  public set nanos(value: number | undefined) {
+  public set nanos(value: number) {
     this._nanos = value;
   }
   public resetNanos() {
@@ -1431,7 +1768,7 @@ export class ComputeBackendServiceOutlierDetectionIntervalOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get nanosInput() {
-    return this._nanos
+    return this._nanos;
   }
 
   // seconds - computed: false, optional: false, required: true
@@ -1444,7 +1781,7 @@ export class ComputeBackendServiceOutlierDetectionIntervalOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get secondsInput() {
-    return this._seconds
+    return this._seconds;
   }
 }
 export interface ComputeBackendServiceOutlierDetection {
@@ -1539,7 +1876,7 @@ runtime value should be 1900. Defaults to 1900.
   readonly interval?: ComputeBackendServiceOutlierDetectionInterval;
 }
 
-function computeBackendServiceOutlierDetectionToTerraform(struct?: ComputeBackendServiceOutlierDetectionOutputReference | ComputeBackendServiceOutlierDetection): any {
+export function computeBackendServiceOutlierDetectionToTerraform(struct?: ComputeBackendServiceOutlierDetectionOutputReference | ComputeBackendServiceOutlierDetection): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1569,12 +1906,91 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceOutlierDetection | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._consecutiveErrors) {
+      hasAnyValues = true;
+      internalValueResult.consecutiveErrors = this._consecutiveErrors;
+    }
+    if (this._consecutiveGatewayFailure) {
+      hasAnyValues = true;
+      internalValueResult.consecutiveGatewayFailure = this._consecutiveGatewayFailure;
+    }
+    if (this._enforcingConsecutiveErrors) {
+      hasAnyValues = true;
+      internalValueResult.enforcingConsecutiveErrors = this._enforcingConsecutiveErrors;
+    }
+    if (this._enforcingConsecutiveGatewayFailure) {
+      hasAnyValues = true;
+      internalValueResult.enforcingConsecutiveGatewayFailure = this._enforcingConsecutiveGatewayFailure;
+    }
+    if (this._enforcingSuccessRate) {
+      hasAnyValues = true;
+      internalValueResult.enforcingSuccessRate = this._enforcingSuccessRate;
+    }
+    if (this._maxEjectionPercent) {
+      hasAnyValues = true;
+      internalValueResult.maxEjectionPercent = this._maxEjectionPercent;
+    }
+    if (this._successRateMinimumHosts) {
+      hasAnyValues = true;
+      internalValueResult.successRateMinimumHosts = this._successRateMinimumHosts;
+    }
+    if (this._successRateRequestVolume) {
+      hasAnyValues = true;
+      internalValueResult.successRateRequestVolume = this._successRateRequestVolume;
+    }
+    if (this._successRateStdevFactor) {
+      hasAnyValues = true;
+      internalValueResult.successRateStdevFactor = this._successRateStdevFactor;
+    }
+    if (this._baseEjectionTime) {
+      hasAnyValues = true;
+      internalValueResult.baseEjectionTime = this._baseEjectionTime?.internalValue;
+    }
+    if (this._interval) {
+      hasAnyValues = true;
+      internalValueResult.interval = this._interval?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceOutlierDetection | undefined) {
+    if (value === undefined) {
+      this._consecutiveErrors = undefined;
+      this._consecutiveGatewayFailure = undefined;
+      this._enforcingConsecutiveErrors = undefined;
+      this._enforcingConsecutiveGatewayFailure = undefined;
+      this._enforcingSuccessRate = undefined;
+      this._maxEjectionPercent = undefined;
+      this._successRateMinimumHosts = undefined;
+      this._successRateRequestVolume = undefined;
+      this._successRateStdevFactor = undefined;
+      this._baseEjectionTime.internalValue = undefined;
+      this._interval.internalValue = undefined;
+    }
+    else {
+      this._consecutiveErrors = value.consecutiveErrors;
+      this._consecutiveGatewayFailure = value.consecutiveGatewayFailure;
+      this._enforcingConsecutiveErrors = value.enforcingConsecutiveErrors;
+      this._enforcingConsecutiveGatewayFailure = value.enforcingConsecutiveGatewayFailure;
+      this._enforcingSuccessRate = value.enforcingSuccessRate;
+      this._maxEjectionPercent = value.maxEjectionPercent;
+      this._successRateMinimumHosts = value.successRateMinimumHosts;
+      this._successRateRequestVolume = value.successRateRequestVolume;
+      this._successRateStdevFactor = value.successRateStdevFactor;
+      this._baseEjectionTime.internalValue = value.baseEjectionTime;
+      this._interval.internalValue = value.interval;
+    }
+  }
+
   // consecutive_errors - computed: false, optional: true, required: false
-  private _consecutiveErrors?: number | undefined; 
+  private _consecutiveErrors?: number; 
   public get consecutiveErrors() {
     return this.getNumberAttribute('consecutive_errors');
   }
-  public set consecutiveErrors(value: number | undefined) {
+  public set consecutiveErrors(value: number) {
     this._consecutiveErrors = value;
   }
   public resetConsecutiveErrors() {
@@ -1582,15 +1998,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get consecutiveErrorsInput() {
-    return this._consecutiveErrors
+    return this._consecutiveErrors;
   }
 
   // consecutive_gateway_failure - computed: false, optional: true, required: false
-  private _consecutiveGatewayFailure?: number | undefined; 
+  private _consecutiveGatewayFailure?: number; 
   public get consecutiveGatewayFailure() {
     return this.getNumberAttribute('consecutive_gateway_failure');
   }
-  public set consecutiveGatewayFailure(value: number | undefined) {
+  public set consecutiveGatewayFailure(value: number) {
     this._consecutiveGatewayFailure = value;
   }
   public resetConsecutiveGatewayFailure() {
@@ -1598,15 +2014,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get consecutiveGatewayFailureInput() {
-    return this._consecutiveGatewayFailure
+    return this._consecutiveGatewayFailure;
   }
 
   // enforcing_consecutive_errors - computed: false, optional: true, required: false
-  private _enforcingConsecutiveErrors?: number | undefined; 
+  private _enforcingConsecutiveErrors?: number; 
   public get enforcingConsecutiveErrors() {
     return this.getNumberAttribute('enforcing_consecutive_errors');
   }
-  public set enforcingConsecutiveErrors(value: number | undefined) {
+  public set enforcingConsecutiveErrors(value: number) {
     this._enforcingConsecutiveErrors = value;
   }
   public resetEnforcingConsecutiveErrors() {
@@ -1614,15 +2030,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get enforcingConsecutiveErrorsInput() {
-    return this._enforcingConsecutiveErrors
+    return this._enforcingConsecutiveErrors;
   }
 
   // enforcing_consecutive_gateway_failure - computed: false, optional: true, required: false
-  private _enforcingConsecutiveGatewayFailure?: number | undefined; 
+  private _enforcingConsecutiveGatewayFailure?: number; 
   public get enforcingConsecutiveGatewayFailure() {
     return this.getNumberAttribute('enforcing_consecutive_gateway_failure');
   }
-  public set enforcingConsecutiveGatewayFailure(value: number | undefined) {
+  public set enforcingConsecutiveGatewayFailure(value: number) {
     this._enforcingConsecutiveGatewayFailure = value;
   }
   public resetEnforcingConsecutiveGatewayFailure() {
@@ -1630,15 +2046,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get enforcingConsecutiveGatewayFailureInput() {
-    return this._enforcingConsecutiveGatewayFailure
+    return this._enforcingConsecutiveGatewayFailure;
   }
 
   // enforcing_success_rate - computed: false, optional: true, required: false
-  private _enforcingSuccessRate?: number | undefined; 
+  private _enforcingSuccessRate?: number; 
   public get enforcingSuccessRate() {
     return this.getNumberAttribute('enforcing_success_rate');
   }
-  public set enforcingSuccessRate(value: number | undefined) {
+  public set enforcingSuccessRate(value: number) {
     this._enforcingSuccessRate = value;
   }
   public resetEnforcingSuccessRate() {
@@ -1646,15 +2062,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get enforcingSuccessRateInput() {
-    return this._enforcingSuccessRate
+    return this._enforcingSuccessRate;
   }
 
   // max_ejection_percent - computed: false, optional: true, required: false
-  private _maxEjectionPercent?: number | undefined; 
+  private _maxEjectionPercent?: number; 
   public get maxEjectionPercent() {
     return this.getNumberAttribute('max_ejection_percent');
   }
-  public set maxEjectionPercent(value: number | undefined) {
+  public set maxEjectionPercent(value: number) {
     this._maxEjectionPercent = value;
   }
   public resetMaxEjectionPercent() {
@@ -1662,15 +2078,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get maxEjectionPercentInput() {
-    return this._maxEjectionPercent
+    return this._maxEjectionPercent;
   }
 
   // success_rate_minimum_hosts - computed: false, optional: true, required: false
-  private _successRateMinimumHosts?: number | undefined; 
+  private _successRateMinimumHosts?: number; 
   public get successRateMinimumHosts() {
     return this.getNumberAttribute('success_rate_minimum_hosts');
   }
-  public set successRateMinimumHosts(value: number | undefined) {
+  public set successRateMinimumHosts(value: number) {
     this._successRateMinimumHosts = value;
   }
   public resetSuccessRateMinimumHosts() {
@@ -1678,15 +2094,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get successRateMinimumHostsInput() {
-    return this._successRateMinimumHosts
+    return this._successRateMinimumHosts;
   }
 
   // success_rate_request_volume - computed: false, optional: true, required: false
-  private _successRateRequestVolume?: number | undefined; 
+  private _successRateRequestVolume?: number; 
   public get successRateRequestVolume() {
     return this.getNumberAttribute('success_rate_request_volume');
   }
-  public set successRateRequestVolume(value: number | undefined) {
+  public set successRateRequestVolume(value: number) {
     this._successRateRequestVolume = value;
   }
   public resetSuccessRateRequestVolume() {
@@ -1694,15 +2110,15 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get successRateRequestVolumeInput() {
-    return this._successRateRequestVolume
+    return this._successRateRequestVolume;
   }
 
   // success_rate_stdev_factor - computed: false, optional: true, required: false
-  private _successRateStdevFactor?: number | undefined; 
+  private _successRateStdevFactor?: number; 
   public get successRateStdevFactor() {
     return this.getNumberAttribute('success_rate_stdev_factor');
   }
-  public set successRateStdevFactor(value: number | undefined) {
+  public set successRateStdevFactor(value: number) {
     this._successRateStdevFactor = value;
   }
   public resetSuccessRateStdevFactor() {
@@ -1710,41 +2126,39 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get successRateStdevFactorInput() {
-    return this._successRateStdevFactor
+    return this._successRateStdevFactor;
   }
 
   // base_ejection_time - computed: false, optional: true, required: false
-  private _baseEjectionTime?: ComputeBackendServiceOutlierDetectionBaseEjectionTime | undefined; 
-  private __baseEjectionTimeOutput = new ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this as any, "base_ejection_time", true);
+  private _baseEjectionTime = new ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this as any, "base_ejection_time", true);
   public get baseEjectionTime() {
-    return this.__baseEjectionTimeOutput;
+    return this._baseEjectionTime;
   }
-  public putBaseEjectionTime(value: ComputeBackendServiceOutlierDetectionBaseEjectionTime | undefined) {
-    this._baseEjectionTime = value;
+  public putBaseEjectionTime(value: ComputeBackendServiceOutlierDetectionBaseEjectionTime) {
+    this._baseEjectionTime.internalValue = value;
   }
   public resetBaseEjectionTime() {
-    this._baseEjectionTime = undefined;
+    this._baseEjectionTime.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get baseEjectionTimeInput() {
-    return this._baseEjectionTime
+    return this._baseEjectionTime.internalValue;
   }
 
   // interval - computed: false, optional: true, required: false
-  private _interval?: ComputeBackendServiceOutlierDetectionInterval | undefined; 
-  private __intervalOutput = new ComputeBackendServiceOutlierDetectionIntervalOutputReference(this as any, "interval", true);
+  private _interval = new ComputeBackendServiceOutlierDetectionIntervalOutputReference(this as any, "interval", true);
   public get interval() {
-    return this.__intervalOutput;
+    return this._interval;
   }
-  public putInterval(value: ComputeBackendServiceOutlierDetectionInterval | undefined) {
-    this._interval = value;
+  public putInterval(value: ComputeBackendServiceOutlierDetectionInterval) {
+    this._interval.internalValue = value;
   }
   public resetInterval() {
-    this._interval = undefined;
+    this._interval.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInput() {
-    return this._interval
+    return this._interval.internalValue;
   }
 }
 export interface ComputeBackendServiceTimeouts {
@@ -1762,7 +2176,7 @@ export interface ComputeBackendServiceTimeouts {
   readonly update?: string;
 }
 
-function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendServiceTimeoutsOutputReference | ComputeBackendServiceTimeouts): any {
+export function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendServiceTimeoutsOutputReference | ComputeBackendServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1784,12 +2198,43 @@ export class ComputeBackendServiceTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeBackendServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1797,15 +2242,15 @@ export class ComputeBackendServiceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1813,15 +2258,15 @@ export class ComputeBackendServiceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1829,7 +2274,7 @@ export class ComputeBackendServiceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1882,13 +2327,13 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     this._sessionAffinity = config.sessionAffinity;
     this._timeoutSec = config.timeoutSec;
     this._backend = config.backend;
-    this._cdnPolicy = config.cdnPolicy;
-    this._circuitBreakers = config.circuitBreakers;
-    this._consistentHash = config.consistentHash;
-    this._iap = config.iap;
-    this._logConfig = config.logConfig;
-    this._outlierDetection = config.outlierDetection;
-    this._timeouts = config.timeouts;
+    this._cdnPolicy.internalValue = config.cdnPolicy;
+    this._circuitBreakers.internalValue = config.circuitBreakers;
+    this._consistentHash.internalValue = config.consistentHash;
+    this._iap.internalValue = config.iap;
+    this._logConfig.internalValue = config.logConfig;
+    this._outlierDetection.internalValue = config.outlierDetection;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1896,11 +2341,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // ==========
 
   // affinity_cookie_ttl_sec - computed: false, optional: true, required: false
-  private _affinityCookieTtlSec?: number | undefined; 
+  private _affinityCookieTtlSec?: number; 
   public get affinityCookieTtlSec() {
     return this.getNumberAttribute('affinity_cookie_ttl_sec');
   }
-  public set affinityCookieTtlSec(value: number | undefined) {
+  public set affinityCookieTtlSec(value: number) {
     this._affinityCookieTtlSec = value;
   }
   public resetAffinityCookieTtlSec() {
@@ -1908,15 +2353,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get affinityCookieTtlSecInput() {
-    return this._affinityCookieTtlSec
+    return this._affinityCookieTtlSec;
   }
 
   // connection_draining_timeout_sec - computed: false, optional: true, required: false
-  private _connectionDrainingTimeoutSec?: number | undefined; 
+  private _connectionDrainingTimeoutSec?: number; 
   public get connectionDrainingTimeoutSec() {
     return this.getNumberAttribute('connection_draining_timeout_sec');
   }
-  public set connectionDrainingTimeoutSec(value: number | undefined) {
+  public set connectionDrainingTimeoutSec(value: number) {
     this._connectionDrainingTimeoutSec = value;
   }
   public resetConnectionDrainingTimeoutSec() {
@@ -1924,7 +2369,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionDrainingTimeoutSecInput() {
-    return this._connectionDrainingTimeoutSec
+    return this._connectionDrainingTimeoutSec;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -1933,11 +2378,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // custom_request_headers - computed: false, optional: true, required: false
-  private _customRequestHeaders?: string[] | undefined; 
+  private _customRequestHeaders?: string[]; 
   public get customRequestHeaders() {
     return this.getListAttribute('custom_request_headers');
   }
-  public set customRequestHeaders(value: string[] | undefined) {
+  public set customRequestHeaders(value: string[]) {
     this._customRequestHeaders = value;
   }
   public resetCustomRequestHeaders() {
@@ -1945,15 +2390,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customRequestHeadersInput() {
-    return this._customRequestHeaders
+    return this._customRequestHeaders;
   }
 
   // custom_response_headers - computed: false, optional: true, required: false
-  private _customResponseHeaders?: string[] | undefined; 
+  private _customResponseHeaders?: string[]; 
   public get customResponseHeaders() {
     return this.getListAttribute('custom_response_headers');
   }
-  public set customResponseHeaders(value: string[] | undefined) {
+  public set customResponseHeaders(value: string[]) {
     this._customResponseHeaders = value;
   }
   public resetCustomResponseHeaders() {
@@ -1961,15 +2406,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customResponseHeadersInput() {
-    return this._customResponseHeaders
+    return this._customResponseHeaders;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1977,15 +2422,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enable_cdn - computed: false, optional: true, required: false
-  private _enableCdn?: boolean | cdktf.IResolvable | undefined; 
+  private _enableCdn?: boolean | cdktf.IResolvable; 
   public get enableCdn() {
     return this.getBooleanAttribute('enable_cdn') as any;
   }
-  public set enableCdn(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableCdn(value: boolean | cdktf.IResolvable) {
     this._enableCdn = value;
   }
   public resetEnableCdn() {
@@ -1993,7 +2438,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableCdnInput() {
-    return this._enableCdn
+    return this._enableCdn;
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -2002,11 +2447,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // health_checks - computed: false, optional: true, required: false
-  private _healthChecks?: string[] | undefined; 
+  private _healthChecks?: string[]; 
   public get healthChecks() {
     return this.getListAttribute('health_checks');
   }
-  public set healthChecks(value: string[] | undefined) {
+  public set healthChecks(value: string[]) {
     this._healthChecks = value;
   }
   public resetHealthChecks() {
@@ -2014,7 +2459,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get healthChecksInput() {
-    return this._healthChecks
+    return this._healthChecks;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2023,11 +2468,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // load_balancing_scheme - computed: false, optional: true, required: false
-  private _loadBalancingScheme?: string | undefined; 
+  private _loadBalancingScheme?: string; 
   public get loadBalancingScheme() {
     return this.getStringAttribute('load_balancing_scheme');
   }
-  public set loadBalancingScheme(value: string | undefined) {
+  public set loadBalancingScheme(value: string) {
     this._loadBalancingScheme = value;
   }
   public resetLoadBalancingScheme() {
@@ -2035,15 +2480,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancingSchemeInput() {
-    return this._loadBalancingScheme
+    return this._loadBalancingScheme;
   }
 
   // locality_lb_policy - computed: false, optional: true, required: false
-  private _localityLbPolicy?: string | undefined; 
+  private _localityLbPolicy?: string; 
   public get localityLbPolicy() {
     return this.getStringAttribute('locality_lb_policy');
   }
-  public set localityLbPolicy(value: string | undefined) {
+  public set localityLbPolicy(value: string) {
     this._localityLbPolicy = value;
   }
   public resetLocalityLbPolicy() {
@@ -2051,7 +2496,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get localityLbPolicyInput() {
-    return this._localityLbPolicy
+    return this._localityLbPolicy;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2064,15 +2509,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // port_name - computed: true, optional: true, required: false
-  private _portName?: string | undefined; 
+  private _portName?: string; 
   public get portName() {
     return this.getStringAttribute('port_name');
   }
-  public set portName(value: string | undefined) {
+  public set portName(value: string) {
     this._portName = value;
   }
   public resetPortName() {
@@ -2080,15 +2525,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portNameInput() {
-    return this._portName
+    return this._portName;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -2096,15 +2541,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // protocol - computed: true, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -2112,15 +2557,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // security_policy - computed: false, optional: true, required: false
-  private _securityPolicy?: string | undefined; 
+  private _securityPolicy?: string; 
   public get securityPolicy() {
     return this.getStringAttribute('security_policy');
   }
-  public set securityPolicy(value: string | undefined) {
+  public set securityPolicy(value: string) {
     this._securityPolicy = value;
   }
   public resetSecurityPolicy() {
@@ -2128,7 +2573,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get securityPolicyInput() {
-    return this._securityPolicy
+    return this._securityPolicy;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -2137,11 +2582,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // session_affinity - computed: true, optional: true, required: false
-  private _sessionAffinity?: string | undefined; 
+  private _sessionAffinity?: string; 
   public get sessionAffinity() {
     return this.getStringAttribute('session_affinity');
   }
-  public set sessionAffinity(value: string | undefined) {
+  public set sessionAffinity(value: string) {
     this._sessionAffinity = value;
   }
   public resetSessionAffinity() {
@@ -2149,15 +2594,15 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sessionAffinityInput() {
-    return this._sessionAffinity
+    return this._sessionAffinity;
   }
 
   // timeout_sec - computed: true, optional: true, required: false
-  private _timeoutSec?: number | undefined; 
+  private _timeoutSec?: number; 
   public get timeoutSec() {
     return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number) {
     this._timeoutSec = value;
   }
   public resetTimeoutSec() {
@@ -2165,16 +2610,16 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutSecInput() {
-    return this._timeoutSec
+    return this._timeoutSec;
   }
 
   // backend - computed: false, optional: true, required: false
-  private _backend?: ComputeBackendServiceBackend[] | undefined; 
+  private _backend?: ComputeBackendServiceBackend[]; 
   public get backend() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend') as any;
   }
-  public set backend(value: ComputeBackendServiceBackend[] | undefined) {
+  public set backend(value: ComputeBackendServiceBackend[]) {
     this._backend = value;
   }
   public resetBackend() {
@@ -2182,126 +2627,119 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendInput() {
-    return this._backend
+    return this._backend;
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy?: ComputeBackendServiceCdnPolicy | undefined; 
-  private __cdnPolicyOutput = new ComputeBackendServiceCdnPolicyOutputReference(this as any, "cdn_policy", true);
+  private _cdnPolicy = new ComputeBackendServiceCdnPolicyOutputReference(this as any, "cdn_policy", true);
   public get cdnPolicy() {
-    return this.__cdnPolicyOutput;
+    return this._cdnPolicy;
   }
-  public putCdnPolicy(value: ComputeBackendServiceCdnPolicy | undefined) {
-    this._cdnPolicy = value;
+  public putCdnPolicy(value: ComputeBackendServiceCdnPolicy) {
+    this._cdnPolicy.internalValue = value;
   }
   public resetCdnPolicy() {
-    this._cdnPolicy = undefined;
+    this._cdnPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cdnPolicyInput() {
-    return this._cdnPolicy
+    return this._cdnPolicy.internalValue;
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
-  private _circuitBreakers?: ComputeBackendServiceCircuitBreakers | undefined; 
-  private __circuitBreakersOutput = new ComputeBackendServiceCircuitBreakersOutputReference(this as any, "circuit_breakers", true);
+  private _circuitBreakers = new ComputeBackendServiceCircuitBreakersOutputReference(this as any, "circuit_breakers", true);
   public get circuitBreakers() {
-    return this.__circuitBreakersOutput;
+    return this._circuitBreakers;
   }
-  public putCircuitBreakers(value: ComputeBackendServiceCircuitBreakers | undefined) {
-    this._circuitBreakers = value;
+  public putCircuitBreakers(value: ComputeBackendServiceCircuitBreakers) {
+    this._circuitBreakers.internalValue = value;
   }
   public resetCircuitBreakers() {
-    this._circuitBreakers = undefined;
+    this._circuitBreakers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get circuitBreakersInput() {
-    return this._circuitBreakers
+    return this._circuitBreakers.internalValue;
   }
 
   // consistent_hash - computed: false, optional: true, required: false
-  private _consistentHash?: ComputeBackendServiceConsistentHash | undefined; 
-  private __consistentHashOutput = new ComputeBackendServiceConsistentHashOutputReference(this as any, "consistent_hash", true);
+  private _consistentHash = new ComputeBackendServiceConsistentHashOutputReference(this as any, "consistent_hash", true);
   public get consistentHash() {
-    return this.__consistentHashOutput;
+    return this._consistentHash;
   }
-  public putConsistentHash(value: ComputeBackendServiceConsistentHash | undefined) {
-    this._consistentHash = value;
+  public putConsistentHash(value: ComputeBackendServiceConsistentHash) {
+    this._consistentHash.internalValue = value;
   }
   public resetConsistentHash() {
-    this._consistentHash = undefined;
+    this._consistentHash.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get consistentHashInput() {
-    return this._consistentHash
+    return this._consistentHash.internalValue;
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap?: ComputeBackendServiceIap | undefined; 
-  private __iapOutput = new ComputeBackendServiceIapOutputReference(this as any, "iap", true);
+  private _iap = new ComputeBackendServiceIapOutputReference(this as any, "iap", true);
   public get iap() {
-    return this.__iapOutput;
+    return this._iap;
   }
-  public putIap(value: ComputeBackendServiceIap | undefined) {
-    this._iap = value;
+  public putIap(value: ComputeBackendServiceIap) {
+    this._iap.internalValue = value;
   }
   public resetIap() {
-    this._iap = undefined;
+    this._iap.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get iapInput() {
-    return this._iap
+    return this._iap.internalValue;
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeBackendServiceLogConfig | undefined; 
-  private __logConfigOutput = new ComputeBackendServiceLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeBackendServiceLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.__logConfigOutput;
+    return this._logConfig;
   }
-  public putLogConfig(value: ComputeBackendServiceLogConfig | undefined) {
-    this._logConfig = value;
+  public putLogConfig(value: ComputeBackendServiceLogConfig) {
+    this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
-    this._logConfig = undefined;
+    this._logConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logConfigInput() {
-    return this._logConfig
+    return this._logConfig.internalValue;
   }
 
   // outlier_detection - computed: false, optional: true, required: false
-  private _outlierDetection?: ComputeBackendServiceOutlierDetection | undefined; 
-  private __outlierDetectionOutput = new ComputeBackendServiceOutlierDetectionOutputReference(this as any, "outlier_detection", true);
+  private _outlierDetection = new ComputeBackendServiceOutlierDetectionOutputReference(this as any, "outlier_detection", true);
   public get outlierDetection() {
-    return this.__outlierDetectionOutput;
+    return this._outlierDetection;
   }
-  public putOutlierDetection(value: ComputeBackendServiceOutlierDetection | undefined) {
-    this._outlierDetection = value;
+  public putOutlierDetection(value: ComputeBackendServiceOutlierDetection) {
+    this._outlierDetection.internalValue = value;
   }
   public resetOutlierDetection() {
-    this._outlierDetection = undefined;
+    this._outlierDetection.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get outlierDetectionInput() {
-    return this._outlierDetection
+    return this._outlierDetection.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeBackendServiceTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeBackendServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeBackendServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeBackendServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeBackendServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2327,13 +2765,13 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
       backend: cdktf.listMapper(computeBackendServiceBackendToTerraform)(this._backend),
-      cdn_policy: computeBackendServiceCdnPolicyToTerraform(this._cdnPolicy),
-      circuit_breakers: computeBackendServiceCircuitBreakersToTerraform(this._circuitBreakers),
-      consistent_hash: computeBackendServiceConsistentHashToTerraform(this._consistentHash),
-      iap: computeBackendServiceIapToTerraform(this._iap),
-      log_config: computeBackendServiceLogConfigToTerraform(this._logConfig),
-      outlier_detection: computeBackendServiceOutlierDetectionToTerraform(this._outlierDetection),
-      timeouts: computeBackendServiceTimeoutsToTerraform(this._timeouts),
+      cdn_policy: computeBackendServiceCdnPolicyToTerraform(this._cdnPolicy.internalValue),
+      circuit_breakers: computeBackendServiceCircuitBreakersToTerraform(this._circuitBreakers.internalValue),
+      consistent_hash: computeBackendServiceConsistentHashToTerraform(this._consistentHash.internalValue),
+      iap: computeBackendServiceIapToTerraform(this._iap.internalValue),
+      log_config: computeBackendServiceLogConfigToTerraform(this._logConfig.internalValue),
+      outlier_detection: computeBackendServiceOutlierDetectionToTerraform(this._outlierDetection.internalValue),
+      timeouts: computeBackendServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

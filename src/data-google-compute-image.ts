@@ -88,11 +88,11 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
 
   // family - computed: true, optional: true, required: false
-  private _family?: string | undefined; 
+  private _family?: string; 
   public get family() {
     return this.getStringAttribute('family');
   }
-  public set family(value: string | undefined) {
+  public set family(value: string) {
     this._family = value;
   }
   public resetFamily() {
@@ -100,15 +100,15 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get familyInput() {
-    return this._family
+    return this._family;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string | undefined; 
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string) {
     this._filter = value;
   }
   public resetFilter() {
@@ -116,7 +116,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -150,11 +150,11 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -162,15 +162,15 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -178,7 +178,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false

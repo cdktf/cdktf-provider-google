@@ -33,7 +33,7 @@ export interface ComputeProjectDefaultNetworkTierTimeouts {
   readonly create?: string;
 }
 
-function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputeProjectDefaultNetworkTierTimeoutsOutputReference | ComputeProjectDefaultNetworkTierTimeouts): any {
+export function computeProjectDefaultNetworkTierTimeoutsToTerraform(struct?: ComputeProjectDefaultNetworkTierTimeoutsOutputReference | ComputeProjectDefaultNetworkTierTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class ComputeProjectDefaultNetworkTierTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeProjectDefaultNetworkTierTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeProjectDefaultNetworkTierTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+    }
+    else {
+      this._create = value.create;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -66,7 +85,7 @@ export class ComputeProjectDefaultNetworkTierTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 }
 
@@ -104,7 +123,7 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
     });
     this._networkTier = config.networkTier;
     this._project = config.project;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -126,15 +145,15 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkTierInput() {
-    return this._networkTier
+    return this._networkTier;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -142,24 +161,23 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeProjectDefaultNetworkTierTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeProjectDefaultNetworkTierTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeProjectDefaultNetworkTierTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeProjectDefaultNetworkTierTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeProjectDefaultNetworkTierTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -170,7 +188,7 @@ export class ComputeProjectDefaultNetworkTier extends cdktf.TerraformResource {
     return {
       network_tier: cdktf.stringToTerraform(this._networkTier),
       project: cdktf.stringToTerraform(this._project),
-      timeouts: computeProjectDefaultNetworkTierTimeoutsToTerraform(this._timeouts),
+      timeouts: computeProjectDefaultNetworkTierTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

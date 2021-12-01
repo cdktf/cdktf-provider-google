@@ -97,15 +97,15 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // content_md5 - computed: false, optional: true, required: false
-  private _contentMd5?: string | undefined; 
+  private _contentMd5?: string; 
   public get contentMd5() {
     return this.getStringAttribute('content_md5');
   }
-  public set contentMd5(value: string | undefined) {
+  public set contentMd5(value: string) {
     this._contentMd5 = value;
   }
   public resetContentMd5() {
@@ -113,15 +113,15 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get contentMd5Input() {
-    return this._contentMd5
+    return this._contentMd5;
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string | undefined; 
+  private _contentType?: string; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -129,15 +129,15 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
-    return this._contentType
+    return this._contentType;
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: string | undefined; 
+  private _credentials?: string; 
   public get credentials() {
     return this.getStringAttribute('credentials');
   }
-  public set credentials(value: string | undefined) {
+  public set credentials(value: string) {
     this._credentials = value;
   }
   public resetCredentials() {
@@ -145,15 +145,15 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get credentialsInput() {
-    return this._credentials
+    return this._credentials;
   }
 
   // duration - computed: false, optional: true, required: false
-  private _duration?: string | undefined; 
+  private _duration?: string; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string) {
     this._duration = value;
   }
   public resetDuration() {
@@ -161,16 +161,16 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 
   // extension_headers - computed: false, optional: true, required: false
-  private _extensionHeaders?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _extensionHeaders?: { [key: string]: string } | cdktf.IResolvable; 
   public get extensionHeaders() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('extension_headers') as any;
   }
-  public set extensionHeaders(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set extensionHeaders(value: { [key: string]: string } | cdktf.IResolvable) {
     this._extensionHeaders = value;
   }
   public resetExtensionHeaders() {
@@ -178,15 +178,15 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get extensionHeadersInput() {
-    return this._extensionHeaders
+    return this._extensionHeaders;
   }
 
   // http_method - computed: false, optional: true, required: false
-  private _httpMethod?: string | undefined; 
+  private _httpMethod?: string; 
   public get httpMethod() {
     return this.getStringAttribute('http_method');
   }
-  public set httpMethod(value: string | undefined) {
+  public set httpMethod(value: string) {
     this._httpMethod = value;
   }
   public resetHttpMethod() {
@@ -194,7 +194,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get httpMethodInput() {
-    return this._httpMethod
+    return this._httpMethod;
   }
 
   // id - computed: true, optional: true, required: false
@@ -212,7 +212,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // signed_url - computed: true, optional: false, required: false

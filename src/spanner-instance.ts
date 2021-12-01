@@ -87,7 +87,7 @@ export interface SpannerInstanceTimeouts {
   readonly update?: string;
 }
 
-function spannerInstanceTimeoutsToTerraform(struct?: SpannerInstanceTimeoutsOutputReference | SpannerInstanceTimeouts): any {
+export function spannerInstanceTimeoutsToTerraform(struct?: SpannerInstanceTimeoutsOutputReference | SpannerInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -109,12 +109,43 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpannerInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpannerInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -122,15 +153,15 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -138,15 +169,15 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -154,7 +185,7 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -198,7 +229,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
     this._numNodes = config.numNodes;
     this._processingUnits = config.processingUnits;
     this._project = config.project;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -215,7 +246,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get configInput() {
-    return this._config
+    return this._config;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -228,15 +259,15 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy') as any;
   }
-  public set forceDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -244,7 +275,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get forceDestroyInput() {
-    return this._forceDestroy
+    return this._forceDestroy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -253,12 +284,12 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -266,15 +297,15 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -282,15 +313,15 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // num_nodes - computed: true, optional: true, required: false
-  private _numNodes?: number | undefined; 
+  private _numNodes?: number; 
   public get numNodes() {
     return this.getNumberAttribute('num_nodes');
   }
-  public set numNodes(value: number | undefined) {
+  public set numNodes(value: number) {
     this._numNodes = value;
   }
   public resetNumNodes() {
@@ -298,15 +329,15 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get numNodesInput() {
-    return this._numNodes
+    return this._numNodes;
   }
 
   // processing_units - computed: true, optional: true, required: false
-  private _processingUnits?: number | undefined; 
+  private _processingUnits?: number; 
   public get processingUnits() {
     return this.getNumberAttribute('processing_units');
   }
-  public set processingUnits(value: number | undefined) {
+  public set processingUnits(value: number) {
     this._processingUnits = value;
   }
   public resetProcessingUnits() {
@@ -314,15 +345,15 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get processingUnitsInput() {
-    return this._processingUnits
+    return this._processingUnits;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -330,7 +361,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // state - computed: true, optional: false, required: false
@@ -339,20 +370,19 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpannerInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new SpannerInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpannerInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SpannerInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SpannerInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -369,7 +399,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
       num_nodes: cdktf.numberToTerraform(this._numNodes),
       processing_units: cdktf.numberToTerraform(this._processingUnits),
       project: cdktf.stringToTerraform(this._project),
-      timeouts: spannerInstanceTimeoutsToTerraform(this._timeouts),
+      timeouts: spannerInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

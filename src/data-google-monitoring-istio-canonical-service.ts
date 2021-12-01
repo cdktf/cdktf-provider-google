@@ -93,7 +93,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get canonicalServiceInput() {
-    return this._canonicalService
+    return this._canonicalService;
   }
 
   // canonical_service_namespace - computed: false, optional: false, required: true
@@ -106,7 +106,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get canonicalServiceNamespaceInput() {
-    return this._canonicalServiceNamespace
+    return this._canonicalServiceNamespace;
   }
 
   // display_name - computed: true, optional: false, required: false
@@ -129,7 +129,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get meshUidInput() {
-    return this._meshUid
+    return this._meshUid;
   }
 
   // name - computed: true, optional: false, required: false
@@ -138,11 +138,11 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -150,7 +150,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service_id - computed: true, optional: false, required: false

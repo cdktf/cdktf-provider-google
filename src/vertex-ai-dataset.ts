@@ -58,7 +58,7 @@ Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/
   readonly kmsKeyName?: string;
 }
 
-function vertexAiDatasetEncryptionSpecToTerraform(struct?: VertexAiDatasetEncryptionSpecOutputReference | VertexAiDatasetEncryptionSpec): any {
+export function vertexAiDatasetEncryptionSpecToTerraform(struct?: VertexAiDatasetEncryptionSpecOutputReference | VertexAiDatasetEncryptionSpec): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -78,12 +78,31 @@ export class VertexAiDatasetEncryptionSpecOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VertexAiDatasetEncryptionSpec | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VertexAiDatasetEncryptionSpec | undefined) {
+    if (value === undefined) {
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
   // kms_key_name - computed: false, optional: true, required: false
-  private _kmsKeyName?: string | undefined; 
+  private _kmsKeyName?: string; 
   public get kmsKeyName() {
     return this.getStringAttribute('kms_key_name');
   }
-  public set kmsKeyName(value: string | undefined) {
+  public set kmsKeyName(value: string) {
     this._kmsKeyName = value;
   }
   public resetKmsKeyName() {
@@ -91,7 +110,7 @@ export class VertexAiDatasetEncryptionSpecOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
-    return this._kmsKeyName
+    return this._kmsKeyName;
   }
 }
 export interface VertexAiDatasetTimeouts {
@@ -109,7 +128,7 @@ export interface VertexAiDatasetTimeouts {
   readonly update?: string;
 }
 
-function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeoutsOutputReference | VertexAiDatasetTimeouts): any {
+export function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeoutsOutputReference | VertexAiDatasetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -131,12 +150,43 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VertexAiDatasetTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VertexAiDatasetTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -144,15 +194,15 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -160,15 +210,15 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -176,7 +226,7 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -217,8 +267,8 @@ export class VertexAiDataset extends cdktf.TerraformResource {
     this._metadataSchemaUri = config.metadataSchemaUri;
     this._project = config.project;
     this._region = config.region;
-    this._encryptionSpec = config.encryptionSpec;
-    this._timeouts = config.timeouts;
+    this._encryptionSpec.internalValue = config.encryptionSpec;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -240,7 +290,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -249,12 +299,12 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -262,7 +312,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // metadata_schema_uri - computed: false, optional: false, required: true
@@ -275,7 +325,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataSchemaUriInput() {
-    return this._metadataSchemaUri
+    return this._metadataSchemaUri;
   }
 
   // name - computed: true, optional: false, required: false
@@ -284,11 +334,11 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -296,15 +346,15 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -312,7 +362,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -321,37 +371,35 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // encryption_spec - computed: false, optional: true, required: false
-  private _encryptionSpec?: VertexAiDatasetEncryptionSpec | undefined; 
-  private __encryptionSpecOutput = new VertexAiDatasetEncryptionSpecOutputReference(this as any, "encryption_spec", true);
+  private _encryptionSpec = new VertexAiDatasetEncryptionSpecOutputReference(this as any, "encryption_spec", true);
   public get encryptionSpec() {
-    return this.__encryptionSpecOutput;
+    return this._encryptionSpec;
   }
-  public putEncryptionSpec(value: VertexAiDatasetEncryptionSpec | undefined) {
-    this._encryptionSpec = value;
+  public putEncryptionSpec(value: VertexAiDatasetEncryptionSpec) {
+    this._encryptionSpec.internalValue = value;
   }
   public resetEncryptionSpec() {
-    this._encryptionSpec = undefined;
+    this._encryptionSpec.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionSpecInput() {
-    return this._encryptionSpec
+    return this._encryptionSpec.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VertexAiDatasetTimeouts | undefined; 
-  private __timeoutsOutput = new VertexAiDatasetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VertexAiDatasetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VertexAiDatasetTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VertexAiDatasetTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -365,8 +413,8 @@ export class VertexAiDataset extends cdktf.TerraformResource {
       metadata_schema_uri: cdktf.stringToTerraform(this._metadataSchemaUri),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      encryption_spec: vertexAiDatasetEncryptionSpecToTerraform(this._encryptionSpec),
-      timeouts: vertexAiDatasetTimeoutsToTerraform(this._timeouts),
+      encryption_spec: vertexAiDatasetEncryptionSpecToTerraform(this._encryptionSpec.internalValue),
+      timeouts: vertexAiDatasetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

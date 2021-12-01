@@ -101,7 +101,7 @@ This can be used e.g. in UIs which allow to enter the expression.
   readonly title?: string;
 }
 
-function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrganizationFeedConditionOutputReference | CloudAssetOrganizationFeedCondition): any {
+export function cloudAssetOrganizationFeedConditionToTerraform(struct?: CloudAssetOrganizationFeedConditionOutputReference | CloudAssetOrganizationFeedCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -124,12 +124,49 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudAssetOrganizationFeedCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._expression) {
+      hasAnyValues = true;
+      internalValueResult.expression = this._expression;
+    }
+    if (this._location) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._title) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudAssetOrganizationFeedCondition | undefined) {
+    if (value === undefined) {
+      this._description = undefined;
+      this._expression = undefined;
+      this._location = undefined;
+      this._title = undefined;
+    }
+    else {
+      this._description = value.description;
+      this._expression = value.expression;
+      this._location = value.location;
+      this._title = value.title;
+    }
+  }
+
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -137,7 +174,7 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // expression - computed: false, optional: false, required: true
@@ -150,15 +187,15 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get expressionInput() {
-    return this._expression
+    return this._expression;
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -166,15 +203,15 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // title - computed: false, optional: true, required: false
-  private _title?: string | undefined; 
+  private _title?: string; 
   public get title() {
     return this.getStringAttribute('title');
   }
-  public set title(value: string | undefined) {
+  public set title(value: string) {
     this._title = value;
   }
   public resetTitle() {
@@ -182,7 +219,7 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 }
 export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
@@ -194,7 +231,7 @@ export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
   readonly topic: string;
 }
 
-function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference | CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination): any {
+export function cloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference | CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -214,6 +251,25 @@ export class CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputRe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._topic) {
+      hasAnyValues = true;
+      internalValueResult.topic = this._topic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination | undefined) {
+    if (value === undefined) {
+      this._topic = undefined;
+    }
+    else {
+      this._topic = value.topic;
+    }
+  }
+
   // topic - computed: false, optional: false, required: true
   private _topic?: string; 
   public get topic() {
@@ -224,7 +280,7 @@ export class CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get topicInput() {
-    return this._topic
+    return this._topic;
   }
 }
 export interface CloudAssetOrganizationFeedFeedOutputConfig {
@@ -236,7 +292,7 @@ export interface CloudAssetOrganizationFeedFeedOutputConfig {
   readonly pubsubDestination: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination;
 }
 
-function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigOutputReference | CloudAssetOrganizationFeedFeedOutputConfig): any {
+export function cloudAssetOrganizationFeedFeedOutputConfigToTerraform(struct?: CloudAssetOrganizationFeedFeedOutputConfigOutputReference | CloudAssetOrganizationFeedFeedOutputConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -256,18 +312,36 @@ export class CloudAssetOrganizationFeedFeedOutputConfigOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudAssetOrganizationFeedFeedOutputConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._pubsubDestination) {
+      hasAnyValues = true;
+      internalValueResult.pubsubDestination = this._pubsubDestination?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudAssetOrganizationFeedFeedOutputConfig | undefined) {
+    if (value === undefined) {
+      this._pubsubDestination.internalValue = undefined;
+    }
+    else {
+      this._pubsubDestination.internalValue = value.pubsubDestination;
+    }
+  }
+
   // pubsub_destination - computed: false, optional: false, required: true
-  private _pubsubDestination?: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination; 
-  private __pubsubDestinationOutput = new CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference(this as any, "pubsub_destination", true);
+  private _pubsubDestination = new CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputReference(this as any, "pubsub_destination", true);
   public get pubsubDestination() {
-    return this.__pubsubDestinationOutput;
+    return this._pubsubDestination;
   }
   public putPubsubDestination(value: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination) {
-    this._pubsubDestination = value;
+    this._pubsubDestination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubDestinationInput() {
-    return this._pubsubDestination
+    return this._pubsubDestination.internalValue;
   }
 }
 export interface CloudAssetOrganizationFeedTimeouts {
@@ -285,7 +359,7 @@ export interface CloudAssetOrganizationFeedTimeouts {
   readonly update?: string;
 }
 
-function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrganizationFeedTimeoutsOutputReference | CloudAssetOrganizationFeedTimeouts): any {
+export function cloudAssetOrganizationFeedTimeoutsToTerraform(struct?: CloudAssetOrganizationFeedTimeoutsOutputReference | CloudAssetOrganizationFeedTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -307,12 +381,43 @@ export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudAssetOrganizationFeedTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudAssetOrganizationFeedTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -320,15 +425,15 @@ export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -336,15 +441,15 @@ export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -352,7 +457,7 @@ export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -394,9 +499,9 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
     this._contentType = config.contentType;
     this._feedId = config.feedId;
     this._orgId = config.orgId;
-    this._condition = config.condition;
-    this._feedOutputConfig = config.feedOutputConfig;
-    this._timeouts = config.timeouts;
+    this._condition.internalValue = config.condition;
+    this._feedOutputConfig.internalValue = config.feedOutputConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -404,11 +509,11 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   // ==========
 
   // asset_names - computed: false, optional: true, required: false
-  private _assetNames?: string[] | undefined; 
+  private _assetNames?: string[]; 
   public get assetNames() {
     return this.getListAttribute('asset_names');
   }
-  public set assetNames(value: string[] | undefined) {
+  public set assetNames(value: string[]) {
     this._assetNames = value;
   }
   public resetAssetNames() {
@@ -416,15 +521,15 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get assetNamesInput() {
-    return this._assetNames
+    return this._assetNames;
   }
 
   // asset_types - computed: false, optional: true, required: false
-  private _assetTypes?: string[] | undefined; 
+  private _assetTypes?: string[]; 
   public get assetTypes() {
     return this.getListAttribute('asset_types');
   }
-  public set assetTypes(value: string[] | undefined) {
+  public set assetTypes(value: string[]) {
     this._assetTypes = value;
   }
   public resetAssetTypes() {
@@ -432,7 +537,7 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get assetTypesInput() {
-    return this._assetTypes
+    return this._assetTypes;
   }
 
   // billing_project - computed: false, optional: false, required: true
@@ -445,15 +550,15 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get billingProjectInput() {
-    return this._billingProject
+    return this._billingProject;
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string | undefined; 
+  private _contentType?: string; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -461,7 +566,7 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
-    return this._contentType
+    return this._contentType;
   }
 
   // feed_id - computed: false, optional: false, required: true
@@ -474,7 +579,7 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get feedIdInput() {
-    return this._feedId
+    return this._feedId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -497,55 +602,52 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get orgIdInput() {
-    return this._orgId
+    return this._orgId;
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: CloudAssetOrganizationFeedCondition | undefined; 
-  private __conditionOutput = new CloudAssetOrganizationFeedConditionOutputReference(this as any, "condition", true);
+  private _condition = new CloudAssetOrganizationFeedConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.__conditionOutput;
+    return this._condition;
   }
-  public putCondition(value: CloudAssetOrganizationFeedCondition | undefined) {
-    this._condition = value;
+  public putCondition(value: CloudAssetOrganizationFeedCondition) {
+    this._condition.internalValue = value;
   }
   public resetCondition() {
-    this._condition = undefined;
+    this._condition.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get conditionInput() {
-    return this._condition
+    return this._condition.internalValue;
   }
 
   // feed_output_config - computed: false, optional: false, required: true
-  private _feedOutputConfig?: CloudAssetOrganizationFeedFeedOutputConfig; 
-  private __feedOutputConfigOutput = new CloudAssetOrganizationFeedFeedOutputConfigOutputReference(this as any, "feed_output_config", true);
+  private _feedOutputConfig = new CloudAssetOrganizationFeedFeedOutputConfigOutputReference(this as any, "feed_output_config", true);
   public get feedOutputConfig() {
-    return this.__feedOutputConfigOutput;
+    return this._feedOutputConfig;
   }
   public putFeedOutputConfig(value: CloudAssetOrganizationFeedFeedOutputConfig) {
-    this._feedOutputConfig = value;
+    this._feedOutputConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get feedOutputConfigInput() {
-    return this._feedOutputConfig
+    return this._feedOutputConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudAssetOrganizationFeedTimeouts | undefined; 
-  private __timeoutsOutput = new CloudAssetOrganizationFeedTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudAssetOrganizationFeedTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CloudAssetOrganizationFeedTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CloudAssetOrganizationFeedTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -560,9 +662,9 @@ export class CloudAssetOrganizationFeed extends cdktf.TerraformResource {
       content_type: cdktf.stringToTerraform(this._contentType),
       feed_id: cdktf.stringToTerraform(this._feedId),
       org_id: cdktf.stringToTerraform(this._orgId),
-      condition: cloudAssetOrganizationFeedConditionToTerraform(this._condition),
-      feed_output_config: cloudAssetOrganizationFeedFeedOutputConfigToTerraform(this._feedOutputConfig),
-      timeouts: cloudAssetOrganizationFeedTimeoutsToTerraform(this._timeouts),
+      condition: cloudAssetOrganizationFeedConditionToTerraform(this._condition.internalValue),
+      feed_output_config: cloudAssetOrganizationFeedFeedOutputConfigToTerraform(this._feedOutputConfig.internalValue),
+      timeouts: cloudAssetOrganizationFeedTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

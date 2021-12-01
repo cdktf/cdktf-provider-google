@@ -73,7 +73,7 @@ export interface StorageDefaultObjectAccessControlTimeouts {
   readonly update?: string;
 }
 
-function storageDefaultObjectAccessControlTimeoutsToTerraform(struct?: StorageDefaultObjectAccessControlTimeoutsOutputReference | StorageDefaultObjectAccessControlTimeouts): any {
+export function storageDefaultObjectAccessControlTimeoutsToTerraform(struct?: StorageDefaultObjectAccessControlTimeoutsOutputReference | StorageDefaultObjectAccessControlTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -95,12 +95,43 @@ export class StorageDefaultObjectAccessControlTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageDefaultObjectAccessControlTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageDefaultObjectAccessControlTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -108,15 +139,15 @@ export class StorageDefaultObjectAccessControlTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -124,15 +155,15 @@ export class StorageDefaultObjectAccessControlTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -140,7 +171,7 @@ export class StorageDefaultObjectAccessControlTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -180,7 +211,7 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
     this._entity = config.entity;
     this._object = config.object;
     this._role = config.role;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -197,7 +228,7 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // domain - computed: true, optional: false, required: false
@@ -220,7 +251,7 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get entityInput() {
-    return this._entity
+    return this._entity;
   }
 
   // entity_id - computed: true, optional: false, required: false
@@ -239,11 +270,11 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
   }
 
   // object - computed: false, optional: true, required: false
-  private _object?: string | undefined; 
+  private _object?: string; 
   public get object() {
     return this.getStringAttribute('object');
   }
-  public set object(value: string | undefined) {
+  public set object(value: string) {
     this._object = value;
   }
   public resetObject() {
@@ -251,7 +282,7 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get objectInput() {
-    return this._object
+    return this._object;
   }
 
   // project_team - computed: true, optional: false, required: false
@@ -269,24 +300,23 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleInput() {
-    return this._role
+    return this._role;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageDefaultObjectAccessControlTimeouts | undefined; 
-  private __timeoutsOutput = new StorageDefaultObjectAccessControlTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageDefaultObjectAccessControlTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageDefaultObjectAccessControlTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageDefaultObjectAccessControlTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -299,7 +329,7 @@ export class StorageDefaultObjectAccessControl extends cdktf.TerraformResource {
       entity: cdktf.stringToTerraform(this._entity),
       object: cdktf.stringToTerraform(this._object),
       role: cdktf.stringToTerraform(this._role),
-      timeouts: storageDefaultObjectAccessControlTimeoutsToTerraform(this._timeouts),
+      timeouts: storageDefaultObjectAccessControlTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

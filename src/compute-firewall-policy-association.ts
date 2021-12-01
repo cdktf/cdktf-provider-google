@@ -43,7 +43,7 @@ export interface ComputeFirewallPolicyAssociationTimeouts {
   readonly delete?: string;
 }
 
-function computeFirewallPolicyAssociationTimeoutsToTerraform(struct?: ComputeFirewallPolicyAssociationTimeoutsOutputReference | ComputeFirewallPolicyAssociationTimeouts): any {
+export function computeFirewallPolicyAssociationTimeoutsToTerraform(struct?: ComputeFirewallPolicyAssociationTimeoutsOutputReference | ComputeFirewallPolicyAssociationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -64,12 +64,37 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeFirewallPolicyAssociationTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallPolicyAssociationTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -77,15 +102,15 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -93,7 +118,7 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -132,7 +157,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
     this._attachmentTarget = config.attachmentTarget;
     this._firewallPolicy = config.firewallPolicy;
     this._name = config.name;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -149,7 +174,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get attachmentTargetInput() {
-    return this._attachmentTarget
+    return this._attachmentTarget;
   }
 
   // firewall_policy - computed: false, optional: false, required: true
@@ -162,7 +187,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get firewallPolicyInput() {
-    return this._firewallPolicy
+    return this._firewallPolicy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -180,7 +205,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // short_name - computed: true, optional: false, required: false
@@ -189,20 +214,19 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeFirewallPolicyAssociationTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeFirewallPolicyAssociationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeFirewallPolicyAssociationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeFirewallPolicyAssociationTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeFirewallPolicyAssociationTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -214,7 +238,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
       attachment_target: cdktf.stringToTerraform(this._attachmentTarget),
       firewall_policy: cdktf.stringToTerraform(this._firewallPolicy),
       name: cdktf.stringToTerraform(this._name),
-      timeouts: computeFirewallPolicyAssociationTimeoutsToTerraform(this._timeouts),
+      timeouts: computeFirewallPolicyAssociationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -12,12 +12,12 @@
     },
     {
       "name": "cdktf-cli",
-      "version": "^0.7",
+      "version": "^0.8",
       "type": "build"
     },
     {
       "name": "cdktf",
-      "version": "^0.7",
+      "version": "^0.8",
       "type": "build"
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "name": "jsii",
-      "version": "1.37.0",
+      "version": "^1.46.0",
       "type": "build"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "name": "cdktf",
-      "version": "^0.7",
+      "version": "^0.8",
       "type": "peer"
     },
     {

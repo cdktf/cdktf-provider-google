@@ -71,7 +71,7 @@ export interface ComputeTargetTcpProxyTimeouts {
   readonly update?: string;
 }
 
-function computeTargetTcpProxyTimeoutsToTerraform(struct?: ComputeTargetTcpProxyTimeoutsOutputReference | ComputeTargetTcpProxyTimeouts): any {
+export function computeTargetTcpProxyTimeoutsToTerraform(struct?: ComputeTargetTcpProxyTimeoutsOutputReference | ComputeTargetTcpProxyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -93,12 +93,43 @@ export class ComputeTargetTcpProxyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeTargetTcpProxyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeTargetTcpProxyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -106,15 +137,15 @@ export class ComputeTargetTcpProxyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -122,15 +153,15 @@ export class ComputeTargetTcpProxyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -138,7 +169,7 @@ export class ComputeTargetTcpProxyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -180,7 +211,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
     this._project = config.project;
     this._proxyBind = config.proxyBind;
     this._proxyHeader = config.proxyHeader;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -197,7 +228,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
-    return this._backendService
+    return this._backendService;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -206,11 +237,11 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -218,7 +249,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -236,15 +267,15 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -252,15 +283,15 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // proxy_bind - computed: true, optional: true, required: false
-  private _proxyBind?: boolean | cdktf.IResolvable | undefined; 
+  private _proxyBind?: boolean | cdktf.IResolvable; 
   public get proxyBind() {
     return this.getBooleanAttribute('proxy_bind') as any;
   }
-  public set proxyBind(value: boolean | cdktf.IResolvable | undefined) {
+  public set proxyBind(value: boolean | cdktf.IResolvable) {
     this._proxyBind = value;
   }
   public resetProxyBind() {
@@ -268,15 +299,15 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get proxyBindInput() {
-    return this._proxyBind
+    return this._proxyBind;
   }
 
   // proxy_header - computed: false, optional: true, required: false
-  private _proxyHeader?: string | undefined; 
+  private _proxyHeader?: string; 
   public get proxyHeader() {
     return this.getStringAttribute('proxy_header');
   }
-  public set proxyHeader(value: string | undefined) {
+  public set proxyHeader(value: string) {
     this._proxyHeader = value;
   }
   public resetProxyHeader() {
@@ -284,7 +315,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get proxyHeaderInput() {
-    return this._proxyHeader
+    return this._proxyHeader;
   }
 
   // proxy_id - computed: true, optional: false, required: false
@@ -298,20 +329,19 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeTargetTcpProxyTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeTargetTcpProxyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeTargetTcpProxyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeTargetTcpProxyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeTargetTcpProxyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -326,7 +356,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       proxy_bind: cdktf.booleanToTerraform(this._proxyBind),
       proxy_header: cdktf.stringToTerraform(this._proxyHeader),
-      timeouts: computeTargetTcpProxyTimeoutsToTerraform(this._timeouts),
+      timeouts: computeTargetTcpProxyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

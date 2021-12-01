@@ -159,7 +159,7 @@ export interface ComputeInstanceGroupManagerAutoHealingPolicies {
   readonly initialDelaySec: number;
 }
 
-function computeInstanceGroupManagerAutoHealingPoliciesToTerraform(struct?: ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference | ComputeInstanceGroupManagerAutoHealingPolicies): any {
+export function computeInstanceGroupManagerAutoHealingPoliciesToTerraform(struct?: ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference | ComputeInstanceGroupManagerAutoHealingPolicies): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -180,6 +180,31 @@ export class ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceGroupManagerAutoHealingPolicies | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._healthCheck) {
+      hasAnyValues = true;
+      internalValueResult.healthCheck = this._healthCheck;
+    }
+    if (this._initialDelaySec) {
+      hasAnyValues = true;
+      internalValueResult.initialDelaySec = this._initialDelaySec;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerAutoHealingPolicies | undefined) {
+    if (value === undefined) {
+      this._healthCheck = undefined;
+      this._initialDelaySec = undefined;
+    }
+    else {
+      this._healthCheck = value.healthCheck;
+      this._initialDelaySec = value.initialDelaySec;
+    }
+  }
+
   // health_check - computed: false, optional: false, required: true
   private _healthCheck?: string; 
   public get healthCheck() {
@@ -190,7 +215,7 @@ export class ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get healthCheckInput() {
-    return this._healthCheck
+    return this._healthCheck;
   }
 
   // initial_delay_sec - computed: false, optional: false, required: true
@@ -203,7 +228,7 @@ export class ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get initialDelaySecInput() {
-    return this._initialDelaySec
+    return this._initialDelaySec;
   }
 }
 export interface ComputeInstanceGroupManagerNamedPort {
@@ -221,7 +246,7 @@ export interface ComputeInstanceGroupManagerNamedPort {
   readonly port: number;
 }
 
-function computeInstanceGroupManagerNamedPortToTerraform(struct?: ComputeInstanceGroupManagerNamedPort): any {
+export function computeInstanceGroupManagerNamedPortToTerraform(struct?: ComputeInstanceGroupManagerNamedPort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -247,7 +272,7 @@ export interface ComputeInstanceGroupManagerStatefulDisk {
   readonly deviceName: string;
 }
 
-function computeInstanceGroupManagerStatefulDiskToTerraform(struct?: ComputeInstanceGroupManagerStatefulDisk): any {
+export function computeInstanceGroupManagerStatefulDiskToTerraform(struct?: ComputeInstanceGroupManagerStatefulDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -273,7 +298,7 @@ export interface ComputeInstanceGroupManagerTimeouts {
   readonly update?: string;
 }
 
-function computeInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeInstanceGroupManagerTimeoutsOutputReference | ComputeInstanceGroupManagerTimeouts): any {
+export function computeInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeInstanceGroupManagerTimeoutsOutputReference | ComputeInstanceGroupManagerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -295,12 +320,43 @@ export class ComputeInstanceGroupManagerTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceGroupManagerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -308,15 +364,15 @@ export class ComputeInstanceGroupManagerTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -324,15 +380,15 @@ export class ComputeInstanceGroupManagerTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -340,7 +396,7 @@ export class ComputeInstanceGroupManagerTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface ComputeInstanceGroupManagerUpdatePolicy {
@@ -394,7 +450,7 @@ export interface ComputeInstanceGroupManagerUpdatePolicy {
   readonly type: string;
 }
 
-function computeInstanceGroupManagerUpdatePolicyToTerraform(struct?: ComputeInstanceGroupManagerUpdatePolicyOutputReference | ComputeInstanceGroupManagerUpdatePolicy): any {
+export function computeInstanceGroupManagerUpdatePolicyToTerraform(struct?: ComputeInstanceGroupManagerUpdatePolicyOutputReference | ComputeInstanceGroupManagerUpdatePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -421,12 +477,73 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceGroupManagerUpdatePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxSurgeFixed) {
+      hasAnyValues = true;
+      internalValueResult.maxSurgeFixed = this._maxSurgeFixed;
+    }
+    if (this._maxSurgePercent) {
+      hasAnyValues = true;
+      internalValueResult.maxSurgePercent = this._maxSurgePercent;
+    }
+    if (this._maxUnavailableFixed) {
+      hasAnyValues = true;
+      internalValueResult.maxUnavailableFixed = this._maxUnavailableFixed;
+    }
+    if (this._maxUnavailablePercent) {
+      hasAnyValues = true;
+      internalValueResult.maxUnavailablePercent = this._maxUnavailablePercent;
+    }
+    if (this._minReadySec) {
+      hasAnyValues = true;
+      internalValueResult.minReadySec = this._minReadySec;
+    }
+    if (this._minimalAction) {
+      hasAnyValues = true;
+      internalValueResult.minimalAction = this._minimalAction;
+    }
+    if (this._replacementMethod) {
+      hasAnyValues = true;
+      internalValueResult.replacementMethod = this._replacementMethod;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerUpdatePolicy | undefined) {
+    if (value === undefined) {
+      this._maxSurgeFixed = undefined;
+      this._maxSurgePercent = undefined;
+      this._maxUnavailableFixed = undefined;
+      this._maxUnavailablePercent = undefined;
+      this._minReadySec = undefined;
+      this._minimalAction = undefined;
+      this._replacementMethod = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._maxSurgeFixed = value.maxSurgeFixed;
+      this._maxSurgePercent = value.maxSurgePercent;
+      this._maxUnavailableFixed = value.maxUnavailableFixed;
+      this._maxUnavailablePercent = value.maxUnavailablePercent;
+      this._minReadySec = value.minReadySec;
+      this._minimalAction = value.minimalAction;
+      this._replacementMethod = value.replacementMethod;
+      this._type = value.type;
+    }
+  }
+
   // max_surge_fixed - computed: true, optional: true, required: false
-  private _maxSurgeFixed?: number | undefined; 
+  private _maxSurgeFixed?: number; 
   public get maxSurgeFixed() {
     return this.getNumberAttribute('max_surge_fixed');
   }
-  public set maxSurgeFixed(value: number | undefined) {
+  public set maxSurgeFixed(value: number) {
     this._maxSurgeFixed = value;
   }
   public resetMaxSurgeFixed() {
@@ -434,15 +551,15 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get maxSurgeFixedInput() {
-    return this._maxSurgeFixed
+    return this._maxSurgeFixed;
   }
 
   // max_surge_percent - computed: false, optional: true, required: false
-  private _maxSurgePercent?: number | undefined; 
+  private _maxSurgePercent?: number; 
   public get maxSurgePercent() {
     return this.getNumberAttribute('max_surge_percent');
   }
-  public set maxSurgePercent(value: number | undefined) {
+  public set maxSurgePercent(value: number) {
     this._maxSurgePercent = value;
   }
   public resetMaxSurgePercent() {
@@ -450,15 +567,15 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get maxSurgePercentInput() {
-    return this._maxSurgePercent
+    return this._maxSurgePercent;
   }
 
   // max_unavailable_fixed - computed: true, optional: true, required: false
-  private _maxUnavailableFixed?: number | undefined; 
+  private _maxUnavailableFixed?: number; 
   public get maxUnavailableFixed() {
     return this.getNumberAttribute('max_unavailable_fixed');
   }
-  public set maxUnavailableFixed(value: number | undefined) {
+  public set maxUnavailableFixed(value: number) {
     this._maxUnavailableFixed = value;
   }
   public resetMaxUnavailableFixed() {
@@ -466,15 +583,15 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnavailableFixedInput() {
-    return this._maxUnavailableFixed
+    return this._maxUnavailableFixed;
   }
 
   // max_unavailable_percent - computed: false, optional: true, required: false
-  private _maxUnavailablePercent?: number | undefined; 
+  private _maxUnavailablePercent?: number; 
   public get maxUnavailablePercent() {
     return this.getNumberAttribute('max_unavailable_percent');
   }
-  public set maxUnavailablePercent(value: number | undefined) {
+  public set maxUnavailablePercent(value: number) {
     this._maxUnavailablePercent = value;
   }
   public resetMaxUnavailablePercent() {
@@ -482,15 +599,15 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnavailablePercentInput() {
-    return this._maxUnavailablePercent
+    return this._maxUnavailablePercent;
   }
 
   // min_ready_sec - computed: false, optional: true, required: false
-  private _minReadySec?: number | undefined; 
+  private _minReadySec?: number; 
   public get minReadySec() {
     return this.getNumberAttribute('min_ready_sec');
   }
-  public set minReadySec(value: number | undefined) {
+  public set minReadySec(value: number) {
     this._minReadySec = value;
   }
   public resetMinReadySec() {
@@ -498,7 +615,7 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get minReadySecInput() {
-    return this._minReadySec
+    return this._minReadySec;
   }
 
   // minimal_action - computed: false, optional: false, required: true
@@ -511,15 +628,15 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get minimalActionInput() {
-    return this._minimalAction
+    return this._minimalAction;
   }
 
   // replacement_method - computed: false, optional: true, required: false
-  private _replacementMethod?: string | undefined; 
+  private _replacementMethod?: string; 
   public get replacementMethod() {
     return this.getStringAttribute('replacement_method');
   }
-  public set replacementMethod(value: string | undefined) {
+  public set replacementMethod(value: string) {
     this._replacementMethod = value;
   }
   public resetReplacementMethod() {
@@ -527,7 +644,7 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get replacementMethodInput() {
-    return this._replacementMethod
+    return this._replacementMethod;
   }
 
   // type - computed: false, optional: false, required: true
@@ -540,7 +657,7 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface ComputeInstanceGroupManagerVersionTargetSize {
@@ -558,7 +675,7 @@ export interface ComputeInstanceGroupManagerVersionTargetSize {
   readonly percent?: number;
 }
 
-function computeInstanceGroupManagerVersionTargetSizeToTerraform(struct?: ComputeInstanceGroupManagerVersionTargetSizeOutputReference | ComputeInstanceGroupManagerVersionTargetSize): any {
+export function computeInstanceGroupManagerVersionTargetSizeToTerraform(struct?: ComputeInstanceGroupManagerVersionTargetSizeOutputReference | ComputeInstanceGroupManagerVersionTargetSize): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -579,12 +696,37 @@ export class ComputeInstanceGroupManagerVersionTargetSizeOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeInstanceGroupManagerVersionTargetSize | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fixed) {
+      hasAnyValues = true;
+      internalValueResult.fixed = this._fixed;
+    }
+    if (this._percent) {
+      hasAnyValues = true;
+      internalValueResult.percent = this._percent;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerVersionTargetSize | undefined) {
+    if (value === undefined) {
+      this._fixed = undefined;
+      this._percent = undefined;
+    }
+    else {
+      this._fixed = value.fixed;
+      this._percent = value.percent;
+    }
+  }
+
   // fixed - computed: false, optional: true, required: false
-  private _fixed?: number | undefined; 
+  private _fixed?: number; 
   public get fixed() {
     return this.getNumberAttribute('fixed');
   }
-  public set fixed(value: number | undefined) {
+  public set fixed(value: number) {
     this._fixed = value;
   }
   public resetFixed() {
@@ -592,15 +734,15 @@ export class ComputeInstanceGroupManagerVersionTargetSizeOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get fixedInput() {
-    return this._fixed
+    return this._fixed;
   }
 
   // percent - computed: false, optional: true, required: false
-  private _percent?: number | undefined; 
+  private _percent?: number; 
   public get percent() {
     return this.getNumberAttribute('percent');
   }
-  public set percent(value: number | undefined) {
+  public set percent(value: number) {
     this._percent = value;
   }
   public resetPercent() {
@@ -608,7 +750,7 @@ export class ComputeInstanceGroupManagerVersionTargetSizeOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get percentInput() {
-    return this._percent
+    return this._percent;
   }
 }
 export interface ComputeInstanceGroupManagerVersion {
@@ -632,7 +774,7 @@ export interface ComputeInstanceGroupManagerVersion {
   readonly targetSize?: ComputeInstanceGroupManagerVersionTargetSize;
 }
 
-function computeInstanceGroupManagerVersionToTerraform(struct?: ComputeInstanceGroupManagerVersion): any {
+export function computeInstanceGroupManagerVersionToTerraform(struct?: ComputeInstanceGroupManagerVersion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -686,11 +828,11 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
     this._waitForInstances = config.waitForInstances;
     this._waitForInstancesStatus = config.waitForInstancesStatus;
     this._zone = config.zone;
-    this._autoHealingPolicies = config.autoHealingPolicies;
+    this._autoHealingPolicies.internalValue = config.autoHealingPolicies;
     this._namedPort = config.namedPort;
     this._statefulDisk = config.statefulDisk;
-    this._timeouts = config.timeouts;
-    this._updatePolicy = config.updatePolicy;
+    this._timeouts.internalValue = config.timeouts;
+    this._updatePolicy.internalValue = config.updatePolicy;
     this._version = config.version;
   }
 
@@ -708,15 +850,15 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get baseInstanceNameInput() {
-    return this._baseInstanceName
+    return this._baseInstanceName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -724,7 +866,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -752,7 +894,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // operation - computed: true, optional: false, required: false
@@ -761,11 +903,11 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -773,7 +915,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -787,11 +929,11 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // target_pools - computed: false, optional: true, required: false
-  private _targetPools?: string[] | undefined; 
+  private _targetPools?: string[]; 
   public get targetPools() {
     return this.getListAttribute('target_pools');
   }
-  public set targetPools(value: string[] | undefined) {
+  public set targetPools(value: string[]) {
     this._targetPools = value;
   }
   public resetTargetPools() {
@@ -799,15 +941,15 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetPoolsInput() {
-    return this._targetPools
+    return this._targetPools;
   }
 
   // target_size - computed: true, optional: true, required: false
-  private _targetSize?: number | undefined; 
+  private _targetSize?: number; 
   public get targetSize() {
     return this.getNumberAttribute('target_size');
   }
-  public set targetSize(value: number | undefined) {
+  public set targetSize(value: number) {
     this._targetSize = value;
   }
   public resetTargetSize() {
@@ -815,15 +957,15 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetSizeInput() {
-    return this._targetSize
+    return this._targetSize;
   }
 
   // wait_for_instances - computed: false, optional: true, required: false
-  private _waitForInstances?: boolean | cdktf.IResolvable | undefined; 
+  private _waitForInstances?: boolean | cdktf.IResolvable; 
   public get waitForInstances() {
     return this.getBooleanAttribute('wait_for_instances') as any;
   }
-  public set waitForInstances(value: boolean | cdktf.IResolvable | undefined) {
+  public set waitForInstances(value: boolean | cdktf.IResolvable) {
     this._waitForInstances = value;
   }
   public resetWaitForInstances() {
@@ -831,15 +973,15 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get waitForInstancesInput() {
-    return this._waitForInstances
+    return this._waitForInstances;
   }
 
   // wait_for_instances_status - computed: false, optional: true, required: false
-  private _waitForInstancesStatus?: string | undefined; 
+  private _waitForInstancesStatus?: string; 
   public get waitForInstancesStatus() {
     return this.getStringAttribute('wait_for_instances_status');
   }
-  public set waitForInstancesStatus(value: string | undefined) {
+  public set waitForInstancesStatus(value: string) {
     this._waitForInstancesStatus = value;
   }
   public resetWaitForInstancesStatus() {
@@ -847,15 +989,15 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get waitForInstancesStatusInput() {
-    return this._waitForInstancesStatus
+    return this._waitForInstancesStatus;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -863,33 +1005,32 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // auto_healing_policies - computed: false, optional: true, required: false
-  private _autoHealingPolicies?: ComputeInstanceGroupManagerAutoHealingPolicies | undefined; 
-  private __autoHealingPoliciesOutput = new ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(this as any, "auto_healing_policies", true);
+  private _autoHealingPolicies = new ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(this as any, "auto_healing_policies", true);
   public get autoHealingPolicies() {
-    return this.__autoHealingPoliciesOutput;
+    return this._autoHealingPolicies;
   }
-  public putAutoHealingPolicies(value: ComputeInstanceGroupManagerAutoHealingPolicies | undefined) {
-    this._autoHealingPolicies = value;
+  public putAutoHealingPolicies(value: ComputeInstanceGroupManagerAutoHealingPolicies) {
+    this._autoHealingPolicies.internalValue = value;
   }
   public resetAutoHealingPolicies() {
-    this._autoHealingPolicies = undefined;
+    this._autoHealingPolicies.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoHealingPoliciesInput() {
-    return this._autoHealingPolicies
+    return this._autoHealingPolicies.internalValue;
   }
 
   // named_port - computed: false, optional: true, required: false
-  private _namedPort?: ComputeInstanceGroupManagerNamedPort[] | undefined; 
+  private _namedPort?: ComputeInstanceGroupManagerNamedPort[]; 
   public get namedPort() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('named_port') as any;
   }
-  public set namedPort(value: ComputeInstanceGroupManagerNamedPort[] | undefined) {
+  public set namedPort(value: ComputeInstanceGroupManagerNamedPort[]) {
     this._namedPort = value;
   }
   public resetNamedPort() {
@@ -897,16 +1038,16 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namedPortInput() {
-    return this._namedPort
+    return this._namedPort;
   }
 
   // stateful_disk - computed: false, optional: true, required: false
-  private _statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[] | undefined; 
+  private _statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[]; 
   public get statefulDisk() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('stateful_disk') as any;
   }
-  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[] | undefined) {
+  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[]) {
     this._statefulDisk = value;
   }
   public resetStatefulDisk() {
@@ -914,41 +1055,39 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get statefulDiskInput() {
-    return this._statefulDisk
+    return this._statefulDisk;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeInstanceGroupManagerTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeInstanceGroupManagerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInstanceGroupManagerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeInstanceGroupManagerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeInstanceGroupManagerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // update_policy - computed: false, optional: true, required: false
-  private _updatePolicy?: ComputeInstanceGroupManagerUpdatePolicy | undefined; 
-  private __updatePolicyOutput = new ComputeInstanceGroupManagerUpdatePolicyOutputReference(this as any, "update_policy", true);
+  private _updatePolicy = new ComputeInstanceGroupManagerUpdatePolicyOutputReference(this as any, "update_policy", true);
   public get updatePolicy() {
-    return this.__updatePolicyOutput;
+    return this._updatePolicy;
   }
-  public putUpdatePolicy(value: ComputeInstanceGroupManagerUpdatePolicy | undefined) {
-    this._updatePolicy = value;
+  public putUpdatePolicy(value: ComputeInstanceGroupManagerUpdatePolicy) {
+    this._updatePolicy.internalValue = value;
   }
   public resetUpdatePolicy() {
-    this._updatePolicy = undefined;
+    this._updatePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get updatePolicyInput() {
-    return this._updatePolicy
+    return this._updatePolicy.internalValue;
   }
 
   // version - computed: false, optional: false, required: true
@@ -962,7 +1101,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // =========
@@ -980,11 +1119,11 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
       wait_for_instances: cdktf.booleanToTerraform(this._waitForInstances),
       wait_for_instances_status: cdktf.stringToTerraform(this._waitForInstancesStatus),
       zone: cdktf.stringToTerraform(this._zone),
-      auto_healing_policies: computeInstanceGroupManagerAutoHealingPoliciesToTerraform(this._autoHealingPolicies),
+      auto_healing_policies: computeInstanceGroupManagerAutoHealingPoliciesToTerraform(this._autoHealingPolicies.internalValue),
       named_port: cdktf.listMapper(computeInstanceGroupManagerNamedPortToTerraform)(this._namedPort),
       stateful_disk: cdktf.listMapper(computeInstanceGroupManagerStatefulDiskToTerraform)(this._statefulDisk),
-      timeouts: computeInstanceGroupManagerTimeoutsToTerraform(this._timeouts),
-      update_policy: computeInstanceGroupManagerUpdatePolicyToTerraform(this._updatePolicy),
+      timeouts: computeInstanceGroupManagerTimeoutsToTerraform(this._timeouts.internalValue),
+      update_policy: computeInstanceGroupManagerUpdatePolicyToTerraform(this._updatePolicy.internalValue),
       version: cdktf.listMapper(computeInstanceGroupManagerVersionToTerraform)(this._version),
     };
   }

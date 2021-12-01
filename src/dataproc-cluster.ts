@@ -59,7 +59,7 @@ export interface DataprocClusterClusterConfigAutoscalingConfig {
   readonly policyUri: string;
 }
 
-function dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct?: DataprocClusterClusterConfigAutoscalingConfigOutputReference | DataprocClusterClusterConfigAutoscalingConfig): any {
+export function dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct?: DataprocClusterClusterConfigAutoscalingConfigOutputReference | DataprocClusterClusterConfigAutoscalingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -79,6 +79,25 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigAutoscalingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._policyUri) {
+      hasAnyValues = true;
+      internalValueResult.policyUri = this._policyUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigAutoscalingConfig | undefined) {
+    if (value === undefined) {
+      this._policyUri = undefined;
+    }
+    else {
+      this._policyUri = value.policyUri;
+    }
+  }
+
   // policy_uri - computed: false, optional: false, required: true
   private _policyUri?: string; 
   public get policyUri() {
@@ -89,7 +108,7 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get policyUriInput() {
-    return this._policyUri
+    return this._policyUri;
   }
 }
 export interface DataprocClusterClusterConfigEncryptionConfig {
@@ -101,7 +120,7 @@ export interface DataprocClusterClusterConfigEncryptionConfig {
   readonly kmsKeyName: string;
 }
 
-function dataprocClusterClusterConfigEncryptionConfigToTerraform(struct?: DataprocClusterClusterConfigEncryptionConfigOutputReference | DataprocClusterClusterConfigEncryptionConfig): any {
+export function dataprocClusterClusterConfigEncryptionConfigToTerraform(struct?: DataprocClusterClusterConfigEncryptionConfigOutputReference | DataprocClusterClusterConfigEncryptionConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -121,6 +140,25 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigEncryptionConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigEncryptionConfig | undefined) {
+    if (value === undefined) {
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
   // kms_key_name - computed: false, optional: false, required: true
   private _kmsKeyName?: string; 
   public get kmsKeyName() {
@@ -131,7 +169,7 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
-    return this._kmsKeyName
+    return this._kmsKeyName;
   }
 }
 export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
@@ -155,7 +193,7 @@ export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceCon
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
 
-function dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference | DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig): any {
+export function dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference | DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -177,12 +215,43 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableIntegrityMonitoring) {
+      hasAnyValues = true;
+      internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
+    }
+    if (this._enableSecureBoot) {
+      hasAnyValues = true;
+      internalValueResult.enableSecureBoot = this._enableSecureBoot;
+    }
+    if (this._enableVtpm) {
+      hasAnyValues = true;
+      internalValueResult.enableVtpm = this._enableVtpm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined) {
+    if (value === undefined) {
+      this._enableIntegrityMonitoring = undefined;
+      this._enableSecureBoot = undefined;
+      this._enableVtpm = undefined;
+    }
+    else {
+      this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
+      this._enableSecureBoot = value.enableSecureBoot;
+      this._enableVtpm = value.enableVtpm;
+    }
+  }
+
   // enable_integrity_monitoring - computed: false, optional: true, required: false
-  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable | undefined; 
+  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
     return this.getBooleanAttribute('enable_integrity_monitoring') as any;
   }
-  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
   }
   public resetEnableIntegrityMonitoring() {
@@ -190,15 +259,15 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   }
   // Temporarily expose input value. Use with caution.
   public get enableIntegrityMonitoringInput() {
-    return this._enableIntegrityMonitoring
+    return this._enableIntegrityMonitoring;
   }
 
   // enable_secure_boot - computed: false, optional: true, required: false
-  private _enableSecureBoot?: boolean | cdktf.IResolvable | undefined; 
+  private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
     return this.getBooleanAttribute('enable_secure_boot') as any;
   }
-  public set enableSecureBoot(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
   }
   public resetEnableSecureBoot() {
@@ -206,15 +275,15 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   }
   // Temporarily expose input value. Use with caution.
   public get enableSecureBootInput() {
-    return this._enableSecureBoot
+    return this._enableSecureBoot;
   }
 
   // enable_vtpm - computed: false, optional: true, required: false
-  private _enableVtpm?: boolean | cdktf.IResolvable | undefined; 
+  private _enableVtpm?: boolean | cdktf.IResolvable; 
   public get enableVtpm() {
     return this.getBooleanAttribute('enable_vtpm') as any;
   }
-  public set enableVtpm(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableVtpm(value: boolean | cdktf.IResolvable) {
     this._enableVtpm = value;
   }
   public resetEnableVtpm() {
@@ -222,7 +291,7 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   }
   // Temporarily expose input value. Use with caution.
   public get enableVtpmInput() {
-    return this._enableVtpm
+    return this._enableVtpm;
   }
 }
 export interface DataprocClusterClusterConfigGceClusterConfig {
@@ -282,7 +351,7 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
   readonly shieldedInstanceConfig?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig;
 }
 
-function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigOutputReference | DataprocClusterClusterConfigGceClusterConfig): any {
+export function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigOutputReference | DataprocClusterClusterConfigGceClusterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -310,12 +379,79 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigGceClusterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._internalIpOnly) {
+      hasAnyValues = true;
+      internalValueResult.internalIpOnly = this._internalIpOnly;
+    }
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._network) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._serviceAccount) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccount = this._serviceAccount;
+    }
+    if (this._serviceAccountScopes) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccountScopes = this._serviceAccountScopes;
+    }
+    if (this._subnetwork) {
+      hasAnyValues = true;
+      internalValueResult.subnetwork = this._subnetwork;
+    }
+    if (this._tags) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._zone) {
+      hasAnyValues = true;
+      internalValueResult.zone = this._zone;
+    }
+    if (this._shieldedInstanceConfig) {
+      hasAnyValues = true;
+      internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigGceClusterConfig | undefined) {
+    if (value === undefined) {
+      this._internalIpOnly = undefined;
+      this._metadata = undefined;
+      this._network = undefined;
+      this._serviceAccount = undefined;
+      this._serviceAccountScopes = undefined;
+      this._subnetwork = undefined;
+      this._tags = undefined;
+      this._zone = undefined;
+      this._shieldedInstanceConfig.internalValue = undefined;
+    }
+    else {
+      this._internalIpOnly = value.internalIpOnly;
+      this._metadata = value.metadata;
+      this._network = value.network;
+      this._serviceAccount = value.serviceAccount;
+      this._serviceAccountScopes = value.serviceAccountScopes;
+      this._subnetwork = value.subnetwork;
+      this._tags = value.tags;
+      this._zone = value.zone;
+      this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
+    }
+  }
+
   // internal_ip_only - computed: false, optional: true, required: false
-  private _internalIpOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _internalIpOnly?: boolean | cdktf.IResolvable; 
   public get internalIpOnly() {
     return this.getBooleanAttribute('internal_ip_only') as any;
   }
-  public set internalIpOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set internalIpOnly(value: boolean | cdktf.IResolvable) {
     this._internalIpOnly = value;
   }
   public resetInternalIpOnly() {
@@ -323,16 +459,16 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get internalIpOnlyInput() {
-    return this._internalIpOnly
+    return this._internalIpOnly;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -340,15 +476,15 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // network - computed: true, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -356,15 +492,15 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // service_account - computed: false, optional: true, required: false
-  private _serviceAccount?: string | undefined; 
+  private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string | undefined) {
+  public set serviceAccount(value: string) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -372,15 +508,15 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount;
   }
 
   // service_account_scopes - computed: true, optional: true, required: false
-  private _serviceAccountScopes?: string[] | undefined; 
+  private _serviceAccountScopes?: string[]; 
   public get serviceAccountScopes() {
     return this.getListAttribute('service_account_scopes');
   }
-  public set serviceAccountScopes(value: string[] | undefined) {
+  public set serviceAccountScopes(value: string[]) {
     this._serviceAccountScopes = value;
   }
   public resetServiceAccountScopes() {
@@ -388,15 +524,15 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountScopesInput() {
-    return this._serviceAccountScopes
+    return this._serviceAccountScopes;
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -404,15 +540,15 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -420,15 +556,15 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -436,24 +572,23 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined; 
-  private __shieldedInstanceConfigOutput = new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
-    return this.__shieldedInstanceConfigOutput;
+    return this._shieldedInstanceConfig;
   }
-  public putShieldedInstanceConfig(value: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined) {
-    this._shieldedInstanceConfig = value;
+  public putShieldedInstanceConfig(value: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig) {
+    this._shieldedInstanceConfig.internalValue = value;
   }
   public resetShieldedInstanceConfig() {
-    this._shieldedInstanceConfig = undefined;
+    this._shieldedInstanceConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get shieldedInstanceConfigInput() {
-    return this._shieldedInstanceConfig
+    return this._shieldedInstanceConfig.internalValue;
   }
 }
 export interface DataprocClusterClusterConfigInitializationAction {
@@ -471,7 +606,7 @@ export interface DataprocClusterClusterConfigInitializationAction {
   readonly timeoutSec?: number;
 }
 
-function dataprocClusterClusterConfigInitializationActionToTerraform(struct?: DataprocClusterClusterConfigInitializationAction): any {
+export function dataprocClusterClusterConfigInitializationActionToTerraform(struct?: DataprocClusterClusterConfigInitializationAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -497,7 +632,7 @@ export interface DataprocClusterClusterConfigMasterConfigAccelerators {
   readonly acceleratorType: string;
 }
 
-function dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigMasterConfigAccelerators): any {
+export function dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigMasterConfigAccelerators): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -529,7 +664,7 @@ export interface DataprocClusterClusterConfigMasterConfigDiskConfig {
   readonly numLocalSsds?: number;
 }
 
-function dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference | DataprocClusterClusterConfigMasterConfigDiskConfig): any {
+export function dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference | DataprocClusterClusterConfigMasterConfigDiskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -551,12 +686,43 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigMasterConfigDiskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bootDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
+    }
+    if (this._bootDiskType) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskType = this._bootDiskType;
+    }
+    if (this._numLocalSsds) {
+      hasAnyValues = true;
+      internalValueResult.numLocalSsds = this._numLocalSsds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigMasterConfigDiskConfig | undefined) {
+    if (value === undefined) {
+      this._bootDiskSizeGb = undefined;
+      this._bootDiskType = undefined;
+      this._numLocalSsds = undefined;
+    }
+    else {
+      this._bootDiskSizeGb = value.bootDiskSizeGb;
+      this._bootDiskType = value.bootDiskType;
+      this._numLocalSsds = value.numLocalSsds;
+    }
+  }
+
   // boot_disk_size_gb - computed: true, optional: true, required: false
-  private _bootDiskSizeGb?: number | undefined; 
+  private _bootDiskSizeGb?: number; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number | undefined) {
+  public set bootDiskSizeGb(value: number) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -564,15 +730,15 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskSizeGbInput() {
-    return this._bootDiskSizeGb
+    return this._bootDiskSizeGb;
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string | undefined; 
+  private _bootDiskType?: string; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string | undefined) {
+  public set bootDiskType(value: string) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -580,15 +746,15 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskTypeInput() {
-    return this._bootDiskType
+    return this._bootDiskType;
   }
 
   // num_local_ssds - computed: true, optional: true, required: false
-  private _numLocalSsds?: number | undefined; 
+  private _numLocalSsds?: number; 
   public get numLocalSsds() {
     return this.getNumberAttribute('num_local_ssds');
   }
-  public set numLocalSsds(value: number | undefined) {
+  public set numLocalSsds(value: number) {
     this._numLocalSsds = value;
   }
   public resetNumLocalSsds() {
@@ -596,7 +762,7 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get numLocalSsdsInput() {
-    return this._numLocalSsds
+    return this._numLocalSsds;
   }
 }
 export interface DataprocClusterClusterConfigMasterConfig {
@@ -638,7 +804,7 @@ export interface DataprocClusterClusterConfigMasterConfig {
   readonly diskConfig?: DataprocClusterClusterConfigMasterConfigDiskConfig;
 }
 
-function dataprocClusterClusterConfigMasterConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigOutputReference | DataprocClusterClusterConfigMasterConfig): any {
+export function dataprocClusterClusterConfigMasterConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigOutputReference | DataprocClusterClusterConfigMasterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -663,12 +829,61 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigMasterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._imageUri) {
+      hasAnyValues = true;
+      internalValueResult.imageUri = this._imageUri;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._minCpuPlatform) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
+    if (this._numInstances) {
+      hasAnyValues = true;
+      internalValueResult.numInstances = this._numInstances;
+    }
+    if (this._accelerators) {
+      hasAnyValues = true;
+      internalValueResult.accelerators = this._accelerators;
+    }
+    if (this._diskConfig) {
+      hasAnyValues = true;
+      internalValueResult.diskConfig = this._diskConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigMasterConfig | undefined) {
+    if (value === undefined) {
+      this._imageUri = undefined;
+      this._machineType = undefined;
+      this._minCpuPlatform = undefined;
+      this._numInstances = undefined;
+      this._accelerators = undefined;
+      this._diskConfig.internalValue = undefined;
+    }
+    else {
+      this._imageUri = value.imageUri;
+      this._machineType = value.machineType;
+      this._minCpuPlatform = value.minCpuPlatform;
+      this._numInstances = value.numInstances;
+      this._accelerators = value.accelerators;
+      this._diskConfig.internalValue = value.diskConfig;
+    }
+  }
+
   // image_uri - computed: true, optional: true, required: false
-  private _imageUri?: string | undefined; 
+  private _imageUri?: string; 
   public get imageUri() {
     return this.getStringAttribute('image_uri');
   }
-  public set imageUri(value: string | undefined) {
+  public set imageUri(value: string) {
     this._imageUri = value;
   }
   public resetImageUri() {
@@ -676,15 +891,15 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get imageUriInput() {
-    return this._imageUri
+    return this._imageUri;
   }
 
   // machine_type - computed: true, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -692,15 +907,15 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -708,15 +923,15 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // num_instances - computed: true, optional: true, required: false
-  private _numInstances?: number | undefined; 
+  private _numInstances?: number; 
   public get numInstances() {
     return this.getNumberAttribute('num_instances');
   }
-  public set numInstances(value: number | undefined) {
+  public set numInstances(value: number) {
     this._numInstances = value;
   }
   public resetNumInstances() {
@@ -724,16 +939,16 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
-    return this._numInstances
+    return this._numInstances;
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[] | undefined; 
+  private _accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[]; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('accelerators') as any;
   }
-  public set accelerators(value: DataprocClusterClusterConfigMasterConfigAccelerators[] | undefined) {
+  public set accelerators(value: DataprocClusterClusterConfigMasterConfigAccelerators[]) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -741,24 +956,23 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get acceleratorsInput() {
-    return this._accelerators
+    return this._accelerators;
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig?: DataprocClusterClusterConfigMasterConfigDiskConfig | undefined; 
-  private __diskConfigOutput = new DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(this as any, "disk_config", true);
   public get diskConfig() {
-    return this.__diskConfigOutput;
+    return this._diskConfig;
   }
-  public putDiskConfig(value: DataprocClusterClusterConfigMasterConfigDiskConfig | undefined) {
-    this._diskConfig = value;
+  public putDiskConfig(value: DataprocClusterClusterConfigMasterConfigDiskConfig) {
+    this._diskConfig.internalValue = value;
   }
   public resetDiskConfig() {
-    this._diskConfig = undefined;
+    this._diskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskConfigInput() {
-    return this._diskConfig
+    return this._diskConfig.internalValue;
   }
 }
 export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
@@ -782,7 +996,7 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
   readonly numLocalSsds?: number;
 }
 
-function dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference | DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig): any {
+export function dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference | DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -804,12 +1018,43 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bootDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
+    }
+    if (this._bootDiskType) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskType = this._bootDiskType;
+    }
+    if (this._numLocalSsds) {
+      hasAnyValues = true;
+      internalValueResult.numLocalSsds = this._numLocalSsds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined) {
+    if (value === undefined) {
+      this._bootDiskSizeGb = undefined;
+      this._bootDiskType = undefined;
+      this._numLocalSsds = undefined;
+    }
+    else {
+      this._bootDiskSizeGb = value.bootDiskSizeGb;
+      this._bootDiskType = value.bootDiskType;
+      this._numLocalSsds = value.numLocalSsds;
+    }
+  }
+
   // boot_disk_size_gb - computed: true, optional: true, required: false
-  private _bootDiskSizeGb?: number | undefined; 
+  private _bootDiskSizeGb?: number; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number | undefined) {
+  public set bootDiskSizeGb(value: number) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -817,15 +1062,15 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskSizeGbInput() {
-    return this._bootDiskSizeGb
+    return this._bootDiskSizeGb;
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string | undefined; 
+  private _bootDiskType?: string; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string | undefined) {
+  public set bootDiskType(value: string) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -833,15 +1078,15 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskTypeInput() {
-    return this._bootDiskType
+    return this._bootDiskType;
   }
 
   // num_local_ssds - computed: true, optional: true, required: false
-  private _numLocalSsds?: number | undefined; 
+  private _numLocalSsds?: number; 
   public get numLocalSsds() {
     return this.getNumberAttribute('num_local_ssds');
   }
-  public set numLocalSsds(value: number | undefined) {
+  public set numLocalSsds(value: number) {
     this._numLocalSsds = value;
   }
   public resetNumLocalSsds() {
@@ -849,7 +1094,7 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   }
   // Temporarily expose input value. Use with caution.
   public get numLocalSsdsInput() {
-    return this._numLocalSsds
+    return this._numLocalSsds;
   }
 }
 export interface DataprocClusterClusterConfigPreemptibleWorkerConfig {
@@ -867,7 +1112,7 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfig {
   readonly diskConfig?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig;
 }
 
-function dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference | DataprocClusterClusterConfigPreemptibleWorkerConfig): any {
+export function dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference | DataprocClusterClusterConfigPreemptibleWorkerConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -888,12 +1133,37 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._numInstances) {
+      hasAnyValues = true;
+      internalValueResult.numInstances = this._numInstances;
+    }
+    if (this._diskConfig) {
+      hasAnyValues = true;
+      internalValueResult.diskConfig = this._diskConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined) {
+    if (value === undefined) {
+      this._numInstances = undefined;
+      this._diskConfig.internalValue = undefined;
+    }
+    else {
+      this._numInstances = value.numInstances;
+      this._diskConfig.internalValue = value.diskConfig;
+    }
+  }
+
   // num_instances - computed: true, optional: true, required: false
-  private _numInstances?: number | undefined; 
+  private _numInstances?: number; 
   public get numInstances() {
     return this.getNumberAttribute('num_instances');
   }
-  public set numInstances(value: number | undefined) {
+  public set numInstances(value: number) {
     this._numInstances = value;
   }
   public resetNumInstances() {
@@ -901,24 +1171,23 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
-    return this._numInstances
+    return this._numInstances;
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined; 
-  private __diskConfigOutput = new DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
   public get diskConfig() {
-    return this.__diskConfigOutput;
+    return this._diskConfig;
   }
-  public putDiskConfig(value: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined) {
-    this._diskConfig = value;
+  public putDiskConfig(value: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig) {
+    this._diskConfig.internalValue = value;
   }
   public resetDiskConfig() {
-    this._diskConfig = undefined;
+    this._diskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskConfigInput() {
-    return this._diskConfig
+    return this._diskConfig.internalValue;
   }
 }
 export interface DataprocClusterClusterConfigSecurityConfigKerberosConfig {
@@ -1017,7 +1286,7 @@ by Dataproc
   readonly truststoreUri?: string;
 }
 
-function dataprocClusterClusterConfigSecurityConfigKerberosConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference | DataprocClusterClusterConfigSecurityConfigKerberosConfig): any {
+export function dataprocClusterClusterConfigSecurityConfigKerberosConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference | DataprocClusterClusterConfigSecurityConfigKerberosConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1051,12 +1320,115 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigSecurityConfigKerberosConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._crossRealmTrustAdminServer) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustAdminServer = this._crossRealmTrustAdminServer;
+    }
+    if (this._crossRealmTrustKdc) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustKdc = this._crossRealmTrustKdc;
+    }
+    if (this._crossRealmTrustRealm) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustRealm = this._crossRealmTrustRealm;
+    }
+    if (this._crossRealmTrustSharedPasswordUri) {
+      hasAnyValues = true;
+      internalValueResult.crossRealmTrustSharedPasswordUri = this._crossRealmTrustSharedPasswordUri;
+    }
+    if (this._enableKerberos) {
+      hasAnyValues = true;
+      internalValueResult.enableKerberos = this._enableKerberos;
+    }
+    if (this._kdcDbKeyUri) {
+      hasAnyValues = true;
+      internalValueResult.kdcDbKeyUri = this._kdcDbKeyUri;
+    }
+    if (this._keyPasswordUri) {
+      hasAnyValues = true;
+      internalValueResult.keyPasswordUri = this._keyPasswordUri;
+    }
+    if (this._keystorePasswordUri) {
+      hasAnyValues = true;
+      internalValueResult.keystorePasswordUri = this._keystorePasswordUri;
+    }
+    if (this._keystoreUri) {
+      hasAnyValues = true;
+      internalValueResult.keystoreUri = this._keystoreUri;
+    }
+    if (this._kmsKeyUri) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyUri = this._kmsKeyUri;
+    }
+    if (this._realm) {
+      hasAnyValues = true;
+      internalValueResult.realm = this._realm;
+    }
+    if (this._rootPrincipalPasswordUri) {
+      hasAnyValues = true;
+      internalValueResult.rootPrincipalPasswordUri = this._rootPrincipalPasswordUri;
+    }
+    if (this._tgtLifetimeHours) {
+      hasAnyValues = true;
+      internalValueResult.tgtLifetimeHours = this._tgtLifetimeHours;
+    }
+    if (this._truststorePasswordUri) {
+      hasAnyValues = true;
+      internalValueResult.truststorePasswordUri = this._truststorePasswordUri;
+    }
+    if (this._truststoreUri) {
+      hasAnyValues = true;
+      internalValueResult.truststoreUri = this._truststoreUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigSecurityConfigKerberosConfig | undefined) {
+    if (value === undefined) {
+      this._crossRealmTrustAdminServer = undefined;
+      this._crossRealmTrustKdc = undefined;
+      this._crossRealmTrustRealm = undefined;
+      this._crossRealmTrustSharedPasswordUri = undefined;
+      this._enableKerberos = undefined;
+      this._kdcDbKeyUri = undefined;
+      this._keyPasswordUri = undefined;
+      this._keystorePasswordUri = undefined;
+      this._keystoreUri = undefined;
+      this._kmsKeyUri = undefined;
+      this._realm = undefined;
+      this._rootPrincipalPasswordUri = undefined;
+      this._tgtLifetimeHours = undefined;
+      this._truststorePasswordUri = undefined;
+      this._truststoreUri = undefined;
+    }
+    else {
+      this._crossRealmTrustAdminServer = value.crossRealmTrustAdminServer;
+      this._crossRealmTrustKdc = value.crossRealmTrustKdc;
+      this._crossRealmTrustRealm = value.crossRealmTrustRealm;
+      this._crossRealmTrustSharedPasswordUri = value.crossRealmTrustSharedPasswordUri;
+      this._enableKerberos = value.enableKerberos;
+      this._kdcDbKeyUri = value.kdcDbKeyUri;
+      this._keyPasswordUri = value.keyPasswordUri;
+      this._keystorePasswordUri = value.keystorePasswordUri;
+      this._keystoreUri = value.keystoreUri;
+      this._kmsKeyUri = value.kmsKeyUri;
+      this._realm = value.realm;
+      this._rootPrincipalPasswordUri = value.rootPrincipalPasswordUri;
+      this._tgtLifetimeHours = value.tgtLifetimeHours;
+      this._truststorePasswordUri = value.truststorePasswordUri;
+      this._truststoreUri = value.truststoreUri;
+    }
+  }
+
   // cross_realm_trust_admin_server - computed: false, optional: true, required: false
-  private _crossRealmTrustAdminServer?: string | undefined; 
+  private _crossRealmTrustAdminServer?: string; 
   public get crossRealmTrustAdminServer() {
     return this.getStringAttribute('cross_realm_trust_admin_server');
   }
-  public set crossRealmTrustAdminServer(value: string | undefined) {
+  public set crossRealmTrustAdminServer(value: string) {
     this._crossRealmTrustAdminServer = value;
   }
   public resetCrossRealmTrustAdminServer() {
@@ -1064,15 +1436,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustAdminServerInput() {
-    return this._crossRealmTrustAdminServer
+    return this._crossRealmTrustAdminServer;
   }
 
   // cross_realm_trust_kdc - computed: false, optional: true, required: false
-  private _crossRealmTrustKdc?: string | undefined; 
+  private _crossRealmTrustKdc?: string; 
   public get crossRealmTrustKdc() {
     return this.getStringAttribute('cross_realm_trust_kdc');
   }
-  public set crossRealmTrustKdc(value: string | undefined) {
+  public set crossRealmTrustKdc(value: string) {
     this._crossRealmTrustKdc = value;
   }
   public resetCrossRealmTrustKdc() {
@@ -1080,15 +1452,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustKdcInput() {
-    return this._crossRealmTrustKdc
+    return this._crossRealmTrustKdc;
   }
 
   // cross_realm_trust_realm - computed: false, optional: true, required: false
-  private _crossRealmTrustRealm?: string | undefined; 
+  private _crossRealmTrustRealm?: string; 
   public get crossRealmTrustRealm() {
     return this.getStringAttribute('cross_realm_trust_realm');
   }
-  public set crossRealmTrustRealm(value: string | undefined) {
+  public set crossRealmTrustRealm(value: string) {
     this._crossRealmTrustRealm = value;
   }
   public resetCrossRealmTrustRealm() {
@@ -1096,15 +1468,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustRealmInput() {
-    return this._crossRealmTrustRealm
+    return this._crossRealmTrustRealm;
   }
 
   // cross_realm_trust_shared_password_uri - computed: false, optional: true, required: false
-  private _crossRealmTrustSharedPasswordUri?: string | undefined; 
+  private _crossRealmTrustSharedPasswordUri?: string; 
   public get crossRealmTrustSharedPasswordUri() {
     return this.getStringAttribute('cross_realm_trust_shared_password_uri');
   }
-  public set crossRealmTrustSharedPasswordUri(value: string | undefined) {
+  public set crossRealmTrustSharedPasswordUri(value: string) {
     this._crossRealmTrustSharedPasswordUri = value;
   }
   public resetCrossRealmTrustSharedPasswordUri() {
@@ -1112,15 +1484,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get crossRealmTrustSharedPasswordUriInput() {
-    return this._crossRealmTrustSharedPasswordUri
+    return this._crossRealmTrustSharedPasswordUri;
   }
 
   // enable_kerberos - computed: false, optional: true, required: false
-  private _enableKerberos?: boolean | cdktf.IResolvable | undefined; 
+  private _enableKerberos?: boolean | cdktf.IResolvable; 
   public get enableKerberos() {
     return this.getBooleanAttribute('enable_kerberos') as any;
   }
-  public set enableKerberos(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableKerberos(value: boolean | cdktf.IResolvable) {
     this._enableKerberos = value;
   }
   public resetEnableKerberos() {
@@ -1128,15 +1500,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get enableKerberosInput() {
-    return this._enableKerberos
+    return this._enableKerberos;
   }
 
   // kdc_db_key_uri - computed: false, optional: true, required: false
-  private _kdcDbKeyUri?: string | undefined; 
+  private _kdcDbKeyUri?: string; 
   public get kdcDbKeyUri() {
     return this.getStringAttribute('kdc_db_key_uri');
   }
-  public set kdcDbKeyUri(value: string | undefined) {
+  public set kdcDbKeyUri(value: string) {
     this._kdcDbKeyUri = value;
   }
   public resetKdcDbKeyUri() {
@@ -1144,15 +1516,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get kdcDbKeyUriInput() {
-    return this._kdcDbKeyUri
+    return this._kdcDbKeyUri;
   }
 
   // key_password_uri - computed: false, optional: true, required: false
-  private _keyPasswordUri?: string | undefined; 
+  private _keyPasswordUri?: string; 
   public get keyPasswordUri() {
     return this.getStringAttribute('key_password_uri');
   }
-  public set keyPasswordUri(value: string | undefined) {
+  public set keyPasswordUri(value: string) {
     this._keyPasswordUri = value;
   }
   public resetKeyPasswordUri() {
@@ -1160,15 +1532,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get keyPasswordUriInput() {
-    return this._keyPasswordUri
+    return this._keyPasswordUri;
   }
 
   // keystore_password_uri - computed: false, optional: true, required: false
-  private _keystorePasswordUri?: string | undefined; 
+  private _keystorePasswordUri?: string; 
   public get keystorePasswordUri() {
     return this.getStringAttribute('keystore_password_uri');
   }
-  public set keystorePasswordUri(value: string | undefined) {
+  public set keystorePasswordUri(value: string) {
     this._keystorePasswordUri = value;
   }
   public resetKeystorePasswordUri() {
@@ -1176,15 +1548,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get keystorePasswordUriInput() {
-    return this._keystorePasswordUri
+    return this._keystorePasswordUri;
   }
 
   // keystore_uri - computed: false, optional: true, required: false
-  private _keystoreUri?: string | undefined; 
+  private _keystoreUri?: string; 
   public get keystoreUri() {
     return this.getStringAttribute('keystore_uri');
   }
-  public set keystoreUri(value: string | undefined) {
+  public set keystoreUri(value: string) {
     this._keystoreUri = value;
   }
   public resetKeystoreUri() {
@@ -1192,7 +1564,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get keystoreUriInput() {
-    return this._keystoreUri
+    return this._keystoreUri;
   }
 
   // kms_key_uri - computed: false, optional: false, required: true
@@ -1205,15 +1577,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyUriInput() {
-    return this._kmsKeyUri
+    return this._kmsKeyUri;
   }
 
   // realm - computed: false, optional: true, required: false
-  private _realm?: string | undefined; 
+  private _realm?: string; 
   public get realm() {
     return this.getStringAttribute('realm');
   }
-  public set realm(value: string | undefined) {
+  public set realm(value: string) {
     this._realm = value;
   }
   public resetRealm() {
@@ -1221,7 +1593,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get realmInput() {
-    return this._realm
+    return this._realm;
   }
 
   // root_principal_password_uri - computed: false, optional: false, required: true
@@ -1234,15 +1606,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get rootPrincipalPasswordUriInput() {
-    return this._rootPrincipalPasswordUri
+    return this._rootPrincipalPasswordUri;
   }
 
   // tgt_lifetime_hours - computed: false, optional: true, required: false
-  private _tgtLifetimeHours?: number | undefined; 
+  private _tgtLifetimeHours?: number; 
   public get tgtLifetimeHours() {
     return this.getNumberAttribute('tgt_lifetime_hours');
   }
-  public set tgtLifetimeHours(value: number | undefined) {
+  public set tgtLifetimeHours(value: number) {
     this._tgtLifetimeHours = value;
   }
   public resetTgtLifetimeHours() {
@@ -1250,15 +1622,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get tgtLifetimeHoursInput() {
-    return this._tgtLifetimeHours
+    return this._tgtLifetimeHours;
   }
 
   // truststore_password_uri - computed: false, optional: true, required: false
-  private _truststorePasswordUri?: string | undefined; 
+  private _truststorePasswordUri?: string; 
   public get truststorePasswordUri() {
     return this.getStringAttribute('truststore_password_uri');
   }
-  public set truststorePasswordUri(value: string | undefined) {
+  public set truststorePasswordUri(value: string) {
     this._truststorePasswordUri = value;
   }
   public resetTruststorePasswordUri() {
@@ -1266,15 +1638,15 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get truststorePasswordUriInput() {
-    return this._truststorePasswordUri
+    return this._truststorePasswordUri;
   }
 
   // truststore_uri - computed: false, optional: true, required: false
-  private _truststoreUri?: string | undefined; 
+  private _truststoreUri?: string; 
   public get truststoreUri() {
     return this.getStringAttribute('truststore_uri');
   }
-  public set truststoreUri(value: string | undefined) {
+  public set truststoreUri(value: string) {
     this._truststoreUri = value;
   }
   public resetTruststoreUri() {
@@ -1282,7 +1654,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get truststoreUriInput() {
-    return this._truststoreUri
+    return this._truststoreUri;
   }
 }
 export interface DataprocClusterClusterConfigSecurityConfig {
@@ -1294,7 +1666,7 @@ export interface DataprocClusterClusterConfigSecurityConfig {
   readonly kerberosConfig: DataprocClusterClusterConfigSecurityConfigKerberosConfig;
 }
 
-function dataprocClusterClusterConfigSecurityConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigOutputReference | DataprocClusterClusterConfigSecurityConfig): any {
+export function dataprocClusterClusterConfigSecurityConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigOutputReference | DataprocClusterClusterConfigSecurityConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1314,18 +1686,36 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigSecurityConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kerberosConfig) {
+      hasAnyValues = true;
+      internalValueResult.kerberosConfig = this._kerberosConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigSecurityConfig | undefined) {
+    if (value === undefined) {
+      this._kerberosConfig.internalValue = undefined;
+    }
+    else {
+      this._kerberosConfig.internalValue = value.kerberosConfig;
+    }
+  }
+
   // kerberos_config - computed: false, optional: false, required: true
-  private _kerberosConfig?: DataprocClusterClusterConfigSecurityConfigKerberosConfig; 
-  private __kerberosConfigOutput = new DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(this as any, "kerberos_config", true);
+  private _kerberosConfig = new DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(this as any, "kerberos_config", true);
   public get kerberosConfig() {
-    return this.__kerberosConfigOutput;
+    return this._kerberosConfig;
   }
   public putKerberosConfig(value: DataprocClusterClusterConfigSecurityConfigKerberosConfig) {
-    this._kerberosConfig = value;
+    this._kerberosConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get kerberosConfigInput() {
-    return this._kerberosConfig
+    return this._kerberosConfig.internalValue;
   }
 }
 export interface DataprocClusterClusterConfigSoftwareConfig {
@@ -1349,7 +1739,7 @@ export interface DataprocClusterClusterConfigSoftwareConfig {
   readonly overrideProperties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: DataprocClusterClusterConfigSoftwareConfigOutputReference | DataprocClusterClusterConfigSoftwareConfig): any {
+export function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: DataprocClusterClusterConfigSoftwareConfigOutputReference | DataprocClusterClusterConfigSoftwareConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1371,12 +1761,43 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigSoftwareConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._imageVersion) {
+      hasAnyValues = true;
+      internalValueResult.imageVersion = this._imageVersion;
+    }
+    if (this._optionalComponents) {
+      hasAnyValues = true;
+      internalValueResult.optionalComponents = this._optionalComponents;
+    }
+    if (this._overrideProperties) {
+      hasAnyValues = true;
+      internalValueResult.overrideProperties = this._overrideProperties;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigSoftwareConfig | undefined) {
+    if (value === undefined) {
+      this._imageVersion = undefined;
+      this._optionalComponents = undefined;
+      this._overrideProperties = undefined;
+    }
+    else {
+      this._imageVersion = value.imageVersion;
+      this._optionalComponents = value.optionalComponents;
+      this._overrideProperties = value.overrideProperties;
+    }
+  }
+
   // image_version - computed: true, optional: true, required: false
-  private _imageVersion?: string | undefined; 
+  private _imageVersion?: string; 
   public get imageVersion() {
     return this.getStringAttribute('image_version');
   }
-  public set imageVersion(value: string | undefined) {
+  public set imageVersion(value: string) {
     this._imageVersion = value;
   }
   public resetImageVersion() {
@@ -1384,15 +1805,15 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get imageVersionInput() {
-    return this._imageVersion
+    return this._imageVersion;
   }
 
   // optional_components - computed: false, optional: true, required: false
-  private _optionalComponents?: string[] | undefined; 
+  private _optionalComponents?: string[]; 
   public get optionalComponents() {
     return this.getListAttribute('optional_components');
   }
-  public set optionalComponents(value: string[] | undefined) {
+  public set optionalComponents(value: string[]) {
     this._optionalComponents = value;
   }
   public resetOptionalComponents() {
@@ -1400,16 +1821,16 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get optionalComponentsInput() {
-    return this._optionalComponents
+    return this._optionalComponents;
   }
 
   // override_properties - computed: false, optional: true, required: false
-  private _overrideProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _overrideProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get overrideProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('override_properties') as any;
   }
-  public set overrideProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set overrideProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._overrideProperties = value;
   }
   public resetOverrideProperties() {
@@ -1417,7 +1838,7 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get overridePropertiesInput() {
-    return this._overrideProperties
+    return this._overrideProperties;
   }
 }
 export interface DataprocClusterClusterConfigWorkerConfigAccelerators {
@@ -1435,7 +1856,7 @@ export interface DataprocClusterClusterConfigWorkerConfigAccelerators {
   readonly acceleratorType: string;
 }
 
-function dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigAccelerators): any {
+export function dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigAccelerators): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1467,7 +1888,7 @@ export interface DataprocClusterClusterConfigWorkerConfigDiskConfig {
   readonly numLocalSsds?: number;
 }
 
-function dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference | DataprocClusterClusterConfigWorkerConfigDiskConfig): any {
+export function dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference | DataprocClusterClusterConfigWorkerConfigDiskConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1489,12 +1910,43 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bootDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
+    }
+    if (this._bootDiskType) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskType = this._bootDiskType;
+    }
+    if (this._numLocalSsds) {
+      hasAnyValues = true;
+      internalValueResult.numLocalSsds = this._numLocalSsds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined) {
+    if (value === undefined) {
+      this._bootDiskSizeGb = undefined;
+      this._bootDiskType = undefined;
+      this._numLocalSsds = undefined;
+    }
+    else {
+      this._bootDiskSizeGb = value.bootDiskSizeGb;
+      this._bootDiskType = value.bootDiskType;
+      this._numLocalSsds = value.numLocalSsds;
+    }
+  }
+
   // boot_disk_size_gb - computed: true, optional: true, required: false
-  private _bootDiskSizeGb?: number | undefined; 
+  private _bootDiskSizeGb?: number; 
   public get bootDiskSizeGb() {
     return this.getNumberAttribute('boot_disk_size_gb');
   }
-  public set bootDiskSizeGb(value: number | undefined) {
+  public set bootDiskSizeGb(value: number) {
     this._bootDiskSizeGb = value;
   }
   public resetBootDiskSizeGb() {
@@ -1502,15 +1954,15 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskSizeGbInput() {
-    return this._bootDiskSizeGb
+    return this._bootDiskSizeGb;
   }
 
   // boot_disk_type - computed: false, optional: true, required: false
-  private _bootDiskType?: string | undefined; 
+  private _bootDiskType?: string; 
   public get bootDiskType() {
     return this.getStringAttribute('boot_disk_type');
   }
-  public set bootDiskType(value: string | undefined) {
+  public set bootDiskType(value: string) {
     this._bootDiskType = value;
   }
   public resetBootDiskType() {
@@ -1518,15 +1970,15 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiskTypeInput() {
-    return this._bootDiskType
+    return this._bootDiskType;
   }
 
   // num_local_ssds - computed: true, optional: true, required: false
-  private _numLocalSsds?: number | undefined; 
+  private _numLocalSsds?: number; 
   public get numLocalSsds() {
     return this.getNumberAttribute('num_local_ssds');
   }
-  public set numLocalSsds(value: number | undefined) {
+  public set numLocalSsds(value: number) {
     this._numLocalSsds = value;
   }
   public resetNumLocalSsds() {
@@ -1534,7 +1986,7 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get numLocalSsdsInput() {
-    return this._numLocalSsds
+    return this._numLocalSsds;
   }
 }
 export interface DataprocClusterClusterConfigWorkerConfig {
@@ -1576,7 +2028,7 @@ export interface DataprocClusterClusterConfigWorkerConfig {
   readonly diskConfig?: DataprocClusterClusterConfigWorkerConfigDiskConfig;
 }
 
-function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigOutputReference | DataprocClusterClusterConfigWorkerConfig): any {
+export function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigOutputReference | DataprocClusterClusterConfigWorkerConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1601,12 +2053,61 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfigWorkerConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._imageUri) {
+      hasAnyValues = true;
+      internalValueResult.imageUri = this._imageUri;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._minCpuPlatform) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
+    if (this._numInstances) {
+      hasAnyValues = true;
+      internalValueResult.numInstances = this._numInstances;
+    }
+    if (this._accelerators) {
+      hasAnyValues = true;
+      internalValueResult.accelerators = this._accelerators;
+    }
+    if (this._diskConfig) {
+      hasAnyValues = true;
+      internalValueResult.diskConfig = this._diskConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigWorkerConfig | undefined) {
+    if (value === undefined) {
+      this._imageUri = undefined;
+      this._machineType = undefined;
+      this._minCpuPlatform = undefined;
+      this._numInstances = undefined;
+      this._accelerators = undefined;
+      this._diskConfig.internalValue = undefined;
+    }
+    else {
+      this._imageUri = value.imageUri;
+      this._machineType = value.machineType;
+      this._minCpuPlatform = value.minCpuPlatform;
+      this._numInstances = value.numInstances;
+      this._accelerators = value.accelerators;
+      this._diskConfig.internalValue = value.diskConfig;
+    }
+  }
+
   // image_uri - computed: true, optional: true, required: false
-  private _imageUri?: string | undefined; 
+  private _imageUri?: string; 
   public get imageUri() {
     return this.getStringAttribute('image_uri');
   }
-  public set imageUri(value: string | undefined) {
+  public set imageUri(value: string) {
     this._imageUri = value;
   }
   public resetImageUri() {
@@ -1614,15 +2115,15 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get imageUriInput() {
-    return this._imageUri
+    return this._imageUri;
   }
 
   // machine_type - computed: true, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -1630,15 +2131,15 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -1646,15 +2147,15 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // num_instances - computed: true, optional: true, required: false
-  private _numInstances?: number | undefined; 
+  private _numInstances?: number; 
   public get numInstances() {
     return this.getNumberAttribute('num_instances');
   }
-  public set numInstances(value: number | undefined) {
+  public set numInstances(value: number) {
     this._numInstances = value;
   }
   public resetNumInstances() {
@@ -1662,16 +2163,16 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
-    return this._numInstances
+    return this._numInstances;
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[] | undefined; 
+  private _accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[]; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('accelerators') as any;
   }
-  public set accelerators(value: DataprocClusterClusterConfigWorkerConfigAccelerators[] | undefined) {
+  public set accelerators(value: DataprocClusterClusterConfigWorkerConfigAccelerators[]) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -1679,24 +2180,23 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get acceleratorsInput() {
-    return this._accelerators
+    return this._accelerators;
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig?: DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined; 
-  private __diskConfigOutput = new DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
   public get diskConfig() {
-    return this.__diskConfigOutput;
+    return this._diskConfig;
   }
-  public putDiskConfig(value: DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined) {
-    this._diskConfig = value;
+  public putDiskConfig(value: DataprocClusterClusterConfigWorkerConfigDiskConfig) {
+    this._diskConfig.internalValue = value;
   }
   public resetDiskConfig() {
-    this._diskConfig = undefined;
+    this._diskConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskConfigInput() {
-    return this._diskConfig
+    return this._diskConfig.internalValue;
   }
 }
 export interface DataprocClusterClusterConfig {
@@ -1768,7 +2268,7 @@ export interface DataprocClusterClusterConfig {
   readonly workerConfig?: DataprocClusterClusterConfigWorkerConfig;
 }
 
-function dataprocClusterClusterConfigToTerraform(struct?: DataprocClusterClusterConfigOutputReference | DataprocClusterClusterConfig): any {
+export function dataprocClusterClusterConfigToTerraform(struct?: DataprocClusterClusterConfigOutputReference | DataprocClusterClusterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1798,12 +2298,91 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterClusterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._stagingBucket) {
+      hasAnyValues = true;
+      internalValueResult.stagingBucket = this._stagingBucket;
+    }
+    if (this._tempBucket) {
+      hasAnyValues = true;
+      internalValueResult.tempBucket = this._tempBucket;
+    }
+    if (this._autoscalingConfig) {
+      hasAnyValues = true;
+      internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
+    }
+    if (this._encryptionConfig) {
+      hasAnyValues = true;
+      internalValueResult.encryptionConfig = this._encryptionConfig?.internalValue;
+    }
+    if (this._gceClusterConfig) {
+      hasAnyValues = true;
+      internalValueResult.gceClusterConfig = this._gceClusterConfig?.internalValue;
+    }
+    if (this._initializationAction) {
+      hasAnyValues = true;
+      internalValueResult.initializationAction = this._initializationAction;
+    }
+    if (this._masterConfig) {
+      hasAnyValues = true;
+      internalValueResult.masterConfig = this._masterConfig?.internalValue;
+    }
+    if (this._preemptibleWorkerConfig) {
+      hasAnyValues = true;
+      internalValueResult.preemptibleWorkerConfig = this._preemptibleWorkerConfig?.internalValue;
+    }
+    if (this._securityConfig) {
+      hasAnyValues = true;
+      internalValueResult.securityConfig = this._securityConfig?.internalValue;
+    }
+    if (this._softwareConfig) {
+      hasAnyValues = true;
+      internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
+    }
+    if (this._workerConfig) {
+      hasAnyValues = true;
+      internalValueResult.workerConfig = this._workerConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfig | undefined) {
+    if (value === undefined) {
+      this._stagingBucket = undefined;
+      this._tempBucket = undefined;
+      this._autoscalingConfig.internalValue = undefined;
+      this._encryptionConfig.internalValue = undefined;
+      this._gceClusterConfig.internalValue = undefined;
+      this._initializationAction = undefined;
+      this._masterConfig.internalValue = undefined;
+      this._preemptibleWorkerConfig.internalValue = undefined;
+      this._securityConfig.internalValue = undefined;
+      this._softwareConfig.internalValue = undefined;
+      this._workerConfig.internalValue = undefined;
+    }
+    else {
+      this._stagingBucket = value.stagingBucket;
+      this._tempBucket = value.tempBucket;
+      this._autoscalingConfig.internalValue = value.autoscalingConfig;
+      this._encryptionConfig.internalValue = value.encryptionConfig;
+      this._gceClusterConfig.internalValue = value.gceClusterConfig;
+      this._initializationAction = value.initializationAction;
+      this._masterConfig.internalValue = value.masterConfig;
+      this._preemptibleWorkerConfig.internalValue = value.preemptibleWorkerConfig;
+      this._securityConfig.internalValue = value.securityConfig;
+      this._softwareConfig.internalValue = value.softwareConfig;
+      this._workerConfig.internalValue = value.workerConfig;
+    }
+  }
+
   // staging_bucket - computed: false, optional: true, required: false
-  private _stagingBucket?: string | undefined; 
+  private _stagingBucket?: string; 
   public get stagingBucket() {
     return this.getStringAttribute('staging_bucket');
   }
-  public set stagingBucket(value: string | undefined) {
+  public set stagingBucket(value: string) {
     this._stagingBucket = value;
   }
   public resetStagingBucket() {
@@ -1811,15 +2390,15 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get stagingBucketInput() {
-    return this._stagingBucket
+    return this._stagingBucket;
   }
 
   // temp_bucket - computed: true, optional: true, required: false
-  private _tempBucket?: string | undefined; 
+  private _tempBucket?: string; 
   public get tempBucket() {
     return this.getStringAttribute('temp_bucket');
   }
-  public set tempBucket(value: string | undefined) {
+  public set tempBucket(value: string) {
     this._tempBucket = value;
   }
   public resetTempBucket() {
@@ -1827,67 +2406,64 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get tempBucketInput() {
-    return this._tempBucket
+    return this._tempBucket;
   }
 
   // autoscaling_config - computed: false, optional: true, required: false
-  private _autoscalingConfig?: DataprocClusterClusterConfigAutoscalingConfig | undefined; 
-  private __autoscalingConfigOutput = new DataprocClusterClusterConfigAutoscalingConfigOutputReference(this as any, "autoscaling_config", true);
+  private _autoscalingConfig = new DataprocClusterClusterConfigAutoscalingConfigOutputReference(this as any, "autoscaling_config", true);
   public get autoscalingConfig() {
-    return this.__autoscalingConfigOutput;
+    return this._autoscalingConfig;
   }
-  public putAutoscalingConfig(value: DataprocClusterClusterConfigAutoscalingConfig | undefined) {
-    this._autoscalingConfig = value;
+  public putAutoscalingConfig(value: DataprocClusterClusterConfigAutoscalingConfig) {
+    this._autoscalingConfig.internalValue = value;
   }
   public resetAutoscalingConfig() {
-    this._autoscalingConfig = undefined;
+    this._autoscalingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscalingConfigInput() {
-    return this._autoscalingConfig
+    return this._autoscalingConfig.internalValue;
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig?: DataprocClusterClusterConfigEncryptionConfig | undefined; 
-  private __encryptionConfigOutput = new DataprocClusterClusterConfigEncryptionConfigOutputReference(this as any, "encryption_config", true);
+  private _encryptionConfig = new DataprocClusterClusterConfigEncryptionConfigOutputReference(this as any, "encryption_config", true);
   public get encryptionConfig() {
-    return this.__encryptionConfigOutput;
+    return this._encryptionConfig;
   }
-  public putEncryptionConfig(value: DataprocClusterClusterConfigEncryptionConfig | undefined) {
-    this._encryptionConfig = value;
+  public putEncryptionConfig(value: DataprocClusterClusterConfigEncryptionConfig) {
+    this._encryptionConfig.internalValue = value;
   }
   public resetEncryptionConfig() {
-    this._encryptionConfig = undefined;
+    this._encryptionConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionConfigInput() {
-    return this._encryptionConfig
+    return this._encryptionConfig.internalValue;
   }
 
   // gce_cluster_config - computed: false, optional: true, required: false
-  private _gceClusterConfig?: DataprocClusterClusterConfigGceClusterConfig | undefined; 
-  private __gceClusterConfigOutput = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this as any, "gce_cluster_config", true);
+  private _gceClusterConfig = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this as any, "gce_cluster_config", true);
   public get gceClusterConfig() {
-    return this.__gceClusterConfigOutput;
+    return this._gceClusterConfig;
   }
-  public putGceClusterConfig(value: DataprocClusterClusterConfigGceClusterConfig | undefined) {
-    this._gceClusterConfig = value;
+  public putGceClusterConfig(value: DataprocClusterClusterConfigGceClusterConfig) {
+    this._gceClusterConfig.internalValue = value;
   }
   public resetGceClusterConfig() {
-    this._gceClusterConfig = undefined;
+    this._gceClusterConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gceClusterConfigInput() {
-    return this._gceClusterConfig
+    return this._gceClusterConfig.internalValue;
   }
 
   // initialization_action - computed: false, optional: true, required: false
-  private _initializationAction?: DataprocClusterClusterConfigInitializationAction[] | undefined; 
+  private _initializationAction?: DataprocClusterClusterConfigInitializationAction[]; 
   public get initializationAction() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('initialization_action') as any;
   }
-  public set initializationAction(value: DataprocClusterClusterConfigInitializationAction[] | undefined) {
+  public set initializationAction(value: DataprocClusterClusterConfigInitializationAction[]) {
     this._initializationAction = value;
   }
   public resetInitializationAction() {
@@ -1895,92 +2471,87 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get initializationActionInput() {
-    return this._initializationAction
+    return this._initializationAction;
   }
 
   // master_config - computed: false, optional: true, required: false
-  private _masterConfig?: DataprocClusterClusterConfigMasterConfig | undefined; 
-  private __masterConfigOutput = new DataprocClusterClusterConfigMasterConfigOutputReference(this as any, "master_config", true);
+  private _masterConfig = new DataprocClusterClusterConfigMasterConfigOutputReference(this as any, "master_config", true);
   public get masterConfig() {
-    return this.__masterConfigOutput;
+    return this._masterConfig;
   }
-  public putMasterConfig(value: DataprocClusterClusterConfigMasterConfig | undefined) {
-    this._masterConfig = value;
+  public putMasterConfig(value: DataprocClusterClusterConfigMasterConfig) {
+    this._masterConfig.internalValue = value;
   }
   public resetMasterConfig() {
-    this._masterConfig = undefined;
+    this._masterConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get masterConfigInput() {
-    return this._masterConfig
+    return this._masterConfig.internalValue;
   }
 
   // preemptible_worker_config - computed: false, optional: true, required: false
-  private _preemptibleWorkerConfig?: DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined; 
-  private __preemptibleWorkerConfigOutput = new DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(this as any, "preemptible_worker_config", true);
+  private _preemptibleWorkerConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(this as any, "preemptible_worker_config", true);
   public get preemptibleWorkerConfig() {
-    return this.__preemptibleWorkerConfigOutput;
+    return this._preemptibleWorkerConfig;
   }
-  public putPreemptibleWorkerConfig(value: DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined) {
-    this._preemptibleWorkerConfig = value;
+  public putPreemptibleWorkerConfig(value: DataprocClusterClusterConfigPreemptibleWorkerConfig) {
+    this._preemptibleWorkerConfig.internalValue = value;
   }
   public resetPreemptibleWorkerConfig() {
-    this._preemptibleWorkerConfig = undefined;
+    this._preemptibleWorkerConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibleWorkerConfigInput() {
-    return this._preemptibleWorkerConfig
+    return this._preemptibleWorkerConfig.internalValue;
   }
 
   // security_config - computed: false, optional: true, required: false
-  private _securityConfig?: DataprocClusterClusterConfigSecurityConfig | undefined; 
-  private __securityConfigOutput = new DataprocClusterClusterConfigSecurityConfigOutputReference(this as any, "security_config", true);
+  private _securityConfig = new DataprocClusterClusterConfigSecurityConfigOutputReference(this as any, "security_config", true);
   public get securityConfig() {
-    return this.__securityConfigOutput;
+    return this._securityConfig;
   }
-  public putSecurityConfig(value: DataprocClusterClusterConfigSecurityConfig | undefined) {
-    this._securityConfig = value;
+  public putSecurityConfig(value: DataprocClusterClusterConfigSecurityConfig) {
+    this._securityConfig.internalValue = value;
   }
   public resetSecurityConfig() {
-    this._securityConfig = undefined;
+    this._securityConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get securityConfigInput() {
-    return this._securityConfig
+    return this._securityConfig.internalValue;
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig?: DataprocClusterClusterConfigSoftwareConfig | undefined; 
-  private __softwareConfigOutput = new DataprocClusterClusterConfigSoftwareConfigOutputReference(this as any, "software_config", true);
+  private _softwareConfig = new DataprocClusterClusterConfigSoftwareConfigOutputReference(this as any, "software_config", true);
   public get softwareConfig() {
-    return this.__softwareConfigOutput;
+    return this._softwareConfig;
   }
-  public putSoftwareConfig(value: DataprocClusterClusterConfigSoftwareConfig | undefined) {
-    this._softwareConfig = value;
+  public putSoftwareConfig(value: DataprocClusterClusterConfigSoftwareConfig) {
+    this._softwareConfig.internalValue = value;
   }
   public resetSoftwareConfig() {
-    this._softwareConfig = undefined;
+    this._softwareConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get softwareConfigInput() {
-    return this._softwareConfig
+    return this._softwareConfig.internalValue;
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig?: DataprocClusterClusterConfigWorkerConfig | undefined; 
-  private __workerConfigOutput = new DataprocClusterClusterConfigWorkerConfigOutputReference(this as any, "worker_config", true);
+  private _workerConfig = new DataprocClusterClusterConfigWorkerConfigOutputReference(this as any, "worker_config", true);
   public get workerConfig() {
-    return this.__workerConfigOutput;
+    return this._workerConfig;
   }
-  public putWorkerConfig(value: DataprocClusterClusterConfigWorkerConfig | undefined) {
-    this._workerConfig = value;
+  public putWorkerConfig(value: DataprocClusterClusterConfigWorkerConfig) {
+    this._workerConfig.internalValue = value;
   }
   public resetWorkerConfig() {
-    this._workerConfig = undefined;
+    this._workerConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get workerConfigInput() {
-    return this._workerConfig
+    return this._workerConfig.internalValue;
   }
 }
 export interface DataprocClusterTimeouts {
@@ -1998,7 +2569,7 @@ export interface DataprocClusterTimeouts {
   readonly update?: string;
 }
 
-function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeoutsOutputReference | DataprocClusterTimeouts): any {
+export function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeoutsOutputReference | DataprocClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2020,12 +2591,43 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataprocClusterTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -2033,15 +2635,15 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -2049,15 +2651,15 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -2065,7 +2667,7 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -2106,8 +2708,8 @@ export class DataprocCluster extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
-    this._clusterConfig = config.clusterConfig;
-    this._timeouts = config.timeouts;
+    this._clusterConfig.internalValue = config.clusterConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -2115,11 +2717,11 @@ export class DataprocCluster extends cdktf.TerraformResource {
   // ==========
 
   // graceful_decommission_timeout - computed: false, optional: true, required: false
-  private _gracefulDecommissionTimeout?: string | undefined; 
+  private _gracefulDecommissionTimeout?: string; 
   public get gracefulDecommissionTimeout() {
     return this.getStringAttribute('graceful_decommission_timeout');
   }
-  public set gracefulDecommissionTimeout(value: string | undefined) {
+  public set gracefulDecommissionTimeout(value: string) {
     this._gracefulDecommissionTimeout = value;
   }
   public resetGracefulDecommissionTimeout() {
@@ -2127,7 +2729,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get gracefulDecommissionTimeoutInput() {
-    return this._gracefulDecommissionTimeout
+    return this._gracefulDecommissionTimeout;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2136,12 +2738,12 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -2149,7 +2751,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2162,15 +2764,15 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -2178,15 +2780,15 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -2194,41 +2796,39 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // cluster_config - computed: false, optional: true, required: false
-  private _clusterConfig?: DataprocClusterClusterConfig | undefined; 
-  private __clusterConfigOutput = new DataprocClusterClusterConfigOutputReference(this as any, "cluster_config", true);
+  private _clusterConfig = new DataprocClusterClusterConfigOutputReference(this as any, "cluster_config", true);
   public get clusterConfig() {
-    return this.__clusterConfigOutput;
+    return this._clusterConfig;
   }
-  public putClusterConfig(value: DataprocClusterClusterConfig | undefined) {
-    this._clusterConfig = value;
+  public putClusterConfig(value: DataprocClusterClusterConfig) {
+    this._clusterConfig.internalValue = value;
   }
   public resetClusterConfig() {
-    this._clusterConfig = undefined;
+    this._clusterConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clusterConfigInput() {
-    return this._clusterConfig
+    return this._clusterConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataprocClusterTimeouts | undefined; 
-  private __timeoutsOutput = new DataprocClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataprocClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataprocClusterTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataprocClusterTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2242,8 +2842,8 @@ export class DataprocCluster extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      cluster_config: dataprocClusterClusterConfigToTerraform(this._clusterConfig),
-      timeouts: dataprocClusterTimeoutsToTerraform(this._timeouts),
+      cluster_config: dataprocClusterClusterConfigToTerraform(this._clusterConfig.internalValue),
+      timeouts: dataprocClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -37,7 +37,7 @@ export interface TagsTagBindingTimeouts {
   readonly delete?: string;
 }
 
-function tagsTagBindingTimeoutsToTerraform(struct?: TagsTagBindingTimeoutsOutputReference | TagsTagBindingTimeouts): any {
+export function tagsTagBindingTimeoutsToTerraform(struct?: TagsTagBindingTimeoutsOutputReference | TagsTagBindingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -58,12 +58,37 @@ export class TagsTagBindingTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TagsTagBindingTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TagsTagBindingTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -71,15 +96,15 @@ export class TagsTagBindingTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -87,7 +112,7 @@ export class TagsTagBindingTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -125,7 +150,7 @@ export class TagsTagBinding extends cdktf.TerraformResource {
     });
     this._parent = config.parent;
     this._tagValue = config.tagValue;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -152,7 +177,7 @@ export class TagsTagBinding extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // tag_value - computed: false, optional: false, required: true
@@ -165,24 +190,23 @@ export class TagsTagBinding extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagValueInput() {
-    return this._tagValue
+    return this._tagValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: TagsTagBindingTimeouts | undefined; 
-  private __timeoutsOutput = new TagsTagBindingTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TagsTagBindingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: TagsTagBindingTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: TagsTagBindingTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -193,7 +217,7 @@ export class TagsTagBinding extends cdktf.TerraformResource {
     return {
       parent: cdktf.stringToTerraform(this._parent),
       tag_value: cdktf.stringToTerraform(this._tagValue),
-      timeouts: tagsTagBindingTimeoutsToTerraform(this._timeouts),
+      timeouts: tagsTagBindingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

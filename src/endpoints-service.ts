@@ -116,7 +116,7 @@ export interface EndpointsServiceTimeouts {
   readonly update?: string;
 }
 
-function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeoutsOutputReference | EndpointsServiceTimeouts): any {
+export function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTimeoutsOutputReference | EndpointsServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -138,12 +138,43 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EndpointsServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EndpointsServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -151,15 +182,15 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -167,15 +198,15 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -183,7 +214,7 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -224,7 +255,7 @@ export class EndpointsService extends cdktf.TerraformResource {
     this._project = config.project;
     this._protocOutputBase64 = config.protocOutputBase64;
     this._serviceName = config.serviceName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -252,11 +283,11 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // grpc_config - computed: false, optional: true, required: false
-  private _grpcConfig?: string | undefined; 
+  private _grpcConfig?: string; 
   public get grpcConfig() {
     return this.getStringAttribute('grpc_config');
   }
-  public set grpcConfig(value: string | undefined) {
+  public set grpcConfig(value: string) {
     this._grpcConfig = value;
   }
   public resetGrpcConfig() {
@@ -264,7 +295,7 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get grpcConfigInput() {
-    return this._grpcConfig
+    return this._grpcConfig;
   }
 
   // id - computed: true, optional: true, required: false
@@ -273,11 +304,11 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // openapi_config - computed: false, optional: true, required: false
-  private _openapiConfig?: string | undefined; 
+  private _openapiConfig?: string; 
   public get openapiConfig() {
     return this.getStringAttribute('openapi_config');
   }
-  public set openapiConfig(value: string | undefined) {
+  public set openapiConfig(value: string) {
     this._openapiConfig = value;
   }
   public resetOpenapiConfig() {
@@ -285,15 +316,15 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get openapiConfigInput() {
-    return this._openapiConfig
+    return this._openapiConfig;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -301,15 +332,15 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // protoc_output_base64 - computed: false, optional: true, required: false
-  private _protocOutputBase64?: string | undefined; 
+  private _protocOutputBase64?: string; 
   public get protocOutputBase64() {
     return this.getStringAttribute('protoc_output_base64');
   }
-  public set protocOutputBase64(value: string | undefined) {
+  public set protocOutputBase64(value: string) {
     this._protocOutputBase64 = value;
   }
   public resetProtocOutputBase64() {
@@ -317,7 +348,7 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocOutputBase64Input() {
-    return this._protocOutputBase64
+    return this._protocOutputBase64;
   }
 
   // service_name - computed: false, optional: false, required: true
@@ -330,24 +361,23 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNameInput() {
-    return this._serviceName
+    return this._serviceName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EndpointsServiceTimeouts | undefined; 
-  private __timeoutsOutput = new EndpointsServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EndpointsServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: EndpointsServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: EndpointsServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -361,7 +391,7 @@ export class EndpointsService extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       protoc_output_base64: cdktf.stringToTerraform(this._protocOutputBase64),
       service_name: cdktf.stringToTerraform(this._serviceName),
-      timeouts: endpointsServiceTimeoutsToTerraform(this._timeouts),
+      timeouts: endpointsServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

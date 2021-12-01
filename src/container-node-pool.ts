@@ -113,7 +113,7 @@ export interface ContainerNodePoolAutoscaling {
   readonly minNodeCount: number;
 }
 
-function containerNodePoolAutoscalingToTerraform(struct?: ContainerNodePoolAutoscalingOutputReference | ContainerNodePoolAutoscaling): any {
+export function containerNodePoolAutoscalingToTerraform(struct?: ContainerNodePoolAutoscalingOutputReference | ContainerNodePoolAutoscaling): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -134,6 +134,31 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolAutoscaling | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxNodeCount) {
+      hasAnyValues = true;
+      internalValueResult.maxNodeCount = this._maxNodeCount;
+    }
+    if (this._minNodeCount) {
+      hasAnyValues = true;
+      internalValueResult.minNodeCount = this._minNodeCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolAutoscaling | undefined) {
+    if (value === undefined) {
+      this._maxNodeCount = undefined;
+      this._minNodeCount = undefined;
+    }
+    else {
+      this._maxNodeCount = value.maxNodeCount;
+      this._minNodeCount = value.minNodeCount;
+    }
+  }
+
   // max_node_count - computed: false, optional: false, required: true
   private _maxNodeCount?: number; 
   public get maxNodeCount() {
@@ -144,7 +169,7 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxNodeCountInput() {
-    return this._maxNodeCount
+    return this._maxNodeCount;
   }
 
   // min_node_count - computed: false, optional: false, required: true
@@ -157,7 +182,7 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get minNodeCountInput() {
-    return this._minNodeCount
+    return this._minNodeCount;
   }
 }
 export interface ContainerNodePoolManagement {
@@ -175,7 +200,7 @@ export interface ContainerNodePoolManagement {
   readonly autoUpgrade?: boolean | cdktf.IResolvable;
 }
 
-function containerNodePoolManagementToTerraform(struct?: ContainerNodePoolManagementOutputReference | ContainerNodePoolManagement): any {
+export function containerNodePoolManagementToTerraform(struct?: ContainerNodePoolManagementOutputReference | ContainerNodePoolManagement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,12 +221,37 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolManagement | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._autoRepair) {
+      hasAnyValues = true;
+      internalValueResult.autoRepair = this._autoRepair;
+    }
+    if (this._autoUpgrade) {
+      hasAnyValues = true;
+      internalValueResult.autoUpgrade = this._autoUpgrade;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolManagement | undefined) {
+    if (value === undefined) {
+      this._autoRepair = undefined;
+      this._autoUpgrade = undefined;
+    }
+    else {
+      this._autoRepair = value.autoRepair;
+      this._autoUpgrade = value.autoUpgrade;
+    }
+  }
+
   // auto_repair - computed: false, optional: true, required: false
-  private _autoRepair?: boolean | cdktf.IResolvable | undefined; 
+  private _autoRepair?: boolean | cdktf.IResolvable; 
   public get autoRepair() {
     return this.getBooleanAttribute('auto_repair') as any;
   }
-  public set autoRepair(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoRepair(value: boolean | cdktf.IResolvable) {
     this._autoRepair = value;
   }
   public resetAutoRepair() {
@@ -209,15 +259,15 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get autoRepairInput() {
-    return this._autoRepair
+    return this._autoRepair;
   }
 
   // auto_upgrade - computed: false, optional: true, required: false
-  private _autoUpgrade?: boolean | cdktf.IResolvable | undefined; 
+  private _autoUpgrade?: boolean | cdktf.IResolvable; 
   public get autoUpgrade() {
     return this.getBooleanAttribute('auto_upgrade') as any;
   }
-  public set autoUpgrade(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoUpgrade(value: boolean | cdktf.IResolvable) {
     this._autoUpgrade = value;
   }
   public resetAutoUpgrade() {
@@ -225,7 +275,7 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get autoUpgradeInput() {
-    return this._autoUpgrade
+    return this._autoUpgrade;
   }
 }
 export interface ContainerNodePoolNodeConfigGuestAccelerator {
@@ -243,7 +293,7 @@ export interface ContainerNodePoolNodeConfigGuestAccelerator {
   readonly type?: string;
 }
 
-function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: ContainerNodePoolNodeConfigGuestAccelerator): any {
+export function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: ContainerNodePoolNodeConfigGuestAccelerator): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -270,7 +320,7 @@ export interface ContainerNodePoolNodeConfigTaint {
   readonly value?: string;
 }
 
-function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolNodeConfigTaint): any {
+export function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolNodeConfigTaint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -297,7 +347,7 @@ export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
 }
 
-function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference | ContainerNodePoolNodeConfigShieldedInstanceConfig): any {
+export function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference | ContainerNodePoolNodeConfigShieldedInstanceConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -318,12 +368,37 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableIntegrityMonitoring) {
+      hasAnyValues = true;
+      internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
+    }
+    if (this._enableSecureBoot) {
+      hasAnyValues = true;
+      internalValueResult.enableSecureBoot = this._enableSecureBoot;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined) {
+    if (value === undefined) {
+      this._enableIntegrityMonitoring = undefined;
+      this._enableSecureBoot = undefined;
+    }
+    else {
+      this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
+      this._enableSecureBoot = value.enableSecureBoot;
+    }
+  }
+
   // enable_integrity_monitoring - computed: false, optional: true, required: false
-  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable | undefined; 
+  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
     return this.getBooleanAttribute('enable_integrity_monitoring') as any;
   }
-  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
   }
   public resetEnableIntegrityMonitoring() {
@@ -331,15 +406,15 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get enableIntegrityMonitoringInput() {
-    return this._enableIntegrityMonitoring
+    return this._enableIntegrityMonitoring;
   }
 
   // enable_secure_boot - computed: false, optional: true, required: false
-  private _enableSecureBoot?: boolean | cdktf.IResolvable | undefined; 
+  private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
     return this.getBooleanAttribute('enable_secure_boot') as any;
   }
-  public set enableSecureBoot(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
   }
   public resetEnableSecureBoot() {
@@ -347,7 +422,7 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get enableSecureBootInput() {
-    return this._enableSecureBoot
+    return this._enableSecureBoot;
   }
 }
 export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
@@ -365,7 +440,7 @@ export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
   readonly nodeMetadata?: string;
 }
 
-function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference | ContainerNodePoolNodeConfigWorkloadMetadataConfig): any {
+export function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference | ContainerNodePoolNodeConfigWorkloadMetadataConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -386,12 +461,37 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._nodeMetadata) {
+      hasAnyValues = true;
+      internalValueResult.nodeMetadata = this._nodeMetadata;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined) {
+    if (value === undefined) {
+      this._mode = undefined;
+      this._nodeMetadata = undefined;
+    }
+    else {
+      this._mode = value.mode;
+      this._nodeMetadata = value.nodeMetadata;
+    }
+  }
+
   // mode - computed: true, optional: true, required: false
-  private _mode?: string | undefined; 
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string) {
     this._mode = value;
   }
   public resetMode() {
@@ -399,15 +499,15 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // node_metadata - computed: true, optional: true, required: false
-  private _nodeMetadata?: string | undefined; 
+  private _nodeMetadata?: string; 
   public get nodeMetadata() {
     return this.getStringAttribute('node_metadata');
   }
-  public set nodeMetadata(value: string | undefined) {
+  public set nodeMetadata(value: string) {
     this._nodeMetadata = value;
   }
   public resetNodeMetadata() {
@@ -415,7 +515,7 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get nodeMetadataInput() {
-    return this._nodeMetadata
+    return this._nodeMetadata;
   }
 }
 export interface ContainerNodePoolNodeConfig {
@@ -517,7 +617,7 @@ export interface ContainerNodePoolNodeConfig {
   readonly workloadMetadataConfig?: ContainerNodePoolNodeConfigWorkloadMetadataConfig;
 }
 
-function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoolNodeConfigOutputReference | ContainerNodePoolNodeConfig): any {
+export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoolNodeConfigOutputReference | ContainerNodePoolNodeConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -552,12 +652,121 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolNodeConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._diskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._diskType) {
+      hasAnyValues = true;
+      internalValueResult.diskType = this._diskType;
+    }
+    if (this._guestAccelerator) {
+      hasAnyValues = true;
+      internalValueResult.guestAccelerator = this._guestAccelerator;
+    }
+    if (this._imageType) {
+      hasAnyValues = true;
+      internalValueResult.imageType = this._imageType;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    if (this._localSsdCount) {
+      hasAnyValues = true;
+      internalValueResult.localSsdCount = this._localSsdCount;
+    }
+    if (this._machineType) {
+      hasAnyValues = true;
+      internalValueResult.machineType = this._machineType;
+    }
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._minCpuPlatform) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
+    if (this._oauthScopes) {
+      hasAnyValues = true;
+      internalValueResult.oauthScopes = this._oauthScopes;
+    }
+    if (this._preemptible) {
+      hasAnyValues = true;
+      internalValueResult.preemptible = this._preemptible;
+    }
+    if (this._serviceAccount) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccount = this._serviceAccount;
+    }
+    if (this._tags) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._taint) {
+      hasAnyValues = true;
+      internalValueResult.taint = this._taint;
+    }
+    if (this._shieldedInstanceConfig) {
+      hasAnyValues = true;
+      internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
+    }
+    if (this._workloadMetadataConfig) {
+      hasAnyValues = true;
+      internalValueResult.workloadMetadataConfig = this._workloadMetadataConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfig | undefined) {
+    if (value === undefined) {
+      this._diskSizeGb = undefined;
+      this._diskType = undefined;
+      this._guestAccelerator = undefined;
+      this._imageType = undefined;
+      this._labels = undefined;
+      this._localSsdCount = undefined;
+      this._machineType = undefined;
+      this._metadata = undefined;
+      this._minCpuPlatform = undefined;
+      this._oauthScopes = undefined;
+      this._preemptible = undefined;
+      this._serviceAccount = undefined;
+      this._tags = undefined;
+      this._taint = undefined;
+      this._shieldedInstanceConfig.internalValue = undefined;
+      this._workloadMetadataConfig.internalValue = undefined;
+    }
+    else {
+      this._diskSizeGb = value.diskSizeGb;
+      this._diskType = value.diskType;
+      this._guestAccelerator = value.guestAccelerator;
+      this._imageType = value.imageType;
+      this._labels = value.labels;
+      this._localSsdCount = value.localSsdCount;
+      this._machineType = value.machineType;
+      this._metadata = value.metadata;
+      this._minCpuPlatform = value.minCpuPlatform;
+      this._oauthScopes = value.oauthScopes;
+      this._preemptible = value.preemptible;
+      this._serviceAccount = value.serviceAccount;
+      this._tags = value.tags;
+      this._taint = value.taint;
+      this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
+      this._workloadMetadataConfig.internalValue = value.workloadMetadataConfig;
+    }
+  }
+
   // disk_size_gb - computed: true, optional: true, required: false
-  private _diskSizeGb?: number | undefined; 
+  private _diskSizeGb?: number; 
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
   }
-  public set diskSizeGb(value: number | undefined) {
+  public set diskSizeGb(value: number) {
     this._diskSizeGb = value;
   }
   public resetDiskSizeGb() {
@@ -565,15 +774,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
-    return this._diskSizeGb
+    return this._diskSizeGb;
   }
 
   // disk_type - computed: true, optional: true, required: false
-  private _diskType?: string | undefined; 
+  private _diskType?: string; 
   public get diskType() {
     return this.getStringAttribute('disk_type');
   }
-  public set diskType(value: string | undefined) {
+  public set diskType(value: string) {
     this._diskType = value;
   }
   public resetDiskType() {
@@ -581,16 +790,16 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get diskTypeInput() {
-    return this._diskType
+    return this._diskType;
   }
 
   // guest_accelerator - computed: true, optional: true, required: false
-  private _guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[] | undefined; 
+  private _guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[]; 
   public get guestAccelerator() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('guest_accelerator') as any;
   }
-  public set guestAccelerator(value: ContainerNodePoolNodeConfigGuestAccelerator[] | undefined) {
+  public set guestAccelerator(value: ContainerNodePoolNodeConfigGuestAccelerator[]) {
     this._guestAccelerator = value;
   }
   public resetGuestAccelerator() {
@@ -598,15 +807,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get guestAcceleratorInput() {
-    return this._guestAccelerator
+    return this._guestAccelerator;
   }
 
   // image_type - computed: true, optional: true, required: false
-  private _imageType?: string | undefined; 
+  private _imageType?: string; 
   public get imageType() {
     return this.getStringAttribute('image_type');
   }
-  public set imageType(value: string | undefined) {
+  public set imageType(value: string) {
     this._imageType = value;
   }
   public resetImageType() {
@@ -614,16 +823,16 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get imageTypeInput() {
-    return this._imageType
+    return this._imageType;
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -631,15 +840,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // local_ssd_count - computed: true, optional: true, required: false
-  private _localSsdCount?: number | undefined; 
+  private _localSsdCount?: number; 
   public get localSsdCount() {
     return this.getNumberAttribute('local_ssd_count');
   }
-  public set localSsdCount(value: number | undefined) {
+  public set localSsdCount(value: number) {
     this._localSsdCount = value;
   }
   public resetLocalSsdCount() {
@@ -647,15 +856,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get localSsdCountInput() {
-    return this._localSsdCount
+    return this._localSsdCount;
   }
 
   // machine_type - computed: true, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -663,16 +872,16 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -680,15 +889,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // min_cpu_platform - computed: false, optional: true, required: false
-  private _minCpuPlatform?: string | undefined; 
+  private _minCpuPlatform?: string; 
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
   }
-  public set minCpuPlatform(value: string | undefined) {
+  public set minCpuPlatform(value: string) {
     this._minCpuPlatform = value;
   }
   public resetMinCpuPlatform() {
@@ -696,15 +905,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get minCpuPlatformInput() {
-    return this._minCpuPlatform
+    return this._minCpuPlatform;
   }
 
   // oauth_scopes - computed: true, optional: true, required: false
-  private _oauthScopes?: string[] | undefined; 
+  private _oauthScopes?: string[]; 
   public get oauthScopes() {
     return this.getListAttribute('oauth_scopes');
   }
-  public set oauthScopes(value: string[] | undefined) {
+  public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
   }
   public resetOauthScopes() {
@@ -712,15 +921,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get oauthScopesInput() {
-    return this._oauthScopes
+    return this._oauthScopes;
   }
 
   // preemptible - computed: false, optional: true, required: false
-  private _preemptible?: boolean | cdktf.IResolvable | undefined; 
+  private _preemptible?: boolean | cdktf.IResolvable; 
   public get preemptible() {
     return this.getBooleanAttribute('preemptible') as any;
   }
-  public set preemptible(value: boolean | cdktf.IResolvable | undefined) {
+  public set preemptible(value: boolean | cdktf.IResolvable) {
     this._preemptible = value;
   }
   public resetPreemptible() {
@@ -728,15 +937,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get preemptibleInput() {
-    return this._preemptible
+    return this._preemptible;
   }
 
   // service_account - computed: true, optional: true, required: false
-  private _serviceAccount?: string | undefined; 
+  private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
   }
-  public set serviceAccount(value: string | undefined) {
+  public set serviceAccount(value: string) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -744,15 +953,15 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
-    return this._serviceAccount
+    return this._serviceAccount;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -760,16 +969,16 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // taint - computed: true, optional: true, required: false
-  private _taint?: ContainerNodePoolNodeConfigTaint[] | undefined; 
+  private _taint?: ContainerNodePoolNodeConfigTaint[]; 
   public get taint() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('taint') as any;
   }
-  public set taint(value: ContainerNodePoolNodeConfigTaint[] | undefined) {
+  public set taint(value: ContainerNodePoolNodeConfigTaint[]) {
     this._taint = value;
   }
   public resetTaint() {
@@ -777,41 +986,39 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get taintInput() {
-    return this._taint
+    return this._taint;
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig?: ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined; 
-  private __shieldedInstanceConfigOutput = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
-    return this.__shieldedInstanceConfigOutput;
+    return this._shieldedInstanceConfig;
   }
-  public putShieldedInstanceConfig(value: ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined) {
-    this._shieldedInstanceConfig = value;
+  public putShieldedInstanceConfig(value: ContainerNodePoolNodeConfigShieldedInstanceConfig) {
+    this._shieldedInstanceConfig.internalValue = value;
   }
   public resetShieldedInstanceConfig() {
-    this._shieldedInstanceConfig = undefined;
+    this._shieldedInstanceConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get shieldedInstanceConfigInput() {
-    return this._shieldedInstanceConfig
+    return this._shieldedInstanceConfig.internalValue;
   }
 
   // workload_metadata_config - computed: false, optional: true, required: false
-  private _workloadMetadataConfig?: ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined; 
-  private __workloadMetadataConfigOutput = new ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(this as any, "workload_metadata_config", true);
+  private _workloadMetadataConfig = new ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(this as any, "workload_metadata_config", true);
   public get workloadMetadataConfig() {
-    return this.__workloadMetadataConfigOutput;
+    return this._workloadMetadataConfig;
   }
-  public putWorkloadMetadataConfig(value: ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined) {
-    this._workloadMetadataConfig = value;
+  public putWorkloadMetadataConfig(value: ContainerNodePoolNodeConfigWorkloadMetadataConfig) {
+    this._workloadMetadataConfig.internalValue = value;
   }
   public resetWorkloadMetadataConfig() {
-    this._workloadMetadataConfig = undefined;
+    this._workloadMetadataConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get workloadMetadataConfigInput() {
-    return this._workloadMetadataConfig
+    return this._workloadMetadataConfig.internalValue;
   }
 }
 export interface ContainerNodePoolTimeouts {
@@ -829,7 +1036,7 @@ export interface ContainerNodePoolTimeouts {
   readonly update?: string;
 }
 
-function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolTimeoutsOutputReference | ContainerNodePoolTimeouts): any {
+export function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolTimeoutsOutputReference | ContainerNodePoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -851,12 +1058,43 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -864,15 +1102,15 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -880,15 +1118,15 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -896,7 +1134,7 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface ContainerNodePoolUpgradeSettings {
@@ -914,7 +1152,7 @@ export interface ContainerNodePoolUpgradeSettings {
   readonly maxUnavailable: number;
 }
 
-function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNodePoolUpgradeSettingsOutputReference | ContainerNodePoolUpgradeSettings): any {
+export function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNodePoolUpgradeSettingsOutputReference | ContainerNodePoolUpgradeSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -935,6 +1173,31 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerNodePoolUpgradeSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxSurge) {
+      hasAnyValues = true;
+      internalValueResult.maxSurge = this._maxSurge;
+    }
+    if (this._maxUnavailable) {
+      hasAnyValues = true;
+      internalValueResult.maxUnavailable = this._maxUnavailable;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolUpgradeSettings | undefined) {
+    if (value === undefined) {
+      this._maxSurge = undefined;
+      this._maxUnavailable = undefined;
+    }
+    else {
+      this._maxSurge = value.maxSurge;
+      this._maxUnavailable = value.maxUnavailable;
+    }
+  }
+
   // max_surge - computed: false, optional: false, required: true
   private _maxSurge?: number; 
   public get maxSurge() {
@@ -945,7 +1208,7 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get maxSurgeInput() {
-    return this._maxSurge
+    return this._maxSurge;
   }
 
   // max_unavailable - computed: false, optional: false, required: true
@@ -958,7 +1221,7 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnavailableInput() {
-    return this._maxUnavailable
+    return this._maxUnavailable;
   }
 }
 
@@ -1004,11 +1267,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
     this._nodeLocations = config.nodeLocations;
     this._project = config.project;
     this._version = config.version;
-    this._autoscaling = config.autoscaling;
-    this._management = config.management;
-    this._nodeConfig = config.nodeConfig;
-    this._timeouts = config.timeouts;
-    this._upgradeSettings = config.upgradeSettings;
+    this._autoscaling.internalValue = config.autoscaling;
+    this._management.internalValue = config.management;
+    this._nodeConfig.internalValue = config.nodeConfig;
+    this._timeouts.internalValue = config.timeouts;
+    this._upgradeSettings.internalValue = config.upgradeSettings;
   }
 
   // ==========
@@ -1025,7 +1288,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterInput() {
-    return this._cluster
+    return this._cluster;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1034,11 +1297,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // initial_node_count - computed: true, optional: true, required: false
-  private _initialNodeCount?: number | undefined; 
+  private _initialNodeCount?: number; 
   public get initialNodeCount() {
     return this.getNumberAttribute('initial_node_count');
   }
-  public set initialNodeCount(value: number | undefined) {
+  public set initialNodeCount(value: number) {
     this._initialNodeCount = value;
   }
   public resetInitialNodeCount() {
@@ -1046,7 +1309,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get initialNodeCountInput() {
-    return this._initialNodeCount
+    return this._initialNodeCount;
   }
 
   // instance_group_urls - computed: true, optional: false, required: false
@@ -1055,11 +1318,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // location - computed: true, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -1067,15 +1330,15 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // max_pods_per_node - computed: true, optional: true, required: false
-  private _maxPodsPerNode?: number | undefined; 
+  private _maxPodsPerNode?: number; 
   public get maxPodsPerNode() {
     return this.getNumberAttribute('max_pods_per_node');
   }
-  public set maxPodsPerNode(value: number | undefined) {
+  public set maxPodsPerNode(value: number) {
     this._maxPodsPerNode = value;
   }
   public resetMaxPodsPerNode() {
@@ -1083,15 +1346,15 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxPodsPerNodeInput() {
-    return this._maxPodsPerNode
+    return this._maxPodsPerNode;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -1099,15 +1362,15 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_prefix - computed: true, optional: true, required: false
-  private _namePrefix?: string | undefined; 
+  private _namePrefix?: string; 
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string) {
     this._namePrefix = value;
   }
   public resetNamePrefix() {
@@ -1115,15 +1378,15 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namePrefixInput() {
-    return this._namePrefix
+    return this._namePrefix;
   }
 
   // node_count - computed: true, optional: true, required: false
-  private _nodeCount?: number | undefined; 
+  private _nodeCount?: number; 
   public get nodeCount() {
     return this.getNumberAttribute('node_count');
   }
-  public set nodeCount(value: number | undefined) {
+  public set nodeCount(value: number) {
     this._nodeCount = value;
   }
   public resetNodeCount() {
@@ -1131,15 +1394,15 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nodeCountInput() {
-    return this._nodeCount
+    return this._nodeCount;
   }
 
   // node_locations - computed: true, optional: true, required: false
-  private _nodeLocations?: string[] | undefined; 
+  private _nodeLocations?: string[]; 
   public get nodeLocations() {
     return this.getListAttribute('node_locations');
   }
-  public set nodeLocations(value: string[] | undefined) {
+  public set nodeLocations(value: string[]) {
     this._nodeLocations = value;
   }
   public resetNodeLocations() {
@@ -1147,7 +1410,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nodeLocationsInput() {
-    return this._nodeLocations
+    return this._nodeLocations;
   }
 
   // operation - computed: true, optional: false, required: false
@@ -1156,11 +1419,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1168,15 +1431,15 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -1184,92 +1447,87 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // autoscaling - computed: false, optional: true, required: false
-  private _autoscaling?: ContainerNodePoolAutoscaling | undefined; 
-  private __autoscalingOutput = new ContainerNodePoolAutoscalingOutputReference(this as any, "autoscaling", true);
+  private _autoscaling = new ContainerNodePoolAutoscalingOutputReference(this as any, "autoscaling", true);
   public get autoscaling() {
-    return this.__autoscalingOutput;
+    return this._autoscaling;
   }
-  public putAutoscaling(value: ContainerNodePoolAutoscaling | undefined) {
-    this._autoscaling = value;
+  public putAutoscaling(value: ContainerNodePoolAutoscaling) {
+    this._autoscaling.internalValue = value;
   }
   public resetAutoscaling() {
-    this._autoscaling = undefined;
+    this._autoscaling.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscalingInput() {
-    return this._autoscaling
+    return this._autoscaling.internalValue;
   }
 
   // management - computed: false, optional: true, required: false
-  private _management?: ContainerNodePoolManagement | undefined; 
-  private __managementOutput = new ContainerNodePoolManagementOutputReference(this as any, "management", true);
+  private _management = new ContainerNodePoolManagementOutputReference(this as any, "management", true);
   public get management() {
-    return this.__managementOutput;
+    return this._management;
   }
-  public putManagement(value: ContainerNodePoolManagement | undefined) {
-    this._management = value;
+  public putManagement(value: ContainerNodePoolManagement) {
+    this._management.internalValue = value;
   }
   public resetManagement() {
-    this._management = undefined;
+    this._management.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get managementInput() {
-    return this._management
+    return this._management.internalValue;
   }
 
   // node_config - computed: false, optional: true, required: false
-  private _nodeConfig?: ContainerNodePoolNodeConfig | undefined; 
-  private __nodeConfigOutput = new ContainerNodePoolNodeConfigOutputReference(this as any, "node_config", true);
+  private _nodeConfig = new ContainerNodePoolNodeConfigOutputReference(this as any, "node_config", true);
   public get nodeConfig() {
-    return this.__nodeConfigOutput;
+    return this._nodeConfig;
   }
-  public putNodeConfig(value: ContainerNodePoolNodeConfig | undefined) {
-    this._nodeConfig = value;
+  public putNodeConfig(value: ContainerNodePoolNodeConfig) {
+    this._nodeConfig.internalValue = value;
   }
   public resetNodeConfig() {
-    this._nodeConfig = undefined;
+    this._nodeConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nodeConfigInput() {
-    return this._nodeConfig
+    return this._nodeConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ContainerNodePoolTimeouts | undefined; 
-  private __timeoutsOutput = new ContainerNodePoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerNodePoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ContainerNodePoolTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ContainerNodePoolTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings?: ContainerNodePoolUpgradeSettings | undefined; 
-  private __upgradeSettingsOutput = new ContainerNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
+  private _upgradeSettings = new ContainerNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
   public get upgradeSettings() {
-    return this.__upgradeSettingsOutput;
+    return this._upgradeSettings;
   }
-  public putUpgradeSettings(value: ContainerNodePoolUpgradeSettings | undefined) {
-    this._upgradeSettings = value;
+  public putUpgradeSettings(value: ContainerNodePoolUpgradeSettings) {
+    this._upgradeSettings.internalValue = value;
   }
   public resetUpgradeSettings() {
-    this._upgradeSettings = undefined;
+    this._upgradeSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get upgradeSettingsInput() {
-    return this._upgradeSettings
+    return this._upgradeSettings.internalValue;
   }
 
   // =========
@@ -1288,11 +1546,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       node_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeLocations),
       project: cdktf.stringToTerraform(this._project),
       version: cdktf.stringToTerraform(this._version),
-      autoscaling: containerNodePoolAutoscalingToTerraform(this._autoscaling),
-      management: containerNodePoolManagementToTerraform(this._management),
-      node_config: containerNodePoolNodeConfigToTerraform(this._nodeConfig),
-      timeouts: containerNodePoolTimeoutsToTerraform(this._timeouts),
-      upgrade_settings: containerNodePoolUpgradeSettingsToTerraform(this._upgradeSettings),
+      autoscaling: containerNodePoolAutoscalingToTerraform(this._autoscaling.internalValue),
+      management: containerNodePoolManagementToTerraform(this._management.internalValue),
+      node_config: containerNodePoolNodeConfigToTerraform(this._nodeConfig.internalValue),
+      timeouts: containerNodePoolTimeoutsToTerraform(this._timeouts.internalValue),
+      upgrade_settings: containerNodePoolUpgradeSettingsToTerraform(this._upgradeSettings.internalValue),
     };
   }
 }

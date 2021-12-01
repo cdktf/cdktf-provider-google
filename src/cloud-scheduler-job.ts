@@ -111,7 +111,7 @@ By default, the job is sent to the version which is the default version when the
   readonly version?: string;
 }
 
-function cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference | CloudSchedulerJobAppEngineHttpTargetAppEngineRouting): any {
+export function cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference | CloudSchedulerJobAppEngineHttpTargetAppEngineRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -133,12 +133,43 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._instance) {
+      hasAnyValues = true;
+      internalValueResult.instance = this._instance;
+    }
+    if (this._service) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined) {
+    if (value === undefined) {
+      this._instance = undefined;
+      this._service = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._instance = value.instance;
+      this._service = value.service;
+      this._version = value.version;
+    }
+  }
+
   // instance - computed: false, optional: true, required: false
-  private _instance?: string | undefined; 
+  private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
-  public set instance(value: string | undefined) {
+  public set instance(value: string) {
     this._instance = value;
   }
   public resetInstance() {
@@ -146,15 +177,15 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
-    return this._instance
+    return this._instance;
   }
 
   // service - computed: false, optional: true, required: false
-  private _service?: string | undefined; 
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
-  public set service(value: string | undefined) {
+  public set service(value: string) {
     this._service = value;
   }
   public resetService() {
@@ -162,15 +193,15 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -178,7 +209,7 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface CloudSchedulerJobAppEngineHttpTarget {
@@ -224,7 +255,7 @@ No spaces are allowed, and the maximum length allowed is 2083 characters
   readonly appEngineRouting?: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting;
 }
 
-function cloudSchedulerJobAppEngineHttpTargetToTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetOutputReference | CloudSchedulerJobAppEngineHttpTarget): any {
+export function cloudSchedulerJobAppEngineHttpTargetToTerraform(struct?: CloudSchedulerJobAppEngineHttpTargetOutputReference | CloudSchedulerJobAppEngineHttpTarget): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -248,12 +279,55 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobAppEngineHttpTarget | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._body) {
+      hasAnyValues = true;
+      internalValueResult.body = this._body;
+    }
+    if (this._headers) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers;
+    }
+    if (this._httpMethod) {
+      hasAnyValues = true;
+      internalValueResult.httpMethod = this._httpMethod;
+    }
+    if (this._relativeUri) {
+      hasAnyValues = true;
+      internalValueResult.relativeUri = this._relativeUri;
+    }
+    if (this._appEngineRouting) {
+      hasAnyValues = true;
+      internalValueResult.appEngineRouting = this._appEngineRouting?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobAppEngineHttpTarget | undefined) {
+    if (value === undefined) {
+      this._body = undefined;
+      this._headers = undefined;
+      this._httpMethod = undefined;
+      this._relativeUri = undefined;
+      this._appEngineRouting.internalValue = undefined;
+    }
+    else {
+      this._body = value.body;
+      this._headers = value.headers;
+      this._httpMethod = value.httpMethod;
+      this._relativeUri = value.relativeUri;
+      this._appEngineRouting.internalValue = value.appEngineRouting;
+    }
+  }
+
   // body - computed: false, optional: true, required: false
-  private _body?: string | undefined; 
+  private _body?: string; 
   public get body() {
     return this.getStringAttribute('body');
   }
-  public set body(value: string | undefined) {
+  public set body(value: string) {
     this._body = value;
   }
   public resetBody() {
@@ -261,16 +335,16 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get bodyInput() {
-    return this._body
+    return this._body;
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _headers?: { [key: string]: string } | cdktf.IResolvable; 
   public get headers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set headers(value: { [key: string]: string } | cdktf.IResolvable) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -278,15 +352,15 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers
+    return this._headers;
   }
 
   // http_method - computed: false, optional: true, required: false
-  private _httpMethod?: string | undefined; 
+  private _httpMethod?: string; 
   public get httpMethod() {
     return this.getStringAttribute('http_method');
   }
-  public set httpMethod(value: string | undefined) {
+  public set httpMethod(value: string) {
     this._httpMethod = value;
   }
   public resetHttpMethod() {
@@ -294,7 +368,7 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get httpMethodInput() {
-    return this._httpMethod
+    return this._httpMethod;
   }
 
   // relative_uri - computed: false, optional: false, required: true
@@ -307,24 +381,23 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get relativeUriInput() {
-    return this._relativeUri
+    return this._relativeUri;
   }
 
   // app_engine_routing - computed: false, optional: true, required: false
-  private _appEngineRouting?: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined; 
-  private __appEngineRoutingOutput = new CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference(this as any, "app_engine_routing", true);
+  private _appEngineRouting = new CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference(this as any, "app_engine_routing", true);
   public get appEngineRouting() {
-    return this.__appEngineRoutingOutput;
+    return this._appEngineRouting;
   }
-  public putAppEngineRouting(value: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined) {
-    this._appEngineRouting = value;
+  public putAppEngineRouting(value: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting) {
+    this._appEngineRouting.internalValue = value;
   }
   public resetAppEngineRouting() {
-    this._appEngineRouting = undefined;
+    this._appEngineRouting.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get appEngineRoutingInput() {
-    return this._appEngineRouting
+    return this._appEngineRouting.internalValue;
   }
 }
 export interface CloudSchedulerJobHttpTargetOauthToken {
@@ -344,7 +417,7 @@ The service account must be within the same project as the job.
   readonly serviceAccountEmail: string;
 }
 
-function cloudSchedulerJobHttpTargetOauthTokenToTerraform(struct?: CloudSchedulerJobHttpTargetOauthTokenOutputReference | CloudSchedulerJobHttpTargetOauthToken): any {
+export function cloudSchedulerJobHttpTargetOauthTokenToTerraform(struct?: CloudSchedulerJobHttpTargetOauthTokenOutputReference | CloudSchedulerJobHttpTargetOauthToken): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -365,12 +438,37 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobHttpTargetOauthToken | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._scope) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    if (this._serviceAccountEmail) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobHttpTargetOauthToken | undefined) {
+    if (value === undefined) {
+      this._scope = undefined;
+      this._serviceAccountEmail = undefined;
+    }
+    else {
+      this._scope = value.scope;
+      this._serviceAccountEmail = value.serviceAccountEmail;
+    }
+  }
+
   // scope - computed: false, optional: true, required: false
-  private _scope?: string | undefined; 
+  private _scope?: string; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
-  public set scope(value: string | undefined) {
+  public set scope(value: string) {
     this._scope = value;
   }
   public resetScope() {
@@ -378,7 +476,7 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {
-    return this._scope
+    return this._scope;
   }
 
   // service_account_email - computed: false, optional: false, required: true
@@ -391,7 +489,7 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountEmailInput() {
-    return this._serviceAccountEmail
+    return this._serviceAccountEmail;
   }
 }
 export interface CloudSchedulerJobHttpTargetOidcToken {
@@ -411,7 +509,7 @@ The service account must be within the same project as the job.
   readonly serviceAccountEmail: string;
 }
 
-function cloudSchedulerJobHttpTargetOidcTokenToTerraform(struct?: CloudSchedulerJobHttpTargetOidcTokenOutputReference | CloudSchedulerJobHttpTargetOidcToken): any {
+export function cloudSchedulerJobHttpTargetOidcTokenToTerraform(struct?: CloudSchedulerJobHttpTargetOidcTokenOutputReference | CloudSchedulerJobHttpTargetOidcToken): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -432,12 +530,37 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobHttpTargetOidcToken | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._audience) {
+      hasAnyValues = true;
+      internalValueResult.audience = this._audience;
+    }
+    if (this._serviceAccountEmail) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobHttpTargetOidcToken | undefined) {
+    if (value === undefined) {
+      this._audience = undefined;
+      this._serviceAccountEmail = undefined;
+    }
+    else {
+      this._audience = value.audience;
+      this._serviceAccountEmail = value.serviceAccountEmail;
+    }
+  }
+
   // audience - computed: false, optional: true, required: false
-  private _audience?: string | undefined; 
+  private _audience?: string; 
   public get audience() {
     return this.getStringAttribute('audience');
   }
-  public set audience(value: string | undefined) {
+  public set audience(value: string) {
     this._audience = value;
   }
   public resetAudience() {
@@ -445,7 +568,7 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get audienceInput() {
-    return this._audience
+    return this._audience;
   }
 
   // service_account_email - computed: false, optional: false, required: true
@@ -458,7 +581,7 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountEmailInput() {
-    return this._serviceAccountEmail
+    return this._serviceAccountEmail;
   }
 }
 export interface CloudSchedulerJobHttpTarget {
@@ -505,7 +628,7 @@ Repeated headers are not supported, but a header value can contain commas.
   readonly oidcToken?: CloudSchedulerJobHttpTargetOidcToken;
 }
 
-function cloudSchedulerJobHttpTargetToTerraform(struct?: CloudSchedulerJobHttpTargetOutputReference | CloudSchedulerJobHttpTarget): any {
+export function cloudSchedulerJobHttpTargetToTerraform(struct?: CloudSchedulerJobHttpTargetOutputReference | CloudSchedulerJobHttpTarget): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -530,12 +653,61 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobHttpTarget | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._body) {
+      hasAnyValues = true;
+      internalValueResult.body = this._body;
+    }
+    if (this._headers) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers;
+    }
+    if (this._httpMethod) {
+      hasAnyValues = true;
+      internalValueResult.httpMethod = this._httpMethod;
+    }
+    if (this._uri) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    if (this._oauthToken) {
+      hasAnyValues = true;
+      internalValueResult.oauthToken = this._oauthToken?.internalValue;
+    }
+    if (this._oidcToken) {
+      hasAnyValues = true;
+      internalValueResult.oidcToken = this._oidcToken?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobHttpTarget | undefined) {
+    if (value === undefined) {
+      this._body = undefined;
+      this._headers = undefined;
+      this._httpMethod = undefined;
+      this._uri = undefined;
+      this._oauthToken.internalValue = undefined;
+      this._oidcToken.internalValue = undefined;
+    }
+    else {
+      this._body = value.body;
+      this._headers = value.headers;
+      this._httpMethod = value.httpMethod;
+      this._uri = value.uri;
+      this._oauthToken.internalValue = value.oauthToken;
+      this._oidcToken.internalValue = value.oidcToken;
+    }
+  }
+
   // body - computed: false, optional: true, required: false
-  private _body?: string | undefined; 
+  private _body?: string; 
   public get body() {
     return this.getStringAttribute('body');
   }
-  public set body(value: string | undefined) {
+  public set body(value: string) {
     this._body = value;
   }
   public resetBody() {
@@ -543,16 +715,16 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get bodyInput() {
-    return this._body
+    return this._body;
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _headers?: { [key: string]: string } | cdktf.IResolvable; 
   public get headers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set headers(value: { [key: string]: string } | cdktf.IResolvable) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -560,15 +732,15 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers
+    return this._headers;
   }
 
   // http_method - computed: false, optional: true, required: false
-  private _httpMethod?: string | undefined; 
+  private _httpMethod?: string; 
   public get httpMethod() {
     return this.getStringAttribute('http_method');
   }
-  public set httpMethod(value: string | undefined) {
+  public set httpMethod(value: string) {
     this._httpMethod = value;
   }
   public resetHttpMethod() {
@@ -576,7 +748,7 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get httpMethodInput() {
-    return this._httpMethod
+    return this._httpMethod;
   }
 
   // uri - computed: false, optional: false, required: true
@@ -589,41 +761,39 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get uriInput() {
-    return this._uri
+    return this._uri;
   }
 
   // oauth_token - computed: false, optional: true, required: false
-  private _oauthToken?: CloudSchedulerJobHttpTargetOauthToken | undefined; 
-  private __oauthTokenOutput = new CloudSchedulerJobHttpTargetOauthTokenOutputReference(this as any, "oauth_token", true);
+  private _oauthToken = new CloudSchedulerJobHttpTargetOauthTokenOutputReference(this as any, "oauth_token", true);
   public get oauthToken() {
-    return this.__oauthTokenOutput;
+    return this._oauthToken;
   }
-  public putOauthToken(value: CloudSchedulerJobHttpTargetOauthToken | undefined) {
-    this._oauthToken = value;
+  public putOauthToken(value: CloudSchedulerJobHttpTargetOauthToken) {
+    this._oauthToken.internalValue = value;
   }
   public resetOauthToken() {
-    this._oauthToken = undefined;
+    this._oauthToken.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get oauthTokenInput() {
-    return this._oauthToken
+    return this._oauthToken.internalValue;
   }
 
   // oidc_token - computed: false, optional: true, required: false
-  private _oidcToken?: CloudSchedulerJobHttpTargetOidcToken | undefined; 
-  private __oidcTokenOutput = new CloudSchedulerJobHttpTargetOidcTokenOutputReference(this as any, "oidc_token", true);
+  private _oidcToken = new CloudSchedulerJobHttpTargetOidcTokenOutputReference(this as any, "oidc_token", true);
   public get oidcToken() {
-    return this.__oidcTokenOutput;
+    return this._oidcToken;
   }
-  public putOidcToken(value: CloudSchedulerJobHttpTargetOidcToken | undefined) {
-    this._oidcToken = value;
+  public putOidcToken(value: CloudSchedulerJobHttpTargetOidcToken) {
+    this._oidcToken.internalValue = value;
   }
   public resetOidcToken() {
-    this._oidcToken = undefined;
+    this._oidcToken.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get oidcTokenInput() {
-    return this._oidcToken
+    return this._oidcToken.internalValue;
   }
 }
 export interface CloudSchedulerJobPubsubTarget {
@@ -654,7 +824,7 @@ PublishRequest.name, e.g. 'projects/my-project/topics/my-topic'.
   readonly topicName: string;
 }
 
-function cloudSchedulerJobPubsubTargetToTerraform(struct?: CloudSchedulerJobPubsubTargetOutputReference | CloudSchedulerJobPubsubTarget): any {
+export function cloudSchedulerJobPubsubTargetToTerraform(struct?: CloudSchedulerJobPubsubTargetOutputReference | CloudSchedulerJobPubsubTarget): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -676,13 +846,44 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobPubsubTarget | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._attributes) {
+      hasAnyValues = true;
+      internalValueResult.attributes = this._attributes;
+    }
+    if (this._data) {
+      hasAnyValues = true;
+      internalValueResult.data = this._data;
+    }
+    if (this._topicName) {
+      hasAnyValues = true;
+      internalValueResult.topicName = this._topicName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobPubsubTarget | undefined) {
+    if (value === undefined) {
+      this._attributes = undefined;
+      this._data = undefined;
+      this._topicName = undefined;
+    }
+    else {
+      this._attributes = value.attributes;
+      this._data = value.data;
+      this._topicName = value.topicName;
+    }
+  }
+
   // attributes - computed: false, optional: true, required: false
-  private _attributes?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _attributes?: { [key: string]: string } | cdktf.IResolvable; 
   public get attributes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('attributes') as any;
   }
-  public set attributes(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set attributes(value: { [key: string]: string } | cdktf.IResolvable) {
     this._attributes = value;
   }
   public resetAttributes() {
@@ -690,15 +891,15 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get attributesInput() {
-    return this._attributes
+    return this._attributes;
   }
 
   // data - computed: false, optional: true, required: false
-  private _data?: string | undefined; 
+  private _data?: string; 
   public get data() {
     return this.getStringAttribute('data');
   }
-  public set data(value: string | undefined) {
+  public set data(value: string) {
     this._data = value;
   }
   public resetData() {
@@ -706,7 +907,7 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get dataInput() {
-    return this._data
+    return this._data;
   }
 
   // topic_name - computed: false, optional: false, required: true
@@ -719,7 +920,7 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
-    return this._topicName
+    return this._topicName;
   }
 }
 export interface CloudSchedulerJobRetryConfig {
@@ -764,7 +965,7 @@ Values greater than 5 and negative values are not allowed.
   readonly retryCount?: number;
 }
 
-function cloudSchedulerJobRetryConfigToTerraform(struct?: CloudSchedulerJobRetryConfigOutputReference | CloudSchedulerJobRetryConfig): any {
+export function cloudSchedulerJobRetryConfigToTerraform(struct?: CloudSchedulerJobRetryConfigOutputReference | CloudSchedulerJobRetryConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -788,12 +989,55 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobRetryConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxBackoffDuration) {
+      hasAnyValues = true;
+      internalValueResult.maxBackoffDuration = this._maxBackoffDuration;
+    }
+    if (this._maxDoublings) {
+      hasAnyValues = true;
+      internalValueResult.maxDoublings = this._maxDoublings;
+    }
+    if (this._maxRetryDuration) {
+      hasAnyValues = true;
+      internalValueResult.maxRetryDuration = this._maxRetryDuration;
+    }
+    if (this._minBackoffDuration) {
+      hasAnyValues = true;
+      internalValueResult.minBackoffDuration = this._minBackoffDuration;
+    }
+    if (this._retryCount) {
+      hasAnyValues = true;
+      internalValueResult.retryCount = this._retryCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobRetryConfig | undefined) {
+    if (value === undefined) {
+      this._maxBackoffDuration = undefined;
+      this._maxDoublings = undefined;
+      this._maxRetryDuration = undefined;
+      this._minBackoffDuration = undefined;
+      this._retryCount = undefined;
+    }
+    else {
+      this._maxBackoffDuration = value.maxBackoffDuration;
+      this._maxDoublings = value.maxDoublings;
+      this._maxRetryDuration = value.maxRetryDuration;
+      this._minBackoffDuration = value.minBackoffDuration;
+      this._retryCount = value.retryCount;
+    }
+  }
+
   // max_backoff_duration - computed: true, optional: true, required: false
-  private _maxBackoffDuration?: string | undefined; 
+  private _maxBackoffDuration?: string; 
   public get maxBackoffDuration() {
     return this.getStringAttribute('max_backoff_duration');
   }
-  public set maxBackoffDuration(value: string | undefined) {
+  public set maxBackoffDuration(value: string) {
     this._maxBackoffDuration = value;
   }
   public resetMaxBackoffDuration() {
@@ -801,15 +1045,15 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxBackoffDurationInput() {
-    return this._maxBackoffDuration
+    return this._maxBackoffDuration;
   }
 
   // max_doublings - computed: true, optional: true, required: false
-  private _maxDoublings?: number | undefined; 
+  private _maxDoublings?: number; 
   public get maxDoublings() {
     return this.getNumberAttribute('max_doublings');
   }
-  public set maxDoublings(value: number | undefined) {
+  public set maxDoublings(value: number) {
     this._maxDoublings = value;
   }
   public resetMaxDoublings() {
@@ -817,15 +1061,15 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxDoublingsInput() {
-    return this._maxDoublings
+    return this._maxDoublings;
   }
 
   // max_retry_duration - computed: true, optional: true, required: false
-  private _maxRetryDuration?: string | undefined; 
+  private _maxRetryDuration?: string; 
   public get maxRetryDuration() {
     return this.getStringAttribute('max_retry_duration');
   }
-  public set maxRetryDuration(value: string | undefined) {
+  public set maxRetryDuration(value: string) {
     this._maxRetryDuration = value;
   }
   public resetMaxRetryDuration() {
@@ -833,15 +1077,15 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxRetryDurationInput() {
-    return this._maxRetryDuration
+    return this._maxRetryDuration;
   }
 
   // min_backoff_duration - computed: true, optional: true, required: false
-  private _minBackoffDuration?: string | undefined; 
+  private _minBackoffDuration?: string; 
   public get minBackoffDuration() {
     return this.getStringAttribute('min_backoff_duration');
   }
-  public set minBackoffDuration(value: string | undefined) {
+  public set minBackoffDuration(value: string) {
     this._minBackoffDuration = value;
   }
   public resetMinBackoffDuration() {
@@ -849,15 +1093,15 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get minBackoffDurationInput() {
-    return this._minBackoffDuration
+    return this._minBackoffDuration;
   }
 
   // retry_count - computed: true, optional: true, required: false
-  private _retryCount?: number | undefined; 
+  private _retryCount?: number; 
   public get retryCount() {
     return this.getNumberAttribute('retry_count');
   }
-  public set retryCount(value: number | undefined) {
+  public set retryCount(value: number) {
     this._retryCount = value;
   }
   public resetRetryCount() {
@@ -865,7 +1109,7 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get retryCountInput() {
-    return this._retryCount
+    return this._retryCount;
   }
 }
 export interface CloudSchedulerJobTimeouts {
@@ -883,7 +1127,7 @@ export interface CloudSchedulerJobTimeouts {
   readonly update?: string;
 }
 
-function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobTimeoutsOutputReference | CloudSchedulerJobTimeouts): any {
+export function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobTimeoutsOutputReference | CloudSchedulerJobTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -905,12 +1149,43 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CloudSchedulerJobTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudSchedulerJobTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -918,15 +1193,15 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -934,15 +1209,15 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -950,7 +1225,7 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -993,11 +1268,11 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
     this._region = config.region;
     this._schedule = config.schedule;
     this._timeZone = config.timeZone;
-    this._appEngineHttpTarget = config.appEngineHttpTarget;
-    this._httpTarget = config.httpTarget;
-    this._pubsubTarget = config.pubsubTarget;
-    this._retryConfig = config.retryConfig;
-    this._timeouts = config.timeouts;
+    this._appEngineHttpTarget.internalValue = config.appEngineHttpTarget;
+    this._httpTarget.internalValue = config.httpTarget;
+    this._pubsubTarget.internalValue = config.pubsubTarget;
+    this._retryConfig.internalValue = config.retryConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1005,11 +1280,11 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   // ==========
 
   // attempt_deadline - computed: false, optional: true, required: false
-  private _attemptDeadline?: string | undefined; 
+  private _attemptDeadline?: string; 
   public get attemptDeadline() {
     return this.getStringAttribute('attempt_deadline');
   }
-  public set attemptDeadline(value: string | undefined) {
+  public set attemptDeadline(value: string) {
     this._attemptDeadline = value;
   }
   public resetAttemptDeadline() {
@@ -1017,15 +1292,15 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get attemptDeadlineInput() {
-    return this._attemptDeadline
+    return this._attemptDeadline;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1033,7 +1308,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1051,15 +1326,15 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1067,15 +1342,15 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -1083,15 +1358,15 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule?: string | undefined; 
+  private _schedule?: string; 
   public get schedule() {
     return this.getStringAttribute('schedule');
   }
-  public set schedule(value: string | undefined) {
+  public set schedule(value: string) {
     this._schedule = value;
   }
   public resetSchedule() {
@@ -1099,15 +1374,15 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule
+    return this._schedule;
   }
 
   // time_zone - computed: false, optional: true, required: false
-  private _timeZone?: string | undefined; 
+  private _timeZone?: string; 
   public get timeZone() {
     return this.getStringAttribute('time_zone');
   }
-  public set timeZone(value: string | undefined) {
+  public set timeZone(value: string) {
     this._timeZone = value;
   }
   public resetTimeZone() {
@@ -1115,92 +1390,87 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeZoneInput() {
-    return this._timeZone
+    return this._timeZone;
   }
 
   // app_engine_http_target - computed: false, optional: true, required: false
-  private _appEngineHttpTarget?: CloudSchedulerJobAppEngineHttpTarget | undefined; 
-  private __appEngineHttpTargetOutput = new CloudSchedulerJobAppEngineHttpTargetOutputReference(this as any, "app_engine_http_target", true);
+  private _appEngineHttpTarget = new CloudSchedulerJobAppEngineHttpTargetOutputReference(this as any, "app_engine_http_target", true);
   public get appEngineHttpTarget() {
-    return this.__appEngineHttpTargetOutput;
+    return this._appEngineHttpTarget;
   }
-  public putAppEngineHttpTarget(value: CloudSchedulerJobAppEngineHttpTarget | undefined) {
-    this._appEngineHttpTarget = value;
+  public putAppEngineHttpTarget(value: CloudSchedulerJobAppEngineHttpTarget) {
+    this._appEngineHttpTarget.internalValue = value;
   }
   public resetAppEngineHttpTarget() {
-    this._appEngineHttpTarget = undefined;
+    this._appEngineHttpTarget.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get appEngineHttpTargetInput() {
-    return this._appEngineHttpTarget
+    return this._appEngineHttpTarget.internalValue;
   }
 
   // http_target - computed: false, optional: true, required: false
-  private _httpTarget?: CloudSchedulerJobHttpTarget | undefined; 
-  private __httpTargetOutput = new CloudSchedulerJobHttpTargetOutputReference(this as any, "http_target", true);
+  private _httpTarget = new CloudSchedulerJobHttpTargetOutputReference(this as any, "http_target", true);
   public get httpTarget() {
-    return this.__httpTargetOutput;
+    return this._httpTarget;
   }
-  public putHttpTarget(value: CloudSchedulerJobHttpTarget | undefined) {
-    this._httpTarget = value;
+  public putHttpTarget(value: CloudSchedulerJobHttpTarget) {
+    this._httpTarget.internalValue = value;
   }
   public resetHttpTarget() {
-    this._httpTarget = undefined;
+    this._httpTarget.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpTargetInput() {
-    return this._httpTarget
+    return this._httpTarget.internalValue;
   }
 
   // pubsub_target - computed: false, optional: true, required: false
-  private _pubsubTarget?: CloudSchedulerJobPubsubTarget | undefined; 
-  private __pubsubTargetOutput = new CloudSchedulerJobPubsubTargetOutputReference(this as any, "pubsub_target", true);
+  private _pubsubTarget = new CloudSchedulerJobPubsubTargetOutputReference(this as any, "pubsub_target", true);
   public get pubsubTarget() {
-    return this.__pubsubTargetOutput;
+    return this._pubsubTarget;
   }
-  public putPubsubTarget(value: CloudSchedulerJobPubsubTarget | undefined) {
-    this._pubsubTarget = value;
+  public putPubsubTarget(value: CloudSchedulerJobPubsubTarget) {
+    this._pubsubTarget.internalValue = value;
   }
   public resetPubsubTarget() {
-    this._pubsubTarget = undefined;
+    this._pubsubTarget.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get pubsubTargetInput() {
-    return this._pubsubTarget
+    return this._pubsubTarget.internalValue;
   }
 
   // retry_config - computed: false, optional: true, required: false
-  private _retryConfig?: CloudSchedulerJobRetryConfig | undefined; 
-  private __retryConfigOutput = new CloudSchedulerJobRetryConfigOutputReference(this as any, "retry_config", true);
+  private _retryConfig = new CloudSchedulerJobRetryConfigOutputReference(this as any, "retry_config", true);
   public get retryConfig() {
-    return this.__retryConfigOutput;
+    return this._retryConfig;
   }
-  public putRetryConfig(value: CloudSchedulerJobRetryConfig | undefined) {
-    this._retryConfig = value;
+  public putRetryConfig(value: CloudSchedulerJobRetryConfig) {
+    this._retryConfig.internalValue = value;
   }
   public resetRetryConfig() {
-    this._retryConfig = undefined;
+    this._retryConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retryConfigInput() {
-    return this._retryConfig
+    return this._retryConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CloudSchedulerJobTimeouts | undefined; 
-  private __timeoutsOutput = new CloudSchedulerJobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudSchedulerJobTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CloudSchedulerJobTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CloudSchedulerJobTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1216,11 +1486,11 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       schedule: cdktf.stringToTerraform(this._schedule),
       time_zone: cdktf.stringToTerraform(this._timeZone),
-      app_engine_http_target: cloudSchedulerJobAppEngineHttpTargetToTerraform(this._appEngineHttpTarget),
-      http_target: cloudSchedulerJobHttpTargetToTerraform(this._httpTarget),
-      pubsub_target: cloudSchedulerJobPubsubTargetToTerraform(this._pubsubTarget),
-      retry_config: cloudSchedulerJobRetryConfigToTerraform(this._retryConfig),
-      timeouts: cloudSchedulerJobTimeoutsToTerraform(this._timeouts),
+      app_engine_http_target: cloudSchedulerJobAppEngineHttpTargetToTerraform(this._appEngineHttpTarget.internalValue),
+      http_target: cloudSchedulerJobHttpTargetToTerraform(this._httpTarget.internalValue),
+      pubsub_target: cloudSchedulerJobPubsubTargetToTerraform(this._pubsubTarget.internalValue),
+      retry_config: cloudSchedulerJobRetryConfigToTerraform(this._retryConfig.internalValue),
+      timeouts: cloudSchedulerJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

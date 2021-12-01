@@ -39,7 +39,7 @@ export interface AppEngineServiceNetworkSettingsNetworkSettings {
   readonly ingressTrafficAllowed?: string;
 }
 
-function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct?: AppEngineServiceNetworkSettingsNetworkSettingsOutputReference | AppEngineServiceNetworkSettingsNetworkSettings): any {
+export function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct?: AppEngineServiceNetworkSettingsNetworkSettingsOutputReference | AppEngineServiceNetworkSettingsNetworkSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,12 +59,31 @@ export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineServiceNetworkSettingsNetworkSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._ingressTrafficAllowed) {
+      hasAnyValues = true;
+      internalValueResult.ingressTrafficAllowed = this._ingressTrafficAllowed;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineServiceNetworkSettingsNetworkSettings | undefined) {
+    if (value === undefined) {
+      this._ingressTrafficAllowed = undefined;
+    }
+    else {
+      this._ingressTrafficAllowed = value.ingressTrafficAllowed;
+    }
+  }
+
   // ingress_traffic_allowed - computed: false, optional: true, required: false
-  private _ingressTrafficAllowed?: string | undefined; 
+  private _ingressTrafficAllowed?: string; 
   public get ingressTrafficAllowed() {
     return this.getStringAttribute('ingress_traffic_allowed');
   }
-  public set ingressTrafficAllowed(value: string | undefined) {
+  public set ingressTrafficAllowed(value: string) {
     this._ingressTrafficAllowed = value;
   }
   public resetIngressTrafficAllowed() {
@@ -72,7 +91,7 @@ export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get ingressTrafficAllowedInput() {
-    return this._ingressTrafficAllowed
+    return this._ingressTrafficAllowed;
   }
 }
 export interface AppEngineServiceNetworkSettingsTimeouts {
@@ -90,7 +109,7 @@ export interface AppEngineServiceNetworkSettingsTimeouts {
   readonly update?: string;
 }
 
-function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineServiceNetworkSettingsTimeoutsOutputReference | AppEngineServiceNetworkSettingsTimeouts): any {
+export function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineServiceNetworkSettingsTimeoutsOutputReference | AppEngineServiceNetworkSettingsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,12 +131,43 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineServiceNetworkSettingsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineServiceNetworkSettingsTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -125,15 +175,15 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -141,15 +191,15 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -157,7 +207,7 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -195,8 +245,8 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
     });
     this._project = config.project;
     this._service = config.service;
-    this._networkSettings = config.networkSettings;
-    this._timeouts = config.timeouts;
+    this._networkSettings.internalValue = config.networkSettings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -209,11 +259,11 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -221,7 +271,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service - computed: false, optional: false, required: true
@@ -234,38 +284,36 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // network_settings - computed: false, optional: false, required: true
-  private _networkSettings?: AppEngineServiceNetworkSettingsNetworkSettings; 
-  private __networkSettingsOutput = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this as any, "network_settings", true);
+  private _networkSettings = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this as any, "network_settings", true);
   public get networkSettings() {
-    return this.__networkSettingsOutput;
+    return this._networkSettings;
   }
   public putNetworkSettings(value: AppEngineServiceNetworkSettingsNetworkSettings) {
-    this._networkSettings = value;
+    this._networkSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get networkSettingsInput() {
-    return this._networkSettings
+    return this._networkSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineServiceNetworkSettingsTimeouts | undefined; 
-  private __timeoutsOutput = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppEngineServiceNetworkSettingsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppEngineServiceNetworkSettingsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -276,8 +324,8 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
     return {
       project: cdktf.stringToTerraform(this._project),
       service: cdktf.stringToTerraform(this._service),
-      network_settings: appEngineServiceNetworkSettingsNetworkSettingsToTerraform(this._networkSettings),
-      timeouts: appEngineServiceNetworkSettingsTimeoutsToTerraform(this._timeouts),
+      network_settings: appEngineServiceNetworkSettingsNetworkSettingsToTerraform(this._networkSettings.internalValue),
+      timeouts: appEngineServiceNetworkSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

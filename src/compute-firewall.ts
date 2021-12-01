@@ -191,7 +191,7 @@ icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
   readonly protocol: string;
 }
 
-function computeFirewallAllowToTerraform(struct?: ComputeFirewallAllow): any {
+export function computeFirewallAllowToTerraform(struct?: ComputeFirewallAllow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -226,7 +226,7 @@ icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
   readonly protocol: string;
 }
 
-function computeFirewallDenyToTerraform(struct?: ComputeFirewallDeny): any {
+export function computeFirewallDenyToTerraform(struct?: ComputeFirewallDeny): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -246,7 +246,7 @@ export interface ComputeFirewallLogConfig {
   readonly metadata: string;
 }
 
-function computeFirewallLogConfigToTerraform(struct?: ComputeFirewallLogConfigOutputReference | ComputeFirewallLogConfig): any {
+export function computeFirewallLogConfigToTerraform(struct?: ComputeFirewallLogConfigOutputReference | ComputeFirewallLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -266,6 +266,25 @@ export class ComputeFirewallLogConfigOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeFirewallLogConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallLogConfig | undefined) {
+    if (value === undefined) {
+      this._metadata = undefined;
+    }
+    else {
+      this._metadata = value.metadata;
+    }
+  }
+
   // metadata - computed: false, optional: false, required: true
   private _metadata?: string; 
   public get metadata() {
@@ -276,7 +295,7 @@ export class ComputeFirewallLogConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 }
 export interface ComputeFirewallTimeouts {
@@ -294,7 +313,7 @@ export interface ComputeFirewallTimeouts {
   readonly update?: string;
 }
 
-function computeFirewallTimeoutsToTerraform(struct?: ComputeFirewallTimeoutsOutputReference | ComputeFirewallTimeouts): any {
+export function computeFirewallTimeoutsToTerraform(struct?: ComputeFirewallTimeoutsOutputReference | ComputeFirewallTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -316,12 +335,43 @@ export class ComputeFirewallTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeFirewallTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -329,15 +379,15 @@ export class ComputeFirewallTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -345,15 +395,15 @@ export class ComputeFirewallTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -361,7 +411,7 @@ export class ComputeFirewallTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -413,8 +463,8 @@ export class ComputeFirewall extends cdktf.TerraformResource {
     this._targetTags = config.targetTags;
     this._allow = config.allow;
     this._deny = config.deny;
-    this._logConfig = config.logConfig;
-    this._timeouts = config.timeouts;
+    this._logConfig.internalValue = config.logConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -427,11 +477,11 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -439,15 +489,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // destination_ranges - computed: true, optional: true, required: false
-  private _destinationRanges?: string[] | undefined; 
+  private _destinationRanges?: string[]; 
   public get destinationRanges() {
     return this.getListAttribute('destination_ranges');
   }
-  public set destinationRanges(value: string[] | undefined) {
+  public set destinationRanges(value: string[]) {
     this._destinationRanges = value;
   }
   public resetDestinationRanges() {
@@ -455,15 +505,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationRangesInput() {
-    return this._destinationRanges
+    return this._destinationRanges;
   }
 
   // direction - computed: true, optional: true, required: false
-  private _direction?: string | undefined; 
+  private _direction?: string; 
   public get direction() {
     return this.getStringAttribute('direction');
   }
-  public set direction(value: string | undefined) {
+  public set direction(value: string) {
     this._direction = value;
   }
   public resetDirection() {
@@ -471,15 +521,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get directionInput() {
-    return this._direction
+    return this._direction;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -487,15 +537,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // enable_logging - computed: true, optional: true, required: false
-  private _enableLogging?: boolean | cdktf.IResolvable | undefined; 
+  private _enableLogging?: boolean | cdktf.IResolvable; 
   public get enableLogging() {
     return this.getBooleanAttribute('enable_logging') as any;
   }
-  public set enableLogging(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableLogging(value: boolean | cdktf.IResolvable) {
     this._enableLogging = value;
   }
   public resetEnableLogging() {
@@ -503,7 +553,7 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableLoggingInput() {
-    return this._enableLogging
+    return this._enableLogging;
   }
 
   // id - computed: true, optional: true, required: false
@@ -521,7 +571,7 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: false, required: true
@@ -534,15 +584,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // priority - computed: false, optional: true, required: false
-  private _priority?: number | undefined; 
+  private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number) {
     this._priority = value;
   }
   public resetPriority() {
@@ -550,15 +600,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
-    return this._priority
+    return this._priority;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -566,7 +616,7 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -575,11 +625,11 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
 
   // source_ranges - computed: true, optional: true, required: false
-  private _sourceRanges?: string[] | undefined; 
+  private _sourceRanges?: string[]; 
   public get sourceRanges() {
     return this.getListAttribute('source_ranges');
   }
-  public set sourceRanges(value: string[] | undefined) {
+  public set sourceRanges(value: string[]) {
     this._sourceRanges = value;
   }
   public resetSourceRanges() {
@@ -587,15 +637,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceRangesInput() {
-    return this._sourceRanges
+    return this._sourceRanges;
   }
 
   // source_service_accounts - computed: false, optional: true, required: false
-  private _sourceServiceAccounts?: string[] | undefined; 
+  private _sourceServiceAccounts?: string[]; 
   public get sourceServiceAccounts() {
     return this.getListAttribute('source_service_accounts');
   }
-  public set sourceServiceAccounts(value: string[] | undefined) {
+  public set sourceServiceAccounts(value: string[]) {
     this._sourceServiceAccounts = value;
   }
   public resetSourceServiceAccounts() {
@@ -603,15 +653,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceServiceAccountsInput() {
-    return this._sourceServiceAccounts
+    return this._sourceServiceAccounts;
   }
 
   // source_tags - computed: false, optional: true, required: false
-  private _sourceTags?: string[] | undefined; 
+  private _sourceTags?: string[]; 
   public get sourceTags() {
     return this.getListAttribute('source_tags');
   }
-  public set sourceTags(value: string[] | undefined) {
+  public set sourceTags(value: string[]) {
     this._sourceTags = value;
   }
   public resetSourceTags() {
@@ -619,15 +669,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceTagsInput() {
-    return this._sourceTags
+    return this._sourceTags;
   }
 
   // target_service_accounts - computed: false, optional: true, required: false
-  private _targetServiceAccounts?: string[] | undefined; 
+  private _targetServiceAccounts?: string[]; 
   public get targetServiceAccounts() {
     return this.getListAttribute('target_service_accounts');
   }
-  public set targetServiceAccounts(value: string[] | undefined) {
+  public set targetServiceAccounts(value: string[]) {
     this._targetServiceAccounts = value;
   }
   public resetTargetServiceAccounts() {
@@ -635,15 +685,15 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetServiceAccountsInput() {
-    return this._targetServiceAccounts
+    return this._targetServiceAccounts;
   }
 
   // target_tags - computed: false, optional: true, required: false
-  private _targetTags?: string[] | undefined; 
+  private _targetTags?: string[]; 
   public get targetTags() {
     return this.getListAttribute('target_tags');
   }
-  public set targetTags(value: string[] | undefined) {
+  public set targetTags(value: string[]) {
     this._targetTags = value;
   }
   public resetTargetTags() {
@@ -651,16 +701,16 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetTagsInput() {
-    return this._targetTags
+    return this._targetTags;
   }
 
   // allow - computed: false, optional: true, required: false
-  private _allow?: ComputeFirewallAllow[] | undefined; 
+  private _allow?: ComputeFirewallAllow[]; 
   public get allow() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allow') as any;
   }
-  public set allow(value: ComputeFirewallAllow[] | undefined) {
+  public set allow(value: ComputeFirewallAllow[]) {
     this._allow = value;
   }
   public resetAllow() {
@@ -668,16 +718,16 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowInput() {
-    return this._allow
+    return this._allow;
   }
 
   // deny - computed: false, optional: true, required: false
-  private _deny?: ComputeFirewallDeny[] | undefined; 
+  private _deny?: ComputeFirewallDeny[]; 
   public get deny() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('deny') as any;
   }
-  public set deny(value: ComputeFirewallDeny[] | undefined) {
+  public set deny(value: ComputeFirewallDeny[]) {
     this._deny = value;
   }
   public resetDeny() {
@@ -685,41 +735,39 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get denyInput() {
-    return this._deny
+    return this._deny;
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: ComputeFirewallLogConfig | undefined; 
-  private __logConfigOutput = new ComputeFirewallLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeFirewallLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.__logConfigOutput;
+    return this._logConfig;
   }
-  public putLogConfig(value: ComputeFirewallLogConfig | undefined) {
-    this._logConfig = value;
+  public putLogConfig(value: ComputeFirewallLogConfig) {
+    this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
-    this._logConfig = undefined;
+    this._logConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logConfigInput() {
-    return this._logConfig
+    return this._logConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeFirewallTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeFirewallTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeFirewallTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeFirewallTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeFirewallTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -744,8 +792,8 @@ export class ComputeFirewall extends cdktf.TerraformResource {
       target_tags: cdktf.listMapper(cdktf.stringToTerraform)(this._targetTags),
       allow: cdktf.listMapper(computeFirewallAllowToTerraform)(this._allow),
       deny: cdktf.listMapper(computeFirewallDenyToTerraform)(this._deny),
-      log_config: computeFirewallLogConfigToTerraform(this._logConfig),
-      timeouts: computeFirewallTimeoutsToTerraform(this._timeouts),
+      log_config: computeFirewallLogConfigToTerraform(this._logConfig.internalValue),
+      timeouts: computeFirewallTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

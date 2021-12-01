@@ -182,7 +182,7 @@ returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_IN
   readonly perSeriesAligner?: string;
 }
 
-function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentAggregations): any {
+export function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentAggregations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -214,7 +214,7 @@ condition to be triggered.
   readonly percent?: number;
 }
 
-function monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference | MonitoringAlertPolicyConditionsConditionAbsentTrigger): any {
+export function monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference | MonitoringAlertPolicyConditionsConditionAbsentTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -235,12 +235,37 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._count) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._percent) {
+      hasAnyValues = true;
+      internalValueResult.percent = this._percent;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined) {
+    if (value === undefined) {
+      this._count = undefined;
+      this._percent = undefined;
+    }
+    else {
+      this._count = value.count;
+      this._percent = value.percent;
+    }
+  }
+
   // count - computed: false, optional: true, required: false
-  private _count?: number | undefined; 
+  private _count?: number; 
   public get count() {
     return this.getNumberAttribute('count');
   }
-  public set count(value: number | undefined) {
+  public set count(value: number) {
     this._count = value;
   }
   public resetCount() {
@@ -248,15 +273,15 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get countInput() {
-    return this._count
+    return this._count;
   }
 
   // percent - computed: false, optional: true, required: false
-  private _percent?: number | undefined; 
+  private _percent?: number; 
   public get percent() {
     return this.getNumberAttribute('percent');
   }
-  public set percent(value: number | undefined) {
+  public set percent(value: number) {
     this._percent = value;
   }
   public resetPercent() {
@@ -264,7 +289,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get percentInput() {
-    return this._percent
+    return this._percent;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionAbsent {
@@ -309,7 +334,7 @@ in length.
   readonly trigger?: MonitoringAlertPolicyConditionsConditionAbsentTrigger;
 }
 
-function monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentOutputReference | MonitoringAlertPolicyConditionsConditionAbsent): any {
+export function monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentOutputReference | MonitoringAlertPolicyConditionsConditionAbsent): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -332,6 +357,43 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsent | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._filter) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    if (this._aggregations) {
+      hasAnyValues = true;
+      internalValueResult.aggregations = this._aggregations;
+    }
+    if (this._trigger) {
+      hasAnyValues = true;
+      internalValueResult.trigger = this._trigger?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionAbsent | undefined) {
+    if (value === undefined) {
+      this._duration = undefined;
+      this._filter = undefined;
+      this._aggregations = undefined;
+      this._trigger.internalValue = undefined;
+    }
+    else {
+      this._duration = value.duration;
+      this._filter = value.filter;
+      this._aggregations = value.aggregations;
+      this._trigger.internalValue = value.trigger;
+    }
+  }
+
   // duration - computed: false, optional: false, required: true
   private _duration?: string; 
   public get duration() {
@@ -342,15 +404,15 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string | undefined; 
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string) {
     this._filter = value;
   }
   public resetFilter() {
@@ -358,16 +420,16 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // aggregations - computed: false, optional: true, required: false
-  private _aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | undefined; 
+  private _aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[]; 
   public get aggregations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('aggregations') as any;
   }
-  public set aggregations(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | undefined) {
+  public set aggregations(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations[]) {
     this._aggregations = value;
   }
   public resetAggregations() {
@@ -375,24 +437,23 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationsInput() {
-    return this._aggregations
+    return this._aggregations;
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger?: MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined; 
-  private __triggerOutput = new MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference(this as any, "trigger", true);
   public get trigger() {
-    return this.__triggerOutput;
+    return this._trigger;
   }
-  public putTrigger(value: MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined) {
-    this._trigger = value;
+  public putTrigger(value: MonitoringAlertPolicyConditionsConditionAbsentTrigger) {
+    this._trigger.internalValue = value;
   }
   public resetTrigger() {
-    this._trigger = undefined;
+    this._trigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get triggerInput() {
-    return this._trigger
+    return this._trigger.internalValue;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger {
@@ -414,7 +475,7 @@ condition to be triggered.
   readonly percent?: number;
 }
 
-function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference | MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger): any {
+export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference | MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -435,12 +496,37 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._count) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._percent) {
+      hasAnyValues = true;
+      internalValueResult.percent = this._percent;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined) {
+    if (value === undefined) {
+      this._count = undefined;
+      this._percent = undefined;
+    }
+    else {
+      this._count = value.count;
+      this._percent = value.percent;
+    }
+  }
+
   // count - computed: false, optional: true, required: false
-  private _count?: number | undefined; 
+  private _count?: number; 
   public get count() {
     return this.getNumberAttribute('count');
   }
-  public set count(value: number | undefined) {
+  public set count(value: number) {
     this._count = value;
   }
   public resetCount() {
@@ -448,15 +534,15 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
   }
   // Temporarily expose input value. Use with caution.
   public get countInput() {
-    return this._count
+    return this._count;
   }
 
   // percent - computed: false, optional: true, required: false
-  private _percent?: number | undefined; 
+  private _percent?: number; 
   public get percent() {
     return this.getNumberAttribute('percent');
   }
-  public set percent(value: number | undefined) {
+  public set percent(value: number) {
     this._percent = value;
   }
   public resetPercent() {
@@ -464,7 +550,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
   }
   // Temporarily expose input value. Use with caution.
   public get percentInput() {
-    return this._percent
+    return this._percent;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage {
@@ -502,7 +588,7 @@ alerted on quickly.
   readonly trigger?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger;
 }
 
-function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutputReference | MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage): any {
+export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutputReference | MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -524,6 +610,37 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._query) {
+      hasAnyValues = true;
+      internalValueResult.query = this._query;
+    }
+    if (this._trigger) {
+      hasAnyValues = true;
+      internalValueResult.trigger = this._trigger?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage | undefined) {
+    if (value === undefined) {
+      this._duration = undefined;
+      this._query = undefined;
+      this._trigger.internalValue = undefined;
+    }
+    else {
+      this._duration = value.duration;
+      this._query = value.query;
+      this._trigger.internalValue = value.trigger;
+    }
+  }
+
   // duration - computed: false, optional: false, required: true
   private _duration?: string; 
   public get duration() {
@@ -534,7 +651,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 
   // query - computed: false, optional: false, required: true
@@ -547,24 +664,23 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   }
   // Temporarily expose input value. Use with caution.
   public get queryInput() {
-    return this._query
+    return this._query;
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined; 
-  private __triggerOutput = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference(this as any, "trigger", true);
   public get trigger() {
-    return this.__triggerOutput;
+    return this._trigger;
   }
-  public putTrigger(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined) {
-    this._trigger = value;
+  public putTrigger(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger) {
+    this._trigger.internalValue = value;
   }
   public resetTrigger() {
-    this._trigger = undefined;
+    this._trigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get triggerInput() {
-    return this._trigger
+    return this._trigger.internalValue;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionThresholdAggregations {
@@ -663,7 +779,7 @@ returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_IN
   readonly perSeriesAligner?: string;
 }
 
-function monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdAggregations): any {
+export function monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdAggregations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -772,7 +888,7 @@ returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_IN
   readonly perSeriesAligner?: string;
 }
 
-function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations): any {
+export function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -804,7 +920,7 @@ condition to be triggered.
   readonly percent?: number;
 }
 
-function monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference | MonitoringAlertPolicyConditionsConditionThresholdTrigger): any {
+export function monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference | MonitoringAlertPolicyConditionsConditionThresholdTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -825,12 +941,37 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._count) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._percent) {
+      hasAnyValues = true;
+      internalValueResult.percent = this._percent;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined) {
+    if (value === undefined) {
+      this._count = undefined;
+      this._percent = undefined;
+    }
+    else {
+      this._count = value.count;
+      this._percent = value.percent;
+    }
+  }
+
   // count - computed: false, optional: true, required: false
-  private _count?: number | undefined; 
+  private _count?: number; 
   public get count() {
     return this.getNumberAttribute('count');
   }
-  public set count(value: number | undefined) {
+  public set count(value: number) {
     this._count = value;
   }
   public resetCount() {
@@ -838,15 +979,15 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get countInput() {
-    return this._count
+    return this._count;
   }
 
   // percent - computed: false, optional: true, required: false
-  private _percent?: number | undefined; 
+  private _percent?: number; 
   public get percent() {
     return this.getNumberAttribute('percent');
   }
-  public set percent(value: number | undefined) {
+  public set percent(value: number) {
     this._percent = value;
   }
   public resetPercent() {
@@ -854,7 +995,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get percentInput() {
-    return this._percent
+    return this._percent;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionThreshold {
@@ -955,7 +1096,7 @@ series.
   readonly trigger?: MonitoringAlertPolicyConditionsConditionThresholdTrigger;
 }
 
-function monitoringAlertPolicyConditionsConditionThresholdToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdOutputReference | MonitoringAlertPolicyConditionsConditionThreshold): any {
+export function monitoringAlertPolicyConditionsConditionThresholdToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdOutputReference | MonitoringAlertPolicyConditionsConditionThreshold): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -982,6 +1123,67 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionThreshold | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._comparison) {
+      hasAnyValues = true;
+      internalValueResult.comparison = this._comparison;
+    }
+    if (this._denominatorFilter) {
+      hasAnyValues = true;
+      internalValueResult.denominatorFilter = this._denominatorFilter;
+    }
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._filter) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    if (this._thresholdValue) {
+      hasAnyValues = true;
+      internalValueResult.thresholdValue = this._thresholdValue;
+    }
+    if (this._aggregations) {
+      hasAnyValues = true;
+      internalValueResult.aggregations = this._aggregations;
+    }
+    if (this._denominatorAggregations) {
+      hasAnyValues = true;
+      internalValueResult.denominatorAggregations = this._denominatorAggregations;
+    }
+    if (this._trigger) {
+      hasAnyValues = true;
+      internalValueResult.trigger = this._trigger?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionThreshold | undefined) {
+    if (value === undefined) {
+      this._comparison = undefined;
+      this._denominatorFilter = undefined;
+      this._duration = undefined;
+      this._filter = undefined;
+      this._thresholdValue = undefined;
+      this._aggregations = undefined;
+      this._denominatorAggregations = undefined;
+      this._trigger.internalValue = undefined;
+    }
+    else {
+      this._comparison = value.comparison;
+      this._denominatorFilter = value.denominatorFilter;
+      this._duration = value.duration;
+      this._filter = value.filter;
+      this._thresholdValue = value.thresholdValue;
+      this._aggregations = value.aggregations;
+      this._denominatorAggregations = value.denominatorAggregations;
+      this._trigger.internalValue = value.trigger;
+    }
+  }
+
   // comparison - computed: false, optional: false, required: true
   private _comparison?: string; 
   public get comparison() {
@@ -992,15 +1194,15 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get comparisonInput() {
-    return this._comparison
+    return this._comparison;
   }
 
   // denominator_filter - computed: false, optional: true, required: false
-  private _denominatorFilter?: string | undefined; 
+  private _denominatorFilter?: string; 
   public get denominatorFilter() {
     return this.getStringAttribute('denominator_filter');
   }
-  public set denominatorFilter(value: string | undefined) {
+  public set denominatorFilter(value: string) {
     this._denominatorFilter = value;
   }
   public resetDenominatorFilter() {
@@ -1008,7 +1210,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get denominatorFilterInput() {
-    return this._denominatorFilter
+    return this._denominatorFilter;
   }
 
   // duration - computed: false, optional: false, required: true
@@ -1021,15 +1223,15 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string | undefined; 
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string) {
     this._filter = value;
   }
   public resetFilter() {
@@ -1037,15 +1239,15 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // threshold_value - computed: false, optional: true, required: false
-  private _thresholdValue?: number | undefined; 
+  private _thresholdValue?: number; 
   public get thresholdValue() {
     return this.getNumberAttribute('threshold_value');
   }
-  public set thresholdValue(value: number | undefined) {
+  public set thresholdValue(value: number) {
     this._thresholdValue = value;
   }
   public resetThresholdValue() {
@@ -1053,16 +1255,16 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdValueInput() {
-    return this._thresholdValue
+    return this._thresholdValue;
   }
 
   // aggregations - computed: false, optional: true, required: false
-  private _aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | undefined; 
+  private _aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[]; 
   public get aggregations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('aggregations') as any;
   }
-  public set aggregations(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | undefined) {
+  public set aggregations(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations[]) {
     this._aggregations = value;
   }
   public resetAggregations() {
@@ -1070,16 +1272,16 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationsInput() {
-    return this._aggregations
+    return this._aggregations;
   }
 
   // denominator_aggregations - computed: false, optional: true, required: false
-  private _denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | undefined; 
+  private _denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[]; 
   public get denominatorAggregations() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('denominator_aggregations') as any;
   }
-  public set denominatorAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | undefined) {
+  public set denominatorAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[]) {
     this._denominatorAggregations = value;
   }
   public resetDenominatorAggregations() {
@@ -1087,24 +1289,23 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get denominatorAggregationsInput() {
-    return this._denominatorAggregations
+    return this._denominatorAggregations;
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger?: MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined; 
-  private __triggerOutput = new MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference(this as any, "trigger", true);
   public get trigger() {
-    return this.__triggerOutput;
+    return this._trigger;
   }
-  public putTrigger(value: MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined) {
-    this._trigger = value;
+  public putTrigger(value: MonitoringAlertPolicyConditionsConditionThresholdTrigger) {
+    this._trigger.internalValue = value;
   }
   public resetTrigger() {
-    this._trigger = undefined;
+    this._trigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get triggerInput() {
-    return this._trigger
+    return this._trigger.internalValue;
   }
 }
 export interface MonitoringAlertPolicyConditions {
@@ -1138,7 +1339,7 @@ policy.
   readonly conditionThreshold?: MonitoringAlertPolicyConditionsConditionThreshold;
 }
 
-function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAlertPolicyConditions): any {
+export function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAlertPolicyConditions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1170,7 +1371,7 @@ whichever is smaller.
   readonly mimeType?: string;
 }
 
-function monitoringAlertPolicyDocumentationToTerraform(struct?: MonitoringAlertPolicyDocumentationOutputReference | MonitoringAlertPolicyDocumentation): any {
+export function monitoringAlertPolicyDocumentationToTerraform(struct?: MonitoringAlertPolicyDocumentationOutputReference | MonitoringAlertPolicyDocumentation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1191,12 +1392,37 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyDocumentation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._content) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._mimeType) {
+      hasAnyValues = true;
+      internalValueResult.mimeType = this._mimeType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyDocumentation | undefined) {
+    if (value === undefined) {
+      this._content = undefined;
+      this._mimeType = undefined;
+    }
+    else {
+      this._content = value.content;
+      this._mimeType = value.mimeType;
+    }
+  }
+
   // content - computed: false, optional: true, required: false
-  private _content?: string | undefined; 
+  private _content?: string; 
   public get content() {
     return this.getStringAttribute('content');
   }
-  public set content(value: string | undefined) {
+  public set content(value: string) {
     this._content = value;
   }
   public resetContent() {
@@ -1204,15 +1430,15 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get contentInput() {
-    return this._content
+    return this._content;
   }
 
   // mime_type - computed: false, optional: true, required: false
-  private _mimeType?: string | undefined; 
+  private _mimeType?: string; 
   public get mimeType() {
     return this.getStringAttribute('mime_type');
   }
-  public set mimeType(value: string | undefined) {
+  public set mimeType(value: string) {
     this._mimeType = value;
   }
   public resetMimeType() {
@@ -1220,7 +1446,7 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get mimeTypeInput() {
-    return this._mimeType
+    return this._mimeType;
   }
 }
 export interface MonitoringAlertPolicyTimeouts {
@@ -1238,7 +1464,7 @@ export interface MonitoringAlertPolicyTimeouts {
   readonly update?: string;
 }
 
-function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAlertPolicyTimeoutsOutputReference | MonitoringAlertPolicyTimeouts): any {
+export function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAlertPolicyTimeoutsOutputReference | MonitoringAlertPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1260,12 +1486,43 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitoringAlertPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1273,15 +1530,15 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1289,15 +1546,15 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1305,7 +1562,7 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1348,8 +1605,8 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
     this._project = config.project;
     this._userLabels = config.userLabels;
     this._conditions = config.conditions;
-    this._documentation = config.documentation;
-    this._timeouts = config.timeouts;
+    this._documentation.internalValue = config.documentation;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1366,7 +1623,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get combinerInput() {
-    return this._combiner
+    return this._combiner;
   }
 
   // creation_record - computed: true, optional: false, required: false
@@ -1384,15 +1641,15 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -1400,7 +1657,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1414,11 +1671,11 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // notification_channels - computed: false, optional: true, required: false
-  private _notificationChannels?: string[] | undefined; 
+  private _notificationChannels?: string[]; 
   public get notificationChannels() {
     return this.getListAttribute('notification_channels');
   }
-  public set notificationChannels(value: string[] | undefined) {
+  public set notificationChannels(value: string[]) {
     this._notificationChannels = value;
   }
   public resetNotificationChannels() {
@@ -1426,15 +1683,15 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationChannelsInput() {
-    return this._notificationChannels
+    return this._notificationChannels;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -1442,16 +1699,16 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
   public get userLabels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('user_labels') as any;
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -1459,7 +1716,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get userLabelsInput() {
-    return this._userLabels
+    return this._userLabels;
   }
 
   // conditions - computed: false, optional: false, required: true
@@ -1473,41 +1730,39 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get conditionsInput() {
-    return this._conditions
+    return this._conditions;
   }
 
   // documentation - computed: false, optional: true, required: false
-  private _documentation?: MonitoringAlertPolicyDocumentation | undefined; 
-  private __documentationOutput = new MonitoringAlertPolicyDocumentationOutputReference(this as any, "documentation", true);
+  private _documentation = new MonitoringAlertPolicyDocumentationOutputReference(this as any, "documentation", true);
   public get documentation() {
-    return this.__documentationOutput;
+    return this._documentation;
   }
-  public putDocumentation(value: MonitoringAlertPolicyDocumentation | undefined) {
-    this._documentation = value;
+  public putDocumentation(value: MonitoringAlertPolicyDocumentation) {
+    this._documentation.internalValue = value;
   }
   public resetDocumentation() {
-    this._documentation = undefined;
+    this._documentation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get documentationInput() {
-    return this._documentation
+    return this._documentation.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitoringAlertPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new MonitoringAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitoringAlertPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitoringAlertPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1523,8 +1778,8 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
       conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions),
-      documentation: monitoringAlertPolicyDocumentationToTerraform(this._documentation),
-      timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts),
+      documentation: monitoringAlertPolicyDocumentationToTerraform(this._documentation.internalValue),
+      timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

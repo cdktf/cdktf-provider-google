@@ -424,11 +424,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string | undefined; 
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string) {
     this._filter = value;
   }
   public resetFilter() {
@@ -436,7 +436,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // guest_accelerator - computed: true, optional: false, required: false
@@ -485,11 +485,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // most_recent - computed: false, optional: true, required: false
-  private _mostRecent?: boolean | cdktf.IResolvable | undefined; 
+  private _mostRecent?: boolean | cdktf.IResolvable; 
   public get mostRecent() {
     return this.getBooleanAttribute('most_recent') as any;
   }
-  public set mostRecent(value: boolean | cdktf.IResolvable | undefined) {
+  public set mostRecent(value: boolean | cdktf.IResolvable) {
     this._mostRecent = value;
   }
   public resetMostRecent() {
@@ -497,15 +497,15 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get mostRecentInput() {
-    return this._mostRecent
+    return this._mostRecent;
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -513,7 +513,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_prefix - computed: true, optional: false, required: false
@@ -536,7 +536,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: false, required: false

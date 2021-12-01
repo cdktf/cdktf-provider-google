@@ -51,7 +51,7 @@ export interface AppEngineServiceSplitTrafficSplit {
   readonly shardBy?: string;
 }
 
-function appEngineServiceSplitTrafficSplitToTerraform(struct?: AppEngineServiceSplitTrafficSplitOutputReference | AppEngineServiceSplitTrafficSplit): any {
+export function appEngineServiceSplitTrafficSplitToTerraform(struct?: AppEngineServiceSplitTrafficSplitOutputReference | AppEngineServiceSplitTrafficSplit): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,6 +72,31 @@ export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineServiceSplitTrafficSplit | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allocations) {
+      hasAnyValues = true;
+      internalValueResult.allocations = this._allocations;
+    }
+    if (this._shardBy) {
+      hasAnyValues = true;
+      internalValueResult.shardBy = this._shardBy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineServiceSplitTrafficSplit | undefined) {
+    if (value === undefined) {
+      this._allocations = undefined;
+      this._shardBy = undefined;
+    }
+    else {
+      this._allocations = value.allocations;
+      this._shardBy = value.shardBy;
+    }
+  }
+
   // allocations - computed: false, optional: false, required: true
   private _allocations?: { [key: string]: string } | cdktf.IResolvable; 
   public get allocations() {
@@ -83,15 +108,15 @@ export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get allocationsInput() {
-    return this._allocations
+    return this._allocations;
   }
 
   // shard_by - computed: false, optional: true, required: false
-  private _shardBy?: string | undefined; 
+  private _shardBy?: string; 
   public get shardBy() {
     return this.getStringAttribute('shard_by');
   }
-  public set shardBy(value: string | undefined) {
+  public set shardBy(value: string) {
     this._shardBy = value;
   }
   public resetShardBy() {
@@ -99,7 +124,7 @@ export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get shardByInput() {
-    return this._shardBy
+    return this._shardBy;
   }
 }
 export interface AppEngineServiceSplitTrafficTimeouts {
@@ -117,7 +142,7 @@ export interface AppEngineServiceSplitTrafficTimeouts {
   readonly update?: string;
 }
 
-function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServiceSplitTrafficTimeoutsOutputReference | AppEngineServiceSplitTrafficTimeouts): any {
+export function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServiceSplitTrafficTimeoutsOutputReference | AppEngineServiceSplitTrafficTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -139,12 +164,43 @@ export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineServiceSplitTrafficTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineServiceSplitTrafficTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -152,15 +208,15 @@ export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -168,15 +224,15 @@ export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -184,7 +240,7 @@ export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -223,8 +279,8 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
     this._migrateTraffic = config.migrateTraffic;
     this._project = config.project;
     this._service = config.service;
-    this._split = config.split;
-    this._timeouts = config.timeouts;
+    this._split.internalValue = config.split;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -237,11 +293,11 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
 
   // migrate_traffic - computed: false, optional: true, required: false
-  private _migrateTraffic?: boolean | cdktf.IResolvable | undefined; 
+  private _migrateTraffic?: boolean | cdktf.IResolvable; 
   public get migrateTraffic() {
     return this.getBooleanAttribute('migrate_traffic') as any;
   }
-  public set migrateTraffic(value: boolean | cdktf.IResolvable | undefined) {
+  public set migrateTraffic(value: boolean | cdktf.IResolvable) {
     this._migrateTraffic = value;
   }
   public resetMigrateTraffic() {
@@ -249,15 +305,15 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get migrateTrafficInput() {
-    return this._migrateTraffic
+    return this._migrateTraffic;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -265,7 +321,7 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service - computed: false, optional: false, required: true
@@ -278,38 +334,36 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // split - computed: false, optional: false, required: true
-  private _split?: AppEngineServiceSplitTrafficSplit; 
-  private __splitOutput = new AppEngineServiceSplitTrafficSplitOutputReference(this as any, "split", true);
+  private _split = new AppEngineServiceSplitTrafficSplitOutputReference(this as any, "split", true);
   public get split() {
-    return this.__splitOutput;
+    return this._split;
   }
   public putSplit(value: AppEngineServiceSplitTrafficSplit) {
-    this._split = value;
+    this._split.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get splitInput() {
-    return this._split
+    return this._split.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineServiceSplitTrafficTimeouts | undefined; 
-  private __timeoutsOutput = new AppEngineServiceSplitTrafficTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineServiceSplitTrafficTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppEngineServiceSplitTrafficTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppEngineServiceSplitTrafficTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -321,8 +375,8 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
       migrate_traffic: cdktf.booleanToTerraform(this._migrateTraffic),
       project: cdktf.stringToTerraform(this._project),
       service: cdktf.stringToTerraform(this._service),
-      split: appEngineServiceSplitTrafficSplitToTerraform(this._split),
-      timeouts: appEngineServiceSplitTrafficTimeoutsToTerraform(this._timeouts),
+      split: appEngineServiceSplitTrafficSplitToTerraform(this._split.internalValue),
+      timeouts: appEngineServiceSplitTrafficTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

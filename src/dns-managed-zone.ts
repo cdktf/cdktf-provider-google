@@ -110,7 +110,7 @@ to sign all other types of resource record sets. Possible values: ["keySigning",
   readonly kind?: string;
 }
 
-function dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform(struct?: DnsManagedZoneDnssecConfigDefaultKeySpecs): any {
+export function dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform(struct?: DnsManagedZoneDnssecConfigDefaultKeySpecs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -151,7 +151,7 @@ non_existence can only be updated when the state is 'off'. Possible values: ["ns
   readonly defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[];
 }
 
-function dnsManagedZoneDnssecConfigToTerraform(struct?: DnsManagedZoneDnssecConfigOutputReference | DnsManagedZoneDnssecConfig): any {
+export function dnsManagedZoneDnssecConfigToTerraform(struct?: DnsManagedZoneDnssecConfigOutputReference | DnsManagedZoneDnssecConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -174,12 +174,49 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DnsManagedZoneDnssecConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kind) {
+      hasAnyValues = true;
+      internalValueResult.kind = this._kind;
+    }
+    if (this._nonExistence) {
+      hasAnyValues = true;
+      internalValueResult.nonExistence = this._nonExistence;
+    }
+    if (this._state) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    if (this._defaultKeySpecs) {
+      hasAnyValues = true;
+      internalValueResult.defaultKeySpecs = this._defaultKeySpecs;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZoneDnssecConfig | undefined) {
+    if (value === undefined) {
+      this._kind = undefined;
+      this._nonExistence = undefined;
+      this._state = undefined;
+      this._defaultKeySpecs = undefined;
+    }
+    else {
+      this._kind = value.kind;
+      this._nonExistence = value.nonExistence;
+      this._state = value.state;
+      this._defaultKeySpecs = value.defaultKeySpecs;
+    }
+  }
+
   // kind - computed: false, optional: true, required: false
-  private _kind?: string | undefined; 
+  private _kind?: string; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
-  public set kind(value: string | undefined) {
+  public set kind(value: string) {
     this._kind = value;
   }
   public resetKind() {
@@ -187,15 +224,15 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get kindInput() {
-    return this._kind
+    return this._kind;
   }
 
   // non_existence - computed: true, optional: true, required: false
-  private _nonExistence?: string | undefined; 
+  private _nonExistence?: string; 
   public get nonExistence() {
     return this.getStringAttribute('non_existence');
   }
-  public set nonExistence(value: string | undefined) {
+  public set nonExistence(value: string) {
     this._nonExistence = value;
   }
   public resetNonExistence() {
@@ -203,15 +240,15 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get nonExistenceInput() {
-    return this._nonExistence
+    return this._nonExistence;
   }
 
   // state - computed: false, optional: true, required: false
-  private _state?: string | undefined; 
+  private _state?: string; 
   public get state() {
     return this.getStringAttribute('state');
   }
-  public set state(value: string | undefined) {
+  public set state(value: string) {
     this._state = value;
   }
   public resetState() {
@@ -219,16 +256,16 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get stateInput() {
-    return this._state
+    return this._state;
   }
 
   // default_key_specs - computed: false, optional: true, required: false
-  private _defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | undefined; 
+  private _defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[]; 
   public get defaultKeySpecs() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('default_key_specs') as any;
   }
-  public set defaultKeySpecs(value: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | undefined) {
+  public set defaultKeySpecs(value: DnsManagedZoneDnssecConfigDefaultKeySpecs[]) {
     this._defaultKeySpecs = value;
   }
   public resetDefaultKeySpecs() {
@@ -236,7 +273,7 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get defaultKeySpecsInput() {
-    return this._defaultKeySpecs
+    return this._defaultKeySpecs;
   }
 }
 export interface DnsManagedZoneForwardingConfigTargetNameServers {
@@ -256,7 +293,7 @@ to the Internet. When set to 'private', Cloud DNS will always send queries throu
   readonly ipv4Address: string;
 }
 
-function dnsManagedZoneForwardingConfigTargetNameServersToTerraform(struct?: DnsManagedZoneForwardingConfigTargetNameServers): any {
+export function dnsManagedZoneForwardingConfigTargetNameServersToTerraform(struct?: DnsManagedZoneForwardingConfigTargetNameServers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -276,7 +313,7 @@ export interface DnsManagedZoneForwardingConfig {
   readonly targetNameServers: DnsManagedZoneForwardingConfigTargetNameServers[];
 }
 
-function dnsManagedZoneForwardingConfigToTerraform(struct?: DnsManagedZoneForwardingConfigOutputReference | DnsManagedZoneForwardingConfig): any {
+export function dnsManagedZoneForwardingConfigToTerraform(struct?: DnsManagedZoneForwardingConfigOutputReference | DnsManagedZoneForwardingConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -296,6 +333,25 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DnsManagedZoneForwardingConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._targetNameServers) {
+      hasAnyValues = true;
+      internalValueResult.targetNameServers = this._targetNameServers;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZoneForwardingConfig | undefined) {
+    if (value === undefined) {
+      this._targetNameServers = undefined;
+    }
+    else {
+      this._targetNameServers = value.targetNameServers;
+    }
+  }
+
   // target_name_servers - computed: false, optional: false, required: true
   private _targetNameServers?: DnsManagedZoneForwardingConfigTargetNameServers[]; 
   public get targetNameServers() {
@@ -307,7 +363,7 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get targetNameServersInput() {
-    return this._targetNameServers
+    return this._targetNameServers;
   }
 }
 export interface DnsManagedZonePeeringConfigTargetNetwork {
@@ -321,7 +377,7 @@ This should be formatted like 'projects/{project}/global/networks/{network}' or
   readonly networkUrl: string;
 }
 
-function dnsManagedZonePeeringConfigTargetNetworkToTerraform(struct?: DnsManagedZonePeeringConfigTargetNetworkOutputReference | DnsManagedZonePeeringConfigTargetNetwork): any {
+export function dnsManagedZonePeeringConfigTargetNetworkToTerraform(struct?: DnsManagedZonePeeringConfigTargetNetworkOutputReference | DnsManagedZonePeeringConfigTargetNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -341,6 +397,25 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DnsManagedZonePeeringConfigTargetNetwork | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._networkUrl) {
+      hasAnyValues = true;
+      internalValueResult.networkUrl = this._networkUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZonePeeringConfigTargetNetwork | undefined) {
+    if (value === undefined) {
+      this._networkUrl = undefined;
+    }
+    else {
+      this._networkUrl = value.networkUrl;
+    }
+  }
+
   // network_url - computed: false, optional: false, required: true
   private _networkUrl?: string; 
   public get networkUrl() {
@@ -351,7 +426,7 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get networkUrlInput() {
-    return this._networkUrl
+    return this._networkUrl;
   }
 }
 export interface DnsManagedZonePeeringConfig {
@@ -363,7 +438,7 @@ export interface DnsManagedZonePeeringConfig {
   readonly targetNetwork: DnsManagedZonePeeringConfigTargetNetwork;
 }
 
-function dnsManagedZonePeeringConfigToTerraform(struct?: DnsManagedZonePeeringConfigOutputReference | DnsManagedZonePeeringConfig): any {
+export function dnsManagedZonePeeringConfigToTerraform(struct?: DnsManagedZonePeeringConfigOutputReference | DnsManagedZonePeeringConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -383,18 +458,36 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DnsManagedZonePeeringConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._targetNetwork) {
+      hasAnyValues = true;
+      internalValueResult.targetNetwork = this._targetNetwork?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZonePeeringConfig | undefined) {
+    if (value === undefined) {
+      this._targetNetwork.internalValue = undefined;
+    }
+    else {
+      this._targetNetwork.internalValue = value.targetNetwork;
+    }
+  }
+
   // target_network - computed: false, optional: false, required: true
-  private _targetNetwork?: DnsManagedZonePeeringConfigTargetNetwork; 
-  private __targetNetworkOutput = new DnsManagedZonePeeringConfigTargetNetworkOutputReference(this as any, "target_network", true);
+  private _targetNetwork = new DnsManagedZonePeeringConfigTargetNetworkOutputReference(this as any, "target_network", true);
   public get targetNetwork() {
-    return this.__targetNetworkOutput;
+    return this._targetNetwork;
   }
   public putTargetNetwork(value: DnsManagedZonePeeringConfigTargetNetwork) {
-    this._targetNetwork = value;
+    this._targetNetwork.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get targetNetworkInput() {
-    return this._targetNetwork
+    return this._targetNetwork.internalValue;
   }
 }
 export interface DnsManagedZonePrivateVisibilityConfigNetworks {
@@ -408,7 +501,7 @@ This should be formatted like 'projects/{project}/global/networks/{network}' or
   readonly networkUrl: string;
 }
 
-function dnsManagedZonePrivateVisibilityConfigNetworksToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigNetworks): any {
+export function dnsManagedZonePrivateVisibilityConfigNetworksToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigNetworks): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -427,7 +520,7 @@ export interface DnsManagedZonePrivateVisibilityConfig {
   readonly networks: DnsManagedZonePrivateVisibilityConfigNetworks[];
 }
 
-function dnsManagedZonePrivateVisibilityConfigToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigOutputReference | DnsManagedZonePrivateVisibilityConfig): any {
+export function dnsManagedZonePrivateVisibilityConfigToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigOutputReference | DnsManagedZonePrivateVisibilityConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -447,6 +540,25 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DnsManagedZonePrivateVisibilityConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._networks) {
+      hasAnyValues = true;
+      internalValueResult.networks = this._networks;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZonePrivateVisibilityConfig | undefined) {
+    if (value === undefined) {
+      this._networks = undefined;
+    }
+    else {
+      this._networks = value.networks;
+    }
+  }
+
   // networks - computed: false, optional: false, required: true
   private _networks?: DnsManagedZonePrivateVisibilityConfigNetworks[]; 
   public get networks() {
@@ -458,7 +570,7 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get networksInput() {
-    return this._networks
+    return this._networks;
   }
 }
 export interface DnsManagedZoneTimeouts {
@@ -476,7 +588,7 @@ export interface DnsManagedZoneTimeouts {
   readonly update?: string;
 }
 
-function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeoutsOutputReference | DnsManagedZoneTimeouts): any {
+export function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeoutsOutputReference | DnsManagedZoneTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -498,12 +610,43 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DnsManagedZoneTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZoneTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -511,15 +654,15 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -527,15 +670,15 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -543,7 +686,7 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -586,11 +729,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._visibility = config.visibility;
-    this._dnssecConfig = config.dnssecConfig;
-    this._forwardingConfig = config.forwardingConfig;
-    this._peeringConfig = config.peeringConfig;
-    this._privateVisibilityConfig = config.privateVisibilityConfig;
-    this._timeouts = config.timeouts;
+    this._dnssecConfig.internalValue = config.dnssecConfig;
+    this._forwardingConfig.internalValue = config.forwardingConfig;
+    this._peeringConfig.internalValue = config.peeringConfig;
+    this._privateVisibilityConfig.internalValue = config.privateVisibilityConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -598,11 +741,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -610,7 +753,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // dns_name - computed: false, optional: false, required: true
@@ -623,15 +766,15 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsNameInput() {
-    return this._dnsName
+    return this._dnsName;
   }
 
   // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy') as any;
   }
-  public set forceDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
   }
   public resetForceDestroy() {
@@ -639,7 +782,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get forceDestroyInput() {
-    return this._forceDestroy
+    return this._forceDestroy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -648,12 +791,12 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -661,7 +804,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -674,7 +817,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_servers - computed: true, optional: false, required: false
@@ -683,11 +826,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -695,15 +838,15 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // visibility - computed: false, optional: true, required: false
-  private _visibility?: string | undefined; 
+  private _visibility?: string; 
   public get visibility() {
     return this.getStringAttribute('visibility');
   }
-  public set visibility(value: string | undefined) {
+  public set visibility(value: string) {
     this._visibility = value;
   }
   public resetVisibility() {
@@ -711,92 +854,87 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get visibilityInput() {
-    return this._visibility
+    return this._visibility;
   }
 
   // dnssec_config - computed: false, optional: true, required: false
-  private _dnssecConfig?: DnsManagedZoneDnssecConfig | undefined; 
-  private __dnssecConfigOutput = new DnsManagedZoneDnssecConfigOutputReference(this as any, "dnssec_config", true);
+  private _dnssecConfig = new DnsManagedZoneDnssecConfigOutputReference(this as any, "dnssec_config", true);
   public get dnssecConfig() {
-    return this.__dnssecConfigOutput;
+    return this._dnssecConfig;
   }
-  public putDnssecConfig(value: DnsManagedZoneDnssecConfig | undefined) {
-    this._dnssecConfig = value;
+  public putDnssecConfig(value: DnsManagedZoneDnssecConfig) {
+    this._dnssecConfig.internalValue = value;
   }
   public resetDnssecConfig() {
-    this._dnssecConfig = undefined;
+    this._dnssecConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dnssecConfigInput() {
-    return this._dnssecConfig
+    return this._dnssecConfig.internalValue;
   }
 
   // forwarding_config - computed: false, optional: true, required: false
-  private _forwardingConfig?: DnsManagedZoneForwardingConfig | undefined; 
-  private __forwardingConfigOutput = new DnsManagedZoneForwardingConfigOutputReference(this as any, "forwarding_config", true);
+  private _forwardingConfig = new DnsManagedZoneForwardingConfigOutputReference(this as any, "forwarding_config", true);
   public get forwardingConfig() {
-    return this.__forwardingConfigOutput;
+    return this._forwardingConfig;
   }
-  public putForwardingConfig(value: DnsManagedZoneForwardingConfig | undefined) {
-    this._forwardingConfig = value;
+  public putForwardingConfig(value: DnsManagedZoneForwardingConfig) {
+    this._forwardingConfig.internalValue = value;
   }
   public resetForwardingConfig() {
-    this._forwardingConfig = undefined;
+    this._forwardingConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get forwardingConfigInput() {
-    return this._forwardingConfig
+    return this._forwardingConfig.internalValue;
   }
 
   // peering_config - computed: false, optional: true, required: false
-  private _peeringConfig?: DnsManagedZonePeeringConfig | undefined; 
-  private __peeringConfigOutput = new DnsManagedZonePeeringConfigOutputReference(this as any, "peering_config", true);
+  private _peeringConfig = new DnsManagedZonePeeringConfigOutputReference(this as any, "peering_config", true);
   public get peeringConfig() {
-    return this.__peeringConfigOutput;
+    return this._peeringConfig;
   }
-  public putPeeringConfig(value: DnsManagedZonePeeringConfig | undefined) {
-    this._peeringConfig = value;
+  public putPeeringConfig(value: DnsManagedZonePeeringConfig) {
+    this._peeringConfig.internalValue = value;
   }
   public resetPeeringConfig() {
-    this._peeringConfig = undefined;
+    this._peeringConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get peeringConfigInput() {
-    return this._peeringConfig
+    return this._peeringConfig.internalValue;
   }
 
   // private_visibility_config - computed: false, optional: true, required: false
-  private _privateVisibilityConfig?: DnsManagedZonePrivateVisibilityConfig | undefined; 
-  private __privateVisibilityConfigOutput = new DnsManagedZonePrivateVisibilityConfigOutputReference(this as any, "private_visibility_config", true);
+  private _privateVisibilityConfig = new DnsManagedZonePrivateVisibilityConfigOutputReference(this as any, "private_visibility_config", true);
   public get privateVisibilityConfig() {
-    return this.__privateVisibilityConfigOutput;
+    return this._privateVisibilityConfig;
   }
-  public putPrivateVisibilityConfig(value: DnsManagedZonePrivateVisibilityConfig | undefined) {
-    this._privateVisibilityConfig = value;
+  public putPrivateVisibilityConfig(value: DnsManagedZonePrivateVisibilityConfig) {
+    this._privateVisibilityConfig.internalValue = value;
   }
   public resetPrivateVisibilityConfig() {
-    this._privateVisibilityConfig = undefined;
+    this._privateVisibilityConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateVisibilityConfigInput() {
-    return this._privateVisibilityConfig
+    return this._privateVisibilityConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DnsManagedZoneTimeouts | undefined; 
-  private __timeoutsOutput = new DnsManagedZoneTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DnsManagedZoneTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DnsManagedZoneTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DnsManagedZoneTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -812,11 +950,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       visibility: cdktf.stringToTerraform(this._visibility),
-      dnssec_config: dnsManagedZoneDnssecConfigToTerraform(this._dnssecConfig),
-      forwarding_config: dnsManagedZoneForwardingConfigToTerraform(this._forwardingConfig),
-      peering_config: dnsManagedZonePeeringConfigToTerraform(this._peeringConfig),
-      private_visibility_config: dnsManagedZonePrivateVisibilityConfigToTerraform(this._privateVisibilityConfig),
-      timeouts: dnsManagedZoneTimeoutsToTerraform(this._timeouts),
+      dnssec_config: dnsManagedZoneDnssecConfigToTerraform(this._dnssecConfig.internalValue),
+      forwarding_config: dnsManagedZoneForwardingConfigToTerraform(this._forwardingConfig.internalValue),
+      peering_config: dnsManagedZonePeeringConfigToTerraform(this._peeringConfig.internalValue),
+      private_visibility_config: dnsManagedZonePrivateVisibilityConfigToTerraform(this._privateVisibilityConfig.internalValue),
+      timeouts: dnsManagedZoneTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

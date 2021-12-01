@@ -41,7 +41,7 @@ export interface OrganizationIamAuditConfigAuditLogConfig {
   readonly logType: string;
 }
 
-function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig): any {
+export function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -114,7 +114,7 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get orgIdInput() {
-    return this._orgId
+    return this._orgId;
   }
 
   // service - computed: false, optional: false, required: true
@@ -127,7 +127,7 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 
   // audit_log_config - computed: false, optional: false, required: true
@@ -141,7 +141,7 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get auditLogConfigInput() {
-    return this._auditLogConfig
+    return this._auditLogConfig;
   }
 
   // =========

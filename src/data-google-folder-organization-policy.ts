@@ -138,7 +138,7 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
   }
   // Temporarily expose input value. Use with caution.
   public get constraintInput() {
-    return this._constraint
+    return this._constraint;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -156,7 +156,7 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
   }
   // Temporarily expose input value. Use with caution.
   public get folderInput() {
-    return this._folder
+    return this._folder;
   }
 
   // id - computed: true, optional: true, required: false

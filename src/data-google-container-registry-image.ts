@@ -73,11 +73,11 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   // ==========
 
   // digest - computed: false, optional: true, required: false
-  private _digest?: string | undefined; 
+  private _digest?: string; 
   public get digest() {
     return this.getStringAttribute('digest');
   }
-  public set digest(value: string | undefined) {
+  public set digest(value: string) {
     this._digest = value;
   }
   public resetDigest() {
@@ -85,7 +85,7 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get digestInput() {
-    return this._digest
+    return this._digest;
   }
 
   // id - computed: true, optional: true, required: false
@@ -108,15 +108,15 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -124,15 +124,15 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -140,15 +140,15 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: string | undefined; 
+  private _tag?: string; 
   public get tag() {
     return this.getStringAttribute('tag');
   }
-  public set tag(value: string | undefined) {
+  public set tag(value: string) {
     this._tag = value;
   }
   public resetTag() {
@@ -156,7 +156,7 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 
   // =========

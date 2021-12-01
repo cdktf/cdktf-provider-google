@@ -96,7 +96,7 @@ For KIND_LIST entity types: A string that can contain references to other entity
   readonly value?: string;
 }
 
-function dialogflowCxEntityTypeEntitiesToTerraform(struct?: DialogflowCxEntityTypeEntities): any {
+export function dialogflowCxEntityTypeEntitiesToTerraform(struct?: DialogflowCxEntityTypeEntities): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,7 +116,7 @@ export interface DialogflowCxEntityTypeExcludedPhrases {
   readonly value?: string;
 }
 
-function dialogflowCxEntityTypeExcludedPhrasesToTerraform(struct?: DialogflowCxEntityTypeExcludedPhrases): any {
+export function dialogflowCxEntityTypeExcludedPhrasesToTerraform(struct?: DialogflowCxEntityTypeExcludedPhrases): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -141,7 +141,7 @@ export interface DialogflowCxEntityTypeTimeouts {
   readonly update?: string;
 }
 
-function dialogflowCxEntityTypeTimeoutsToTerraform(struct?: DialogflowCxEntityTypeTimeoutsOutputReference | DialogflowCxEntityTypeTimeouts): any {
+export function dialogflowCxEntityTypeTimeoutsToTerraform(struct?: DialogflowCxEntityTypeTimeoutsOutputReference | DialogflowCxEntityTypeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -163,12 +163,43 @@ export class DialogflowCxEntityTypeTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DialogflowCxEntityTypeTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowCxEntityTypeTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -176,15 +207,15 @@ export class DialogflowCxEntityTypeTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -192,15 +223,15 @@ export class DialogflowCxEntityTypeTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -208,7 +239,7 @@ export class DialogflowCxEntityTypeTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -253,7 +284,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
     this._redact = config.redact;
     this._entities = config.entities;
     this._excludedPhrases = config.excludedPhrases;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -261,11 +292,11 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   // ==========
 
   // auto_expansion_mode - computed: false, optional: true, required: false
-  private _autoExpansionMode?: string | undefined; 
+  private _autoExpansionMode?: string; 
   public get autoExpansionMode() {
     return this.getStringAttribute('auto_expansion_mode');
   }
-  public set autoExpansionMode(value: string | undefined) {
+  public set autoExpansionMode(value: string) {
     this._autoExpansionMode = value;
   }
   public resetAutoExpansionMode() {
@@ -273,7 +304,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get autoExpansionModeInput() {
-    return this._autoExpansionMode
+    return this._autoExpansionMode;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -286,15 +317,15 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enable_fuzzy_extraction - computed: false, optional: true, required: false
-  private _enableFuzzyExtraction?: boolean | cdktf.IResolvable | undefined; 
+  private _enableFuzzyExtraction?: boolean | cdktf.IResolvable; 
   public get enableFuzzyExtraction() {
     return this.getBooleanAttribute('enable_fuzzy_extraction') as any;
   }
-  public set enableFuzzyExtraction(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableFuzzyExtraction(value: boolean | cdktf.IResolvable) {
     this._enableFuzzyExtraction = value;
   }
   public resetEnableFuzzyExtraction() {
@@ -302,7 +333,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableFuzzyExtractionInput() {
-    return this._enableFuzzyExtraction
+    return this._enableFuzzyExtraction;
   }
 
   // id - computed: true, optional: true, required: false
@@ -320,15 +351,15 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kindInput() {
-    return this._kind
+    return this._kind;
   }
 
   // language_code - computed: false, optional: true, required: false
-  private _languageCode?: string | undefined; 
+  private _languageCode?: string; 
   public get languageCode() {
     return this.getStringAttribute('language_code');
   }
-  public set languageCode(value: string | undefined) {
+  public set languageCode(value: string) {
     this._languageCode = value;
   }
   public resetLanguageCode() {
@@ -336,7 +367,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get languageCodeInput() {
-    return this._languageCode
+    return this._languageCode;
   }
 
   // name - computed: true, optional: false, required: false
@@ -345,11 +376,11 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
 
   // parent - computed: false, optional: true, required: false
-  private _parent?: string | undefined; 
+  private _parent?: string; 
   public get parent() {
     return this.getStringAttribute('parent');
   }
-  public set parent(value: string | undefined) {
+  public set parent(value: string) {
     this._parent = value;
   }
   public resetParent() {
@@ -357,15 +388,15 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
-    return this._parent
+    return this._parent;
   }
 
   // redact - computed: false, optional: true, required: false
-  private _redact?: boolean | cdktf.IResolvable | undefined; 
+  private _redact?: boolean | cdktf.IResolvable; 
   public get redact() {
     return this.getBooleanAttribute('redact') as any;
   }
-  public set redact(value: boolean | cdktf.IResolvable | undefined) {
+  public set redact(value: boolean | cdktf.IResolvable) {
     this._redact = value;
   }
   public resetRedact() {
@@ -373,7 +404,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get redactInput() {
-    return this._redact
+    return this._redact;
   }
 
   // entities - computed: false, optional: false, required: true
@@ -387,16 +418,16 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get entitiesInput() {
-    return this._entities
+    return this._entities;
   }
 
   // excluded_phrases - computed: false, optional: true, required: false
-  private _excludedPhrases?: DialogflowCxEntityTypeExcludedPhrases[] | undefined; 
+  private _excludedPhrases?: DialogflowCxEntityTypeExcludedPhrases[]; 
   public get excludedPhrases() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('excluded_phrases') as any;
   }
-  public set excludedPhrases(value: DialogflowCxEntityTypeExcludedPhrases[] | undefined) {
+  public set excludedPhrases(value: DialogflowCxEntityTypeExcludedPhrases[]) {
     this._excludedPhrases = value;
   }
   public resetExcludedPhrases() {
@@ -404,24 +435,23 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get excludedPhrasesInput() {
-    return this._excludedPhrases
+    return this._excludedPhrases;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DialogflowCxEntityTypeTimeouts | undefined; 
-  private __timeoutsOutput = new DialogflowCxEntityTypeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DialogflowCxEntityTypeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DialogflowCxEntityTypeTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DialogflowCxEntityTypeTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -439,7 +469,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
       redact: cdktf.booleanToTerraform(this._redact),
       entities: cdktf.listMapper(dialogflowCxEntityTypeEntitiesToTerraform)(this._entities),
       excluded_phrases: cdktf.listMapper(dialogflowCxEntityTypeExcludedPhrasesToTerraform)(this._excludedPhrases),
-      timeouts: dialogflowCxEntityTypeTimeoutsToTerraform(this._timeouts),
+      timeouts: dialogflowCxEntityTypeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

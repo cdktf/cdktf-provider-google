@@ -78,7 +78,7 @@ For example: gcr.io/{project_id}/{imageName}
   readonly tag?: string;
 }
 
-function notebooksEnvironmentContainerImageToTerraform(struct?: NotebooksEnvironmentContainerImageOutputReference | NotebooksEnvironmentContainerImage): any {
+export function notebooksEnvironmentContainerImageToTerraform(struct?: NotebooksEnvironmentContainerImageOutputReference | NotebooksEnvironmentContainerImage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -99,6 +99,31 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NotebooksEnvironmentContainerImage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._repository) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotebooksEnvironmentContainerImage | undefined) {
+    if (value === undefined) {
+      this._repository = undefined;
+      this._tag = undefined;
+    }
+    else {
+      this._repository = value.repository;
+      this._tag = value.tag;
+    }
+  }
+
   // repository - computed: false, optional: false, required: true
   private _repository?: string; 
   public get repository() {
@@ -109,15 +134,15 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryInput() {
-    return this._repository
+    return this._repository;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: string | undefined; 
+  private _tag?: string; 
   public get tag() {
     return this.getStringAttribute('tag');
   }
-  public set tag(value: string | undefined) {
+  public set tag(value: string) {
     this._tag = value;
   }
   public resetTag() {
@@ -125,7 +150,7 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 }
 export interface NotebooksEnvironmentTimeouts {
@@ -143,7 +168,7 @@ export interface NotebooksEnvironmentTimeouts {
   readonly update?: string;
 }
 
-function notebooksEnvironmentTimeoutsToTerraform(struct?: NotebooksEnvironmentTimeoutsOutputReference | NotebooksEnvironmentTimeouts): any {
+export function notebooksEnvironmentTimeoutsToTerraform(struct?: NotebooksEnvironmentTimeoutsOutputReference | NotebooksEnvironmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -165,12 +190,43 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NotebooksEnvironmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotebooksEnvironmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -178,15 +234,15 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -194,15 +250,15 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -210,7 +266,7 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface NotebooksEnvironmentVmImage {
@@ -235,7 +291,7 @@ Format: projects/{project_id}
   readonly project: string;
 }
 
-function notebooksEnvironmentVmImageToTerraform(struct?: NotebooksEnvironmentVmImageOutputReference | NotebooksEnvironmentVmImage): any {
+export function notebooksEnvironmentVmImageToTerraform(struct?: NotebooksEnvironmentVmImageOutputReference | NotebooksEnvironmentVmImage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -257,12 +313,43 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NotebooksEnvironmentVmImage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._imageFamily) {
+      hasAnyValues = true;
+      internalValueResult.imageFamily = this._imageFamily;
+    }
+    if (this._imageName) {
+      hasAnyValues = true;
+      internalValueResult.imageName = this._imageName;
+    }
+    if (this._project) {
+      hasAnyValues = true;
+      internalValueResult.project = this._project;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotebooksEnvironmentVmImage | undefined) {
+    if (value === undefined) {
+      this._imageFamily = undefined;
+      this._imageName = undefined;
+      this._project = undefined;
+    }
+    else {
+      this._imageFamily = value.imageFamily;
+      this._imageName = value.imageName;
+      this._project = value.project;
+    }
+  }
+
   // image_family - computed: false, optional: true, required: false
-  private _imageFamily?: string | undefined; 
+  private _imageFamily?: string; 
   public get imageFamily() {
     return this.getStringAttribute('image_family');
   }
-  public set imageFamily(value: string | undefined) {
+  public set imageFamily(value: string) {
     this._imageFamily = value;
   }
   public resetImageFamily() {
@@ -270,15 +357,15 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get imageFamilyInput() {
-    return this._imageFamily
+    return this._imageFamily;
   }
 
   // image_name - computed: false, optional: true, required: false
-  private _imageName?: string | undefined; 
+  private _imageName?: string; 
   public get imageName() {
     return this.getStringAttribute('image_name');
   }
-  public set imageName(value: string | undefined) {
+  public set imageName(value: string) {
     this._imageName = value;
   }
   public resetImageName() {
@@ -286,7 +373,7 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get imageNameInput() {
-    return this._imageName
+    return this._imageName;
   }
 
   // project - computed: false, optional: false, required: true
@@ -299,7 +386,7 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 }
 
@@ -341,9 +428,9 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
     this._name = config.name;
     this._postStartupScript = config.postStartupScript;
     this._project = config.project;
-    this._containerImage = config.containerImage;
-    this._timeouts = config.timeouts;
-    this._vmImage = config.vmImage;
+    this._containerImage.internalValue = config.containerImage;
+    this._timeouts.internalValue = config.timeouts;
+    this._vmImage.internalValue = config.vmImage;
   }
 
   // ==========
@@ -356,11 +443,11 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -368,15 +455,15 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -384,7 +471,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -402,7 +489,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -415,15 +502,15 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // post_startup_script - computed: false, optional: true, required: false
-  private _postStartupScript?: string | undefined; 
+  private _postStartupScript?: string; 
   public get postStartupScript() {
     return this.getStringAttribute('post_startup_script');
   }
-  public set postStartupScript(value: string | undefined) {
+  public set postStartupScript(value: string) {
     this._postStartupScript = value;
   }
   public resetPostStartupScript() {
@@ -431,15 +518,15 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get postStartupScriptInput() {
-    return this._postStartupScript
+    return this._postStartupScript;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -447,58 +534,55 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // container_image - computed: false, optional: true, required: false
-  private _containerImage?: NotebooksEnvironmentContainerImage | undefined; 
-  private __containerImageOutput = new NotebooksEnvironmentContainerImageOutputReference(this as any, "container_image", true);
+  private _containerImage = new NotebooksEnvironmentContainerImageOutputReference(this as any, "container_image", true);
   public get containerImage() {
-    return this.__containerImageOutput;
+    return this._containerImage;
   }
-  public putContainerImage(value: NotebooksEnvironmentContainerImage | undefined) {
-    this._containerImage = value;
+  public putContainerImage(value: NotebooksEnvironmentContainerImage) {
+    this._containerImage.internalValue = value;
   }
   public resetContainerImage() {
-    this._containerImage = undefined;
+    this._containerImage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get containerImageInput() {
-    return this._containerImage
+    return this._containerImage.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NotebooksEnvironmentTimeouts | undefined; 
-  private __timeoutsOutput = new NotebooksEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NotebooksEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NotebooksEnvironmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NotebooksEnvironmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // vm_image - computed: false, optional: true, required: false
-  private _vmImage?: NotebooksEnvironmentVmImage | undefined; 
-  private __vmImageOutput = new NotebooksEnvironmentVmImageOutputReference(this as any, "vm_image", true);
+  private _vmImage = new NotebooksEnvironmentVmImageOutputReference(this as any, "vm_image", true);
   public get vmImage() {
-    return this.__vmImageOutput;
+    return this._vmImage;
   }
-  public putVmImage(value: NotebooksEnvironmentVmImage | undefined) {
-    this._vmImage = value;
+  public putVmImage(value: NotebooksEnvironmentVmImage) {
+    this._vmImage.internalValue = value;
   }
   public resetVmImage() {
-    this._vmImage = undefined;
+    this._vmImage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vmImageInput() {
-    return this._vmImage
+    return this._vmImage.internalValue;
   }
 
   // =========
@@ -513,9 +597,9 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       post_startup_script: cdktf.stringToTerraform(this._postStartupScript),
       project: cdktf.stringToTerraform(this._project),
-      container_image: notebooksEnvironmentContainerImageToTerraform(this._containerImage),
-      timeouts: notebooksEnvironmentTimeoutsToTerraform(this._timeouts),
-      vm_image: notebooksEnvironmentVmImageToTerraform(this._vmImage),
+      container_image: notebooksEnvironmentContainerImageToTerraform(this._containerImage.internalValue),
+      timeouts: notebooksEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
+      vm_image: notebooksEnvironmentVmImageToTerraform(this._vmImage.internalValue),
     };
   }
 }

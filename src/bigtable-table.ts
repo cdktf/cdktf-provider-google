@@ -47,7 +47,7 @@ export interface BigtableTableColumnFamily {
   readonly family: string;
 }
 
-function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily): any {
+export function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,7 +116,7 @@ export class BigtableTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instanceNameInput() {
-    return this._instanceName
+    return this._instanceName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -129,15 +129,15 @@ export class BigtableTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -145,15 +145,15 @@ export class BigtableTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // split_keys - computed: false, optional: true, required: false
-  private _splitKeys?: string[] | undefined; 
+  private _splitKeys?: string[]; 
   public get splitKeys() {
     return this.getListAttribute('split_keys');
   }
-  public set splitKeys(value: string[] | undefined) {
+  public set splitKeys(value: string[]) {
     this._splitKeys = value;
   }
   public resetSplitKeys() {
@@ -161,16 +161,16 @@ export class BigtableTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get splitKeysInput() {
-    return this._splitKeys
+    return this._splitKeys;
   }
 
   // column_family - computed: false, optional: true, required: false
-  private _columnFamily?: BigtableTableColumnFamily[] | undefined; 
+  private _columnFamily?: BigtableTableColumnFamily[]; 
   public get columnFamily() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('column_family') as any;
   }
-  public set columnFamily(value: BigtableTableColumnFamily[] | undefined) {
+  public set columnFamily(value: BigtableTableColumnFamily[]) {
     this._columnFamily = value;
   }
   public resetColumnFamily() {
@@ -178,7 +178,7 @@ export class BigtableTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get columnFamilyInput() {
-    return this._columnFamily
+    return this._columnFamily;
   }
 
   // =========

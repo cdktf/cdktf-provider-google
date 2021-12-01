@@ -121,7 +121,7 @@ the schema as returned by the API.
   readonly name?: string;
 }
 
-function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArguments): any {
+export function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArguments): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -149,7 +149,7 @@ export interface BigqueryRoutineTimeouts {
   readonly update?: string;
 }
 
-function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeoutsOutputReference | BigqueryRoutineTimeouts): any {
+export function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeoutsOutputReference | BigqueryRoutineTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -171,12 +171,43 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigqueryRoutineTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryRoutineTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -184,15 +215,15 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -200,15 +231,15 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -216,7 +247,7 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -263,7 +294,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
     this._routineId = config.routineId;
     this._routineType = config.routineType;
     this._arguments = config.arguments;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -285,7 +316,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetIdInput() {
-    return this._datasetId
+    return this._datasetId;
   }
 
   // definition_body - computed: false, optional: false, required: true
@@ -298,15 +329,15 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get definitionBodyInput() {
-    return this._definitionBody
+    return this._definitionBody;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -314,15 +345,15 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // determinism_level - computed: false, optional: true, required: false
-  private _determinismLevel?: string | undefined; 
+  private _determinismLevel?: string; 
   public get determinismLevel() {
     return this.getStringAttribute('determinism_level');
   }
-  public set determinismLevel(value: string | undefined) {
+  public set determinismLevel(value: string) {
     this._determinismLevel = value;
   }
   public resetDeterminismLevel() {
@@ -330,7 +361,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get determinismLevelInput() {
-    return this._determinismLevel
+    return this._determinismLevel;
   }
 
   // id - computed: true, optional: true, required: false
@@ -339,11 +370,11 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
 
   // imported_libraries - computed: false, optional: true, required: false
-  private _importedLibraries?: string[] | undefined; 
+  private _importedLibraries?: string[]; 
   public get importedLibraries() {
     return this.getListAttribute('imported_libraries');
   }
-  public set importedLibraries(value: string[] | undefined) {
+  public set importedLibraries(value: string[]) {
     this._importedLibraries = value;
   }
   public resetImportedLibraries() {
@@ -351,15 +382,15 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get importedLibrariesInput() {
-    return this._importedLibraries
+    return this._importedLibraries;
   }
 
   // language - computed: false, optional: true, required: false
-  private _language?: string | undefined; 
+  private _language?: string; 
   public get language() {
     return this.getStringAttribute('language');
   }
-  public set language(value: string | undefined) {
+  public set language(value: string) {
     this._language = value;
   }
   public resetLanguage() {
@@ -367,7 +398,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get languageInput() {
-    return this._language
+    return this._language;
   }
 
   // last_modified_time - computed: true, optional: false, required: false
@@ -376,11 +407,11 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -388,15 +419,15 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // return_type - computed: false, optional: true, required: false
-  private _returnType?: string | undefined; 
+  private _returnType?: string; 
   public get returnType() {
     return this.getStringAttribute('return_type');
   }
-  public set returnType(value: string | undefined) {
+  public set returnType(value: string) {
     this._returnType = value;
   }
   public resetReturnType() {
@@ -404,7 +435,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get returnTypeInput() {
-    return this._returnType
+    return this._returnType;
   }
 
   // routine_id - computed: false, optional: false, required: true
@@ -417,15 +448,15 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routineIdInput() {
-    return this._routineId
+    return this._routineId;
   }
 
   // routine_type - computed: false, optional: true, required: false
-  private _routineType?: string | undefined; 
+  private _routineType?: string; 
   public get routineType() {
     return this.getStringAttribute('routine_type');
   }
-  public set routineType(value: string | undefined) {
+  public set routineType(value: string) {
     this._routineType = value;
   }
   public resetRoutineType() {
@@ -433,16 +464,16 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routineTypeInput() {
-    return this._routineType
+    return this._routineType;
   }
 
   // arguments - computed: false, optional: true, required: false
-  private _arguments?: BigqueryRoutineArguments[] | undefined; 
+  private _arguments?: BigqueryRoutineArguments[]; 
   public get arguments() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('arguments') as any;
   }
-  public set arguments(value: BigqueryRoutineArguments[] | undefined) {
+  public set arguments(value: BigqueryRoutineArguments[]) {
     this._arguments = value;
   }
   public resetArguments() {
@@ -450,24 +481,23 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get argumentsInput() {
-    return this._arguments
+    return this._arguments;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BigqueryRoutineTimeouts | undefined; 
-  private __timeoutsOutput = new BigqueryRoutineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryRoutineTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BigqueryRoutineTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BigqueryRoutineTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -487,7 +517,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       routine_id: cdktf.stringToTerraform(this._routineId),
       routine_type: cdktf.stringToTerraform(this._routineType),
       arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform)(this._arguments),
-      timeouts: bigqueryRoutineTimeoutsToTerraform(this._timeouts),
+      timeouts: bigqueryRoutineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

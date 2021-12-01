@@ -65,7 +65,7 @@ export interface ProjectAccessApprovalSettingsEnrolledServices {
   readonly enrollmentLevel?: string;
 }
 
-function projectAccessApprovalSettingsEnrolledServicesToTerraform(struct?: ProjectAccessApprovalSettingsEnrolledServices): any {
+export function projectAccessApprovalSettingsEnrolledServicesToTerraform(struct?: ProjectAccessApprovalSettingsEnrolledServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -91,7 +91,7 @@ export interface ProjectAccessApprovalSettingsTimeouts {
   readonly update?: string;
 }
 
-function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccessApprovalSettingsTimeoutsOutputReference | ProjectAccessApprovalSettingsTimeouts): any {
+export function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccessApprovalSettingsTimeoutsOutputReference | ProjectAccessApprovalSettingsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -113,12 +113,43 @@ export class ProjectAccessApprovalSettingsTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ProjectAccessApprovalSettingsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ProjectAccessApprovalSettingsTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -126,15 +157,15 @@ export class ProjectAccessApprovalSettingsTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -142,15 +173,15 @@ export class ProjectAccessApprovalSettingsTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -158,7 +189,7 @@ export class ProjectAccessApprovalSettingsTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -198,7 +229,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
     this._project = config.project;
     this._projectId = config.projectId;
     this._enrolledServices = config.enrolledServices;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -221,11 +252,11 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // notification_emails - computed: true, optional: true, required: false
-  private _notificationEmails?: string[] | undefined; 
+  private _notificationEmails?: string[]; 
   public get notificationEmails() {
     return this.getListAttribute('notification_emails');
   }
-  public set notificationEmails(value: string[] | undefined) {
+  public set notificationEmails(value: string[]) {
     this._notificationEmails = value;
   }
   public resetNotificationEmails() {
@@ -233,15 +264,15 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationEmailsInput() {
-    return this._notificationEmails
+    return this._notificationEmails;
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -249,7 +280,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // project_id - computed: false, optional: false, required: true
@@ -262,7 +293,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectIdInput() {
-    return this._projectId
+    return this._projectId;
   }
 
   // enrolled_services - computed: false, optional: false, required: true
@@ -276,24 +307,23 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enrolledServicesInput() {
-    return this._enrolledServices
+    return this._enrolledServices;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ProjectAccessApprovalSettingsTimeouts | undefined; 
-  private __timeoutsOutput = new ProjectAccessApprovalSettingsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ProjectAccessApprovalSettingsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ProjectAccessApprovalSettingsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ProjectAccessApprovalSettingsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -306,7 +336,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       project_id: cdktf.stringToTerraform(this._projectId),
       enrolled_services: cdktf.listMapper(projectAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),
-      timeouts: projectAccessApprovalSettingsTimeoutsToTerraform(this._timeouts),
+      timeouts: projectAccessApprovalSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

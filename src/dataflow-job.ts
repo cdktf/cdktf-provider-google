@@ -135,7 +135,7 @@ export interface DataflowJobTimeouts {
   readonly update?: string;
 }
 
-function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeoutsOutputReference | DataflowJobTimeouts): any {
+export function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeoutsOutputReference | DataflowJobTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -155,12 +155,31 @@ export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataflowJobTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataflowJobTimeouts | undefined) {
+    if (value === undefined) {
+      this._update = undefined;
+    }
+    else {
+      this._update = value.update;
+    }
+  }
+
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -168,7 +187,7 @@ export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -223,7 +242,7 @@ export class DataflowJob extends cdktf.TerraformResource {
     this._templateGcsPath = config.templateGcsPath;
     this._transformNameMapping = config.transformNameMapping;
     this._zone = config.zone;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -231,11 +250,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   // ==========
 
   // additional_experiments - computed: false, optional: true, required: false
-  private _additionalExperiments?: string[] | undefined; 
+  private _additionalExperiments?: string[]; 
   public get additionalExperiments() {
     return this.getListAttribute('additional_experiments');
   }
-  public set additionalExperiments(value: string[] | undefined) {
+  public set additionalExperiments(value: string[]) {
     this._additionalExperiments = value;
   }
   public resetAdditionalExperiments() {
@@ -243,15 +262,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalExperimentsInput() {
-    return this._additionalExperiments
+    return this._additionalExperiments;
   }
 
   // enable_streaming_engine - computed: false, optional: true, required: false
-  private _enableStreamingEngine?: boolean | cdktf.IResolvable | undefined; 
+  private _enableStreamingEngine?: boolean | cdktf.IResolvable; 
   public get enableStreamingEngine() {
     return this.getBooleanAttribute('enable_streaming_engine') as any;
   }
-  public set enableStreamingEngine(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableStreamingEngine(value: boolean | cdktf.IResolvable) {
     this._enableStreamingEngine = value;
   }
   public resetEnableStreamingEngine() {
@@ -259,7 +278,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableStreamingEngineInput() {
-    return this._enableStreamingEngine
+    return this._enableStreamingEngine;
   }
 
   // id - computed: true, optional: true, required: false
@@ -268,11 +287,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration?: string | undefined; 
+  private _ipConfiguration?: string; 
   public get ipConfiguration() {
     return this.getStringAttribute('ip_configuration');
   }
-  public set ipConfiguration(value: string | undefined) {
+  public set ipConfiguration(value: string) {
     this._ipConfiguration = value;
   }
   public resetIpConfiguration() {
@@ -280,7 +299,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
-    return this._ipConfiguration
+    return this._ipConfiguration;
   }
 
   // job_id - computed: true, optional: false, required: false
@@ -289,11 +308,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // kms_key_name - computed: false, optional: true, required: false
-  private _kmsKeyName?: string | undefined; 
+  private _kmsKeyName?: string; 
   public get kmsKeyName() {
     return this.getStringAttribute('kms_key_name');
   }
-  public set kmsKeyName(value: string | undefined) {
+  public set kmsKeyName(value: string) {
     this._kmsKeyName = value;
   }
   public resetKmsKeyName() {
@@ -301,16 +320,16 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
-    return this._kmsKeyName
+    return this._kmsKeyName;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -318,15 +337,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // machine_type - computed: false, optional: true, required: false
-  private _machineType?: string | undefined; 
+  private _machineType?: string; 
   public get machineType() {
     return this.getStringAttribute('machine_type');
   }
-  public set machineType(value: string | undefined) {
+  public set machineType(value: string) {
     this._machineType = value;
   }
   public resetMachineType() {
@@ -334,15 +353,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get machineTypeInput() {
-    return this._machineType
+    return this._machineType;
   }
 
   // max_workers - computed: false, optional: true, required: false
-  private _maxWorkers?: number | undefined; 
+  private _maxWorkers?: number; 
   public get maxWorkers() {
     return this.getNumberAttribute('max_workers');
   }
-  public set maxWorkers(value: number | undefined) {
+  public set maxWorkers(value: number) {
     this._maxWorkers = value;
   }
   public resetMaxWorkers() {
@@ -350,7 +369,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxWorkersInput() {
-    return this._maxWorkers
+    return this._maxWorkers;
   }
 
   // name - computed: false, optional: false, required: true
@@ -363,15 +382,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: string | undefined; 
+  private _network?: string; 
   public get network() {
     return this.getStringAttribute('network');
   }
-  public set network(value: string | undefined) {
+  public set network(value: string) {
     this._network = value;
   }
   public resetNetwork() {
@@ -379,15 +398,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // on_delete - computed: false, optional: true, required: false
-  private _onDelete?: string | undefined; 
+  private _onDelete?: string; 
   public get onDelete() {
     return this.getStringAttribute('on_delete');
   }
-  public set onDelete(value: string | undefined) {
+  public set onDelete(value: string) {
     this._onDelete = value;
   }
   public resetOnDelete() {
@@ -395,16 +414,16 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get onDeleteInput() {
-    return this._onDelete
+    return this._onDelete;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -412,15 +431,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -428,15 +447,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: false, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -444,15 +463,15 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // service_account_email - computed: false, optional: true, required: false
-  private _serviceAccountEmail?: string | undefined; 
+  private _serviceAccountEmail?: string; 
   public get serviceAccountEmail() {
     return this.getStringAttribute('service_account_email');
   }
-  public set serviceAccountEmail(value: string | undefined) {
+  public set serviceAccountEmail(value: string) {
     this._serviceAccountEmail = value;
   }
   public resetServiceAccountEmail() {
@@ -460,7 +479,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceAccountEmailInput() {
-    return this._serviceAccountEmail
+    return this._serviceAccountEmail;
   }
 
   // state - computed: true, optional: false, required: false
@@ -469,11 +488,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: string | undefined; 
+  private _subnetwork?: string; 
   public get subnetwork() {
     return this.getStringAttribute('subnetwork');
   }
-  public set subnetwork(value: string | undefined) {
+  public set subnetwork(value: string) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -481,7 +500,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworkInput() {
-    return this._subnetwork
+    return this._subnetwork;
   }
 
   // temp_gcs_location - computed: false, optional: false, required: true
@@ -494,7 +513,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tempGcsLocationInput() {
-    return this._tempGcsLocation
+    return this._tempGcsLocation;
   }
 
   // template_gcs_path - computed: false, optional: false, required: true
@@ -507,16 +526,16 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get templateGcsPathInput() {
-    return this._templateGcsPath
+    return this._templateGcsPath;
   }
 
   // transform_name_mapping - computed: false, optional: true, required: false
-  private _transformNameMapping?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _transformNameMapping?: { [key: string]: string } | cdktf.IResolvable; 
   public get transformNameMapping() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('transform_name_mapping') as any;
   }
-  public set transformNameMapping(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set transformNameMapping(value: { [key: string]: string } | cdktf.IResolvable) {
     this._transformNameMapping = value;
   }
   public resetTransformNameMapping() {
@@ -524,7 +543,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get transformNameMappingInput() {
-    return this._transformNameMapping
+    return this._transformNameMapping;
   }
 
   // type - computed: true, optional: false, required: false
@@ -533,11 +552,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // zone - computed: false, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -545,24 +564,23 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataflowJobTimeouts | undefined; 
-  private __timeoutsOutput = new DataflowJobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataflowJobTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataflowJobTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataflowJobTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -590,7 +608,7 @@ export class DataflowJob extends cdktf.TerraformResource {
       template_gcs_path: cdktf.stringToTerraform(this._templateGcsPath),
       transform_name_mapping: cdktf.hashMapper(cdktf.anyToTerraform)(this._transformNameMapping),
       zone: cdktf.stringToTerraform(this._zone),
-      timeouts: dataflowJobTimeoutsToTerraform(this._timeouts),
+      timeouts: dataflowJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

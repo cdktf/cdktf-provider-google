@@ -83,7 +83,7 @@ utilization.
   readonly target: number;
 }
 
-function computeRegionAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReference | ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization): any {
+export function computeRegionAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReference | ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -104,12 +104,37 @@ export class ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._predictiveMethod) {
+      hasAnyValues = true;
+      internalValueResult.predictiveMethod = this._predictiveMethod;
+    }
+    if (this._target) {
+      hasAnyValues = true;
+      internalValueResult.target = this._target;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization | undefined) {
+    if (value === undefined) {
+      this._predictiveMethod = undefined;
+      this._target = undefined;
+    }
+    else {
+      this._predictiveMethod = value.predictiveMethod;
+      this._target = value.target;
+    }
+  }
+
   // predictive_method - computed: false, optional: true, required: false
-  private _predictiveMethod?: string | undefined; 
+  private _predictiveMethod?: string; 
   public get predictiveMethod() {
     return this.getStringAttribute('predictive_method');
   }
-  public set predictiveMethod(value: string | undefined) {
+  public set predictiveMethod(value: string) {
     this._predictiveMethod = value;
   }
   public resetPredictiveMethod() {
@@ -117,7 +142,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get predictiveMethodInput() {
-    return this._predictiveMethod
+    return this._predictiveMethod;
   }
 
   // target - computed: false, optional: false, required: true
@@ -130,7 +155,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get targetInput() {
-    return this._target
+    return this._target;
   }
 }
 export interface ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization {
@@ -144,7 +169,7 @@ be a positive float value. If not defined, the default is 0.8.
   readonly target: number;
 }
 
-function computeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference | ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization): any {
+export function computeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference | ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -164,6 +189,25 @@ export class ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._target) {
+      hasAnyValues = true;
+      internalValueResult.target = this._target;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined) {
+    if (value === undefined) {
+      this._target = undefined;
+    }
+    else {
+      this._target = value.target;
+    }
+  }
+
   // target - computed: false, optional: false, required: true
   private _target?: number; 
   public get target() {
@@ -174,7 +218,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOut
   }
   // Temporarily expose input value. Use with caution.
   public get targetInput() {
-    return this._target
+    return this._target;
   }
 }
 export interface ComputeRegionAutoscalerAutoscalingPolicyMetric {
@@ -210,7 +254,7 @@ Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "D
   readonly type?: string;
 }
 
-function computeRegionAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyMetric): any {
+export function computeRegionAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyMetric): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -239,7 +283,7 @@ For example, specify 80 for 80%.
   readonly percent?: number;
 }
 
-function computeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference | ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas): any {
+export function computeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference | ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -260,12 +304,37 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fixed) {
+      hasAnyValues = true;
+      internalValueResult.fixed = this._fixed;
+    }
+    if (this._percent) {
+      hasAnyValues = true;
+      internalValueResult.percent = this._percent;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined) {
+    if (value === undefined) {
+      this._fixed = undefined;
+      this._percent = undefined;
+    }
+    else {
+      this._fixed = value.fixed;
+      this._percent = value.percent;
+    }
+  }
+
   // fixed - computed: false, optional: true, required: false
-  private _fixed?: number | undefined; 
+  private _fixed?: number; 
   public get fixed() {
     return this.getNumberAttribute('fixed');
   }
-  public set fixed(value: number | undefined) {
+  public set fixed(value: number) {
     this._fixed = value;
   }
   public resetFixed() {
@@ -273,15 +342,15 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRe
   }
   // Temporarily expose input value. Use with caution.
   public get fixedInput() {
-    return this._fixed
+    return this._fixed;
   }
 
   // percent - computed: false, optional: true, required: false
-  private _percent?: number | undefined; 
+  private _percent?: number; 
   public get percent() {
     return this.getNumberAttribute('percent');
   }
-  public set percent(value: number | undefined) {
+  public set percent(value: number) {
     this._percent = value;
   }
   public resetPercent() {
@@ -289,7 +358,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRe
   }
   // Temporarily expose input value. Use with caution.
   public get percentInput() {
-    return this._percent
+    return this._percent;
   }
 }
 export interface ComputeRegionAutoscalerAutoscalingPolicyScaleInControl {
@@ -308,7 +377,7 @@ to include directives regarding slower scale down, as described above.
   readonly maxScaledInReplicas?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas;
 }
 
-function computeRegionAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReference | ComputeRegionAutoscalerAutoscalingPolicyScaleInControl): any {
+export function computeRegionAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReference | ComputeRegionAutoscalerAutoscalingPolicyScaleInControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -329,12 +398,37 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyScaleInControl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._timeWindowSec) {
+      hasAnyValues = true;
+      internalValueResult.timeWindowSec = this._timeWindowSec;
+    }
+    if (this._maxScaledInReplicas) {
+      hasAnyValues = true;
+      internalValueResult.maxScaledInReplicas = this._maxScaledInReplicas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionAutoscalerAutoscalingPolicyScaleInControl | undefined) {
+    if (value === undefined) {
+      this._timeWindowSec = undefined;
+      this._maxScaledInReplicas.internalValue = undefined;
+    }
+    else {
+      this._timeWindowSec = value.timeWindowSec;
+      this._maxScaledInReplicas.internalValue = value.maxScaledInReplicas;
+    }
+  }
+
   // time_window_sec - computed: false, optional: true, required: false
-  private _timeWindowSec?: number | undefined; 
+  private _timeWindowSec?: number; 
   public get timeWindowSec() {
     return this.getNumberAttribute('time_window_sec');
   }
-  public set timeWindowSec(value: number | undefined) {
+  public set timeWindowSec(value: number) {
     this._timeWindowSec = value;
   }
   public resetTimeWindowSec() {
@@ -342,24 +436,23 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get timeWindowSecInput() {
-    return this._timeWindowSec
+    return this._timeWindowSec;
   }
 
   // max_scaled_in_replicas - computed: false, optional: true, required: false
-  private _maxScaledInReplicas?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined; 
-  private __maxScaledInReplicasOutput = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this as any, "max_scaled_in_replicas", true);
+  private _maxScaledInReplicas = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this as any, "max_scaled_in_replicas", true);
   public get maxScaledInReplicas() {
-    return this.__maxScaledInReplicasOutput;
+    return this._maxScaledInReplicas;
   }
-  public putMaxScaledInReplicas(value: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined) {
-    this._maxScaledInReplicas = value;
+  public putMaxScaledInReplicas(value: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas) {
+    this._maxScaledInReplicas.internalValue = value;
   }
   public resetMaxScaledInReplicas() {
-    this._maxScaledInReplicas = undefined;
+    this._maxScaledInReplicas.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get maxScaledInReplicasInput() {
-    return this._maxScaledInReplicas
+    return this._maxScaledInReplicas.internalValue;
   }
 }
 export interface ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules {
@@ -405,7 +498,7 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules {
   readonly timeZone?: string;
 }
 
-function computeRegionAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules): any {
+export function computeRegionAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -493,7 +586,7 @@ allowed.
   readonly scalingSchedules?: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules[];
 }
 
-function computeRegionAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyOutputReference | ComputeRegionAutoscalerAutoscalingPolicy): any {
+export function computeRegionAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeRegionAutoscalerAutoscalingPolicyOutputReference | ComputeRegionAutoscalerAutoscalingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -521,12 +614,79 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cooldownPeriod) {
+      hasAnyValues = true;
+      internalValueResult.cooldownPeriod = this._cooldownPeriod;
+    }
+    if (this._maxReplicas) {
+      hasAnyValues = true;
+      internalValueResult.maxReplicas = this._maxReplicas;
+    }
+    if (this._minReplicas) {
+      hasAnyValues = true;
+      internalValueResult.minReplicas = this._minReplicas;
+    }
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._cpuUtilization) {
+      hasAnyValues = true;
+      internalValueResult.cpuUtilization = this._cpuUtilization?.internalValue;
+    }
+    if (this._loadBalancingUtilization) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancingUtilization = this._loadBalancingUtilization?.internalValue;
+    }
+    if (this._metric) {
+      hasAnyValues = true;
+      internalValueResult.metric = this._metric;
+    }
+    if (this._scaleInControl) {
+      hasAnyValues = true;
+      internalValueResult.scaleInControl = this._scaleInControl?.internalValue;
+    }
+    if (this._scalingSchedules) {
+      hasAnyValues = true;
+      internalValueResult.scalingSchedules = this._scalingSchedules;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionAutoscalerAutoscalingPolicy | undefined) {
+    if (value === undefined) {
+      this._cooldownPeriod = undefined;
+      this._maxReplicas = undefined;
+      this._minReplicas = undefined;
+      this._mode = undefined;
+      this._cpuUtilization.internalValue = undefined;
+      this._loadBalancingUtilization.internalValue = undefined;
+      this._metric = undefined;
+      this._scaleInControl.internalValue = undefined;
+      this._scalingSchedules = undefined;
+    }
+    else {
+      this._cooldownPeriod = value.cooldownPeriod;
+      this._maxReplicas = value.maxReplicas;
+      this._minReplicas = value.minReplicas;
+      this._mode = value.mode;
+      this._cpuUtilization.internalValue = value.cpuUtilization;
+      this._loadBalancingUtilization.internalValue = value.loadBalancingUtilization;
+      this._metric = value.metric;
+      this._scaleInControl.internalValue = value.scaleInControl;
+      this._scalingSchedules = value.scalingSchedules;
+    }
+  }
+
   // cooldown_period - computed: false, optional: true, required: false
-  private _cooldownPeriod?: number | undefined; 
+  private _cooldownPeriod?: number; 
   public get cooldownPeriod() {
     return this.getNumberAttribute('cooldown_period');
   }
-  public set cooldownPeriod(value: number | undefined) {
+  public set cooldownPeriod(value: number) {
     this._cooldownPeriod = value;
   }
   public resetCooldownPeriod() {
@@ -534,7 +694,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get cooldownPeriodInput() {
-    return this._cooldownPeriod
+    return this._cooldownPeriod;
   }
 
   // max_replicas - computed: false, optional: false, required: true
@@ -547,7 +707,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get maxReplicasInput() {
-    return this._maxReplicas
+    return this._maxReplicas;
   }
 
   // min_replicas - computed: false, optional: false, required: true
@@ -560,15 +720,15 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get minReplicasInput() {
-    return this._minReplicas
+    return this._minReplicas;
   }
 
   // mode - computed: false, optional: true, required: false
-  private _mode?: string | undefined; 
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string) {
     this._mode = value;
   }
   public resetMode() {
@@ -576,50 +736,48 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // cpu_utilization - computed: false, optional: true, required: false
-  private _cpuUtilization?: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization | undefined; 
-  private __cpuUtilizationOutput = new ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
+  private _cpuUtilization = new ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
   public get cpuUtilization() {
-    return this.__cpuUtilizationOutput;
+    return this._cpuUtilization;
   }
-  public putCpuUtilization(value: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization | undefined) {
-    this._cpuUtilization = value;
+  public putCpuUtilization(value: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization) {
+    this._cpuUtilization.internalValue = value;
   }
   public resetCpuUtilization() {
-    this._cpuUtilization = undefined;
+    this._cpuUtilization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cpuUtilizationInput() {
-    return this._cpuUtilization
+    return this._cpuUtilization.internalValue;
   }
 
   // load_balancing_utilization - computed: false, optional: true, required: false
-  private _loadBalancingUtilization?: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined; 
-  private __loadBalancingUtilizationOutput = new ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this as any, "load_balancing_utilization", true);
+  private _loadBalancingUtilization = new ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this as any, "load_balancing_utilization", true);
   public get loadBalancingUtilization() {
-    return this.__loadBalancingUtilizationOutput;
+    return this._loadBalancingUtilization;
   }
-  public putLoadBalancingUtilization(value: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined) {
-    this._loadBalancingUtilization = value;
+  public putLoadBalancingUtilization(value: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization) {
+    this._loadBalancingUtilization.internalValue = value;
   }
   public resetLoadBalancingUtilization() {
-    this._loadBalancingUtilization = undefined;
+    this._loadBalancingUtilization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancingUtilizationInput() {
-    return this._loadBalancingUtilization
+    return this._loadBalancingUtilization.internalValue;
   }
 
   // metric - computed: false, optional: true, required: false
-  private _metric?: ComputeRegionAutoscalerAutoscalingPolicyMetric[] | undefined; 
+  private _metric?: ComputeRegionAutoscalerAutoscalingPolicyMetric[]; 
   public get metric() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metric') as any;
   }
-  public set metric(value: ComputeRegionAutoscalerAutoscalingPolicyMetric[] | undefined) {
+  public set metric(value: ComputeRegionAutoscalerAutoscalingPolicyMetric[]) {
     this._metric = value;
   }
   public resetMetric() {
@@ -627,33 +785,32 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get metricInput() {
-    return this._metric
+    return this._metric;
   }
 
   // scale_in_control - computed: false, optional: true, required: false
-  private _scaleInControl?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControl | undefined; 
-  private __scaleInControlOutput = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReference(this as any, "scale_in_control", true);
+  private _scaleInControl = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReference(this as any, "scale_in_control", true);
   public get scaleInControl() {
-    return this.__scaleInControlOutput;
+    return this._scaleInControl;
   }
-  public putScaleInControl(value: ComputeRegionAutoscalerAutoscalingPolicyScaleInControl | undefined) {
-    this._scaleInControl = value;
+  public putScaleInControl(value: ComputeRegionAutoscalerAutoscalingPolicyScaleInControl) {
+    this._scaleInControl.internalValue = value;
   }
   public resetScaleInControl() {
-    this._scaleInControl = undefined;
+    this._scaleInControl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scaleInControlInput() {
-    return this._scaleInControl
+    return this._scaleInControl.internalValue;
   }
 
   // scaling_schedules - computed: false, optional: true, required: false
-  private _scalingSchedules?: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules[] | undefined; 
+  private _scalingSchedules?: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules[]; 
   public get scalingSchedules() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('scaling_schedules') as any;
   }
-  public set scalingSchedules(value: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules[] | undefined) {
+  public set scalingSchedules(value: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules[]) {
     this._scalingSchedules = value;
   }
   public resetScalingSchedules() {
@@ -661,7 +818,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get scalingSchedulesInput() {
-    return this._scalingSchedules
+    return this._scalingSchedules;
   }
 }
 export interface ComputeRegionAutoscalerTimeouts {
@@ -679,7 +836,7 @@ export interface ComputeRegionAutoscalerTimeouts {
   readonly update?: string;
 }
 
-function computeRegionAutoscalerTimeoutsToTerraform(struct?: ComputeRegionAutoscalerTimeoutsOutputReference | ComputeRegionAutoscalerTimeouts): any {
+export function computeRegionAutoscalerTimeoutsToTerraform(struct?: ComputeRegionAutoscalerTimeoutsOutputReference | ComputeRegionAutoscalerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -701,12 +858,43 @@ export class ComputeRegionAutoscalerTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRegionAutoscalerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionAutoscalerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -714,15 +902,15 @@ export class ComputeRegionAutoscalerTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -730,15 +918,15 @@ export class ComputeRegionAutoscalerTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -746,7 +934,7 @@ export class ComputeRegionAutoscalerTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -787,8 +975,8 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._target = config.target;
-    this._autoscalingPolicy = config.autoscalingPolicy;
-    this._timeouts = config.timeouts;
+    this._autoscalingPolicy.internalValue = config.autoscalingPolicy;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -801,11 +989,11 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -813,7 +1001,7 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -831,15 +1019,15 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -847,15 +1035,15 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -863,7 +1051,7 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -881,38 +1069,36 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetInput() {
-    return this._target
+    return this._target;
   }
 
   // autoscaling_policy - computed: false, optional: false, required: true
-  private _autoscalingPolicy?: ComputeRegionAutoscalerAutoscalingPolicy; 
-  private __autoscalingPolicyOutput = new ComputeRegionAutoscalerAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
+  private _autoscalingPolicy = new ComputeRegionAutoscalerAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
   public get autoscalingPolicy() {
-    return this.__autoscalingPolicyOutput;
+    return this._autoscalingPolicy;
   }
   public putAutoscalingPolicy(value: ComputeRegionAutoscalerAutoscalingPolicy) {
-    this._autoscalingPolicy = value;
+    this._autoscalingPolicy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscalingPolicyInput() {
-    return this._autoscalingPolicy
+    return this._autoscalingPolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRegionAutoscalerTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeRegionAutoscalerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRegionAutoscalerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeRegionAutoscalerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeRegionAutoscalerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -926,8 +1112,8 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       target: cdktf.stringToTerraform(this._target),
-      autoscaling_policy: computeRegionAutoscalerAutoscalingPolicyToTerraform(this._autoscalingPolicy),
-      timeouts: computeRegionAutoscalerTimeoutsToTerraform(this._timeouts),
+      autoscaling_policy: computeRegionAutoscalerAutoscalingPolicyToTerraform(this._autoscalingPolicy.internalValue),
+      timeouts: computeRegionAutoscalerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

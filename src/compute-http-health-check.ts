@@ -103,7 +103,7 @@ export interface ComputeHttpHealthCheckTimeouts {
   readonly update?: string;
 }
 
-function computeHttpHealthCheckTimeoutsToTerraform(struct?: ComputeHttpHealthCheckTimeoutsOutputReference | ComputeHttpHealthCheckTimeouts): any {
+export function computeHttpHealthCheckTimeoutsToTerraform(struct?: ComputeHttpHealthCheckTimeoutsOutputReference | ComputeHttpHealthCheckTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,12 +125,43 @@ export class ComputeHttpHealthCheckTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeHttpHealthCheckTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeHttpHealthCheckTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -138,15 +169,15 @@ export class ComputeHttpHealthCheckTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -154,15 +185,15 @@ export class ComputeHttpHealthCheckTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -170,7 +201,7 @@ export class ComputeHttpHealthCheckTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -216,7 +247,7 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
     this._requestPath = config.requestPath;
     this._timeoutSec = config.timeoutSec;
     this._unhealthyThreshold = config.unhealthyThreshold;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -224,11 +255,11 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   // ==========
 
   // check_interval_sec - computed: false, optional: true, required: false
-  private _checkIntervalSec?: number | undefined; 
+  private _checkIntervalSec?: number; 
   public get checkIntervalSec() {
     return this.getNumberAttribute('check_interval_sec');
   }
-  public set checkIntervalSec(value: number | undefined) {
+  public set checkIntervalSec(value: number) {
     this._checkIntervalSec = value;
   }
   public resetCheckIntervalSec() {
@@ -236,7 +267,7 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get checkIntervalSecInput() {
-    return this._checkIntervalSec
+    return this._checkIntervalSec;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -245,11 +276,11 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -257,15 +288,15 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // healthy_threshold - computed: false, optional: true, required: false
-  private _healthyThreshold?: number | undefined; 
+  private _healthyThreshold?: number; 
   public get healthyThreshold() {
     return this.getNumberAttribute('healthy_threshold');
   }
-  public set healthyThreshold(value: number | undefined) {
+  public set healthyThreshold(value: number) {
     this._healthyThreshold = value;
   }
   public resetHealthyThreshold() {
@@ -273,15 +304,15 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get healthyThresholdInput() {
-    return this._healthyThreshold
+    return this._healthyThreshold;
   }
 
   // host - computed: false, optional: true, required: false
-  private _host?: string | undefined; 
+  private _host?: string; 
   public get host() {
     return this.getStringAttribute('host');
   }
-  public set host(value: string | undefined) {
+  public set host(value: string) {
     this._host = value;
   }
   public resetHost() {
@@ -289,7 +320,7 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get hostInput() {
-    return this._host
+    return this._host;
   }
 
   // id - computed: true, optional: true, required: false
@@ -307,15 +338,15 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -323,15 +354,15 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -339,15 +370,15 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // request_path - computed: false, optional: true, required: false
-  private _requestPath?: string | undefined; 
+  private _requestPath?: string; 
   public get requestPath() {
     return this.getStringAttribute('request_path');
   }
-  public set requestPath(value: string | undefined) {
+  public set requestPath(value: string) {
     this._requestPath = value;
   }
   public resetRequestPath() {
@@ -355,7 +386,7 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get requestPathInput() {
-    return this._requestPath
+    return this._requestPath;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -364,11 +395,11 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
 
   // timeout_sec - computed: false, optional: true, required: false
-  private _timeoutSec?: number | undefined; 
+  private _timeoutSec?: number; 
   public get timeoutSec() {
     return this.getNumberAttribute('timeout_sec');
   }
-  public set timeoutSec(value: number | undefined) {
+  public set timeoutSec(value: number) {
     this._timeoutSec = value;
   }
   public resetTimeoutSec() {
@@ -376,15 +407,15 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutSecInput() {
-    return this._timeoutSec
+    return this._timeoutSec;
   }
 
   // unhealthy_threshold - computed: false, optional: true, required: false
-  private _unhealthyThreshold?: number | undefined; 
+  private _unhealthyThreshold?: number; 
   public get unhealthyThreshold() {
     return this.getNumberAttribute('unhealthy_threshold');
   }
-  public set unhealthyThreshold(value: number | undefined) {
+  public set unhealthyThreshold(value: number) {
     this._unhealthyThreshold = value;
   }
   public resetUnhealthyThreshold() {
@@ -392,24 +423,23 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get unhealthyThresholdInput() {
-    return this._unhealthyThreshold
+    return this._unhealthyThreshold;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeHttpHealthCheckTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeHttpHealthCheckTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeHttpHealthCheckTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeHttpHealthCheckTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeHttpHealthCheckTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -428,7 +458,7 @@ export class ComputeHttpHealthCheck extends cdktf.TerraformResource {
       request_path: cdktf.stringToTerraform(this._requestPath),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
       unhealthy_threshold: cdktf.numberToTerraform(this._unhealthyThreshold),
-      timeouts: computeHttpHealthCheckTimeoutsToTerraform(this._timeouts),
+      timeouts: computeHttpHealthCheckTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

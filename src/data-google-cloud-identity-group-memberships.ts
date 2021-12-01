@@ -122,7 +122,7 @@ export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get groupInput() {
-    return this._group
+    return this._group;
   }
 
   // id - computed: true, optional: true, required: false

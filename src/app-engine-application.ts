@@ -78,7 +78,7 @@ export interface AppEngineApplicationFeatureSettings {
   readonly splitHealthChecks: boolean | cdktf.IResolvable;
 }
 
-function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettingsOutputReference | AppEngineApplicationFeatureSettings): any {
+export function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettingsOutputReference | AppEngineApplicationFeatureSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -98,6 +98,25 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineApplicationFeatureSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._splitHealthChecks) {
+      hasAnyValues = true;
+      internalValueResult.splitHealthChecks = this._splitHealthChecks;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineApplicationFeatureSettings | undefined) {
+    if (value === undefined) {
+      this._splitHealthChecks = undefined;
+    }
+    else {
+      this._splitHealthChecks = value.splitHealthChecks;
+    }
+  }
+
   // split_health_checks - computed: false, optional: false, required: true
   private _splitHealthChecks?: boolean | cdktf.IResolvable; 
   public get splitHealthChecks() {
@@ -108,7 +127,7 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get splitHealthChecksInput() {
-    return this._splitHealthChecks
+    return this._splitHealthChecks;
   }
 }
 export interface AppEngineApplicationIap {
@@ -132,7 +151,7 @@ export interface AppEngineApplicationIap {
   readonly oauth2ClientSecret: string;
 }
 
-function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIapOutputReference | AppEngineApplicationIap): any {
+export function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIapOutputReference | AppEngineApplicationIap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -154,12 +173,43 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineApplicationIap | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._oauth2ClientId) {
+      hasAnyValues = true;
+      internalValueResult.oauth2ClientId = this._oauth2ClientId;
+    }
+    if (this._oauth2ClientSecret) {
+      hasAnyValues = true;
+      internalValueResult.oauth2ClientSecret = this._oauth2ClientSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineApplicationIap | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._oauth2ClientId = undefined;
+      this._oauth2ClientSecret = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._oauth2ClientId = value.oauth2ClientId;
+      this._oauth2ClientSecret = value.oauth2ClientSecret;
+    }
+  }
+
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -167,7 +217,7 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // oauth2_client_id - computed: false, optional: false, required: true
@@ -180,7 +230,7 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get oauth2ClientIdInput() {
-    return this._oauth2ClientId
+    return this._oauth2ClientId;
   }
 
   // oauth2_client_secret - computed: false, optional: false, required: true
@@ -193,7 +243,7 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get oauth2ClientSecretInput() {
-    return this._oauth2ClientSecret
+    return this._oauth2ClientSecret;
   }
 }
 export interface AppEngineApplicationTimeouts {
@@ -207,7 +257,7 @@ export interface AppEngineApplicationTimeouts {
   readonly update?: string;
 }
 
-function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeoutsOutputReference | AppEngineApplicationTimeouts): any {
+export function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeoutsOutputReference | AppEngineApplicationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -228,12 +278,37 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppEngineApplicationTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineApplicationTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -241,15 +316,15 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -257,7 +332,7 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -298,9 +373,9 @@ export class AppEngineApplication extends cdktf.TerraformResource {
     this._locationId = config.locationId;
     this._project = config.project;
     this._servingStatus = config.servingStatus;
-    this._featureSettings = config.featureSettings;
-    this._iap = config.iap;
-    this._timeouts = config.timeouts;
+    this._featureSettings.internalValue = config.featureSettings;
+    this._iap.internalValue = config.iap;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -313,11 +388,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // auth_domain - computed: true, optional: true, required: false
-  private _authDomain?: string | undefined; 
+  private _authDomain?: string; 
   public get authDomain() {
     return this.getStringAttribute('auth_domain');
   }
-  public set authDomain(value: string | undefined) {
+  public set authDomain(value: string) {
     this._authDomain = value;
   }
   public resetAuthDomain() {
@@ -325,7 +400,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get authDomainInput() {
-    return this._authDomain
+    return this._authDomain;
   }
 
   // code_bucket - computed: true, optional: false, required: false
@@ -334,11 +409,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // database_type - computed: true, optional: true, required: false
-  private _databaseType?: string | undefined; 
+  private _databaseType?: string; 
   public get databaseType() {
     return this.getStringAttribute('database_type');
   }
-  public set databaseType(value: string | undefined) {
+  public set databaseType(value: string) {
     this._databaseType = value;
   }
   public resetDatabaseType() {
@@ -346,7 +421,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseTypeInput() {
-    return this._databaseType
+    return this._databaseType;
   }
 
   // default_bucket - computed: true, optional: false, required: false
@@ -379,7 +454,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationIdInput() {
-    return this._locationId
+    return this._locationId;
   }
 
   // name - computed: true, optional: false, required: false
@@ -388,11 +463,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -400,15 +475,15 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // serving_status - computed: true, optional: true, required: false
-  private _servingStatus?: string | undefined; 
+  private _servingStatus?: string; 
   public get servingStatus() {
     return this.getStringAttribute('serving_status');
   }
-  public set servingStatus(value: string | undefined) {
+  public set servingStatus(value: string) {
     this._servingStatus = value;
   }
   public resetServingStatus() {
@@ -416,7 +491,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get servingStatusInput() {
-    return this._servingStatus
+    return this._servingStatus;
   }
 
   // url_dispatch_rule - computed: true, optional: false, required: false
@@ -425,54 +500,51 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // feature_settings - computed: false, optional: true, required: false
-  private _featureSettings?: AppEngineApplicationFeatureSettings | undefined; 
-  private __featureSettingsOutput = new AppEngineApplicationFeatureSettingsOutputReference(this as any, "feature_settings", true);
+  private _featureSettings = new AppEngineApplicationFeatureSettingsOutputReference(this as any, "feature_settings", true);
   public get featureSettings() {
-    return this.__featureSettingsOutput;
+    return this._featureSettings;
   }
-  public putFeatureSettings(value: AppEngineApplicationFeatureSettings | undefined) {
-    this._featureSettings = value;
+  public putFeatureSettings(value: AppEngineApplicationFeatureSettings) {
+    this._featureSettings.internalValue = value;
   }
   public resetFeatureSettings() {
-    this._featureSettings = undefined;
+    this._featureSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get featureSettingsInput() {
-    return this._featureSettings
+    return this._featureSettings.internalValue;
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap?: AppEngineApplicationIap | undefined; 
-  private __iapOutput = new AppEngineApplicationIapOutputReference(this as any, "iap", true);
+  private _iap = new AppEngineApplicationIapOutputReference(this as any, "iap", true);
   public get iap() {
-    return this.__iapOutput;
+    return this._iap;
   }
-  public putIap(value: AppEngineApplicationIap | undefined) {
-    this._iap = value;
+  public putIap(value: AppEngineApplicationIap) {
+    this._iap.internalValue = value;
   }
   public resetIap() {
-    this._iap = undefined;
+    this._iap.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get iapInput() {
-    return this._iap
+    return this._iap.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppEngineApplicationTimeouts | undefined; 
-  private __timeoutsOutput = new AppEngineApplicationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineApplicationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppEngineApplicationTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppEngineApplicationTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -486,9 +558,9 @@ export class AppEngineApplication extends cdktf.TerraformResource {
       location_id: cdktf.stringToTerraform(this._locationId),
       project: cdktf.stringToTerraform(this._project),
       serving_status: cdktf.stringToTerraform(this._servingStatus),
-      feature_settings: appEngineApplicationFeatureSettingsToTerraform(this._featureSettings),
-      iap: appEngineApplicationIapToTerraform(this._iap),
-      timeouts: appEngineApplicationTimeoutsToTerraform(this._timeouts),
+      feature_settings: appEngineApplicationFeatureSettingsToTerraform(this._featureSettings.internalValue),
+      iap: appEngineApplicationIapToTerraform(this._iap.internalValue),
+      timeouts: appEngineApplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

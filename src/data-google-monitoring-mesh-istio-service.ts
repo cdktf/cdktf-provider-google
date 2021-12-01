@@ -103,7 +103,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get meshUidInput() {
-    return this._meshUid
+    return this._meshUid;
   }
 
   // name - computed: true, optional: false, required: false
@@ -112,11 +112,11 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -124,7 +124,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service_id - computed: true, optional: false, required: false
@@ -142,7 +142,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNameInput() {
-    return this._serviceName
+    return this._serviceName;
   }
 
   // service_namespace - computed: false, optional: false, required: true
@@ -155,7 +155,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNamespaceInput() {
-    return this._serviceNamespace
+    return this._serviceNamespace;
   }
 
   // telemetry - computed: true, optional: false, required: false

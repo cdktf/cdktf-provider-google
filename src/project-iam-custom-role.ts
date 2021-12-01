@@ -95,11 +95,11 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -107,7 +107,7 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -130,15 +130,15 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get permissionsInput() {
-    return this._permissions
+    return this._permissions;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -146,7 +146,7 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // role_id - computed: false, optional: false, required: true
@@ -159,15 +159,15 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleIdInput() {
-    return this._roleId
+    return this._roleId;
   }
 
   // stage - computed: false, optional: true, required: false
-  private _stage?: string | undefined; 
+  private _stage?: string; 
   public get stage() {
     return this.getStringAttribute('stage');
   }
-  public set stage(value: string | undefined) {
+  public set stage(value: string) {
     this._stage = value;
   }
   public resetStage() {
@@ -175,7 +175,7 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get stageInput() {
-    return this._stage
+    return this._stage;
   }
 
   // title - computed: false, optional: false, required: true
@@ -188,7 +188,7 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 
   // =========

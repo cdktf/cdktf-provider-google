@@ -31,7 +31,7 @@ export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
   readonly logType: string;
 }
 
-function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataGoogleIamPolicyAuditConfigAuditLogConfigs): any {
+export function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataGoogleIamPolicyAuditConfigAuditLogConfigs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -55,7 +55,7 @@ export interface DataGoogleIamPolicyAuditConfig {
   readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[];
 }
 
-function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyAuditConfig): any {
+export function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyAuditConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -81,7 +81,7 @@ export interface DataGoogleIamPolicyBindingCondition {
   readonly title: string;
 }
 
-function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPolicyBindingConditionOutputReference | DataGoogleIamPolicyBindingCondition): any {
+export function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPolicyBindingConditionOutputReference | DataGoogleIamPolicyBindingCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -103,12 +103,43 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataGoogleIamPolicyBindingCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._expression) {
+      hasAnyValues = true;
+      internalValueResult.expression = this._expression;
+    }
+    if (this._title) {
+      hasAnyValues = true;
+      internalValueResult.title = this._title;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleIamPolicyBindingCondition | undefined) {
+    if (value === undefined) {
+      this._description = undefined;
+      this._expression = undefined;
+      this._title = undefined;
+    }
+    else {
+      this._description = value.description;
+      this._expression = value.expression;
+      this._title = value.title;
+    }
+  }
+
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -116,7 +147,7 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // expression - computed: false, optional: false, required: true
@@ -129,7 +160,7 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get expressionInput() {
-    return this._expression
+    return this._expression;
   }
 
   // title - computed: false, optional: false, required: true
@@ -142,7 +173,7 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 }
 export interface DataGoogleIamPolicyBinding {
@@ -162,7 +193,7 @@ export interface DataGoogleIamPolicyBinding {
   readonly condition?: DataGoogleIamPolicyBindingCondition;
 }
 
-function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBinding): any {
+export function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBinding): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -226,12 +257,12 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
 
   // audit_config - computed: false, optional: true, required: false
-  private _auditConfig?: DataGoogleIamPolicyAuditConfig[] | undefined; 
+  private _auditConfig?: DataGoogleIamPolicyAuditConfig[]; 
   public get auditConfig() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('audit_config') as any;
   }
-  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] | undefined) {
+  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[]) {
     this._auditConfig = value;
   }
   public resetAuditConfig() {
@@ -239,16 +270,16 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get auditConfigInput() {
-    return this._auditConfig
+    return this._auditConfig;
   }
 
   // binding - computed: false, optional: true, required: false
-  private _binding?: DataGoogleIamPolicyBinding[] | undefined; 
+  private _binding?: DataGoogleIamPolicyBinding[]; 
   public get binding() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('binding') as any;
   }
-  public set binding(value: DataGoogleIamPolicyBinding[] | undefined) {
+  public set binding(value: DataGoogleIamPolicyBinding[]) {
     this._binding = value;
   }
   public resetBinding() {
@@ -256,7 +287,7 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get bindingInput() {
-    return this._binding
+    return this._binding;
   }
 
   // =========

@@ -74,7 +74,7 @@ export interface HealthcareConsentStoreTimeouts {
   readonly update?: string;
 }
 
-function healthcareConsentStoreTimeoutsToTerraform(struct?: HealthcareConsentStoreTimeoutsOutputReference | HealthcareConsentStoreTimeouts): any {
+export function healthcareConsentStoreTimeoutsToTerraform(struct?: HealthcareConsentStoreTimeoutsOutputReference | HealthcareConsentStoreTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -96,12 +96,43 @@ export class HealthcareConsentStoreTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HealthcareConsentStoreTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareConsentStoreTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -109,15 +140,15 @@ export class HealthcareConsentStoreTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -125,15 +156,15 @@ export class HealthcareConsentStoreTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -141,7 +172,7 @@ export class HealthcareConsentStoreTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -182,7 +213,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
     this._enableConsentCreateOnUpdate = config.enableConsentCreateOnUpdate;
     this._labels = config.labels;
     this._name = config.name;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -199,15 +230,15 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetInput() {
-    return this._dataset
+    return this._dataset;
   }
 
   // default_consent_ttl - computed: false, optional: true, required: false
-  private _defaultConsentTtl?: string | undefined; 
+  private _defaultConsentTtl?: string; 
   public get defaultConsentTtl() {
     return this.getStringAttribute('default_consent_ttl');
   }
-  public set defaultConsentTtl(value: string | undefined) {
+  public set defaultConsentTtl(value: string) {
     this._defaultConsentTtl = value;
   }
   public resetDefaultConsentTtl() {
@@ -215,15 +246,15 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultConsentTtlInput() {
-    return this._defaultConsentTtl
+    return this._defaultConsentTtl;
   }
 
   // enable_consent_create_on_update - computed: false, optional: true, required: false
-  private _enableConsentCreateOnUpdate?: boolean | cdktf.IResolvable | undefined; 
+  private _enableConsentCreateOnUpdate?: boolean | cdktf.IResolvable; 
   public get enableConsentCreateOnUpdate() {
     return this.getBooleanAttribute('enable_consent_create_on_update') as any;
   }
-  public set enableConsentCreateOnUpdate(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableConsentCreateOnUpdate(value: boolean | cdktf.IResolvable) {
     this._enableConsentCreateOnUpdate = value;
   }
   public resetEnableConsentCreateOnUpdate() {
@@ -231,7 +262,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableConsentCreateOnUpdateInput() {
-    return this._enableConsentCreateOnUpdate
+    return this._enableConsentCreateOnUpdate;
   }
 
   // id - computed: true, optional: true, required: false
@@ -240,12 +271,12 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -253,7 +284,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -266,24 +297,23 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HealthcareConsentStoreTimeouts | undefined; 
-  private __timeoutsOutput = new HealthcareConsentStoreTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareConsentStoreTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: HealthcareConsentStoreTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: HealthcareConsentStoreTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -297,7 +327,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
       enable_consent_create_on_update: cdktf.booleanToTerraform(this._enableConsentCreateOnUpdate),
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
-      timeouts: healthcareConsentStoreTimeoutsToTerraform(this._timeouts),
+      timeouts: healthcareConsentStoreTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -101,7 +101,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get clusterNameInput() {
-    return this._clusterName
+    return this._clusterName;
   }
 
   // display_name - computed: true, optional: false, required: false
@@ -124,7 +124,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: true, optional: false, required: false
@@ -133,11 +133,11 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
 
   // project - computed: false, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -145,7 +145,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // service_id - computed: true, optional: false, required: false
@@ -163,7 +163,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNameInput() {
-    return this._serviceName
+    return this._serviceName;
   }
 
   // service_namespace - computed: false, optional: false, required: true
@@ -176,7 +176,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNamespaceInput() {
-    return this._serviceNamespace
+    return this._serviceNamespace;
   }
 
   // telemetry - computed: true, optional: false, required: false

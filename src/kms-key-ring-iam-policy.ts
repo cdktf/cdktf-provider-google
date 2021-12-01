@@ -77,7 +77,7 @@ export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyRingIdInput() {
-    return this._keyRingId
+    return this._keyRingId;
   }
 
   // policy_data - computed: false, optional: false, required: true
@@ -90,7 +90,7 @@ export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDataInput() {
-    return this._policyData
+    return this._policyData;
   }
 
   // =========

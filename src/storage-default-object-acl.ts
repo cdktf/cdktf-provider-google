@@ -67,7 +67,7 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // id - computed: true, optional: true, required: false
@@ -76,11 +76,11 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   }
 
   // role_entity - computed: true, optional: true, required: false
-  private _roleEntity?: string[] | undefined; 
+  private _roleEntity?: string[]; 
   public get roleEntity() {
     return this.getListAttribute('role_entity');
   }
-  public set roleEntity(value: string[] | undefined) {
+  public set roleEntity(value: string[]) {
     this._roleEntity = value;
   }
   public resetRoleEntity() {
@@ -88,7 +88,7 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleEntityInput() {
-    return this._roleEntity
+    return this._roleEntity;
   }
 
   // =========

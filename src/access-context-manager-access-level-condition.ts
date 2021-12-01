@@ -97,7 +97,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
   readonly osType: string;
 }
 
-function accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints): any {
+export function accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -150,7 +150,7 @@ to be true. Defaults to false.
   readonly osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[];
 }
 
-function accessContextManagerAccessLevelConditionDevicePolicyToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOutputReference | AccessContextManagerAccessLevelConditionDevicePolicy): any {
+export function accessContextManagerAccessLevelConditionDevicePolicyToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOutputReference | AccessContextManagerAccessLevelConditionDevicePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -175,12 +175,61 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerAccessLevelConditionDevicePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedDeviceManagementLevels) {
+      hasAnyValues = true;
+      internalValueResult.allowedDeviceManagementLevels = this._allowedDeviceManagementLevels;
+    }
+    if (this._allowedEncryptionStatuses) {
+      hasAnyValues = true;
+      internalValueResult.allowedEncryptionStatuses = this._allowedEncryptionStatuses;
+    }
+    if (this._requireAdminApproval) {
+      hasAnyValues = true;
+      internalValueResult.requireAdminApproval = this._requireAdminApproval;
+    }
+    if (this._requireCorpOwned) {
+      hasAnyValues = true;
+      internalValueResult.requireCorpOwned = this._requireCorpOwned;
+    }
+    if (this._requireScreenLock) {
+      hasAnyValues = true;
+      internalValueResult.requireScreenLock = this._requireScreenLock;
+    }
+    if (this._osConstraints) {
+      hasAnyValues = true;
+      internalValueResult.osConstraints = this._osConstraints;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerAccessLevelConditionDevicePolicy | undefined) {
+    if (value === undefined) {
+      this._allowedDeviceManagementLevels = undefined;
+      this._allowedEncryptionStatuses = undefined;
+      this._requireAdminApproval = undefined;
+      this._requireCorpOwned = undefined;
+      this._requireScreenLock = undefined;
+      this._osConstraints = undefined;
+    }
+    else {
+      this._allowedDeviceManagementLevels = value.allowedDeviceManagementLevels;
+      this._allowedEncryptionStatuses = value.allowedEncryptionStatuses;
+      this._requireAdminApproval = value.requireAdminApproval;
+      this._requireCorpOwned = value.requireCorpOwned;
+      this._requireScreenLock = value.requireScreenLock;
+      this._osConstraints = value.osConstraints;
+    }
+  }
+
   // allowed_device_management_levels - computed: false, optional: true, required: false
-  private _allowedDeviceManagementLevels?: string[] | undefined; 
+  private _allowedDeviceManagementLevels?: string[]; 
   public get allowedDeviceManagementLevels() {
     return this.getListAttribute('allowed_device_management_levels');
   }
-  public set allowedDeviceManagementLevels(value: string[] | undefined) {
+  public set allowedDeviceManagementLevels(value: string[]) {
     this._allowedDeviceManagementLevels = value;
   }
   public resetAllowedDeviceManagementLevels() {
@@ -188,15 +237,15 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowedDeviceManagementLevelsInput() {
-    return this._allowedDeviceManagementLevels
+    return this._allowedDeviceManagementLevels;
   }
 
   // allowed_encryption_statuses - computed: false, optional: true, required: false
-  private _allowedEncryptionStatuses?: string[] | undefined; 
+  private _allowedEncryptionStatuses?: string[]; 
   public get allowedEncryptionStatuses() {
     return this.getListAttribute('allowed_encryption_statuses');
   }
-  public set allowedEncryptionStatuses(value: string[] | undefined) {
+  public set allowedEncryptionStatuses(value: string[]) {
     this._allowedEncryptionStatuses = value;
   }
   public resetAllowedEncryptionStatuses() {
@@ -204,15 +253,15 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get allowedEncryptionStatusesInput() {
-    return this._allowedEncryptionStatuses
+    return this._allowedEncryptionStatuses;
   }
 
   // require_admin_approval - computed: false, optional: true, required: false
-  private _requireAdminApproval?: boolean | cdktf.IResolvable | undefined; 
+  private _requireAdminApproval?: boolean | cdktf.IResolvable; 
   public get requireAdminApproval() {
     return this.getBooleanAttribute('require_admin_approval') as any;
   }
-  public set requireAdminApproval(value: boolean | cdktf.IResolvable | undefined) {
+  public set requireAdminApproval(value: boolean | cdktf.IResolvable) {
     this._requireAdminApproval = value;
   }
   public resetRequireAdminApproval() {
@@ -220,15 +269,15 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get requireAdminApprovalInput() {
-    return this._requireAdminApproval
+    return this._requireAdminApproval;
   }
 
   // require_corp_owned - computed: false, optional: true, required: false
-  private _requireCorpOwned?: boolean | cdktf.IResolvable | undefined; 
+  private _requireCorpOwned?: boolean | cdktf.IResolvable; 
   public get requireCorpOwned() {
     return this.getBooleanAttribute('require_corp_owned') as any;
   }
-  public set requireCorpOwned(value: boolean | cdktf.IResolvable | undefined) {
+  public set requireCorpOwned(value: boolean | cdktf.IResolvable) {
     this._requireCorpOwned = value;
   }
   public resetRequireCorpOwned() {
@@ -236,15 +285,15 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get requireCorpOwnedInput() {
-    return this._requireCorpOwned
+    return this._requireCorpOwned;
   }
 
   // require_screen_lock - computed: false, optional: true, required: false
-  private _requireScreenLock?: boolean | cdktf.IResolvable | undefined; 
+  private _requireScreenLock?: boolean | cdktf.IResolvable; 
   public get requireScreenLock() {
     return this.getBooleanAttribute('require_screen_lock') as any;
   }
-  public set requireScreenLock(value: boolean | cdktf.IResolvable | undefined) {
+  public set requireScreenLock(value: boolean | cdktf.IResolvable) {
     this._requireScreenLock = value;
   }
   public resetRequireScreenLock() {
@@ -252,16 +301,16 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get requireScreenLockInput() {
-    return this._requireScreenLock
+    return this._requireScreenLock;
   }
 
   // os_constraints - computed: false, optional: true, required: false
-  private _osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[] | undefined; 
+  private _osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[]; 
   public get osConstraints() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('os_constraints') as any;
   }
-  public set osConstraints(value: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[] | undefined) {
+  public set osConstraints(value: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[]) {
     this._osConstraints = value;
   }
   public resetOsConstraints() {
@@ -269,7 +318,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get osConstraintsInput() {
-    return this._osConstraints
+    return this._osConstraints;
   }
 }
 export interface AccessContextManagerAccessLevelConditionTimeouts {
@@ -283,7 +332,7 @@ export interface AccessContextManagerAccessLevelConditionTimeouts {
   readonly delete?: string;
 }
 
-function accessContextManagerAccessLevelConditionTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelConditionTimeoutsOutputReference | AccessContextManagerAccessLevelConditionTimeouts): any {
+export function accessContextManagerAccessLevelConditionTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelConditionTimeoutsOutputReference | AccessContextManagerAccessLevelConditionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -304,12 +353,37 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AccessContextManagerAccessLevelConditionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerAccessLevelConditionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -317,15 +391,15 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -333,7 +407,7 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -375,8 +449,8 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
     this._negate = config.negate;
     this._regions = config.regions;
     this._requiredAccessLevels = config.requiredAccessLevels;
-    this._devicePolicy = config.devicePolicy;
-    this._timeouts = config.timeouts;
+    this._devicePolicy.internalValue = config.devicePolicy;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -393,7 +467,7 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get accessLevelInput() {
-    return this._accessLevel
+    return this._accessLevel;
   }
 
   // id - computed: true, optional: true, required: false
@@ -402,11 +476,11 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
 
   // ip_subnetworks - computed: false, optional: true, required: false
-  private _ipSubnetworks?: string[] | undefined; 
+  private _ipSubnetworks?: string[]; 
   public get ipSubnetworks() {
     return this.getListAttribute('ip_subnetworks');
   }
-  public set ipSubnetworks(value: string[] | undefined) {
+  public set ipSubnetworks(value: string[]) {
     this._ipSubnetworks = value;
   }
   public resetIpSubnetworks() {
@@ -414,15 +488,15 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get ipSubnetworksInput() {
-    return this._ipSubnetworks
+    return this._ipSubnetworks;
   }
 
   // members - computed: false, optional: true, required: false
-  private _members?: string[] | undefined; 
+  private _members?: string[]; 
   public get members() {
     return this.getListAttribute('members');
   }
-  public set members(value: string[] | undefined) {
+  public set members(value: string[]) {
     this._members = value;
   }
   public resetMembers() {
@@ -430,15 +504,15 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get membersInput() {
-    return this._members
+    return this._members;
   }
 
   // negate - computed: false, optional: true, required: false
-  private _negate?: boolean | cdktf.IResolvable | undefined; 
+  private _negate?: boolean | cdktf.IResolvable; 
   public get negate() {
     return this.getBooleanAttribute('negate') as any;
   }
-  public set negate(value: boolean | cdktf.IResolvable | undefined) {
+  public set negate(value: boolean | cdktf.IResolvable) {
     this._negate = value;
   }
   public resetNegate() {
@@ -446,15 +520,15 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get negateInput() {
-    return this._negate
+    return this._negate;
   }
 
   // regions - computed: false, optional: true, required: false
-  private _regions?: string[] | undefined; 
+  private _regions?: string[]; 
   public get regions() {
     return this.getListAttribute('regions');
   }
-  public set regions(value: string[] | undefined) {
+  public set regions(value: string[]) {
     this._regions = value;
   }
   public resetRegions() {
@@ -462,15 +536,15 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get regionsInput() {
-    return this._regions
+    return this._regions;
   }
 
   // required_access_levels - computed: false, optional: true, required: false
-  private _requiredAccessLevels?: string[] | undefined; 
+  private _requiredAccessLevels?: string[]; 
   public get requiredAccessLevels() {
     return this.getListAttribute('required_access_levels');
   }
-  public set requiredAccessLevels(value: string[] | undefined) {
+  public set requiredAccessLevels(value: string[]) {
     this._requiredAccessLevels = value;
   }
   public resetRequiredAccessLevels() {
@@ -478,41 +552,39 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get requiredAccessLevelsInput() {
-    return this._requiredAccessLevels
+    return this._requiredAccessLevels;
   }
 
   // device_policy - computed: false, optional: true, required: false
-  private _devicePolicy?: AccessContextManagerAccessLevelConditionDevicePolicy | undefined; 
-  private __devicePolicyOutput = new AccessContextManagerAccessLevelConditionDevicePolicyOutputReference(this as any, "device_policy", true);
+  private _devicePolicy = new AccessContextManagerAccessLevelConditionDevicePolicyOutputReference(this as any, "device_policy", true);
   public get devicePolicy() {
-    return this.__devicePolicyOutput;
+    return this._devicePolicy;
   }
-  public putDevicePolicy(value: AccessContextManagerAccessLevelConditionDevicePolicy | undefined) {
-    this._devicePolicy = value;
+  public putDevicePolicy(value: AccessContextManagerAccessLevelConditionDevicePolicy) {
+    this._devicePolicy.internalValue = value;
   }
   public resetDevicePolicy() {
-    this._devicePolicy = undefined;
+    this._devicePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get devicePolicyInput() {
-    return this._devicePolicy
+    return this._devicePolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AccessContextManagerAccessLevelConditionTimeouts | undefined; 
-  private __timeoutsOutput = new AccessContextManagerAccessLevelConditionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AccessContextManagerAccessLevelConditionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AccessContextManagerAccessLevelConditionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AccessContextManagerAccessLevelConditionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -527,8 +599,8 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
       negate: cdktf.booleanToTerraform(this._negate),
       regions: cdktf.listMapper(cdktf.stringToTerraform)(this._regions),
       required_access_levels: cdktf.listMapper(cdktf.stringToTerraform)(this._requiredAccessLevels),
-      device_policy: accessContextManagerAccessLevelConditionDevicePolicyToTerraform(this._devicePolicy),
-      timeouts: accessContextManagerAccessLevelConditionTimeoutsToTerraform(this._timeouts),
+      device_policy: accessContextManagerAccessLevelConditionDevicePolicyToTerraform(this._devicePolicy.internalValue),
+      timeouts: accessContextManagerAccessLevelConditionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

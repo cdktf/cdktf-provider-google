@@ -139,7 +139,7 @@ is 1,024 characters.
   readonly tableId: string;
 }
 
-function bigqueryDatasetAccessViewToTerraform(struct?: BigqueryDatasetAccessViewOutputReference | BigqueryDatasetAccessView): any {
+export function bigqueryDatasetAccessViewToTerraform(struct?: BigqueryDatasetAccessViewOutputReference | BigqueryDatasetAccessView): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -161,6 +161,37 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigqueryDatasetAccessView | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._datasetId) {
+      hasAnyValues = true;
+      internalValueResult.datasetId = this._datasetId;
+    }
+    if (this._projectId) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    if (this._tableId) {
+      hasAnyValues = true;
+      internalValueResult.tableId = this._tableId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccessView | undefined) {
+    if (value === undefined) {
+      this._datasetId = undefined;
+      this._projectId = undefined;
+      this._tableId = undefined;
+    }
+    else {
+      this._datasetId = value.datasetId;
+      this._projectId = value.projectId;
+      this._tableId = value.tableId;
+    }
+  }
+
   // dataset_id - computed: false, optional: false, required: true
   private _datasetId?: string; 
   public get datasetId() {
@@ -171,7 +202,7 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get datasetIdInput() {
-    return this._datasetId
+    return this._datasetId;
   }
 
   // project_id - computed: false, optional: false, required: true
@@ -184,7 +215,7 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get projectIdInput() {
-    return this._projectId
+    return this._projectId;
   }
 
   // table_id - computed: false, optional: false, required: true
@@ -197,7 +228,7 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get tableIdInput() {
-    return this._tableId
+    return this._tableId;
   }
 }
 export interface BigqueryDatasetAccess {
@@ -257,7 +288,7 @@ fred@example.com
   readonly view?: BigqueryDatasetAccessView;
 }
 
-function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess): any {
+export function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -283,7 +314,7 @@ access to this encryption key.
   readonly kmsKeyName: string;
 }
 
-function bigqueryDatasetDefaultEncryptionConfigurationToTerraform(struct?: BigqueryDatasetDefaultEncryptionConfigurationOutputReference | BigqueryDatasetDefaultEncryptionConfiguration): any {
+export function bigqueryDatasetDefaultEncryptionConfigurationToTerraform(struct?: BigqueryDatasetDefaultEncryptionConfigurationOutputReference | BigqueryDatasetDefaultEncryptionConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -303,6 +334,25 @@ export class BigqueryDatasetDefaultEncryptionConfigurationOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigqueryDatasetDefaultEncryptionConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetDefaultEncryptionConfiguration | undefined) {
+    if (value === undefined) {
+      this._kmsKeyName = undefined;
+    }
+    else {
+      this._kmsKeyName = value.kmsKeyName;
+    }
+  }
+
   // kms_key_name - computed: false, optional: false, required: true
   private _kmsKeyName?: string; 
   public get kmsKeyName() {
@@ -313,7 +363,7 @@ export class BigqueryDatasetDefaultEncryptionConfigurationOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
-    return this._kmsKeyName
+    return this._kmsKeyName;
   }
 }
 export interface BigqueryDatasetTimeouts {
@@ -331,7 +381,7 @@ export interface BigqueryDatasetTimeouts {
   readonly update?: string;
 }
 
-function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeoutsOutputReference | BigqueryDatasetTimeouts): any {
+export function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeoutsOutputReference | BigqueryDatasetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -353,12 +403,43 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BigqueryDatasetTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -366,15 +447,15 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -382,15 +463,15 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -398,7 +479,7 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -444,8 +525,8 @@ export class BigqueryDataset extends cdktf.TerraformResource {
     this._location = config.location;
     this._project = config.project;
     this._access = config.access;
-    this._defaultEncryptionConfiguration = config.defaultEncryptionConfiguration;
-    this._timeouts = config.timeouts;
+    this._defaultEncryptionConfiguration.internalValue = config.defaultEncryptionConfiguration;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -467,15 +548,15 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get datasetIdInput() {
-    return this._datasetId
+    return this._datasetId;
   }
 
   // default_partition_expiration_ms - computed: false, optional: true, required: false
-  private _defaultPartitionExpirationMs?: number | undefined; 
+  private _defaultPartitionExpirationMs?: number; 
   public get defaultPartitionExpirationMs() {
     return this.getNumberAttribute('default_partition_expiration_ms');
   }
-  public set defaultPartitionExpirationMs(value: number | undefined) {
+  public set defaultPartitionExpirationMs(value: number) {
     this._defaultPartitionExpirationMs = value;
   }
   public resetDefaultPartitionExpirationMs() {
@@ -483,15 +564,15 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultPartitionExpirationMsInput() {
-    return this._defaultPartitionExpirationMs
+    return this._defaultPartitionExpirationMs;
   }
 
   // default_table_expiration_ms - computed: false, optional: true, required: false
-  private _defaultTableExpirationMs?: number | undefined; 
+  private _defaultTableExpirationMs?: number; 
   public get defaultTableExpirationMs() {
     return this.getNumberAttribute('default_table_expiration_ms');
   }
-  public set defaultTableExpirationMs(value: number | undefined) {
+  public set defaultTableExpirationMs(value: number) {
     this._defaultTableExpirationMs = value;
   }
   public resetDefaultTableExpirationMs() {
@@ -499,15 +580,15 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTableExpirationMsInput() {
-    return this._defaultTableExpirationMs
+    return this._defaultTableExpirationMs;
   }
 
   // delete_contents_on_destroy - computed: false, optional: true, required: false
-  private _deleteContentsOnDestroy?: boolean | cdktf.IResolvable | undefined; 
+  private _deleteContentsOnDestroy?: boolean | cdktf.IResolvable; 
   public get deleteContentsOnDestroy() {
     return this.getBooleanAttribute('delete_contents_on_destroy') as any;
   }
-  public set deleteContentsOnDestroy(value: boolean | cdktf.IResolvable | undefined) {
+  public set deleteContentsOnDestroy(value: boolean | cdktf.IResolvable) {
     this._deleteContentsOnDestroy = value;
   }
   public resetDeleteContentsOnDestroy() {
@@ -515,15 +596,15 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteContentsOnDestroyInput() {
-    return this._deleteContentsOnDestroy
+    return this._deleteContentsOnDestroy;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -531,7 +612,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -540,11 +621,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // friendly_name - computed: false, optional: true, required: false
-  private _friendlyName?: string | undefined; 
+  private _friendlyName?: string; 
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string | undefined) {
+  public set friendlyName(value: string) {
     this._friendlyName = value;
   }
   public resetFriendlyName() {
@@ -552,7 +633,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get friendlyNameInput() {
-    return this._friendlyName
+    return this._friendlyName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -561,12 +642,12 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -574,7 +655,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // last_modified_time - computed: true, optional: false, required: false
@@ -583,11 +664,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -595,15 +676,15 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -611,7 +692,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -620,12 +701,12 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // access - computed: false, optional: true, required: false
-  private _access?: BigqueryDatasetAccess[] | undefined; 
+  private _access?: BigqueryDatasetAccess[]; 
   public get access() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('access') as any;
   }
-  public set access(value: BigqueryDatasetAccess[] | undefined) {
+  public set access(value: BigqueryDatasetAccess[]) {
     this._access = value;
   }
   public resetAccess() {
@@ -633,41 +714,39 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accessInput() {
-    return this._access
+    return this._access;
   }
 
   // default_encryption_configuration - computed: false, optional: true, required: false
-  private _defaultEncryptionConfiguration?: BigqueryDatasetDefaultEncryptionConfiguration | undefined; 
-  private __defaultEncryptionConfigurationOutput = new BigqueryDatasetDefaultEncryptionConfigurationOutputReference(this as any, "default_encryption_configuration", true);
+  private _defaultEncryptionConfiguration = new BigqueryDatasetDefaultEncryptionConfigurationOutputReference(this as any, "default_encryption_configuration", true);
   public get defaultEncryptionConfiguration() {
-    return this.__defaultEncryptionConfigurationOutput;
+    return this._defaultEncryptionConfiguration;
   }
-  public putDefaultEncryptionConfiguration(value: BigqueryDatasetDefaultEncryptionConfiguration | undefined) {
-    this._defaultEncryptionConfiguration = value;
+  public putDefaultEncryptionConfiguration(value: BigqueryDatasetDefaultEncryptionConfiguration) {
+    this._defaultEncryptionConfiguration.internalValue = value;
   }
   public resetDefaultEncryptionConfiguration() {
-    this._defaultEncryptionConfiguration = undefined;
+    this._defaultEncryptionConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultEncryptionConfigurationInput() {
-    return this._defaultEncryptionConfiguration
+    return this._defaultEncryptionConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BigqueryDatasetTimeouts | undefined; 
-  private __timeoutsOutput = new BigqueryDatasetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryDatasetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BigqueryDatasetTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BigqueryDatasetTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -686,8 +765,8 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       access: cdktf.listMapper(bigqueryDatasetAccessToTerraform)(this._access),
-      default_encryption_configuration: bigqueryDatasetDefaultEncryptionConfigurationToTerraform(this._defaultEncryptionConfiguration),
-      timeouts: bigqueryDatasetTimeoutsToTerraform(this._timeouts),
+      default_encryption_configuration: bigqueryDatasetDefaultEncryptionConfigurationToTerraform(this._defaultEncryptionConfiguration.internalValue),
+      timeouts: bigqueryDatasetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

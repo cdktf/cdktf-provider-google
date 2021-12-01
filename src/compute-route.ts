@@ -141,7 +141,7 @@ export interface ComputeRouteTimeouts {
   readonly delete?: string;
 }
 
-function computeRouteTimeoutsToTerraform(struct?: ComputeRouteTimeoutsOutputReference | ComputeRouteTimeouts): any {
+export function computeRouteTimeoutsToTerraform(struct?: ComputeRouteTimeoutsOutputReference | ComputeRouteTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -162,12 +162,37 @@ export class ComputeRouteTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeRouteTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouteTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -175,15 +200,15 @@ export class ComputeRouteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -191,7 +216,7 @@ export class ComputeRouteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 }
 
@@ -240,7 +265,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
     this._priority = config.priority;
     this._project = config.project;
     this._tags = config.tags;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -248,11 +273,11 @@ export class ComputeRoute extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -260,7 +285,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // dest_range - computed: false, optional: false, required: true
@@ -273,7 +298,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destRangeInput() {
-    return this._destRange
+    return this._destRange;
   }
 
   // id - computed: true, optional: true, required: false
@@ -291,7 +316,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network - computed: false, optional: false, required: true
@@ -304,15 +329,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network;
   }
 
   // next_hop_gateway - computed: false, optional: true, required: false
-  private _nextHopGateway?: string | undefined; 
+  private _nextHopGateway?: string; 
   public get nextHopGateway() {
     return this.getStringAttribute('next_hop_gateway');
   }
-  public set nextHopGateway(value: string | undefined) {
+  public set nextHopGateway(value: string) {
     this._nextHopGateway = value;
   }
   public resetNextHopGateway() {
@@ -320,15 +345,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nextHopGatewayInput() {
-    return this._nextHopGateway
+    return this._nextHopGateway;
   }
 
   // next_hop_ilb - computed: false, optional: true, required: false
-  private _nextHopIlb?: string | undefined; 
+  private _nextHopIlb?: string; 
   public get nextHopIlb() {
     return this.getStringAttribute('next_hop_ilb');
   }
-  public set nextHopIlb(value: string | undefined) {
+  public set nextHopIlb(value: string) {
     this._nextHopIlb = value;
   }
   public resetNextHopIlb() {
@@ -336,15 +361,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nextHopIlbInput() {
-    return this._nextHopIlb
+    return this._nextHopIlb;
   }
 
   // next_hop_instance - computed: false, optional: true, required: false
-  private _nextHopInstance?: string | undefined; 
+  private _nextHopInstance?: string; 
   public get nextHopInstance() {
     return this.getStringAttribute('next_hop_instance');
   }
-  public set nextHopInstance(value: string | undefined) {
+  public set nextHopInstance(value: string) {
     this._nextHopInstance = value;
   }
   public resetNextHopInstance() {
@@ -352,15 +377,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nextHopInstanceInput() {
-    return this._nextHopInstance
+    return this._nextHopInstance;
   }
 
   // next_hop_instance_zone - computed: true, optional: true, required: false
-  private _nextHopInstanceZone?: string | undefined; 
+  private _nextHopInstanceZone?: string; 
   public get nextHopInstanceZone() {
     return this.getStringAttribute('next_hop_instance_zone');
   }
-  public set nextHopInstanceZone(value: string | undefined) {
+  public set nextHopInstanceZone(value: string) {
     this._nextHopInstanceZone = value;
   }
   public resetNextHopInstanceZone() {
@@ -368,15 +393,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nextHopInstanceZoneInput() {
-    return this._nextHopInstanceZone
+    return this._nextHopInstanceZone;
   }
 
   // next_hop_ip - computed: true, optional: true, required: false
-  private _nextHopIp?: string | undefined; 
+  private _nextHopIp?: string; 
   public get nextHopIp() {
     return this.getStringAttribute('next_hop_ip');
   }
-  public set nextHopIp(value: string | undefined) {
+  public set nextHopIp(value: string) {
     this._nextHopIp = value;
   }
   public resetNextHopIp() {
@@ -384,7 +409,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nextHopIpInput() {
-    return this._nextHopIp
+    return this._nextHopIp;
   }
 
   // next_hop_network - computed: true, optional: false, required: false
@@ -393,11 +418,11 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
 
   // next_hop_vpn_tunnel - computed: false, optional: true, required: false
-  private _nextHopVpnTunnel?: string | undefined; 
+  private _nextHopVpnTunnel?: string; 
   public get nextHopVpnTunnel() {
     return this.getStringAttribute('next_hop_vpn_tunnel');
   }
-  public set nextHopVpnTunnel(value: string | undefined) {
+  public set nextHopVpnTunnel(value: string) {
     this._nextHopVpnTunnel = value;
   }
   public resetNextHopVpnTunnel() {
@@ -405,15 +430,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nextHopVpnTunnelInput() {
-    return this._nextHopVpnTunnel
+    return this._nextHopVpnTunnel;
   }
 
   // priority - computed: false, optional: true, required: false
-  private _priority?: number | undefined; 
+  private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number) {
     this._priority = value;
   }
   public resetPriority() {
@@ -421,15 +446,15 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
-    return this._priority
+    return this._priority;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -437,7 +462,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -446,11 +471,11 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -458,24 +483,23 @@ export class ComputeRoute extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeRouteTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeRouteTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRouteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeRouteTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeRouteTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -497,7 +521,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
       priority: cdktf.numberToTerraform(this._priority),
       project: cdktf.stringToTerraform(this._project),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
-      timeouts: computeRouteTimeoutsToTerraform(this._timeouts),
+      timeouts: computeRouteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

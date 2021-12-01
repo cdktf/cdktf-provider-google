@@ -52,7 +52,7 @@ with length <2000 characters. For example: 'https://container.googleapis.com/v1/
   readonly issuer: string;
 }
 
-function gkeHubMembershipAuthorityToTerraform(struct?: GkeHubMembershipAuthorityOutputReference | GkeHubMembershipAuthority): any {
+export function gkeHubMembershipAuthorityToTerraform(struct?: GkeHubMembershipAuthorityOutputReference | GkeHubMembershipAuthority): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,6 +72,25 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): GkeHubMembershipAuthority | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._issuer) {
+      hasAnyValues = true;
+      internalValueResult.issuer = this._issuer;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubMembershipAuthority | undefined) {
+    if (value === undefined) {
+      this._issuer = undefined;
+    }
+    else {
+      this._issuer = value.issuer;
+    }
+  }
+
   // issuer - computed: false, optional: false, required: true
   private _issuer?: string; 
   public get issuer() {
@@ -82,7 +101,7 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get issuerInput() {
-    return this._issuer
+    return this._issuer;
   }
 }
 export interface GkeHubMembershipEndpointGkeCluster {
@@ -98,7 +117,7 @@ this can be '"//container.googleapis.com/${google_container_cluster.my-cluster.i
   readonly resourceLink: string;
 }
 
-function gkeHubMembershipEndpointGkeClusterToTerraform(struct?: GkeHubMembershipEndpointGkeClusterOutputReference | GkeHubMembershipEndpointGkeCluster): any {
+export function gkeHubMembershipEndpointGkeClusterToTerraform(struct?: GkeHubMembershipEndpointGkeClusterOutputReference | GkeHubMembershipEndpointGkeCluster): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -118,6 +137,25 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): GkeHubMembershipEndpointGkeCluster | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._resourceLink) {
+      hasAnyValues = true;
+      internalValueResult.resourceLink = this._resourceLink;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubMembershipEndpointGkeCluster | undefined) {
+    if (value === undefined) {
+      this._resourceLink = undefined;
+    }
+    else {
+      this._resourceLink = value.resourceLink;
+    }
+  }
+
   // resource_link - computed: false, optional: false, required: true
   private _resourceLink?: string; 
   public get resourceLink() {
@@ -128,7 +166,7 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get resourceLinkInput() {
-    return this._resourceLink
+    return this._resourceLink;
   }
 }
 export interface GkeHubMembershipEndpoint {
@@ -140,7 +178,7 @@ export interface GkeHubMembershipEndpoint {
   readonly gkeCluster?: GkeHubMembershipEndpointGkeCluster;
 }
 
-function gkeHubMembershipEndpointToTerraform(struct?: GkeHubMembershipEndpointOutputReference | GkeHubMembershipEndpoint): any {
+export function gkeHubMembershipEndpointToTerraform(struct?: GkeHubMembershipEndpointOutputReference | GkeHubMembershipEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -160,21 +198,39 @@ export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // gke_cluster - computed: false, optional: true, required: false
-  private _gkeCluster?: GkeHubMembershipEndpointGkeCluster | undefined; 
-  private __gkeClusterOutput = new GkeHubMembershipEndpointGkeClusterOutputReference(this as any, "gke_cluster", true);
-  public get gkeCluster() {
-    return this.__gkeClusterOutput;
+  public get internalValue(): GkeHubMembershipEndpoint | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._gkeCluster) {
+      hasAnyValues = true;
+      internalValueResult.gkeCluster = this._gkeCluster?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putGkeCluster(value: GkeHubMembershipEndpointGkeCluster | undefined) {
-    this._gkeCluster = value;
+
+  public set internalValue(value: GkeHubMembershipEndpoint | undefined) {
+    if (value === undefined) {
+      this._gkeCluster.internalValue = undefined;
+    }
+    else {
+      this._gkeCluster.internalValue = value.gkeCluster;
+    }
+  }
+
+  // gke_cluster - computed: false, optional: true, required: false
+  private _gkeCluster = new GkeHubMembershipEndpointGkeClusterOutputReference(this as any, "gke_cluster", true);
+  public get gkeCluster() {
+    return this._gkeCluster;
+  }
+  public putGkeCluster(value: GkeHubMembershipEndpointGkeCluster) {
+    this._gkeCluster.internalValue = value;
   }
   public resetGkeCluster() {
-    this._gkeCluster = undefined;
+    this._gkeCluster.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gkeClusterInput() {
-    return this._gkeCluster
+    return this._gkeCluster.internalValue;
   }
 }
 export interface GkeHubMembershipTimeouts {
@@ -192,7 +248,7 @@ export interface GkeHubMembershipTimeouts {
   readonly update?: string;
 }
 
-function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTimeoutsOutputReference | GkeHubMembershipTimeouts): any {
+export function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTimeoutsOutputReference | GkeHubMembershipTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -214,12 +270,43 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): GkeHubMembershipTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GkeHubMembershipTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -227,15 +314,15 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -243,15 +330,15 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -259,7 +346,7 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -298,9 +385,9 @@ export class GkeHubMembership extends cdktf.TerraformResource {
     this._labels = config.labels;
     this._membershipId = config.membershipId;
     this._project = config.project;
-    this._authority = config.authority;
-    this._endpoint = config.endpoint;
-    this._timeouts = config.timeouts;
+    this._authority.internalValue = config.authority;
+    this._endpoint.internalValue = config.endpoint;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -313,12 +400,12 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -326,7 +413,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // membership_id - computed: false, optional: false, required: true
@@ -339,7 +426,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get membershipIdInput() {
-    return this._membershipId
+    return this._membershipId;
   }
 
   // name - computed: true, optional: false, required: false
@@ -348,11 +435,11 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -360,58 +447,55 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // authority - computed: false, optional: true, required: false
-  private _authority?: GkeHubMembershipAuthority | undefined; 
-  private __authorityOutput = new GkeHubMembershipAuthorityOutputReference(this as any, "authority", true);
+  private _authority = new GkeHubMembershipAuthorityOutputReference(this as any, "authority", true);
   public get authority() {
-    return this.__authorityOutput;
+    return this._authority;
   }
-  public putAuthority(value: GkeHubMembershipAuthority | undefined) {
-    this._authority = value;
+  public putAuthority(value: GkeHubMembershipAuthority) {
+    this._authority.internalValue = value;
   }
   public resetAuthority() {
-    this._authority = undefined;
+    this._authority.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authorityInput() {
-    return this._authority
+    return this._authority.internalValue;
   }
 
   // endpoint - computed: false, optional: true, required: false
-  private _endpoint?: GkeHubMembershipEndpoint | undefined; 
-  private __endpointOutput = new GkeHubMembershipEndpointOutputReference(this as any, "endpoint", true);
+  private _endpoint = new GkeHubMembershipEndpointOutputReference(this as any, "endpoint", true);
   public get endpoint() {
-    return this.__endpointOutput;
+    return this._endpoint;
   }
-  public putEndpoint(value: GkeHubMembershipEndpoint | undefined) {
-    this._endpoint = value;
+  public putEndpoint(value: GkeHubMembershipEndpoint) {
+    this._endpoint.internalValue = value;
   }
   public resetEndpoint() {
-    this._endpoint = undefined;
+    this._endpoint.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get endpointInput() {
-    return this._endpoint
+    return this._endpoint.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: GkeHubMembershipTimeouts | undefined; 
-  private __timeoutsOutput = new GkeHubMembershipTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GkeHubMembershipTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: GkeHubMembershipTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: GkeHubMembershipTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -423,9 +507,9 @@ export class GkeHubMembership extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
       membership_id: cdktf.stringToTerraform(this._membershipId),
       project: cdktf.stringToTerraform(this._project),
-      authority: gkeHubMembershipAuthorityToTerraform(this._authority),
-      endpoint: gkeHubMembershipEndpointToTerraform(this._endpoint),
-      timeouts: gkeHubMembershipTimeoutsToTerraform(this._timeouts),
+      authority: gkeHubMembershipAuthorityToTerraform(this._authority.internalValue),
+      endpoint: gkeHubMembershipEndpointToTerraform(this._endpoint.internalValue),
+      timeouts: gkeHubMembershipTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

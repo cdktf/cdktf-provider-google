@@ -85,15 +85,15 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
-    return this._bucket
+    return this._bucket;
   }
 
   // default_acl - computed: false, optional: true, required: false
-  private _defaultAcl?: string | undefined; 
+  private _defaultAcl?: string; 
   public get defaultAcl() {
     return this.getStringAttribute('default_acl');
   }
-  public set defaultAcl(value: string | undefined) {
+  public set defaultAcl(value: string) {
     this._defaultAcl = value;
   }
   public resetDefaultAcl() {
@@ -101,7 +101,7 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultAclInput() {
-    return this._defaultAcl
+    return this._defaultAcl;
   }
 
   // id - computed: true, optional: true, required: false
@@ -110,11 +110,11 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
 
   // predefined_acl - computed: false, optional: true, required: false
-  private _predefinedAcl?: string | undefined; 
+  private _predefinedAcl?: string; 
   public get predefinedAcl() {
     return this.getStringAttribute('predefined_acl');
   }
-  public set predefinedAcl(value: string | undefined) {
+  public set predefinedAcl(value: string) {
     this._predefinedAcl = value;
   }
   public resetPredefinedAcl() {
@@ -122,15 +122,15 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get predefinedAclInput() {
-    return this._predefinedAcl
+    return this._predefinedAcl;
   }
 
   // role_entity - computed: true, optional: true, required: false
-  private _roleEntity?: string[] | undefined; 
+  private _roleEntity?: string[]; 
   public get roleEntity() {
     return this.getListAttribute('role_entity');
   }
-  public set roleEntity(value: string[] | undefined) {
+  public set roleEntity(value: string[]) {
     this._roleEntity = value;
   }
   public resetRoleEntity() {
@@ -138,7 +138,7 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleEntityInput() {
-    return this._roleEntity
+    return this._roleEntity;
   }
 
   // =========

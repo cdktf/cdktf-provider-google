@@ -104,7 +104,7 @@ This field can only be specified if logging is enabled for this service.
   readonly sampleRate?: number;
 }
 
-function networkServicesEdgeCacheServiceLogConfigToTerraform(struct?: NetworkServicesEdgeCacheServiceLogConfigOutputReference | NetworkServicesEdgeCacheServiceLogConfig): any {
+export function networkServicesEdgeCacheServiceLogConfigToTerraform(struct?: NetworkServicesEdgeCacheServiceLogConfigOutputReference | NetworkServicesEdgeCacheServiceLogConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,12 +125,37 @@ export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceLogConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enable) {
+      hasAnyValues = true;
+      internalValueResult.enable = this._enable;
+    }
+    if (this._sampleRate) {
+      hasAnyValues = true;
+      internalValueResult.sampleRate = this._sampleRate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceLogConfig | undefined) {
+    if (value === undefined) {
+      this._enable = undefined;
+      this._sampleRate = undefined;
+    }
+    else {
+      this._enable = value.enable;
+      this._sampleRate = value.sampleRate;
+    }
+  }
+
   // enable - computed: true, optional: true, required: false
-  private _enable?: boolean | cdktf.IResolvable | undefined; 
+  private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
     return this.getBooleanAttribute('enable') as any;
   }
-  public set enable(value: boolean | cdktf.IResolvable | undefined) {
+  public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
   }
   public resetEnable() {
@@ -138,15 +163,15 @@ export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get enableInput() {
-    return this._enable
+    return this._enable;
   }
 
   // sample_rate - computed: false, optional: true, required: false
-  private _sampleRate?: number | undefined; 
+  private _sampleRate?: number; 
   public get sampleRate() {
     return this.getNumberAttribute('sample_rate');
   }
-  public set sampleRate(value: number | undefined) {
+  public set sampleRate(value: number) {
     this._sampleRate = value;
   }
   public resetSampleRate() {
@@ -154,7 +179,7 @@ export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get sampleRateInput() {
-    return this._sampleRate
+    return this._sampleRate;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingHostRule {
@@ -183,7 +208,7 @@ Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":
   readonly pathMatcher: string;
 }
 
-function networkServicesEdgeCacheServiceRoutingHostRuleToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingHostRule): any {
+export function networkServicesEdgeCacheServiceRoutingHostRuleToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingHostRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -216,7 +241,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeade
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -237,7 +262,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeade
   readonly headerName: string;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -268,7 +293,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeade
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -291,7 +316,7 @@ Response headers are only sent to the client, and do not have an effect on the c
   readonly headerName: string;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -328,7 +353,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeade
   readonly responseHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[];
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -351,13 +376,50 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeaderToAdd) {
+      hasAnyValues = true;
+      internalValueResult.requestHeaderToAdd = this._requestHeaderToAdd;
+    }
+    if (this._requestHeaderToRemove) {
+      hasAnyValues = true;
+      internalValueResult.requestHeaderToRemove = this._requestHeaderToRemove;
+    }
+    if (this._responseHeaderToAdd) {
+      hasAnyValues = true;
+      internalValueResult.responseHeaderToAdd = this._responseHeaderToAdd;
+    }
+    if (this._responseHeaderToRemove) {
+      hasAnyValues = true;
+      internalValueResult.responseHeaderToRemove = this._responseHeaderToRemove;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined) {
+    if (value === undefined) {
+      this._requestHeaderToAdd = undefined;
+      this._requestHeaderToRemove = undefined;
+      this._responseHeaderToAdd = undefined;
+      this._responseHeaderToRemove = undefined;
+    }
+    else {
+      this._requestHeaderToAdd = value.requestHeaderToAdd;
+      this._requestHeaderToRemove = value.requestHeaderToRemove;
+      this._responseHeaderToAdd = value.responseHeaderToAdd;
+      this._responseHeaderToRemove = value.responseHeaderToRemove;
+    }
+  }
+
   // request_header_to_add - computed: false, optional: true, required: false
-  private _requestHeaderToAdd?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[] | undefined; 
+  private _requestHeaderToAdd?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[]; 
   public get requestHeaderToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_header_to_add') as any;
   }
-  public set requestHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[] | undefined) {
+  public set requestHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[]) {
     this._requestHeaderToAdd = value;
   }
   public resetRequestHeaderToAdd() {
@@ -365,16 +427,16 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderToAddInput() {
-    return this._requestHeaderToAdd
+    return this._requestHeaderToAdd;
   }
 
   // request_header_to_remove - computed: false, optional: true, required: false
-  private _requestHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[] | undefined; 
+  private _requestHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[]; 
   public get requestHeaderToRemove() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_header_to_remove') as any;
   }
-  public set requestHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[] | undefined) {
+  public set requestHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[]) {
     this._requestHeaderToRemove = value;
   }
   public resetRequestHeaderToRemove() {
@@ -382,16 +444,16 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderToRemoveInput() {
-    return this._requestHeaderToRemove
+    return this._requestHeaderToRemove;
   }
 
   // response_header_to_add - computed: false, optional: true, required: false
-  private _responseHeaderToAdd?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[] | undefined; 
+  private _responseHeaderToAdd?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[]; 
   public get responseHeaderToAdd() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_header_to_add') as any;
   }
-  public set responseHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[] | undefined) {
+  public set responseHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[]) {
     this._responseHeaderToAdd = value;
   }
   public resetResponseHeaderToAdd() {
@@ -399,16 +461,16 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeaderToAddInput() {
-    return this._responseHeaderToAdd
+    return this._responseHeaderToAdd;
   }
 
   // response_header_to_remove - computed: false, optional: true, required: false
-  private _responseHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[] | undefined; 
+  private _responseHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[]; 
   public get responseHeaderToRemove() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_header_to_remove') as any;
   }
-  public set responseHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[] | undefined) {
+  public set responseHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[]) {
     this._responseHeaderToRemove = value;
   }
   public resetResponseHeaderToRemove() {
@@ -416,7 +478,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeaderToRemoveInput() {
-    return this._responseHeaderToRemove
+    return this._responseHeaderToRemove;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch {
@@ -459,7 +521,7 @@ If set to true, the headerMatch is considered a match if the match criteria abov
   readonly suffixMatch?: string;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -495,7 +557,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatch
   readonly presentMatch?: boolean | cdktf.IResolvable;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -554,7 +616,7 @@ captures in total.
   readonly queryParameterMatch?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch[];
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -626,7 +688,7 @@ Either specify includedQueryParameters or excludedQueryParameters, not both. '&'
   readonly includedQueryParameters?: string[];
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -651,12 +713,61 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._excludeHost) {
+      hasAnyValues = true;
+      internalValueResult.excludeHost = this._excludeHost;
+    }
+    if (this._excludeQueryString) {
+      hasAnyValues = true;
+      internalValueResult.excludeQueryString = this._excludeQueryString;
+    }
+    if (this._excludedQueryParameters) {
+      hasAnyValues = true;
+      internalValueResult.excludedQueryParameters = this._excludedQueryParameters;
+    }
+    if (this._includeProtocol) {
+      hasAnyValues = true;
+      internalValueResult.includeProtocol = this._includeProtocol;
+    }
+    if (this._includedHeaderNames) {
+      hasAnyValues = true;
+      internalValueResult.includedHeaderNames = this._includedHeaderNames;
+    }
+    if (this._includedQueryParameters) {
+      hasAnyValues = true;
+      internalValueResult.includedQueryParameters = this._includedQueryParameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined) {
+    if (value === undefined) {
+      this._excludeHost = undefined;
+      this._excludeQueryString = undefined;
+      this._excludedQueryParameters = undefined;
+      this._includeProtocol = undefined;
+      this._includedHeaderNames = undefined;
+      this._includedQueryParameters = undefined;
+    }
+    else {
+      this._excludeHost = value.excludeHost;
+      this._excludeQueryString = value.excludeQueryString;
+      this._excludedQueryParameters = value.excludedQueryParameters;
+      this._includeProtocol = value.includeProtocol;
+      this._includedHeaderNames = value.includedHeaderNames;
+      this._includedQueryParameters = value.includedQueryParameters;
+    }
+  }
+
   // exclude_host - computed: true, optional: true, required: false
-  private _excludeHost?: boolean | cdktf.IResolvable | undefined; 
+  private _excludeHost?: boolean | cdktf.IResolvable; 
   public get excludeHost() {
     return this.getBooleanAttribute('exclude_host') as any;
   }
-  public set excludeHost(value: boolean | cdktf.IResolvable | undefined) {
+  public set excludeHost(value: boolean | cdktf.IResolvable) {
     this._excludeHost = value;
   }
   public resetExcludeHost() {
@@ -664,15 +775,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get excludeHostInput() {
-    return this._excludeHost
+    return this._excludeHost;
   }
 
   // exclude_query_string - computed: false, optional: true, required: false
-  private _excludeQueryString?: boolean | cdktf.IResolvable | undefined; 
+  private _excludeQueryString?: boolean | cdktf.IResolvable; 
   public get excludeQueryString() {
     return this.getBooleanAttribute('exclude_query_string') as any;
   }
-  public set excludeQueryString(value: boolean | cdktf.IResolvable | undefined) {
+  public set excludeQueryString(value: boolean | cdktf.IResolvable) {
     this._excludeQueryString = value;
   }
   public resetExcludeQueryString() {
@@ -680,15 +791,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get excludeQueryStringInput() {
-    return this._excludeQueryString
+    return this._excludeQueryString;
   }
 
   // excluded_query_parameters - computed: false, optional: true, required: false
-  private _excludedQueryParameters?: string[] | undefined; 
+  private _excludedQueryParameters?: string[]; 
   public get excludedQueryParameters() {
     return this.getListAttribute('excluded_query_parameters');
   }
-  public set excludedQueryParameters(value: string[] | undefined) {
+  public set excludedQueryParameters(value: string[]) {
     this._excludedQueryParameters = value;
   }
   public resetExcludedQueryParameters() {
@@ -696,15 +807,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get excludedQueryParametersInput() {
-    return this._excludedQueryParameters
+    return this._excludedQueryParameters;
   }
 
   // include_protocol - computed: true, optional: true, required: false
-  private _includeProtocol?: boolean | cdktf.IResolvable | undefined; 
+  private _includeProtocol?: boolean | cdktf.IResolvable; 
   public get includeProtocol() {
     return this.getBooleanAttribute('include_protocol') as any;
   }
-  public set includeProtocol(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeProtocol(value: boolean | cdktf.IResolvable) {
     this._includeProtocol = value;
   }
   public resetIncludeProtocol() {
@@ -712,15 +823,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get includeProtocolInput() {
-    return this._includeProtocol
+    return this._includeProtocol;
   }
 
   // included_header_names - computed: false, optional: true, required: false
-  private _includedHeaderNames?: string[] | undefined; 
+  private _includedHeaderNames?: string[]; 
   public get includedHeaderNames() {
     return this.getListAttribute('included_header_names');
   }
-  public set includedHeaderNames(value: string[] | undefined) {
+  public set includedHeaderNames(value: string[]) {
     this._includedHeaderNames = value;
   }
   public resetIncludedHeaderNames() {
@@ -728,15 +839,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get includedHeaderNamesInput() {
-    return this._includedHeaderNames
+    return this._includedHeaderNames;
   }
 
   // included_query_parameters - computed: false, optional: true, required: false
-  private _includedQueryParameters?: string[] | undefined; 
+  private _includedQueryParameters?: string[]; 
   public get includedQueryParameters() {
     return this.getListAttribute('included_query_parameters');
   }
-  public set includedQueryParameters(value: string[] | undefined) {
+  public set includedQueryParameters(value: string[]) {
     this._includedQueryParameters = value;
   }
   public resetIncludedQueryParameters() {
@@ -744,7 +855,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get includedQueryParametersInput() {
-    return this._includedQueryParameters
+    return this._includedQueryParameters;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy {
@@ -857,7 +968,7 @@ When set to REQUIRE_SIGNATURES, all matching requests will have their signature 
   readonly cacheKeyPolicy?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -885,12 +996,79 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cacheMode) {
+      hasAnyValues = true;
+      internalValueResult.cacheMode = this._cacheMode;
+    }
+    if (this._clientTtl) {
+      hasAnyValues = true;
+      internalValueResult.clientTtl = this._clientTtl;
+    }
+    if (this._defaultTtl) {
+      hasAnyValues = true;
+      internalValueResult.defaultTtl = this._defaultTtl;
+    }
+    if (this._maxTtl) {
+      hasAnyValues = true;
+      internalValueResult.maxTtl = this._maxTtl;
+    }
+    if (this._negativeCaching) {
+      hasAnyValues = true;
+      internalValueResult.negativeCaching = this._negativeCaching;
+    }
+    if (this._negativeCachingPolicy) {
+      hasAnyValues = true;
+      internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy;
+    }
+    if (this._signedRequestKeyset) {
+      hasAnyValues = true;
+      internalValueResult.signedRequestKeyset = this._signedRequestKeyset;
+    }
+    if (this._signedRequestMode) {
+      hasAnyValues = true;
+      internalValueResult.signedRequestMode = this._signedRequestMode;
+    }
+    if (this._cacheKeyPolicy) {
+      hasAnyValues = true;
+      internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined) {
+    if (value === undefined) {
+      this._cacheMode = undefined;
+      this._clientTtl = undefined;
+      this._defaultTtl = undefined;
+      this._maxTtl = undefined;
+      this._negativeCaching = undefined;
+      this._negativeCachingPolicy = undefined;
+      this._signedRequestKeyset = undefined;
+      this._signedRequestMode = undefined;
+      this._cacheKeyPolicy.internalValue = undefined;
+    }
+    else {
+      this._cacheMode = value.cacheMode;
+      this._clientTtl = value.clientTtl;
+      this._defaultTtl = value.defaultTtl;
+      this._maxTtl = value.maxTtl;
+      this._negativeCaching = value.negativeCaching;
+      this._negativeCachingPolicy = value.negativeCachingPolicy;
+      this._signedRequestKeyset = value.signedRequestKeyset;
+      this._signedRequestMode = value.signedRequestMode;
+      this._cacheKeyPolicy.internalValue = value.cacheKeyPolicy;
+    }
+  }
+
   // cache_mode - computed: true, optional: true, required: false
-  private _cacheMode?: string | undefined; 
+  private _cacheMode?: string; 
   public get cacheMode() {
     return this.getStringAttribute('cache_mode');
   }
-  public set cacheMode(value: string | undefined) {
+  public set cacheMode(value: string) {
     this._cacheMode = value;
   }
   public resetCacheMode() {
@@ -898,15 +1076,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get cacheModeInput() {
-    return this._cacheMode
+    return this._cacheMode;
   }
 
   // client_ttl - computed: false, optional: true, required: false
-  private _clientTtl?: string | undefined; 
+  private _clientTtl?: string; 
   public get clientTtl() {
     return this.getStringAttribute('client_ttl');
   }
-  public set clientTtl(value: string | undefined) {
+  public set clientTtl(value: string) {
     this._clientTtl = value;
   }
   public resetClientTtl() {
@@ -914,15 +1092,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get clientTtlInput() {
-    return this._clientTtl
+    return this._clientTtl;
   }
 
   // default_ttl - computed: true, optional: true, required: false
-  private _defaultTtl?: string | undefined; 
+  private _defaultTtl?: string; 
   public get defaultTtl() {
     return this.getStringAttribute('default_ttl');
   }
-  public set defaultTtl(value: string | undefined) {
+  public set defaultTtl(value: string) {
     this._defaultTtl = value;
   }
   public resetDefaultTtl() {
@@ -930,15 +1108,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlInput() {
-    return this._defaultTtl
+    return this._defaultTtl;
   }
 
   // max_ttl - computed: true, optional: true, required: false
-  private _maxTtl?: string | undefined; 
+  private _maxTtl?: string; 
   public get maxTtl() {
     return this.getStringAttribute('max_ttl');
   }
-  public set maxTtl(value: string | undefined) {
+  public set maxTtl(value: string) {
     this._maxTtl = value;
   }
   public resetMaxTtl() {
@@ -946,15 +1124,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get maxTtlInput() {
-    return this._maxTtl
+    return this._maxTtl;
   }
 
   // negative_caching - computed: false, optional: true, required: false
-  private _negativeCaching?: boolean | cdktf.IResolvable | undefined; 
+  private _negativeCaching?: boolean | cdktf.IResolvable; 
   public get negativeCaching() {
     return this.getBooleanAttribute('negative_caching') as any;
   }
-  public set negativeCaching(value: boolean | cdktf.IResolvable | undefined) {
+  public set negativeCaching(value: boolean | cdktf.IResolvable) {
     this._negativeCaching = value;
   }
   public resetNegativeCaching() {
@@ -962,16 +1140,16 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get negativeCachingInput() {
-    return this._negativeCaching
+    return this._negativeCaching;
   }
 
   // negative_caching_policy - computed: false, optional: true, required: false
-  private _negativeCachingPolicy?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _negativeCachingPolicy?: { [key: string]: string } | cdktf.IResolvable; 
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('negative_caching_policy') as any;
   }
-  public set negativeCachingPolicy(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set negativeCachingPolicy(value: { [key: string]: string } | cdktf.IResolvable) {
     this._negativeCachingPolicy = value;
   }
   public resetNegativeCachingPolicy() {
@@ -979,15 +1157,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get negativeCachingPolicyInput() {
-    return this._negativeCachingPolicy
+    return this._negativeCachingPolicy;
   }
 
   // signed_request_keyset - computed: true, optional: true, required: false
-  private _signedRequestKeyset?: string | undefined; 
+  private _signedRequestKeyset?: string; 
   public get signedRequestKeyset() {
     return this.getStringAttribute('signed_request_keyset');
   }
-  public set signedRequestKeyset(value: string | undefined) {
+  public set signedRequestKeyset(value: string) {
     this._signedRequestKeyset = value;
   }
   public resetSignedRequestKeyset() {
@@ -995,15 +1173,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get signedRequestKeysetInput() {
-    return this._signedRequestKeyset
+    return this._signedRequestKeyset;
   }
 
   // signed_request_mode - computed: true, optional: true, required: false
-  private _signedRequestMode?: string | undefined; 
+  private _signedRequestMode?: string; 
   public get signedRequestMode() {
     return this.getStringAttribute('signed_request_mode');
   }
-  public set signedRequestMode(value: string | undefined) {
+  public set signedRequestMode(value: string) {
     this._signedRequestMode = value;
   }
   public resetSignedRequestMode() {
@@ -1011,24 +1189,23 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get signedRequestModeInput() {
-    return this._signedRequestMode
+    return this._signedRequestMode;
   }
 
   // cache_key_policy - computed: false, optional: true, required: false
-  private _cacheKeyPolicy?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined; 
-  private __cacheKeyPolicyOutput = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
+  private _cacheKeyPolicy = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
   public get cacheKeyPolicy() {
-    return this.__cacheKeyPolicyOutput;
+    return this._cacheKeyPolicy;
   }
-  public putCacheKeyPolicy(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined) {
-    this._cacheKeyPolicy = value;
+  public putCacheKeyPolicy(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy) {
+    this._cacheKeyPolicy.internalValue = value;
   }
   public resetCacheKeyPolicy() {
-    this._cacheKeyPolicy = undefined;
+    this._cacheKeyPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cacheKeyPolicyInput() {
-    return this._cacheKeyPolicy
+    return this._cacheKeyPolicy.internalValue;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
@@ -1086,7 +1263,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   readonly maxAge: string;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1112,12 +1289,67 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowCredentials) {
+      hasAnyValues = true;
+      internalValueResult.allowCredentials = this._allowCredentials;
+    }
+    if (this._allowHeaders) {
+      hasAnyValues = true;
+      internalValueResult.allowHeaders = this._allowHeaders;
+    }
+    if (this._allowMethods) {
+      hasAnyValues = true;
+      internalValueResult.allowMethods = this._allowMethods;
+    }
+    if (this._allowOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowOrigins = this._allowOrigins;
+    }
+    if (this._disabled) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    if (this._exposeHeaders) {
+      hasAnyValues = true;
+      internalValueResult.exposeHeaders = this._exposeHeaders;
+    }
+    if (this._maxAge) {
+      hasAnyValues = true;
+      internalValueResult.maxAge = this._maxAge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined) {
+    if (value === undefined) {
+      this._allowCredentials = undefined;
+      this._allowHeaders = undefined;
+      this._allowMethods = undefined;
+      this._allowOrigins = undefined;
+      this._disabled = undefined;
+      this._exposeHeaders = undefined;
+      this._maxAge = undefined;
+    }
+    else {
+      this._allowCredentials = value.allowCredentials;
+      this._allowHeaders = value.allowHeaders;
+      this._allowMethods = value.allowMethods;
+      this._allowOrigins = value.allowOrigins;
+      this._disabled = value.disabled;
+      this._exposeHeaders = value.exposeHeaders;
+      this._maxAge = value.maxAge;
+    }
+  }
+
   // allow_credentials - computed: false, optional: true, required: false
-  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
     return this.getBooleanAttribute('allow_credentials') as any;
   }
-  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
   }
   public resetAllowCredentials() {
@@ -1125,15 +1357,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get allowCredentialsInput() {
-    return this._allowCredentials
+    return this._allowCredentials;
   }
 
   // allow_headers - computed: false, optional: true, required: false
-  private _allowHeaders?: string[] | undefined; 
+  private _allowHeaders?: string[]; 
   public get allowHeaders() {
     return this.getListAttribute('allow_headers');
   }
-  public set allowHeaders(value: string[] | undefined) {
+  public set allowHeaders(value: string[]) {
     this._allowHeaders = value;
   }
   public resetAllowHeaders() {
@@ -1141,15 +1373,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get allowHeadersInput() {
-    return this._allowHeaders
+    return this._allowHeaders;
   }
 
   // allow_methods - computed: false, optional: true, required: false
-  private _allowMethods?: string[] | undefined; 
+  private _allowMethods?: string[]; 
   public get allowMethods() {
     return this.getListAttribute('allow_methods');
   }
-  public set allowMethods(value: string[] | undefined) {
+  public set allowMethods(value: string[]) {
     this._allowMethods = value;
   }
   public resetAllowMethods() {
@@ -1157,15 +1389,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get allowMethodsInput() {
-    return this._allowMethods
+    return this._allowMethods;
   }
 
   // allow_origins - computed: false, optional: true, required: false
-  private _allowOrigins?: string[] | undefined; 
+  private _allowOrigins?: string[]; 
   public get allowOrigins() {
     return this.getListAttribute('allow_origins');
   }
-  public set allowOrigins(value: string[] | undefined) {
+  public set allowOrigins(value: string[]) {
     this._allowOrigins = value;
   }
   public resetAllowOrigins() {
@@ -1173,15 +1405,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get allowOriginsInput() {
-    return this._allowOrigins
+    return this._allowOrigins;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -1189,15 +1421,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // expose_headers - computed: false, optional: true, required: false
-  private _exposeHeaders?: string[] | undefined; 
+  private _exposeHeaders?: string[]; 
   public get exposeHeaders() {
     return this.getListAttribute('expose_headers');
   }
-  public set exposeHeaders(value: string[] | undefined) {
+  public set exposeHeaders(value: string[]) {
     this._exposeHeaders = value;
   }
   public resetExposeHeaders() {
@@ -1205,7 +1437,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get exposeHeadersInput() {
-    return this._exposeHeaders
+    return this._exposeHeaders;
   }
 
   // max_age - computed: false, optional: false, required: true
@@ -1218,7 +1450,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInput() {
-    return this._maxAge
+    return this._maxAge;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite {
@@ -1255,7 +1487,7 @@ specified.
   readonly pathTemplateRewrite?: string;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1277,12 +1509,43 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRewrite) {
+      hasAnyValues = true;
+      internalValueResult.hostRewrite = this._hostRewrite;
+    }
+    if (this._pathPrefixRewrite) {
+      hasAnyValues = true;
+      internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
+    }
+    if (this._pathTemplateRewrite) {
+      hasAnyValues = true;
+      internalValueResult.pathTemplateRewrite = this._pathTemplateRewrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined) {
+    if (value === undefined) {
+      this._hostRewrite = undefined;
+      this._pathPrefixRewrite = undefined;
+      this._pathTemplateRewrite = undefined;
+    }
+    else {
+      this._hostRewrite = value.hostRewrite;
+      this._pathPrefixRewrite = value.pathPrefixRewrite;
+      this._pathTemplateRewrite = value.pathTemplateRewrite;
+    }
+  }
+
   // host_rewrite - computed: false, optional: true, required: false
-  private _hostRewrite?: string | undefined; 
+  private _hostRewrite?: string; 
   public get hostRewrite() {
     return this.getStringAttribute('host_rewrite');
   }
-  public set hostRewrite(value: string | undefined) {
+  public set hostRewrite(value: string) {
     this._hostRewrite = value;
   }
   public resetHostRewrite() {
@@ -1290,15 +1553,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get hostRewriteInput() {
-    return this._hostRewrite
+    return this._hostRewrite;
   }
 
   // path_prefix_rewrite - computed: false, optional: true, required: false
-  private _pathPrefixRewrite?: string | undefined; 
+  private _pathPrefixRewrite?: string; 
   public get pathPrefixRewrite() {
     return this.getStringAttribute('path_prefix_rewrite');
   }
-  public set pathPrefixRewrite(value: string | undefined) {
+  public set pathPrefixRewrite(value: string) {
     this._pathPrefixRewrite = value;
   }
   public resetPathPrefixRewrite() {
@@ -1306,15 +1569,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get pathPrefixRewriteInput() {
-    return this._pathPrefixRewrite
+    return this._pathPrefixRewrite;
   }
 
   // path_template_rewrite - computed: false, optional: true, required: false
-  private _pathTemplateRewrite?: string | undefined; 
+  private _pathTemplateRewrite?: string; 
   public get pathTemplateRewrite() {
     return this.getStringAttribute('path_template_rewrite');
   }
-  public set pathTemplateRewrite(value: string | undefined) {
+  public set pathTemplateRewrite(value: string) {
     this._pathTemplateRewrite = value;
   }
   public resetPathTemplateRewrite() {
@@ -1322,7 +1585,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
   // Temporarily expose input value. Use with caution.
   public get pathTemplateRewriteInput() {
-    return this._pathTemplateRewrite
+    return this._pathTemplateRewrite;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
@@ -1346,7 +1609,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRoute
   readonly urlRewrite?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1368,55 +1631,83 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined; 
-  private __cdnPolicyOutput = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference(this as any, "cdn_policy", true);
-  public get cdnPolicy() {
-    return this.__cdnPolicyOutput;
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cdnPolicy) {
+      hasAnyValues = true;
+      internalValueResult.cdnPolicy = this._cdnPolicy?.internalValue;
+    }
+    if (this._corsPolicy) {
+      hasAnyValues = true;
+      internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
+    }
+    if (this._urlRewrite) {
+      hasAnyValues = true;
+      internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCdnPolicy(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined) {
-    this._cdnPolicy = value;
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction | undefined) {
+    if (value === undefined) {
+      this._cdnPolicy.internalValue = undefined;
+      this._corsPolicy.internalValue = undefined;
+      this._urlRewrite.internalValue = undefined;
+    }
+    else {
+      this._cdnPolicy.internalValue = value.cdnPolicy;
+      this._corsPolicy.internalValue = value.corsPolicy;
+      this._urlRewrite.internalValue = value.urlRewrite;
+    }
+  }
+
+  // cdn_policy - computed: false, optional: true, required: false
+  private _cdnPolicy = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference(this as any, "cdn_policy", true);
+  public get cdnPolicy() {
+    return this._cdnPolicy;
+  }
+  public putCdnPolicy(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy) {
+    this._cdnPolicy.internalValue = value;
   }
   public resetCdnPolicy() {
-    this._cdnPolicy = undefined;
+    this._cdnPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cdnPolicyInput() {
-    return this._cdnPolicy
+    return this._cdnPolicy.internalValue;
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined; 
-  private __corsPolicyOutput = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  private _corsPolicy = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
   public get corsPolicy() {
-    return this.__corsPolicyOutput;
+    return this._corsPolicy;
   }
-  public putCorsPolicy(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined) {
-    this._corsPolicy = value;
+  public putCorsPolicy(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy) {
+    this._corsPolicy.internalValue = value;
   }
   public resetCorsPolicy() {
-    this._corsPolicy = undefined;
+    this._corsPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsPolicyInput() {
-    return this._corsPolicy
+    return this._corsPolicy.internalValue;
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined; 
-  private __urlRewriteOutput = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
   public get urlRewrite() {
-    return this.__urlRewriteOutput;
+    return this._urlRewrite;
   }
-  public putUrlRewrite(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined) {
-    this._urlRewrite = value;
+  public putUrlRewrite(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite) {
+    this._urlRewrite.internalValue = value;
   }
   public resetUrlRewrite() {
-    this._urlRewrite = undefined;
+    this._urlRewrite.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRewriteInput() {
-    return this._urlRewrite
+    return this._urlRewrite.internalValue;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
@@ -1474,7 +1765,7 @@ The supported values are:
   readonly stripQuery?: boolean | cdktf.IResolvable;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1499,12 +1790,61 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRedirect) {
+      hasAnyValues = true;
+      internalValueResult.hostRedirect = this._hostRedirect;
+    }
+    if (this._httpsRedirect) {
+      hasAnyValues = true;
+      internalValueResult.httpsRedirect = this._httpsRedirect;
+    }
+    if (this._pathRedirect) {
+      hasAnyValues = true;
+      internalValueResult.pathRedirect = this._pathRedirect;
+    }
+    if (this._prefixRedirect) {
+      hasAnyValues = true;
+      internalValueResult.prefixRedirect = this._prefixRedirect;
+    }
+    if (this._redirectResponseCode) {
+      hasAnyValues = true;
+      internalValueResult.redirectResponseCode = this._redirectResponseCode;
+    }
+    if (this._stripQuery) {
+      hasAnyValues = true;
+      internalValueResult.stripQuery = this._stripQuery;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect | undefined) {
+    if (value === undefined) {
+      this._hostRedirect = undefined;
+      this._httpsRedirect = undefined;
+      this._pathRedirect = undefined;
+      this._prefixRedirect = undefined;
+      this._redirectResponseCode = undefined;
+      this._stripQuery = undefined;
+    }
+    else {
+      this._hostRedirect = value.hostRedirect;
+      this._httpsRedirect = value.httpsRedirect;
+      this._pathRedirect = value.pathRedirect;
+      this._prefixRedirect = value.prefixRedirect;
+      this._redirectResponseCode = value.redirectResponseCode;
+      this._stripQuery = value.stripQuery;
+    }
+  }
+
   // host_redirect - computed: false, optional: true, required: false
-  private _hostRedirect?: string | undefined; 
+  private _hostRedirect?: string; 
   public get hostRedirect() {
     return this.getStringAttribute('host_redirect');
   }
-  public set hostRedirect(value: string | undefined) {
+  public set hostRedirect(value: string) {
     this._hostRedirect = value;
   }
   public resetHostRedirect() {
@@ -1512,15 +1852,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
   // Temporarily expose input value. Use with caution.
   public get hostRedirectInput() {
-    return this._hostRedirect
+    return this._hostRedirect;
   }
 
   // https_redirect - computed: true, optional: true, required: false
-  private _httpsRedirect?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
     return this.getBooleanAttribute('https_redirect') as any;
   }
-  public set httpsRedirect(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
   }
   public resetHttpsRedirect() {
@@ -1528,15 +1868,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
   // Temporarily expose input value. Use with caution.
   public get httpsRedirectInput() {
-    return this._httpsRedirect
+    return this._httpsRedirect;
   }
 
   // path_redirect - computed: false, optional: true, required: false
-  private _pathRedirect?: string | undefined; 
+  private _pathRedirect?: string; 
   public get pathRedirect() {
     return this.getStringAttribute('path_redirect');
   }
-  public set pathRedirect(value: string | undefined) {
+  public set pathRedirect(value: string) {
     this._pathRedirect = value;
   }
   public resetPathRedirect() {
@@ -1544,15 +1884,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
   // Temporarily expose input value. Use with caution.
   public get pathRedirectInput() {
-    return this._pathRedirect
+    return this._pathRedirect;
   }
 
   // prefix_redirect - computed: false, optional: true, required: false
-  private _prefixRedirect?: string | undefined; 
+  private _prefixRedirect?: string; 
   public get prefixRedirect() {
     return this.getStringAttribute('prefix_redirect');
   }
-  public set prefixRedirect(value: string | undefined) {
+  public set prefixRedirect(value: string) {
     this._prefixRedirect = value;
   }
   public resetPrefixRedirect() {
@@ -1560,15 +1900,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
   // Temporarily expose input value. Use with caution.
   public get prefixRedirectInput() {
-    return this._prefixRedirect
+    return this._prefixRedirect;
   }
 
   // redirect_response_code - computed: true, optional: true, required: false
-  private _redirectResponseCode?: string | undefined; 
+  private _redirectResponseCode?: string; 
   public get redirectResponseCode() {
     return this.getStringAttribute('redirect_response_code');
   }
-  public set redirectResponseCode(value: string | undefined) {
+  public set redirectResponseCode(value: string) {
     this._redirectResponseCode = value;
   }
   public resetRedirectResponseCode() {
@@ -1576,15 +1916,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
   // Temporarily expose input value. Use with caution.
   public get redirectResponseCodeInput() {
-    return this._redirectResponseCode
+    return this._redirectResponseCode;
   }
 
   // strip_query - computed: true, optional: true, required: false
-  private _stripQuery?: boolean | cdktf.IResolvable | undefined; 
+  private _stripQuery?: boolean | cdktf.IResolvable; 
   public get stripQuery() {
     return this.getBooleanAttribute('strip_query') as any;
   }
-  public set stripQuery(value: boolean | cdktf.IResolvable | undefined) {
+  public set stripQuery(value: boolean | cdktf.IResolvable) {
     this._stripQuery = value;
   }
   public resetStripQuery() {
@@ -1592,7 +1932,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
   // Temporarily expose input value. Use with caution.
   public get stripQueryInput() {
-    return this._stripQuery
+    return this._stripQuery;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule {
@@ -1647,7 +1987,7 @@ to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
   readonly urlRedirect?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect;
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1684,7 +2024,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcher {
   readonly routeRule: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule[];
 }
 
-function networkServicesEdgeCacheServiceRoutingPathMatcherToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcher): any {
+export function networkServicesEdgeCacheServiceRoutingPathMatcherToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcher): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1711,7 +2051,7 @@ export interface NetworkServicesEdgeCacheServiceRouting {
   readonly pathMatcher: NetworkServicesEdgeCacheServiceRoutingPathMatcher[];
 }
 
-function networkServicesEdgeCacheServiceRoutingToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingOutputReference | NetworkServicesEdgeCacheServiceRouting): any {
+export function networkServicesEdgeCacheServiceRoutingToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingOutputReference | NetworkServicesEdgeCacheServiceRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1732,6 +2072,31 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceRouting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostRule) {
+      hasAnyValues = true;
+      internalValueResult.hostRule = this._hostRule;
+    }
+    if (this._pathMatcher) {
+      hasAnyValues = true;
+      internalValueResult.pathMatcher = this._pathMatcher;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRouting | undefined) {
+    if (value === undefined) {
+      this._hostRule = undefined;
+      this._pathMatcher = undefined;
+    }
+    else {
+      this._hostRule = value.hostRule;
+      this._pathMatcher = value.pathMatcher;
+    }
+  }
+
   // host_rule - computed: false, optional: false, required: true
   private _hostRule?: NetworkServicesEdgeCacheServiceRoutingHostRule[]; 
   public get hostRule() {
@@ -1743,7 +2108,7 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get hostRuleInput() {
-    return this._hostRule
+    return this._hostRule;
   }
 
   // path_matcher - computed: false, optional: false, required: true
@@ -1757,7 +2122,7 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get pathMatcherInput() {
-    return this._pathMatcher
+    return this._pathMatcher;
   }
 }
 export interface NetworkServicesEdgeCacheServiceTimeouts {
@@ -1775,7 +2140,7 @@ export interface NetworkServicesEdgeCacheServiceTimeouts {
   readonly update?: string;
 }
 
-function networkServicesEdgeCacheServiceTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheServiceTimeoutsOutputReference | NetworkServicesEdgeCacheServiceTimeouts): any {
+export function networkServicesEdgeCacheServiceTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheServiceTimeoutsOutputReference | NetworkServicesEdgeCacheServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1797,12 +2162,43 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkServicesEdgeCacheServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1810,15 +2206,15 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1826,15 +2222,15 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1842,7 +2238,7 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1887,9 +2283,9 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
     this._project = config.project;
     this._requireTls = config.requireTls;
     this._sslPolicy = config.sslPolicy;
-    this._logConfig = config.logConfig;
-    this._routing = config.routing;
-    this._timeouts = config.timeouts;
+    this._logConfig.internalValue = config.logConfig;
+    this._routing.internalValue = config.routing;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1897,11 +2293,11 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1909,15 +2305,15 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // disable_quic - computed: true, optional: true, required: false
-  private _disableQuic?: boolean | cdktf.IResolvable | undefined; 
+  private _disableQuic?: boolean | cdktf.IResolvable; 
   public get disableQuic() {
     return this.getBooleanAttribute('disable_quic') as any;
   }
-  public set disableQuic(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableQuic(value: boolean | cdktf.IResolvable) {
     this._disableQuic = value;
   }
   public resetDisableQuic() {
@@ -1925,15 +2321,15 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableQuicInput() {
-    return this._disableQuic
+    return this._disableQuic;
   }
 
   // edge_security_policy - computed: false, optional: true, required: false
-  private _edgeSecurityPolicy?: string | undefined; 
+  private _edgeSecurityPolicy?: string; 
   public get edgeSecurityPolicy() {
     return this.getStringAttribute('edge_security_policy');
   }
-  public set edgeSecurityPolicy(value: string | undefined) {
+  public set edgeSecurityPolicy(value: string) {
     this._edgeSecurityPolicy = value;
   }
   public resetEdgeSecurityPolicy() {
@@ -1941,15 +2337,15 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get edgeSecurityPolicyInput() {
-    return this._edgeSecurityPolicy
+    return this._edgeSecurityPolicy;
   }
 
   // edge_ssl_certificates - computed: false, optional: true, required: false
-  private _edgeSslCertificates?: string[] | undefined; 
+  private _edgeSslCertificates?: string[]; 
   public get edgeSslCertificates() {
     return this.getListAttribute('edge_ssl_certificates');
   }
-  public set edgeSslCertificates(value: string[] | undefined) {
+  public set edgeSslCertificates(value: string[]) {
     this._edgeSslCertificates = value;
   }
   public resetEdgeSslCertificates() {
@@ -1957,7 +2353,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get edgeSslCertificatesInput() {
-    return this._edgeSslCertificates
+    return this._edgeSslCertificates;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1976,12 +2372,12 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('labels') as any;
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1989,7 +2385,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2002,15 +2398,15 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -2018,15 +2414,15 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // require_tls - computed: true, optional: true, required: false
-  private _requireTls?: boolean | cdktf.IResolvable | undefined; 
+  private _requireTls?: boolean | cdktf.IResolvable; 
   public get requireTls() {
     return this.getBooleanAttribute('require_tls') as any;
   }
-  public set requireTls(value: boolean | cdktf.IResolvable | undefined) {
+  public set requireTls(value: boolean | cdktf.IResolvable) {
     this._requireTls = value;
   }
   public resetRequireTls() {
@@ -2034,15 +2430,15 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get requireTlsInput() {
-    return this._requireTls
+    return this._requireTls;
   }
 
   // ssl_policy - computed: false, optional: true, required: false
-  private _sslPolicy?: string | undefined; 
+  private _sslPolicy?: string; 
   public get sslPolicy() {
     return this.getStringAttribute('ssl_policy');
   }
-  public set sslPolicy(value: string | undefined) {
+  public set sslPolicy(value: string) {
     this._sslPolicy = value;
   }
   public resetSslPolicy() {
@@ -2050,55 +2446,52 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sslPolicyInput() {
-    return this._sslPolicy
+    return this._sslPolicy;
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig?: NetworkServicesEdgeCacheServiceLogConfig | undefined; 
-  private __logConfigOutput = new NetworkServicesEdgeCacheServiceLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new NetworkServicesEdgeCacheServiceLogConfigOutputReference(this as any, "log_config", true);
   public get logConfig() {
-    return this.__logConfigOutput;
+    return this._logConfig;
   }
-  public putLogConfig(value: NetworkServicesEdgeCacheServiceLogConfig | undefined) {
-    this._logConfig = value;
+  public putLogConfig(value: NetworkServicesEdgeCacheServiceLogConfig) {
+    this._logConfig.internalValue = value;
   }
   public resetLogConfig() {
-    this._logConfig = undefined;
+    this._logConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logConfigInput() {
-    return this._logConfig
+    return this._logConfig.internalValue;
   }
 
   // routing - computed: false, optional: false, required: true
-  private _routing?: NetworkServicesEdgeCacheServiceRouting; 
-  private __routingOutput = new NetworkServicesEdgeCacheServiceRoutingOutputReference(this as any, "routing", true);
+  private _routing = new NetworkServicesEdgeCacheServiceRoutingOutputReference(this as any, "routing", true);
   public get routing() {
-    return this.__routingOutput;
+    return this._routing;
   }
   public putRouting(value: NetworkServicesEdgeCacheServiceRouting) {
-    this._routing = value;
+    this._routing.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get routingInput() {
-    return this._routing
+    return this._routing.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkServicesEdgeCacheServiceTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkServicesEdgeCacheServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkServicesEdgeCacheServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkServicesEdgeCacheServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkServicesEdgeCacheServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2116,9 +2509,9 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       require_tls: cdktf.booleanToTerraform(this._requireTls),
       ssl_policy: cdktf.stringToTerraform(this._sslPolicy),
-      log_config: networkServicesEdgeCacheServiceLogConfigToTerraform(this._logConfig),
-      routing: networkServicesEdgeCacheServiceRoutingToTerraform(this._routing),
-      timeouts: networkServicesEdgeCacheServiceTimeoutsToTerraform(this._timeouts),
+      log_config: networkServicesEdgeCacheServiceLogConfigToTerraform(this._logConfig.internalValue),
+      routing: networkServicesEdgeCacheServiceRoutingToTerraform(this._routing.internalValue),
+      timeouts: networkServicesEdgeCacheServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

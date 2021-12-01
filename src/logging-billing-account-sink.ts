@@ -65,7 +65,7 @@ export interface LoggingBillingAccountSinkBigqueryOptions {
   readonly usePartitionedTables: boolean | cdktf.IResolvable;
 }
 
-function loggingBillingAccountSinkBigqueryOptionsToTerraform(struct?: LoggingBillingAccountSinkBigqueryOptionsOutputReference | LoggingBillingAccountSinkBigqueryOptions): any {
+export function loggingBillingAccountSinkBigqueryOptionsToTerraform(struct?: LoggingBillingAccountSinkBigqueryOptionsOutputReference | LoggingBillingAccountSinkBigqueryOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -85,6 +85,25 @@ export class LoggingBillingAccountSinkBigqueryOptionsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LoggingBillingAccountSinkBigqueryOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._usePartitionedTables) {
+      hasAnyValues = true;
+      internalValueResult.usePartitionedTables = this._usePartitionedTables;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingBillingAccountSinkBigqueryOptions | undefined) {
+    if (value === undefined) {
+      this._usePartitionedTables = undefined;
+    }
+    else {
+      this._usePartitionedTables = value.usePartitionedTables;
+    }
+  }
+
   // use_partitioned_tables - computed: false, optional: false, required: true
   private _usePartitionedTables?: boolean | cdktf.IResolvable; 
   public get usePartitionedTables() {
@@ -95,7 +114,7 @@ export class LoggingBillingAccountSinkBigqueryOptionsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get usePartitionedTablesInput() {
-    return this._usePartitionedTables
+    return this._usePartitionedTables;
   }
 }
 export interface LoggingBillingAccountSinkExclusions {
@@ -125,7 +144,7 @@ export interface LoggingBillingAccountSinkExclusions {
   readonly name: string;
 }
 
-function loggingBillingAccountSinkExclusionsToTerraform(struct?: LoggingBillingAccountSinkExclusions): any {
+export function loggingBillingAccountSinkExclusionsToTerraform(struct?: LoggingBillingAccountSinkExclusions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -177,7 +196,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
     this._disabled = config.disabled;
     this._filter = config.filter;
     this._name = config.name;
-    this._bigqueryOptions = config.bigqueryOptions;
+    this._bigqueryOptions.internalValue = config.bigqueryOptions;
     this._exclusions = config.exclusions;
   }
 
@@ -195,15 +214,15 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get billingAccountInput() {
-    return this._billingAccount
+    return this._billingAccount;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -211,7 +230,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // destination - computed: false, optional: false, required: true
@@ -224,15 +243,15 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination;
   }
 
   // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable | undefined; 
+  private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
     return this.getBooleanAttribute('disabled') as any;
   }
-  public set disabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
   }
   public resetDisabled() {
@@ -240,15 +259,15 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disabledInput() {
-    return this._disabled
+    return this._disabled;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: string | undefined; 
+  private _filter?: string; 
   public get filter() {
     return this.getStringAttribute('filter');
   }
-  public set filter(value: string | undefined) {
+  public set filter(value: string) {
     this._filter = value;
   }
   public resetFilter() {
@@ -256,7 +275,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -274,7 +293,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // writer_identity - computed: true, optional: false, required: false
@@ -283,29 +302,28 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
 
   // bigquery_options - computed: false, optional: true, required: false
-  private _bigqueryOptions?: LoggingBillingAccountSinkBigqueryOptions | undefined; 
-  private __bigqueryOptionsOutput = new LoggingBillingAccountSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
+  private _bigqueryOptions = new LoggingBillingAccountSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
   public get bigqueryOptions() {
-    return this.__bigqueryOptionsOutput;
+    return this._bigqueryOptions;
   }
-  public putBigqueryOptions(value: LoggingBillingAccountSinkBigqueryOptions | undefined) {
-    this._bigqueryOptions = value;
+  public putBigqueryOptions(value: LoggingBillingAccountSinkBigqueryOptions) {
+    this._bigqueryOptions.internalValue = value;
   }
   public resetBigqueryOptions() {
-    this._bigqueryOptions = undefined;
+    this._bigqueryOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bigqueryOptionsInput() {
-    return this._bigqueryOptions
+    return this._bigqueryOptions.internalValue;
   }
 
   // exclusions - computed: false, optional: true, required: false
-  private _exclusions?: LoggingBillingAccountSinkExclusions[] | undefined; 
+  private _exclusions?: LoggingBillingAccountSinkExclusions[]; 
   public get exclusions() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('exclusions') as any;
   }
-  public set exclusions(value: LoggingBillingAccountSinkExclusions[] | undefined) {
+  public set exclusions(value: LoggingBillingAccountSinkExclusions[]) {
     this._exclusions = value;
   }
   public resetExclusions() {
@@ -313,7 +331,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get exclusionsInput() {
-    return this._exclusions
+    return this._exclusions;
   }
 
   // =========
@@ -328,7 +346,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
       disabled: cdktf.booleanToTerraform(this._disabled),
       filter: cdktf.stringToTerraform(this._filter),
       name: cdktf.stringToTerraform(this._name),
-      bigquery_options: loggingBillingAccountSinkBigqueryOptionsToTerraform(this._bigqueryOptions),
+      bigquery_options: loggingBillingAccountSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
       exclusions: cdktf.listMapper(loggingBillingAccountSinkExclusionsToTerraform)(this._exclusions),
     };
   }

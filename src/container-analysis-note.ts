@@ -70,7 +70,7 @@ example "qa".
   readonly humanReadableName: string;
 }
 
-function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityHintOutputReference | ContainerAnalysisNoteAttestationAuthorityHint): any {
+export function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityHintOutputReference | ContainerAnalysisNoteAttestationAuthorityHint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,6 +90,25 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerAnalysisNoteAttestationAuthorityHint | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._humanReadableName) {
+      hasAnyValues = true;
+      internalValueResult.humanReadableName = this._humanReadableName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAnalysisNoteAttestationAuthorityHint | undefined) {
+    if (value === undefined) {
+      this._humanReadableName = undefined;
+    }
+    else {
+      this._humanReadableName = value.humanReadableName;
+    }
+  }
+
   // human_readable_name - computed: false, optional: false, required: true
   private _humanReadableName?: string; 
   public get humanReadableName() {
@@ -100,7 +119,7 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get humanReadableNameInput() {
-    return this._humanReadableName
+    return this._humanReadableName;
   }
 }
 export interface ContainerAnalysisNoteAttestationAuthority {
@@ -112,7 +131,7 @@ export interface ContainerAnalysisNoteAttestationAuthority {
   readonly hint: ContainerAnalysisNoteAttestationAuthorityHint;
 }
 
-function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityOutputReference | ContainerAnalysisNoteAttestationAuthority): any {
+export function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityOutputReference | ContainerAnalysisNoteAttestationAuthority): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -132,18 +151,36 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerAnalysisNoteAttestationAuthority | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hint) {
+      hasAnyValues = true;
+      internalValueResult.hint = this._hint?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAnalysisNoteAttestationAuthority | undefined) {
+    if (value === undefined) {
+      this._hint.internalValue = undefined;
+    }
+    else {
+      this._hint.internalValue = value.hint;
+    }
+  }
+
   // hint - computed: false, optional: false, required: true
-  private _hint?: ContainerAnalysisNoteAttestationAuthorityHint; 
-  private __hintOutput = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this as any, "hint", true);
+  private _hint = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this as any, "hint", true);
   public get hint() {
-    return this.__hintOutput;
+    return this._hint;
   }
   public putHint(value: ContainerAnalysisNoteAttestationAuthorityHint) {
-    this._hint = value;
+    this._hint.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get hintInput() {
-    return this._hint
+    return this._hint.internalValue;
   }
 }
 export interface ContainerAnalysisNoteRelatedUrl {
@@ -161,7 +198,7 @@ export interface ContainerAnalysisNoteRelatedUrl {
   readonly url: string;
 }
 
-function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNoteRelatedUrl): any {
+export function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNoteRelatedUrl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -187,7 +224,7 @@ export interface ContainerAnalysisNoteTimeouts {
   readonly update?: string;
 }
 
-function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeoutsOutputReference | ContainerAnalysisNoteTimeouts): any {
+export function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeoutsOutputReference | ContainerAnalysisNoteTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -209,12 +246,43 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerAnalysisNoteTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAnalysisNoteTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -222,15 +290,15 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -238,15 +306,15 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -254,7 +322,7 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -296,9 +364,9 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
     this._project = config.project;
     this._relatedNoteNames = config.relatedNoteNames;
     this._shortDescription = config.shortDescription;
-    this._attestationAuthority = config.attestationAuthority;
+    this._attestationAuthority.internalValue = config.attestationAuthority;
     this._relatedUrl = config.relatedUrl;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -311,11 +379,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // expiration_time - computed: false, optional: true, required: false
-  private _expirationTime?: string | undefined; 
+  private _expirationTime?: string; 
   public get expirationTime() {
     return this.getStringAttribute('expiration_time');
   }
-  public set expirationTime(value: string | undefined) {
+  public set expirationTime(value: string) {
     this._expirationTime = value;
   }
   public resetExpirationTime() {
@@ -323,7 +391,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get expirationTimeInput() {
-    return this._expirationTime
+    return this._expirationTime;
   }
 
   // id - computed: true, optional: true, required: false
@@ -337,11 +405,11 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // long_description - computed: false, optional: true, required: false
-  private _longDescription?: string | undefined; 
+  private _longDescription?: string; 
   public get longDescription() {
     return this.getStringAttribute('long_description');
   }
-  public set longDescription(value: string | undefined) {
+  public set longDescription(value: string) {
     this._longDescription = value;
   }
   public resetLongDescription() {
@@ -349,7 +417,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get longDescriptionInput() {
-    return this._longDescription
+    return this._longDescription;
   }
 
   // name - computed: false, optional: false, required: true
@@ -362,15 +430,15 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -378,15 +446,15 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // related_note_names - computed: false, optional: true, required: false
-  private _relatedNoteNames?: string[] | undefined; 
+  private _relatedNoteNames?: string[]; 
   public get relatedNoteNames() {
     return this.getListAttribute('related_note_names');
   }
-  public set relatedNoteNames(value: string[] | undefined) {
+  public set relatedNoteNames(value: string[]) {
     this._relatedNoteNames = value;
   }
   public resetRelatedNoteNames() {
@@ -394,15 +462,15 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get relatedNoteNamesInput() {
-    return this._relatedNoteNames
+    return this._relatedNoteNames;
   }
 
   // short_description - computed: false, optional: true, required: false
-  private _shortDescription?: string | undefined; 
+  private _shortDescription?: string; 
   public get shortDescription() {
     return this.getStringAttribute('short_description');
   }
-  public set shortDescription(value: string | undefined) {
+  public set shortDescription(value: string) {
     this._shortDescription = value;
   }
   public resetShortDescription() {
@@ -410,7 +478,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get shortDescriptionInput() {
-    return this._shortDescription
+    return this._shortDescription;
   }
 
   // update_time - computed: true, optional: false, required: false
@@ -419,26 +487,25 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // attestation_authority - computed: false, optional: false, required: true
-  private _attestationAuthority?: ContainerAnalysisNoteAttestationAuthority; 
-  private __attestationAuthorityOutput = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this as any, "attestation_authority", true);
+  private _attestationAuthority = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this as any, "attestation_authority", true);
   public get attestationAuthority() {
-    return this.__attestationAuthorityOutput;
+    return this._attestationAuthority;
   }
   public putAttestationAuthority(value: ContainerAnalysisNoteAttestationAuthority) {
-    this._attestationAuthority = value;
+    this._attestationAuthority.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get attestationAuthorityInput() {
-    return this._attestationAuthority
+    return this._attestationAuthority.internalValue;
   }
 
   // related_url - computed: false, optional: true, required: false
-  private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[] | undefined; 
+  private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[]; 
   public get relatedUrl() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('related_url') as any;
   }
-  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[] | undefined) {
+  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[]) {
     this._relatedUrl = value;
   }
   public resetRelatedUrl() {
@@ -446,24 +513,23 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get relatedUrlInput() {
-    return this._relatedUrl
+    return this._relatedUrl;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ContainerAnalysisNoteTimeouts | undefined; 
-  private __timeoutsOutput = new ContainerAnalysisNoteTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerAnalysisNoteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ContainerAnalysisNoteTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ContainerAnalysisNoteTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -478,9 +544,9 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       related_note_names: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedNoteNames),
       short_description: cdktf.stringToTerraform(this._shortDescription),
-      attestation_authority: containerAnalysisNoteAttestationAuthorityToTerraform(this._attestationAuthority),
+      attestation_authority: containerAnalysisNoteAttestationAuthorityToTerraform(this._attestationAuthority.internalValue),
       related_url: cdktf.listMapper(containerAnalysisNoteRelatedUrlToTerraform)(this._relatedUrl),
-      timeouts: containerAnalysisNoteTimeoutsToTerraform(this._timeouts),
+      timeouts: containerAnalysisNoteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

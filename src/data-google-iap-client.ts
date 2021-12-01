@@ -73,7 +73,7 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get brandInput() {
-    return this._brand
+    return this._brand;
   }
 
   // client_id - computed: false, optional: false, required: true
@@ -86,7 +86,7 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // display_name - computed: true, optional: false, required: false

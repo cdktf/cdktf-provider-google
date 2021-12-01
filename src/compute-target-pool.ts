@@ -83,7 +83,7 @@ export interface ComputeTargetPoolTimeouts {
   readonly update?: string;
 }
 
-function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeoutsOutputReference | ComputeTargetPoolTimeouts): any {
+export function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeoutsOutputReference | ComputeTargetPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,12 +105,43 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ComputeTargetPoolTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeTargetPoolTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -118,15 +149,15 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -134,15 +165,15 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -150,7 +181,7 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -195,7 +226,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._sessionAffinity = config.sessionAffinity;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -203,11 +234,11 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   // ==========
 
   // backup_pool - computed: false, optional: true, required: false
-  private _backupPool?: string | undefined; 
+  private _backupPool?: string; 
   public get backupPool() {
     return this.getStringAttribute('backup_pool');
   }
-  public set backupPool(value: string | undefined) {
+  public set backupPool(value: string) {
     this._backupPool = value;
   }
   public resetBackupPool() {
@@ -215,15 +246,15 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backupPoolInput() {
-    return this._backupPool
+    return this._backupPool;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -231,15 +262,15 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // failover_ratio - computed: false, optional: true, required: false
-  private _failoverRatio?: number | undefined; 
+  private _failoverRatio?: number; 
   public get failoverRatio() {
     return this.getNumberAttribute('failover_ratio');
   }
-  public set failoverRatio(value: number | undefined) {
+  public set failoverRatio(value: number) {
     this._failoverRatio = value;
   }
   public resetFailoverRatio() {
@@ -247,15 +278,15 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get failoverRatioInput() {
-    return this._failoverRatio
+    return this._failoverRatio;
   }
 
   // health_checks - computed: false, optional: true, required: false
-  private _healthChecks?: string[] | undefined; 
+  private _healthChecks?: string[]; 
   public get healthChecks() {
     return this.getListAttribute('health_checks');
   }
-  public set healthChecks(value: string[] | undefined) {
+  public set healthChecks(value: string[]) {
     this._healthChecks = value;
   }
   public resetHealthChecks() {
@@ -263,7 +294,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get healthChecksInput() {
-    return this._healthChecks
+    return this._healthChecks;
   }
 
   // id - computed: true, optional: true, required: false
@@ -272,11 +303,11 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
 
   // instances - computed: true, optional: true, required: false
-  private _instances?: string[] | undefined; 
+  private _instances?: string[]; 
   public get instances() {
     return this.getListAttribute('instances');
   }
-  public set instances(value: string[] | undefined) {
+  public set instances(value: string[]) {
     this._instances = value;
   }
   public resetInstances() {
@@ -284,7 +315,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instancesInput() {
-    return this._instances
+    return this._instances;
   }
 
   // name - computed: false, optional: false, required: true
@@ -297,15 +328,15 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // project - computed: true, optional: true, required: false
-  private _project?: string | undefined; 
+  private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
-  public set project(value: string | undefined) {
+  public set project(value: string) {
     this._project = value;
   }
   public resetProject() {
@@ -313,15 +344,15 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
-    return this._project
+    return this._project;
   }
 
   // region - computed: true, optional: true, required: false
-  private _region?: string | undefined; 
+  private _region?: string; 
   public get region() {
     return this.getStringAttribute('region');
   }
-  public set region(value: string | undefined) {
+  public set region(value: string) {
     this._region = value;
   }
   public resetRegion() {
@@ -329,7 +360,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
-    return this._region
+    return this._region;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -338,11 +369,11 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
 
   // session_affinity - computed: false, optional: true, required: false
-  private _sessionAffinity?: string | undefined; 
+  private _sessionAffinity?: string; 
   public get sessionAffinity() {
     return this.getStringAttribute('session_affinity');
   }
-  public set sessionAffinity(value: string | undefined) {
+  public set sessionAffinity(value: string) {
     this._sessionAffinity = value;
   }
   public resetSessionAffinity() {
@@ -350,24 +381,23 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sessionAffinityInput() {
-    return this._sessionAffinity
+    return this._sessionAffinity;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ComputeTargetPoolTimeouts | undefined; 
-  private __timeoutsOutput = new ComputeTargetPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeTargetPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ComputeTargetPoolTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ComputeTargetPoolTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -385,7 +415,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
-      timeouts: computeTargetPoolTimeoutsToTerraform(this._timeouts),
+      timeouts: computeTargetPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }
