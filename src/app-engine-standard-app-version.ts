@@ -167,6 +167,8 @@ export function appEngineStandardAppVersionAutomaticScalingStandardSchedulerSett
 }
 
 export class AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -177,7 +179,7 @@ export class AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSetting
   }
 
   public get internalValue(): AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxInstances) {
       hasAnyValues = true;
@@ -200,12 +202,14 @@ export class AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSetting
 
   public set internalValue(value: AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxInstances = undefined;
       this._minInstances = undefined;
       this._targetCpuUtilization = undefined;
       this._targetThroughputUtilization = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxInstances = value.maxInstances;
       this._minInstances = value.minInstances;
       this._targetCpuUtilization = value.targetCpuUtilization;
@@ -336,6 +340,8 @@ export function appEngineStandardAppVersionAutomaticScalingToTerraform(struct?: 
 }
 
 export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -346,7 +352,7 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
   }
 
   public get internalValue(): AppEngineStandardAppVersionAutomaticScaling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxConcurrentRequests) {
       hasAnyValues = true;
@@ -368,7 +374,7 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
       hasAnyValues = true;
       internalValueResult.minPendingLatency = this._minPendingLatency;
     }
-    if (this._standardSchedulerSettings) {
+    if (this._standardSchedulerSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.standardSchedulerSettings = this._standardSchedulerSettings?.internalValue;
     }
@@ -377,6 +383,7 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
 
   public set internalValue(value: AppEngineStandardAppVersionAutomaticScaling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxConcurrentRequests = undefined;
       this._maxIdleInstances = undefined;
       this._maxPendingLatency = undefined;
@@ -385,6 +392,7 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
       this._standardSchedulerSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxConcurrentRequests = value.maxConcurrentRequests;
       this._maxIdleInstances = value.maxIdleInstances;
       this._maxPendingLatency = value.maxPendingLatency;
@@ -518,6 +526,8 @@ export function appEngineStandardAppVersionBasicScalingToTerraform(struct?: AppE
 }
 
 export class AppEngineStandardAppVersionBasicScalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -528,7 +538,7 @@ export class AppEngineStandardAppVersionBasicScalingOutputReference extends cdkt
   }
 
   public get internalValue(): AppEngineStandardAppVersionBasicScaling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._idleTimeout) {
       hasAnyValues = true;
@@ -543,10 +553,12 @@ export class AppEngineStandardAppVersionBasicScalingOutputReference extends cdkt
 
   public set internalValue(value: AppEngineStandardAppVersionBasicScaling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._idleTimeout = undefined;
       this._maxInstances = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._idleTimeout = value.idleTimeout;
       this._maxInstances = value.maxInstances;
     }
@@ -639,6 +651,8 @@ export function appEngineStandardAppVersionDeploymentZipToTerraform(struct?: App
 }
 
 export class AppEngineStandardAppVersionDeploymentZipOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -649,7 +663,7 @@ export class AppEngineStandardAppVersionDeploymentZipOutputReference extends cdk
   }
 
   public get internalValue(): AppEngineStandardAppVersionDeploymentZip | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._filesCount) {
       hasAnyValues = true;
@@ -664,10 +678,12 @@ export class AppEngineStandardAppVersionDeploymentZipOutputReference extends cdk
 
   public set internalValue(value: AppEngineStandardAppVersionDeploymentZip | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._filesCount = undefined;
       this._sourceUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._filesCount = value.filesCount;
       this._sourceUrl = value.sourceUrl;
     }
@@ -729,6 +745,8 @@ export function appEngineStandardAppVersionDeploymentToTerraform(struct?: AppEng
 }
 
 export class AppEngineStandardAppVersionDeploymentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -739,13 +757,13 @@ export class AppEngineStandardAppVersionDeploymentOutputReference extends cdktf.
   }
 
   public get internalValue(): AppEngineStandardAppVersionDeployment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._files) {
       hasAnyValues = true;
       internalValueResult.files = this._files;
     }
-    if (this._zip) {
+    if (this._zip?.internalValue) {
       hasAnyValues = true;
       internalValueResult.zip = this._zip?.internalValue;
     }
@@ -754,10 +772,12 @@ export class AppEngineStandardAppVersionDeploymentOutputReference extends cdktf.
 
   public set internalValue(value: AppEngineStandardAppVersionDeployment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._files = undefined;
       this._zip.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._files = value.files;
       this._zip.internalValue = value.zip;
     }
@@ -816,6 +836,8 @@ export function appEngineStandardAppVersionEntrypointToTerraform(struct?: AppEng
 }
 
 export class AppEngineStandardAppVersionEntrypointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -826,7 +848,7 @@ export class AppEngineStandardAppVersionEntrypointOutputReference extends cdktf.
   }
 
   public get internalValue(): AppEngineStandardAppVersionEntrypoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._shell) {
       hasAnyValues = true;
@@ -837,9 +859,11 @@ export class AppEngineStandardAppVersionEntrypointOutputReference extends cdktf.
 
   public set internalValue(value: AppEngineStandardAppVersionEntrypoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._shell = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._shell = value.shell;
     }
   }
@@ -877,6 +901,8 @@ export function appEngineStandardAppVersionHandlersScriptToTerraform(struct?: Ap
 }
 
 export class AppEngineStandardAppVersionHandlersScriptOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -887,7 +913,7 @@ export class AppEngineStandardAppVersionHandlersScriptOutputReference extends cd
   }
 
   public get internalValue(): AppEngineStandardAppVersionHandlersScript | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._scriptPath) {
       hasAnyValues = true;
@@ -898,9 +924,11 @@ export class AppEngineStandardAppVersionHandlersScriptOutputReference extends cd
 
   public set internalValue(value: AppEngineStandardAppVersionHandlersScript | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._scriptPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._scriptPath = value.scriptPath;
     }
   }
@@ -985,6 +1013,8 @@ export function appEngineStandardAppVersionHandlersStaticFilesToTerraform(struct
 }
 
 export class AppEngineStandardAppVersionHandlersStaticFilesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -995,7 +1025,7 @@ export class AppEngineStandardAppVersionHandlersStaticFilesOutputReference exten
   }
 
   public get internalValue(): AppEngineStandardAppVersionHandlersStaticFiles | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._applicationReadable) {
       hasAnyValues = true;
@@ -1030,6 +1060,7 @@ export class AppEngineStandardAppVersionHandlersStaticFilesOutputReference exten
 
   public set internalValue(value: AppEngineStandardAppVersionHandlersStaticFiles | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._applicationReadable = undefined;
       this._expiration = undefined;
       this._httpHeaders = undefined;
@@ -1039,6 +1070,7 @@ export class AppEngineStandardAppVersionHandlersStaticFilesOutputReference exten
       this._uploadPathRegex = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._applicationReadable = value.applicationReadable;
       this._expiration = value.expiration;
       this._httpHeaders = value.httpHeaders;
@@ -1273,6 +1305,8 @@ export function appEngineStandardAppVersionManualScalingToTerraform(struct?: App
 }
 
 export class AppEngineStandardAppVersionManualScalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1283,7 +1317,7 @@ export class AppEngineStandardAppVersionManualScalingOutputReference extends cdk
   }
 
   public get internalValue(): AppEngineStandardAppVersionManualScaling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instances) {
       hasAnyValues = true;
@@ -1294,9 +1328,11 @@ export class AppEngineStandardAppVersionManualScalingOutputReference extends cdk
 
   public set internalValue(value: AppEngineStandardAppVersionManualScaling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instances = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instances = value.instances;
     }
   }
@@ -1342,6 +1378,8 @@ export function appEngineStandardAppVersionTimeoutsToTerraform(struct?: AppEngin
 }
 
 export class AppEngineStandardAppVersionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1352,7 +1390,7 @@ export class AppEngineStandardAppVersionTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): AppEngineStandardAppVersionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1371,11 +1409,13 @@ export class AppEngineStandardAppVersionTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: AppEngineStandardAppVersionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1450,6 +1490,8 @@ export function appEngineStandardAppVersionVpcAccessConnectorToTerraform(struct?
 }
 
 export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1460,7 +1502,7 @@ export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extend
   }
 
   public get internalValue(): AppEngineStandardAppVersionVpcAccessConnector | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -1471,9 +1513,11 @@ export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extend
 
   public set internalValue(value: AppEngineStandardAppVersionVpcAccessConnector | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }

@@ -58,6 +58,8 @@ export function healthcareConsentStoreIamMemberConditionToTerraform(struct?: Hea
 }
 
 export class HealthcareConsentStoreIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -68,7 +70,7 @@ export class HealthcareConsentStoreIamMemberConditionOutputReference extends cdk
   }
 
   public get internalValue(): HealthcareConsentStoreIamMemberCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -87,11 +89,13 @@ export class HealthcareConsentStoreIamMemberConditionOutputReference extends cdk
 
   public set internalValue(value: HealthcareConsentStoreIamMemberCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._title = value.title;

@@ -110,6 +110,8 @@ export function identityPlatformInboundSamlConfigIdpConfigToTerraform(struct?: I
 }
 
 export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -120,7 +122,7 @@ export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends c
   }
 
   public get internalValue(): IdentityPlatformInboundSamlConfigIdpConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._idpEntityId) {
       hasAnyValues = true;
@@ -143,12 +145,14 @@ export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends c
 
   public set internalValue(value: IdentityPlatformInboundSamlConfigIdpConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._idpEntityId = undefined;
       this._signRequest = undefined;
       this._ssoUrl = undefined;
       this._idpCertificates = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._idpEntityId = value.idpEntityId;
       this._signRequest = value.signRequest;
       this._ssoUrl = value.ssoUrl;
@@ -239,6 +243,8 @@ export function identityPlatformInboundSamlConfigSpConfigToTerraform(struct?: Id
 }
 
 export class IdentityPlatformInboundSamlConfigSpConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -249,7 +255,7 @@ export class IdentityPlatformInboundSamlConfigSpConfigOutputReference extends cd
   }
 
   public get internalValue(): IdentityPlatformInboundSamlConfigSpConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._callbackUri) {
       hasAnyValues = true;
@@ -264,10 +270,12 @@ export class IdentityPlatformInboundSamlConfigSpConfigOutputReference extends cd
 
   public set internalValue(value: IdentityPlatformInboundSamlConfigSpConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._callbackUri = undefined;
       this._spEntityId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._callbackUri = value.callbackUri;
       this._spEntityId = value.spEntityId;
     }
@@ -333,6 +341,8 @@ export function identityPlatformInboundSamlConfigTimeoutsToTerraform(struct?: Id
 }
 
 export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -343,7 +353,7 @@ export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): IdentityPlatformInboundSamlConfigTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -362,11 +372,13 @@ export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cd
 
   public set internalValue(value: IdentityPlatformInboundSamlConfigTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

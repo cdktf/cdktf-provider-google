@@ -98,6 +98,8 @@ export function dialogflowCxPageEntryFulfillmentMessagesTextToTerraform(struct?:
 }
 
 export class DialogflowCxPageEntryFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -108,7 +110,7 @@ export class DialogflowCxPageEntryFulfillmentMessagesTextOutputReference extends
   }
 
   public get internalValue(): DialogflowCxPageEntryFulfillmentMessagesText | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._text) {
       hasAnyValues = true;
@@ -119,9 +121,11 @@ export class DialogflowCxPageEntryFulfillmentMessagesTextOutputReference extends
 
   public set internalValue(value: DialogflowCxPageEntryFulfillmentMessagesText | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._text = value.text;
     }
   }
@@ -202,6 +206,8 @@ export function dialogflowCxPageEntryFulfillmentToTerraform(struct?: DialogflowC
 }
 
 export class DialogflowCxPageEntryFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -212,7 +218,7 @@ export class DialogflowCxPageEntryFulfillmentOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): DialogflowCxPageEntryFulfillment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._returnPartialResponses) {
       hasAnyValues = true;
@@ -235,12 +241,14 @@ export class DialogflowCxPageEntryFulfillmentOutputReference extends cdktf.Compl
 
   public set internalValue(value: DialogflowCxPageEntryFulfillment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._returnPartialResponses = undefined;
       this._tag = undefined;
       this._webhook = undefined;
       this._messages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._returnPartialResponses = value.returnPartialResponses;
       this._tag = value.tag;
       this._webhook = value.webhook;
@@ -333,6 +341,8 @@ export function dialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextToTer
 }
 
 export class DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -343,7 +353,7 @@ export class DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputRe
   }
 
   public get internalValue(): DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._text) {
       hasAnyValues = true;
@@ -354,9 +364,11 @@ export class DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputRe
 
   public set internalValue(value: DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._text = value.text;
     }
   }
@@ -437,6 +449,8 @@ export function dialogflowCxPageEventHandlersTriggerFulfillmentToTerraform(struc
 }
 
 export class DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -447,7 +461,7 @@ export class DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference exte
   }
 
   public get internalValue(): DialogflowCxPageEventHandlersTriggerFulfillment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._returnPartialResponses) {
       hasAnyValues = true;
@@ -470,12 +484,14 @@ export class DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference exte
 
   public set internalValue(value: DialogflowCxPageEventHandlersTriggerFulfillment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._returnPartialResponses = undefined;
       this._tag = undefined;
       this._webhook = undefined;
       this._messages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._returnPartialResponses = value.returnPartialResponses;
       this._tag = value.tag;
       this._webhook = value.webhook;
@@ -610,6 +626,8 @@ export function dialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillme
 }
 
 export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -620,7 +638,7 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentM
   }
 
   public get internalValue(): DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._text) {
       hasAnyValues = true;
@@ -631,9 +649,11 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentM
 
   public set internalValue(value: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._text = value.text;
     }
   }
@@ -714,6 +734,8 @@ export function dialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillme
 }
 
 export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -724,7 +746,7 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentO
   }
 
   public get internalValue(): DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._returnPartialResponses) {
       hasAnyValues = true;
@@ -747,12 +769,14 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentO
 
   public set internalValue(value: DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._returnPartialResponses = undefined;
       this._tag = undefined;
       this._webhook = undefined;
       this._messages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._returnPartialResponses = value.returnPartialResponses;
       this._tag = value.tag;
       this._webhook = value.webhook;
@@ -845,6 +869,8 @@ export function dialogflowCxPageFormParametersFillBehaviorToTerraform(struct?: D
 }
 
 export class DialogflowCxPageFormParametersFillBehaviorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -855,9 +881,9 @@ export class DialogflowCxPageFormParametersFillBehaviorOutputReference extends c
   }
 
   public get internalValue(): DialogflowCxPageFormParametersFillBehavior | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._initialPromptFulfillment) {
+    if (this._initialPromptFulfillment?.internalValue) {
       hasAnyValues = true;
       internalValueResult.initialPromptFulfillment = this._initialPromptFulfillment?.internalValue;
     }
@@ -866,9 +892,11 @@ export class DialogflowCxPageFormParametersFillBehaviorOutputReference extends c
 
   public set internalValue(value: DialogflowCxPageFormParametersFillBehavior | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._initialPromptFulfillment.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._initialPromptFulfillment.internalValue = value.initialPromptFulfillment;
     }
   }
@@ -966,6 +994,8 @@ export function dialogflowCxPageFormToTerraform(struct?: DialogflowCxPageFormOut
 }
 
 export class DialogflowCxPageFormOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -976,7 +1006,7 @@ export class DialogflowCxPageFormOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DialogflowCxPageForm | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._parameters) {
       hasAnyValues = true;
@@ -987,9 +1017,11 @@ export class DialogflowCxPageFormOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DialogflowCxPageForm | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._parameters = value.parameters;
     }
   }
@@ -1039,6 +1071,8 @@ export function dialogflowCxPageTimeoutsToTerraform(struct?: DialogflowCxPageTim
 }
 
 export class DialogflowCxPageTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1049,7 +1083,7 @@ export class DialogflowCxPageTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): DialogflowCxPageTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1068,11 +1102,13 @@ export class DialogflowCxPageTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: DialogflowCxPageTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1147,6 +1183,8 @@ export function dialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextTo
 }
 
 export class DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1157,7 +1195,7 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutpu
   }
 
   public get internalValue(): DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._text) {
       hasAnyValues = true;
@@ -1168,9 +1206,11 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutpu
 
   public set internalValue(value: DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._text = value.text;
     }
   }
@@ -1251,6 +1291,8 @@ export function dialogflowCxPageTransitionRoutesTriggerFulfillmentToTerraform(st
 }
 
 export class DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1261,7 +1303,7 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference e
   }
 
   public get internalValue(): DialogflowCxPageTransitionRoutesTriggerFulfillment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._returnPartialResponses) {
       hasAnyValues = true;
@@ -1284,12 +1326,14 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference e
 
   public set internalValue(value: DialogflowCxPageTransitionRoutesTriggerFulfillment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._returnPartialResponses = undefined;
       this._tag = undefined;
       this._webhook = undefined;
       this._messages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._returnPartialResponses = value.returnPartialResponses;
       this._tag = value.tag;
       this._webhook = value.webhook;

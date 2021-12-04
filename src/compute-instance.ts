@@ -231,6 +231,8 @@ export function computeInstanceAdvancedMachineFeaturesToTerraform(struct?: Compu
 }
 
 export class ComputeInstanceAdvancedMachineFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -241,7 +243,7 @@ export class ComputeInstanceAdvancedMachineFeaturesOutputReference extends cdktf
   }
 
   public get internalValue(): ComputeInstanceAdvancedMachineFeatures | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableNestedVirtualization) {
       hasAnyValues = true;
@@ -256,10 +258,12 @@ export class ComputeInstanceAdvancedMachineFeaturesOutputReference extends cdktf
 
   public set internalValue(value: ComputeInstanceAdvancedMachineFeatures | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableNestedVirtualization = undefined;
       this._threadsPerCore = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableNestedVirtualization = value.enableNestedVirtualization;
       this._threadsPerCore = value.threadsPerCore;
     }
@@ -385,6 +389,8 @@ export function computeInstanceBootDiskInitializeParamsToTerraform(struct?: Comp
 }
 
 export class ComputeInstanceBootDiskInitializeParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -395,7 +401,7 @@ export class ComputeInstanceBootDiskInitializeParamsOutputReference extends cdkt
   }
 
   public get internalValue(): ComputeInstanceBootDiskInitializeParams | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._image) {
       hasAnyValues = true;
@@ -418,12 +424,14 @@ export class ComputeInstanceBootDiskInitializeParamsOutputReference extends cdkt
 
   public set internalValue(value: ComputeInstanceBootDiskInitializeParams | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._image = undefined;
       this._labels = undefined;
       this._size = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._image = value.image;
       this._labels = value.labels;
       this._size = value.size;
@@ -558,6 +566,8 @@ export function computeInstanceBootDiskToTerraform(struct?: ComputeInstanceBootD
 }
 
 export class ComputeInstanceBootDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -568,7 +578,7 @@ export class ComputeInstanceBootDiskOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): ComputeInstanceBootDisk | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._autoDelete) {
       hasAnyValues = true;
@@ -594,7 +604,7 @@ export class ComputeInstanceBootDiskOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.source = this._source;
     }
-    if (this._initializeParams) {
+    if (this._initializeParams?.internalValue) {
       hasAnyValues = true;
       internalValueResult.initializeParams = this._initializeParams?.internalValue;
     }
@@ -603,6 +613,7 @@ export class ComputeInstanceBootDiskOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: ComputeInstanceBootDisk | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._autoDelete = undefined;
       this._deviceName = undefined;
       this._diskEncryptionKeyRaw = undefined;
@@ -612,6 +623,7 @@ export class ComputeInstanceBootDiskOutputReference extends cdktf.ComplexObject 
       this._initializeParams.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._autoDelete = value.autoDelete;
       this._deviceName = value.deviceName;
       this._diskEncryptionKeyRaw = value.diskEncryptionKeyRaw;
@@ -754,6 +766,8 @@ export function computeInstanceConfidentialInstanceConfigToTerraform(struct?: Co
 }
 
 export class ComputeInstanceConfidentialInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -764,7 +778,7 @@ export class ComputeInstanceConfidentialInstanceConfigOutputReference extends cd
   }
 
   public get internalValue(): ComputeInstanceConfidentialInstanceConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableConfidentialCompute) {
       hasAnyValues = true;
@@ -775,9 +789,11 @@ export class ComputeInstanceConfidentialInstanceConfigOutputReference extends cd
 
   public set internalValue(value: ComputeInstanceConfidentialInstanceConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableConfidentialCompute = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableConfidentialCompute = value.enableConfidentialCompute;
     }
   }
@@ -982,6 +998,8 @@ export function computeInstanceReservationAffinitySpecificReservationToTerraform
 }
 
 export class ComputeInstanceReservationAffinitySpecificReservationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -992,7 +1010,7 @@ export class ComputeInstanceReservationAffinitySpecificReservationOutputReferenc
   }
 
   public get internalValue(): ComputeInstanceReservationAffinitySpecificReservation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._key) {
       hasAnyValues = true;
@@ -1007,10 +1025,12 @@ export class ComputeInstanceReservationAffinitySpecificReservationOutputReferenc
 
   public set internalValue(value: ComputeInstanceReservationAffinitySpecificReservation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._key = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._key = value.key;
       this._values = value.values;
     }
@@ -1069,6 +1089,8 @@ export function computeInstanceReservationAffinityToTerraform(struct?: ComputeIn
 }
 
 export class ComputeInstanceReservationAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1079,13 +1101,13 @@ export class ComputeInstanceReservationAffinityOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputeInstanceReservationAffinity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._specificReservation) {
+    if (this._specificReservation?.internalValue) {
       hasAnyValues = true;
       internalValueResult.specificReservation = this._specificReservation?.internalValue;
     }
@@ -1094,10 +1116,12 @@ export class ComputeInstanceReservationAffinityOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputeInstanceReservationAffinity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
       this._specificReservation.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
       this._specificReservation.internalValue = value.specificReservation;
     }
@@ -1205,6 +1229,8 @@ export function computeInstanceSchedulingToTerraform(struct?: ComputeInstanceSch
 }
 
 export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1215,7 +1241,7 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ComputeInstanceScheduling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._automaticRestart) {
       hasAnyValues = true;
@@ -1242,6 +1268,7 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ComputeInstanceScheduling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._automaticRestart = undefined;
       this._minNodeCpus = undefined;
       this._onHostMaintenance = undefined;
@@ -1249,6 +1276,7 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
       this._nodeAffinities = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._automaticRestart = value.automaticRestart;
       this._minNodeCpus = value.minNodeCpus;
       this._onHostMaintenance = value.onHostMaintenance;
@@ -1384,6 +1412,8 @@ export function computeInstanceServiceAccountToTerraform(struct?: ComputeInstanc
 }
 
 export class ComputeInstanceServiceAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1394,7 +1424,7 @@ export class ComputeInstanceServiceAccountOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): ComputeInstanceServiceAccount | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._email) {
       hasAnyValues = true;
@@ -1409,10 +1439,12 @@ export class ComputeInstanceServiceAccountOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: ComputeInstanceServiceAccount | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._email = undefined;
       this._scopes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._email = value.email;
       this._scopes = value.scopes;
     }
@@ -1481,6 +1513,8 @@ export function computeInstanceShieldedInstanceConfigToTerraform(struct?: Comput
 }
 
 export class ComputeInstanceShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1491,7 +1525,7 @@ export class ComputeInstanceShieldedInstanceConfigOutputReference extends cdktf.
   }
 
   public get internalValue(): ComputeInstanceShieldedInstanceConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableIntegrityMonitoring) {
       hasAnyValues = true;
@@ -1510,11 +1544,13 @@ export class ComputeInstanceShieldedInstanceConfigOutputReference extends cdktf.
 
   public set internalValue(value: ComputeInstanceShieldedInstanceConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableIntegrityMonitoring = undefined;
       this._enableSecureBoot = undefined;
       this._enableVtpm = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
       this._enableSecureBoot = value.enableSecureBoot;
       this._enableVtpm = value.enableVtpm;
@@ -1597,6 +1633,8 @@ export function computeInstanceTimeoutsToTerraform(struct?: ComputeInstanceTimeo
 }
 
 export class ComputeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1607,7 +1645,7 @@ export class ComputeInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): ComputeInstanceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1626,11 +1664,13 @@ export class ComputeInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: ComputeInstanceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

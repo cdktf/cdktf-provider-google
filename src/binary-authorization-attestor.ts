@@ -69,6 +69,8 @@ export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPki
 }
 
 export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -79,7 +81,7 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
   }
 
   public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publicKeyPem) {
       hasAnyValues = true;
@@ -94,10 +96,12 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
 
   public set internalValue(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publicKeyPem = undefined;
       this._signatureAlgorithm = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publicKeyPem = value.publicKeyPem;
       this._signatureAlgorithm = value.signatureAlgorithm;
     }
@@ -220,6 +224,8 @@ export function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(s
 }
 
 export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -230,7 +236,7 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   }
 
   public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNote | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._noteReference) {
       hasAnyValues = true;
@@ -245,10 +251,12 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
 
   public set internalValue(value: BinaryAuthorizationAttestorAttestationAuthorityNote | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._noteReference = undefined;
       this._publicKeys = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._noteReference = value.noteReference;
       this._publicKeys = value.publicKeys;
     }
@@ -312,6 +320,8 @@ export function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAu
 }
 
 export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -322,7 +332,7 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): BinaryAuthorizationAttestorTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -341,11 +351,13 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: BinaryAuthorizationAttestorTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

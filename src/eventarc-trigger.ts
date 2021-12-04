@@ -96,6 +96,8 @@ export function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: Ev
 }
 
 export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -106,7 +108,7 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   }
 
   public get internalValue(): EventarcTriggerDestinationCloudRunService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -125,11 +127,13 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
 
   public set internalValue(value: EventarcTriggerDestinationCloudRunService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
       this._region = undefined;
       this._service = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
       this._region = value.region;
       this._service = value.service;
@@ -208,6 +212,8 @@ export function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDe
 }
 
 export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -218,13 +224,13 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): EventarcTriggerDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cloudFunction) {
       hasAnyValues = true;
       internalValueResult.cloudFunction = this._cloudFunction;
     }
-    if (this._cloudRunService) {
+    if (this._cloudRunService?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudRunService = this._cloudRunService?.internalValue;
     }
@@ -233,10 +239,12 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: EventarcTriggerDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cloudFunction = undefined;
       this._cloudRunService.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudFunction = value.cloudFunction;
       this._cloudRunService.internalValue = value.cloudRunService;
     }
@@ -328,6 +336,8 @@ export function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeo
 }
 
 export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -338,7 +348,7 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): EventarcTriggerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -357,11 +367,13 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: EventarcTriggerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -436,6 +448,8 @@ export function eventarcTriggerTransportPubsubToTerraform(struct?: EventarcTrigg
 }
 
 export class EventarcTriggerTransportPubsubOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -446,7 +460,7 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): EventarcTriggerTransportPubsub | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._topic) {
       hasAnyValues = true;
@@ -457,9 +471,11 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
 
   public set internalValue(value: EventarcTriggerTransportPubsub | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._topic = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._topic = value.topic;
     }
   }
@@ -500,6 +516,8 @@ export function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTran
 }
 
 export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -510,9 +528,9 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): EventarcTriggerTransport | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pubsub) {
+    if (this._pubsub?.internalValue) {
       hasAnyValues = true;
       internalValueResult.pubsub = this._pubsub?.internalValue;
     }
@@ -521,9 +539,11 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: EventarcTriggerTransport | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._pubsub.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._pubsub.internalValue = value.pubsub;
     }
   }

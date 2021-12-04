@@ -125,6 +125,8 @@ export function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeout
 }
 
 export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -135,7 +137,7 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataCatalogTagTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -154,11 +156,13 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataCatalogTagTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

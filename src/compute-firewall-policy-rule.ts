@@ -134,6 +134,8 @@ export function computeFirewallPolicyRuleMatchToTerraform(struct?: ComputeFirewa
 }
 
 export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -144,7 +146,7 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): ComputeFirewallPolicyRuleMatch | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._destIpRanges) {
       hasAnyValues = true;
@@ -163,11 +165,13 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
 
   public set internalValue(value: ComputeFirewallPolicyRuleMatch | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._destIpRanges = undefined;
       this._srcIpRanges = undefined;
       this._layer4Configs = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._destIpRanges = value.destIpRanges;
       this._srcIpRanges = value.srcIpRanges;
       this._layer4Configs = value.layer4Configs;
@@ -248,6 +252,8 @@ export function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFir
 }
 
 export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -258,7 +264,7 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ComputeFirewallPolicyRuleTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -277,11 +283,13 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: ComputeFirewallPolicyRuleTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

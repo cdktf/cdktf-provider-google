@@ -149,6 +149,8 @@ export function cloudRunDomainMappingMetadataToTerraform(struct?: CloudRunDomain
 }
 
 export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -159,7 +161,7 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CloudRunDomainMappingMetadata | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._annotations) {
       hasAnyValues = true;
@@ -178,11 +180,13 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CloudRunDomainMappingMetadata | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._annotations = undefined;
       this._labels = undefined;
       this._namespace = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._annotations = value.annotations;
       this._labels = value.labels;
       this._namespace = value.namespace;
@@ -274,6 +278,8 @@ export function cloudRunDomainMappingSpecToTerraform(struct?: CloudRunDomainMapp
 }
 
 export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -284,7 +290,7 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): CloudRunDomainMappingSpec | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._certificateMode) {
       hasAnyValues = true;
@@ -303,11 +309,13 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: CloudRunDomainMappingSpec | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._certificateMode = undefined;
       this._forceOverride = undefined;
       this._routeName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._certificateMode = value.certificateMode;
       this._forceOverride = value.forceOverride;
       this._routeName = value.routeName;
@@ -382,6 +390,8 @@ export function cloudRunDomainMappingTimeoutsToTerraform(struct?: CloudRunDomain
 }
 
 export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -392,7 +402,7 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CloudRunDomainMappingTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -407,10 +417,12 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CloudRunDomainMappingTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

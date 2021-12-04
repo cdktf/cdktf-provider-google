@@ -104,6 +104,8 @@ export function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeoutsOut
 }
 
 export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -114,7 +116,7 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): KmsCryptoKeyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -133,11 +135,13 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: KmsCryptoKeyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -220,6 +224,8 @@ export function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVers
 }
 
 export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -230,7 +236,7 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): KmsCryptoKeyVersionTemplate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._algorithm) {
       hasAnyValues = true;
@@ -245,10 +251,12 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: KmsCryptoKeyVersionTemplate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._algorithm = undefined;
       this._protectionLevel = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._algorithm = value.algorithm;
       this._protectionLevel = value.protectionLevel;
     }

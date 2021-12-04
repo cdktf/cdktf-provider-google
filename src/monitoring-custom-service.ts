@@ -59,6 +59,8 @@ export function monitoringCustomServiceTelemetryToTerraform(struct?: MonitoringC
 }
 
 export class MonitoringCustomServiceTelemetryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -69,7 +71,7 @@ export class MonitoringCustomServiceTelemetryOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MonitoringCustomServiceTelemetry | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resourceName) {
       hasAnyValues = true;
@@ -80,9 +82,11 @@ export class MonitoringCustomServiceTelemetryOutputReference extends cdktf.Compl
 
   public set internalValue(value: MonitoringCustomServiceTelemetry | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resourceName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resourceName = value.resourceName;
     }
   }
@@ -131,6 +135,8 @@ export function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCu
 }
 
 export class MonitoringCustomServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -141,7 +147,7 @@ export class MonitoringCustomServiceTimeoutsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): MonitoringCustomServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -160,11 +166,13 @@ export class MonitoringCustomServiceTimeoutsOutputReference extends cdktf.Comple
 
   public set internalValue(value: MonitoringCustomServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

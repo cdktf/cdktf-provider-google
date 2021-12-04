@@ -131,6 +131,8 @@ export function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: B
 }
 
 export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -141,7 +143,7 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
   }
 
   public get internalValue(): BigqueryDataTransferConfigEmailPreferences | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableFailureEmail) {
       hasAnyValues = true;
@@ -152,9 +154,11 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
 
   public set internalValue(value: BigqueryDataTransferConfigEmailPreferences | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableFailureEmail = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableFailureEmail = value.enableFailureEmail;
     }
   }
@@ -217,6 +221,8 @@ export function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: Bi
 }
 
 export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -227,7 +233,7 @@ export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cd
   }
 
   public get internalValue(): BigqueryDataTransferConfigScheduleOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disableAutoScheduling) {
       hasAnyValues = true;
@@ -246,11 +252,13 @@ export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cd
 
   public set internalValue(value: BigqueryDataTransferConfigScheduleOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disableAutoScheduling = undefined;
       this._endTime = undefined;
       this._startTime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disableAutoScheduling = value.disableAutoScheduling;
       this._endTime = value.endTime;
       this._startTime = value.startTime;
@@ -325,6 +333,8 @@ export function bigqueryDataTransferConfigSensitiveParamsToTerraform(struct?: Bi
 }
 
 export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -335,7 +345,7 @@ export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cd
   }
 
   public get internalValue(): BigqueryDataTransferConfigSensitiveParams | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._secretAccessKey) {
       hasAnyValues = true;
@@ -346,9 +356,11 @@ export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cd
 
   public set internalValue(value: BigqueryDataTransferConfigSensitiveParams | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._secretAccessKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._secretAccessKey = value.secretAccessKey;
     }
   }
@@ -394,6 +406,8 @@ export function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryD
 }
 
 export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -404,7 +418,7 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): BigqueryDataTransferConfigTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -423,11 +437,13 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: BigqueryDataTransferConfigTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

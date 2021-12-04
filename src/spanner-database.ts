@@ -71,6 +71,8 @@ export function spannerDatabaseEncryptionConfigToTerraform(struct?: SpannerDatab
 }
 
 export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -81,7 +83,7 @@ export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): SpannerDatabaseEncryptionConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -92,9 +94,11 @@ export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.Comple
 
   public set internalValue(value: SpannerDatabaseEncryptionConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -140,6 +144,8 @@ export function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeo
 }
 
 export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -150,7 +156,7 @@ export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): SpannerDatabaseTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -169,11 +175,13 @@ export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: SpannerDatabaseTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

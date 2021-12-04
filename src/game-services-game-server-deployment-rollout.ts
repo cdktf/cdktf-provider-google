@@ -59,6 +59,8 @@ export function gameServicesGameServerDeploymentRolloutGameServerConfigOverrides
 }
 
 export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -69,7 +71,7 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
   }
 
   public get internalValue(): GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._realms) {
       hasAnyValues = true;
@@ -80,9 +82,11 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
 
   public set internalValue(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._realms = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._realms = value.realms;
     }
   }
@@ -157,6 +161,8 @@ export function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struc
 }
 
 export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -167,7 +173,7 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
   }
 
   public get internalValue(): GameServicesGameServerDeploymentRolloutTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -186,11 +192,13 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
 
   public set internalValue(value: GameServicesGameServerDeploymentRolloutTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

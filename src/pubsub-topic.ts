@@ -77,6 +77,8 @@ export function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicM
 }
 
 export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): PubsubTopicMessageStoragePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedPersistenceRegions) {
       hasAnyValues = true;
@@ -98,9 +100,11 @@ export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.Comple
 
   public set internalValue(value: PubsubTopicMessageStoragePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedPersistenceRegions = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedPersistenceRegions = value.allowedPersistenceRegions;
     }
   }
@@ -148,6 +152,8 @@ export function pubsubTopicSchemaSettingsToTerraform(struct?: PubsubTopicSchemaS
 }
 
 export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -158,7 +164,7 @@ export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): PubsubTopicSchemaSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._encoding) {
       hasAnyValues = true;
@@ -173,10 +179,12 @@ export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: PubsubTopicSchemaSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._encoding = undefined;
       this._schema = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._encoding = value.encoding;
       this._schema = value.schema;
     }
@@ -239,6 +247,8 @@ export function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeoutsOutpu
 }
 
 export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -249,7 +259,7 @@ export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): PubsubTopicTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -268,11 +278,13 @@ export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: PubsubTopicTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

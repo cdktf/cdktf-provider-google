@@ -112,6 +112,8 @@ export function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: C
 }
 
 export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -122,7 +124,7 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupAppEngine | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._service) {
       hasAnyValues = true;
@@ -141,11 +143,13 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
 
   public set internalValue(value: ComputeRegionNetworkEndpointGroupAppEngine | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._service = undefined;
       this._urlMask = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._service = value.service;
       this._urlMask = value.urlMask;
       this._version = value.version;
@@ -235,6 +239,8 @@ export function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct
 }
 
 export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -245,7 +251,7 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupCloudFunction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._function) {
       hasAnyValues = true;
@@ -260,10 +266,12 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
 
   public set internalValue(value: ComputeRegionNetworkEndpointGroupCloudFunction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._function = undefined;
       this._urlMask = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._function = value.function;
       this._urlMask = value.urlMask;
     }
@@ -347,6 +355,8 @@ export function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: Co
 }
 
 export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -357,7 +367,7 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupCloudRun | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._service) {
       hasAnyValues = true;
@@ -376,11 +386,13 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
 
   public set internalValue(value: ComputeRegionNetworkEndpointGroupCloudRun | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._service = undefined;
       this._tag = undefined;
       this._urlMask = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._service = value.service;
       this._tag = value.tag;
       this._urlMask = value.urlMask;
@@ -458,6 +470,8 @@ export function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: Co
 }
 
 export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -468,7 +482,7 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -483,10 +497,12 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
 
   public set internalValue(value: ComputeRegionNetworkEndpointGroupTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

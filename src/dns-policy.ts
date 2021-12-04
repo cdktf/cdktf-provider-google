@@ -106,6 +106,8 @@ export function dnsPolicyAlternativeNameServerConfigToTerraform(struct?: DnsPoli
 }
 
 export class DnsPolicyAlternativeNameServerConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -116,7 +118,7 @@ export class DnsPolicyAlternativeNameServerConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): DnsPolicyAlternativeNameServerConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._targetNameServers) {
       hasAnyValues = true;
@@ -127,9 +129,11 @@ export class DnsPolicyAlternativeNameServerConfigOutputReference extends cdktf.C
 
   public set internalValue(value: DnsPolicyAlternativeNameServerConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._targetNameServers = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._targetNameServers = value.targetNameServers;
     }
   }
@@ -197,6 +201,8 @@ export function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeoutsOutputRef
 }
 
 export class DnsPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -207,7 +213,7 @@ export class DnsPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DnsPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -226,11 +232,13 @@ export class DnsPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DnsPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

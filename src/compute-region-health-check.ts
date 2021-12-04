@@ -178,6 +178,8 @@ export function computeRegionHealthCheckGrpcHealthCheckToTerraform(struct?: Comp
 }
 
 export class ComputeRegionHealthCheckGrpcHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -188,7 +190,7 @@ export class ComputeRegionHealthCheckGrpcHealthCheckOutputReference extends cdkt
   }
 
   public get internalValue(): ComputeRegionHealthCheckGrpcHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._grpcServiceName) {
       hasAnyValues = true;
@@ -211,12 +213,14 @@ export class ComputeRegionHealthCheckGrpcHealthCheckOutputReference extends cdkt
 
   public set internalValue(value: ComputeRegionHealthCheckGrpcHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._grpcServiceName = undefined;
       this._port = undefined;
       this._portName = undefined;
       this._portSpecification = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._grpcServiceName = value.grpcServiceName;
       this._port = value.port;
       this._portName = value.portName;
@@ -371,6 +375,8 @@ export function computeRegionHealthCheckHttp2HealthCheckToTerraform(struct?: Com
 }
 
 export class ComputeRegionHealthCheckHttp2HealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -381,7 +387,7 @@ export class ComputeRegionHealthCheckHttp2HealthCheckOutputReference extends cdk
   }
 
   public get internalValue(): ComputeRegionHealthCheckHttp2HealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._host) {
       hasAnyValues = true;
@@ -416,6 +422,7 @@ export class ComputeRegionHealthCheckHttp2HealthCheckOutputReference extends cdk
 
   public set internalValue(value: ComputeRegionHealthCheckHttp2HealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._host = undefined;
       this._port = undefined;
       this._portName = undefined;
@@ -425,6 +432,7 @@ export class ComputeRegionHealthCheckHttp2HealthCheckOutputReference extends cdk
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._host = value.host;
       this._port = value.port;
       this._portName = value.portName;
@@ -630,6 +638,8 @@ export function computeRegionHealthCheckHttpHealthCheckToTerraform(struct?: Comp
 }
 
 export class ComputeRegionHealthCheckHttpHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -640,7 +650,7 @@ export class ComputeRegionHealthCheckHttpHealthCheckOutputReference extends cdkt
   }
 
   public get internalValue(): ComputeRegionHealthCheckHttpHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._host) {
       hasAnyValues = true;
@@ -675,6 +685,7 @@ export class ComputeRegionHealthCheckHttpHealthCheckOutputReference extends cdkt
 
   public set internalValue(value: ComputeRegionHealthCheckHttpHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._host = undefined;
       this._port = undefined;
       this._portName = undefined;
@@ -684,6 +695,7 @@ export class ComputeRegionHealthCheckHttpHealthCheckOutputReference extends cdkt
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._host = value.host;
       this._port = value.port;
       this._portName = value.portName;
@@ -889,6 +901,8 @@ export function computeRegionHealthCheckHttpsHealthCheckToTerraform(struct?: Com
 }
 
 export class ComputeRegionHealthCheckHttpsHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -899,7 +913,7 @@ export class ComputeRegionHealthCheckHttpsHealthCheckOutputReference extends cdk
   }
 
   public get internalValue(): ComputeRegionHealthCheckHttpsHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._host) {
       hasAnyValues = true;
@@ -934,6 +948,7 @@ export class ComputeRegionHealthCheckHttpsHealthCheckOutputReference extends cdk
 
   public set internalValue(value: ComputeRegionHealthCheckHttpsHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._host = undefined;
       this._port = undefined;
       this._portName = undefined;
@@ -943,6 +958,7 @@ export class ComputeRegionHealthCheckHttpsHealthCheckOutputReference extends cdk
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._host = value.host;
       this._port = value.port;
       this._portName = value.portName;
@@ -1086,6 +1102,8 @@ export function computeRegionHealthCheckLogConfigToTerraform(struct?: ComputeReg
 }
 
 export class ComputeRegionHealthCheckLogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1096,7 +1114,7 @@ export class ComputeRegionHealthCheckLogConfigOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ComputeRegionHealthCheckLogConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enable) {
       hasAnyValues = true;
@@ -1107,9 +1125,11 @@ export class ComputeRegionHealthCheckLogConfigOutputReference extends cdktf.Comp
 
   public set internalValue(value: ComputeRegionHealthCheckLogConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enable = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enable = value.enable;
     }
   }
@@ -1206,6 +1226,8 @@ export function computeRegionHealthCheckSslHealthCheckToTerraform(struct?: Compu
 }
 
 export class ComputeRegionHealthCheckSslHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1216,7 +1238,7 @@ export class ComputeRegionHealthCheckSslHealthCheckOutputReference extends cdktf
   }
 
   public get internalValue(): ComputeRegionHealthCheckSslHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._port) {
       hasAnyValues = true;
@@ -1247,6 +1269,7 @@ export class ComputeRegionHealthCheckSslHealthCheckOutputReference extends cdktf
 
   public set internalValue(value: ComputeRegionHealthCheckSslHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._port = undefined;
       this._portName = undefined;
       this._portSpecification = undefined;
@@ -1255,6 +1278,7 @@ export class ComputeRegionHealthCheckSslHealthCheckOutputReference extends cdktf
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._port = value.port;
       this._portName = value.portName;
       this._portSpecification = value.portSpecification;
@@ -1436,6 +1460,8 @@ export function computeRegionHealthCheckTcpHealthCheckToTerraform(struct?: Compu
 }
 
 export class ComputeRegionHealthCheckTcpHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1446,7 +1472,7 @@ export class ComputeRegionHealthCheckTcpHealthCheckOutputReference extends cdktf
   }
 
   public get internalValue(): ComputeRegionHealthCheckTcpHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._port) {
       hasAnyValues = true;
@@ -1477,6 +1503,7 @@ export class ComputeRegionHealthCheckTcpHealthCheckOutputReference extends cdktf
 
   public set internalValue(value: ComputeRegionHealthCheckTcpHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._port = undefined;
       this._portName = undefined;
       this._portSpecification = undefined;
@@ -1485,6 +1512,7 @@ export class ComputeRegionHealthCheckTcpHealthCheckOutputReference extends cdktf
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._port = value.port;
       this._portName = value.portName;
       this._portSpecification = value.portSpecification;
@@ -1618,6 +1646,8 @@ export function computeRegionHealthCheckTimeoutsToTerraform(struct?: ComputeRegi
 }
 
 export class ComputeRegionHealthCheckTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1628,7 +1658,7 @@ export class ComputeRegionHealthCheckTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ComputeRegionHealthCheckTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1647,11 +1677,13 @@ export class ComputeRegionHealthCheckTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: ComputeRegionHealthCheckTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

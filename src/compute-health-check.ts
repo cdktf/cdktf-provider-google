@@ -169,6 +169,8 @@ export function computeHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeHea
 }
 
 export class ComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -179,7 +181,7 @@ export class ComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ComputeHealthCheckGrpcHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._grpcServiceName) {
       hasAnyValues = true;
@@ -202,12 +204,14 @@ export class ComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.Comp
 
   public set internalValue(value: ComputeHealthCheckGrpcHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._grpcServiceName = undefined;
       this._port = undefined;
       this._portName = undefined;
       this._portSpecification = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._grpcServiceName = value.grpcServiceName;
       this._port = value.port;
       this._portName = value.portName;
@@ -362,6 +366,8 @@ export function computeHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeHe
 }
 
 export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -372,7 +378,7 @@ export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputeHealthCheckHttp2HealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._host) {
       hasAnyValues = true;
@@ -407,6 +413,7 @@ export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputeHealthCheckHttp2HealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._host = undefined;
       this._port = undefined;
       this._portName = undefined;
@@ -416,6 +423,7 @@ export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.Com
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._host = value.host;
       this._port = value.port;
       this._portName = value.portName;
@@ -621,6 +629,8 @@ export function computeHealthCheckHttpHealthCheckToTerraform(struct?: ComputeHea
 }
 
 export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -631,7 +641,7 @@ export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ComputeHealthCheckHttpHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._host) {
       hasAnyValues = true;
@@ -666,6 +676,7 @@ export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.Comp
 
   public set internalValue(value: ComputeHealthCheckHttpHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._host = undefined;
       this._port = undefined;
       this._portName = undefined;
@@ -675,6 +686,7 @@ export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.Comp
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._host = value.host;
       this._port = value.port;
       this._portName = value.portName;
@@ -880,6 +892,8 @@ export function computeHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeHe
 }
 
 export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -890,7 +904,7 @@ export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputeHealthCheckHttpsHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._host) {
       hasAnyValues = true;
@@ -925,6 +939,7 @@ export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputeHealthCheckHttpsHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._host = undefined;
       this._port = undefined;
       this._portName = undefined;
@@ -934,6 +949,7 @@ export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.Com
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._host = value.host;
       this._port = value.port;
       this._portName = value.portName;
@@ -1077,6 +1093,8 @@ export function computeHealthCheckLogConfigToTerraform(struct?: ComputeHealthChe
 }
 
 export class ComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1087,7 +1105,7 @@ export class ComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ComputeHealthCheckLogConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enable) {
       hasAnyValues = true;
@@ -1098,9 +1116,11 @@ export class ComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ComputeHealthCheckLogConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enable = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enable = value.enable;
     }
   }
@@ -1197,6 +1217,8 @@ export function computeHealthCheckSslHealthCheckToTerraform(struct?: ComputeHeal
 }
 
 export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1207,7 +1229,7 @@ export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ComputeHealthCheckSslHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._port) {
       hasAnyValues = true;
@@ -1238,6 +1260,7 @@ export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.Compl
 
   public set internalValue(value: ComputeHealthCheckSslHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._port = undefined;
       this._portName = undefined;
       this._portSpecification = undefined;
@@ -1246,6 +1269,7 @@ export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.Compl
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._port = value.port;
       this._portName = value.portName;
       this._portSpecification = value.portSpecification;
@@ -1427,6 +1451,8 @@ export function computeHealthCheckTcpHealthCheckToTerraform(struct?: ComputeHeal
 }
 
 export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1437,7 +1463,7 @@ export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ComputeHealthCheckTcpHealthCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._port) {
       hasAnyValues = true;
@@ -1468,6 +1494,7 @@ export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.Compl
 
   public set internalValue(value: ComputeHealthCheckTcpHealthCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._port = undefined;
       this._portName = undefined;
       this._portSpecification = undefined;
@@ -1476,6 +1503,7 @@ export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.Compl
       this._response = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._port = value.port;
       this._portName = value.portName;
       this._portSpecification = value.portSpecification;
@@ -1609,6 +1637,8 @@ export function computeHealthCheckTimeoutsToTerraform(struct?: ComputeHealthChec
 }
 
 export class ComputeHealthCheckTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1619,7 +1649,7 @@ export class ComputeHealthCheckTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ComputeHealthCheckTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1638,11 +1668,13 @@ export class ComputeHealthCheckTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ComputeHealthCheckTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

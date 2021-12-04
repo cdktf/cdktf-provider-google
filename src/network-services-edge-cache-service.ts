@@ -116,6 +116,8 @@ export function networkServicesEdgeCacheServiceLogConfigToTerraform(struct?: Net
 }
 
 export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -126,7 +128,7 @@ export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdk
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceLogConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enable) {
       hasAnyValues = true;
@@ -141,10 +143,12 @@ export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdk
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceLogConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enable = undefined;
       this._sampleRate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enable = value.enable;
       this._sampleRate = value.sampleRate;
     }
@@ -367,6 +371,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeader
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -377,7 +383,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._requestHeaderToAdd) {
       hasAnyValues = true;
@@ -400,12 +406,14 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._requestHeaderToAdd = undefined;
       this._requestHeaderToRemove = undefined;
       this._responseHeaderToAdd = undefined;
       this._responseHeaderToRemove = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeaderToAdd = value.requestHeaderToAdd;
       this._requestHeaderToRemove = value.requestHeaderToRemove;
       this._responseHeaderToAdd = value.responseHeaderToAdd;
@@ -704,6 +712,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -714,7 +724,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._excludeHost) {
       hasAnyValues = true;
@@ -745,6 +755,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._excludeHost = undefined;
       this._excludeQueryString = undefined;
       this._excludedQueryParameters = undefined;
@@ -753,6 +764,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._includedQueryParameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._excludeHost = value.excludeHost;
       this._excludeQueryString = value.excludeQueryString;
       this._excludedQueryParameters = value.excludedQueryParameters;
@@ -987,6 +999,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -997,7 +1011,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cacheMode) {
       hasAnyValues = true;
@@ -1031,7 +1045,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       hasAnyValues = true;
       internalValueResult.signedRequestMode = this._signedRequestMode;
     }
-    if (this._cacheKeyPolicy) {
+    if (this._cacheKeyPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
     }
@@ -1040,6 +1054,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cacheMode = undefined;
       this._clientTtl = undefined;
       this._defaultTtl = undefined;
@@ -1051,6 +1066,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._cacheKeyPolicy.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cacheMode = value.cacheMode;
       this._clientTtl = value.clientTtl;
       this._defaultTtl = value.defaultTtl;
@@ -1280,6 +1296,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1290,7 +1308,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowCredentials) {
       hasAnyValues = true;
@@ -1325,6 +1343,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowCredentials = undefined;
       this._allowHeaders = undefined;
       this._allowMethods = undefined;
@@ -1334,6 +1353,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._maxAge = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowCredentials = value.allowCredentials;
       this._allowHeaders = value.allowHeaders;
       this._allowMethods = value.allowMethods;
@@ -1500,6 +1520,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1510,7 +1532,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRewrite) {
       hasAnyValues = true;
@@ -1529,11 +1551,13 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRewrite = undefined;
       this._pathPrefixRewrite = undefined;
       this._pathTemplateRewrite = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRewrite = value.hostRewrite;
       this._pathPrefixRewrite = value.pathPrefixRewrite;
       this._pathTemplateRewrite = value.pathTemplateRewrite;
@@ -1622,6 +1646,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1632,17 +1658,17 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cdnPolicy) {
+    if (this._cdnPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cdnPolicy = this._cdnPolicy?.internalValue;
     }
-    if (this._corsPolicy) {
+    if (this._corsPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._urlRewrite) {
+    if (this._urlRewrite?.internalValue) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
@@ -1651,11 +1677,13 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cdnPolicy.internalValue = undefined;
       this._corsPolicy.internalValue = undefined;
       this._urlRewrite.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cdnPolicy.internalValue = value.cdnPolicy;
       this._corsPolicy.internalValue = value.corsPolicy;
       this._urlRewrite.internalValue = value.urlRewrite;
@@ -1781,6 +1809,8 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRed
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1791,7 +1821,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRedirect) {
       hasAnyValues = true;
@@ -1822,6 +1852,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRedirect = undefined;
       this._httpsRedirect = undefined;
       this._pathRedirect = undefined;
@@ -1830,6 +1861,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
       this._stripQuery = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRedirect = value.hostRedirect;
       this._httpsRedirect = value.httpsRedirect;
       this._pathRedirect = value.pathRedirect;
@@ -2063,6 +2095,8 @@ export function networkServicesEdgeCacheServiceRoutingToTerraform(struct?: Netwo
 }
 
 export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2073,7 +2107,7 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceRouting | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRule) {
       hasAnyValues = true;
@@ -2088,10 +2122,12 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceRouting | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRule = undefined;
       this._pathMatcher = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRule = value.hostRule;
       this._pathMatcher = value.pathMatcher;
     }
@@ -2153,6 +2189,8 @@ export function networkServicesEdgeCacheServiceTimeoutsToTerraform(struct?: Netw
 }
 
 export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2163,7 +2201,7 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): NetworkServicesEdgeCacheServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2182,11 +2220,13 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: NetworkServicesEdgeCacheServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

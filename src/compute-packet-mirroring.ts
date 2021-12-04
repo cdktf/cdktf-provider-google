@@ -89,6 +89,8 @@ export function computePacketMirroringCollectorIlbToTerraform(struct?: ComputePa
 }
 
 export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -99,7 +101,7 @@ export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputePacketMirroringCollectorIlb | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._url) {
       hasAnyValues = true;
@@ -110,9 +112,11 @@ export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputePacketMirroringCollectorIlb | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._url = value.url;
     }
   }
@@ -165,6 +169,8 @@ export function computePacketMirroringFilterToTerraform(struct?: ComputePacketMi
 }
 
 export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -175,7 +181,7 @@ export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): ComputePacketMirroringFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cidrRanges) {
       hasAnyValues = true;
@@ -194,11 +200,13 @@ export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: ComputePacketMirroringFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cidrRanges = undefined;
       this._direction = undefined;
       this._ipProtocols = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cidrRanges = value.cidrRanges;
       this._direction = value.direction;
       this._ipProtocols = value.ipProtocols;
@@ -325,6 +333,8 @@ export function computePacketMirroringMirroredResourcesToTerraform(struct?: Comp
 }
 
 export class ComputePacketMirroringMirroredResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -335,7 +345,7 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   }
 
   public get internalValue(): ComputePacketMirroringMirroredResources | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._tags) {
       hasAnyValues = true;
@@ -354,11 +364,13 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
 
   public set internalValue(value: ComputePacketMirroringMirroredResources | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._tags = undefined;
       this._instances = undefined;
       this._subnetworks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._tags = value.tags;
       this._instances = value.instances;
       this._subnetworks = value.subnetworks;
@@ -435,6 +447,8 @@ export function computePacketMirroringNetworkToTerraform(struct?: ComputePacketM
 }
 
 export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -445,7 +459,7 @@ export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): ComputePacketMirroringNetwork | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._url) {
       hasAnyValues = true;
@@ -456,9 +470,11 @@ export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: ComputePacketMirroringNetwork | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._url = value.url;
     }
   }
@@ -504,6 +520,8 @@ export function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacket
 }
 
 export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -514,7 +532,7 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): ComputePacketMirroringTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -533,11 +551,13 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
 
   public set internalValue(value: ComputePacketMirroringTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

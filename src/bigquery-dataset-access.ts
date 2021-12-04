@@ -111,6 +111,8 @@ export function bigqueryDatasetAccessTimeoutsToTerraform(struct?: BigqueryDatase
 }
 
 export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -121,7 +123,7 @@ export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BigqueryDatasetAccessTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -136,10 +138,12 @@ export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BigqueryDatasetAccessTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -213,6 +217,8 @@ export function bigqueryDatasetAccessViewAToTerraform(struct?: BigqueryDatasetAc
 }
 
 export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -223,7 +229,7 @@ export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): BigqueryDatasetAccessViewA | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -242,11 +248,13 @@ export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: BigqueryDatasetAccessViewA | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;

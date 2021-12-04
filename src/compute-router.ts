@@ -130,6 +130,8 @@ export function computeRouterBgpToTerraform(struct?: ComputeRouterBgpOutputRefer
 }
 
 export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -140,7 +142,7 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ComputeRouterBgp | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._advertiseMode) {
       hasAnyValues = true;
@@ -163,12 +165,14 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ComputeRouterBgp | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._advertiseMode = undefined;
       this._advertisedGroups = undefined;
       this._asn = undefined;
       this._advertisedIpRanges = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._advertiseMode = value.advertiseMode;
       this._advertisedGroups = value.advertisedGroups;
       this._asn = value.asn;
@@ -266,6 +270,8 @@ export function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeoutsO
 }
 
 export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -276,7 +282,7 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ComputeRouterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -295,11 +301,13 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ComputeRouterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

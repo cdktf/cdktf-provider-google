@@ -95,6 +95,8 @@ export function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: Lo
 }
 
 export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -105,7 +107,7 @@ export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cd
   }
 
   public get internalValue(): LoggingMetricBucketOptionsExplicitBuckets | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bounds) {
       hasAnyValues = true;
@@ -116,9 +118,11 @@ export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cd
 
   public set internalValue(value: LoggingMetricBucketOptionsExplicitBuckets | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bounds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bounds = value.bounds;
     }
   }
@@ -171,6 +175,8 @@ export function loggingMetricBucketOptionsExponentialBucketsToTerraform(struct?:
 }
 
 export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -181,7 +187,7 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
   }
 
   public get internalValue(): LoggingMetricBucketOptionsExponentialBuckets | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._growthFactor) {
       hasAnyValues = true;
@@ -200,11 +206,13 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
 
   public set internalValue(value: LoggingMetricBucketOptionsExponentialBuckets | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._growthFactor = undefined;
       this._numFiniteBuckets = undefined;
       this._scale = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._growthFactor = value.growthFactor;
       this._numFiniteBuckets = value.numFiniteBuckets;
       this._scale = value.scale;
@@ -293,6 +301,8 @@ export function loggingMetricBucketOptionsLinearBucketsToTerraform(struct?: Logg
 }
 
 export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -303,7 +313,7 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
   }
 
   public get internalValue(): LoggingMetricBucketOptionsLinearBuckets | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._numFiniteBuckets) {
       hasAnyValues = true;
@@ -322,11 +332,13 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
 
   public set internalValue(value: LoggingMetricBucketOptionsLinearBuckets | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._numFiniteBuckets = undefined;
       this._offset = undefined;
       this._width = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._numFiniteBuckets = value.numFiniteBuckets;
       this._offset = value.offset;
       this._width = value.width;
@@ -415,6 +427,8 @@ export function loggingMetricBucketOptionsToTerraform(struct?: LoggingMetricBuck
 }
 
 export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -425,17 +439,17 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): LoggingMetricBucketOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._explicitBuckets) {
+    if (this._explicitBuckets?.internalValue) {
       hasAnyValues = true;
       internalValueResult.explicitBuckets = this._explicitBuckets?.internalValue;
     }
-    if (this._exponentialBuckets) {
+    if (this._exponentialBuckets?.internalValue) {
       hasAnyValues = true;
       internalValueResult.exponentialBuckets = this._exponentialBuckets?.internalValue;
     }
-    if (this._linearBuckets) {
+    if (this._linearBuckets?.internalValue) {
       hasAnyValues = true;
       internalValueResult.linearBuckets = this._linearBuckets?.internalValue;
     }
@@ -444,11 +458,13 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: LoggingMetricBucketOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._explicitBuckets.internalValue = undefined;
       this._exponentialBuckets.internalValue = undefined;
       this._linearBuckets.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._explicitBuckets.internalValue = value.explicitBuckets;
       this._exponentialBuckets.internalValue = value.exponentialBuckets;
       this._linearBuckets.internalValue = value.linearBuckets;
@@ -592,6 +608,8 @@ export function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricM
 }
 
 export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -602,7 +620,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): LoggingMetricMetricDescriptor | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._displayName) {
       hasAnyValues = true;
@@ -629,6 +647,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: LoggingMetricMetricDescriptor | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._displayName = undefined;
       this._metricKind = undefined;
       this._unit = undefined;
@@ -636,6 +655,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
       this._labels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._displayName = value.displayName;
       this._metricKind = value.metricKind;
       this._unit = value.unit;
@@ -747,6 +767,8 @@ export function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeoutsO
 }
 
 export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -757,7 +779,7 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): LoggingMetricTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -776,11 +798,13 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: LoggingMetricTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

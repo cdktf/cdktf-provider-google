@@ -157,6 +157,8 @@ export function composerEnvironmentConfigNodeConfigToTerraform(struct?: Composer
 }
 
 export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -167,7 +169,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
 
   public get internalValue(): ComposerEnvironmentConfigNodeConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._diskSizeGb) {
       hasAnyValues = true;
@@ -210,6 +212,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
 
   public set internalValue(value: ComposerEnvironmentConfigNodeConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._diskSizeGb = undefined;
       this._ipAllocationPolicy = undefined;
       this._machineType = undefined;
@@ -221,6 +224,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
       this._zone = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._diskSizeGb = value.diskSizeGb;
       this._ipAllocationPolicy = value.ipAllocationPolicy;
       this._machineType = value.machineType;
@@ -419,6 +423,8 @@ export function composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(str
 }
 
 export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -429,7 +435,7 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   }
 
   public get internalValue(): ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cloudSqlIpv4CidrBlock) {
       hasAnyValues = true;
@@ -452,12 +458,14 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
 
   public set internalValue(value: ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cloudSqlIpv4CidrBlock = undefined;
       this._enablePrivateEndpoint = undefined;
       this._masterIpv4CidrBlock = undefined;
       this._webServerIpv4CidrBlock = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudSqlIpv4CidrBlock = value.cloudSqlIpv4CidrBlock;
       this._enablePrivateEndpoint = value.enablePrivateEndpoint;
       this._masterIpv4CidrBlock = value.masterIpv4CidrBlock;
@@ -584,6 +592,8 @@ export function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: Comp
 }
 
 export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -594,7 +604,7 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
 
   public get internalValue(): ComposerEnvironmentConfigSoftwareConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._airflowConfigOverrides) {
       hasAnyValues = true;
@@ -625,6 +635,7 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
 
   public set internalValue(value: ComposerEnvironmentConfigSoftwareConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._airflowConfigOverrides = undefined;
       this._envVariables = undefined;
       this._imageVersion = undefined;
@@ -633,6 +644,7 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
       this._schedulerCount = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._airflowConfigOverrides = value.airflowConfigOverrides;
       this._envVariables = value.envVariables;
       this._imageVersion = value.imageVersion;
@@ -782,6 +794,8 @@ export function composerEnvironmentConfigAToTerraform(struct?: ComposerEnvironme
 }
 
 export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -792,21 +806,21 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ComposerEnvironmentConfigA | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nodeCount) {
       hasAnyValues = true;
       internalValueResult.nodeCount = this._nodeCount;
     }
-    if (this._nodeConfig) {
+    if (this._nodeConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.nodeConfig = this._nodeConfig?.internalValue;
     }
-    if (this._privateEnvironmentConfig) {
+    if (this._privateEnvironmentConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.privateEnvironmentConfig = this._privateEnvironmentConfig?.internalValue;
     }
-    if (this._softwareConfig) {
+    if (this._softwareConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
     }
@@ -815,12 +829,14 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ComposerEnvironmentConfigA | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nodeCount = undefined;
       this._nodeConfig.internalValue = undefined;
       this._privateEnvironmentConfig.internalValue = undefined;
       this._softwareConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nodeCount = value.nodeCount;
       this._nodeConfig.internalValue = value.nodeConfig;
       this._privateEnvironmentConfig.internalValue = value.privateEnvironmentConfig;
@@ -920,6 +936,8 @@ export function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironm
 }
 
 export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -930,7 +948,7 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ComposerEnvironmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -949,11 +967,13 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ComposerEnvironmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

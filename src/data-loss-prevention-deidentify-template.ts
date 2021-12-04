@@ -132,6 +132,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -142,7 +144,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maskingCharacter) {
       hasAnyValues = true;
@@ -165,12 +167,14 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maskingCharacter = undefined;
       this._numberToMask = undefined;
       this._reverseOrder = undefined;
       this._charactersToIgnore = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maskingCharacter = value.maskingCharacter;
       this._numberToMask = value.numberToMask;
       this._reverseOrder = value.reverseOrder;
@@ -263,6 +267,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -273,7 +279,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -284,9 +290,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -336,6 +344,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -346,7 +356,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cryptoKeyName) {
       hasAnyValues = true;
@@ -361,10 +371,12 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cryptoKeyName = undefined;
       this._wrappedKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cryptoKeyName = value.cryptoKeyName;
       this._wrappedKey = value.wrappedKey;
     }
@@ -416,6 +428,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -426,7 +440,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -437,9 +451,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -479,6 +495,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -489,7 +507,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._key) {
       hasAnyValues = true;
@@ -500,9 +518,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._key = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._key = value.key;
     }
   }
@@ -554,6 +574,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -564,17 +586,17 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsWrapped) {
+    if (this._kmsWrapped?.internalValue) {
       hasAnyValues = true;
       internalValueResult.kmsWrapped = this._kmsWrapped?.internalValue;
     }
-    if (this._transient) {
+    if (this._transient?.internalValue) {
       hasAnyValues = true;
       internalValueResult.transient = this._transient?.internalValue;
     }
-    if (this._unwrapped) {
+    if (this._unwrapped?.internalValue) {
       hasAnyValues = true;
       internalValueResult.unwrapped = this._unwrapped?.internalValue;
     }
@@ -583,11 +605,13 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsWrapped.internalValue = undefined;
       this._transient.internalValue = undefined;
       this._unwrapped.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsWrapped.internalValue = value.kmsWrapped;
       this._transient.internalValue = value.transient;
       this._unwrapped.internalValue = value.unwrapped;
@@ -662,6 +686,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -672,7 +698,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -683,9 +709,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -740,6 +768,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -750,17 +780,17 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._context) {
+    if (this._context?.internalValue) {
       hasAnyValues = true;
       internalValueResult.context = this._context?.internalValue;
     }
-    if (this._cryptoKey) {
+    if (this._cryptoKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cryptoKey = this._cryptoKey?.internalValue;
     }
-    if (this._surrogateInfoType) {
+    if (this._surrogateInfoType?.internalValue) {
       hasAnyValues = true;
       internalValueResult.surrogateInfoType = this._surrogateInfoType?.internalValue;
     }
@@ -769,11 +799,13 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._context.internalValue = undefined;
       this._cryptoKey.internalValue = undefined;
       this._surrogateInfoType.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._context.internalValue = value.context;
       this._cryptoKey.internalValue = value.cryptoKey;
       this._surrogateInfoType.internalValue = value.surrogateInfoType;
@@ -848,6 +880,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -858,7 +892,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -869,9 +903,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -921,6 +957,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -931,7 +969,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cryptoKeyName) {
       hasAnyValues = true;
@@ -946,10 +984,12 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cryptoKeyName = undefined;
       this._wrappedKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cryptoKeyName = value.cryptoKeyName;
       this._wrappedKey = value.wrappedKey;
     }
@@ -1001,6 +1041,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1011,7 +1053,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -1022,9 +1064,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -1064,6 +1108,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1074,7 +1120,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._key) {
       hasAnyValues = true;
@@ -1085,9 +1131,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._key = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._key = value.key;
     }
   }
@@ -1139,6 +1187,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1149,17 +1199,17 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsWrapped) {
+    if (this._kmsWrapped?.internalValue) {
       hasAnyValues = true;
       internalValueResult.kmsWrapped = this._kmsWrapped?.internalValue;
     }
-    if (this._transient) {
+    if (this._transient?.internalValue) {
       hasAnyValues = true;
       internalValueResult.transient = this._transient?.internalValue;
     }
-    if (this._unwrapped) {
+    if (this._unwrapped?.internalValue) {
       hasAnyValues = true;
       internalValueResult.unwrapped = this._unwrapped?.internalValue;
     }
@@ -1168,11 +1218,13 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsWrapped.internalValue = undefined;
       this._transient.internalValue = undefined;
       this._unwrapped.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsWrapped.internalValue = value.kmsWrapped;
       this._transient.internalValue = value.transient;
       this._unwrapped.internalValue = value.unwrapped;
@@ -1247,6 +1299,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1257,7 +1311,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -1268,9 +1322,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -1348,6 +1404,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1358,7 +1416,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._commonAlphabet) {
       hasAnyValues = true;
@@ -1372,15 +1430,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
       hasAnyValues = true;
       internalValueResult.radix = this._radix;
     }
-    if (this._context) {
+    if (this._context?.internalValue) {
       hasAnyValues = true;
       internalValueResult.context = this._context?.internalValue;
     }
-    if (this._cryptoKey) {
+    if (this._cryptoKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cryptoKey = this._cryptoKey?.internalValue;
     }
-    if (this._surrogateInfoType) {
+    if (this._surrogateInfoType?.internalValue) {
       hasAnyValues = true;
       internalValueResult.surrogateInfoType = this._surrogateInfoType?.internalValue;
     }
@@ -1389,6 +1447,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._commonAlphabet = undefined;
       this._customAlphabet = undefined;
       this._radix = undefined;
@@ -1397,6 +1456,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
       this._surrogateInfoType.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._commonAlphabet = value.commonAlphabet;
       this._customAlphabet = value.customAlphabet;
       this._radix = value.radix;
@@ -1537,6 +1597,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1547,7 +1609,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._day) {
       hasAnyValues = true;
@@ -1566,11 +1628,13 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._day = undefined;
       this._month = undefined;
       this._year = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._day = value.day;
       this._month = value.month;
       this._year = value.year;
@@ -1666,6 +1730,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1676,7 +1742,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hours) {
       hasAnyValues = true;
@@ -1699,12 +1765,14 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hours = undefined;
       this._minutes = undefined;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hours = value.hours;
       this._minutes = value.minutes;
       this._nanos = value.nanos;
@@ -1846,6 +1914,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1856,7 +1926,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._booleanValue) {
       hasAnyValues = true;
@@ -1882,11 +1952,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
       hasAnyValues = true;
       internalValueResult.timestampValue = this._timestampValue;
     }
-    if (this._dateValue) {
+    if (this._dateValue?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dateValue = this._dateValue?.internalValue;
     }
-    if (this._timeValue) {
+    if (this._timeValue?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timeValue = this._timeValue?.internalValue;
     }
@@ -1895,6 +1965,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._booleanValue = undefined;
       this._dayOfWeekValue = undefined;
       this._floatValue = undefined;
@@ -1905,6 +1976,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
       this._timeValue.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._booleanValue = value.booleanValue;
       this._dayOfWeekValue = value.dayOfWeekValue;
       this._floatValue = value.floatValue;
@@ -2064,6 +2136,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2074,9 +2148,9 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._newValue) {
+    if (this._newValue?.internalValue) {
       hasAnyValues = true;
       internalValueResult.newValue = this._newValue?.internalValue;
     }
@@ -2085,9 +2159,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._newValue.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._newValue.internalValue = value.newValue;
     }
   }
@@ -2153,6 +2229,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2163,25 +2241,25 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._replaceWithInfoTypeConfig) {
       hasAnyValues = true;
       internalValueResult.replaceWithInfoTypeConfig = this._replaceWithInfoTypeConfig;
     }
-    if (this._characterMaskConfig) {
+    if (this._characterMaskConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.characterMaskConfig = this._characterMaskConfig?.internalValue;
     }
-    if (this._cryptoDeterministicConfig) {
+    if (this._cryptoDeterministicConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cryptoDeterministicConfig = this._cryptoDeterministicConfig?.internalValue;
     }
-    if (this._cryptoReplaceFfxFpeConfig) {
+    if (this._cryptoReplaceFfxFpeConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cryptoReplaceFfxFpeConfig = this._cryptoReplaceFfxFpeConfig?.internalValue;
     }
-    if (this._replaceConfig) {
+    if (this._replaceConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.replaceConfig = this._replaceConfig?.internalValue;
     }
@@ -2190,6 +2268,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._replaceWithInfoTypeConfig = undefined;
       this._characterMaskConfig.internalValue = undefined;
       this._cryptoDeterministicConfig.internalValue = undefined;
@@ -2197,6 +2276,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
       this._replaceConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._replaceWithInfoTypeConfig = value.replaceWithInfoTypeConfig;
       this._characterMaskConfig.internalValue = value.characterMaskConfig;
       this._cryptoDeterministicConfig.internalValue = value.cryptoDeterministicConfig;
@@ -2331,6 +2411,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2341,7 +2423,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._transformations) {
       hasAnyValues = true;
@@ -2352,9 +2434,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._transformations = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._transformations = value.transformations;
     }
   }
@@ -2393,6 +2477,8 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigToTerraform(
 }
 
 export class DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2403,9 +2489,9 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._infoTypeTransformations) {
+    if (this._infoTypeTransformations?.internalValue) {
       hasAnyValues = true;
       internalValueResult.infoTypeTransformations = this._infoTypeTransformations?.internalValue;
     }
@@ -2414,9 +2500,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateDeidentifyConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._infoTypeTransformations.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._infoTypeTransformations.internalValue = value.infoTypeTransformations;
     }
   }
@@ -2462,6 +2550,8 @@ export function dataLossPreventionDeidentifyTemplateTimeoutsToTerraform(struct?:
 }
 
 export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2472,7 +2562,7 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
   }
 
   public get internalValue(): DataLossPreventionDeidentifyTemplateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2491,11 +2581,13 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
 
   public set internalValue(value: DataLossPreventionDeidentifyTemplateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

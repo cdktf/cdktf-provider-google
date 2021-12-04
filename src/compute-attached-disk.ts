@@ -73,6 +73,8 @@ export function computeAttachedDiskTimeoutsToTerraform(struct?: ComputeAttachedD
 }
 
 export class ComputeAttachedDiskTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -83,7 +85,7 @@ export class ComputeAttachedDiskTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ComputeAttachedDiskTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -98,10 +100,12 @@ export class ComputeAttachedDiskTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ComputeAttachedDiskTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

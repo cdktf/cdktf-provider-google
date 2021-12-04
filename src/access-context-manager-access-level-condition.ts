@@ -166,6 +166,8 @@ export function accessContextManagerAccessLevelConditionDevicePolicyToTerraform(
 }
 
 export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -176,7 +178,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
 
   public get internalValue(): AccessContextManagerAccessLevelConditionDevicePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedDeviceManagementLevels) {
       hasAnyValues = true;
@@ -207,6 +209,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
 
   public set internalValue(value: AccessContextManagerAccessLevelConditionDevicePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedDeviceManagementLevels = undefined;
       this._allowedEncryptionStatuses = undefined;
       this._requireAdminApproval = undefined;
@@ -215,6 +218,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
       this._osConstraints = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedDeviceManagementLevels = value.allowedDeviceManagementLevels;
       this._allowedEncryptionStatuses = value.allowedEncryptionStatuses;
       this._requireAdminApproval = value.requireAdminApproval;
@@ -344,6 +348,8 @@ export function accessContextManagerAccessLevelConditionTimeoutsToTerraform(stru
 }
 
 export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -354,7 +360,7 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
   }
 
   public get internalValue(): AccessContextManagerAccessLevelConditionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -369,10 +375,12 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
 
   public set internalValue(value: AccessContextManagerAccessLevelConditionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

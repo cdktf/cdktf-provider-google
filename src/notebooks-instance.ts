@@ -245,6 +245,8 @@ export function notebooksInstanceAcceleratorConfigToTerraform(struct?: Notebooks
 }
 
 export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -255,7 +257,7 @@ export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.Com
   }
 
   public get internalValue(): NotebooksInstanceAcceleratorConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._coreCount) {
       hasAnyValues = true;
@@ -270,10 +272,12 @@ export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.Com
 
   public set internalValue(value: NotebooksInstanceAcceleratorConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._coreCount = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._coreCount = value.coreCount;
       this._type = value.type;
     }
@@ -333,6 +337,8 @@ export function notebooksInstanceContainerImageToTerraform(struct?: NotebooksIns
 }
 
 export class NotebooksInstanceContainerImageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -343,7 +349,7 @@ export class NotebooksInstanceContainerImageOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): NotebooksInstanceContainerImage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._repository) {
       hasAnyValues = true;
@@ -358,10 +364,12 @@ export class NotebooksInstanceContainerImageOutputReference extends cdktf.Comple
 
   public set internalValue(value: NotebooksInstanceContainerImage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._repository = undefined;
       this._tag = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._repository = value.repository;
       this._tag = value.tag;
     }
@@ -437,6 +445,8 @@ export function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: Note
 }
 
 export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -447,7 +457,7 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   }
 
   public get internalValue(): NotebooksInstanceShieldedInstanceConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableIntegrityMonitoring) {
       hasAnyValues = true;
@@ -466,11 +476,13 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
 
   public set internalValue(value: NotebooksInstanceShieldedInstanceConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableIntegrityMonitoring = undefined;
       this._enableSecureBoot = undefined;
       this._enableVtpm = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
       this._enableSecureBoot = value.enableSecureBoot;
       this._enableVtpm = value.enableVtpm;
@@ -553,6 +565,8 @@ export function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceT
 }
 
 export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -563,7 +577,7 @@ export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): NotebooksInstanceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -582,11 +596,13 @@ export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: NotebooksInstanceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -676,6 +692,8 @@ export function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVm
 }
 
 export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -686,7 +704,7 @@ export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): NotebooksInstanceVmImage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._imageFamily) {
       hasAnyValues = true;
@@ -705,11 +723,13 @@ export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: NotebooksInstanceVmImage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._imageFamily = undefined;
       this._imageName = undefined;
       this._project = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._imageFamily = value.imageFamily;
       this._imageName = value.imageName;
       this._project = value.project;

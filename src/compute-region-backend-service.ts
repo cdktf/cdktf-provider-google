@@ -435,6 +435,8 @@ export function computeRegionBackendServiceCdnPolicyCacheKeyPolicyToTerraform(st
 }
 
 export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -445,7 +447,7 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   }
 
   public get internalValue(): ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._includeHost) {
       hasAnyValues = true;
@@ -472,6 +474,7 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
 
   public set internalValue(value: ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._includeHost = undefined;
       this._includeProtocol = undefined;
       this._includeQueryString = undefined;
@@ -479,6 +482,7 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
       this._queryStringWhitelist = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._includeHost = value.includeHost;
       this._includeProtocol = value.includeProtocol;
       this._includeQueryString = value.includeQueryString;
@@ -674,6 +678,8 @@ export function computeRegionBackendServiceCdnPolicyToTerraform(struct?: Compute
 }
 
 export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -684,7 +690,7 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
 
   public get internalValue(): ComputeRegionBackendServiceCdnPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cacheMode) {
       hasAnyValues = true;
@@ -714,7 +720,7 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
     }
-    if (this._cacheKeyPolicy) {
+    if (this._cacheKeyPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
     }
@@ -727,6 +733,7 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
 
   public set internalValue(value: ComputeRegionBackendServiceCdnPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cacheMode = undefined;
       this._clientTtl = undefined;
       this._defaultTtl = undefined;
@@ -738,6 +745,7 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
       this._negativeCachingPolicy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cacheMode = value.cacheMode;
       this._clientTtl = value.clientTtl;
       this._defaultTtl = value.defaultTtl;
@@ -950,6 +958,8 @@ export function computeRegionBackendServiceCircuitBreakersToTerraform(struct?: C
 }
 
 export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -960,7 +970,7 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   }
 
   public get internalValue(): ComputeRegionBackendServiceCircuitBreakers | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxConnections) {
       hasAnyValues = true;
@@ -987,6 +997,7 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
 
   public set internalValue(value: ComputeRegionBackendServiceCircuitBreakers | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxConnections = undefined;
       this._maxPendingRequests = undefined;
       this._maxRequests = undefined;
@@ -994,6 +1005,7 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
       this._maxRetries = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxConnections = value.maxConnections;
       this._maxPendingRequests = value.maxPendingRequests;
       this._maxRequests = value.maxRequests;
@@ -1113,6 +1125,8 @@ export function computeRegionBackendServiceConsistentHashHttpCookieTtlToTerrafor
 }
 
 export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1123,7 +1137,7 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
   }
 
   public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -1138,10 +1152,12 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
 
   public set internalValue(value: ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -1210,6 +1226,8 @@ export function computeRegionBackendServiceConsistentHashHttpCookieToTerraform(s
 }
 
 export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1220,7 +1238,7 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
   }
 
   public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookie | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -1230,7 +1248,7 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._ttl) {
+    if (this._ttl?.internalValue) {
       hasAnyValues = true;
       internalValueResult.ttl = this._ttl?.internalValue;
     }
@@ -1239,11 +1257,13 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
 
   public set internalValue(value: ComputeRegionBackendServiceConsistentHashHttpCookie | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._path = undefined;
       this._ttl.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._path = value.path;
       this._ttl.internalValue = value.ttl;
@@ -1338,6 +1358,8 @@ export function computeRegionBackendServiceConsistentHashToTerraform(struct?: Co
 }
 
 export class ComputeRegionBackendServiceConsistentHashOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1348,7 +1370,7 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
   }
 
   public get internalValue(): ComputeRegionBackendServiceConsistentHash | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._httpHeaderName) {
       hasAnyValues = true;
@@ -1358,7 +1380,7 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
       hasAnyValues = true;
       internalValueResult.minimumRingSize = this._minimumRingSize;
     }
-    if (this._httpCookie) {
+    if (this._httpCookie?.internalValue) {
       hasAnyValues = true;
       internalValueResult.httpCookie = this._httpCookie?.internalValue;
     }
@@ -1367,11 +1389,13 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
 
   public set internalValue(value: ComputeRegionBackendServiceConsistentHash | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._httpHeaderName = undefined;
       this._minimumRingSize = undefined;
       this._httpCookie.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._httpHeaderName = value.httpHeaderName;
       this._minimumRingSize = value.minimumRingSize;
       this._httpCookie.internalValue = value.httpCookie;
@@ -1477,6 +1501,8 @@ export function computeRegionBackendServiceFailoverPolicyToTerraform(struct?: Co
 }
 
 export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1487,7 +1513,7 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
   }
 
   public get internalValue(): ComputeRegionBackendServiceFailoverPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disableConnectionDrainOnFailover) {
       hasAnyValues = true;
@@ -1506,11 +1532,13 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
 
   public set internalValue(value: ComputeRegionBackendServiceFailoverPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disableConnectionDrainOnFailover = undefined;
       this._dropTrafficIfUnhealthy = undefined;
       this._failoverRatio = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disableConnectionDrainOnFailover = value.disableConnectionDrainOnFailover;
       this._dropTrafficIfUnhealthy = value.dropTrafficIfUnhealthy;
       this._failoverRatio = value.failoverRatio;
@@ -1592,6 +1620,8 @@ export function computeRegionBackendServiceIapToTerraform(struct?: ComputeRegion
 }
 
 export class ComputeRegionBackendServiceIapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1602,7 +1632,7 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): ComputeRegionBackendServiceIap | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._oauth2ClientId) {
       hasAnyValues = true;
@@ -1617,10 +1647,12 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
 
   public set internalValue(value: ComputeRegionBackendServiceIap | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._oauth2ClientId = undefined;
       this._oauth2ClientSecret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._oauth2ClientId = value.oauth2ClientId;
       this._oauth2ClientSecret = value.oauth2ClientSecret;
     }
@@ -1682,6 +1714,8 @@ export function computeRegionBackendServiceLogConfigToTerraform(struct?: Compute
 }
 
 export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1692,7 +1726,7 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): ComputeRegionBackendServiceLogConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enable) {
       hasAnyValues = true;
@@ -1707,10 +1741,12 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
 
   public set internalValue(value: ComputeRegionBackendServiceLogConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enable = undefined;
       this._sampleRate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enable = value.enable;
       this._sampleRate = value.sampleRate;
     }
@@ -1778,6 +1814,8 @@ export function computeRegionBackendServiceOutlierDetectionBaseEjectionTimeToTer
 }
 
 export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1788,7 +1826,7 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
   }
 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -1803,10 +1841,12 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
 
   public set internalValue(value: ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -1871,6 +1911,8 @@ export function computeRegionBackendServiceOutlierDetectionIntervalToTerraform(s
 }
 
 export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1881,7 +1923,7 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
   }
 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetectionInterval | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -1896,10 +1938,12 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
 
   public set internalValue(value: ComputeRegionBackendServiceOutlierDetectionInterval | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -2047,6 +2091,8 @@ export function computeRegionBackendServiceOutlierDetectionToTerraform(struct?: 
 }
 
 export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2057,7 +2103,7 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetection | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._consecutiveErrors) {
       hasAnyValues = true;
@@ -2095,11 +2141,11 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
       hasAnyValues = true;
       internalValueResult.successRateStdevFactor = this._successRateStdevFactor;
     }
-    if (this._baseEjectionTime) {
+    if (this._baseEjectionTime?.internalValue) {
       hasAnyValues = true;
       internalValueResult.baseEjectionTime = this._baseEjectionTime?.internalValue;
     }
-    if (this._interval) {
+    if (this._interval?.internalValue) {
       hasAnyValues = true;
       internalValueResult.interval = this._interval?.internalValue;
     }
@@ -2108,6 +2154,7 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
 
   public set internalValue(value: ComputeRegionBackendServiceOutlierDetection | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._consecutiveErrors = undefined;
       this._consecutiveGatewayFailure = undefined;
       this._enforcingConsecutiveErrors = undefined;
@@ -2121,6 +2168,7 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
       this._interval.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._consecutiveErrors = value.consecutiveErrors;
       this._consecutiveGatewayFailure = value.consecutiveGatewayFailure;
       this._enforcingConsecutiveErrors = value.enforcingConsecutiveErrors;
@@ -2339,6 +2387,8 @@ export function computeRegionBackendServiceTimeoutsToTerraform(struct?: ComputeR
 }
 
 export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2349,7 +2399,7 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): ComputeRegionBackendServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2368,11 +2418,13 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: ComputeRegionBackendServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

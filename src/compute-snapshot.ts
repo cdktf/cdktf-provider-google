@@ -108,6 +108,8 @@ export function computeSnapshotSnapshotEncryptionKeyToTerraform(struct?: Compute
 }
 
 export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -118,7 +120,7 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
   }
 
   public get internalValue(): ComputeSnapshotSnapshotEncryptionKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeySelfLink) {
       hasAnyValues = true;
@@ -137,11 +139,13 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
 
   public set internalValue(value: ComputeSnapshotSnapshotEncryptionKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeySelfLink = undefined;
       this._kmsKeyServiceAccount = undefined;
       this._rawKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeySelfLink = value.kmsKeySelfLink;
       this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
       this._rawKey = value.rawKey;
@@ -225,6 +229,8 @@ export function computeSnapshotSourceDiskEncryptionKeyToTerraform(struct?: Compu
 }
 
 export class ComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -235,7 +241,7 @@ export class ComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf
   }
 
   public get internalValue(): ComputeSnapshotSourceDiskEncryptionKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyServiceAccount) {
       hasAnyValues = true;
@@ -250,10 +256,12 @@ export class ComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf
 
   public set internalValue(value: ComputeSnapshotSourceDiskEncryptionKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyServiceAccount = undefined;
       this._rawKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
       this._rawKey = value.rawKey;
     }
@@ -319,6 +327,8 @@ export function computeSnapshotTimeoutsToTerraform(struct?: ComputeSnapshotTimeo
 }
 
 export class ComputeSnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -329,7 +339,7 @@ export class ComputeSnapshotTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): ComputeSnapshotTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -348,11 +358,13 @@ export class ComputeSnapshotTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: ComputeSnapshotTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

@@ -142,6 +142,8 @@ export function osConfigPatchDeploymentInstanceFilterToTerraform(struct?: OsConf
 }
 
 export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -152,7 +154,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
 
   public get internalValue(): OsConfigPatchDeploymentInstanceFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._all) {
       hasAnyValues = true;
@@ -179,6 +181,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
 
   public set internalValue(value: OsConfigPatchDeploymentInstanceFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._all = undefined;
       this._instanceNamePrefixes = undefined;
       this._instances = undefined;
@@ -186,6 +189,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
       this._groupLabels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._all = value.all;
       this._instanceNamePrefixes = value.instanceNamePrefixes;
       this._instances = value.instances;
@@ -296,6 +300,8 @@ export function osConfigPatchDeploymentOneTimeScheduleToTerraform(struct?: OsCon
 }
 
 export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -306,7 +312,7 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
   }
 
   public get internalValue(): OsConfigPatchDeploymentOneTimeSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._executeTime) {
       hasAnyValues = true;
@@ -317,9 +323,11 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
 
   public set internalValue(value: OsConfigPatchDeploymentOneTimeSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._executeTime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._executeTime = value.executeTime;
     }
   }
@@ -373,6 +381,8 @@ export function osConfigPatchDeploymentPatchConfigAptToTerraform(struct?: OsConf
 }
 
 export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -383,7 +393,7 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigApt | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._excludes) {
       hasAnyValues = true;
@@ -402,11 +412,13 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigApt | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._excludes = undefined;
       this._exclusivePackages = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._excludes = value.excludes;
       this._exclusivePackages = value.exclusivePackages;
       this._type = value.type;
@@ -481,6 +493,8 @@ export function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConf
 }
 
 export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -491,7 +505,7 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigGoo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -502,9 +516,11 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigGoo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -556,6 +572,8 @@ export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcs
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -566,7 +584,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucket) {
       hasAnyValues = true;
@@ -585,11 +603,13 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucket = undefined;
       this._generationNumber = undefined;
       this._object = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucket = value.bucket;
       this._generationNumber = value.generationNumber;
       this._object = value.object;
@@ -677,6 +697,8 @@ export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToT
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -687,7 +709,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedSuccessCodes) {
       hasAnyValues = true;
@@ -701,7 +723,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject) {
+    if (this._gcsObject?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -710,12 +732,14 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedSuccessCodes = undefined;
       this._interpreter = undefined;
       this._localPath = undefined;
       this._gcsObject.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedSuccessCodes = value.allowedSuccessCodes;
       this._interpreter = value.interpreter;
       this._localPath = value.localPath;
@@ -822,6 +846,8 @@ export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigG
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -832,7 +858,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucket) {
       hasAnyValues = true;
@@ -851,11 +877,13 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucket = undefined;
       this._generationNumber = undefined;
       this._object = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucket = value.bucket;
       this._generationNumber = value.generationNumber;
       this._object = value.object;
@@ -943,6 +971,8 @@ export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigT
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -953,7 +983,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedSuccessCodes) {
       hasAnyValues = true;
@@ -967,7 +997,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject) {
+    if (this._gcsObject?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -976,12 +1006,14 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedSuccessCodes = undefined;
       this._interpreter = undefined;
       this._localPath = undefined;
       this._gcsObject.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedSuccessCodes = value.allowedSuccessCodes;
       this._interpreter = value.interpreter;
       this._localPath = value.localPath;
@@ -1081,6 +1113,8 @@ export function osConfigPatchDeploymentPatchConfigPostStepToTerraform(struct?: O
 }
 
 export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1091,13 +1125,13 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStep | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linuxExecStepConfig) {
+    if (this._linuxExecStepConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.linuxExecStepConfig = this._linuxExecStepConfig?.internalValue;
     }
-    if (this._windowsExecStepConfig) {
+    if (this._windowsExecStepConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.windowsExecStepConfig = this._windowsExecStepConfig?.internalValue;
     }
@@ -1106,10 +1140,12 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPostStep | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linuxExecStepConfig.internalValue = undefined;
       this._windowsExecStepConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linuxExecStepConfig.internalValue = value.linuxExecStepConfig;
       this._windowsExecStepConfig.internalValue = value.windowsExecStepConfig;
     }
@@ -1181,6 +1217,8 @@ export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsO
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1191,7 +1229,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucket) {
       hasAnyValues = true;
@@ -1210,11 +1248,13 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucket = undefined;
       this._generationNumber = undefined;
       this._object = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucket = value.bucket;
       this._generationNumber = value.generationNumber;
       this._object = value.object;
@@ -1302,6 +1342,8 @@ export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTe
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1312,7 +1354,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedSuccessCodes) {
       hasAnyValues = true;
@@ -1326,7 +1368,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject) {
+    if (this._gcsObject?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -1335,12 +1377,14 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedSuccessCodes = undefined;
       this._interpreter = undefined;
       this._localPath = undefined;
       this._gcsObject.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedSuccessCodes = value.allowedSuccessCodes;
       this._interpreter = value.interpreter;
       this._localPath = value.localPath;
@@ -1447,6 +1491,8 @@ export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGc
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1457,7 +1503,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucket) {
       hasAnyValues = true;
@@ -1476,11 +1522,13 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucket = undefined;
       this._generationNumber = undefined;
       this._object = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucket = value.bucket;
       this._generationNumber = value.generationNumber;
       this._object = value.object;
@@ -1568,6 +1616,8 @@ export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigTo
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1578,7 +1628,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedSuccessCodes) {
       hasAnyValues = true;
@@ -1592,7 +1642,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject) {
+    if (this._gcsObject?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -1601,12 +1651,14 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedSuccessCodes = undefined;
       this._interpreter = undefined;
       this._localPath = undefined;
       this._gcsObject.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedSuccessCodes = value.allowedSuccessCodes;
       this._interpreter = value.interpreter;
       this._localPath = value.localPath;
@@ -1706,6 +1758,8 @@ export function osConfigPatchDeploymentPatchConfigPreStepToTerraform(struct?: Os
 }
 
 export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1716,13 +1770,13 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStep | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linuxExecStepConfig) {
+    if (this._linuxExecStepConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.linuxExecStepConfig = this._linuxExecStepConfig?.internalValue;
     }
-    if (this._windowsExecStepConfig) {
+    if (this._windowsExecStepConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.windowsExecStepConfig = this._windowsExecStepConfig?.internalValue;
     }
@@ -1731,10 +1785,12 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigPreStep | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linuxExecStepConfig.internalValue = undefined;
       this._windowsExecStepConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linuxExecStepConfig.internalValue = value.linuxExecStepConfig;
       this._windowsExecStepConfig.internalValue = value.windowsExecStepConfig;
     }
@@ -1807,6 +1863,8 @@ export function osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform(struc
 }
 
 export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1817,7 +1875,7 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._classifications) {
       hasAnyValues = true;
@@ -1836,11 +1894,13 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._classifications = undefined;
       this._excludes = undefined;
       this._exclusivePatches = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._classifications = value.classifications;
       this._excludes = value.excludes;
       this._exclusivePatches = value.exclusivePatches;
@@ -1938,6 +1998,8 @@ export function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConf
 }
 
 export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1948,7 +2010,7 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigYum | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._excludes) {
       hasAnyValues = true;
@@ -1971,12 +2033,14 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigYum | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._excludes = undefined;
       this._exclusivePackages = undefined;
       this._minimal = undefined;
       this._security = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._excludes = value.excludes;
       this._exclusivePackages = value.exclusivePackages;
       this._minimal = value.minimal;
@@ -2104,6 +2168,8 @@ export function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsC
 }
 
 export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2114,7 +2180,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigZypper | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._categories) {
       hasAnyValues = true;
@@ -2145,6 +2211,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfigZypper | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._categories = undefined;
       this._excludes = undefined;
       this._exclusivePatches = undefined;
@@ -2153,6 +2220,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
       this._withUpdate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._categories = value.categories;
       this._excludes = value.excludes;
       this._exclusivePatches = value.exclusivePatches;
@@ -2327,6 +2395,8 @@ export function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigP
 }
 
 export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2337,37 +2407,37 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._rebootConfig) {
       hasAnyValues = true;
       internalValueResult.rebootConfig = this._rebootConfig;
     }
-    if (this._apt) {
+    if (this._apt?.internalValue) {
       hasAnyValues = true;
       internalValueResult.apt = this._apt?.internalValue;
     }
-    if (this._goo) {
+    if (this._goo?.internalValue) {
       hasAnyValues = true;
       internalValueResult.goo = this._goo?.internalValue;
     }
-    if (this._postStep) {
+    if (this._postStep?.internalValue) {
       hasAnyValues = true;
       internalValueResult.postStep = this._postStep?.internalValue;
     }
-    if (this._preStep) {
+    if (this._preStep?.internalValue) {
       hasAnyValues = true;
       internalValueResult.preStep = this._preStep?.internalValue;
     }
-    if (this._windowsUpdate) {
+    if (this._windowsUpdate?.internalValue) {
       hasAnyValues = true;
       internalValueResult.windowsUpdate = this._windowsUpdate?.internalValue;
     }
-    if (this._yum) {
+    if (this._yum?.internalValue) {
       hasAnyValues = true;
       internalValueResult.yum = this._yum?.internalValue;
     }
-    if (this._zypper) {
+    if (this._zypper?.internalValue) {
       hasAnyValues = true;
       internalValueResult.zypper = this._zypper?.internalValue;
     }
@@ -2376,6 +2446,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
 
   public set internalValue(value: OsConfigPatchDeploymentPatchConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._rebootConfig = undefined;
       this._apt.internalValue = undefined;
       this._goo.internalValue = undefined;
@@ -2386,6 +2457,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
       this._zypper.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._rebootConfig = value.rebootConfig;
       this._apt.internalValue = value.apt;
       this._goo.internalValue = value.goo;
@@ -2552,6 +2624,8 @@ export function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToT
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2562,7 +2636,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dayOfWeek) {
       hasAnyValues = true;
@@ -2577,10 +2651,12 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
 
   public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dayOfWeek = undefined;
       this._weekOrdinal = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dayOfWeek = value.dayOfWeek;
       this._weekOrdinal = value.weekOrdinal;
     }
@@ -2641,6 +2717,8 @@ export function osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform(struc
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2651,13 +2729,13 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthly | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._monthDay) {
       hasAnyValues = true;
       internalValueResult.monthDay = this._monthDay;
     }
-    if (this._weekDayOfMonth) {
+    if (this._weekDayOfMonth?.internalValue) {
       hasAnyValues = true;
       internalValueResult.weekDayOfMonth = this._weekDayOfMonth?.internalValue;
     }
@@ -2666,10 +2744,12 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
 
   public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleMonthly | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._monthDay = undefined;
       this._weekDayOfMonth.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._monthDay = value.monthDay;
       this._weekDayOfMonth.internalValue = value.weekDayOfMonth;
     }
@@ -2749,6 +2829,8 @@ export function osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform(str
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2759,7 +2841,7 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeOfDay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hours) {
       hasAnyValues = true;
@@ -2782,12 +2864,14 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
 
   public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleTimeOfDay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hours = undefined;
       this._minutes = undefined;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hours = value.hours;
       this._minutes = value.minutes;
       this._nanos = value.nanos;
@@ -2886,6 +2970,8 @@ export function osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(stru
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2896,7 +2982,7 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeZone | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._id) {
       hasAnyValues = true;
@@ -2911,10 +2997,12 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
 
   public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleTimeZone | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._id = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._id = value.id;
       this._version = value.version;
     }
@@ -2969,6 +3057,8 @@ export function osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2979,7 +3069,7 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleWeekly | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dayOfWeek) {
       hasAnyValues = true;
@@ -2990,9 +3080,11 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
 
   public set internalValue(value: OsConfigPatchDeploymentRecurringScheduleWeekly | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dayOfWeek = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dayOfWeek = value.dayOfWeek;
     }
   }
@@ -3067,6 +3159,8 @@ export function osConfigPatchDeploymentRecurringScheduleToTerraform(struct?: OsC
 }
 
 export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3077,7 +3171,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endTime) {
       hasAnyValues = true;
@@ -3087,19 +3181,19 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._monthly) {
+    if (this._monthly?.internalValue) {
       hasAnyValues = true;
       internalValueResult.monthly = this._monthly?.internalValue;
     }
-    if (this._timeOfDay) {
+    if (this._timeOfDay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timeOfDay = this._timeOfDay?.internalValue;
     }
-    if (this._timeZone) {
+    if (this._timeZone?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timeZone = this._timeZone?.internalValue;
     }
-    if (this._weekly) {
+    if (this._weekly?.internalValue) {
       hasAnyValues = true;
       internalValueResult.weekly = this._weekly?.internalValue;
     }
@@ -3108,6 +3202,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
 
   public set internalValue(value: OsConfigPatchDeploymentRecurringSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endTime = undefined;
       this._startTime = undefined;
       this._monthly.internalValue = undefined;
@@ -3116,6 +3211,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
       this._weekly.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endTime = value.endTime;
       this._startTime = value.startTime;
       this._monthly.internalValue = value.monthly;
@@ -3242,6 +3338,8 @@ export function osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform(struct
 }
 
 export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3252,7 +3350,7 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
   }
 
   public get internalValue(): OsConfigPatchDeploymentRolloutDisruptionBudget | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fixed) {
       hasAnyValues = true;
@@ -3267,10 +3365,12 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
 
   public set internalValue(value: OsConfigPatchDeploymentRolloutDisruptionBudget | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fixed = undefined;
       this._percentage = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fixed = value.fixed;
       this._percentage = value.percentage;
     }
@@ -3335,6 +3435,8 @@ export function osConfigPatchDeploymentRolloutToTerraform(struct?: OsConfigPatch
 }
 
 export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3345,13 +3447,13 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): OsConfigPatchDeploymentRollout | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._mode) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._disruptionBudget) {
+    if (this._disruptionBudget?.internalValue) {
       hasAnyValues = true;
       internalValueResult.disruptionBudget = this._disruptionBudget?.internalValue;
     }
@@ -3360,10 +3462,12 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
 
   public set internalValue(value: OsConfigPatchDeploymentRollout | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._mode = undefined;
       this._disruptionBudget.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
       this._disruptionBudget.internalValue = value.disruptionBudget;
     }
@@ -3418,6 +3522,8 @@ export function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatc
 }
 
 export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3428,7 +3534,7 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): OsConfigPatchDeploymentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -3443,10 +3549,12 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
 
   public set internalValue(value: OsConfigPatchDeploymentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

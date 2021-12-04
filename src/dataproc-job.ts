@@ -134,6 +134,8 @@ export function dataprocJobHadoopConfigLoggingConfigToTerraform(struct?: Datapro
 }
 
 export class DataprocJobHadoopConfigLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -144,7 +146,7 @@ export class DataprocJobHadoopConfigLoggingConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): DataprocJobHadoopConfigLoggingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._driverLogLevels) {
       hasAnyValues = true;
@@ -155,9 +157,11 @@ export class DataprocJobHadoopConfigLoggingConfigOutputReference extends cdktf.C
 
   public set internalValue(value: DataprocJobHadoopConfigLoggingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._driverLogLevels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._driverLogLevels = value.driverLogLevels;
     }
   }
@@ -245,6 +249,8 @@ export function dataprocJobHadoopConfigToTerraform(struct?: DataprocJobHadoopCon
 }
 
 export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -255,7 +261,7 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): DataprocJobHadoopConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._archiveUris) {
       hasAnyValues = true;
@@ -285,7 +291,7 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig) {
+    if (this._loggingConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -294,6 +300,7 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: DataprocJobHadoopConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._archiveUris = undefined;
       this._args = undefined;
       this._fileUris = undefined;
@@ -304,6 +311,7 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
       this._loggingConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._archiveUris = value.archiveUris;
       this._args = value.args;
       this._fileUris = value.fileUris;
@@ -499,6 +507,8 @@ export function dataprocJobHiveConfigToTerraform(struct?: DataprocJobHiveConfigO
 }
 
 export class DataprocJobHiveConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -509,7 +519,7 @@ export class DataprocJobHiveConfigOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobHiveConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._continueOnFailure) {
       hasAnyValues = true;
@@ -540,6 +550,7 @@ export class DataprocJobHiveConfigOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobHiveConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._continueOnFailure = undefined;
       this._jarFileUris = undefined;
       this._properties = undefined;
@@ -548,6 +559,7 @@ export class DataprocJobHiveConfigOutputReference extends cdktf.ComplexObject {
       this._scriptVariables = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._continueOnFailure = value.continueOnFailure;
       this._jarFileUris = value.jarFileUris;
       this._properties = value.properties;
@@ -675,6 +687,8 @@ export function dataprocJobPigConfigLoggingConfigToTerraform(struct?: DataprocJo
 }
 
 export class DataprocJobPigConfigLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -685,7 +699,7 @@ export class DataprocJobPigConfigLoggingConfigOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): DataprocJobPigConfigLoggingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._driverLogLevels) {
       hasAnyValues = true;
@@ -696,9 +710,11 @@ export class DataprocJobPigConfigLoggingConfigOutputReference extends cdktf.Comp
 
   public set internalValue(value: DataprocJobPigConfigLoggingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._driverLogLevels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._driverLogLevels = value.driverLogLevels;
     }
   }
@@ -779,6 +795,8 @@ export function dataprocJobPigConfigToTerraform(struct?: DataprocJobPigConfigOut
 }
 
 export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -789,7 +807,7 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobPigConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._continueOnFailure) {
       hasAnyValues = true;
@@ -815,7 +833,7 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._loggingConfig) {
+    if (this._loggingConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -824,6 +842,7 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobPigConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._continueOnFailure = undefined;
       this._jarFileUris = undefined;
       this._properties = undefined;
@@ -833,6 +852,7 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
       this._loggingConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._continueOnFailure = value.continueOnFailure;
       this._jarFileUris = value.jarFileUris;
       this._properties = value.properties;
@@ -977,6 +997,8 @@ export function dataprocJobPlacementToTerraform(struct?: DataprocJobPlacementOut
 }
 
 export class DataprocJobPlacementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -987,7 +1009,7 @@ export class DataprocJobPlacementOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobPlacement | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clusterName) {
       hasAnyValues = true;
@@ -998,9 +1020,11 @@ export class DataprocJobPlacementOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobPlacement | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clusterName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clusterName = value.clusterName;
     }
   }
@@ -1038,6 +1062,8 @@ export function dataprocJobPysparkConfigLoggingConfigToTerraform(struct?: Datapr
 }
 
 export class DataprocJobPysparkConfigLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1048,7 +1074,7 @@ export class DataprocJobPysparkConfigLoggingConfigOutputReference extends cdktf.
   }
 
   public get internalValue(): DataprocJobPysparkConfigLoggingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._driverLogLevels) {
       hasAnyValues = true;
@@ -1059,9 +1085,11 @@ export class DataprocJobPysparkConfigLoggingConfigOutputReference extends cdktf.
 
   public set internalValue(value: DataprocJobPysparkConfigLoggingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._driverLogLevels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._driverLogLevels = value.driverLogLevels;
     }
   }
@@ -1149,6 +1177,8 @@ export function dataprocJobPysparkConfigToTerraform(struct?: DataprocJobPysparkC
 }
 
 export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1159,7 +1189,7 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): DataprocJobPysparkConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._archiveUris) {
       hasAnyValues = true;
@@ -1189,7 +1219,7 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.pythonFileUris = this._pythonFileUris;
     }
-    if (this._loggingConfig) {
+    if (this._loggingConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1198,6 +1228,7 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: DataprocJobPysparkConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._archiveUris = undefined;
       this._args = undefined;
       this._fileUris = undefined;
@@ -1208,6 +1239,7 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
       this._loggingConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._archiveUris = value.archiveUris;
       this._args = value.args;
       this._fileUris = value.fileUris;
@@ -1365,6 +1397,8 @@ export function dataprocJobReferenceToTerraform(struct?: DataprocJobReferenceOut
 }
 
 export class DataprocJobReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1375,7 +1409,7 @@ export class DataprocJobReferenceOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._jobId) {
       hasAnyValues = true;
@@ -1386,9 +1420,11 @@ export class DataprocJobReferenceOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._jobId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._jobId = value.jobId;
     }
   }
@@ -1436,6 +1472,8 @@ export function dataprocJobSchedulingToTerraform(struct?: DataprocJobSchedulingO
 }
 
 export class DataprocJobSchedulingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1446,7 +1484,7 @@ export class DataprocJobSchedulingOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobScheduling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxFailuresPerHour) {
       hasAnyValues = true;
@@ -1461,10 +1499,12 @@ export class DataprocJobSchedulingOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobScheduling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxFailuresPerHour = undefined;
       this._maxFailuresTotal = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxFailuresPerHour = value.maxFailuresPerHour;
       this._maxFailuresTotal = value.maxFailuresTotal;
     }
@@ -1516,6 +1556,8 @@ export function dataprocJobSparkConfigLoggingConfigToTerraform(struct?: Dataproc
 }
 
 export class DataprocJobSparkConfigLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1526,7 +1568,7 @@ export class DataprocJobSparkConfigLoggingConfigOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DataprocJobSparkConfigLoggingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._driverLogLevels) {
       hasAnyValues = true;
@@ -1537,9 +1579,11 @@ export class DataprocJobSparkConfigLoggingConfigOutputReference extends cdktf.Co
 
   public set internalValue(value: DataprocJobSparkConfigLoggingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._driverLogLevels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._driverLogLevels = value.driverLogLevels;
     }
   }
@@ -1627,6 +1671,8 @@ export function dataprocJobSparkConfigToTerraform(struct?: DataprocJobSparkConfi
 }
 
 export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1637,7 +1683,7 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobSparkConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._archiveUris) {
       hasAnyValues = true;
@@ -1667,7 +1713,7 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig) {
+    if (this._loggingConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1676,6 +1722,7 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobSparkConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._archiveUris = undefined;
       this._args = undefined;
       this._fileUris = undefined;
@@ -1686,6 +1733,7 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
       this._loggingConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._archiveUris = value.archiveUris;
       this._args = value.args;
       this._fileUris = value.fileUris;
@@ -1846,6 +1894,8 @@ export function dataprocJobSparksqlConfigLoggingConfigToTerraform(struct?: Datap
 }
 
 export class DataprocJobSparksqlConfigLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1856,7 +1906,7 @@ export class DataprocJobSparksqlConfigLoggingConfigOutputReference extends cdktf
   }
 
   public get internalValue(): DataprocJobSparksqlConfigLoggingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._driverLogLevels) {
       hasAnyValues = true;
@@ -1867,9 +1917,11 @@ export class DataprocJobSparksqlConfigLoggingConfigOutputReference extends cdktf
 
   public set internalValue(value: DataprocJobSparksqlConfigLoggingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._driverLogLevels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._driverLogLevels = value.driverLogLevels;
     }
   }
@@ -1943,6 +1995,8 @@ export function dataprocJobSparksqlConfigToTerraform(struct?: DataprocJobSparksq
 }
 
 export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1953,7 +2007,7 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): DataprocJobSparksqlConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._jarFileUris) {
       hasAnyValues = true;
@@ -1975,7 +2029,7 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._loggingConfig) {
+    if (this._loggingConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1984,6 +2038,7 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: DataprocJobSparksqlConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._jarFileUris = undefined;
       this._properties = undefined;
       this._queryFileUri = undefined;
@@ -1992,6 +2047,7 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
       this._loggingConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._jarFileUris = value.jarFileUris;
       this._properties = value.properties;
       this._queryFileUri = value.queryFileUri;
@@ -2122,6 +2178,8 @@ export function dataprocJobTimeoutsToTerraform(struct?: DataprocJobTimeoutsOutpu
 }
 
 export class DataprocJobTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2132,7 +2190,7 @@ export class DataprocJobTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataprocJobTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2147,10 +2205,12 @@ export class DataprocJobTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataprocJobTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

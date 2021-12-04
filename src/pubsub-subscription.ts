@@ -171,6 +171,8 @@ export function pubsubSubscriptionDeadLetterPolicyToTerraform(struct?: PubsubSub
 }
 
 export class PubsubSubscriptionDeadLetterPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -181,7 +183,7 @@ export class PubsubSubscriptionDeadLetterPolicyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): PubsubSubscriptionDeadLetterPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._deadLetterTopic) {
       hasAnyValues = true;
@@ -196,10 +198,12 @@ export class PubsubSubscriptionDeadLetterPolicyOutputReference extends cdktf.Com
 
   public set internalValue(value: PubsubSubscriptionDeadLetterPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._deadLetterTopic = undefined;
       this._maxDeliveryAttempts = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._deadLetterTopic = value.deadLetterTopic;
       this._maxDeliveryAttempts = value.maxDeliveryAttempts;
     }
@@ -261,6 +265,8 @@ export function pubsubSubscriptionExpirationPolicyToTerraform(struct?: PubsubSub
 }
 
 export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -271,7 +277,7 @@ export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): PubsubSubscriptionExpirationPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ttl) {
       hasAnyValues = true;
@@ -282,9 +288,11 @@ export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.Com
 
   public set internalValue(value: PubsubSubscriptionExpirationPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ttl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ttl = value.ttl;
     }
   }
@@ -337,6 +345,8 @@ export function pubsubSubscriptionPushConfigOidcTokenToTerraform(struct?: Pubsub
 }
 
 export class PubsubSubscriptionPushConfigOidcTokenOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -347,7 +357,7 @@ export class PubsubSubscriptionPushConfigOidcTokenOutputReference extends cdktf.
   }
 
   public get internalValue(): PubsubSubscriptionPushConfigOidcToken | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._audience) {
       hasAnyValues = true;
@@ -362,10 +372,12 @@ export class PubsubSubscriptionPushConfigOidcTokenOutputReference extends cdktf.
 
   public set internalValue(value: PubsubSubscriptionPushConfigOidcToken | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._audience = undefined;
       this._serviceAccountEmail = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._audience = value.audience;
       this._serviceAccountEmail = value.serviceAccountEmail;
     }
@@ -458,6 +470,8 @@ export function pubsubSubscriptionPushConfigToTerraform(struct?: PubsubSubscript
 }
 
 export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -468,7 +482,7 @@ export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): PubsubSubscriptionPushConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._attributes) {
       hasAnyValues = true;
@@ -478,7 +492,7 @@ export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.pushEndpoint = this._pushEndpoint;
     }
-    if (this._oidcToken) {
+    if (this._oidcToken?.internalValue) {
       hasAnyValues = true;
       internalValueResult.oidcToken = this._oidcToken?.internalValue;
     }
@@ -487,11 +501,13 @@ export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: PubsubSubscriptionPushConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._attributes = undefined;
       this._pushEndpoint = undefined;
       this._oidcToken.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._attributes = value.attributes;
       this._pushEndpoint = value.pushEndpoint;
       this._oidcToken.internalValue = value.oidcToken;
@@ -573,6 +589,8 @@ export function pubsubSubscriptionRetryPolicyToTerraform(struct?: PubsubSubscrip
 }
 
 export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -583,7 +601,7 @@ export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): PubsubSubscriptionRetryPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maximumBackoff) {
       hasAnyValues = true;
@@ -598,10 +616,12 @@ export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: PubsubSubscriptionRetryPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maximumBackoff = undefined;
       this._minimumBackoff = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maximumBackoff = value.maximumBackoff;
       this._minimumBackoff = value.minimumBackoff;
     }
@@ -667,6 +687,8 @@ export function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptio
 }
 
 export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -677,7 +699,7 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): PubsubSubscriptionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -696,11 +718,13 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: PubsubSubscriptionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

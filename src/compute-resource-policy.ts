@@ -98,6 +98,8 @@ export function computeResourcePolicyGroupPlacementPolicyToTerraform(struct?: Co
 }
 
 export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -108,7 +110,7 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
   }
 
   public get internalValue(): ComputeResourcePolicyGroupPlacementPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._availabilityDomainCount) {
       hasAnyValues = true;
@@ -127,11 +129,13 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
 
   public set internalValue(value: ComputeResourcePolicyGroupPlacementPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._availabilityDomainCount = undefined;
       this._collocation = undefined;
       this._vmCount = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._availabilityDomainCount = value.availabilityDomainCount;
       this._collocation = value.collocation;
       this._vmCount = value.vmCount;
@@ -206,6 +210,8 @@ export function computeResourcePolicyInstanceSchedulePolicyVmStartScheduleToTerr
 }
 
 export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -216,7 +222,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputRef
   }
 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._schedule) {
       hasAnyValues = true;
@@ -227,9 +233,11 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputRef
 
   public set internalValue(value: ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._schedule = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._schedule = value.schedule;
     }
   }
@@ -267,6 +275,8 @@ export function computeResourcePolicyInstanceSchedulePolicyVmStopScheduleToTerra
 }
 
 export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -277,7 +287,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputRefe
   }
 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._schedule) {
       hasAnyValues = true;
@@ -288,9 +298,11 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputRefe
 
   public set internalValue(value: ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._schedule = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._schedule = value.schedule;
     }
   }
@@ -357,6 +369,8 @@ export function computeResourcePolicyInstanceSchedulePolicyToTerraform(struct?: 
 }
 
 export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -367,7 +381,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   }
 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._expirationTime) {
       hasAnyValues = true;
@@ -381,11 +395,11 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
       hasAnyValues = true;
       internalValueResult.timeZone = this._timeZone;
     }
-    if (this._vmStartSchedule) {
+    if (this._vmStartSchedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.vmStartSchedule = this._vmStartSchedule?.internalValue;
     }
-    if (this._vmStopSchedule) {
+    if (this._vmStopSchedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.vmStopSchedule = this._vmStopSchedule?.internalValue;
     }
@@ -394,6 +408,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
 
   public set internalValue(value: ComputeResourcePolicyInstanceSchedulePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._expirationTime = undefined;
       this._startTime = undefined;
       this._timeZone = undefined;
@@ -401,6 +416,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
       this._vmStopSchedule.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._expirationTime = value.expirationTime;
       this._startTime = value.startTime;
       this._timeZone = value.timeZone;
@@ -514,6 +530,8 @@ export function computeResourcePolicySnapshotSchedulePolicyRetentionPolicyToTerr
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -524,7 +542,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxRetentionDays) {
       hasAnyValues = true;
@@ -539,10 +557,12 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxRetentionDays = undefined;
       this._onSourceDiskDelete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxRetentionDays = value.maxRetentionDays;
       this._onSourceDiskDelete = value.onSourceDiskDelete;
     }
@@ -606,6 +626,8 @@ export function computeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -616,7 +638,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._daysInCycle) {
       hasAnyValues = true;
@@ -631,10 +653,12 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._daysInCycle = undefined;
       this._startTime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._daysInCycle = value.daysInCycle;
       this._startTime = value.startTime;
     }
@@ -696,6 +720,8 @@ export function computeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedul
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -706,7 +732,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hoursInCycle) {
       hasAnyValues = true;
@@ -721,10 +747,12 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hoursInCycle = undefined;
       this._startTime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hoursInCycle = value.hoursInCycle;
       this._startTime = value.startTime;
     }
@@ -803,6 +831,8 @@ export function computeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedul
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -813,7 +843,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOu
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dayOfWeeks) {
       hasAnyValues = true;
@@ -824,9 +854,11 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOu
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dayOfWeeks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dayOfWeeks = value.dayOfWeeks;
     }
   }
@@ -879,6 +911,8 @@ export function computeResourcePolicySnapshotSchedulePolicyScheduleToTerraform(s
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -889,17 +923,17 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dailySchedule) {
+    if (this._dailySchedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dailySchedule = this._dailySchedule?.internalValue;
     }
-    if (this._hourlySchedule) {
+    if (this._hourlySchedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hourlySchedule = this._hourlySchedule?.internalValue;
     }
-    if (this._weeklySchedule) {
+    if (this._weeklySchedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.weeklySchedule = this._weeklySchedule?.internalValue;
     }
@@ -908,11 +942,13 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicySchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dailySchedule.internalValue = undefined;
       this._hourlySchedule.internalValue = undefined;
       this._weeklySchedule.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dailySchedule.internalValue = value.dailySchedule;
       this._hourlySchedule.internalValue = value.hourlySchedule;
       this._weeklySchedule.internalValue = value.weeklySchedule;
@@ -1002,6 +1038,8 @@ export function computeResourcePolicySnapshotSchedulePolicySnapshotPropertiesToT
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1012,7 +1050,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._guestFlush) {
       hasAnyValues = true;
@@ -1031,11 +1069,13 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._guestFlush = undefined;
       this._labels = undefined;
       this._storageLocations = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._guestFlush = value.guestFlush;
       this._labels = value.labels;
       this._storageLocations = value.storageLocations;
@@ -1125,6 +1165,8 @@ export function computeResourcePolicySnapshotSchedulePolicyToTerraform(struct?: 
 }
 
 export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1135,17 +1177,17 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._retentionPolicy) {
+    if (this._retentionPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
     }
-    if (this._schedule) {
+    if (this._schedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule?.internalValue;
     }
-    if (this._snapshotProperties) {
+    if (this._snapshotProperties?.internalValue) {
       hasAnyValues = true;
       internalValueResult.snapshotProperties = this._snapshotProperties?.internalValue;
     }
@@ -1154,11 +1196,13 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
 
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._retentionPolicy.internalValue = undefined;
       this._schedule.internalValue = undefined;
       this._snapshotProperties.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._retentionPolicy.internalValue = value.retentionPolicy;
       this._schedule.internalValue = value.schedule;
       this._snapshotProperties.internalValue = value.snapshotProperties;
@@ -1233,6 +1277,8 @@ export function computeResourcePolicyTimeoutsToTerraform(struct?: ComputeResourc
 }
 
 export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1243,7 +1289,7 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): ComputeResourcePolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1258,10 +1304,12 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: ComputeResourcePolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

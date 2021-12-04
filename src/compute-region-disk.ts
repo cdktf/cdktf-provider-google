@@ -131,6 +131,8 @@ export function computeRegionDiskDiskEncryptionKeyToTerraform(struct?: ComputeRe
 }
 
 export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -141,7 +143,7 @@ export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputeRegionDiskDiskEncryptionKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._rawKey) {
       hasAnyValues = true;
@@ -152,9 +154,11 @@ export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputeRegionDiskDiskEncryptionKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._rawKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._rawKey = value.rawKey;
     }
   }
@@ -196,6 +200,8 @@ export function computeRegionDiskSourceSnapshotEncryptionKeyToTerraform(struct?:
 }
 
 export class ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -206,7 +212,7 @@ export class ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference extends
   }
 
   public get internalValue(): ComputeRegionDiskSourceSnapshotEncryptionKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._rawKey) {
       hasAnyValues = true;
@@ -217,9 +223,11 @@ export class ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference extends
 
   public set internalValue(value: ComputeRegionDiskSourceSnapshotEncryptionKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._rawKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._rawKey = value.rawKey;
     }
   }
@@ -268,6 +276,8 @@ export function computeRegionDiskTimeoutsToTerraform(struct?: ComputeRegionDiskT
 }
 
 export class ComputeRegionDiskTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -278,7 +288,7 @@ export class ComputeRegionDiskTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ComputeRegionDiskTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -297,11 +307,13 @@ export class ComputeRegionDiskTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ComputeRegionDiskTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

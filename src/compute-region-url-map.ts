@@ -162,6 +162,8 @@ export function computeRegionUrlMapDefaultUrlRedirectToTerraform(struct?: Comput
 }
 
 export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -172,7 +174,7 @@ export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.
   }
 
   public get internalValue(): ComputeRegionUrlMapDefaultUrlRedirect | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRedirect) {
       hasAnyValues = true;
@@ -203,6 +205,7 @@ export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.
 
   public set internalValue(value: ComputeRegionUrlMapDefaultUrlRedirect | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRedirect = undefined;
       this._httpsRedirect = undefined;
       this._pathRedirect = undefined;
@@ -211,6 +214,7 @@ export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.
       this._stripQuery = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRedirect = value.hostRedirect;
       this._httpsRedirect = value.httpsRedirect;
       this._pathRedirect = value.pathRedirect;
@@ -433,6 +437,8 @@ export function computeRegionUrlMapPathMatcherDefaultUrlRedirectToTerraform(stru
 }
 
 export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -443,7 +449,7 @@ export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference ext
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherDefaultUrlRedirect | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRedirect) {
       hasAnyValues = true;
@@ -474,6 +480,7 @@ export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference ext
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherDefaultUrlRedirect | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRedirect = undefined;
       this._httpsRedirect = undefined;
       this._pathRedirect = undefined;
@@ -482,6 +489,7 @@ export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference ext
       this._stripQuery = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRedirect = value.hostRedirect;
       this._httpsRedirect = value.httpsRedirect;
       this._pathRedirect = value.pathRedirect;
@@ -659,6 +667,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTer
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -669,7 +679,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputRe
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowCredentials) {
       hasAnyValues = true;
@@ -708,6 +718,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputRe
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowCredentials = undefined;
       this._allowHeaders = undefined;
       this._allowMethods = undefined;
@@ -718,6 +729,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputRe
       this._maxAge = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowCredentials = value.allowCredentials;
       this._allowHeaders = value.allowHeaders;
       this._allowMethods = value.allowMethods;
@@ -884,6 +896,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionP
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -894,7 +908,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._httpStatus) {
       hasAnyValues = true;
@@ -909,10 +923,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._httpStatus = undefined;
       this._percentage = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._httpStatus = value.httpStatus;
       this._percentage = value.percentage;
     }
@@ -974,6 +990,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionP
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -984,7 +1002,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -999,10 +1017,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -1066,6 +1086,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionP
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1076,13 +1098,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._percentage) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay) {
+    if (this._fixedDelay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -1091,10 +1113,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._percentage = undefined;
       this._fixedDelay.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._percentage = value.percentage;
       this._fixedDelay.internalValue = value.fixedDelay;
     }
@@ -1153,6 +1177,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionP
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1163,13 +1189,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort) {
+    if (this._abort?.internalValue) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay) {
+    if (this._delay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -1178,10 +1204,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._abort.internalValue = undefined;
       this._delay.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._abort.internalValue = value.abort;
       this._delay.internalValue = value.delay;
     }
@@ -1239,6 +1267,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPo
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1249,7 +1279,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolic
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._backendService) {
       hasAnyValues = true;
@@ -1260,9 +1290,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolic
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._backendService = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._backendService = value.backendService;
     }
   }
@@ -1310,6 +1342,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerT
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1320,7 +1354,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryT
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -1335,10 +1369,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryT
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -1428,6 +1464,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTe
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1438,7 +1476,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputR
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._numRetries) {
       hasAnyValues = true;
@@ -1448,7 +1486,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputR
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout) {
+    if (this._perTryTimeout?.internalValue) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -1457,11 +1495,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputR
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._numRetries = undefined;
       this._retryConditions = undefined;
       this._perTryTimeout.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._numRetries = value.numRetries;
       this._retryConditions = value.retryConditions;
       this._perTryTimeout.internalValue = value.perTryTimeout;
@@ -1546,6 +1586,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraf
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1556,7 +1598,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputRefer
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -1571,10 +1613,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputRefer
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -1640,6 +1684,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTer
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1650,7 +1696,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputRe
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRewrite) {
       hasAnyValues = true;
@@ -1665,10 +1711,12 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputRe
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRewrite = undefined;
       this._pathPrefixRewrite = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRewrite = value.hostRewrite;
       this._pathPrefixRewrite = value.pathPrefixRewrite;
     }
@@ -1819,6 +1867,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackend
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1829,7 +1879,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._requestHeadersToRemove) {
       hasAnyValues = true;
@@ -1852,12 +1902,14 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._requestHeadersToRemove = undefined;
       this._responseHeadersToRemove = undefined;
       this._requestHeadersToAdd = undefined;
       this._responseHeadersToAdd = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeadersToRemove = value.requestHeadersToRemove;
       this._responseHeadersToRemove = value.responseHeadersToRemove;
       this._requestHeadersToAdd = value.requestHeadersToAdd;
@@ -2033,6 +2085,8 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionToTerraform(str
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2043,29 +2097,29 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy) {
+    if (this._corsPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy) {
+    if (this._faultInjectionPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy) {
+    if (this._requestMirrorPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy) {
+    if (this._retryPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout) {
+    if (this._timeout?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite) {
+    if (this._urlRewrite?.internalValue) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
@@ -2078,6 +2132,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._corsPolicy.internalValue = undefined;
       this._faultInjectionPolicy.internalValue = undefined;
       this._requestMirrorPolicy.internalValue = undefined;
@@ -2087,6 +2142,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
       this._weightedBackendServices = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._corsPolicy.internalValue = value.corsPolicy;
       this._faultInjectionPolicy.internalValue = value.faultInjectionPolicy;
       this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
@@ -2295,6 +2351,8 @@ export function computeRegionUrlMapPathMatcherPathRuleUrlRedirectToTerraform(str
 }
 
 export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2305,7 +2363,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference ex
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRedirect) {
       hasAnyValues = true;
@@ -2336,6 +2394,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference ex
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRedirect = undefined;
       this._httpsRedirect = undefined;
       this._pathRedirect = undefined;
@@ -2344,6 +2403,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference ex
       this._stripQuery = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRedirect = value.hostRedirect;
       this._httpsRedirect = value.httpsRedirect;
       this._pathRedirect = value.pathRedirect;
@@ -2608,6 +2668,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesHeaderActionToTerraform(
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2618,7 +2680,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._requestHeadersToRemove) {
       hasAnyValues = true;
@@ -2641,12 +2703,14 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._requestHeadersToRemove = undefined;
       this._responseHeadersToRemove = undefined;
       this._requestHeadersToAdd = undefined;
       this._responseHeadersToAdd = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeadersToRemove = value.requestHeadersToRemove;
       this._responseHeadersToRemove = value.responseHeadersToRemove;
       this._requestHeadersToAdd = value.requestHeadersToAdd;
@@ -2747,6 +2811,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesR
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2757,7 +2823,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRang
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._rangeEnd) {
       hasAnyValues = true;
@@ -2772,10 +2838,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRang
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._rangeEnd = undefined;
       this._rangeStart = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._rangeEnd = value.rangeEnd;
       this._rangeStart = value.rangeStart;
     }
@@ -3149,6 +3217,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToT
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3159,7 +3229,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutput
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowCredentials) {
       hasAnyValues = true;
@@ -3198,6 +3268,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutput
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowCredentials = undefined;
       this._allowHeaders = undefined;
       this._allowMethods = undefined;
@@ -3208,6 +3279,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutput
       this._maxAge = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowCredentials = value.allowCredentials;
       this._allowHeaders = value.allowHeaders;
       this._allowMethods = value.allowMethods;
@@ -3377,6 +3449,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectio
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3387,7 +3461,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._httpStatus) {
       hasAnyValues = true;
@@ -3402,10 +3476,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._httpStatus = undefined;
       this._percentage = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._httpStatus = value.httpStatus;
       this._percentage = value.percentage;
     }
@@ -3473,6 +3549,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectio
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3483,7 +3561,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -3498,10 +3576,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -3565,6 +3645,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectio
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3575,13 +3657,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._percentage) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay) {
+    if (this._fixedDelay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -3590,10 +3672,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._percentage = undefined;
       this._fixedDelay.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._percentage = value.percentage;
       this._fixedDelay.internalValue = value.fixedDelay;
     }
@@ -3658,6 +3742,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectio
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3668,13 +3754,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort) {
+    if (this._abort?.internalValue) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay) {
+    if (this._delay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -3683,10 +3769,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._abort.internalValue = undefined;
       this._delay.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._abort.internalValue = value.abort;
       this._delay.internalValue = value.delay;
     }
@@ -3744,6 +3832,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirror
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3754,7 +3844,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPol
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._backendService) {
       hasAnyValues = true;
@@ -3765,9 +3855,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPol
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._backendService = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._backendService = value.backendService;
     }
   }
@@ -3815,6 +3907,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPe
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3825,7 +3919,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTr
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -3840,10 +3934,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTr
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -3933,6 +4029,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyTo
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3943,7 +4041,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutpu
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._numRetries) {
       hasAnyValues = true;
@@ -3953,7 +4051,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutpu
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout) {
+    if (this._perTryTimeout?.internalValue) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -3962,11 +4060,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutpu
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._numRetries = undefined;
       this._retryConditions = undefined;
       this._perTryTimeout.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._numRetries = value.numRetries;
       this._retryConditions = value.retryConditions;
       this._perTryTimeout.internalValue = value.perTryTimeout;
@@ -4048,6 +4148,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerr
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4058,7 +4160,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputRef
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nanos) {
       hasAnyValues = true;
@@ -4073,10 +4175,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputRef
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nanos = value.nanos;
       this._seconds = value.seconds;
     }
@@ -4142,6 +4246,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToT
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4152,7 +4258,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutput
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRewrite) {
       hasAnyValues = true;
@@ -4167,10 +4273,12 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutput
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRewrite = undefined;
       this._pathPrefixRewrite = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRewrite = value.hostRewrite;
       this._pathPrefixRewrite = value.pathPrefixRewrite;
     }
@@ -4321,6 +4429,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBacke
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4331,7 +4441,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._requestHeadersToRemove) {
       hasAnyValues = true;
@@ -4354,12 +4464,14 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._requestHeadersToRemove = undefined;
       this._responseHeadersToRemove = undefined;
       this._requestHeadersToAdd = undefined;
       this._responseHeadersToAdd = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeadersToRemove = value.requestHeadersToRemove;
       this._responseHeadersToRemove = value.responseHeadersToRemove;
       this._requestHeadersToAdd = value.requestHeadersToAdd;
@@ -4535,6 +4647,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionToTerraform(s
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4545,29 +4659,29 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy) {
+    if (this._corsPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy) {
+    if (this._faultInjectionPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy) {
+    if (this._requestMirrorPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy) {
+    if (this._retryPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout) {
+    if (this._timeout?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite) {
+    if (this._urlRewrite?.internalValue) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
@@ -4580,6 +4694,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._corsPolicy.internalValue = undefined;
       this._faultInjectionPolicy.internalValue = undefined;
       this._requestMirrorPolicy.internalValue = undefined;
@@ -4589,6 +4704,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
       this._weightedBackendServices = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._corsPolicy.internalValue = value.corsPolicy;
       this._faultInjectionPolicy.internalValue = value.faultInjectionPolicy;
       this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
@@ -4796,6 +4912,8 @@ export function computeRegionUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(s
 }
 
 export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4806,7 +4924,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference 
   }
 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostRedirect) {
       hasAnyValues = true;
@@ -4837,6 +4955,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference 
 
   public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostRedirect = undefined;
       this._httpsRedirect = undefined;
       this._pathRedirect = undefined;
@@ -4845,6 +4964,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference 
       this._stripQuery = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostRedirect = value.hostRedirect;
       this._httpsRedirect = value.httpsRedirect;
       this._pathRedirect = value.pathRedirect;
@@ -5148,6 +5268,8 @@ export function computeRegionUrlMapTimeoutsToTerraform(struct?: ComputeRegionUrl
 }
 
 export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -5158,7 +5280,7 @@ export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ComputeRegionUrlMapTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -5177,11 +5299,13 @@ export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ComputeRegionUrlMapTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

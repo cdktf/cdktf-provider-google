@@ -100,6 +100,8 @@ export function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?:
 }
 
 export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -110,7 +112,7 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   }
 
   public get internalValue(): MonitoringNotificationChannelSensitiveLabels | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._authToken) {
       hasAnyValues = true;
@@ -129,11 +131,13 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
 
   public set internalValue(value: MonitoringNotificationChannelSensitiveLabels | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._authToken = undefined;
       this._password = undefined;
       this._serviceKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._authToken = value.authToken;
       this._password = value.password;
       this._serviceKey = value.serviceKey;
@@ -216,6 +220,8 @@ export function monitoringNotificationChannelTimeoutsToTerraform(struct?: Monito
 }
 
 export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -226,7 +232,7 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   }
 
   public get internalValue(): MonitoringNotificationChannelTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -245,11 +251,13 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
 
   public set internalValue(value: MonitoringNotificationChannelTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

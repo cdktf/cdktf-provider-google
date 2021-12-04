@@ -87,6 +87,8 @@ export function dataCatalogTagTemplateFieldsTypeEnumTypeToTerraform(struct?: Dat
 }
 
 export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -97,7 +99,7 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
   }
 
   public get internalValue(): DataCatalogTagTemplateFieldsTypeEnumType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedValues) {
       hasAnyValues = true;
@@ -108,9 +110,11 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
 
   public set internalValue(value: DataCatalogTagTemplateFieldsTypeEnumType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedValues = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedValues = value.allowedValues;
     }
   }
@@ -157,6 +161,8 @@ export function dataCatalogTagTemplateFieldsTypeToTerraform(struct?: DataCatalog
 }
 
 export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -167,13 +173,13 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): DataCatalogTagTemplateFieldsType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._primitiveType) {
       hasAnyValues = true;
       internalValueResult.primitiveType = this._primitiveType;
     }
-    if (this._enumType) {
+    if (this._enumType?.internalValue) {
       hasAnyValues = true;
       internalValueResult.enumType = this._enumType?.internalValue;
     }
@@ -182,10 +188,12 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
 
   public set internalValue(value: DataCatalogTagTemplateFieldsType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._primitiveType = undefined;
       this._enumType.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._primitiveType = value.primitiveType;
       this._enumType.internalValue = value.enumType;
     }
@@ -305,6 +313,8 @@ export function dataCatalogTagTemplateTimeoutsToTerraform(struct?: DataCatalogTa
 }
 
 export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -315,7 +325,7 @@ export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): DataCatalogTagTemplateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -334,11 +344,13 @@ export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.Complex
 
   public set internalValue(value: DataCatalogTagTemplateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

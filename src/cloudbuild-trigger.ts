@@ -156,6 +156,8 @@ export function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: Cloud
 }
 
 export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -166,7 +168,7 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
   }
 
   public get internalValue(): CloudbuildTriggerBuildArtifactsObjects | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._location) {
       hasAnyValues = true;
@@ -181,10 +183,12 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
 
   public set internalValue(value: CloudbuildTriggerBuildArtifactsObjects | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._location = undefined;
       this._paths = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._location = value.location;
       this._paths = value.paths;
     }
@@ -255,6 +259,8 @@ export function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTr
 }
 
 export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -265,13 +271,13 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): CloudbuildTriggerBuildArtifacts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._images) {
       hasAnyValues = true;
       internalValueResult.images = this._images;
     }
-    if (this._objects) {
+    if (this._objects?.internalValue) {
       hasAnyValues = true;
       internalValueResult.objects = this._objects?.internalValue;
     }
@@ -280,10 +286,12 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
 
   public set internalValue(value: CloudbuildTriggerBuildArtifacts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._images = undefined;
       this._objects.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._images = value.images;
       this._objects.internalValue = value.objects;
     }
@@ -467,6 +475,8 @@ export function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTrig
 }
 
 export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -477,7 +487,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CloudbuildTriggerBuildOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._diskSizeGb) {
       hasAnyValues = true;
@@ -532,6 +542,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CloudbuildTriggerBuildOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._diskSizeGb = undefined;
       this._dynamicSubstitutions = undefined;
       this._env = undefined;
@@ -546,6 +557,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
       this._volumes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._diskSizeGb = value.diskSizeGb;
       this._dynamicSubstitutions = value.dynamicSubstitutions;
       this._env = value.env;
@@ -859,6 +871,8 @@ export function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: Cloud
 }
 
 export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -869,7 +883,7 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
   }
 
   public get internalValue(): CloudbuildTriggerBuildSourceRepoSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._branchName) {
       hasAnyValues = true;
@@ -908,6 +922,7 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
 
   public set internalValue(value: CloudbuildTriggerBuildSourceRepoSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._branchName = undefined;
       this._commitSha = undefined;
       this._dir = undefined;
@@ -918,6 +933,7 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
       this._tagName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._branchName = value.branchName;
       this._commitSha = value.commitSha;
       this._dir = value.dir;
@@ -1091,6 +1107,8 @@ export function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: Cl
 }
 
 export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1101,7 +1119,7 @@ export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cd
   }
 
   public get internalValue(): CloudbuildTriggerBuildSourceStorageSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucket) {
       hasAnyValues = true;
@@ -1120,11 +1138,13 @@ export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cd
 
   public set internalValue(value: CloudbuildTriggerBuildSourceStorageSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucket = undefined;
       this._generation = undefined;
       this._object = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucket = value.bucket;
       this._generation = value.generation;
       this._object = value.object;
@@ -1200,6 +1220,8 @@ export function cloudbuildTriggerBuildSourceToTerraform(struct?: CloudbuildTrigg
 }
 
 export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1210,13 +1232,13 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): CloudbuildTriggerBuildSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._repoSource) {
+    if (this._repoSource?.internalValue) {
       hasAnyValues = true;
       internalValueResult.repoSource = this._repoSource?.internalValue;
     }
-    if (this._storageSource) {
+    if (this._storageSource?.internalValue) {
       hasAnyValues = true;
       internalValueResult.storageSource = this._storageSource?.internalValue;
     }
@@ -1225,10 +1247,12 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: CloudbuildTriggerBuildSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._repoSource.internalValue = undefined;
       this._storageSource.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._repoSource.internalValue = value.repoSource;
       this._storageSource.internalValue = value.storageSource;
     }
@@ -1537,6 +1561,8 @@ export function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuil
 }
 
 export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1547,7 +1573,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): CloudbuildTriggerBuild | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._images) {
       hasAnyValues = true;
@@ -1573,11 +1599,11 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout;
     }
-    if (this._artifacts) {
+    if (this._artifacts?.internalValue) {
       hasAnyValues = true;
       internalValueResult.artifacts = this._artifacts?.internalValue;
     }
-    if (this._options) {
+    if (this._options?.internalValue) {
       hasAnyValues = true;
       internalValueResult.options = this._options?.internalValue;
     }
@@ -1585,7 +1611,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.secret = this._secret;
     }
-    if (this._source) {
+    if (this._source?.internalValue) {
       hasAnyValues = true;
       internalValueResult.source = this._source?.internalValue;
     }
@@ -1598,6 +1624,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: CloudbuildTriggerBuild | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._images = undefined;
       this._logsBucket = undefined;
       this._queueTtl = undefined;
@@ -1611,6 +1638,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       this._step = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._images = value.images;
       this._logsBucket = value.logsBucket;
       this._queueTtl = value.queueTtl;
@@ -1835,6 +1863,8 @@ export function cloudbuildTriggerGithubPullRequestToTerraform(struct?: Cloudbuil
 }
 
 export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1845,7 +1875,7 @@ export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.Com
   }
 
   public get internalValue(): CloudbuildTriggerGithubPullRequest | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._branch) {
       hasAnyValues = true;
@@ -1864,11 +1894,13 @@ export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.Com
 
   public set internalValue(value: CloudbuildTriggerGithubPullRequest | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._branch = undefined;
       this._commentControl = undefined;
       this._invertRegex = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._branch = value.branch;
       this._commentControl = value.commentControl;
       this._invertRegex = value.invertRegex;
@@ -1954,6 +1986,8 @@ export function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTrigge
 }
 
 export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1964,7 +1998,7 @@ export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): CloudbuildTriggerGithubPush | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._branch) {
       hasAnyValues = true;
@@ -1983,11 +2017,13 @@ export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: CloudbuildTriggerGithubPush | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._branch = undefined;
       this._invertRegex = undefined;
       this._tag = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._branch = value.branch;
       this._invertRegex = value.invertRegex;
       this._tag = value.tag;
@@ -2085,6 +2121,8 @@ export function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGit
 }
 
 export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2095,7 +2133,7 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CloudbuildTriggerGithub | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -2105,11 +2143,11 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.owner = this._owner;
     }
-    if (this._pullRequest) {
+    if (this._pullRequest?.internalValue) {
       hasAnyValues = true;
       internalValueResult.pullRequest = this._pullRequest?.internalValue;
     }
-    if (this._push) {
+    if (this._push?.internalValue) {
       hasAnyValues = true;
       internalValueResult.push = this._push?.internalValue;
     }
@@ -2118,12 +2156,14 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CloudbuildTriggerGithub | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._owner = undefined;
       this._pullRequest.internalValue = undefined;
       this._push.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._owner = value.owner;
       this._pullRequest.internalValue = value.pullRequest;
@@ -2222,6 +2262,8 @@ export function cloudbuildTriggerPubsubConfigToTerraform(struct?: CloudbuildTrig
 }
 
 export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2232,7 +2274,7 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CloudbuildTriggerPubsubConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._serviceAccountEmail) {
       hasAnyValues = true;
@@ -2247,10 +2289,12 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CloudbuildTriggerPubsubConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._serviceAccountEmail = undefined;
       this._topic = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._serviceAccountEmail = value.serviceAccountEmail;
       this._topic = value.topic;
     }
@@ -2313,6 +2357,8 @@ export function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerT
 }
 
 export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2323,7 +2369,7 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): CloudbuildTriggerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2342,11 +2388,13 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: CloudbuildTriggerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -2470,6 +2518,8 @@ export function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildT
 }
 
 export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2480,7 +2530,7 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): CloudbuildTriggerTriggerTemplate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._branchName) {
       hasAnyValues = true;
@@ -2515,6 +2565,7 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
 
   public set internalValue(value: CloudbuildTriggerTriggerTemplate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._branchName = undefined;
       this._commitSha = undefined;
       this._dir = undefined;
@@ -2524,6 +2575,7 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
       this._tagName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._branchName = value.branchName;
       this._commitSha = value.commitSha;
       this._dir = value.dir;
@@ -2666,6 +2718,8 @@ export function cloudbuildTriggerWebhookConfigToTerraform(struct?: CloudbuildTri
 }
 
 export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2676,7 +2730,7 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): CloudbuildTriggerWebhookConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._secret) {
       hasAnyValues = true;
@@ -2687,9 +2741,11 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
 
   public set internalValue(value: CloudbuildTriggerWebhookConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._secret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._secret = value.secret;
     }
   }

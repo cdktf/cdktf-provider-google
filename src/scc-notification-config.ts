@@ -90,6 +90,8 @@ export function sccNotificationConfigStreamingConfigToTerraform(struct?: SccNoti
 }
 
 export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -100,7 +102,7 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): SccNotificationConfigStreamingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._filter) {
       hasAnyValues = true;
@@ -111,9 +113,11 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
 
   public set internalValue(value: SccNotificationConfigStreamingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._filter = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._filter = value.filter;
     }
   }
@@ -159,6 +163,8 @@ export function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificatio
 }
 
 export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -169,7 +175,7 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): SccNotificationConfigTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -188,11 +194,13 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: SccNotificationConfigTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

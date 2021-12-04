@@ -183,6 +183,8 @@ export function computeRegionInstanceGroupManagerAutoHealingPoliciesToTerraform(
 }
 
 export class ComputeRegionInstanceGroupManagerAutoHealingPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -193,7 +195,7 @@ export class ComputeRegionInstanceGroupManagerAutoHealingPoliciesOutputReference
   }
 
   public get internalValue(): ComputeRegionInstanceGroupManagerAutoHealingPolicies | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._healthCheck) {
       hasAnyValues = true;
@@ -208,10 +210,12 @@ export class ComputeRegionInstanceGroupManagerAutoHealingPoliciesOutputReference
 
   public set internalValue(value: ComputeRegionInstanceGroupManagerAutoHealingPolicies | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._healthCheck = undefined;
       this._initialDelaySec = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._healthCheck = value.healthCheck;
       this._initialDelaySec = value.initialDelaySec;
     }
@@ -323,6 +327,8 @@ export function computeRegionInstanceGroupManagerTimeoutsToTerraform(struct?: Co
 }
 
 export class ComputeRegionInstanceGroupManagerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -333,7 +339,7 @@ export class ComputeRegionInstanceGroupManagerTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): ComputeRegionInstanceGroupManagerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -352,11 +358,13 @@ export class ComputeRegionInstanceGroupManagerTimeoutsOutputReference extends cd
 
   public set internalValue(value: ComputeRegionInstanceGroupManagerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -487,6 +495,8 @@ export function computeRegionInstanceGroupManagerUpdatePolicyToTerraform(struct?
 }
 
 export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -497,7 +507,7 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
   }
 
   public get internalValue(): ComputeRegionInstanceGroupManagerUpdatePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instanceRedistributionType) {
       hasAnyValues = true;
@@ -540,6 +550,7 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
 
   public set internalValue(value: ComputeRegionInstanceGroupManagerUpdatePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instanceRedistributionType = undefined;
       this._maxSurgeFixed = undefined;
       this._maxSurgePercent = undefined;
@@ -551,6 +562,7 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instanceRedistributionType = value.instanceRedistributionType;
       this._maxSurgeFixed = value.maxSurgeFixed;
       this._maxSurgePercent = value.maxSurgePercent;
@@ -728,6 +740,8 @@ export function computeRegionInstanceGroupManagerVersionTargetSizeToTerraform(st
 }
 
 export class ComputeRegionInstanceGroupManagerVersionTargetSizeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -738,7 +752,7 @@ export class ComputeRegionInstanceGroupManagerVersionTargetSizeOutputReference e
   }
 
   public get internalValue(): ComputeRegionInstanceGroupManagerVersionTargetSize | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fixed) {
       hasAnyValues = true;
@@ -753,10 +767,12 @@ export class ComputeRegionInstanceGroupManagerVersionTargetSizeOutputReference e
 
   public set internalValue(value: ComputeRegionInstanceGroupManagerVersionTargetSize | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fixed = undefined;
       this._percent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fixed = value.fixed;
       this._percent = value.percent;
     }

@@ -58,6 +58,8 @@ export function healthcareConsentStoreIamBindingConditionToTerraform(struct?: He
 }
 
 export class HealthcareConsentStoreIamBindingConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -68,7 +70,7 @@ export class HealthcareConsentStoreIamBindingConditionOutputReference extends cd
   }
 
   public get internalValue(): HealthcareConsentStoreIamBindingCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -87,11 +89,13 @@ export class HealthcareConsentStoreIamBindingConditionOutputReference extends cd
 
   public set internalValue(value: HealthcareConsentStoreIamBindingCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._title = value.title;

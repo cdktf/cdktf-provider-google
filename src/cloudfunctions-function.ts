@@ -166,6 +166,8 @@ export function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struc
 }
 
 export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -176,7 +178,7 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
   }
 
   public get internalValue(): CloudfunctionsFunctionEventTriggerFailurePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._retry) {
       hasAnyValues = true;
@@ -187,9 +189,11 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
 
   public set internalValue(value: CloudfunctionsFunctionEventTriggerFailurePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._retry = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._retry = value.retry;
     }
   }
@@ -241,6 +245,8 @@ export function cloudfunctionsFunctionEventTriggerToTerraform(struct?: Cloudfunc
 }
 
 export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -251,7 +257,7 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
   }
 
   public get internalValue(): CloudfunctionsFunctionEventTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._eventType) {
       hasAnyValues = true;
@@ -261,7 +267,7 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.resource = this._resource;
     }
-    if (this._failurePolicy) {
+    if (this._failurePolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.failurePolicy = this._failurePolicy?.internalValue;
     }
@@ -270,11 +276,13 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
 
   public set internalValue(value: CloudfunctionsFunctionEventTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._eventType = undefined;
       this._resource = undefined;
       this._failurePolicy.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._eventType = value.eventType;
       this._resource = value.resource;
       this._failurePolicy.internalValue = value.failurePolicy;
@@ -343,6 +351,8 @@ export function cloudfunctionsFunctionSourceRepositoryToTerraform(struct?: Cloud
 }
 
 export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -353,7 +363,7 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
   }
 
   public get internalValue(): CloudfunctionsFunctionSourceRepository | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._url) {
       hasAnyValues = true;
@@ -364,9 +374,11 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
 
   public set internalValue(value: CloudfunctionsFunctionSourceRepository | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._url = value.url;
     }
   }
@@ -417,6 +429,8 @@ export function cloudfunctionsFunctionTimeoutsToTerraform(struct?: Cloudfunction
 }
 
 export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -427,7 +441,7 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): CloudfunctionsFunctionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -450,12 +464,14 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
 
   public set internalValue(value: CloudfunctionsFunctionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

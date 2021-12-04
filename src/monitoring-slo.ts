@@ -95,6 +95,8 @@ export function monitoringSloBasicSliAvailabilityToTerraform(struct?: Monitoring
 }
 
 export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -105,7 +107,7 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): MonitoringSloBasicSliAvailability | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -116,9 +118,11 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
 
   public set internalValue(value: MonitoringSloBasicSliAvailability | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -161,6 +165,8 @@ export function monitoringSloBasicSliLatencyToTerraform(struct?: MonitoringSloBa
 }
 
 export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -171,7 +177,7 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): MonitoringSloBasicSliLatency | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._threshold) {
       hasAnyValues = true;
@@ -182,9 +188,11 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: MonitoringSloBasicSliLatency | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._threshold = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._threshold = value.threshold;
     }
   }
@@ -265,6 +273,8 @@ export function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSliO
 }
 
 export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -275,7 +285,7 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MonitoringSloBasicSli | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._location) {
       hasAnyValues = true;
@@ -289,11 +299,11 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._availability) {
+    if (this._availability?.internalValue) {
       hasAnyValues = true;
       internalValueResult.availability = this._availability?.internalValue;
     }
-    if (this._latency) {
+    if (this._latency?.internalValue) {
       hasAnyValues = true;
       internalValueResult.latency = this._latency?.internalValue;
     }
@@ -302,6 +312,7 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MonitoringSloBasicSli | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._location = undefined;
       this._method = undefined;
       this._version = undefined;
@@ -309,6 +320,7 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
       this._latency.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._location = value.location;
       this._method = value.method;
       this._version = value.version;
@@ -428,6 +440,8 @@ export function monitoringSloRequestBasedSliDistributionCutRangeToTerraform(stru
 }
 
 export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -438,7 +452,7 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
   }
 
   public get internalValue(): MonitoringSloRequestBasedSliDistributionCutRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._max) {
       hasAnyValues = true;
@@ -453,10 +467,12 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
 
   public set internalValue(value: MonitoringSloRequestBasedSliDistributionCutRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._max = undefined;
       this._min = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._max = value.max;
       this._min = value.min;
     }
@@ -525,6 +541,8 @@ export function monitoringSloRequestBasedSliDistributionCutToTerraform(struct?: 
 }
 
 export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -535,13 +553,13 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
   }
 
   public get internalValue(): MonitoringSloRequestBasedSliDistributionCut | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._distributionFilter) {
       hasAnyValues = true;
       internalValueResult.distributionFilter = this._distributionFilter;
     }
-    if (this._range) {
+    if (this._range?.internalValue) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -550,10 +568,12 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
 
   public set internalValue(value: MonitoringSloRequestBasedSliDistributionCut | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._distributionFilter = undefined;
       this._range.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._distributionFilter = value.distributionFilter;
       this._range.internalValue = value.range;
     }
@@ -641,6 +661,8 @@ export function monitoringSloRequestBasedSliGoodTotalRatioToTerraform(struct?: M
 }
 
 export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -651,7 +673,7 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
   }
 
   public get internalValue(): MonitoringSloRequestBasedSliGoodTotalRatio | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._badServiceFilter) {
       hasAnyValues = true;
@@ -670,11 +692,13 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
 
   public set internalValue(value: MonitoringSloRequestBasedSliGoodTotalRatio | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._badServiceFilter = undefined;
       this._goodServiceFilter = undefined;
       this._totalServiceFilter = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._badServiceFilter = value.badServiceFilter;
       this._goodServiceFilter = value.goodServiceFilter;
       this._totalServiceFilter = value.totalServiceFilter;
@@ -756,6 +780,8 @@ export function monitoringSloRequestBasedSliToTerraform(struct?: MonitoringSloRe
 }
 
 export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -766,13 +792,13 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): MonitoringSloRequestBasedSli | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._distributionCut) {
+    if (this._distributionCut?.internalValue) {
       hasAnyValues = true;
       internalValueResult.distributionCut = this._distributionCut?.internalValue;
     }
-    if (this._goodTotalRatio) {
+    if (this._goodTotalRatio?.internalValue) {
       hasAnyValues = true;
       internalValueResult.goodTotalRatio = this._goodTotalRatio?.internalValue;
     }
@@ -781,10 +807,12 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: MonitoringSloRequestBasedSli | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._distributionCut.internalValue = undefined;
       this._goodTotalRatio.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._distributionCut.internalValue = value.distributionCut;
       this._goodTotalRatio.internalValue = value.goodTotalRatio;
     }
@@ -850,6 +878,8 @@ export function monitoringSloTimeoutsToTerraform(struct?: MonitoringSloTimeoutsO
 }
 
 export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -860,7 +890,7 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MonitoringSloTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -879,11 +909,13 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MonitoringSloTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -958,6 +990,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerfo
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -968,7 +1002,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -979,9 +1013,11 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -1024,6 +1060,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerfo
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1034,7 +1072,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._threshold) {
       hasAnyValues = true;
@@ -1045,9 +1083,11 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._threshold = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._threshold = value.threshold;
     }
   }
@@ -1128,6 +1168,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerfo
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1138,7 +1180,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._location) {
       hasAnyValues = true;
@@ -1152,11 +1194,11 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._availability) {
+    if (this._availability?.internalValue) {
       hasAnyValues = true;
       internalValueResult.availability = this._availability?.internalValue;
     }
-    if (this._latency) {
+    if (this._latency?.internalValue) {
       hasAnyValues = true;
       internalValueResult.latency = this._latency?.internalValue;
     }
@@ -1165,6 +1207,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._location = undefined;
       this._method = undefined;
       this._version = undefined;
@@ -1172,6 +1215,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
       this._latency.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._location = value.location;
       this._method = value.method;
       this._version = value.version;
@@ -1291,6 +1335,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDi
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1301,7 +1347,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._max) {
       hasAnyValues = true;
@@ -1316,10 +1362,12 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._max = undefined;
       this._min = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._max = value.max;
       this._min = value.min;
     }
@@ -1388,6 +1436,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDi
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1398,13 +1448,13 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._distributionFilter) {
       hasAnyValues = true;
       internalValueResult.distributionFilter = this._distributionFilter;
     }
-    if (this._range) {
+    if (this._range?.internalValue) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -1413,10 +1463,12 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._distributionFilter = undefined;
       this._range.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._distributionFilter = value.distributionFilter;
       this._range.internalValue = value.range;
     }
@@ -1502,6 +1554,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGo
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1512,7 +1566,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._badServiceFilter) {
       hasAnyValues = true;
@@ -1531,11 +1585,13 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._badServiceFilter = undefined;
       this._goodServiceFilter = undefined;
       this._totalServiceFilter = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._badServiceFilter = value.badServiceFilter;
       this._goodServiceFilter = value.goodServiceFilter;
       this._totalServiceFilter = value.totalServiceFilter;
@@ -1617,6 +1673,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceTo
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1627,13 +1685,13 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._distributionCut) {
+    if (this._distributionCut?.internalValue) {
       hasAnyValues = true;
       internalValueResult.distributionCut = this._distributionCut?.internalValue;
     }
-    if (this._goodTotalRatio) {
+    if (this._goodTotalRatio?.internalValue) {
       hasAnyValues = true;
       internalValueResult.goodTotalRatio = this._goodTotalRatio?.internalValue;
     }
@@ -1642,10 +1700,12 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._distributionCut.internalValue = undefined;
       this._goodTotalRatio.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._distributionCut.internalValue = value.distributionCut;
       this._goodTotalRatio.internalValue = value.goodTotalRatio;
     }
@@ -1718,6 +1778,8 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdToTerraform(s
 }
 
 export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1728,17 +1790,17 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._threshold) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
-    if (this._basicSliPerformance) {
+    if (this._basicSliPerformance?.internalValue) {
       hasAnyValues = true;
       internalValueResult.basicSliPerformance = this._basicSliPerformance?.internalValue;
     }
-    if (this._performance) {
+    if (this._performance?.internalValue) {
       hasAnyValues = true;
       internalValueResult.performance = this._performance?.internalValue;
     }
@@ -1747,11 +1809,13 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
 
   public set internalValue(value: MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._threshold = undefined;
       this._basicSliPerformance.internalValue = undefined;
       this._performance.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._threshold = value.threshold;
       this._basicSliPerformance.internalValue = value.basicSliPerformance;
       this._performance.internalValue = value.performance;
@@ -1837,6 +1901,8 @@ export function monitoringSloWindowsBasedSliMetricMeanInRangeRangeToTerraform(st
 }
 
 export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1847,7 +1913,7 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRangeRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._max) {
       hasAnyValues = true;
@@ -1862,10 +1928,12 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
 
   public set internalValue(value: MonitoringSloWindowsBasedSliMetricMeanInRangeRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._max = undefined;
       this._min = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._max = value.max;
       this._min = value.min;
     }
@@ -1935,6 +2003,8 @@ export function monitoringSloWindowsBasedSliMetricMeanInRangeToTerraform(struct?
 }
 
 export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1945,13 +2015,13 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._timeSeries) {
       hasAnyValues = true;
       internalValueResult.timeSeries = this._timeSeries;
     }
-    if (this._range) {
+    if (this._range?.internalValue) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -1960,10 +2030,12 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
 
   public set internalValue(value: MonitoringSloWindowsBasedSliMetricMeanInRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._timeSeries = undefined;
       this._range.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._timeSeries = value.timeSeries;
       this._range.internalValue = value.range;
     }
@@ -2026,6 +2098,8 @@ export function monitoringSloWindowsBasedSliMetricSumInRangeRangeToTerraform(str
 }
 
 export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2036,7 +2110,7 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRangeRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._max) {
       hasAnyValues = true;
@@ -2051,10 +2125,12 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
 
   public set internalValue(value: MonitoringSloWindowsBasedSliMetricSumInRangeRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._max = undefined;
       this._min = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._max = value.max;
       this._min = value.min;
     }
@@ -2126,6 +2202,8 @@ export function monitoringSloWindowsBasedSliMetricSumInRangeToTerraform(struct?:
 }
 
 export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2136,13 +2214,13 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._timeSeries) {
       hasAnyValues = true;
       internalValueResult.timeSeries = this._timeSeries;
     }
-    if (this._range) {
+    if (this._range?.internalValue) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -2151,10 +2229,12 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
 
   public set internalValue(value: MonitoringSloWindowsBasedSliMetricSumInRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._timeSeries = undefined;
       this._range.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._timeSeries = value.timeSeries;
       this._range.internalValue = value.range;
     }
@@ -2240,6 +2320,8 @@ export function monitoringSloWindowsBasedSliToTerraform(struct?: MonitoringSloWi
 }
 
 export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2250,7 +2332,7 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSli | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._goodBadMetricFilter) {
       hasAnyValues = true;
@@ -2260,15 +2342,15 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.windowPeriod = this._windowPeriod;
     }
-    if (this._goodTotalRatioThreshold) {
+    if (this._goodTotalRatioThreshold?.internalValue) {
       hasAnyValues = true;
       internalValueResult.goodTotalRatioThreshold = this._goodTotalRatioThreshold?.internalValue;
     }
-    if (this._metricMeanInRange) {
+    if (this._metricMeanInRange?.internalValue) {
       hasAnyValues = true;
       internalValueResult.metricMeanInRange = this._metricMeanInRange?.internalValue;
     }
-    if (this._metricSumInRange) {
+    if (this._metricSumInRange?.internalValue) {
       hasAnyValues = true;
       internalValueResult.metricSumInRange = this._metricSumInRange?.internalValue;
     }
@@ -2277,6 +2359,7 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: MonitoringSloWindowsBasedSli | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._goodBadMetricFilter = undefined;
       this._windowPeriod = undefined;
       this._goodTotalRatioThreshold.internalValue = undefined;
@@ -2284,6 +2367,7 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
       this._metricSumInRange.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._goodBadMetricFilter = value.goodBadMetricFilter;
       this._windowPeriod = value.windowPeriod;
       this._goodTotalRatioThreshold.internalValue = value.goodTotalRatioThreshold;
