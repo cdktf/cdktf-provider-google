@@ -89,6 +89,8 @@ export function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: Healt
 }
 
 export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -99,7 +101,7 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
   }
 
   public get internalValue(): HealthcareHl7V2StoreNotificationConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._pubsubTopic) {
       hasAnyValues = true;
@@ -110,9 +112,11 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
 
   public set internalValue(value: HealthcareHl7V2StoreNotificationConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._pubsubTopic = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._pubsubTopic = value.pubsubTopic;
     }
   }
@@ -217,6 +221,8 @@ export function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareH
 }
 
 export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -227,7 +233,7 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): HealthcareHl7V2StoreParserConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowNullHeader) {
       hasAnyValues = true;
@@ -250,12 +256,14 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
 
   public set internalValue(value: HealthcareHl7V2StoreParserConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowNullHeader = undefined;
       this._schema = undefined;
       this._segmentTerminator = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowNullHeader = value.allowNullHeader;
       this._schema = value.schema;
       this._segmentTerminator = value.segmentTerminator;
@@ -355,6 +363,8 @@ export function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2
 }
 
 export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -365,7 +375,7 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): HealthcareHl7V2StoreTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -384,11 +394,13 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: HealthcareHl7V2StoreTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

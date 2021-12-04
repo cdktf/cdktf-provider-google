@@ -135,6 +135,8 @@ export function cloudiotDeviceCredentialsPublicKeyToTerraform(struct?: CloudiotD
 }
 
 export class CloudiotDeviceCredentialsPublicKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -145,7 +147,7 @@ export class CloudiotDeviceCredentialsPublicKeyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): CloudiotDeviceCredentialsPublicKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._format) {
       hasAnyValues = true;
@@ -160,10 +162,12 @@ export class CloudiotDeviceCredentialsPublicKeyOutputReference extends cdktf.Com
 
   public set internalValue(value: CloudiotDeviceCredentialsPublicKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._format = undefined;
       this._key = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._format = value.format;
       this._key = value.key;
     }
@@ -248,6 +252,8 @@ export function cloudiotDeviceGatewayConfigToTerraform(struct?: CloudiotDeviceGa
 }
 
 export class CloudiotDeviceGatewayConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -258,7 +264,7 @@ export class CloudiotDeviceGatewayConfigOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): CloudiotDeviceGatewayConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._gatewayAuthMethod) {
       hasAnyValues = true;
@@ -273,10 +279,12 @@ export class CloudiotDeviceGatewayConfigOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: CloudiotDeviceGatewayConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._gatewayAuthMethod = undefined;
       this._gatewayType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._gatewayAuthMethod = value.gatewayAuthMethod;
       this._gatewayType = value.gatewayType;
     }
@@ -342,6 +350,8 @@ export function cloudiotDeviceTimeoutsToTerraform(struct?: CloudiotDeviceTimeout
 }
 
 export class CloudiotDeviceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -352,7 +362,7 @@ export class CloudiotDeviceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): CloudiotDeviceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -371,11 +381,13 @@ export class CloudiotDeviceTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: CloudiotDeviceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

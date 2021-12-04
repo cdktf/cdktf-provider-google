@@ -86,6 +86,8 @@ export function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputC
 }
 
 export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -96,7 +98,7 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -115,11 +117,13 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -202,6 +206,8 @@ export function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputC
 }
 
 export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -212,13 +218,13 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._outputSchema) {
       hasAnyValues = true;
       internalValueResult.outputSchema = this._outputSchema;
     }
-    if (this._table) {
+    if (this._table?.internalValue) {
       hasAnyValues = true;
       internalValueResult.table = this._table?.internalValue;
     }
@@ -227,10 +233,12 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._outputSchema = undefined;
       this._table.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._outputSchema = value.outputSchema;
       this._table.internalValue = value.table;
     }
@@ -285,6 +293,8 @@ export function dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerra
 }
 
 export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -295,9 +305,9 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputRefe
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._outputConfig) {
+    if (this._outputConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.outputConfig = this._outputConfig?.internalValue;
     }
@@ -306,9 +316,11 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputRefe
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobActionsSaveFindings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._outputConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._outputConfig.internalValue = value.outputConfig;
     }
   }
@@ -379,6 +391,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptio
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -389,7 +403,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsT
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -408,11 +422,13 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsT
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -478,6 +494,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptio
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -488,9 +506,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsO
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._tableReference) {
+    if (this._tableReference?.internalValue) {
       hasAnyValues = true;
       internalValueResult.tableReference = this._tableReference?.internalValue;
     }
@@ -499,9 +517,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsO
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._tableReference.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._tableReference.internalValue = value.tableReference;
     }
   }
@@ -557,6 +577,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageO
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -567,7 +589,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucketName) {
       hasAnyValues = true;
@@ -586,11 +608,13 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucketName = undefined;
       this._excludeRegex = undefined;
       this._includeRegex = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucketName = value.bucketName;
       this._excludeRegex = value.excludeRegex;
       this._includeRegex = value.includeRegex;
@@ -674,6 +698,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageO
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -684,13 +710,13 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._url) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
-    if (this._regexFileSet) {
+    if (this._regexFileSet?.internalValue) {
       hasAnyValues = true;
       internalValueResult.regexFileSet = this._regexFileSet?.internalValue;
     }
@@ -699,10 +725,12 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._url = undefined;
       this._regexFileSet.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._url = value.url;
       this._regexFileSet.internalValue = value.regexFileSet;
     }
@@ -801,6 +829,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageO
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -811,7 +841,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bytesLimitPerFile) {
       hasAnyValues = true;
@@ -833,7 +863,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
       hasAnyValues = true;
       internalValueResult.sampleMethod = this._sampleMethod;
     }
-    if (this._fileSet) {
+    if (this._fileSet?.internalValue) {
       hasAnyValues = true;
       internalValueResult.fileSet = this._fileSet?.internalValue;
     }
@@ -842,6 +872,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bytesLimitPerFile = undefined;
       this._bytesLimitPerFilePercent = undefined;
       this._fileTypes = undefined;
@@ -850,6 +881,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
       this._fileSet.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bytesLimitPerFile = value.bytesLimitPerFile;
       this._bytesLimitPerFilePercent = value.bytesLimitPerFilePercent;
       this._fileTypes = value.fileTypes;
@@ -972,6 +1004,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpti
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -982,7 +1016,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -993,9 +1027,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -1040,6 +1076,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpti
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1050,7 +1088,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._namespaceId) {
       hasAnyValues = true;
@@ -1065,10 +1103,12 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._namespaceId = undefined;
       this._projectId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._namespaceId = value.namespaceId;
       this._projectId = value.projectId;
     }
@@ -1130,6 +1170,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpti
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1140,13 +1182,13 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kind) {
+    if (this._kind?.internalValue) {
       hasAnyValues = true;
       internalValueResult.kind = this._kind?.internalValue;
     }
-    if (this._partitionId) {
+    if (this._partitionId?.internalValue) {
       hasAnyValues = true;
       internalValueResult.partitionId = this._partitionId?.internalValue;
     }
@@ -1155,10 +1197,12 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kind.internalValue = undefined;
       this._partitionId.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kind.internalValue = value.kind;
       this._partitionId.internalValue = value.partitionId;
     }
@@ -1217,6 +1261,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfi
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1227,7 +1273,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTi
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -1238,9 +1284,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTi
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -1301,6 +1349,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfi
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1311,7 +1361,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOu
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableAutoPopulationOfTimespanConfig) {
       hasAnyValues = true;
@@ -1325,7 +1375,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOu
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._timestampField) {
+    if (this._timestampField?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timestampField = this._timestampField?.internalValue;
     }
@@ -1334,12 +1384,14 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOu
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableAutoPopulationOfTimespanConfig = undefined;
       this._endTime = undefined;
       this._startTime = undefined;
       this._timestampField.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableAutoPopulationOfTimespanConfig = value.enableAutoPopulationOfTimespanConfig;
       this._endTime = value.endTime;
       this._startTime = value.startTime;
@@ -1449,6 +1501,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(s
 }
 
 export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1459,21 +1513,21 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bigQueryOptions) {
+    if (this._bigQueryOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.bigQueryOptions = this._bigQueryOptions?.internalValue;
     }
-    if (this._cloudStorageOptions) {
+    if (this._cloudStorageOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudStorageOptions = this._cloudStorageOptions?.internalValue;
     }
-    if (this._datastoreOptions) {
+    if (this._datastoreOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.datastoreOptions = this._datastoreOptions?.internalValue;
     }
-    if (this._timespanConfig) {
+    if (this._timespanConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timespanConfig = this._timespanConfig?.internalValue;
     }
@@ -1482,12 +1536,14 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJobStorageConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bigQueryOptions.internalValue = undefined;
       this._cloudStorageOptions.internalValue = undefined;
       this._datastoreOptions.internalValue = undefined;
       this._timespanConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bigQueryOptions.internalValue = value.bigQueryOptions;
       this._cloudStorageOptions.internalValue = value.cloudStorageOptions;
       this._datastoreOptions.internalValue = value.datastoreOptions;
@@ -1593,6 +1649,8 @@ export function dataLossPreventionJobTriggerInspectJobToTerraform(struct?: DataL
 }
 
 export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1603,7 +1661,7 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJob | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._inspectTemplateName) {
       hasAnyValues = true;
@@ -1613,7 +1671,7 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.actions = this._actions;
     }
-    if (this._storageConfig) {
+    if (this._storageConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.storageConfig = this._storageConfig?.internalValue;
     }
@@ -1622,11 +1680,13 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
 
   public set internalValue(value: DataLossPreventionJobTriggerInspectJob | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._inspectTemplateName = undefined;
       this._actions = undefined;
       this._storageConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._inspectTemplateName = value.inspectTemplateName;
       this._actions = value.actions;
       this._storageConfig.internalValue = value.storageConfig;
@@ -1701,6 +1761,8 @@ export function dataLossPreventionJobTriggerTimeoutsToTerraform(struct?: DataLos
 }
 
 export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1711,7 +1773,7 @@ export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): DataLossPreventionJobTriggerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1730,11 +1792,13 @@ export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: DataLossPreventionJobTriggerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1815,6 +1879,8 @@ export function dataLossPreventionJobTriggerTriggersScheduleToTerraform(struct?:
 }
 
 export class DataLossPreventionJobTriggerTriggersScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1825,7 +1891,7 @@ export class DataLossPreventionJobTriggerTriggersScheduleOutputReference extends
   }
 
   public get internalValue(): DataLossPreventionJobTriggerTriggersSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._recurrencePeriodDuration) {
       hasAnyValues = true;
@@ -1836,9 +1902,11 @@ export class DataLossPreventionJobTriggerTriggersScheduleOutputReference extends
 
   public set internalValue(value: DataLossPreventionJobTriggerTriggersSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._recurrencePeriodDuration = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._recurrencePeriodDuration = value.recurrencePeriodDuration;
     }
   }

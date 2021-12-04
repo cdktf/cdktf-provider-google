@@ -125,6 +125,8 @@ export function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(str
 }
 
 export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -135,7 +137,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
   }
 
   public get internalValue(): DataprocAutoscalingPolicyBasicAlgorithmYarnConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._gracefulDecommissionTimeout) {
       hasAnyValues = true;
@@ -162,6 +164,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
 
   public set internalValue(value: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._gracefulDecommissionTimeout = undefined;
       this._scaleDownFactor = undefined;
       this._scaleDownMinWorkerFraction = undefined;
@@ -169,6 +172,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
       this._scaleUpMinWorkerFraction = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._gracefulDecommissionTimeout = value.gracefulDecommissionTimeout;
       this._scaleDownFactor = value.scaleDownFactor;
       this._scaleDownMinWorkerFraction = value.scaleDownMinWorkerFraction;
@@ -278,6 +282,8 @@ export function dataprocAutoscalingPolicyBasicAlgorithmToTerraform(struct?: Data
 }
 
 export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -288,13 +294,13 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
   }
 
   public get internalValue(): DataprocAutoscalingPolicyBasicAlgorithm | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cooldownPeriod) {
       hasAnyValues = true;
       internalValueResult.cooldownPeriod = this._cooldownPeriod;
     }
-    if (this._yarnConfig) {
+    if (this._yarnConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.yarnConfig = this._yarnConfig?.internalValue;
     }
@@ -303,10 +309,12 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
 
   public set internalValue(value: DataprocAutoscalingPolicyBasicAlgorithm | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cooldownPeriod = undefined;
       this._yarnConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cooldownPeriod = value.cooldownPeriod;
       this._yarnConfig.internalValue = value.yarnConfig;
     }
@@ -390,6 +398,8 @@ export function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct
 }
 
 export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -400,7 +410,7 @@ export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference exten
   }
 
   public get internalValue(): DataprocAutoscalingPolicySecondaryWorkerConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxInstances) {
       hasAnyValues = true;
@@ -419,11 +429,13 @@ export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference exten
 
   public set internalValue(value: DataprocAutoscalingPolicySecondaryWorkerConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxInstances = undefined;
       this._minInstances = undefined;
       this._weight = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxInstances = value.maxInstances;
       this._minInstances = value.minInstances;
       this._weight = value.weight;
@@ -506,6 +518,8 @@ export function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAu
 }
 
 export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -516,7 +530,7 @@ export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): DataprocAutoscalingPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -535,11 +549,13 @@ export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: DataprocAutoscalingPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -641,6 +657,8 @@ export function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: Datapr
 }
 
 export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -651,7 +669,7 @@ export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.
   }
 
   public get internalValue(): DataprocAutoscalingPolicyWorkerConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxInstances) {
       hasAnyValues = true;
@@ -670,11 +688,13 @@ export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.
 
   public set internalValue(value: DataprocAutoscalingPolicyWorkerConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxInstances = undefined;
       this._minInstances = undefined;
       this._weight = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxInstances = value.maxInstances;
       this._minInstances = value.minInstances;
       this._weight = value.weight;

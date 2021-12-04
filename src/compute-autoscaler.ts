@@ -95,6 +95,8 @@ export function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(stru
 }
 
 export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -105,7 +107,7 @@ export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference ext
   }
 
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyCpuUtilization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._predictiveMethod) {
       hasAnyValues = true;
@@ -120,10 +122,12 @@ export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference ext
 
   public set internalValue(value: ComputeAutoscalerAutoscalingPolicyCpuUtilization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._predictiveMethod = undefined;
       this._target = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._predictiveMethod = value.predictiveMethod;
       this._target = value.target;
     }
@@ -180,6 +184,8 @@ export function computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerr
 }
 
 export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -190,7 +196,7 @@ export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputRef
   }
 
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._target) {
       hasAnyValues = true;
@@ -201,9 +207,11 @@ export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputRef
 
   public set internalValue(value: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._target = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._target = value.target;
     }
   }
@@ -295,6 +303,8 @@ export function computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRepli
 }
 
 export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -305,7 +315,7 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas
   }
 
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fixed) {
       hasAnyValues = true;
@@ -320,10 +330,12 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas
 
   public set internalValue(value: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fixed = undefined;
       this._percent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fixed = value.fixed;
       this._percent = value.percent;
     }
@@ -389,6 +401,8 @@ export function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(stru
 }
 
 export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -399,13 +413,13 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference ext
   }
 
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyScaleInControl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._timeWindowSec) {
       hasAnyValues = true;
       internalValueResult.timeWindowSec = this._timeWindowSec;
     }
-    if (this._maxScaledInReplicas) {
+    if (this._maxScaledInReplicas?.internalValue) {
       hasAnyValues = true;
       internalValueResult.maxScaledInReplicas = this._maxScaledInReplicas?.internalValue;
     }
@@ -414,10 +428,12 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference ext
 
   public set internalValue(value: ComputeAutoscalerAutoscalingPolicyScaleInControl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._timeWindowSec = undefined;
       this._maxScaledInReplicas.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._timeWindowSec = value.timeWindowSec;
       this._maxScaledInReplicas.internalValue = value.maxScaledInReplicas;
     }
@@ -605,6 +621,8 @@ export function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAu
 }
 
 export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -615,7 +633,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputeAutoscalerAutoscalingPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cooldownPeriod) {
       hasAnyValues = true;
@@ -633,11 +651,11 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._cpuUtilization) {
+    if (this._cpuUtilization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cpuUtilization = this._cpuUtilization?.internalValue;
     }
-    if (this._loadBalancingUtilization) {
+    if (this._loadBalancingUtilization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loadBalancingUtilization = this._loadBalancingUtilization?.internalValue;
     }
@@ -645,7 +663,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.metric = this._metric;
     }
-    if (this._scaleInControl) {
+    if (this._scaleInControl?.internalValue) {
       hasAnyValues = true;
       internalValueResult.scaleInControl = this._scaleInControl?.internalValue;
     }
@@ -658,6 +676,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputeAutoscalerAutoscalingPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cooldownPeriod = undefined;
       this._maxReplicas = undefined;
       this._minReplicas = undefined;
@@ -669,6 +688,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
       this._scalingSchedules = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cooldownPeriod = value.cooldownPeriod;
       this._maxReplicas = value.maxReplicas;
       this._minReplicas = value.minReplicas;
@@ -849,6 +869,8 @@ export function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerT
 }
 
 export class ComputeAutoscalerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -859,7 +881,7 @@ export class ComputeAutoscalerTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ComputeAutoscalerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -878,11 +900,13 @@ export class ComputeAutoscalerTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ComputeAutoscalerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

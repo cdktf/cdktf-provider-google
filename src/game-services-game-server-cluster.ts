@@ -84,6 +84,8 @@ export function gameServicesGameServerClusterConnectionInfoGkeClusterReferenceTo
 }
 
 export class GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -94,7 +96,7 @@ export class GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutpu
   }
 
   public get internalValue(): GameServicesGameServerClusterConnectionInfoGkeClusterReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cluster) {
       hasAnyValues = true;
@@ -105,9 +107,11 @@ export class GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutpu
 
   public set internalValue(value: GameServicesGameServerClusterConnectionInfoGkeClusterReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cluster = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cluster = value.cluster;
     }
   }
@@ -154,6 +158,8 @@ export function gameServicesGameServerClusterConnectionInfoToTerraform(struct?: 
 }
 
 export class GameServicesGameServerClusterConnectionInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -164,13 +170,13 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
   }
 
   public get internalValue(): GameServicesGameServerClusterConnectionInfo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._namespace) {
       hasAnyValues = true;
       internalValueResult.namespace = this._namespace;
     }
-    if (this._gkeClusterReference) {
+    if (this._gkeClusterReference?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gkeClusterReference = this._gkeClusterReference?.internalValue;
     }
@@ -179,10 +185,12 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
 
   public set internalValue(value: GameServicesGameServerClusterConnectionInfo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._namespace = undefined;
       this._gkeClusterReference.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._namespace = value.namespace;
       this._gkeClusterReference.internalValue = value.gkeClusterReference;
     }
@@ -242,6 +250,8 @@ export function gameServicesGameServerClusterTimeoutsToTerraform(struct?: GameSe
 }
 
 export class GameServicesGameServerClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -252,7 +262,7 @@ export class GameServicesGameServerClusterTimeoutsOutputReference extends cdktf.
   }
 
   public get internalValue(): GameServicesGameServerClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -271,11 +281,13 @@ export class GameServicesGameServerClusterTimeoutsOutputReference extends cdktf.
 
   public set internalValue(value: GameServicesGameServerClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

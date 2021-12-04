@@ -93,6 +93,8 @@ export function secretManagerSecretReplicationUserManagedReplicasCustomerManaged
 }
 
 export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -103,7 +105,7 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
   }
 
   public get internalValue(): SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -114,9 +116,11 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
 
   public set internalValue(value: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -180,6 +184,8 @@ export function secretManagerSecretReplicationUserManagedToTerraform(struct?: Se
 }
 
 export class SecretManagerSecretReplicationUserManagedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -190,7 +196,7 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
   }
 
   public get internalValue(): SecretManagerSecretReplicationUserManaged | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._replicas) {
       hasAnyValues = true;
@@ -201,9 +207,11 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
 
   public set internalValue(value: SecretManagerSecretReplicationUserManaged | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._replicas = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._replicas = value.replicas;
     }
   }
@@ -249,6 +257,8 @@ export function secretManagerSecretReplicationToTerraform(struct?: SecretManager
 }
 
 export class SecretManagerSecretReplicationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -259,13 +269,13 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): SecretManagerSecretReplication | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._automatic) {
       hasAnyValues = true;
       internalValueResult.automatic = this._automatic;
     }
-    if (this._userManaged) {
+    if (this._userManaged?.internalValue) {
       hasAnyValues = true;
       internalValueResult.userManaged = this._userManaged?.internalValue;
     }
@@ -274,10 +284,12 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
 
   public set internalValue(value: SecretManagerSecretReplication | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._automatic = undefined;
       this._userManaged.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._automatic = value.automatic;
       this._userManaged.internalValue = value.userManaged;
     }
@@ -344,6 +356,8 @@ export function secretManagerSecretRotationToTerraform(struct?: SecretManagerSec
 }
 
 export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -354,7 +368,7 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): SecretManagerSecretRotation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nextRotationTime) {
       hasAnyValues = true;
@@ -369,10 +383,12 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: SecretManagerSecretRotation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nextRotationTime = undefined;
       this._rotationPeriod = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nextRotationTime = value.nextRotationTime;
       this._rotationPeriod = value.rotationPeriod;
     }
@@ -438,6 +454,8 @@ export function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSec
 }
 
 export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -448,7 +466,7 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): SecretManagerSecretTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -467,11 +485,13 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: SecretManagerSecretTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

@@ -77,6 +77,8 @@ export function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAg
 }
 
 export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigtableGcPolicyMaxAge | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -102,10 +104,12 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigtableGcPolicyMaxAge | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
       this._duration = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
       this._duration = value.duration;
     }

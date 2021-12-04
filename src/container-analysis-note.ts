@@ -81,6 +81,8 @@ export function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?
 }
 
 export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -91,7 +93,7 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
   }
 
   public get internalValue(): ContainerAnalysisNoteAttestationAuthorityHint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._humanReadableName) {
       hasAnyValues = true;
@@ -102,9 +104,11 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
 
   public set internalValue(value: ContainerAnalysisNoteAttestationAuthorityHint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._humanReadableName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._humanReadableName = value.humanReadableName;
     }
   }
@@ -142,6 +146,8 @@ export function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: Co
 }
 
 export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -152,9 +158,9 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
   }
 
   public get internalValue(): ContainerAnalysisNoteAttestationAuthority | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hint) {
+    if (this._hint?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hint = this._hint?.internalValue;
     }
@@ -163,9 +169,11 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
 
   public set internalValue(value: ContainerAnalysisNoteAttestationAuthority | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hint.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hint.internalValue = value.hint;
     }
   }
@@ -237,6 +245,8 @@ export function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnaly
 }
 
 export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -247,7 +257,7 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): ContainerAnalysisNoteTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -266,11 +276,13 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: ContainerAnalysisNoteTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

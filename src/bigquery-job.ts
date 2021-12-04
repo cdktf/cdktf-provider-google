@@ -140,6 +140,8 @@ export function bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(str
 }
 
 export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -150,7 +152,7 @@ export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference ex
   }
 
   public get internalValue(): BigqueryJobCopyDestinationEncryptionConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -161,9 +163,11 @@ export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference ex
 
   public set internalValue(value: BigqueryJobCopyDestinationEncryptionConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -216,6 +220,8 @@ export function bigqueryJobCopyDestinationTableToTerraform(struct?: BigqueryJobC
 }
 
 export class BigqueryJobCopyDestinationTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -226,7 +232,7 @@ export class BigqueryJobCopyDestinationTableOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): BigqueryJobCopyDestinationTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -245,11 +251,13 @@ export class BigqueryJobCopyDestinationTableOutputReference extends cdktf.Comple
 
   public set internalValue(value: BigqueryJobCopyDestinationTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -391,6 +399,8 @@ export function bigqueryJobCopyToTerraform(struct?: BigqueryJobCopyOutputReferen
 }
 
 export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -401,7 +411,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigqueryJobCopy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._createDisposition) {
       hasAnyValues = true;
@@ -411,11 +421,11 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.writeDisposition = this._writeDisposition;
     }
-    if (this._destinationEncryptionConfiguration) {
+    if (this._destinationEncryptionConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destinationEncryptionConfiguration = this._destinationEncryptionConfiguration?.internalValue;
     }
-    if (this._destinationTable) {
+    if (this._destinationTable?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
@@ -428,6 +438,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigqueryJobCopy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._createDisposition = undefined;
       this._writeDisposition = undefined;
       this._destinationEncryptionConfiguration.internalValue = undefined;
@@ -435,6 +446,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
       this._sourceTables = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._createDisposition = value.createDisposition;
       this._writeDisposition = value.writeDisposition;
       this._destinationEncryptionConfiguration.internalValue = value.destinationEncryptionConfiguration;
@@ -555,6 +567,8 @@ export function bigqueryJobExtractSourceModelToTerraform(struct?: BigqueryJobExt
 }
 
 export class BigqueryJobExtractSourceModelOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -565,7 +579,7 @@ export class BigqueryJobExtractSourceModelOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BigqueryJobExtractSourceModel | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -584,11 +598,13 @@ export class BigqueryJobExtractSourceModelOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BigqueryJobExtractSourceModel | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._modelId = undefined;
       this._projectId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._modelId = value.modelId;
       this._projectId = value.projectId;
@@ -669,6 +685,8 @@ export function bigqueryJobExtractSourceTableToTerraform(struct?: BigqueryJobExt
 }
 
 export class BigqueryJobExtractSourceTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -679,7 +697,7 @@ export class BigqueryJobExtractSourceTableOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BigqueryJobExtractSourceTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -698,11 +716,13 @@ export class BigqueryJobExtractSourceTableOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BigqueryJobExtractSourceTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -827,6 +847,8 @@ export function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtractOutputR
 }
 
 export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -837,7 +859,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigqueryJobExtract | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._compression) {
       hasAnyValues = true;
@@ -863,11 +885,11 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.useAvroLogicalTypes = this._useAvroLogicalTypes;
     }
-    if (this._sourceModel) {
+    if (this._sourceModel?.internalValue) {
       hasAnyValues = true;
       internalValueResult.sourceModel = this._sourceModel?.internalValue;
     }
-    if (this._sourceTable) {
+    if (this._sourceTable?.internalValue) {
       hasAnyValues = true;
       internalValueResult.sourceTable = this._sourceTable?.internalValue;
     }
@@ -876,6 +898,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigqueryJobExtract | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._compression = undefined;
       this._destinationFormat = undefined;
       this._destinationUris = undefined;
@@ -886,6 +909,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
       this._sourceTable.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._compression = value.compression;
       this._destinationFormat = value.destinationFormat;
       this._destinationUris = value.destinationUris;
@@ -1043,6 +1067,8 @@ export function bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(str
 }
 
 export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1053,7 +1079,7 @@ export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference ex
   }
 
   public get internalValue(): BigqueryJobLoadDestinationEncryptionConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -1064,9 +1090,11 @@ export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference ex
 
   public set internalValue(value: BigqueryJobLoadDestinationEncryptionConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -1119,6 +1147,8 @@ export function bigqueryJobLoadDestinationTableToTerraform(struct?: BigqueryJobL
 }
 
 export class BigqueryJobLoadDestinationTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1129,7 +1159,7 @@ export class BigqueryJobLoadDestinationTableOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): BigqueryJobLoadDestinationTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -1148,11 +1178,13 @@ export class BigqueryJobLoadDestinationTableOutputReference extends cdktf.Comple
 
   public set internalValue(value: BigqueryJobLoadDestinationTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -1241,6 +1273,8 @@ export function bigqueryJobLoadTimePartitioningToTerraform(struct?: BigqueryJobL
 }
 
 export class BigqueryJobLoadTimePartitioningOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1251,7 +1285,7 @@ export class BigqueryJobLoadTimePartitioningOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): BigqueryJobLoadTimePartitioning | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._expirationMs) {
       hasAnyValues = true;
@@ -1270,11 +1304,13 @@ export class BigqueryJobLoadTimePartitioningOutputReference extends cdktf.Comple
 
   public set internalValue(value: BigqueryJobLoadTimePartitioning | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._expirationMs = undefined;
       this._field = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._expirationMs = value.expirationMs;
       this._field = value.field;
       this._type = value.type;
@@ -1523,6 +1559,8 @@ export function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoadOutputReferen
 }
 
 export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1533,7 +1571,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigqueryJobLoad | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowJaggedRows) {
       hasAnyValues = true;
@@ -1599,15 +1637,15 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.writeDisposition = this._writeDisposition;
     }
-    if (this._destinationEncryptionConfiguration) {
+    if (this._destinationEncryptionConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destinationEncryptionConfiguration = this._destinationEncryptionConfiguration?.internalValue;
     }
-    if (this._destinationTable) {
+    if (this._destinationTable?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
-    if (this._timePartitioning) {
+    if (this._timePartitioning?.internalValue) {
       hasAnyValues = true;
       internalValueResult.timePartitioning = this._timePartitioning?.internalValue;
     }
@@ -1616,6 +1654,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigqueryJobLoad | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowJaggedRows = undefined;
       this._allowQuotedNewlines = undefined;
       this._autodetect = undefined;
@@ -1637,6 +1676,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
       this._timePartitioning.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowJaggedRows = value.allowJaggedRows;
       this._allowQuotedNewlines = value.allowQuotedNewlines;
       this._autodetect = value.autodetect;
@@ -1985,6 +2025,8 @@ export function bigqueryJobQueryDefaultDatasetToTerraform(struct?: BigqueryJobQu
 }
 
 export class BigqueryJobQueryDefaultDatasetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1995,7 +2037,7 @@ export class BigqueryJobQueryDefaultDatasetOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): BigqueryJobQueryDefaultDataset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -2010,10 +2052,12 @@ export class BigqueryJobQueryDefaultDatasetOutputReference extends cdktf.Complex
 
   public set internalValue(value: BigqueryJobQueryDefaultDataset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
     }
@@ -2069,6 +2113,8 @@ export function bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(st
 }
 
 export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2079,7 +2125,7 @@ export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference e
   }
 
   public get internalValue(): BigqueryJobQueryDestinationEncryptionConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -2090,9 +2136,11 @@ export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference e
 
   public set internalValue(value: BigqueryJobQueryDestinationEncryptionConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -2145,6 +2193,8 @@ export function bigqueryJobQueryDestinationTableToTerraform(struct?: BigqueryJob
 }
 
 export class BigqueryJobQueryDestinationTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2155,7 +2205,7 @@ export class BigqueryJobQueryDestinationTableOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): BigqueryJobQueryDestinationTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -2174,11 +2224,13 @@ export class BigqueryJobQueryDestinationTableOutputReference extends cdktf.Compl
 
   public set internalValue(value: BigqueryJobQueryDestinationTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -2265,6 +2317,8 @@ export function bigqueryJobQueryScriptOptionsToTerraform(struct?: BigqueryJobQue
 }
 
 export class BigqueryJobQueryScriptOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2275,7 +2329,7 @@ export class BigqueryJobQueryScriptOptionsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BigqueryJobQueryScriptOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyResultStatement) {
       hasAnyValues = true;
@@ -2294,11 +2348,13 @@ export class BigqueryJobQueryScriptOptionsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BigqueryJobQueryScriptOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyResultStatement = undefined;
       this._statementByteBudget = undefined;
       this._statementTimeoutMs = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyResultStatement = value.keyResultStatement;
       this._statementByteBudget = value.statementByteBudget;
       this._statementTimeoutMs = value.statementTimeoutMs;
@@ -2536,6 +2592,8 @@ export function bigqueryJobQueryToTerraform(struct?: BigqueryJobQueryOutputRefer
 }
 
 export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2546,7 +2604,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigqueryJobQuery | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowLargeResults) {
       hasAnyValues = true;
@@ -2596,19 +2654,19 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.writeDisposition = this._writeDisposition;
     }
-    if (this._defaultDataset) {
+    if (this._defaultDataset?.internalValue) {
       hasAnyValues = true;
       internalValueResult.defaultDataset = this._defaultDataset?.internalValue;
     }
-    if (this._destinationEncryptionConfiguration) {
+    if (this._destinationEncryptionConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destinationEncryptionConfiguration = this._destinationEncryptionConfiguration?.internalValue;
     }
-    if (this._destinationTable) {
+    if (this._destinationTable?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
-    if (this._scriptOptions) {
+    if (this._scriptOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.scriptOptions = this._scriptOptions?.internalValue;
     }
@@ -2621,6 +2679,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigqueryJobQuery | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowLargeResults = undefined;
       this._createDisposition = undefined;
       this._flattenResults = undefined;
@@ -2640,6 +2699,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
       this._userDefinedFunctionResources = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowLargeResults = value.allowLargeResults;
       this._createDisposition = value.createDisposition;
       this._flattenResults = value.flattenResults;
@@ -2953,6 +3013,8 @@ export function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeoutsOutpu
 }
 
 export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2963,7 +3025,7 @@ export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigqueryJobTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2978,10 +3040,12 @@ export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigqueryJobTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

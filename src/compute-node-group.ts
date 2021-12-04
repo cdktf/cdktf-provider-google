@@ -113,6 +113,8 @@ export function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNod
 }
 
 export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -123,7 +125,7 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ComputeNodeGroupAutoscalingPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxNodes) {
       hasAnyValues = true;
@@ -142,11 +144,13 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
 
   public set internalValue(value: ComputeNodeGroupAutoscalingPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxNodes = undefined;
       this._minNodes = undefined;
       this._mode = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxNodes = value.maxNodes;
       this._minNodes = value.minNodes;
       this._mode = value.mode;
@@ -221,6 +225,8 @@ export function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNod
 }
 
 export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -231,7 +237,7 @@ export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ComputeNodeGroupMaintenanceWindow | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._startTime) {
       hasAnyValues = true;
@@ -242,9 +248,11 @@ export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.Comp
 
   public set internalValue(value: ComputeNodeGroupMaintenanceWindow | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._startTime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._startTime = value.startTime;
     }
   }
@@ -290,6 +298,8 @@ export function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTim
 }
 
 export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -300,7 +310,7 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): ComputeNodeGroupTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -319,11 +329,13 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: ComputeNodeGroupTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

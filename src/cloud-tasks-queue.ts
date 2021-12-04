@@ -94,6 +94,8 @@ export function cloudTasksQueueAppEngineRoutingOverrideToTerraform(struct?: Clou
 }
 
 export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -104,7 +106,7 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   }
 
   public get internalValue(): CloudTasksQueueAppEngineRoutingOverride | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instance) {
       hasAnyValues = true;
@@ -123,11 +125,13 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
 
   public set internalValue(value: CloudTasksQueueAppEngineRoutingOverride | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instance = undefined;
       this._service = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instance = value.instance;
       this._service = value.service;
       this._version = value.version;
@@ -214,6 +218,8 @@ export function cloudTasksQueueRateLimitsToTerraform(struct?: CloudTasksQueueRat
 }
 
 export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -224,7 +230,7 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): CloudTasksQueueRateLimits | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxConcurrentDispatches) {
       hasAnyValues = true;
@@ -239,10 +245,12 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: CloudTasksQueueRateLimits | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxConcurrentDispatches = undefined;
       this._maxDispatchesPerSecond = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxConcurrentDispatches = value.maxConcurrentDispatches;
       this._maxDispatchesPerSecond = value.maxDispatchesPerSecond;
     }
@@ -351,6 +359,8 @@ export function cloudTasksQueueRetryConfigToTerraform(struct?: CloudTasksQueueRe
 }
 
 export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -361,7 +371,7 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): CloudTasksQueueRetryConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxAttempts) {
       hasAnyValues = true;
@@ -388,6 +398,7 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: CloudTasksQueueRetryConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxAttempts = undefined;
       this._maxBackoff = undefined;
       this._maxDoublings = undefined;
@@ -395,6 +406,7 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
       this._minBackoff = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxAttempts = value.maxAttempts;
       this._maxBackoff = value.maxBackoff;
       this._maxDoublings = value.maxDoublings;
@@ -505,6 +517,8 @@ export function cloudTasksQueueStackdriverLoggingConfigToTerraform(struct?: Clou
 }
 
 export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -515,7 +529,7 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
   }
 
   public get internalValue(): CloudTasksQueueStackdriverLoggingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._samplingRatio) {
       hasAnyValues = true;
@@ -526,9 +540,11 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
 
   public set internalValue(value: CloudTasksQueueStackdriverLoggingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._samplingRatio = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._samplingRatio = value.samplingRatio;
     }
   }
@@ -574,6 +590,8 @@ export function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeo
 }
 
 export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -584,7 +602,7 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CloudTasksQueueTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -603,11 +621,13 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CloudTasksQueueTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

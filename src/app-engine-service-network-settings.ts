@@ -50,6 +50,8 @@ export function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct
 }
 
 export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -60,7 +62,7 @@ export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference exten
   }
 
   public get internalValue(): AppEngineServiceNetworkSettingsNetworkSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ingressTrafficAllowed) {
       hasAnyValues = true;
@@ -71,9 +73,11 @@ export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference exten
 
   public set internalValue(value: AppEngineServiceNetworkSettingsNetworkSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ingressTrafficAllowed = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ingressTrafficAllowed = value.ingressTrafficAllowed;
     }
   }
@@ -122,6 +126,8 @@ export function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppE
 }
 
 export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -132,7 +138,7 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): AppEngineServiceNetworkSettingsTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -151,11 +157,13 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: AppEngineServiceNetworkSettingsTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

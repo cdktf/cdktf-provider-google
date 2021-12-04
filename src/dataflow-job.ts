@@ -146,6 +146,8 @@ export function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeoutsOutpu
 }
 
 export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -156,7 +158,7 @@ export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataflowJobTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._update) {
       hasAnyValues = true;
@@ -167,9 +169,11 @@ export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataflowJobTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._update = value.update;
     }
   }

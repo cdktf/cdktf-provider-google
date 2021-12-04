@@ -124,6 +124,8 @@ export function cloudSchedulerJobAppEngineHttpTargetAppEngineRoutingToTerraform(
 }
 
 export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -134,7 +136,7 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
   }
 
   public get internalValue(): CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instance) {
       hasAnyValues = true;
@@ -153,11 +155,13 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
 
   public set internalValue(value: CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instance = undefined;
       this._service = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instance = value.instance;
       this._service = value.service;
       this._version = value.version;
@@ -270,6 +274,8 @@ export function cloudSchedulerJobAppEngineHttpTargetToTerraform(struct?: CloudSc
 }
 
 export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -280,7 +286,7 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   }
 
   public get internalValue(): CloudSchedulerJobAppEngineHttpTarget | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._body) {
       hasAnyValues = true;
@@ -298,7 +304,7 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.relativeUri = this._relativeUri;
     }
-    if (this._appEngineRouting) {
+    if (this._appEngineRouting?.internalValue) {
       hasAnyValues = true;
       internalValueResult.appEngineRouting = this._appEngineRouting?.internalValue;
     }
@@ -307,6 +313,7 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
 
   public set internalValue(value: CloudSchedulerJobAppEngineHttpTarget | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._body = undefined;
       this._headers = undefined;
       this._httpMethod = undefined;
@@ -314,6 +321,7 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
       this._appEngineRouting.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._body = value.body;
       this._headers = value.headers;
       this._httpMethod = value.httpMethod;
@@ -429,6 +437,8 @@ export function cloudSchedulerJobHttpTargetOauthTokenToTerraform(struct?: CloudS
 }
 
 export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -439,7 +449,7 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
   }
 
   public get internalValue(): CloudSchedulerJobHttpTargetOauthToken | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._scope) {
       hasAnyValues = true;
@@ -454,10 +464,12 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
 
   public set internalValue(value: CloudSchedulerJobHttpTargetOauthToken | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._scope = undefined;
       this._serviceAccountEmail = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._scope = value.scope;
       this._serviceAccountEmail = value.serviceAccountEmail;
     }
@@ -521,6 +533,8 @@ export function cloudSchedulerJobHttpTargetOidcTokenToTerraform(struct?: CloudSc
 }
 
 export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -531,7 +545,7 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
   }
 
   public get internalValue(): CloudSchedulerJobHttpTargetOidcToken | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._audience) {
       hasAnyValues = true;
@@ -546,10 +560,12 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
 
   public set internalValue(value: CloudSchedulerJobHttpTargetOidcToken | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._audience = undefined;
       this._serviceAccountEmail = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._audience = value.audience;
       this._serviceAccountEmail = value.serviceAccountEmail;
     }
@@ -644,6 +660,8 @@ export function cloudSchedulerJobHttpTargetToTerraform(struct?: CloudSchedulerJo
 }
 
 export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -654,7 +672,7 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): CloudSchedulerJobHttpTarget | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._body) {
       hasAnyValues = true;
@@ -672,11 +690,11 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._oauthToken) {
+    if (this._oauthToken?.internalValue) {
       hasAnyValues = true;
       internalValueResult.oauthToken = this._oauthToken?.internalValue;
     }
-    if (this._oidcToken) {
+    if (this._oidcToken?.internalValue) {
       hasAnyValues = true;
       internalValueResult.oidcToken = this._oidcToken?.internalValue;
     }
@@ -685,6 +703,7 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: CloudSchedulerJobHttpTarget | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._body = undefined;
       this._headers = undefined;
       this._httpMethod = undefined;
@@ -693,6 +712,7 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
       this._oidcToken.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._body = value.body;
       this._headers = value.headers;
       this._httpMethod = value.httpMethod;
@@ -837,6 +857,8 @@ export function cloudSchedulerJobPubsubTargetToTerraform(struct?: CloudScheduler
 }
 
 export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -847,7 +869,7 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CloudSchedulerJobPubsubTarget | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._attributes) {
       hasAnyValues = true;
@@ -866,11 +888,13 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CloudSchedulerJobPubsubTarget | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._attributes = undefined;
       this._data = undefined;
       this._topicName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._attributes = value.attributes;
       this._data = value.data;
       this._topicName = value.topicName;
@@ -980,6 +1004,8 @@ export function cloudSchedulerJobRetryConfigToTerraform(struct?: CloudSchedulerJ
 }
 
 export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -990,7 +1016,7 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): CloudSchedulerJobRetryConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxBackoffDuration) {
       hasAnyValues = true;
@@ -1017,6 +1043,7 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: CloudSchedulerJobRetryConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxBackoffDuration = undefined;
       this._maxDoublings = undefined;
       this._maxRetryDuration = undefined;
@@ -1024,6 +1051,7 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
       this._retryCount = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxBackoffDuration = value.maxBackoffDuration;
       this._maxDoublings = value.maxDoublings;
       this._maxRetryDuration = value.maxRetryDuration;
@@ -1140,6 +1168,8 @@ export function cloudSchedulerJobTimeoutsToTerraform(struct?: CloudSchedulerJobT
 }
 
 export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1150,7 +1180,7 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): CloudSchedulerJobTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1169,11 +1199,13 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: CloudSchedulerJobTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

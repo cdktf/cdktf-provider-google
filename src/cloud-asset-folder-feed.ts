@@ -115,6 +115,8 @@ export function cloudAssetFolderFeedConditionToTerraform(struct?: CloudAssetFold
 }
 
 export class CloudAssetFolderFeedConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -125,7 +127,7 @@ export class CloudAssetFolderFeedConditionOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CloudAssetFolderFeedCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -148,12 +150,14 @@ export class CloudAssetFolderFeedConditionOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CloudAssetFolderFeedCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._location = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._location = value.location;
@@ -242,6 +246,8 @@ export function cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform
 }
 
 export class CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -252,7 +258,7 @@ export class CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReferenc
   }
 
   public get internalValue(): CloudAssetFolderFeedFeedOutputConfigPubsubDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._topic) {
       hasAnyValues = true;
@@ -263,9 +269,11 @@ export class CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReferenc
 
   public set internalValue(value: CloudAssetFolderFeedFeedOutputConfigPubsubDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._topic = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._topic = value.topic;
     }
   }
@@ -303,6 +311,8 @@ export function cloudAssetFolderFeedFeedOutputConfigToTerraform(struct?: CloudAs
 }
 
 export class CloudAssetFolderFeedFeedOutputConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -313,9 +323,9 @@ export class CloudAssetFolderFeedFeedOutputConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): CloudAssetFolderFeedFeedOutputConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pubsubDestination) {
+    if (this._pubsubDestination?.internalValue) {
       hasAnyValues = true;
       internalValueResult.pubsubDestination = this._pubsubDestination?.internalValue;
     }
@@ -324,9 +334,11 @@ export class CloudAssetFolderFeedFeedOutputConfigOutputReference extends cdktf.C
 
   public set internalValue(value: CloudAssetFolderFeedFeedOutputConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._pubsubDestination.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._pubsubDestination.internalValue = value.pubsubDestination;
     }
   }
@@ -372,6 +384,8 @@ export function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolde
 }
 
 export class CloudAssetFolderFeedTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -382,7 +396,7 @@ export class CloudAssetFolderFeedTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): CloudAssetFolderFeedTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -401,11 +415,13 @@ export class CloudAssetFolderFeedTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: CloudAssetFolderFeedTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

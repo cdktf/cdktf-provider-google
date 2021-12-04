@@ -121,6 +121,8 @@ export function networkManagementConnectivityTestDestinationToTerraform(struct?:
 }
 
 export class NetworkManagementConnectivityTestDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -131,7 +133,7 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   }
 
   public get internalValue(): NetworkManagementConnectivityTestDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instance) {
       hasAnyValues = true;
@@ -158,6 +160,7 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
 
   public set internalValue(value: NetworkManagementConnectivityTestDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instance = undefined;
       this._ipAddress = undefined;
       this._network = undefined;
@@ -165,6 +168,7 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
       this._projectId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instance = value.instance;
       this._ipAddress = value.ipAddress;
       this._network = value.network;
@@ -320,6 +324,8 @@ export function networkManagementConnectivityTestSourceToTerraform(struct?: Netw
 }
 
 export class NetworkManagementConnectivityTestSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -330,7 +336,7 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   }
 
   public get internalValue(): NetworkManagementConnectivityTestSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instance) {
       hasAnyValues = true;
@@ -361,6 +367,7 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
 
   public set internalValue(value: NetworkManagementConnectivityTestSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instance = undefined;
       this._ipAddress = undefined;
       this._network = undefined;
@@ -369,6 +376,7 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
       this._projectId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instance = value.instance;
       this._ipAddress = value.ipAddress;
       this._network = value.network;
@@ -502,6 +510,8 @@ export function networkManagementConnectivityTestTimeoutsToTerraform(struct?: Ne
 }
 
 export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -512,7 +522,7 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): NetworkManagementConnectivityTestTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -531,11 +541,13 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
 
   public set internalValue(value: NetworkManagementConnectivityTestTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

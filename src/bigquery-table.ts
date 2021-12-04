@@ -124,6 +124,8 @@ export function bigqueryTableEncryptionConfigurationToTerraform(struct?: Bigquer
 }
 
 export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -134,7 +136,7 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
   }
 
   public get internalValue(): BigqueryTableEncryptionConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -145,9 +147,11 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
 
   public set internalValue(value: BigqueryTableEncryptionConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -220,6 +224,8 @@ export function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(stru
 }
 
 export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -230,7 +236,7 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
   }
 
   public get internalValue(): BigqueryTableExternalDataConfigurationCsvOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowJaggedRows) {
       hasAnyValues = true;
@@ -261,6 +267,7 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
 
   public set internalValue(value: BigqueryTableExternalDataConfigurationCsvOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowJaggedRows = undefined;
       this._allowQuotedNewlines = undefined;
       this._encoding = undefined;
@@ -269,6 +276,7 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
       this._skipLeadingRows = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowJaggedRows = value.allowJaggedRows;
       this._allowQuotedNewlines = value.allowQuotedNewlines;
       this._encoding = value.encoding;
@@ -398,6 +406,8 @@ export function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerra
 }
 
 export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -408,7 +418,7 @@ export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputRefe
   }
 
   public get internalValue(): BigqueryTableExternalDataConfigurationGoogleSheetsOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._range) {
       hasAnyValues = true;
@@ -423,10 +433,12 @@ export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputRefe
 
   public set internalValue(value: BigqueryTableExternalDataConfigurationGoogleSheetsOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._range = undefined;
       this._skipLeadingRows = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._range = value.range;
       this._skipLeadingRows = value.skipLeadingRows;
     }
@@ -498,6 +510,8 @@ export function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToT
 }
 
 export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -508,7 +522,7 @@ export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutput
   }
 
   public get internalValue(): BigqueryTableExternalDataConfigurationHivePartitioningOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._mode) {
       hasAnyValues = true;
@@ -527,11 +541,13 @@ export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutput
 
   public set internalValue(value: BigqueryTableExternalDataConfigurationHivePartitioningOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._mode = undefined;
       this._requirePartitionFilter = undefined;
       this._sourceUriPrefix = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
       this._requirePartitionFilter = value.requirePartitionFilter;
       this._sourceUriPrefix = value.sourceUriPrefix;
@@ -669,6 +685,8 @@ export function bigqueryTableExternalDataConfigurationToTerraform(struct?: Bigqu
 }
 
 export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -679,7 +697,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   public get internalValue(): BigqueryTableExternalDataConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._autodetect) {
       hasAnyValues = true;
@@ -709,15 +727,15 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.sourceUris = this._sourceUris;
     }
-    if (this._csvOptions) {
+    if (this._csvOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.csvOptions = this._csvOptions?.internalValue;
     }
-    if (this._googleSheetsOptions) {
+    if (this._googleSheetsOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.googleSheetsOptions = this._googleSheetsOptions?.internalValue;
     }
-    if (this._hivePartitioningOptions) {
+    if (this._hivePartitioningOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hivePartitioningOptions = this._hivePartitioningOptions?.internalValue;
     }
@@ -726,6 +744,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
 
   public set internalValue(value: BigqueryTableExternalDataConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._autodetect = undefined;
       this._compression = undefined;
       this._ignoreUnknownValues = undefined;
@@ -738,6 +757,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._hivePartitioningOptions.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._autodetect = value.autodetect;
       this._compression = value.compression;
       this._ignoreUnknownValues = value.ignoreUnknownValues;
@@ -936,6 +956,8 @@ export function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableM
 }
 
 export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -946,7 +968,7 @@ export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BigqueryTableMaterializedView | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableRefresh) {
       hasAnyValues = true;
@@ -965,11 +987,13 @@ export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BigqueryTableMaterializedView | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableRefresh = undefined;
       this._query = undefined;
       this._refreshIntervalMs = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableRefresh = value.enableRefresh;
       this._query = value.query;
       this._refreshIntervalMs = value.refreshIntervalMs;
@@ -1055,6 +1079,8 @@ export function bigqueryTableRangePartitioningRangeToTerraform(struct?: Bigquery
 }
 
 export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1065,7 +1091,7 @@ export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.Co
   }
 
   public get internalValue(): BigqueryTableRangePartitioningRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._end) {
       hasAnyValues = true;
@@ -1084,11 +1110,13 @@ export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.Co
 
   public set internalValue(value: BigqueryTableRangePartitioningRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._end = undefined;
       this._interval = undefined;
       this._start = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._end = value.end;
       this._interval = value.interval;
       this._start = value.start;
@@ -1161,6 +1189,8 @@ export function bigqueryTableRangePartitioningToTerraform(struct?: BigqueryTable
 }
 
 export class BigqueryTableRangePartitioningOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1171,13 +1201,13 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): BigqueryTableRangePartitioning | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._field) {
       hasAnyValues = true;
       internalValueResult.field = this._field;
     }
-    if (this._range) {
+    if (this._range?.internalValue) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -1186,10 +1216,12 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
 
   public set internalValue(value: BigqueryTableRangePartitioning | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._field = undefined;
       this._range.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._field = value.field;
       this._range.internalValue = value.range;
     }
@@ -1262,6 +1294,8 @@ export function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableT
 }
 
 export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1272,7 +1306,7 @@ export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BigqueryTableTimePartitioning | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._expirationMs) {
       hasAnyValues = true;
@@ -1295,12 +1329,14 @@ export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BigqueryTableTimePartitioning | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._expirationMs = undefined;
       this._field = undefined;
       this._requirePartitionFilter = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._expirationMs = value.expirationMs;
       this._field = value.field;
       this._requirePartitionFilter = value.requirePartitionFilter;
@@ -1396,6 +1432,8 @@ export function bigqueryTableViewToTerraform(struct?: BigqueryTableViewOutputRef
 }
 
 export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1406,7 +1444,7 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BigqueryTableView | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._query) {
       hasAnyValues = true;
@@ -1421,10 +1459,12 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BigqueryTableView | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._query = undefined;
       this._useLegacySql = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._query = value.query;
       this._useLegacySql = value.useLegacySql;
     }

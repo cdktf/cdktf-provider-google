@@ -137,6 +137,8 @@ export function healthcareFhirStoreNotificationConfigToTerraform(struct?: Health
 }
 
 export class HealthcareFhirStoreNotificationConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -147,7 +149,7 @@ export class HealthcareFhirStoreNotificationConfigOutputReference extends cdktf.
   }
 
   public get internalValue(): HealthcareFhirStoreNotificationConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._pubsubTopic) {
       hasAnyValues = true;
@@ -158,9 +160,11 @@ export class HealthcareFhirStoreNotificationConfigOutputReference extends cdktf.
 
   public set internalValue(value: HealthcareFhirStoreNotificationConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._pubsubTopic = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._pubsubTopic = value.pubsubTopic;
     }
   }
@@ -210,6 +214,8 @@ export function healthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigT
 }
 
 export class HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -220,7 +226,7 @@ export class HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutp
   }
 
   public get internalValue(): HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._recursiveStructureDepth) {
       hasAnyValues = true;
@@ -235,10 +241,12 @@ export class HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutp
 
   public set internalValue(value: HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._recursiveStructureDepth = undefined;
       this._schemaType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._recursiveStructureDepth = value.recursiveStructureDepth;
       this._schemaType = value.schemaType;
     }
@@ -300,6 +308,8 @@ export function healthcareFhirStoreStreamConfigsBigqueryDestinationToTerraform(s
 }
 
 export class HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -310,13 +320,13 @@ export class HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference 
   }
 
   public get internalValue(): HealthcareFhirStoreStreamConfigsBigqueryDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetUri) {
       hasAnyValues = true;
       internalValueResult.datasetUri = this._datasetUri;
     }
-    if (this._schemaConfig) {
+    if (this._schemaConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.schemaConfig = this._schemaConfig?.internalValue;
     }
@@ -325,10 +335,12 @@ export class HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference 
 
   public set internalValue(value: HealthcareFhirStoreStreamConfigsBigqueryDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetUri = undefined;
       this._schemaConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetUri = value.datasetUri;
       this._schemaConfig.internalValue = value.schemaConfig;
     }
@@ -416,6 +428,8 @@ export function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirSt
 }
 
 export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -426,7 +440,7 @@ export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): HealthcareFhirStoreTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -445,11 +459,13 @@ export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: HealthcareFhirStoreTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

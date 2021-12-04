@@ -125,6 +125,8 @@ export function monitoringUptimeCheckConfigHttpCheckAuthInfoToTerraform(struct?:
 }
 
 export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -135,7 +137,7 @@ export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigHttpCheckAuthInfo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -150,10 +152,12 @@ export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends
 
   public set internalValue(value: MonitoringUptimeCheckConfigHttpCheckAuthInfo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._username = value.username;
     }
@@ -268,6 +272,8 @@ export function monitoringUptimeCheckConfigHttpCheckToTerraform(struct?: Monitor
 }
 
 export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -278,7 +284,7 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigHttpCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._body) {
       hasAnyValues = true;
@@ -316,7 +322,7 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.validateSsl = this._validateSsl;
     }
-    if (this._authInfo) {
+    if (this._authInfo?.internalValue) {
       hasAnyValues = true;
       internalValueResult.authInfo = this._authInfo?.internalValue;
     }
@@ -325,6 +331,7 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
 
   public set internalValue(value: MonitoringUptimeCheckConfigHttpCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._body = undefined;
       this._contentType = undefined;
       this._headers = undefined;
@@ -337,6 +344,7 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
       this._authInfo.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._body = value.body;
       this._contentType = value.contentType;
       this._headers = value.headers;
@@ -538,6 +546,8 @@ export function monitoringUptimeCheckConfigMonitoredResourceToTerraform(struct?:
 }
 
 export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -548,7 +558,7 @@ export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigMonitoredResource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._labels) {
       hasAnyValues = true;
@@ -563,10 +573,12 @@ export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends
 
   public set internalValue(value: MonitoringUptimeCheckConfigMonitoredResource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._labels = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._labels = value.labels;
       this._type = value.type;
     }
@@ -626,6 +638,8 @@ export function monitoringUptimeCheckConfigResourceGroupToTerraform(struct?: Mon
 }
 
 export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -636,7 +650,7 @@ export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdk
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigResourceGroup | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._groupId) {
       hasAnyValues = true;
@@ -651,10 +665,12 @@ export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdk
 
   public set internalValue(value: MonitoringUptimeCheckConfigResourceGroup | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._groupId = undefined;
       this._resourceType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._groupId = value.groupId;
       this._resourceType = value.resourceType;
     }
@@ -712,6 +728,8 @@ export function monitoringUptimeCheckConfigTcpCheckToTerraform(struct?: Monitori
 }
 
 export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -722,7 +740,7 @@ export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigTcpCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._port) {
       hasAnyValues = true;
@@ -733,9 +751,11 @@ export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.Co
 
   public set internalValue(value: MonitoringUptimeCheckConfigTcpCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._port = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._port = value.port;
     }
   }
@@ -781,6 +801,8 @@ export function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: Monitori
 }
 
 export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -791,7 +813,7 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -810,11 +832,13 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: MonitoringUptimeCheckConfigTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

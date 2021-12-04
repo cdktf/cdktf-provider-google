@@ -174,6 +174,8 @@ export function privatecaCertificateAuthorityConfigSubjectConfigSubjectToTerrafo
 }
 
 export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -184,7 +186,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputRefere
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfigSubject | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._commonName) {
       hasAnyValues = true;
@@ -223,6 +225,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputRefere
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigSubjectConfigSubject | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._commonName = undefined;
       this._countryCode = undefined;
       this._locality = undefined;
@@ -233,6 +236,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputRefere
       this._streetAddress = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._commonName = value.commonName;
       this._countryCode = value.countryCode;
       this._locality = value.locality;
@@ -407,6 +411,8 @@ export function privatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameTo
 }
 
 export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -417,7 +423,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutpu
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dnsNames) {
       hasAnyValues = true;
@@ -440,12 +446,14 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutpu
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dnsNames = undefined;
       this._emailAddresses = undefined;
       this._ipAddresses = undefined;
       this._uris = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dnsNames = value.dnsNames;
       this._emailAddresses = value.emailAddresses;
       this._ipAddresses = value.ipAddresses;
@@ -544,6 +552,8 @@ export function privatecaCertificateAuthorityConfigSubjectConfigToTerraform(stru
 }
 
 export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -554,13 +564,13 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subject) {
+    if (this._subject?.internalValue) {
       hasAnyValues = true;
       internalValueResult.subject = this._subject?.internalValue;
     }
-    if (this._subjectAltName) {
+    if (this._subjectAltName?.internalValue) {
       hasAnyValues = true;
       internalValueResult.subjectAltName = this._subjectAltName?.internalValue;
     }
@@ -569,10 +579,12 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigSubjectConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._subject.internalValue = undefined;
       this._subjectAltName.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._subject.internalValue = value.subject;
       this._subjectAltName.internalValue = value.subjectAltName;
     }
@@ -627,6 +639,8 @@ export function privatecaCertificateAuthorityConfigX509ConfigAdditionalExtension
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectIdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -637,7 +651,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsOb
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._objectIdPath) {
       hasAnyValues = true;
@@ -648,9 +662,11 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsOb
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._objectIdPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._objectIdPath = value.objectIdPath;
     }
   }
@@ -733,6 +749,8 @@ export function privatecaCertificateAuthorityConfigX509ConfigCaOptionsToTerrafor
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -743,7 +761,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReferen
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigCaOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._isCa) {
       hasAnyValues = true;
@@ -758,10 +776,12 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReferen
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigX509ConfigCaOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._isCa = undefined;
       this._maxIssuerPathLength = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._isCa = value.isCa;
       this._maxIssuerPathLength = value.maxIssuerPathLength;
     }
@@ -872,6 +892,8 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsag
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -882,7 +904,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOu
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._certSign) {
       hasAnyValues = true;
@@ -925,6 +947,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOu
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._certSign = undefined;
       this._contentCommitment = undefined;
       this._crlSign = undefined;
@@ -936,6 +959,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOu
       this._keyEncipherment = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._certSign = value.certSign;
       this._contentCommitment = value.contentCommitment;
       this._crlSign = value.crlSign;
@@ -1147,6 +1171,8 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKey
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1157,7 +1183,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsa
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientAuth) {
       hasAnyValues = true;
@@ -1188,6 +1214,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsa
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientAuth = undefined;
       this._codeSigning = undefined;
       this._emailProtection = undefined;
@@ -1196,6 +1223,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsa
       this._timeStamping = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientAuth = value.clientAuth;
       this._codeSigning = value.codeSigning;
       this._emailProtection = value.emailProtection;
@@ -1354,6 +1382,8 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageToTerraform
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1364,13 +1394,13 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseKeyUsage) {
+    if (this._baseKeyUsage?.internalValue) {
       hasAnyValues = true;
       internalValueResult.baseKeyUsage = this._baseKeyUsage?.internalValue;
     }
-    if (this._extendedKeyUsage) {
+    if (this._extendedKeyUsage?.internalValue) {
       hasAnyValues = true;
       internalValueResult.extendedKeyUsage = this._extendedKeyUsage?.internalValue;
     }
@@ -1383,11 +1413,13 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._baseKeyUsage.internalValue = undefined;
       this._extendedKeyUsage.internalValue = undefined;
       this._unknownExtendedKeyUsages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._baseKeyUsage.internalValue = value.baseKeyUsage;
       this._extendedKeyUsage.internalValue = value.extendedKeyUsage;
       this._unknownExtendedKeyUsages = value.unknownExtendedKeyUsages;
@@ -1505,6 +1537,8 @@ export function privatecaCertificateAuthorityConfigX509ConfigToTerraform(struct?
 }
 
 export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1515,7 +1549,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509Config | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aiaOcspServers) {
       hasAnyValues = true;
@@ -1525,11 +1559,11 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
       hasAnyValues = true;
       internalValueResult.additionalExtensions = this._additionalExtensions;
     }
-    if (this._caOptions) {
+    if (this._caOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.caOptions = this._caOptions?.internalValue;
     }
-    if (this._keyUsage) {
+    if (this._keyUsage?.internalValue) {
       hasAnyValues = true;
       internalValueResult.keyUsage = this._keyUsage?.internalValue;
     }
@@ -1542,6 +1576,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigX509Config | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aiaOcspServers = undefined;
       this._additionalExtensions = undefined;
       this._caOptions.internalValue = undefined;
@@ -1549,6 +1584,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
       this._policyIds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aiaOcspServers = value.aiaOcspServers;
       this._additionalExtensions = value.additionalExtensions;
       this._caOptions.internalValue = value.caOptions;
@@ -1660,6 +1696,8 @@ export function privatecaCertificateAuthorityConfigAToTerraform(struct?: Private
 }
 
 export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1670,13 +1708,13 @@ export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.C
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigA | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subjectConfig) {
+    if (this._subjectConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.subjectConfig = this._subjectConfig?.internalValue;
     }
-    if (this._x509Config) {
+    if (this._x509Config?.internalValue) {
       hasAnyValues = true;
       internalValueResult.x509Config = this._x509Config?.internalValue;
     }
@@ -1685,10 +1723,12 @@ export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.C
 
   public set internalValue(value: PrivatecaCertificateAuthorityConfigA | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._subjectConfig.internalValue = undefined;
       this._x509Config.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._subjectConfig.internalValue = value.subjectConfig;
       this._x509Config.internalValue = value.x509Config;
     }
@@ -1749,6 +1789,8 @@ export function privatecaCertificateAuthorityKeySpecToTerraform(struct?: Private
 }
 
 export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1759,7 +1801,7 @@ export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.C
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityKeySpec | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._algorithm) {
       hasAnyValues = true;
@@ -1774,10 +1816,12 @@ export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.C
 
   public set internalValue(value: PrivatecaCertificateAuthorityKeySpec | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._algorithm = undefined;
       this._cloudKmsKeyVersion = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._algorithm = value.algorithm;
       this._cloudKmsKeyVersion = value.cloudKmsKeyVersion;
     }
@@ -1838,6 +1882,8 @@ export function privatecaCertificateAuthorityTimeoutsToTerraform(struct?: Privat
 }
 
 export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1848,7 +1894,7 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1863,10 +1909,12 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
 
   public set internalValue(value: PrivatecaCertificateAuthorityTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

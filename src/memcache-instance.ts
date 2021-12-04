@@ -129,6 +129,8 @@ export function memcacheInstanceMemcacheParametersToTerraform(struct?: MemcacheI
 }
 
 export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -139,7 +141,7 @@ export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MemcacheInstanceMemcacheParameters | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._params) {
       hasAnyValues = true;
@@ -150,9 +152,11 @@ export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.Com
 
   public set internalValue(value: MemcacheInstanceMemcacheParameters | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._params = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._params = value.params;
     }
   }
@@ -201,6 +205,8 @@ export function memcacheInstanceNodeConfigToTerraform(struct?: MemcacheInstanceN
 }
 
 export class MemcacheInstanceNodeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -211,7 +217,7 @@ export class MemcacheInstanceNodeConfigOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): MemcacheInstanceNodeConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cpuCount) {
       hasAnyValues = true;
@@ -226,10 +232,12 @@ export class MemcacheInstanceNodeConfigOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: MemcacheInstanceNodeConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cpuCount = undefined;
       this._memorySizeMb = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cpuCount = value.cpuCount;
       this._memorySizeMb = value.memorySizeMb;
     }
@@ -289,6 +297,8 @@ export function memcacheInstanceTimeoutsToTerraform(struct?: MemcacheInstanceTim
 }
 
 export class MemcacheInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -299,7 +309,7 @@ export class MemcacheInstanceTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): MemcacheInstanceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -318,11 +328,13 @@ export class MemcacheInstanceTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: MemcacheInstanceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

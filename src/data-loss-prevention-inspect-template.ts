@@ -63,6 +63,8 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDic
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -73,7 +75,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -84,9 +86,11 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
     }
   }
@@ -125,6 +129,8 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDic
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -135,7 +141,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._words) {
       hasAnyValues = true;
@@ -146,9 +152,11 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._words = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._words = value.words;
     }
   }
@@ -193,6 +201,8 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDic
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -203,13 +213,13 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudStoragePath) {
+    if (this._cloudStoragePath?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
     }
-    if (this._wordList) {
+    if (this._wordList?.internalValue) {
       hasAnyValues = true;
       internalValueResult.wordList = this._wordList?.internalValue;
     }
@@ -218,10 +228,12 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cloudStoragePath.internalValue = undefined;
       this._wordList.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudStoragePath.internalValue = value.cloudStoragePath;
       this._wordList.internalValue = value.wordList;
     }
@@ -280,6 +292,8 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInf
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -290,7 +304,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -301,9 +315,11 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -349,6 +365,8 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesReg
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -359,7 +377,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._groupIndexes) {
       hasAnyValues = true;
@@ -374,10 +392,12 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._groupIndexes = undefined;
       this._pattern = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._groupIndexes = value.groupIndexes;
       this._pattern = value.pattern;
     }
@@ -434,6 +454,8 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSto
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -444,7 +466,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -455,9 +477,11 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -571,6 +595,8 @@ export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsP
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -581,7 +607,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -592,9 +618,11 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -672,6 +700,8 @@ export function dataLossPreventionInspectTemplateInspectConfigLimitsToTerraform(
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -682,7 +712,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimits | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxFindingsPerItem) {
       hasAnyValues = true;
@@ -701,11 +731,13 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigLimits | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxFindingsPerItem = undefined;
       this._maxFindingsPerRequest = undefined;
       this._maxFindingsPerInfoType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxFindingsPerItem = value.maxFindingsPerItem;
       this._maxFindingsPerRequest = value.maxFindingsPerRequest;
       this._maxFindingsPerInfoType = value.maxFindingsPerInfoType;
@@ -795,6 +827,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -805,7 +839,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -816,9 +850,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
     }
   }
@@ -857,6 +893,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -867,7 +905,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._words) {
       hasAnyValues = true;
@@ -878,9 +916,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._words = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._words = value.words;
     }
   }
@@ -925,6 +965,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -935,13 +977,13 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudStoragePath) {
+    if (this._cloudStoragePath?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
     }
-    if (this._wordList) {
+    if (this._wordList?.internalValue) {
       hasAnyValues = true;
       internalValueResult.wordList = this._wordList?.internalValue;
     }
@@ -950,10 +992,12 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cloudStoragePath.internalValue = undefined;
       this._wordList.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudStoragePath.internalValue = value.cloudStoragePath;
       this._wordList.internalValue = value.wordList;
     }
@@ -1031,6 +1075,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1041,7 +1087,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._infoTypes) {
       hasAnyValues = true;
@@ -1052,9 +1098,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._infoTypes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._infoTypes = value.infoTypes;
     }
   }
@@ -1101,6 +1149,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1111,7 +1161,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._groupIndexes) {
       hasAnyValues = true;
@@ -1126,10 +1176,12 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._groupIndexes = undefined;
       this._pattern = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._groupIndexes = value.groupIndexes;
       this._pattern = value.pattern;
     }
@@ -1206,6 +1258,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1216,21 +1270,21 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._matchingType) {
       hasAnyValues = true;
       internalValueResult.matchingType = this._matchingType;
     }
-    if (this._dictionary) {
+    if (this._dictionary?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dictionary = this._dictionary?.internalValue;
     }
-    if (this._excludeInfoTypes) {
+    if (this._excludeInfoTypes?.internalValue) {
       hasAnyValues = true;
       internalValueResult.excludeInfoTypes = this._excludeInfoTypes?.internalValue;
     }
-    if (this._regex) {
+    if (this._regex?.internalValue) {
       hasAnyValues = true;
       internalValueResult.regex = this._regex?.internalValue;
     }
@@ -1239,12 +1293,14 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._matchingType = undefined;
       this._dictionary.internalValue = undefined;
       this._excludeInfoTypes.internalValue = undefined;
       this._regex.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._matchingType = value.matchingType;
       this._dictionary.internalValue = value.dictionary;
       this._excludeInfoTypes.internalValue = value.excludeInfoTypes;
@@ -1342,6 +1398,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwor
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1352,7 +1410,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._groupIndexes) {
       hasAnyValues = true;
@@ -1367,10 +1425,12 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._groupIndexes = undefined;
       this._pattern = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._groupIndexes = value.groupIndexes;
       this._pattern = value.pattern;
     }
@@ -1438,6 +1498,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwor
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1448,7 +1510,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fixedLikelihood) {
       hasAnyValues = true;
@@ -1463,10 +1525,12 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fixedLikelihood = undefined;
       this._relativeLikelihood = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fixedLikelihood = value.fixedLikelihood;
       this._relativeLikelihood = value.relativeLikelihood;
     }
@@ -1531,6 +1595,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwor
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1541,7 +1607,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._windowAfter) {
       hasAnyValues = true;
@@ -1556,10 +1622,12 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._windowAfter = undefined;
       this._windowBefore = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._windowAfter = value.windowAfter;
       this._windowBefore = value.windowBefore;
     }
@@ -1631,6 +1699,8 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwor
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1641,17 +1711,17 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hotwordRegex) {
+    if (this._hotwordRegex?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hotwordRegex = this._hotwordRegex?.internalValue;
     }
-    if (this._likelihoodAdjustment) {
+    if (this._likelihoodAdjustment?.internalValue) {
       hasAnyValues = true;
       internalValueResult.likelihoodAdjustment = this._likelihoodAdjustment?.internalValue;
     }
-    if (this._proximity) {
+    if (this._proximity?.internalValue) {
       hasAnyValues = true;
       internalValueResult.proximity = this._proximity?.internalValue;
     }
@@ -1660,11 +1730,13 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hotwordRegex.internalValue = undefined;
       this._likelihoodAdjustment.internalValue = undefined;
       this._proximity.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hotwordRegex.internalValue = value.hotwordRegex;
       this._likelihoodAdjustment.internalValue = value.likelihoodAdjustment;
       this._proximity.internalValue = value.proximity;
@@ -1831,6 +1903,8 @@ export function dataLossPreventionInspectTemplateInspectConfigToTerraform(struct
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1841,7 +1915,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._contentOptions) {
       hasAnyValues = true;
@@ -1867,7 +1941,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
       hasAnyValues = true;
       internalValueResult.infoTypes = this._infoTypes;
     }
-    if (this._limits) {
+    if (this._limits?.internalValue) {
       hasAnyValues = true;
       internalValueResult.limits = this._limits?.internalValue;
     }
@@ -1880,6 +1954,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
 
   public set internalValue(value: DataLossPreventionInspectTemplateInspectConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._contentOptions = undefined;
       this._excludeInfoTypes = undefined;
       this._includeQuote = undefined;
@@ -1890,6 +1965,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
       this._ruleSet = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._contentOptions = value.contentOptions;
       this._excludeInfoTypes = value.excludeInfoTypes;
       this._includeQuote = value.includeQuote;
@@ -2060,6 +2136,8 @@ export function dataLossPreventionInspectTemplateTimeoutsToTerraform(struct?: Da
 }
 
 export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2070,7 +2148,7 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2089,11 +2167,13 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
 
   public set internalValue(value: DataLossPreventionInspectTemplateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

@@ -75,6 +75,8 @@ export function dataLossPreventionStoredInfoTypeDictionaryCloudStoragePathToTerr
 }
 
 export class DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputRef
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -96,9 +98,11 @@ export class DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputRef
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
     }
   }
@@ -137,6 +141,8 @@ export function dataLossPreventionStoredInfoTypeDictionaryWordListToTerraform(st
 }
 
 export class DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -147,7 +153,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference e
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionaryWordList | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._words) {
       hasAnyValues = true;
@@ -158,9 +164,11 @@ export class DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference e
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeDictionaryWordList | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._words = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._words = value.words;
     }
   }
@@ -205,6 +213,8 @@ export function dataLossPreventionStoredInfoTypeDictionaryToTerraform(struct?: D
 }
 
 export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -215,13 +225,13 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionary | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudStoragePath) {
+    if (this._cloudStoragePath?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
     }
-    if (this._wordList) {
+    if (this._wordList?.internalValue) {
       hasAnyValues = true;
       internalValueResult.wordList = this._wordList?.internalValue;
     }
@@ -230,10 +240,12 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeDictionary | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cloudStoragePath.internalValue = undefined;
       this._wordList.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudStoragePath.internalValue = value.cloudStoragePath;
       this._wordList.internalValue = value.wordList;
     }
@@ -291,6 +303,8 @@ export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFie
 }
 
 export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -301,7 +315,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldF
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -312,9 +326,11 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldF
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -366,6 +382,8 @@ export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFie
 }
 
 export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -376,7 +394,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldT
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._datasetId) {
       hasAnyValues = true;
@@ -395,11 +413,13 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldT
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._datasetId = undefined;
       this._projectId = undefined;
       this._tableId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetId = value.datasetId;
       this._projectId = value.projectId;
       this._tableId = value.tableId;
@@ -472,6 +492,8 @@ export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFie
 }
 
 export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -482,13 +504,13 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._field) {
+    if (this._field?.internalValue) {
       hasAnyValues = true;
       internalValueResult.field = this._field?.internalValue;
     }
-    if (this._table) {
+    if (this._table?.internalValue) {
       hasAnyValues = true;
       internalValueResult.table = this._table?.internalValue;
     }
@@ -497,10 +519,12 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._field.internalValue = undefined;
       this._table.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._field.internalValue = value.field;
       this._table.internalValue = value.table;
     }
@@ -552,6 +576,8 @@ export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorag
 }
 
 export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -562,7 +588,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFi
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._url) {
       hasAnyValues = true;
@@ -573,9 +599,11 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFi
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._url = value.url;
     }
   }
@@ -613,6 +641,8 @@ export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathT
 }
 
 export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -623,7 +653,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutp
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -634,9 +664,11 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutp
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
     }
   }
@@ -688,6 +720,8 @@ export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryToTerraform
 }
 
 export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -698,17 +732,17 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionary | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bigQueryField) {
+    if (this._bigQueryField?.internalValue) {
       hasAnyValues = true;
       internalValueResult.bigQueryField = this._bigQueryField?.internalValue;
     }
-    if (this._cloudStorageFileSet) {
+    if (this._cloudStorageFileSet?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudStorageFileSet = this._cloudStorageFileSet?.internalValue;
     }
-    if (this._outputPath) {
+    if (this._outputPath?.internalValue) {
       hasAnyValues = true;
       internalValueResult.outputPath = this._outputPath?.internalValue;
     }
@@ -717,11 +751,13 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeLargeCustomDictionary | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bigQueryField.internalValue = undefined;
       this._cloudStorageFileSet.internalValue = undefined;
       this._outputPath.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bigQueryField.internalValue = value.bigQueryField;
       this._cloudStorageFileSet.internalValue = value.cloudStorageFileSet;
       this._outputPath.internalValue = value.outputPath;
@@ -801,6 +837,8 @@ export function dataLossPreventionStoredInfoTypeRegexToTerraform(struct?: DataLo
 }
 
 export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -811,7 +849,7 @@ export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeRegex | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._groupIndexes) {
       hasAnyValues = true;
@@ -826,10 +864,12 @@ export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeRegex | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._groupIndexes = undefined;
       this._pattern = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._groupIndexes = value.groupIndexes;
       this._pattern = value.pattern;
     }
@@ -893,6 +933,8 @@ export function dataLossPreventionStoredInfoTypeTimeoutsToTerraform(struct?: Dat
 }
 
 export class DataLossPreventionStoredInfoTypeTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -903,7 +945,7 @@ export class DataLossPreventionStoredInfoTypeTimeoutsOutputReference extends cdk
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -922,11 +964,13 @@ export class DataLossPreventionStoredInfoTypeTimeoutsOutputReference extends cdk
 
   public set internalValue(value: DataLossPreventionStoredInfoTypeTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

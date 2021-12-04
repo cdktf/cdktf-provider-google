@@ -58,6 +58,8 @@ export function computeSecurityPolicyRuleMatchConfigToTerraform(struct?: Compute
 }
 
 export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -68,7 +70,7 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): ComputeSecurityPolicyRuleMatchConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._srcIpRanges) {
       hasAnyValues = true;
@@ -79,9 +81,11 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
 
   public set internalValue(value: ComputeSecurityPolicyRuleMatchConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._srcIpRanges = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._srcIpRanges = value.srcIpRanges;
     }
   }
@@ -119,6 +123,8 @@ export function computeSecurityPolicyRuleMatchExprToTerraform(struct?: ComputeSe
 }
 
 export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -129,7 +135,7 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ComputeSecurityPolicyRuleMatchExpr | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._expression) {
       hasAnyValues = true;
@@ -140,9 +146,11 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
 
   public set internalValue(value: ComputeSecurityPolicyRuleMatchExpr | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._expression = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._expression = value.expression;
     }
   }
@@ -194,6 +202,8 @@ export function computeSecurityPolicyRuleMatchToTerraform(struct?: ComputeSecuri
 }
 
 export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -204,17 +214,17 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): ComputeSecurityPolicyRuleMatch | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._versionedExpr) {
       hasAnyValues = true;
       internalValueResult.versionedExpr = this._versionedExpr;
     }
-    if (this._config) {
+    if (this._config?.internalValue) {
       hasAnyValues = true;
       internalValueResult.config = this._config?.internalValue;
     }
-    if (this._expr) {
+    if (this._expr?.internalValue) {
       hasAnyValues = true;
       internalValueResult.expr = this._expr?.internalValue;
     }
@@ -223,11 +233,13 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
 
   public set internalValue(value: ComputeSecurityPolicyRuleMatch | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._versionedExpr = undefined;
       this._config.internalValue = undefined;
       this._expr.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._versionedExpr = value.versionedExpr;
       this._config.internalValue = value.config;
       this._expr.internalValue = value.expr;
@@ -357,6 +369,8 @@ export function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurit
 }
 
 export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -367,7 +381,7 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): ComputeSecurityPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -386,11 +400,13 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: ComputeSecurityPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

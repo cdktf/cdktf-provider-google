@@ -56,6 +56,8 @@ export function organizationIamMemberConditionToTerraform(struct?: OrganizationI
 }
 
 export class OrganizationIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -66,7 +68,7 @@ export class OrganizationIamMemberConditionOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): OrganizationIamMemberCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -85,11 +87,13 @@ export class OrganizationIamMemberConditionOutputReference extends cdktf.Complex
 
   public set internalValue(value: OrganizationIamMemberCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._title = value.title;

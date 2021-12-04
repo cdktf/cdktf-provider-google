@@ -89,6 +89,8 @@ export function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngin
 }
 
 export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -99,7 +101,7 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): AppEngineApplicationFeatureSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._splitHealthChecks) {
       hasAnyValues = true;
@@ -110,9 +112,11 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
 
   public set internalValue(value: AppEngineApplicationFeatureSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._splitHealthChecks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._splitHealthChecks = value.splitHealthChecks;
     }
   }
@@ -164,6 +168,8 @@ export function appEngineApplicationIapToTerraform(struct?: AppEngineApplication
 }
 
 export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -174,7 +180,7 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): AppEngineApplicationIap | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -193,11 +199,13 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: AppEngineApplicationIap | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._oauth2ClientId = undefined;
       this._oauth2ClientSecret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._oauth2ClientId = value.oauth2ClientId;
       this._oauth2ClientSecret = value.oauth2ClientSecret;
@@ -269,6 +277,8 @@ export function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplic
 }
 
 export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -279,7 +289,7 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): AppEngineApplicationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -294,10 +304,12 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: AppEngineApplicationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._update = value.update;
     }

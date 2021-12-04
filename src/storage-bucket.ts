@@ -168,6 +168,8 @@ export function storageBucketEncryptionToTerraform(struct?: StorageBucketEncrypt
 }
 
 export class StorageBucketEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -178,7 +180,7 @@ export class StorageBucketEncryptionOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): StorageBucketEncryption | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultKmsKeyName) {
       hasAnyValues = true;
@@ -189,9 +191,11 @@ export class StorageBucketEncryptionOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: StorageBucketEncryption | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultKmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultKmsKeyName = value.defaultKmsKeyName;
     }
   }
@@ -236,6 +240,8 @@ export function storageBucketLifecycleRuleActionToTerraform(struct?: StorageBuck
 }
 
 export class StorageBucketLifecycleRuleActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -246,7 +252,7 @@ export class StorageBucketLifecycleRuleActionOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): StorageBucketLifecycleRuleAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._storageClass) {
       hasAnyValues = true;
@@ -261,10 +267,12 @@ export class StorageBucketLifecycleRuleActionOutputReference extends cdktf.Compl
 
   public set internalValue(value: StorageBucketLifecycleRuleAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._storageClass = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._storageClass = value.storageClass;
       this._type = value.type;
     }
@@ -376,6 +384,8 @@ export function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageB
 }
 
 export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -386,7 +396,7 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
   }
 
   public get internalValue(): StorageBucketLifecycleRuleCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._age) {
       hasAnyValues = true;
@@ -429,6 +439,7 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
 
   public set internalValue(value: StorageBucketLifecycleRuleCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._age = undefined;
       this._createdBefore = undefined;
       this._customTimeBefore = undefined;
@@ -440,6 +451,7 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
       this._withState = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._age = value.age;
       this._createdBefore = value.createdBefore;
       this._customTimeBefore = value.customTimeBefore;
@@ -649,6 +661,8 @@ export function storageBucketLoggingToTerraform(struct?: StorageBucketLoggingOut
 }
 
 export class StorageBucketLoggingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -659,7 +673,7 @@ export class StorageBucketLoggingOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): StorageBucketLogging | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._logBucket) {
       hasAnyValues = true;
@@ -674,10 +688,12 @@ export class StorageBucketLoggingOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: StorageBucketLogging | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._logBucket = undefined;
       this._logObjectPrefix = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._logBucket = value.logBucket;
       this._logObjectPrefix = value.logObjectPrefix;
     }
@@ -739,6 +755,8 @@ export function storageBucketRetentionPolicyToTerraform(struct?: StorageBucketRe
 }
 
 export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -749,7 +767,7 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): StorageBucketRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._isLocked) {
       hasAnyValues = true;
@@ -764,10 +782,12 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: StorageBucketRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._isLocked = undefined;
       this._retentionPeriod = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._isLocked = value.isLocked;
       this._retentionPeriod = value.retentionPeriod;
     }
@@ -822,6 +842,8 @@ export function storageBucketVersioningToTerraform(struct?: StorageBucketVersion
 }
 
 export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -832,7 +854,7 @@ export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): StorageBucketVersioning | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -843,9 +865,11 @@ export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: StorageBucketVersioning | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -890,6 +914,8 @@ export function storageBucketWebsiteToTerraform(struct?: StorageBucketWebsiteOut
 }
 
 export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -900,7 +926,7 @@ export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): StorageBucketWebsite | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._mainPageSuffix) {
       hasAnyValues = true;
@@ -915,10 +941,12 @@ export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: StorageBucketWebsite | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._mainPageSuffix = undefined;
       this._notFoundPage = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._mainPageSuffix = value.mainPageSuffix;
       this._notFoundPage = value.notFoundPage;
     }

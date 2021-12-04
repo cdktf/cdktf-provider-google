@@ -56,6 +56,8 @@ export function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphert
 }
 
 export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -66,7 +68,7 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): KmsSecretCiphertextTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -81,10 +83,12 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: KmsSecretCiphertextTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

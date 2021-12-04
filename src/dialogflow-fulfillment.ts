@@ -103,6 +103,8 @@ export function dialogflowFulfillmentGenericWebServiceToTerraform(struct?: Dialo
 }
 
 export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -113,7 +115,7 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   }
 
   public get internalValue(): DialogflowFulfillmentGenericWebService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -136,12 +138,14 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
 
   public set internalValue(value: DialogflowFulfillmentGenericWebService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._requestHeaders = undefined;
       this._uri = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._requestHeaders = value.requestHeaders;
       this._uri = value.uri;
@@ -239,6 +243,8 @@ export function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulf
 }
 
 export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -249,7 +255,7 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): DialogflowFulfillmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -268,11 +274,13 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: DialogflowFulfillmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

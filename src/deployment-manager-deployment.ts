@@ -122,6 +122,8 @@ export function deploymentManagerDeploymentTargetConfigToTerraform(struct?: Depl
 }
 
 export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -132,7 +134,7 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
   }
 
   public get internalValue(): DeploymentManagerDeploymentTargetConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._content) {
       hasAnyValues = true;
@@ -143,9 +145,11 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
 
   public set internalValue(value: DeploymentManagerDeploymentTargetConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._content = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._content = value.content;
     }
   }
@@ -217,6 +221,8 @@ export function deploymentManagerDeploymentTargetToTerraform(struct?: Deployment
 }
 
 export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -227,9 +233,9 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): DeploymentManagerDeploymentTarget | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._config) {
+    if (this._config?.internalValue) {
       hasAnyValues = true;
       internalValueResult.config = this._config?.internalValue;
     }
@@ -242,10 +248,12 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
 
   public set internalValue(value: DeploymentManagerDeploymentTarget | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._config.internalValue = undefined;
       this._imports = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._config.internalValue = value.config;
       this._imports = value.imports;
     }
@@ -309,6 +317,8 @@ export function deploymentManagerDeploymentTimeoutsToTerraform(struct?: Deployme
 }
 
 export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -319,7 +329,7 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DeploymentManagerDeploymentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -338,11 +348,13 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: DeploymentManagerDeploymentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

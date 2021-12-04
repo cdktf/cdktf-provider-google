@@ -154,6 +154,8 @@ export function cloudRunServiceMetadataToTerraform(struct?: CloudRunServiceMetad
 }
 
 export class CloudRunServiceMetadataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -164,7 +166,7 @@ export class CloudRunServiceMetadataOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CloudRunServiceMetadata | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._annotations) {
       hasAnyValues = true;
@@ -183,11 +185,13 @@ export class CloudRunServiceMetadataOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CloudRunServiceMetadata | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._annotations = undefined;
       this._labels = undefined;
       this._namespace = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._annotations = value.annotations;
       this._labels = value.labels;
       this._namespace = value.namespace;
@@ -298,6 +302,8 @@ export function cloudRunServiceTemplateMetadataToTerraform(struct?: CloudRunServ
 }
 
 export class CloudRunServiceTemplateMetadataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -308,7 +314,7 @@ export class CloudRunServiceTemplateMetadataOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): CloudRunServiceTemplateMetadata | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._annotations) {
       hasAnyValues = true;
@@ -331,12 +337,14 @@ export class CloudRunServiceTemplateMetadataOutputReference extends cdktf.Comple
 
   public set internalValue(value: CloudRunServiceTemplateMetadata | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._annotations = undefined;
       this._labels = undefined;
       this._name = undefined;
       this._namespace = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._annotations = value.annotations;
       this._labels = value.labels;
       this._name = value.name;
@@ -465,6 +473,8 @@ export function cloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObj
 }
 
 export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -475,7 +485,7 @@ export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObject
   }
 
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -486,9 +496,11 @@ export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObject
 
   public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -533,6 +545,8 @@ export function cloudRunServiceTemplateSpecContainersEnvFromConfigMapRefToTerraf
 }
 
 export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -543,13 +557,13 @@ export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputRefer
   }
 
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._optional) {
       hasAnyValues = true;
       internalValueResult.optional = this._optional;
     }
-    if (this._localObjectReference) {
+    if (this._localObjectReference?.internalValue) {
       hasAnyValues = true;
       internalValueResult.localObjectReference = this._localObjectReference?.internalValue;
     }
@@ -558,10 +572,12 @@ export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputRefer
 
   public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._optional = undefined;
       this._localObjectReference.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._optional = value.optional;
       this._localObjectReference.internalValue = value.localObjectReference;
     }
@@ -621,6 +637,8 @@ export function cloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObject
 }
 
 export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -631,7 +649,7 @@ export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectRef
   }
 
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -642,9 +660,11 @@ export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectRef
 
   public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -689,6 +709,8 @@ export function cloudRunServiceTemplateSpecContainersEnvFromSecretRefToTerraform
 }
 
 export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -699,13 +721,13 @@ export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReferenc
   }
 
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromSecretRef | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._optional) {
       hasAnyValues = true;
       internalValueResult.optional = this._optional;
     }
-    if (this._localObjectReference) {
+    if (this._localObjectReference?.internalValue) {
       hasAnyValues = true;
       internalValueResult.localObjectReference = this._localObjectReference?.internalValue;
     }
@@ -714,10 +736,12 @@ export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReferenc
 
   public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvFromSecretRef | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._optional = undefined;
       this._localObjectReference.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._optional = value.optional;
       this._localObjectReference.internalValue = value.localObjectReference;
     }
@@ -854,6 +878,8 @@ export function cloudRunServiceTemplateSpecContainersResourcesToTerraform(struct
 }
 
 export class CloudRunServiceTemplateSpecContainersResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -864,7 +890,7 @@ export class CloudRunServiceTemplateSpecContainersResourcesOutputReference exten
   }
 
   public get internalValue(): CloudRunServiceTemplateSpecContainersResources | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._limits) {
       hasAnyValues = true;
@@ -879,10 +905,12 @@ export class CloudRunServiceTemplateSpecContainersResourcesOutputReference exten
 
   public set internalValue(value: CloudRunServiceTemplateSpecContainersResources | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._limits = undefined;
       this._requests = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._limits = value.limits;
       this._requests = value.requests;
     }
@@ -1059,6 +1087,8 @@ export function cloudRunServiceTemplateSpecToTerraform(struct?: CloudRunServiceT
 }
 
 export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1069,7 +1099,7 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): CloudRunServiceTemplateSpec | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._containerConcurrency) {
       hasAnyValues = true;
@@ -1092,12 +1122,14 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: CloudRunServiceTemplateSpec | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._containerConcurrency = undefined;
       this._serviceAccountName = undefined;
       this._timeoutSeconds = undefined;
       this._containers = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._containerConcurrency = value.containerConcurrency;
       this._serviceAccountName = value.serviceAccountName;
       this._timeoutSeconds = value.timeoutSeconds;
@@ -1197,6 +1229,8 @@ export function cloudRunServiceTemplateToTerraform(struct?: CloudRunServiceTempl
 }
 
 export class CloudRunServiceTemplateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1207,13 +1241,13 @@ export class CloudRunServiceTemplateOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CloudRunServiceTemplate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._metadata) {
+    if (this._metadata?.internalValue) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata?.internalValue;
     }
-    if (this._spec) {
+    if (this._spec?.internalValue) {
       hasAnyValues = true;
       internalValueResult.spec = this._spec?.internalValue;
     }
@@ -1222,10 +1256,12 @@ export class CloudRunServiceTemplateOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CloudRunServiceTemplate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._metadata.internalValue = undefined;
       this._spec.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._metadata.internalValue = value.metadata;
       this._spec.internalValue = value.spec;
     }
@@ -1291,6 +1327,8 @@ export function cloudRunServiceTimeoutsToTerraform(struct?: CloudRunServiceTimeo
 }
 
 export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1301,7 +1339,7 @@ export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CloudRunServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1320,11 +1358,13 @@ export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CloudRunServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

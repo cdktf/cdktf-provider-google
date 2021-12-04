@@ -70,6 +70,8 @@ export function dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct?
 }
 
 export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -80,7 +82,7 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
   }
 
   public get internalValue(): DataprocClusterClusterConfigAutoscalingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._policyUri) {
       hasAnyValues = true;
@@ -91,9 +93,11 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
 
   public set internalValue(value: DataprocClusterClusterConfigAutoscalingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._policyUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._policyUri = value.policyUri;
     }
   }
@@ -131,6 +135,8 @@ export function dataprocClusterClusterConfigEncryptionConfigToTerraform(struct?:
 }
 
 export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -141,7 +147,7 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
   }
 
   public get internalValue(): DataprocClusterClusterConfigEncryptionConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kmsKeyName) {
       hasAnyValues = true;
@@ -152,9 +158,11 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
 
   public set internalValue(value: DataprocClusterClusterConfigEncryptionConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kmsKeyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kmsKeyName = value.kmsKeyName;
     }
   }
@@ -206,6 +214,8 @@ export function dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConf
 }
 
 export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -216,7 +226,7 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   }
 
   public get internalValue(): DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableIntegrityMonitoring) {
       hasAnyValues = true;
@@ -235,11 +245,13 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
 
   public set internalValue(value: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableIntegrityMonitoring = undefined;
       this._enableSecureBoot = undefined;
       this._enableVtpm = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
       this._enableSecureBoot = value.enableSecureBoot;
       this._enableVtpm = value.enableVtpm;
@@ -370,6 +382,8 @@ export function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?:
 }
 
 export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -380,7 +394,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
 
   public get internalValue(): DataprocClusterClusterConfigGceClusterConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._internalIpOnly) {
       hasAnyValues = true;
@@ -414,7 +428,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
-    if (this._shieldedInstanceConfig) {
+    if (this._shieldedInstanceConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
@@ -423,6 +437,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
 
   public set internalValue(value: DataprocClusterClusterConfigGceClusterConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._internalIpOnly = undefined;
       this._metadata = undefined;
       this._network = undefined;
@@ -434,6 +449,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
       this._shieldedInstanceConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._internalIpOnly = value.internalIpOnly;
       this._metadata = value.metadata;
       this._network = value.network;
@@ -677,6 +693,8 @@ export function dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform(st
 }
 
 export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -687,7 +705,7 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   }
 
   public get internalValue(): DataprocClusterClusterConfigMasterConfigDiskConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bootDiskSizeGb) {
       hasAnyValues = true;
@@ -706,11 +724,13 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
 
   public set internalValue(value: DataprocClusterClusterConfigMasterConfigDiskConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bootDiskSizeGb = undefined;
       this._bootDiskType = undefined;
       this._numLocalSsds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bootDiskSizeGb = value.bootDiskSizeGb;
       this._bootDiskType = value.bootDiskType;
       this._numLocalSsds = value.numLocalSsds;
@@ -820,6 +840,8 @@ export function dataprocClusterClusterConfigMasterConfigToTerraform(struct?: Dat
 }
 
 export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -830,7 +852,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
 
   public get internalValue(): DataprocClusterClusterConfigMasterConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._imageUri) {
       hasAnyValues = true;
@@ -852,7 +874,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig) {
+    if (this._diskConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -861,6 +883,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
 
   public set internalValue(value: DataprocClusterClusterConfigMasterConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._imageUri = undefined;
       this._machineType = undefined;
       this._minCpuPlatform = undefined;
@@ -869,6 +892,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
       this._diskConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._imageUri = value.imageUri;
       this._machineType = value.machineType;
       this._minCpuPlatform = value.minCpuPlatform;
@@ -1009,6 +1033,8 @@ export function dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToT
 }
 
 export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1019,7 +1045,7 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   }
 
   public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bootDiskSizeGb) {
       hasAnyValues = true;
@@ -1038,11 +1064,13 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
 
   public set internalValue(value: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bootDiskSizeGb = undefined;
       this._bootDiskType = undefined;
       this._numLocalSsds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bootDiskSizeGb = value.bootDiskSizeGb;
       this._bootDiskType = value.bootDiskType;
       this._numLocalSsds = value.numLocalSsds;
@@ -1124,6 +1152,8 @@ export function dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(s
 }
 
 export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1134,13 +1164,13 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   }
 
   public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._numInstances) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._diskConfig) {
+    if (this._diskConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -1149,10 +1179,12 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
 
   public set internalValue(value: DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._numInstances = undefined;
       this._diskConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._numInstances = value.numInstances;
       this._diskConfig.internalValue = value.diskConfig;
     }
@@ -1311,6 +1343,8 @@ export function dataprocClusterClusterConfigSecurityConfigKerberosConfigToTerraf
 }
 
 export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1321,7 +1355,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   }
 
   public get internalValue(): DataprocClusterClusterConfigSecurityConfigKerberosConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._crossRealmTrustAdminServer) {
       hasAnyValues = true;
@@ -1388,6 +1422,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
 
   public set internalValue(value: DataprocClusterClusterConfigSecurityConfigKerberosConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._crossRealmTrustAdminServer = undefined;
       this._crossRealmTrustKdc = undefined;
       this._crossRealmTrustRealm = undefined;
@@ -1405,6 +1440,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
       this._truststoreUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._crossRealmTrustAdminServer = value.crossRealmTrustAdminServer;
       this._crossRealmTrustKdc = value.crossRealmTrustKdc;
       this._crossRealmTrustRealm = value.crossRealmTrustRealm;
@@ -1677,6 +1713,8 @@ export function dataprocClusterClusterConfigSecurityConfigToTerraform(struct?: D
 }
 
 export class DataprocClusterClusterConfigSecurityConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1687,9 +1725,9 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
   }
 
   public get internalValue(): DataprocClusterClusterConfigSecurityConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kerberosConfig) {
+    if (this._kerberosConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.kerberosConfig = this._kerberosConfig?.internalValue;
     }
@@ -1698,9 +1736,11 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
 
   public set internalValue(value: DataprocClusterClusterConfigSecurityConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kerberosConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kerberosConfig.internalValue = value.kerberosConfig;
     }
   }
@@ -1752,6 +1792,8 @@ export function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: D
 }
 
 export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1762,7 +1804,7 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   }
 
   public get internalValue(): DataprocClusterClusterConfigSoftwareConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._imageVersion) {
       hasAnyValues = true;
@@ -1781,11 +1823,13 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
 
   public set internalValue(value: DataprocClusterClusterConfigSoftwareConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._imageVersion = undefined;
       this._optionalComponents = undefined;
       this._overrideProperties = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._imageVersion = value.imageVersion;
       this._optionalComponents = value.optionalComponents;
       this._overrideProperties = value.overrideProperties;
@@ -1901,6 +1945,8 @@ export function dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform(st
 }
 
 export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1911,7 +1957,7 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   }
 
   public get internalValue(): DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bootDiskSizeGb) {
       hasAnyValues = true;
@@ -1930,11 +1976,13 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
 
   public set internalValue(value: DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bootDiskSizeGb = undefined;
       this._bootDiskType = undefined;
       this._numLocalSsds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bootDiskSizeGb = value.bootDiskSizeGb;
       this._bootDiskType = value.bootDiskType;
       this._numLocalSsds = value.numLocalSsds;
@@ -2044,6 +2092,8 @@ export function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: Dat
 }
 
 export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2054,7 +2104,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
 
   public get internalValue(): DataprocClusterClusterConfigWorkerConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._imageUri) {
       hasAnyValues = true;
@@ -2076,7 +2126,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig) {
+    if (this._diskConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -2085,6 +2135,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
 
   public set internalValue(value: DataprocClusterClusterConfigWorkerConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._imageUri = undefined;
       this._machineType = undefined;
       this._minCpuPlatform = undefined;
@@ -2093,6 +2144,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
       this._diskConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._imageUri = value.imageUri;
       this._machineType = value.machineType;
       this._minCpuPlatform = value.minCpuPlatform;
@@ -2289,6 +2341,8 @@ export function dataprocClusterClusterConfigToTerraform(struct?: DataprocCluster
 }
 
 export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2299,7 +2353,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): DataprocClusterClusterConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._stagingBucket) {
       hasAnyValues = true;
@@ -2309,15 +2363,15 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.tempBucket = this._tempBucket;
     }
-    if (this._autoscalingConfig) {
+    if (this._autoscalingConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
     }
-    if (this._encryptionConfig) {
+    if (this._encryptionConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.encryptionConfig = this._encryptionConfig?.internalValue;
     }
-    if (this._gceClusterConfig) {
+    if (this._gceClusterConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gceClusterConfig = this._gceClusterConfig?.internalValue;
     }
@@ -2325,23 +2379,23 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.initializationAction = this._initializationAction;
     }
-    if (this._masterConfig) {
+    if (this._masterConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.masterConfig = this._masterConfig?.internalValue;
     }
-    if (this._preemptibleWorkerConfig) {
+    if (this._preemptibleWorkerConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.preemptibleWorkerConfig = this._preemptibleWorkerConfig?.internalValue;
     }
-    if (this._securityConfig) {
+    if (this._securityConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.securityConfig = this._securityConfig?.internalValue;
     }
-    if (this._softwareConfig) {
+    if (this._softwareConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
     }
-    if (this._workerConfig) {
+    if (this._workerConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.workerConfig = this._workerConfig?.internalValue;
     }
@@ -2350,6 +2404,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: DataprocClusterClusterConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._stagingBucket = undefined;
       this._tempBucket = undefined;
       this._autoscalingConfig.internalValue = undefined;
@@ -2363,6 +2418,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       this._workerConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._stagingBucket = value.stagingBucket;
       this._tempBucket = value.tempBucket;
       this._autoscalingConfig.internalValue = value.autoscalingConfig;
@@ -2582,6 +2638,8 @@ export function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeo
 }
 
 export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2592,7 +2650,7 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): DataprocClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2611,11 +2669,13 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: DataprocClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

@@ -135,6 +135,8 @@ export function storageBucketObjectCustomerEncryptionToTerraform(struct?: Storag
 }
 
 export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -145,7 +147,7 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
   }
 
   public get internalValue(): StorageBucketObjectCustomerEncryption | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._encryptionAlgorithm) {
       hasAnyValues = true;
@@ -160,10 +162,12 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
 
   public set internalValue(value: StorageBucketObjectCustomerEncryption | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._encryptionAlgorithm = undefined;
       this._encryptionKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._encryptionAlgorithm = value.encryptionAlgorithm;
       this._encryptionKey = value.encryptionKey;
     }
@@ -226,6 +230,8 @@ export function storageBucketObjectTimeoutsToTerraform(struct?: StorageBucketObj
 }
 
 export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -236,7 +242,7 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): StorageBucketObjectTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -255,11 +261,13 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: StorageBucketObjectTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

@@ -120,6 +120,8 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom
 }
 
 export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -130,7 +132,7 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOut
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identities) {
       hasAnyValues = true;
@@ -145,10 +147,12 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOut
 
   public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identities = undefined;
       this._identityType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identities = value.identities;
       this._identityType = value.identityType;
     }
@@ -274,6 +278,8 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToTo
 }
 
 export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -284,7 +290,7 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resources) {
       hasAnyValues = true;
@@ -299,10 +305,12 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
 
   public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resources = undefined;
       this._operations = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
       this._operations = value.operations;
     }
@@ -443,6 +451,8 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFr
 }
 
 export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -453,7 +463,7 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identities) {
       hasAnyValues = true;
@@ -472,11 +482,13 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
 
   public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identities = undefined;
       this._identityType = undefined;
       this._sources = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identities = value.identities;
       this._identityType = value.identityType;
       this._sources = value.sources;
@@ -623,6 +635,8 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressTo
 }
 
 export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -633,7 +647,7 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resources) {
       hasAnyValues = true;
@@ -648,10 +662,12 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
 
   public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resources = undefined;
       this._operations = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
       this._operations = value.operations;
     }
@@ -745,6 +761,8 @@ export function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToT
 }
 
 export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -755,7 +773,7 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterSpecVpcAccessibleServices | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedServices) {
       hasAnyValues = true;
@@ -770,10 +788,12 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
 
   public set internalValue(value: AccessContextManagerServicePerimeterSpecVpcAccessibleServices | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedServices = undefined;
       this._enableRestriction = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedServices = value.allowedServices;
       this._enableRestriction = value.enableRestriction;
     }
@@ -881,6 +901,8 @@ export function accessContextManagerServicePerimeterSpecToTerraform(struct?: Acc
 }
 
 export class AccessContextManagerServicePerimeterSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -891,7 +913,7 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterSpec | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accessLevels) {
       hasAnyValues = true;
@@ -913,7 +935,7 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.ingressPolicies = this._ingressPolicies;
     }
-    if (this._vpcAccessibleServices) {
+    if (this._vpcAccessibleServices?.internalValue) {
       hasAnyValues = true;
       internalValueResult.vpcAccessibleServices = this._vpcAccessibleServices?.internalValue;
     }
@@ -922,6 +944,7 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
 
   public set internalValue(value: AccessContextManagerServicePerimeterSpec | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accessLevels = undefined;
       this._resources = undefined;
       this._restrictedServices = undefined;
@@ -930,6 +953,7 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
       this._vpcAccessibleServices.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accessLevels = value.accessLevels;
       this._resources = value.resources;
       this._restrictedServices = value.restrictedServices;
@@ -1068,6 +1092,8 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressFr
 }
 
 export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1078,7 +1104,7 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromO
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identities) {
       hasAnyValues = true;
@@ -1093,10 +1119,12 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromO
 
   public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identities = undefined;
       this._identityType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identities = value.identities;
       this._identityType = value.identityType;
     }
@@ -1222,6 +1250,8 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressTo
 }
 
 export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1232,7 +1262,7 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resources) {
       hasAnyValues = true;
@@ -1247,10 +1277,12 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
 
   public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resources = undefined;
       this._operations = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
       this._operations = value.operations;
     }
@@ -1391,6 +1423,8 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
 }
 
 export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1401,7 +1435,7 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identities) {
       hasAnyValues = true;
@@ -1420,11 +1454,13 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
 
   public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identities = undefined;
       this._identityType = undefined;
       this._sources = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identities = value.identities;
       this._identityType = value.identityType;
       this._sources = value.sources;
@@ -1571,6 +1607,8 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
 }
 
 export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1581,7 +1619,7 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resources) {
       hasAnyValues = true;
@@ -1596,10 +1634,12 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
 
   public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resources = undefined;
       this._operations = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
       this._operations = value.operations;
     }
@@ -1693,6 +1733,8 @@ export function accessContextManagerServicePerimeterStatusVpcAccessibleServicesT
 }
 
 export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1703,7 +1745,7 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterStatusVpcAccessibleServices | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedServices) {
       hasAnyValues = true;
@@ -1718,10 +1760,12 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
 
   public set internalValue(value: AccessContextManagerServicePerimeterStatusVpcAccessibleServices | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedServices = undefined;
       this._enableRestriction = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedServices = value.allowedServices;
       this._enableRestriction = value.enableRestriction;
     }
@@ -1829,6 +1873,8 @@ export function accessContextManagerServicePerimeterStatusToTerraform(struct?: A
 }
 
 export class AccessContextManagerServicePerimeterStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1839,7 +1885,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterStatus | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accessLevels) {
       hasAnyValues = true;
@@ -1861,7 +1907,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
       hasAnyValues = true;
       internalValueResult.ingressPolicies = this._ingressPolicies;
     }
-    if (this._vpcAccessibleServices) {
+    if (this._vpcAccessibleServices?.internalValue) {
       hasAnyValues = true;
       internalValueResult.vpcAccessibleServices = this._vpcAccessibleServices?.internalValue;
     }
@@ -1870,6 +1916,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
 
   public set internalValue(value: AccessContextManagerServicePerimeterStatus | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accessLevels = undefined;
       this._resources = undefined;
       this._restrictedServices = undefined;
@@ -1878,6 +1925,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
       this._vpcAccessibleServices.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accessLevels = value.accessLevels;
       this._resources = value.resources;
       this._restrictedServices = value.restrictedServices;
@@ -2013,6 +2061,8 @@ export function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?:
 }
 
 export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2023,7 +2073,7 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2042,11 +2092,13 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
 
   public set internalValue(value: AccessContextManagerServicePerimeterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

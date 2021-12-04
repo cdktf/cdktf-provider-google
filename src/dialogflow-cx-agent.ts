@@ -110,6 +110,8 @@ export function dialogflowCxAgentSpeechToTextSettingsToTerraform(struct?: Dialog
 }
 
 export class DialogflowCxAgentSpeechToTextSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -120,7 +122,7 @@ export class DialogflowCxAgentSpeechToTextSettingsOutputReference extends cdktf.
   }
 
   public get internalValue(): DialogflowCxAgentSpeechToTextSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableSpeechAdaptation) {
       hasAnyValues = true;
@@ -131,9 +133,11 @@ export class DialogflowCxAgentSpeechToTextSettingsOutputReference extends cdktf.
 
   public set internalValue(value: DialogflowCxAgentSpeechToTextSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableSpeechAdaptation = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableSpeechAdaptation = value.enableSpeechAdaptation;
     }
   }
@@ -182,6 +186,8 @@ export function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentT
 }
 
 export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -192,7 +198,7 @@ export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): DialogflowCxAgentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -211,11 +217,13 @@ export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: DialogflowCxAgentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

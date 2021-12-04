@@ -90,6 +90,8 @@ export function notebooksEnvironmentContainerImageToTerraform(struct?: Notebooks
 }
 
 export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -100,7 +102,7 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
   }
 
   public get internalValue(): NotebooksEnvironmentContainerImage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._repository) {
       hasAnyValues = true;
@@ -115,10 +117,12 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
 
   public set internalValue(value: NotebooksEnvironmentContainerImage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._repository = undefined;
       this._tag = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._repository = value.repository;
       this._tag = value.tag;
     }
@@ -181,6 +185,8 @@ export function notebooksEnvironmentTimeoutsToTerraform(struct?: NotebooksEnviro
 }
 
 export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -191,7 +197,7 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): NotebooksEnvironmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -210,11 +216,13 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: NotebooksEnvironmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -304,6 +312,8 @@ export function notebooksEnvironmentVmImageToTerraform(struct?: NotebooksEnviron
 }
 
 export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -314,7 +324,7 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): NotebooksEnvironmentVmImage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._imageFamily) {
       hasAnyValues = true;
@@ -333,11 +343,13 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: NotebooksEnvironmentVmImage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._imageFamily = undefined;
       this._imageName = undefined;
       this._project = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._imageFamily = value.imageFamily;
       this._imageName = value.imageName;
       this._project = value.project;

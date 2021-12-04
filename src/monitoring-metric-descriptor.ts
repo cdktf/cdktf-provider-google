@@ -151,6 +151,8 @@ export function monitoringMetricDescriptorMetadataToTerraform(struct?: Monitorin
 }
 
 export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -161,7 +163,7 @@ export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MonitoringMetricDescriptorMetadata | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ingestDelay) {
       hasAnyValues = true;
@@ -176,10 +178,12 @@ export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.Com
 
   public set internalValue(value: MonitoringMetricDescriptorMetadata | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ingestDelay = undefined;
       this._samplePeriod = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ingestDelay = value.ingestDelay;
       this._samplePeriod = value.samplePeriod;
     }
@@ -245,6 +249,8 @@ export function monitoringMetricDescriptorTimeoutsToTerraform(struct?: Monitorin
 }
 
 export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -255,7 +261,7 @@ export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MonitoringMetricDescriptorTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -274,11 +280,13 @@ export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: MonitoringMetricDescriptorTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

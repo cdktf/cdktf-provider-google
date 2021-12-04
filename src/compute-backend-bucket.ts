@@ -167,6 +167,8 @@ export function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackend
 }
 
 export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -177,7 +179,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): ComputeBackendBucketCdnPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cacheMode) {
       hasAnyValues = true;
@@ -216,6 +218,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: ComputeBackendBucketCdnPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cacheMode = undefined;
       this._clientTtl = undefined;
       this._defaultTtl = undefined;
@@ -226,6 +229,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       this._negativeCachingPolicy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cacheMode = value.cacheMode;
       this._clientTtl = value.clientTtl;
       this._defaultTtl = value.defaultTtl;
@@ -394,6 +398,8 @@ export function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendB
 }
 
 export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -404,7 +410,7 @@ export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): ComputeBackendBucketTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -423,11 +429,13 @@ export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: ComputeBackendBucketTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

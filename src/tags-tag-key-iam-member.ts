@@ -54,6 +54,8 @@ export function tagsTagKeyIamMemberConditionToTerraform(struct?: TagsTagKeyIamMe
 }
 
 export class TagsTagKeyIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -64,7 +66,7 @@ export class TagsTagKeyIamMemberConditionOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): TagsTagKeyIamMemberCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -83,11 +85,13 @@ export class TagsTagKeyIamMemberConditionOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: TagsTagKeyIamMemberCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._title = value.title;

@@ -125,6 +125,8 @@ export function containerNodePoolAutoscalingToTerraform(struct?: ContainerNodePo
 }
 
 export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -135,7 +137,7 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): ContainerNodePoolAutoscaling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxNodeCount) {
       hasAnyValues = true;
@@ -150,10 +152,12 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: ContainerNodePoolAutoscaling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxNodeCount = undefined;
       this._minNodeCount = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxNodeCount = value.maxNodeCount;
       this._minNodeCount = value.minNodeCount;
     }
@@ -212,6 +216,8 @@ export function containerNodePoolManagementToTerraform(struct?: ContainerNodePoo
 }
 
 export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -222,7 +228,7 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ContainerNodePoolManagement | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._autoRepair) {
       hasAnyValues = true;
@@ -237,10 +243,12 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ContainerNodePoolManagement | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._autoRepair = undefined;
       this._autoUpgrade = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._autoRepair = value.autoRepair;
       this._autoUpgrade = value.autoUpgrade;
     }
@@ -359,6 +367,8 @@ export function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(str
 }
 
 export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -369,7 +379,7 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   }
 
   public get internalValue(): ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableIntegrityMonitoring) {
       hasAnyValues = true;
@@ -384,10 +394,12 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
 
   public set internalValue(value: ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableIntegrityMonitoring = undefined;
       this._enableSecureBoot = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
       this._enableSecureBoot = value.enableSecureBoot;
     }
@@ -452,6 +464,8 @@ export function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(str
 }
 
 export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -462,7 +476,7 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   }
 
   public get internalValue(): ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._mode) {
       hasAnyValues = true;
@@ -477,10 +491,12 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
 
   public set internalValue(value: ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._mode = undefined;
       this._nodeMetadata = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
       this._nodeMetadata = value.nodeMetadata;
     }
@@ -643,6 +659,8 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
 }
 
 export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -653,7 +671,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ContainerNodePoolNodeConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._diskSizeGb) {
       hasAnyValues = true;
@@ -711,11 +729,11 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.taint = this._taint;
     }
-    if (this._shieldedInstanceConfig) {
+    if (this._shieldedInstanceConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
-    if (this._workloadMetadataConfig) {
+    if (this._workloadMetadataConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.workloadMetadataConfig = this._workloadMetadataConfig?.internalValue;
     }
@@ -724,6 +742,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ContainerNodePoolNodeConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._diskSizeGb = undefined;
       this._diskType = undefined;
       this._guestAccelerator = undefined;
@@ -742,6 +761,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._workloadMetadataConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._diskSizeGb = value.diskSizeGb;
       this._diskType = value.diskType;
       this._guestAccelerator = value.guestAccelerator;
@@ -1049,6 +1069,8 @@ export function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolT
 }
 
 export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1059,7 +1081,7 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ContainerNodePoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1078,11 +1100,13 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ContainerNodePoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1164,6 +1188,8 @@ export function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNo
 }
 
 export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1174,7 +1200,7 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ContainerNodePoolUpgradeSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxSurge) {
       hasAnyValues = true;
@@ -1189,10 +1215,12 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
 
   public set internalValue(value: ContainerNodePoolUpgradeSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxSurge = undefined;
       this._maxUnavailable = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxSurge = value.maxSurge;
       this._maxUnavailable = value.maxUnavailable;
     }

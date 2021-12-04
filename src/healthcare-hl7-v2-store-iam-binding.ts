@@ -54,6 +54,8 @@ export function healthcareHl7V2StoreIamBindingConditionToTerraform(struct?: Heal
 }
 
 export class HealthcareHl7V2StoreIamBindingConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -64,7 +66,7 @@ export class HealthcareHl7V2StoreIamBindingConditionOutputReference extends cdkt
   }
 
   public get internalValue(): HealthcareHl7V2StoreIamBindingCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -83,11 +85,13 @@ export class HealthcareHl7V2StoreIamBindingConditionOutputReference extends cdkt
 
   public set internalValue(value: HealthcareHl7V2StoreIamBindingCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._title = value.title;

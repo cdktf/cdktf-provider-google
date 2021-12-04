@@ -151,6 +151,8 @@ export function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstance
 }
 
 export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -161,7 +163,7 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): SqlDatabaseInstanceClone | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._pointInTime) {
       hasAnyValues = true;
@@ -176,10 +178,12 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: SqlDatabaseInstanceClone | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._pointInTime = undefined;
       this._sourceInstanceName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._pointInTime = value.pointInTime;
       this._sourceInstanceName = value.sourceInstanceName;
     }
@@ -304,6 +308,8 @@ export function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlD
 }
 
 export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -314,7 +320,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   }
 
   public get internalValue(): SqlDatabaseInstanceReplicaConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._caCertificate) {
       hasAnyValues = true;
@@ -365,6 +371,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
 
   public set internalValue(value: SqlDatabaseInstanceReplicaConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._caCertificate = undefined;
       this._clientCertificate = undefined;
       this._clientKey = undefined;
@@ -378,6 +385,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
       this._verifyServerCertificate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._caCertificate = value.caCertificate;
       this._clientCertificate = value.clientCertificate;
       this._clientKey = value.clientKey;
@@ -602,6 +610,8 @@ export function sqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: SqlD
 }
 
 export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -612,7 +622,7 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   }
 
   public get internalValue(): SqlDatabaseInstanceRestoreBackupContext | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._backupRunId) {
       hasAnyValues = true;
@@ -631,11 +641,13 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
 
   public set internalValue(value: SqlDatabaseInstanceRestoreBackupContext | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._backupRunId = undefined;
       this._instanceId = undefined;
       this._project = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._backupRunId = value.backupRunId;
       this._instanceId = value.instanceId;
       this._project = value.project;
@@ -714,6 +726,8 @@ export function sqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
 }
 
 export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -724,7 +738,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._retainedBackups) {
       hasAnyValues = true;
@@ -739,10 +753,12 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
 
   public set internalValue(value: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._retainedBackups = undefined;
       this._retentionUnit = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._retainedBackups = value.retainedBackups;
       this._retentionUnit = value.retentionUnit;
     }
@@ -839,6 +855,8 @@ export function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct
 }
 
 export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -849,7 +867,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsBackupConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._binaryLogEnabled) {
       hasAnyValues = true;
@@ -875,7 +893,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
       hasAnyValues = true;
       internalValueResult.transactionLogRetentionDays = this._transactionLogRetentionDays;
     }
-    if (this._backupRetentionSettings) {
+    if (this._backupRetentionSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.backupRetentionSettings = this._backupRetentionSettings?.internalValue;
     }
@@ -884,6 +902,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
 
   public set internalValue(value: SqlDatabaseInstanceSettingsBackupConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._binaryLogEnabled = undefined;
       this._enabled = undefined;
       this._location = undefined;
@@ -893,6 +912,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
       this._backupRetentionSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._binaryLogEnabled = value.binaryLogEnabled;
       this._enabled = value.enabled;
       this._location = value.location;
@@ -1082,6 +1102,8 @@ export function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: Sq
 }
 
 export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1092,7 +1114,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsInsightsConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._queryInsightsEnabled) {
       hasAnyValues = true;
@@ -1115,12 +1137,14 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
 
   public set internalValue(value: SqlDatabaseInstanceSettingsInsightsConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._queryInsightsEnabled = undefined;
       this._queryStringLength = undefined;
       this._recordApplicationTags = undefined;
       this._recordClientAddress = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._queryInsightsEnabled = value.queryInsightsEnabled;
       this._queryStringLength = value.queryStringLength;
       this._recordApplicationTags = value.recordApplicationTags;
@@ -1258,6 +1282,8 @@ export function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: S
 }
 
 export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1268,7 +1294,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsIpConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ipv4Enabled) {
       hasAnyValues = true;
@@ -1291,12 +1317,14 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
 
   public set internalValue(value: SqlDatabaseInstanceSettingsIpConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ipv4Enabled = undefined;
       this._privateNetwork = undefined;
       this._requireSsl = undefined;
       this._authorizedNetworks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ipv4Enabled = value.ipv4Enabled;
       this._privateNetwork = value.privateNetwork;
       this._requireSsl = value.requireSsl;
@@ -1396,6 +1424,8 @@ export function sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct?
 }
 
 export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1406,7 +1436,7 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsLocationPreference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._followGaeApplication) {
       hasAnyValues = true;
@@ -1421,10 +1451,12 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
 
   public set internalValue(value: SqlDatabaseInstanceSettingsLocationPreference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._followGaeApplication = undefined;
       this._zone = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._followGaeApplication = value.followGaeApplication;
       this._zone = value.zone;
     }
@@ -1496,6 +1528,8 @@ export function sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct?:
 }
 
 export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1506,7 +1540,7 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsMaintenanceWindow | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._day) {
       hasAnyValues = true;
@@ -1525,11 +1559,13 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
 
   public set internalValue(value: SqlDatabaseInstanceSettingsMaintenanceWindow | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._day = undefined;
       this._hour = undefined;
       this._updateTrack = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._day = value.day;
       this._hour = value.hour;
       this._updateTrack = value.updateTrack;
@@ -1733,6 +1769,8 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
 }
 
 export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1743,7 +1781,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): SqlDatabaseInstanceSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._activationPolicy) {
       hasAnyValues = true;
@@ -1797,7 +1835,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.userLabels = this._userLabels;
     }
-    if (this._backupConfiguration) {
+    if (this._backupConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.backupConfiguration = this._backupConfiguration?.internalValue;
     }
@@ -1805,19 +1843,19 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.databaseFlags = this._databaseFlags;
     }
-    if (this._insightsConfig) {
+    if (this._insightsConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.insightsConfig = this._insightsConfig?.internalValue;
     }
-    if (this._ipConfiguration) {
+    if (this._ipConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
     }
-    if (this._locationPreference) {
+    if (this._locationPreference?.internalValue) {
       hasAnyValues = true;
       internalValueResult.locationPreference = this._locationPreference?.internalValue;
     }
-    if (this._maintenanceWindow) {
+    if (this._maintenanceWindow?.internalValue) {
       hasAnyValues = true;
       internalValueResult.maintenanceWindow = this._maintenanceWindow?.internalValue;
     }
@@ -1826,6 +1864,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: SqlDatabaseInstanceSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._activationPolicy = undefined;
       this._authorizedGaeApplications = undefined;
       this._availabilityType = undefined;
@@ -1847,6 +1886,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._maintenanceWindow.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._activationPolicy = value.activationPolicy;
       this._authorizedGaeApplications = value.authorizedGaeApplications;
       this._availabilityType = value.availabilityType;
@@ -2200,6 +2240,8 @@ export function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInsta
 }
 
 export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2210,7 +2252,7 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): SqlDatabaseInstanceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2229,11 +2271,13 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: SqlDatabaseInstanceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

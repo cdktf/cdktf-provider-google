@@ -85,6 +85,8 @@ export function privatecaCaPoolIssuancePolicyAllowedIssuanceModesToTerraform(str
 }
 
 export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -95,7 +97,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowConfigBasedIssuance) {
       hasAnyValues = true;
@@ -110,10 +112,12 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowConfigBasedIssuance = undefined;
       this._allowCsrBasedIssuance = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowConfigBasedIssuance = value.allowConfigBasedIssuance;
       this._allowCsrBasedIssuance = value.allowCsrBasedIssuance;
     }
@@ -165,6 +169,8 @@ export function privatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveToTerra
 }
 
 export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -175,7 +181,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputRefe
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._signatureAlgorithm) {
       hasAnyValues = true;
@@ -186,9 +192,11 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputRefe
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._signatureAlgorithm = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._signatureAlgorithm = value.signatureAlgorithm;
     }
   }
@@ -235,6 +243,8 @@ export function privatecaCaPoolIssuancePolicyAllowedKeyTypesRsaToTerraform(struc
 }
 
 export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -245,7 +255,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxModulusSize) {
       hasAnyValues = true;
@@ -260,10 +270,12 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxModulusSize = undefined;
       this._minModulusSize = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxModulusSize = value.maxModulusSize;
       this._minModulusSize = value.minModulusSize;
     }
@@ -347,6 +359,8 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsO
 }
 
 export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectIdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -357,7 +371,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObje
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._objectIdPath) {
       hasAnyValues = true;
@@ -368,9 +382,11 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObje
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._objectIdPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._objectIdPath = value.objectIdPath;
     }
   }
@@ -453,6 +469,8 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesCaOptionsToTerraform(
 }
 
 export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -463,7 +481,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._isCa) {
       hasAnyValues = true;
@@ -478,10 +496,12 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._isCa = undefined;
       this._maxIssuerPathLength = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._isCa = value.isCa;
       this._maxIssuerPathLength = value.maxIssuerPathLength;
     }
@@ -595,6 +615,8 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageT
 }
 
 export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -605,7 +627,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._certSign) {
       hasAnyValues = true;
@@ -648,6 +670,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._certSign = undefined;
       this._contentCommitment = undefined;
       this._crlSign = undefined;
@@ -659,6 +682,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
       this._keyEncipherment = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._certSign = value.certSign;
       this._contentCommitment = value.contentCommitment;
       this._crlSign = value.crlSign;
@@ -870,6 +894,8 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUs
 }
 
 export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -880,7 +906,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientAuth) {
       hasAnyValues = true;
@@ -911,6 +937,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientAuth = undefined;
       this._codeSigning = undefined;
       this._emailProtection = undefined;
@@ -919,6 +946,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
       this._timeStamping = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientAuth = value.clientAuth;
       this._codeSigning = value.codeSigning;
       this._emailProtection = value.emailProtection;
@@ -1077,6 +1105,8 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageToTerraform(s
 }
 
 export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1087,13 +1117,13 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseKeyUsage) {
+    if (this._baseKeyUsage?.internalValue) {
       hasAnyValues = true;
       internalValueResult.baseKeyUsage = this._baseKeyUsage?.internalValue;
     }
-    if (this._extendedKeyUsage) {
+    if (this._extendedKeyUsage?.internalValue) {
       hasAnyValues = true;
       internalValueResult.extendedKeyUsage = this._extendedKeyUsage?.internalValue;
     }
@@ -1106,11 +1136,13 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._baseKeyUsage.internalValue = undefined;
       this._extendedKeyUsage.internalValue = undefined;
       this._unknownExtendedKeyUsages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._baseKeyUsage.internalValue = value.baseKeyUsage;
       this._extendedKeyUsage.internalValue = value.extendedKeyUsage;
       this._unknownExtendedKeyUsages = value.unknownExtendedKeyUsages;
@@ -1228,6 +1260,8 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesToTerraform(struct?: 
 }
 
 export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1238,7 +1272,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValues | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aiaOcspServers) {
       hasAnyValues = true;
@@ -1248,11 +1282,11 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
       hasAnyValues = true;
       internalValueResult.additionalExtensions = this._additionalExtensions;
     }
-    if (this._caOptions) {
+    if (this._caOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.caOptions = this._caOptions?.internalValue;
     }
-    if (this._keyUsage) {
+    if (this._keyUsage?.internalValue) {
       hasAnyValues = true;
       internalValueResult.keyUsage = this._keyUsage?.internalValue;
     }
@@ -1265,6 +1299,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValues | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aiaOcspServers = undefined;
       this._additionalExtensions = undefined;
       this._caOptions.internalValue = undefined;
@@ -1272,6 +1307,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
       this._policyIds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aiaOcspServers = value.aiaOcspServers;
       this._additionalExtensions = value.additionalExtensions;
       this._caOptions.internalValue = value.caOptions;
@@ -1397,6 +1433,8 @@ export function privatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionToT
 }
 
 export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1407,7 +1445,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -1430,12 +1468,14 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._location = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._location = value.location;
@@ -1540,6 +1580,8 @@ export function privatecaCaPoolIssuancePolicyIdentityConstraintsToTerraform(stru
 }
 
 export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1550,7 +1592,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowSubjectAltNamesPassthrough) {
       hasAnyValues = true;
@@ -1560,7 +1602,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
       hasAnyValues = true;
       internalValueResult.allowSubjectPassthrough = this._allowSubjectPassthrough;
     }
-    if (this._celExpression) {
+    if (this._celExpression?.internalValue) {
       hasAnyValues = true;
       internalValueResult.celExpression = this._celExpression?.internalValue;
     }
@@ -1569,11 +1611,13 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowSubjectAltNamesPassthrough = undefined;
       this._allowSubjectPassthrough = undefined;
       this._celExpression.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowSubjectAltNamesPassthrough = value.allowSubjectAltNamesPassthrough;
       this._allowSubjectPassthrough = value.allowSubjectPassthrough;
       this._celExpression.internalValue = value.celExpression;
@@ -1671,6 +1715,8 @@ export function privatecaCaPoolIssuancePolicyToTerraform(struct?: PrivatecaCaPoo
 }
 
 export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1681,13 +1727,13 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maximumLifetime) {
       hasAnyValues = true;
       internalValueResult.maximumLifetime = this._maximumLifetime;
     }
-    if (this._allowedIssuanceModes) {
+    if (this._allowedIssuanceModes?.internalValue) {
       hasAnyValues = true;
       internalValueResult.allowedIssuanceModes = this._allowedIssuanceModes?.internalValue;
     }
@@ -1695,11 +1741,11 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.allowedKeyTypes = this._allowedKeyTypes;
     }
-    if (this._baselineValues) {
+    if (this._baselineValues?.internalValue) {
       hasAnyValues = true;
       internalValueResult.baselineValues = this._baselineValues?.internalValue;
     }
-    if (this._identityConstraints) {
+    if (this._identityConstraints?.internalValue) {
       hasAnyValues = true;
       internalValueResult.identityConstraints = this._identityConstraints?.internalValue;
     }
@@ -1708,6 +1754,7 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: PrivatecaCaPoolIssuancePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maximumLifetime = undefined;
       this._allowedIssuanceModes.internalValue = undefined;
       this._allowedKeyTypes = undefined;
@@ -1715,6 +1762,7 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
       this._identityConstraints.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maximumLifetime = value.maximumLifetime;
       this._allowedIssuanceModes.internalValue = value.allowedIssuanceModes;
       this._allowedKeyTypes = value.allowedKeyTypes;
@@ -1836,6 +1884,8 @@ export function privatecaCaPoolPublishingOptionsToTerraform(struct?: PrivatecaCa
 }
 
 export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1846,7 +1896,7 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): PrivatecaCaPoolPublishingOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publishCaCert) {
       hasAnyValues = true;
@@ -1861,10 +1911,12 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
 
   public set internalValue(value: PrivatecaCaPoolPublishingOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publishCaCert = undefined;
       this._publishCrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publishCaCert = value.publishCaCert;
       this._publishCrl = value.publishCrl;
     }
@@ -1924,6 +1976,8 @@ export function privatecaCaPoolTimeoutsToTerraform(struct?: PrivatecaCaPoolTimeo
 }
 
 export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1934,7 +1988,7 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): PrivatecaCaPoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1953,11 +2007,13 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: PrivatecaCaPoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

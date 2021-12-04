@@ -226,6 +226,8 @@ export function monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform
 }
 
 export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -236,7 +238,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -251,10 +253,12 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
 
   public set internalValue(value: MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._percent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._percent = value.percent;
     }
@@ -348,6 +352,8 @@ export function monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct
 }
 
 export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -358,7 +364,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsent | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._duration) {
       hasAnyValues = true;
@@ -372,7 +378,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
       hasAnyValues = true;
       internalValueResult.aggregations = this._aggregations;
     }
-    if (this._trigger) {
+    if (this._trigger?.internalValue) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
@@ -381,12 +387,14 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
 
   public set internalValue(value: MonitoringAlertPolicyConditionsConditionAbsent | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._duration = undefined;
       this._filter = undefined;
       this._aggregations = undefined;
       this._trigger.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._duration = value.duration;
       this._filter = value.filter;
       this._aggregations = value.aggregations;
@@ -487,6 +495,8 @@ export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageT
 }
 
 export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -497,7 +507,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -512,10 +522,12 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
 
   public set internalValue(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._percent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._percent = value.percent;
     }
@@ -601,6 +613,8 @@ export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageT
 }
 
 export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -611,7 +625,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._duration) {
       hasAnyValues = true;
@@ -621,7 +635,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._trigger) {
+    if (this._trigger?.internalValue) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
@@ -630,11 +644,13 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
 
   public set internalValue(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._duration = undefined;
       this._query = undefined;
       this._trigger.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._duration = value.duration;
       this._query = value.query;
       this._trigger.internalValue = value.trigger;
@@ -932,6 +948,8 @@ export function monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraf
 }
 
 export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -942,7 +960,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -957,10 +975,12 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
 
   public set internalValue(value: MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._percent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._percent = value.percent;
     }
@@ -1114,6 +1134,8 @@ export function monitoringAlertPolicyConditionsConditionThresholdToTerraform(str
 }
 
 export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1124,7 +1146,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionThreshold | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._comparison) {
       hasAnyValues = true;
@@ -1154,7 +1176,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       hasAnyValues = true;
       internalValueResult.denominatorAggregations = this._denominatorAggregations;
     }
-    if (this._trigger) {
+    if (this._trigger?.internalValue) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
@@ -1163,6 +1185,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
 
   public set internalValue(value: MonitoringAlertPolicyConditionsConditionThreshold | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._comparison = undefined;
       this._denominatorFilter = undefined;
       this._duration = undefined;
@@ -1173,6 +1196,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       this._trigger.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._comparison = value.comparison;
       this._denominatorFilter = value.denominatorFilter;
       this._duration = value.duration;
@@ -1383,6 +1407,8 @@ export function monitoringAlertPolicyDocumentationToTerraform(struct?: Monitorin
 }
 
 export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1393,7 +1419,7 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MonitoringAlertPolicyDocumentation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._content) {
       hasAnyValues = true;
@@ -1408,10 +1434,12 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
 
   public set internalValue(value: MonitoringAlertPolicyDocumentation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._content = undefined;
       this._mimeType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._content = value.content;
       this._mimeType = value.mimeType;
     }
@@ -1477,6 +1505,8 @@ export function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAler
 }
 
 export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1487,7 +1517,7 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): MonitoringAlertPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1506,11 +1536,13 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: MonitoringAlertPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

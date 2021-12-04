@@ -116,6 +116,8 @@ export function containerAnalysisOccurrenceAttestationToTerraform(struct?: Conta
 }
 
 export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -126,7 +128,7 @@ export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf
   }
 
   public get internalValue(): ContainerAnalysisOccurrenceAttestation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._serializedPayload) {
       hasAnyValues = true;
@@ -141,10 +143,12 @@ export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf
 
   public set internalValue(value: ContainerAnalysisOccurrenceAttestation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._serializedPayload = undefined;
       this._signatures = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._serializedPayload = value.serializedPayload;
       this._signatures = value.signatures;
     }
@@ -205,6 +209,8 @@ export function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: Containe
 }
 
 export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -215,7 +221,7 @@ export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): ContainerAnalysisOccurrenceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -234,11 +240,13 @@ export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: ContainerAnalysisOccurrenceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

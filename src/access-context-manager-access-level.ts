@@ -146,6 +146,8 @@ export function accessContextManagerAccessLevelBasicConditionsDevicePolicyToTerr
 }
 
 export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -156,7 +158,7 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
   }
 
   public get internalValue(): AccessContextManagerAccessLevelBasicConditionsDevicePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedDeviceManagementLevels) {
       hasAnyValues = true;
@@ -187,6 +189,7 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
 
   public set internalValue(value: AccessContextManagerAccessLevelBasicConditionsDevicePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedDeviceManagementLevels = undefined;
       this._allowedEncryptionStatuses = undefined;
       this._requireAdminApproval = undefined;
@@ -195,6 +198,7 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
       this._osConstraints = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedDeviceManagementLevels = value.allowedDeviceManagementLevels;
       this._allowedEncryptionStatuses = value.allowedEncryptionStatuses;
       this._requireAdminApproval = value.requireAdminApproval;
@@ -410,6 +414,8 @@ export function accessContextManagerAccessLevelBasicToTerraform(struct?: AccessC
 }
 
 export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -420,7 +426,7 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
   }
 
   public get internalValue(): AccessContextManagerAccessLevelBasic | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._combiningFunction) {
       hasAnyValues = true;
@@ -435,10 +441,12 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
 
   public set internalValue(value: AccessContextManagerAccessLevelBasic | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._combiningFunction = undefined;
       this._conditions = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._combiningFunction = value.combiningFunction;
       this._conditions = value.conditions;
     }
@@ -515,6 +523,8 @@ export function accessContextManagerAccessLevelCustomExprToTerraform(struct?: Ac
 }
 
 export class AccessContextManagerAccessLevelCustomExprOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -525,7 +535,7 @@ export class AccessContextManagerAccessLevelCustomExprOutputReference extends cd
   }
 
   public get internalValue(): AccessContextManagerAccessLevelCustomExpr | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -548,12 +558,14 @@ export class AccessContextManagerAccessLevelCustomExprOutputReference extends cd
 
   public set internalValue(value: AccessContextManagerAccessLevelCustomExpr | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._location = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._location = value.location;
@@ -642,6 +654,8 @@ export function accessContextManagerAccessLevelCustomToTerraform(struct?: Access
 }
 
 export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -652,9 +666,9 @@ export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.
   }
 
   public get internalValue(): AccessContextManagerAccessLevelCustom | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expr) {
+    if (this._expr?.internalValue) {
       hasAnyValues = true;
       internalValueResult.expr = this._expr?.internalValue;
     }
@@ -663,9 +677,11 @@ export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.
 
   public set internalValue(value: AccessContextManagerAccessLevelCustom | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._expr.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._expr.internalValue = value.expr;
     }
   }
@@ -711,6 +727,8 @@ export function accessContextManagerAccessLevelTimeoutsToTerraform(struct?: Acce
 }
 
 export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -721,7 +739,7 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): AccessContextManagerAccessLevelTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -740,11 +758,13 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: AccessContextManagerAccessLevelTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

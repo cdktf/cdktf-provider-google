@@ -165,6 +165,8 @@ export function dnsManagedZoneDnssecConfigToTerraform(struct?: DnsManagedZoneDns
 }
 
 export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -175,7 +177,7 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): DnsManagedZoneDnssecConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._kind) {
       hasAnyValues = true;
@@ -198,12 +200,14 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: DnsManagedZoneDnssecConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._kind = undefined;
       this._nonExistence = undefined;
       this._state = undefined;
       this._defaultKeySpecs = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._kind = value.kind;
       this._nonExistence = value.nonExistence;
       this._state = value.state;
@@ -324,6 +328,8 @@ export function dnsManagedZoneForwardingConfigToTerraform(struct?: DnsManagedZon
 }
 
 export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -334,7 +340,7 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): DnsManagedZoneForwardingConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._targetNameServers) {
       hasAnyValues = true;
@@ -345,9 +351,11 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
 
   public set internalValue(value: DnsManagedZoneForwardingConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._targetNameServers = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._targetNameServers = value.targetNameServers;
     }
   }
@@ -388,6 +396,8 @@ export function dnsManagedZonePeeringConfigTargetNetworkToTerraform(struct?: Dns
 }
 
 export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -398,7 +408,7 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
   }
 
   public get internalValue(): DnsManagedZonePeeringConfigTargetNetwork | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._networkUrl) {
       hasAnyValues = true;
@@ -409,9 +419,11 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
 
   public set internalValue(value: DnsManagedZonePeeringConfigTargetNetwork | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._networkUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._networkUrl = value.networkUrl;
     }
   }
@@ -449,6 +461,8 @@ export function dnsManagedZonePeeringConfigToTerraform(struct?: DnsManagedZonePe
 }
 
 export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -459,9 +473,9 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): DnsManagedZonePeeringConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetNetwork) {
+    if (this._targetNetwork?.internalValue) {
       hasAnyValues = true;
       internalValueResult.targetNetwork = this._targetNetwork?.internalValue;
     }
@@ -470,9 +484,11 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: DnsManagedZonePeeringConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._targetNetwork.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._targetNetwork.internalValue = value.targetNetwork;
     }
   }
@@ -531,6 +547,8 @@ export function dnsManagedZonePrivateVisibilityConfigToTerraform(struct?: DnsMan
 }
 
 export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -541,7 +559,7 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   }
 
   public get internalValue(): DnsManagedZonePrivateVisibilityConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._networks) {
       hasAnyValues = true;
@@ -552,9 +570,11 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
 
   public set internalValue(value: DnsManagedZonePrivateVisibilityConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._networks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._networks = value.networks;
     }
   }
@@ -601,6 +621,8 @@ export function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeout
 }
 
 export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -611,7 +633,7 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DnsManagedZoneTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -630,11 +652,13 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DnsManagedZoneTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

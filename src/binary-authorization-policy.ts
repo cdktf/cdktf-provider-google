@@ -160,6 +160,8 @@ export function binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(struct?
 }
 
 export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -170,7 +172,7 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   }
 
   public get internalValue(): BinaryAuthorizationPolicyDefaultAdmissionRule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enforcementMode) {
       hasAnyValues = true;
@@ -189,11 +191,13 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
 
   public set internalValue(value: BinaryAuthorizationPolicyDefaultAdmissionRule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enforcementMode = undefined;
       this._evaluationMode = undefined;
       this._requireAttestationsBy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enforcementMode = value.enforcementMode;
       this._evaluationMode = value.evaluationMode;
       this._requireAttestationsBy = value.requireAttestationsBy;
@@ -270,6 +274,8 @@ export function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuth
 }
 
 export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -280,7 +286,7 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): BinaryAuthorizationPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -299,11 +305,13 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: BinaryAuthorizationPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

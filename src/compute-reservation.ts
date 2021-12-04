@@ -157,6 +157,8 @@ export function computeReservationSpecificReservationInstancePropertiesToTerrafo
 }
 
 export class ComputeReservationSpecificReservationInstancePropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -167,7 +169,7 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
   }
 
   public get internalValue(): ComputeReservationSpecificReservationInstanceProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._machineType) {
       hasAnyValues = true;
@@ -190,12 +192,14 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
 
   public set internalValue(value: ComputeReservationSpecificReservationInstanceProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._machineType = undefined;
       this._minCpuPlatform = undefined;
       this._guestAccelerators = undefined;
       this._localSsds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._machineType = value.machineType;
       this._minCpuPlatform = value.minCpuPlatform;
       this._guestAccelerators = value.guestAccelerators;
@@ -293,6 +297,8 @@ export function computeReservationSpecificReservationToTerraform(struct?: Comput
 }
 
 export class ComputeReservationSpecificReservationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -303,13 +309,13 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
   }
 
   public get internalValue(): ComputeReservationSpecificReservation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._instanceProperties) {
+    if (this._instanceProperties?.internalValue) {
       hasAnyValues = true;
       internalValueResult.instanceProperties = this._instanceProperties?.internalValue;
     }
@@ -318,10 +324,12 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
 
   public set internalValue(value: ComputeReservationSpecificReservation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._instanceProperties.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._instanceProperties.internalValue = value.instanceProperties;
     }
@@ -381,6 +389,8 @@ export function computeReservationTimeoutsToTerraform(struct?: ComputeReservatio
 }
 
 export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -391,7 +401,7 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ComputeReservationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -410,11 +420,13 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ComputeReservationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

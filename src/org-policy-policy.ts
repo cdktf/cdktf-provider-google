@@ -73,6 +73,8 @@ export function orgPolicyPolicySpecRulesConditionToTerraform(struct?: OrgPolicyP
 }
 
 export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -83,7 +85,7 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): OrgPolicyPolicySpecRulesCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -106,12 +108,14 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
 
   public set internalValue(value: OrgPolicyPolicySpecRulesCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._location = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._location = value.location;
@@ -210,6 +214,8 @@ export function orgPolicyPolicySpecRulesValuesToTerraform(struct?: OrgPolicyPoli
 }
 
 export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -220,7 +226,7 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): OrgPolicyPolicySpecRulesValues | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedValues) {
       hasAnyValues = true;
@@ -235,10 +241,12 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
 
   public set internalValue(value: OrgPolicyPolicySpecRulesValues | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedValues = undefined;
       this._deniedValues = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedValues = value.allowedValues;
       this._deniedValues = value.deniedValues;
     }
@@ -357,6 +365,8 @@ export function orgPolicyPolicySpecToTerraform(struct?: OrgPolicyPolicySpecOutpu
 }
 
 export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -367,7 +377,7 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): OrgPolicyPolicySpec | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._inheritFromParent) {
       hasAnyValues = true;
@@ -386,11 +396,13 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: OrgPolicyPolicySpec | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._inheritFromParent = undefined;
       this._reset = undefined;
       this._rules = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._inheritFromParent = value.inheritFromParent;
       this._reset = value.reset;
       this._rules = value.rules;
@@ -474,6 +486,8 @@ export function orgPolicyPolicyTimeoutsToTerraform(struct?: OrgPolicyPolicyTimeo
 }
 
 export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -484,7 +498,7 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): OrgPolicyPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -503,11 +517,13 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: OrgPolicyPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

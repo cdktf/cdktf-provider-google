@@ -72,6 +72,8 @@ export function storageTransferJobScheduleScheduleEndDateToTerraform(struct?: St
 }
 
 export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -82,7 +84,7 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   }
 
   public get internalValue(): StorageTransferJobScheduleScheduleEndDate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._day) {
       hasAnyValues = true;
@@ -101,11 +103,13 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
 
   public set internalValue(value: StorageTransferJobScheduleScheduleEndDate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._day = undefined;
       this._month = undefined;
       this._year = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._day = value.day;
       this._month = value.month;
       this._year = value.year;
@@ -185,6 +189,8 @@ export function storageTransferJobScheduleScheduleStartDateToTerraform(struct?: 
 }
 
 export class StorageTransferJobScheduleScheduleStartDateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -195,7 +201,7 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   }
 
   public get internalValue(): StorageTransferJobScheduleScheduleStartDate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._day) {
       hasAnyValues = true;
@@ -214,11 +220,13 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
 
   public set internalValue(value: StorageTransferJobScheduleScheduleStartDate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._day = undefined;
       this._month = undefined;
       this._year = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._day = value.day;
       this._month = value.month;
       this._year = value.year;
@@ -305,6 +313,8 @@ export function storageTransferJobScheduleStartTimeOfDayToTerraform(struct?: Sto
 }
 
 export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -315,7 +325,7 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   }
 
   public get internalValue(): StorageTransferJobScheduleStartTimeOfDay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hours) {
       hasAnyValues = true;
@@ -338,12 +348,14 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
 
   public set internalValue(value: StorageTransferJobScheduleStartTimeOfDay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hours = undefined;
       this._minutes = undefined;
       this._nanos = undefined;
       this._seconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hours = value.hours;
       this._minutes = value.minutes;
       this._nanos = value.nanos;
@@ -437,6 +449,8 @@ export function storageTransferJobScheduleToTerraform(struct?: StorageTransferJo
 }
 
 export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -447,17 +461,17 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): StorageTransferJobSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._scheduleEndDate) {
+    if (this._scheduleEndDate?.internalValue) {
       hasAnyValues = true;
       internalValueResult.scheduleEndDate = this._scheduleEndDate?.internalValue;
     }
-    if (this._scheduleStartDate) {
+    if (this._scheduleStartDate?.internalValue) {
       hasAnyValues = true;
       internalValueResult.scheduleStartDate = this._scheduleStartDate?.internalValue;
     }
-    if (this._startTimeOfDay) {
+    if (this._startTimeOfDay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.startTimeOfDay = this._startTimeOfDay?.internalValue;
     }
@@ -466,11 +480,13 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: StorageTransferJobSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._scheduleEndDate.internalValue = undefined;
       this._scheduleStartDate.internalValue = undefined;
       this._startTimeOfDay.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._scheduleEndDate.internalValue = value.scheduleEndDate;
       this._scheduleStartDate.internalValue = value.scheduleStartDate;
       this._startTimeOfDay.internalValue = value.startTimeOfDay;
@@ -549,6 +565,8 @@ export function storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerra
 }
 
 export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -559,7 +577,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accessKeyId) {
       hasAnyValues = true;
@@ -574,10 +592,12 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
 
   public set internalValue(value: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accessKeyId = undefined;
       this._secretAccessKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accessKeyId = value.accessKeyId;
       this._secretAccessKey = value.secretAccessKey;
     }
@@ -636,6 +656,8 @@ export function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?
 }
 
 export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -646,13 +668,13 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucketName) {
       hasAnyValues = true;
       internalValueResult.bucketName = this._bucketName;
     }
-    if (this._awsAccessKey) {
+    if (this._awsAccessKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.awsAccessKey = this._awsAccessKey?.internalValue;
     }
@@ -661,10 +683,12 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
 
   public set internalValue(value: StorageTransferJobTransferSpecAwsS3DataSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucketName = undefined;
       this._awsAccessKey.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucketName = value.bucketName;
       this._awsAccessKey.internalValue = value.awsAccessKey;
     }
@@ -716,6 +740,8 @@ export function storageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCre
 }
 
 export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -726,7 +752,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._sasToken) {
       hasAnyValues = true;
@@ -737,9 +763,11 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
 
   public set internalValue(value: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._sasToken = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._sasToken = value.sasToken;
     }
   }
@@ -798,6 +826,8 @@ export function storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraf
 }
 
 export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -808,7 +838,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._container) {
       hasAnyValues = true;
@@ -822,7 +852,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
       hasAnyValues = true;
       internalValueResult.storageAccount = this._storageAccount;
     }
-    if (this._azureCredentials) {
+    if (this._azureCredentials?.internalValue) {
       hasAnyValues = true;
       internalValueResult.azureCredentials = this._azureCredentials?.internalValue;
     }
@@ -831,12 +861,14 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
 
   public set internalValue(value: StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._container = undefined;
       this._path = undefined;
       this._storageAccount = undefined;
       this._azureCredentials.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
       this._path = value.path;
       this._storageAccount = value.storageAccount;
@@ -926,6 +958,8 @@ export function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: St
 }
 
 export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -936,7 +970,7 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
   }
 
   public get internalValue(): StorageTransferJobTransferSpecGcsDataSink | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucketName) {
       hasAnyValues = true;
@@ -951,10 +985,12 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
 
   public set internalValue(value: StorageTransferJobTransferSpecGcsDataSink | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucketName = undefined;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucketName = value.bucketName;
       this._path = value.path;
     }
@@ -1016,6 +1052,8 @@ export function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: 
 }
 
 export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1026,7 +1064,7 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
   }
 
   public get internalValue(): StorageTransferJobTransferSpecGcsDataSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bucketName) {
       hasAnyValues = true;
@@ -1041,10 +1079,12 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
 
   public set internalValue(value: StorageTransferJobTransferSpecGcsDataSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bucketName = undefined;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bucketName = value.bucketName;
       this._path = value.path;
     }
@@ -1099,6 +1139,8 @@ export function storageTransferJobTransferSpecHttpDataSourceToTerraform(struct?:
 }
 
 export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1109,7 +1151,7 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
   }
 
   public get internalValue(): StorageTransferJobTransferSpecHttpDataSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._listUrl) {
       hasAnyValues = true;
@@ -1120,9 +1162,11 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
 
   public set internalValue(value: StorageTransferJobTransferSpecHttpDataSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._listUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._listUrl = value.listUrl;
     }
   }
@@ -1181,6 +1225,8 @@ export function storageTransferJobTransferSpecObjectConditionsToTerraform(struct
 }
 
 export class StorageTransferJobTransferSpecObjectConditionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1191,7 +1237,7 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   }
 
   public get internalValue(): StorageTransferJobTransferSpecObjectConditions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._excludePrefixes) {
       hasAnyValues = true;
@@ -1214,12 +1260,14 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
 
   public set internalValue(value: StorageTransferJobTransferSpecObjectConditions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._excludePrefixes = undefined;
       this._includePrefixes = undefined;
       this._maxTimeElapsedSinceLastModification = undefined;
       this._minTimeElapsedSinceLastModification = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._excludePrefixes = value.excludePrefixes;
       this._includePrefixes = value.includePrefixes;
       this._maxTimeElapsedSinceLastModification = value.maxTimeElapsedSinceLastModification;
@@ -1325,6 +1373,8 @@ export function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?
 }
 
 export class StorageTransferJobTransferSpecTransferOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1335,7 +1385,7 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   }
 
   public get internalValue(): StorageTransferJobTransferSpecTransferOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._deleteObjectsFromSourceAfterTransfer) {
       hasAnyValues = true;
@@ -1354,11 +1404,13 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
 
   public set internalValue(value: StorageTransferJobTransferSpecTransferOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._deleteObjectsFromSourceAfterTransfer = undefined;
       this._deleteObjectsUniqueInSink = undefined;
       this._overwriteObjectsAlreadyExistingInSink = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._deleteObjectsFromSourceAfterTransfer = value.deleteObjectsFromSourceAfterTransfer;
       this._deleteObjectsUniqueInSink = value.deleteObjectsUniqueInSink;
       this._overwriteObjectsAlreadyExistingInSink = value.overwriteObjectsAlreadyExistingInSink;
@@ -1475,6 +1527,8 @@ export function storageTransferJobTransferSpecToTerraform(struct?: StorageTransf
 }
 
 export class StorageTransferJobTransferSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1485,33 +1539,33 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): StorageTransferJobTransferSpec | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._awsS3DataSource) {
+    if (this._awsS3DataSource?.internalValue) {
       hasAnyValues = true;
       internalValueResult.awsS3DataSource = this._awsS3DataSource?.internalValue;
     }
-    if (this._azureBlobStorageDataSource) {
+    if (this._azureBlobStorageDataSource?.internalValue) {
       hasAnyValues = true;
       internalValueResult.azureBlobStorageDataSource = this._azureBlobStorageDataSource?.internalValue;
     }
-    if (this._gcsDataSink) {
+    if (this._gcsDataSink?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gcsDataSink = this._gcsDataSink?.internalValue;
     }
-    if (this._gcsDataSource) {
+    if (this._gcsDataSource?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gcsDataSource = this._gcsDataSource?.internalValue;
     }
-    if (this._httpDataSource) {
+    if (this._httpDataSource?.internalValue) {
       hasAnyValues = true;
       internalValueResult.httpDataSource = this._httpDataSource?.internalValue;
     }
-    if (this._objectConditions) {
+    if (this._objectConditions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.objectConditions = this._objectConditions?.internalValue;
     }
-    if (this._transferOptions) {
+    if (this._transferOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.transferOptions = this._transferOptions?.internalValue;
     }
@@ -1520,6 +1574,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
 
   public set internalValue(value: StorageTransferJobTransferSpec | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._awsS3DataSource.internalValue = undefined;
       this._azureBlobStorageDataSource.internalValue = undefined;
       this._gcsDataSink.internalValue = undefined;
@@ -1529,6 +1584,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
       this._transferOptions.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._awsS3DataSource.internalValue = value.awsS3DataSource;
       this._azureBlobStorageDataSource.internalValue = value.azureBlobStorageDataSource;
       this._gcsDataSink.internalValue = value.gcsDataSink;

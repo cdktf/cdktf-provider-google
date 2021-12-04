@@ -91,6 +91,8 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToTer
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -101,7 +103,7 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputRe
   }
 
   public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._text) {
       hasAnyValues = true;
@@ -112,9 +114,11 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputRe
 
   public set internalValue(value: DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._text = value.text;
     }
   }
@@ -195,6 +199,8 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentToTerraform(struc
 }
 
 export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -205,7 +211,7 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   }
 
   public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._returnPartialResponses) {
       hasAnyValues = true;
@@ -228,12 +234,14 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
 
   public set internalValue(value: DialogflowCxFlowEventHandlersTriggerFulfillment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._returnPartialResponses = undefined;
       this._tag = undefined;
       this._webhook = undefined;
       this._messages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._returnPartialResponses = value.returnPartialResponses;
       this._tag = value.tag;
       this._webhook = value.webhook;
@@ -387,6 +395,8 @@ export function dialogflowCxFlowNluSettingsToTerraform(struct?: DialogflowCxFlow
 }
 
 export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -397,7 +407,7 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): DialogflowCxFlowNluSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._classificationThreshold) {
       hasAnyValues = true;
@@ -416,11 +426,13 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: DialogflowCxFlowNluSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._classificationThreshold = undefined;
       this._modelTrainingMode = undefined;
       this._modelType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._classificationThreshold = value.classificationThreshold;
       this._modelTrainingMode = value.modelTrainingMode;
       this._modelType = value.modelType;
@@ -503,6 +515,8 @@ export function dialogflowCxFlowTimeoutsToTerraform(struct?: DialogflowCxFlowTim
 }
 
 export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -513,7 +527,7 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): DialogflowCxFlowTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -532,11 +546,13 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: DialogflowCxFlowTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -611,6 +627,8 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextTo
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -621,7 +639,7 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutpu
   }
 
   public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._text) {
       hasAnyValues = true;
@@ -632,9 +650,11 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutpu
 
   public set internalValue(value: DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._text = value.text;
     }
   }
@@ -715,6 +735,8 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentToTerraform(st
 }
 
 export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -725,7 +747,7 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   }
 
   public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._returnPartialResponses) {
       hasAnyValues = true;
@@ -748,12 +770,14 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
 
   public set internalValue(value: DialogflowCxFlowTransitionRoutesTriggerFulfillment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._returnPartialResponses = undefined;
       this._tag = undefined;
       this._webhook = undefined;
       this._messages = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._returnPartialResponses = value.returnPartialResponses;
       this._tag = value.tag;
       this._webhook = value.webhook;

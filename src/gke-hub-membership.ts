@@ -63,6 +63,8 @@ export function gkeHubMembershipAuthorityToTerraform(struct?: GkeHubMembershipAu
 }
 
 export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -73,7 +75,7 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): GkeHubMembershipAuthority | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._issuer) {
       hasAnyValues = true;
@@ -84,9 +86,11 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: GkeHubMembershipAuthority | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._issuer = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._issuer = value.issuer;
     }
   }
@@ -128,6 +132,8 @@ export function gkeHubMembershipEndpointGkeClusterToTerraform(struct?: GkeHubMem
 }
 
 export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -138,7 +144,7 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
   }
 
   public get internalValue(): GkeHubMembershipEndpointGkeCluster | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resourceLink) {
       hasAnyValues = true;
@@ -149,9 +155,11 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
 
   public set internalValue(value: GkeHubMembershipEndpointGkeCluster | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resourceLink = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resourceLink = value.resourceLink;
     }
   }
@@ -189,6 +197,8 @@ export function gkeHubMembershipEndpointToTerraform(struct?: GkeHubMembershipEnd
 }
 
 export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -199,9 +209,9 @@ export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): GkeHubMembershipEndpoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._gkeCluster) {
+    if (this._gkeCluster?.internalValue) {
       hasAnyValues = true;
       internalValueResult.gkeCluster = this._gkeCluster?.internalValue;
     }
@@ -210,9 +220,11 @@ export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: GkeHubMembershipEndpoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._gkeCluster.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._gkeCluster.internalValue = value.gkeCluster;
     }
   }
@@ -261,6 +273,8 @@ export function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTim
 }
 
 export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -271,7 +285,7 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): GkeHubMembershipTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -290,11 +304,13 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: GkeHubMembershipTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

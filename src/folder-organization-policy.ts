@@ -70,6 +70,8 @@ export function folderOrganizationPolicyBooleanPolicyToTerraform(struct?: Folder
 }
 
 export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -80,7 +82,7 @@ export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.
   }
 
   public get internalValue(): FolderOrganizationPolicyBooleanPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enforced) {
       hasAnyValues = true;
@@ -91,9 +93,11 @@ export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.
 
   public set internalValue(value: FolderOrganizationPolicyBooleanPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enforced = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enforced = value.enforced;
     }
   }
@@ -138,6 +142,8 @@ export function folderOrganizationPolicyListPolicyAllowToTerraform(struct?: Fold
 }
 
 export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -148,7 +154,7 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
   }
 
   public get internalValue(): FolderOrganizationPolicyListPolicyAllow | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._all) {
       hasAnyValues = true;
@@ -163,10 +169,12 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
 
   public set internalValue(value: FolderOrganizationPolicyListPolicyAllow | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._all = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._all = value.all;
       this._values = value.values;
     }
@@ -231,6 +239,8 @@ export function folderOrganizationPolicyListPolicyDenyToTerraform(struct?: Folde
 }
 
 export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -241,7 +251,7 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
   }
 
   public get internalValue(): FolderOrganizationPolicyListPolicyDeny | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._all) {
       hasAnyValues = true;
@@ -256,10 +266,12 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
 
   public set internalValue(value: FolderOrganizationPolicyListPolicyDeny | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._all = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._all = value.all;
       this._values = value.values;
     }
@@ -338,6 +350,8 @@ export function folderOrganizationPolicyListPolicyToTerraform(struct?: FolderOrg
 }
 
 export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -348,7 +362,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): FolderOrganizationPolicyListPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._inheritFromParent) {
       hasAnyValues = true;
@@ -358,11 +372,11 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.suggestedValue = this._suggestedValue;
     }
-    if (this._allow) {
+    if (this._allow?.internalValue) {
       hasAnyValues = true;
       internalValueResult.allow = this._allow?.internalValue;
     }
-    if (this._deny) {
+    if (this._deny?.internalValue) {
       hasAnyValues = true;
       internalValueResult.deny = this._deny?.internalValue;
     }
@@ -371,12 +385,14 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
 
   public set internalValue(value: FolderOrganizationPolicyListPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._inheritFromParent = undefined;
       this._suggestedValue = undefined;
       this._allow.internalValue = undefined;
       this._deny.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._inheritFromParent = value.inheritFromParent;
       this._suggestedValue = value.suggestedValue;
       this._allow.internalValue = value.allow;
@@ -468,6 +484,8 @@ export function folderOrganizationPolicyRestorePolicyToTerraform(struct?: Folder
 }
 
 export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -478,7 +496,7 @@ export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.
   }
 
   public get internalValue(): FolderOrganizationPolicyRestorePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._default) {
       hasAnyValues = true;
@@ -489,9 +507,11 @@ export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.
 
   public set internalValue(value: FolderOrganizationPolicyRestorePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._default = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._default = value.default;
     }
   }
@@ -542,6 +562,8 @@ export function folderOrganizationPolicyTimeoutsToTerraform(struct?: FolderOrgan
 }
 
 export class FolderOrganizationPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -552,7 +574,7 @@ export class FolderOrganizationPolicyTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): FolderOrganizationPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -575,12 +597,14 @@ export class FolderOrganizationPolicyTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: FolderOrganizationPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

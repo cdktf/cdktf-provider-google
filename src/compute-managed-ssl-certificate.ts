@@ -79,6 +79,8 @@ export function computeManagedSslCertificateManagedToTerraform(struct?: ComputeM
 }
 
 export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -89,7 +91,7 @@ export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.Co
   }
 
   public get internalValue(): ComputeManagedSslCertificateManaged | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._domains) {
       hasAnyValues = true;
@@ -100,9 +102,11 @@ export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.Co
 
   public set internalValue(value: ComputeManagedSslCertificateManaged | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._domains = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._domains = value.domains;
     }
   }
@@ -143,6 +147,8 @@ export function computeManagedSslCertificateTimeoutsToTerraform(struct?: Compute
 }
 
 export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -153,7 +159,7 @@ export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): ComputeManagedSslCertificateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -168,10 +174,12 @@ export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: ComputeManagedSslCertificateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

@@ -96,6 +96,8 @@ export function computeNodeTemplateNodeTypeFlexibilityToTerraform(struct?: Compu
 }
 
 export class ComputeNodeTemplateNodeTypeFlexibilityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -106,7 +108,7 @@ export class ComputeNodeTemplateNodeTypeFlexibilityOutputReference extends cdktf
   }
 
   public get internalValue(): ComputeNodeTemplateNodeTypeFlexibility | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cpus) {
       hasAnyValues = true;
@@ -121,10 +123,12 @@ export class ComputeNodeTemplateNodeTypeFlexibilityOutputReference extends cdktf
 
   public set internalValue(value: ComputeNodeTemplateNodeTypeFlexibility | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cpus = undefined;
       this._memory = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cpus = value.cpus;
       this._memory = value.memory;
     }
@@ -193,6 +197,8 @@ export function computeNodeTemplateServerBindingToTerraform(struct?: ComputeNode
 }
 
 export class ComputeNodeTemplateServerBindingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -203,7 +209,7 @@ export class ComputeNodeTemplateServerBindingOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ComputeNodeTemplateServerBinding | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -214,9 +220,11 @@ export class ComputeNodeTemplateServerBindingOutputReference extends cdktf.Compl
 
   public set internalValue(value: ComputeNodeTemplateServerBinding | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -257,6 +265,8 @@ export function computeNodeTemplateTimeoutsToTerraform(struct?: ComputeNodeTempl
 }
 
 export class ComputeNodeTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -267,7 +277,7 @@ export class ComputeNodeTemplateTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ComputeNodeTemplateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -282,10 +292,12 @@ export class ComputeNodeTemplateTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ComputeNodeTemplateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
     }

@@ -230,6 +230,8 @@ export function appEngineFlexibleAppVersionApiConfigToTerraform(struct?: AppEngi
 }
 
 export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -240,7 +242,7 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionApiConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._authFailAction) {
       hasAnyValues = true;
@@ -267,6 +269,7 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
 
   public set internalValue(value: AppEngineFlexibleAppVersionApiConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._authFailAction = undefined;
       this._login = undefined;
       this._script = undefined;
@@ -274,6 +277,7 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._authFailAction = value.authFailAction;
       this._login = value.login;
       this._script = value.script;
@@ -386,6 +390,8 @@ export function appEngineFlexibleAppVersionAutomaticScalingCpuUtilizationToTerra
 }
 
 export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -396,7 +402,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aggregationWindowLength) {
       hasAnyValues = true;
@@ -411,10 +417,12 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
 
   public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aggregationWindowLength = undefined;
       this._targetUtilization = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aggregationWindowLength = value.aggregationWindowLength;
       this._targetUtilization = value.targetUtilization;
     }
@@ -490,6 +498,8 @@ export function appEngineFlexibleAppVersionAutomaticScalingDiskUtilizationToTerr
 }
 
 export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -500,7 +510,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._targetReadBytesPerSecond) {
       hasAnyValues = true;
@@ -523,12 +533,14 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
 
   public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._targetReadBytesPerSecond = undefined;
       this._targetReadOpsPerSecond = undefined;
       this._targetWriteBytesPerSecond = undefined;
       this._targetWriteOpsPerSecond = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._targetReadBytesPerSecond = value.targetReadBytesPerSecond;
       this._targetReadOpsPerSecond = value.targetReadOpsPerSecond;
       this._targetWriteBytesPerSecond = value.targetWriteBytesPerSecond;
@@ -641,6 +653,8 @@ export function appEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationToT
 }
 
 export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -651,7 +665,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._targetReceivedBytesPerSecond) {
       hasAnyValues = true;
@@ -674,12 +688,14 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
 
   public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._targetReceivedBytesPerSecond = undefined;
       this._targetReceivedPacketsPerSecond = undefined;
       this._targetSentBytesPerSecond = undefined;
       this._targetSentPacketsPerSecond = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._targetReceivedBytesPerSecond = value.targetReceivedBytesPerSecond;
       this._targetReceivedPacketsPerSecond = value.targetReceivedPacketsPerSecond;
       this._targetSentBytesPerSecond = value.targetSentBytesPerSecond;
@@ -778,6 +794,8 @@ export function appEngineFlexibleAppVersionAutomaticScalingRequestUtilizationToT
 }
 
 export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -788,7 +806,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._targetConcurrentRequests) {
       hasAnyValues = true;
@@ -803,10 +821,12 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
 
   public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._targetConcurrentRequests = undefined;
       this._targetRequestCountPerSecond = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._targetConcurrentRequests = value.targetConcurrentRequests;
       this._targetRequestCountPerSecond = value.targetRequestCountPerSecond;
     }
@@ -945,6 +965,8 @@ export function appEngineFlexibleAppVersionAutomaticScalingToTerraform(struct?: 
 }
 
 export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -955,7 +977,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScaling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._coolDownPeriod) {
       hasAnyValues = true;
@@ -989,19 +1011,19 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
       hasAnyValues = true;
       internalValueResult.minTotalInstances = this._minTotalInstances;
     }
-    if (this._cpuUtilization) {
+    if (this._cpuUtilization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cpuUtilization = this._cpuUtilization?.internalValue;
     }
-    if (this._diskUtilization) {
+    if (this._diskUtilization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diskUtilization = this._diskUtilization?.internalValue;
     }
-    if (this._networkUtilization) {
+    if (this._networkUtilization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.networkUtilization = this._networkUtilization?.internalValue;
     }
-    if (this._requestUtilization) {
+    if (this._requestUtilization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.requestUtilization = this._requestUtilization?.internalValue;
     }
@@ -1010,6 +1032,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
 
   public set internalValue(value: AppEngineFlexibleAppVersionAutomaticScaling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._coolDownPeriod = undefined;
       this._maxConcurrentRequests = undefined;
       this._maxIdleInstances = undefined;
@@ -1024,6 +1047,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
       this._requestUtilization.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._coolDownPeriod = value.coolDownPeriod;
       this._maxConcurrentRequests = value.maxConcurrentRequests;
       this._maxIdleInstances = value.maxIdleInstances;
@@ -1257,6 +1281,8 @@ export function appEngineFlexibleAppVersionDeploymentCloudBuildOptionsToTerrafor
 }
 
 export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1267,7 +1293,7 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._appYamlPath) {
       hasAnyValues = true;
@@ -1282,10 +1308,12 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
 
   public set internalValue(value: AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._appYamlPath = undefined;
       this._cloudBuildTimeout = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._appYamlPath = value.appYamlPath;
       this._cloudBuildTimeout = value.cloudBuildTimeout;
     }
@@ -1341,6 +1369,8 @@ export function appEngineFlexibleAppVersionDeploymentContainerToTerraform(struct
 }
 
 export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1351,7 +1381,7 @@ export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference exten
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentContainer | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._image) {
       hasAnyValues = true;
@@ -1362,9 +1392,11 @@ export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference exten
 
   public set internalValue(value: AppEngineFlexibleAppVersionDeploymentContainer | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._image = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._image = value.image;
     }
   }
@@ -1440,6 +1472,8 @@ export function appEngineFlexibleAppVersionDeploymentZipToTerraform(struct?: App
 }
 
 export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1450,7 +1484,7 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentZip | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._filesCount) {
       hasAnyValues = true;
@@ -1465,10 +1499,12 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
 
   public set internalValue(value: AppEngineFlexibleAppVersionDeploymentZip | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._filesCount = undefined;
       this._sourceUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._filesCount = value.filesCount;
       this._sourceUrl = value.sourceUrl;
     }
@@ -1544,6 +1580,8 @@ export function appEngineFlexibleAppVersionDeploymentToTerraform(struct?: AppEng
 }
 
 export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1554,13 +1592,13 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeployment | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudBuildOptions) {
+    if (this._cloudBuildOptions?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cloudBuildOptions = this._cloudBuildOptions?.internalValue;
     }
-    if (this._container) {
+    if (this._container?.internalValue) {
       hasAnyValues = true;
       internalValueResult.container = this._container?.internalValue;
     }
@@ -1568,7 +1606,7 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.files = this._files;
     }
-    if (this._zip) {
+    if (this._zip?.internalValue) {
       hasAnyValues = true;
       internalValueResult.zip = this._zip?.internalValue;
     }
@@ -1577,12 +1615,14 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
 
   public set internalValue(value: AppEngineFlexibleAppVersionDeployment | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cloudBuildOptions.internalValue = undefined;
       this._container.internalValue = undefined;
       this._files = undefined;
       this._zip.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudBuildOptions.internalValue = value.cloudBuildOptions;
       this._container.internalValue = value.container;
       this._files = value.files;
@@ -1704,6 +1744,8 @@ export function appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(struct
 }
 
 export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1714,7 +1756,7 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionEndpointsApiService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._configId) {
       hasAnyValues = true;
@@ -1737,12 +1779,14 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
 
   public set internalValue(value: AppEngineFlexibleAppVersionEndpointsApiService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._configId = undefined;
       this._disableTraceSampling = undefined;
       this._name = undefined;
       this._rolloutStrategy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._configId = value.configId;
       this._disableTraceSampling = value.disableTraceSampling;
       this._name = value.name;
@@ -1831,6 +1875,8 @@ export function appEngineFlexibleAppVersionEntrypointToTerraform(struct?: AppEng
 }
 
 export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1841,7 +1887,7 @@ export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionEntrypoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._shell) {
       hasAnyValues = true;
@@ -1852,9 +1898,11 @@ export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.
 
   public set internalValue(value: AppEngineFlexibleAppVersionEntrypoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._shell = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._shell = value.shell;
     }
   }
@@ -1892,6 +1940,8 @@ export function appEngineFlexibleAppVersionHandlersScriptToTerraform(struct?: Ap
 }
 
 export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1902,7 +1952,7 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionHandlersScript | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._scriptPath) {
       hasAnyValues = true;
@@ -1913,9 +1963,11 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
 
   public set internalValue(value: AppEngineFlexibleAppVersionHandlersScript | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._scriptPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._scriptPath = value.scriptPath;
     }
   }
@@ -2002,6 +2054,8 @@ export function appEngineFlexibleAppVersionHandlersStaticFilesToTerraform(struct
 }
 
 export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2012,7 +2066,7 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionHandlersStaticFiles | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._applicationReadable) {
       hasAnyValues = true;
@@ -2047,6 +2101,7 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
 
   public set internalValue(value: AppEngineFlexibleAppVersionHandlersStaticFiles | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._applicationReadable = undefined;
       this._expiration = undefined;
       this._httpHeaders = undefined;
@@ -2056,6 +2111,7 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
       this._uploadPathRegex = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._applicationReadable = value.applicationReadable;
       this._expiration = value.expiration;
       this._httpHeaders = value.httpHeaders;
@@ -2303,6 +2359,8 @@ export function appEngineFlexibleAppVersionLivenessCheckToTerraform(struct?: App
 }
 
 export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2313,7 +2371,7 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionLivenessCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._checkInterval) {
       hasAnyValues = true;
@@ -2348,6 +2406,7 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
 
   public set internalValue(value: AppEngineFlexibleAppVersionLivenessCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._checkInterval = undefined;
       this._failureThreshold = undefined;
       this._host = undefined;
@@ -2357,6 +2416,7 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
       this._timeout = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._checkInterval = value.checkInterval;
       this._failureThreshold = value.failureThreshold;
       this._host = value.host;
@@ -2499,6 +2559,8 @@ export function appEngineFlexibleAppVersionManualScalingToTerraform(struct?: App
 }
 
 export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2509,7 +2571,7 @@ export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdk
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionManualScaling | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instances) {
       hasAnyValues = true;
@@ -2520,9 +2582,11 @@ export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdk
 
   public set internalValue(value: AppEngineFlexibleAppVersionManualScaling | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instances = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instances = value.instances;
     }
   }
@@ -2593,6 +2657,8 @@ export function appEngineFlexibleAppVersionNetworkToTerraform(struct?: AppEngine
 }
 
 export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2603,7 +2669,7 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionNetwork | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._forwardedPorts) {
       hasAnyValues = true;
@@ -2630,6 +2696,7 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
 
   public set internalValue(value: AppEngineFlexibleAppVersionNetwork | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._forwardedPorts = undefined;
       this._instanceTag = undefined;
       this._name = undefined;
@@ -2637,6 +2704,7 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
       this._subnetwork = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._forwardedPorts = value.forwardedPorts;
       this._instanceTag = value.instanceTag;
       this._name = value.name;
@@ -2785,6 +2853,8 @@ export function appEngineFlexibleAppVersionReadinessCheckToTerraform(struct?: Ap
 }
 
 export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2795,7 +2865,7 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionReadinessCheck | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._appStartTimeout) {
       hasAnyValues = true;
@@ -2830,6 +2900,7 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
 
   public set internalValue(value: AppEngineFlexibleAppVersionReadinessCheck | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._appStartTimeout = undefined;
       this._checkInterval = undefined;
       this._failureThreshold = undefined;
@@ -2839,6 +2910,7 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
       this._timeout = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._appStartTimeout = value.appStartTimeout;
       this._checkInterval = value.checkInterval;
       this._failureThreshold = value.failureThreshold;
@@ -3032,6 +3104,8 @@ export function appEngineFlexibleAppVersionResourcesToTerraform(struct?: AppEngi
 }
 
 export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3042,7 +3116,7 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionResources | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cpu) {
       hasAnyValues = true;
@@ -3065,12 +3139,14 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
 
   public set internalValue(value: AppEngineFlexibleAppVersionResources | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cpu = undefined;
       this._diskGb = undefined;
       this._memoryGb = undefined;
       this._volumes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cpu = value.cpu;
       this._diskGb = value.diskGb;
       this._memoryGb = value.memoryGb;
@@ -3171,6 +3247,8 @@ export function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngin
 }
 
 export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3181,7 +3259,7 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -3200,11 +3278,13 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: AppEngineFlexibleAppVersionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -3279,6 +3359,8 @@ export function appEngineFlexibleAppVersionVpcAccessConnectorToTerraform(struct?
 }
 
 export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3289,7 +3371,7 @@ export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extend
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionVpcAccessConnector | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -3300,9 +3382,11 @@ export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extend
 
   public set internalValue(value: AppEngineFlexibleAppVersionVpcAccessConnector | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }

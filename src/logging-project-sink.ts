@@ -82,6 +82,8 @@ export function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingPro
 }
 
 export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -92,7 +94,7 @@ export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): LoggingProjectSinkBigqueryOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._usePartitionedTables) {
       hasAnyValues = true;
@@ -103,9 +105,11 @@ export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.Comp
 
   public set internalValue(value: LoggingProjectSinkBigqueryOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._usePartitionedTables = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._usePartitionedTables = value.usePartitionedTables;
     }
   }

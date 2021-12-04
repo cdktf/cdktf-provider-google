@@ -102,6 +102,8 @@ export function billingBudgetAllUpdatesRuleToTerraform(struct?: BillingBudgetAll
 }
 
 export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -112,7 +114,7 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): BillingBudgetAllUpdatesRule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disableDefaultIamRecipients) {
       hasAnyValues = true;
@@ -135,12 +137,14 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: BillingBudgetAllUpdatesRule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disableDefaultIamRecipients = undefined;
       this._monitoringNotificationChannels = undefined;
       this._pubsubTopic = undefined;
       this._schemaVersion = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disableDefaultIamRecipients = value.disableDefaultIamRecipients;
       this._monitoringNotificationChannels = value.monitoringNotificationChannels;
       this._pubsubTopic = value.pubsubTopic;
@@ -253,6 +257,8 @@ export function billingBudgetAmountSpecifiedAmountToTerraform(struct?: BillingBu
 }
 
 export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -263,7 +269,7 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
   }
 
   public get internalValue(): BillingBudgetAmountSpecifiedAmount | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._currencyCode) {
       hasAnyValues = true;
@@ -282,11 +288,13 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
 
   public set internalValue(value: BillingBudgetAmountSpecifiedAmount | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._currencyCode = undefined;
       this._nanos = undefined;
       this._units = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._currencyCode = value.currencyCode;
       this._nanos = value.nanos;
       this._units = value.units;
@@ -371,6 +379,8 @@ export function billingBudgetAmountToTerraform(struct?: BillingBudgetAmountOutpu
 }
 
 export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -381,13 +391,13 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BillingBudgetAmount | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._lastPeriodAmount) {
       hasAnyValues = true;
       internalValueResult.lastPeriodAmount = this._lastPeriodAmount;
     }
-    if (this._specifiedAmount) {
+    if (this._specifiedAmount?.internalValue) {
       hasAnyValues = true;
       internalValueResult.specifiedAmount = this._specifiedAmount?.internalValue;
     }
@@ -396,10 +406,12 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BillingBudgetAmount | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._lastPeriodAmount = undefined;
       this._specifiedAmount.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._lastPeriodAmount = value.lastPeriodAmount;
       this._specifiedAmount.internalValue = value.specifiedAmount;
     }
@@ -513,6 +525,8 @@ export function billingBudgetBudgetFilterToTerraform(struct?: BillingBudgetBudge
 }
 
 export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -523,7 +537,7 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): BillingBudgetBudgetFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._creditTypes) {
       hasAnyValues = true;
@@ -554,6 +568,7 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: BillingBudgetBudgetFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._creditTypes = undefined;
       this._creditTypesTreatment = undefined;
       this._labels = undefined;
@@ -562,6 +577,7 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
       this._subaccounts = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._creditTypes = value.creditTypes;
       this._creditTypesTreatment = value.creditTypesTreatment;
       this._labels = value.labels;
@@ -724,6 +740,8 @@ export function billingBudgetTimeoutsToTerraform(struct?: BillingBudgetTimeoutsO
 }
 
 export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -734,7 +752,7 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BillingBudgetTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -753,11 +771,13 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BillingBudgetTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

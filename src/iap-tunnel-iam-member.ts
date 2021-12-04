@@ -54,6 +54,8 @@ export function iapTunnelIamMemberConditionToTerraform(struct?: IapTunnelIamMemb
 }
 
 export class IapTunnelIamMemberConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -64,7 +66,7 @@ export class IapTunnelIamMemberConditionOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): IapTunnelIamMemberCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -83,11 +85,13 @@ export class IapTunnelIamMemberConditionOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: IapTunnelIamMemberCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._expression = undefined;
       this._title = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._expression = value.expression;
       this._title = value.title;

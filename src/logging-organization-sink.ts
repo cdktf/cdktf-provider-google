@@ -82,6 +82,8 @@ export function loggingOrganizationSinkBigqueryOptionsToTerraform(struct?: Loggi
 }
 
 export class LoggingOrganizationSinkBigqueryOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -92,7 +94,7 @@ export class LoggingOrganizationSinkBigqueryOptionsOutputReference extends cdktf
   }
 
   public get internalValue(): LoggingOrganizationSinkBigqueryOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._usePartitionedTables) {
       hasAnyValues = true;
@@ -103,9 +105,11 @@ export class LoggingOrganizationSinkBigqueryOptionsOutputReference extends cdktf
 
   public set internalValue(value: LoggingOrganizationSinkBigqueryOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._usePartitionedTables = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._usePartitionedTables = value.usePartitionedTables;
     }
   }

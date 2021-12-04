@@ -213,6 +213,8 @@ export function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetwork
 }
 
 export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -223,7 +225,7 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ComputeSubnetworkLogConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aggregationInterval) {
       hasAnyValues = true;
@@ -250,6 +252,7 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ComputeSubnetworkLogConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aggregationInterval = undefined;
       this._filterExpr = undefined;
       this._flowSampling = undefined;
@@ -257,6 +260,7 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
       this._metadataFields = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aggregationInterval = value.aggregationInterval;
       this._filterExpr = value.filterExpr;
       this._flowSampling = value.flowSampling;
@@ -373,6 +377,8 @@ export function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkT
 }
 
 export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -383,7 +389,7 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ComputeSubnetworkTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -402,11 +408,13 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ComputeSubnetworkTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

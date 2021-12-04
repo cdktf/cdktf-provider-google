@@ -170,6 +170,8 @@ export function computeImageRawDiskToTerraform(struct?: ComputeImageRawDiskOutpu
 }
 
 export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -180,7 +182,7 @@ export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ComputeImageRawDisk | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._containerType) {
       hasAnyValues = true;
@@ -199,11 +201,13 @@ export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ComputeImageRawDisk | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._containerType = undefined;
       this._sha1 = undefined;
       this._source = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._containerType = value.containerType;
       this._sha1 = value.sha1;
       this._source = value.source;
@@ -283,6 +287,8 @@ export function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeoutsOut
 }
 
 export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -293,7 +299,7 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ComputeImageTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -312,11 +318,13 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ComputeImageTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;

@@ -81,6 +81,8 @@ export function pubsubLiteTopicPartitionConfigCapacityToTerraform(struct?: Pubsu
 }
 
 export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -91,7 +93,7 @@ export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf
   }
 
   public get internalValue(): PubsubLiteTopicPartitionConfigCapacity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publishMibPerSec) {
       hasAnyValues = true;
@@ -106,10 +108,12 @@ export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf
 
   public set internalValue(value: PubsubLiteTopicPartitionConfigCapacity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publishMibPerSec = undefined;
       this._subscribeMibPerSec = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publishMibPerSec = value.publishMibPerSec;
       this._subscribeMibPerSec = value.subscribeMibPerSec;
     }
@@ -168,6 +172,8 @@ export function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTop
 }
 
 export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -178,13 +184,13 @@ export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): PubsubLiteTopicPartitionConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._capacity) {
+    if (this._capacity?.internalValue) {
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity?.internalValue;
     }
@@ -193,10 +199,12 @@ export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.Complex
 
   public set internalValue(value: PubsubLiteTopicPartitionConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._capacity.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._capacity.internalValue = value.capacity;
     }
@@ -251,6 +259,8 @@ export function pubsubLiteTopicReservationConfigToTerraform(struct?: PubsubLiteT
 }
 
 export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -261,7 +271,7 @@ export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): PubsubLiteTopicReservationConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._throughputReservation) {
       hasAnyValues = true;
@@ -272,9 +282,11 @@ export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.Compl
 
   public set internalValue(value: PubsubLiteTopicReservationConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._throughputReservation = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._throughputReservation = value.throughputReservation;
     }
   }
@@ -325,6 +337,8 @@ export function pubsubLiteTopicRetentionConfigToTerraform(struct?: PubsubLiteTop
 }
 
 export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -335,7 +349,7 @@ export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): PubsubLiteTopicRetentionConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._perPartitionBytes) {
       hasAnyValues = true;
@@ -350,10 +364,12 @@ export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.Complex
 
   public set internalValue(value: PubsubLiteTopicRetentionConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._perPartitionBytes = undefined;
       this._period = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._perPartitionBytes = value.perPartitionBytes;
       this._period = value.period;
     }
@@ -416,6 +432,8 @@ export function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeo
 }
 
 export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -426,7 +444,7 @@ export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): PubsubLiteTopicTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -445,11 +463,13 @@ export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: PubsubLiteTopicTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
