@@ -2354,9 +2354,9 @@ jsii-rosetta@^1.39.0, jsii-rosetta@^1.46.0:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.406:
-  version "0.1.416"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.416.tgz#bc84e00a8c020cf8c94575389472d77427224318"
-  integrity sha512-05wVeA8N678OywFu9QAwr6V+fgwgRpwOjc2wlIrtCaqrsmekHC581GtEDZHxSzW1eK991ACQ6t+O42esUGrMEQ==
+  version "0.1.417"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.417.tgz#ce585ef4b02d4a766c1b128389bec08c9b06e461"
+  integrity sha512-5XQhIh5jSQxIx7Ii09RO54rYYJWe3G5/FAOscjEU6Ln5kvHOHhTGYTj87Ft1eZmzuV07vn28HtzSRV9jOGf8lw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.46.0"
@@ -3284,9 +3284,9 @@ prepend-http@^2.0.0:
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
 prettier@^2.3.1:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.0.tgz#a6370e2d4594e093270419d9cc47f7670488f893"
-  integrity sha512-FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
+  integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
 
 printj@~1.1.0:
   version "1.1.2"
