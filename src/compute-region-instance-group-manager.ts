@@ -197,11 +197,11 @@ export class ComputeRegionInstanceGroupManagerAutoHealingPoliciesOutputReference
   public get internalValue(): ComputeRegionInstanceGroupManagerAutoHealingPolicies | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._healthCheck) {
+    if (this._healthCheck !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthCheck = this._healthCheck;
     }
-    if (this._initialDelaySec) {
+    if (this._initialDelaySec !== undefined) {
       hasAnyValues = true;
       internalValueResult.initialDelaySec = this._initialDelaySec;
     }
@@ -341,15 +341,15 @@ export class ComputeRegionInstanceGroupManagerTimeoutsOutputReference extends cd
   public get internalValue(): ComputeRegionInstanceGroupManagerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -509,39 +509,39 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
   public get internalValue(): ComputeRegionInstanceGroupManagerUpdatePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instanceRedistributionType) {
+    if (this._instanceRedistributionType !== undefined) {
       hasAnyValues = true;
       internalValueResult.instanceRedistributionType = this._instanceRedistributionType;
     }
-    if (this._maxSurgeFixed) {
+    if (this._maxSurgeFixed !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxSurgeFixed = this._maxSurgeFixed;
     }
-    if (this._maxSurgePercent) {
+    if (this._maxSurgePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxSurgePercent = this._maxSurgePercent;
     }
-    if (this._maxUnavailableFixed) {
+    if (this._maxUnavailableFixed !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnavailableFixed = this._maxUnavailableFixed;
     }
-    if (this._maxUnavailablePercent) {
+    if (this._maxUnavailablePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnavailablePercent = this._maxUnavailablePercent;
     }
-    if (this._minReadySec) {
+    if (this._minReadySec !== undefined) {
       hasAnyValues = true;
       internalValueResult.minReadySec = this._minReadySec;
     }
-    if (this._minimalAction) {
+    if (this._minimalAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimalAction = this._minimalAction;
     }
-    if (this._replacementMethod) {
+    if (this._replacementMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.replacementMethod = this._replacementMethod;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -754,11 +754,11 @@ export class ComputeRegionInstanceGroupManagerVersionTargetSizeOutputReference e
   public get internalValue(): ComputeRegionInstanceGroupManagerVersionTargetSize | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fixed) {
+    if (this._fixed !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixed = this._fixed;
     }
-    if (this._percent) {
+    if (this._percent !== undefined) {
       hasAnyValues = true;
       internalValueResult.percent = this._percent;
     }

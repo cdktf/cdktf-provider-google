@@ -117,19 +117,19 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   public get internalValue(): DialogflowFulfillmentGenericWebService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._requestHeaders) {
+    if (this._requestHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeaders = this._requestHeaders;
     }
-    if (this._uri) {
+    if (this._uri !== undefined) {
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -257,15 +257,15 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): DialogflowFulfillmentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

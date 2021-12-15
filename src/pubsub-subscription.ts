@@ -185,11 +185,11 @@ export class PubsubSubscriptionDeadLetterPolicyOutputReference extends cdktf.Com
   public get internalValue(): PubsubSubscriptionDeadLetterPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._deadLetterTopic) {
+    if (this._deadLetterTopic !== undefined) {
       hasAnyValues = true;
       internalValueResult.deadLetterTopic = this._deadLetterTopic;
     }
-    if (this._maxDeliveryAttempts) {
+    if (this._maxDeliveryAttempts !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDeliveryAttempts = this._maxDeliveryAttempts;
     }
@@ -279,7 +279,7 @@ export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.Com
   public get internalValue(): PubsubSubscriptionExpirationPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ttl) {
+    if (this._ttl !== undefined) {
       hasAnyValues = true;
       internalValueResult.ttl = this._ttl;
     }
@@ -359,11 +359,11 @@ export class PubsubSubscriptionPushConfigOidcTokenOutputReference extends cdktf.
   public get internalValue(): PubsubSubscriptionPushConfigOidcToken | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._audience) {
+    if (this._audience !== undefined) {
       hasAnyValues = true;
       internalValueResult.audience = this._audience;
     }
-    if (this._serviceAccountEmail) {
+    if (this._serviceAccountEmail !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
     }
@@ -484,15 +484,15 @@ export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexOb
   public get internalValue(): PubsubSubscriptionPushConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._attributes) {
+    if (this._attributes !== undefined) {
       hasAnyValues = true;
       internalValueResult.attributes = this._attributes;
     }
-    if (this._pushEndpoint) {
+    if (this._pushEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.pushEndpoint = this._pushEndpoint;
     }
-    if (this._oidcToken?.internalValue) {
+    if (this._oidcToken?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.oidcToken = this._oidcToken?.internalValue;
     }
@@ -603,11 +603,11 @@ export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexO
   public get internalValue(): PubsubSubscriptionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maximumBackoff) {
+    if (this._maximumBackoff !== undefined) {
       hasAnyValues = true;
       internalValueResult.maximumBackoff = this._maximumBackoff;
     }
-    if (this._minimumBackoff) {
+    if (this._minimumBackoff !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimumBackoff = this._minimumBackoff;
     }
@@ -701,15 +701,15 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): PubsubSubscriptionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

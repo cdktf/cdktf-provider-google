@@ -102,7 +102,7 @@ export class DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference e
   public get internalValue(): DataprocWorkflowTemplateJobsHadoopJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -220,35 +220,35 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   public get internalValue(): DataprocWorkflowTemplateJobsHadoopJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._mainClass) {
+    if (this._mainClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainClass = this._mainClass;
     }
-    if (this._mainJarFileUri) {
+    if (this._mainJarFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainJarFileUri = this._mainJarFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -443,7 +443,7 @@ export class DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference extends
   public get internalValue(): DataprocWorkflowTemplateJobsHiveJobQueryList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._queries) {
+    if (this._queries !== undefined) {
       hasAnyValues = true;
       internalValueResult.queries = this._queries;
     }
@@ -543,27 +543,27 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   public get internalValue(): DataprocWorkflowTemplateJobsHiveJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._continueOnFailure) {
+    if (this._continueOnFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.continueOnFailure = this._continueOnFailure;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._scriptVariables) {
+    if (this._scriptVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._queryList?.internalValue) {
+    if (this._queryList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList?.internalValue;
     }
@@ -723,7 +723,7 @@ export class DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference exte
   public get internalValue(): DataprocWorkflowTemplateJobsPigJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -792,7 +792,7 @@ export class DataprocWorkflowTemplateJobsPigJobQueryListOutputReference extends 
   public get internalValue(): DataprocWorkflowTemplateJobsPigJobQueryList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._queries) {
+    if (this._queries !== undefined) {
       hasAnyValues = true;
       internalValueResult.queries = this._queries;
     }
@@ -899,31 +899,31 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   public get internalValue(): DataprocWorkflowTemplateJobsPigJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._continueOnFailure) {
+    if (this._continueOnFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.continueOnFailure = this._continueOnFailure;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._scriptVariables) {
+    if (this._scriptVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
-    if (this._queryList?.internalValue) {
+    if (this._queryList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList?.internalValue;
     }
@@ -1101,7 +1101,7 @@ export class DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference e
   public get internalValue(): DataprocWorkflowTemplateJobsPrestoJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -1170,7 +1170,7 @@ export class DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference exten
   public get internalValue(): DataprocWorkflowTemplateJobsPrestoJobQueryList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._queries) {
+    if (this._queries !== undefined) {
       hasAnyValues = true;
       internalValueResult.queries = this._queries;
     }
@@ -1277,31 +1277,31 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   public get internalValue(): DataprocWorkflowTemplateJobsPrestoJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientTags) {
+    if (this._clientTags !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientTags = this._clientTags;
     }
-    if (this._continueOnFailure) {
+    if (this._continueOnFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.continueOnFailure = this._continueOnFailure;
     }
-    if (this._outputFormat) {
+    if (this._outputFormat !== undefined) {
       hasAnyValues = true;
       internalValueResult.outputFormat = this._outputFormat;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
-    if (this._queryList?.internalValue) {
+    if (this._queryList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList?.internalValue;
     }
@@ -1478,7 +1478,7 @@ export class DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference 
   public get internalValue(): DataprocWorkflowTemplateJobsPysparkJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -1596,35 +1596,35 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   public get internalValue(): DataprocWorkflowTemplateJobsPysparkJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._mainPythonFileUri) {
+    if (this._mainPythonFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainPythonFileUri = this._mainPythonFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._pythonFileUris) {
+    if (this._pythonFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.pythonFileUris = this._pythonFileUris;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1823,11 +1823,11 @@ export class DataprocWorkflowTemplateJobsSchedulingOutputReference extends cdktf
   public get internalValue(): DataprocWorkflowTemplateJobsScheduling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxFailuresPerHour) {
+    if (this._maxFailuresPerHour !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFailuresPerHour = this._maxFailuresPerHour;
     }
-    if (this._maxFailuresTotal) {
+    if (this._maxFailuresTotal !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFailuresTotal = this._maxFailuresTotal;
     }
@@ -1913,7 +1913,7 @@ export class DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference ex
   public get internalValue(): DataprocWorkflowTemplateJobsSparkJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -2031,35 +2031,35 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   public get internalValue(): DataprocWorkflowTemplateJobsSparkJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._mainClass) {
+    if (this._mainClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainClass = this._mainClass;
     }
-    if (this._mainJarFileUri) {
+    if (this._mainJarFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainJarFileUri = this._mainJarFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -2254,7 +2254,7 @@ export class DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference e
   public get internalValue(): DataprocWorkflowTemplateJobsSparkRJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -2358,27 +2358,27 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   public get internalValue(): DataprocWorkflowTemplateJobsSparkRJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._mainRFileUri) {
+    if (this._mainRFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainRFileUri = this._mainRFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -2534,7 +2534,7 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference
   public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -2603,7 +2603,7 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference ext
   public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJobQueryList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._queries) {
+    if (this._queries !== undefined) {
       hasAnyValues = true;
       internalValueResult.queries = this._queries;
     }
@@ -2703,27 +2703,27 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._scriptVariables) {
+    if (this._scriptVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
-    if (this._queryList?.internalValue) {
+    if (this._queryList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList?.internalValue;
     }
@@ -2979,7 +2979,7 @@ export class DataprocWorkflowTemplateParametersValidationRegexOutputReference ex
   public get internalValue(): DataprocWorkflowTemplateParametersValidationRegex | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._regexes) {
+    if (this._regexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.regexes = this._regexes;
     }
@@ -3044,7 +3044,7 @@ export class DataprocWorkflowTemplateParametersValidationValuesOutputReference e
   public get internalValue(): DataprocWorkflowTemplateParametersValidationValues | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -3116,11 +3116,11 @@ export class DataprocWorkflowTemplateParametersValidationOutputReference extends
   public get internalValue(): DataprocWorkflowTemplateParametersValidation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._regex?.internalValue) {
+    if (this._regex?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.regex = this._regex?.internalValue;
     }
-    if (this._values?.internalValue) {
+    if (this._values?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values?.internalValue;
     }
@@ -3253,11 +3253,11 @@ export class DataprocWorkflowTemplatePlacementClusterSelectorOutputReference ext
   public get internalValue(): DataprocWorkflowTemplatePlacementClusterSelector | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterLabels) {
+    if (this._clusterLabels !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterLabels = this._clusterLabels;
     }
-    if (this._zone) {
+    if (this._zone !== undefined) {
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
@@ -3341,7 +3341,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingCon
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._policy) {
+    if (this._policy !== undefined) {
       hasAnyValues = true;
       internalValueResult.policy = this._policy;
     }
@@ -3409,7 +3409,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConf
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._gcePdKmsKeyName) {
+    if (this._gcePdKmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcePdKmsKeyName = this._gcePdKmsKeyName;
     }
@@ -3477,7 +3477,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableHttpPortAccess) {
+    if (this._enableHttpPortAccess !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableHttpPortAccess = this._enableHttpPortAccess;
     }
@@ -3545,7 +3545,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nodeGroup) {
+    if (this._nodeGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeGroup = this._nodeGroup;
     }
@@ -3624,15 +3624,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._consumeReservationType) {
+    if (this._consumeReservationType !== undefined) {
       hasAnyValues = true;
       internalValueResult.consumeReservationType = this._consumeReservationType;
     }
-    if (this._key) {
+    if (this._key !== undefined) {
       hasAnyValues = true;
       internalValueResult.key = this._key;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -3806,47 +3806,47 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._internalIpOnly) {
+    if (this._internalIpOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.internalIpOnly = this._internalIpOnly;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._network) {
+    if (this._network !== undefined) {
       hasAnyValues = true;
       internalValueResult.network = this._network;
     }
-    if (this._privateIpv6GoogleAccess) {
+    if (this._privateIpv6GoogleAccess !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateIpv6GoogleAccess = this._privateIpv6GoogleAccess;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
-    if (this._serviceAccountScopes) {
+    if (this._serviceAccountScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountScopes = this._serviceAccountScopes;
     }
-    if (this._subnetwork) {
+    if (this._subnetwork !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetwork = this._subnetwork;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._zone) {
+    if (this._zone !== undefined) {
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
-    if (this._nodeGroupAffinity?.internalValue) {
+    if (this._nodeGroupAffinity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeGroupAffinity = this._nodeGroupAffinity?.internalValue;
     }
-    if (this._reservationAffinity?.internalValue) {
+    if (this._reservationAffinity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
     }
@@ -4135,15 +4135,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoDeleteTime) {
+    if (this._autoDeleteTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoDeleteTime = this._autoDeleteTime;
     }
-    if (this._autoDeleteTtl) {
+    if (this._autoDeleteTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoDeleteTtl = this._autoDeleteTtl;
     }
-    if (this._idleDeleteTtl) {
+    if (this._idleDeleteTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.idleDeleteTtl = this._idleDeleteTtl;
     }
@@ -4287,15 +4287,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bootDiskSizeGb) {
+    if (this._bootDiskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
     }
-    if (this._bootDiskType) {
+    if (this._bootDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskType = this._bootDiskType;
     }
-    if (this._numLocalSsds) {
+    if (this._numLocalSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.numLocalSsds = this._numLocalSsds;
     }
@@ -4441,31 +4441,31 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._image) {
+    if (this._image !== undefined) {
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._numInstances) {
+    if (this._numInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._preemptibility) {
+    if (this._preemptibility !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptibility = this._preemptibility;
     }
-    if (this._accelerators) {
+    if (this._accelerators !== undefined) {
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig?.internalValue) {
+    if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -4682,15 +4682,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bootDiskSizeGb) {
+    if (this._bootDiskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
     }
-    if (this._bootDiskType) {
+    if (this._bootDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskType = this._bootDiskType;
     }
-    if (this._numLocalSsds) {
+    if (this._numLocalSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.numLocalSsds = this._numLocalSsds;
     }
@@ -4836,31 +4836,31 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._image) {
+    if (this._image !== undefined) {
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._numInstances) {
+    if (this._numInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._preemptibility) {
+    if (this._preemptibility !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptibility = this._preemptibility;
     }
-    if (this._accelerators) {
+    if (this._accelerators !== undefined) {
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig?.internalValue) {
+    if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -5135,63 +5135,63 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._crossRealmTrustAdminServer) {
+    if (this._crossRealmTrustAdminServer !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustAdminServer = this._crossRealmTrustAdminServer;
     }
-    if (this._crossRealmTrustKdc) {
+    if (this._crossRealmTrustKdc !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustKdc = this._crossRealmTrustKdc;
     }
-    if (this._crossRealmTrustRealm) {
+    if (this._crossRealmTrustRealm !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustRealm = this._crossRealmTrustRealm;
     }
-    if (this._crossRealmTrustSharedPassword) {
+    if (this._crossRealmTrustSharedPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustSharedPassword = this._crossRealmTrustSharedPassword;
     }
-    if (this._enableKerberos) {
+    if (this._enableKerberos !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableKerberos = this._enableKerberos;
     }
-    if (this._kdcDbKey) {
+    if (this._kdcDbKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.kdcDbKey = this._kdcDbKey;
     }
-    if (this._keyPassword) {
+    if (this._keyPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyPassword = this._keyPassword;
     }
-    if (this._keystore) {
+    if (this._keystore !== undefined) {
       hasAnyValues = true;
       internalValueResult.keystore = this._keystore;
     }
-    if (this._keystorePassword) {
+    if (this._keystorePassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.keystorePassword = this._keystorePassword;
     }
-    if (this._kmsKey) {
+    if (this._kmsKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKey = this._kmsKey;
     }
-    if (this._realm) {
+    if (this._realm !== undefined) {
       hasAnyValues = true;
       internalValueResult.realm = this._realm;
     }
-    if (this._rootPrincipalPassword) {
+    if (this._rootPrincipalPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootPrincipalPassword = this._rootPrincipalPassword;
     }
-    if (this._tgtLifetimeHours) {
+    if (this._tgtLifetimeHours !== undefined) {
       hasAnyValues = true;
       internalValueResult.tgtLifetimeHours = this._tgtLifetimeHours;
     }
-    if (this._truststore) {
+    if (this._truststore !== undefined) {
       hasAnyValues = true;
       internalValueResult.truststore = this._truststore;
     }
-    if (this._truststorePassword) {
+    if (this._truststorePassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.truststorePassword = this._truststorePassword;
     }
@@ -5511,7 +5511,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kerberosConfig?.internalValue) {
+    if (this._kerberosConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.kerberosConfig = this._kerberosConfig?.internalValue;
     }
@@ -5593,15 +5593,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._imageVersion) {
+    if (this._imageVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageVersion = this._imageVersion;
     }
-    if (this._optionalComponents) {
+    if (this._optionalComponents !== undefined) {
       hasAnyValues = true;
       internalValueResult.optionalComponents = this._optionalComponents;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
@@ -5746,15 +5746,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bootDiskSizeGb) {
+    if (this._bootDiskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
     }
-    if (this._bootDiskType) {
+    if (this._bootDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskType = this._bootDiskType;
     }
-    if (this._numLocalSsds) {
+    if (this._numLocalSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.numLocalSsds = this._numLocalSsds;
     }
@@ -5900,31 +5900,31 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._image) {
+    if (this._image !== undefined) {
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._numInstances) {
+    if (this._numInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._preemptibility) {
+    if (this._preemptibility !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptibility = this._preemptibility;
     }
-    if (this._accelerators) {
+    if (this._accelerators !== undefined) {
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig?.internalValue) {
+    if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -6185,55 +6185,55 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._stagingBucket) {
+    if (this._stagingBucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.stagingBucket = this._stagingBucket;
     }
-    if (this._tempBucket) {
+    if (this._tempBucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.tempBucket = this._tempBucket;
     }
-    if (this._autoscalingConfig?.internalValue) {
+    if (this._autoscalingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
     }
-    if (this._encryptionConfig?.internalValue) {
+    if (this._encryptionConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.encryptionConfig = this._encryptionConfig?.internalValue;
     }
-    if (this._endpointConfig?.internalValue) {
+    if (this._endpointConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.endpointConfig = this._endpointConfig?.internalValue;
     }
-    if (this._gceClusterConfig?.internalValue) {
+    if (this._gceClusterConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gceClusterConfig = this._gceClusterConfig?.internalValue;
     }
-    if (this._initializationActions) {
+    if (this._initializationActions !== undefined) {
       hasAnyValues = true;
       internalValueResult.initializationActions = this._initializationActions;
     }
-    if (this._lifecycleConfig?.internalValue) {
+    if (this._lifecycleConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.lifecycleConfig = this._lifecycleConfig?.internalValue;
     }
-    if (this._masterConfig?.internalValue) {
+    if (this._masterConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterConfig = this._masterConfig?.internalValue;
     }
-    if (this._secondaryWorkerConfig?.internalValue) {
+    if (this._secondaryWorkerConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.secondaryWorkerConfig = this._secondaryWorkerConfig?.internalValue;
     }
-    if (this._securityConfig?.internalValue) {
+    if (this._securityConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.securityConfig = this._securityConfig?.internalValue;
     }
-    if (this._softwareConfig?.internalValue) {
+    if (this._softwareConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
     }
-    if (this._workerConfig?.internalValue) {
+    if (this._workerConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workerConfig = this._workerConfig?.internalValue;
     }
@@ -6532,15 +6532,15 @@ export class DataprocWorkflowTemplatePlacementManagedClusterOutputReference exte
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedCluster | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterName) {
+    if (this._clusterName !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterName = this._clusterName;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._config?.internalValue) {
+    if (this._config?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.config = this._config?.internalValue;
     }
@@ -6646,11 +6646,11 @@ export class DataprocWorkflowTemplatePlacementOutputReference extends cdktf.Comp
   public get internalValue(): DataprocWorkflowTemplatePlacement | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterSelector?.internalValue) {
+    if (this._clusterSelector?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterSelector = this._clusterSelector?.internalValue;
     }
-    if (this._managedCluster?.internalValue) {
+    if (this._managedCluster?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedCluster = this._managedCluster?.internalValue;
     }
@@ -6739,11 +6739,11 @@ export class DataprocWorkflowTemplateTimeoutsOutputReference extends cdktf.Compl
   public get internalValue(): DataprocWorkflowTemplateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

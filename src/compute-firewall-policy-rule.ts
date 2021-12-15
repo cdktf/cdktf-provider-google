@@ -148,15 +148,15 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
   public get internalValue(): ComputeFirewallPolicyRuleMatch | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._destIpRanges) {
+    if (this._destIpRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.destIpRanges = this._destIpRanges;
     }
-    if (this._srcIpRanges) {
+    if (this._srcIpRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.srcIpRanges = this._srcIpRanges;
     }
-    if (this._layer4Configs) {
+    if (this._layer4Configs !== undefined) {
       hasAnyValues = true;
       internalValueResult.layer4Configs = this._layer4Configs;
     }
@@ -266,15 +266,15 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
   public get internalValue(): ComputeFirewallPolicyRuleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

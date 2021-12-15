@@ -86,15 +86,15 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   public get internalValue(): StorageTransferJobScheduleScheduleEndDate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._day) {
+    if (this._day !== undefined) {
       hasAnyValues = true;
       internalValueResult.day = this._day;
     }
-    if (this._month) {
+    if (this._month !== undefined) {
       hasAnyValues = true;
       internalValueResult.month = this._month;
     }
-    if (this._year) {
+    if (this._year !== undefined) {
       hasAnyValues = true;
       internalValueResult.year = this._year;
     }
@@ -203,15 +203,15 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   public get internalValue(): StorageTransferJobScheduleScheduleStartDate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._day) {
+    if (this._day !== undefined) {
       hasAnyValues = true;
       internalValueResult.day = this._day;
     }
-    if (this._month) {
+    if (this._month !== undefined) {
       hasAnyValues = true;
       internalValueResult.month = this._month;
     }
-    if (this._year) {
+    if (this._year !== undefined) {
       hasAnyValues = true;
       internalValueResult.year = this._year;
     }
@@ -327,19 +327,19 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   public get internalValue(): StorageTransferJobScheduleStartTimeOfDay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hours) {
+    if (this._hours !== undefined) {
       hasAnyValues = true;
       internalValueResult.hours = this._hours;
     }
-    if (this._minutes) {
+    if (this._minutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -463,15 +463,15 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   public get internalValue(): StorageTransferJobSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._scheduleEndDate?.internalValue) {
+    if (this._scheduleEndDate?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.scheduleEndDate = this._scheduleEndDate?.internalValue;
     }
-    if (this._scheduleStartDate?.internalValue) {
+    if (this._scheduleStartDate?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.scheduleStartDate = this._scheduleStartDate?.internalValue;
     }
-    if (this._startTimeOfDay?.internalValue) {
+    if (this._startTimeOfDay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTimeOfDay = this._startTimeOfDay?.internalValue;
     }
@@ -579,11 +579,11 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
   public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accessKeyId) {
+    if (this._accessKeyId !== undefined) {
       hasAnyValues = true;
       internalValueResult.accessKeyId = this._accessKeyId;
     }
-    if (this._secretAccessKey) {
+    if (this._secretAccessKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretAccessKey = this._secretAccessKey;
     }
@@ -670,11 +670,11 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucketName) {
+    if (this._bucketName !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucketName = this._bucketName;
     }
-    if (this._awsAccessKey?.internalValue) {
+    if (this._awsAccessKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.awsAccessKey = this._awsAccessKey?.internalValue;
     }
@@ -754,7 +754,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
   public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._sasToken) {
+    if (this._sasToken !== undefined) {
       hasAnyValues = true;
       internalValueResult.sasToken = this._sasToken;
     }
@@ -840,19 +840,19 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._container) {
+    if (this._container !== undefined) {
       hasAnyValues = true;
       internalValueResult.container = this._container;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._storageAccount) {
+    if (this._storageAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccount = this._storageAccount;
     }
-    if (this._azureCredentials?.internalValue) {
+    if (this._azureCredentials?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.azureCredentials = this._azureCredentials?.internalValue;
     }
@@ -972,11 +972,11 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
   public get internalValue(): StorageTransferJobTransferSpecGcsDataSink | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucketName) {
+    if (this._bucketName !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucketName = this._bucketName;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -1066,11 +1066,11 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
   public get internalValue(): StorageTransferJobTransferSpecGcsDataSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucketName) {
+    if (this._bucketName !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucketName = this._bucketName;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -1153,7 +1153,7 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
   public get internalValue(): StorageTransferJobTransferSpecHttpDataSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._listUrl) {
+    if (this._listUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.listUrl = this._listUrl;
     }
@@ -1239,19 +1239,19 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   public get internalValue(): StorageTransferJobTransferSpecObjectConditions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._excludePrefixes) {
+    if (this._excludePrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludePrefixes = this._excludePrefixes;
     }
-    if (this._includePrefixes) {
+    if (this._includePrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.includePrefixes = this._includePrefixes;
     }
-    if (this._maxTimeElapsedSinceLastModification) {
+    if (this._maxTimeElapsedSinceLastModification !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTimeElapsedSinceLastModification = this._maxTimeElapsedSinceLastModification;
     }
-    if (this._minTimeElapsedSinceLastModification) {
+    if (this._minTimeElapsedSinceLastModification !== undefined) {
       hasAnyValues = true;
       internalValueResult.minTimeElapsedSinceLastModification = this._minTimeElapsedSinceLastModification;
     }
@@ -1387,15 +1387,15 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   public get internalValue(): StorageTransferJobTransferSpecTransferOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._deleteObjectsFromSourceAfterTransfer) {
+    if (this._deleteObjectsFromSourceAfterTransfer !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteObjectsFromSourceAfterTransfer = this._deleteObjectsFromSourceAfterTransfer;
     }
-    if (this._deleteObjectsUniqueInSink) {
+    if (this._deleteObjectsUniqueInSink !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteObjectsUniqueInSink = this._deleteObjectsUniqueInSink;
     }
-    if (this._overwriteObjectsAlreadyExistingInSink) {
+    if (this._overwriteObjectsAlreadyExistingInSink !== undefined) {
       hasAnyValues = true;
       internalValueResult.overwriteObjectsAlreadyExistingInSink = this._overwriteObjectsAlreadyExistingInSink;
     }
@@ -1541,31 +1541,31 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   public get internalValue(): StorageTransferJobTransferSpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._awsS3DataSource?.internalValue) {
+    if (this._awsS3DataSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.awsS3DataSource = this._awsS3DataSource?.internalValue;
     }
-    if (this._azureBlobStorageDataSource?.internalValue) {
+    if (this._azureBlobStorageDataSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.azureBlobStorageDataSource = this._azureBlobStorageDataSource?.internalValue;
     }
-    if (this._gcsDataSink?.internalValue) {
+    if (this._gcsDataSink?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcsDataSink = this._gcsDataSink?.internalValue;
     }
-    if (this._gcsDataSource?.internalValue) {
+    if (this._gcsDataSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcsDataSource = this._gcsDataSource?.internalValue;
     }
-    if (this._httpDataSource?.internalValue) {
+    if (this._httpDataSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpDataSource = this._httpDataSource?.internalValue;
     }
-    if (this._objectConditions?.internalValue) {
+    if (this._objectConditions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.objectConditions = this._objectConditions?.internalValue;
     }
-    if (this._transferOptions?.internalValue) {
+    if (this._transferOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.transferOptions = this._transferOptions?.internalValue;
     }

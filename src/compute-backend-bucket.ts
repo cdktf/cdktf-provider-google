@@ -181,35 +181,35 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   public get internalValue(): ComputeBackendBucketCdnPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cacheMode) {
+    if (this._cacheMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheMode = this._cacheMode;
     }
-    if (this._clientTtl) {
+    if (this._clientTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientTtl = this._clientTtl;
     }
-    if (this._defaultTtl) {
+    if (this._defaultTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultTtl = this._defaultTtl;
     }
-    if (this._maxTtl) {
+    if (this._maxTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTtl = this._maxTtl;
     }
-    if (this._negativeCaching) {
+    if (this._negativeCaching !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCaching = this._negativeCaching;
     }
-    if (this._serveWhileStale) {
+    if (this._serveWhileStale !== undefined) {
       hasAnyValues = true;
       internalValueResult.serveWhileStale = this._serveWhileStale;
     }
-    if (this._signedUrlCacheMaxAgeSec) {
+    if (this._signedUrlCacheMaxAgeSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
     }
-    if (this._negativeCachingPolicy) {
+    if (this._negativeCachingPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy;
     }
@@ -412,15 +412,15 @@ export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): ComputeBackendBucketTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

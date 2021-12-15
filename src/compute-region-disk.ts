@@ -145,7 +145,7 @@ export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.Com
   public get internalValue(): ComputeRegionDiskDiskEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._rawKey) {
+    if (this._rawKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.rawKey = this._rawKey;
     }
@@ -214,7 +214,7 @@ export class ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference extends
   public get internalValue(): ComputeRegionDiskSourceSnapshotEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._rawKey) {
+    if (this._rawKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.rawKey = this._rawKey;
     }
@@ -290,15 +290,15 @@ export class ComputeRegionDiskTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ComputeRegionDiskTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

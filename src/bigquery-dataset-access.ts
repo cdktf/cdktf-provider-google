@@ -125,11 +125,11 @@ export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): BigqueryDatasetAccessTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
@@ -231,15 +231,15 @@ export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObje
   public get internalValue(): BigqueryDatasetAccessViewA | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }

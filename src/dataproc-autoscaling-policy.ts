@@ -139,23 +139,23 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
   public get internalValue(): DataprocAutoscalingPolicyBasicAlgorithmYarnConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._gracefulDecommissionTimeout) {
+    if (this._gracefulDecommissionTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.gracefulDecommissionTimeout = this._gracefulDecommissionTimeout;
     }
-    if (this._scaleDownFactor) {
+    if (this._scaleDownFactor !== undefined) {
       hasAnyValues = true;
       internalValueResult.scaleDownFactor = this._scaleDownFactor;
     }
-    if (this._scaleDownMinWorkerFraction) {
+    if (this._scaleDownMinWorkerFraction !== undefined) {
       hasAnyValues = true;
       internalValueResult.scaleDownMinWorkerFraction = this._scaleDownMinWorkerFraction;
     }
-    if (this._scaleUpFactor) {
+    if (this._scaleUpFactor !== undefined) {
       hasAnyValues = true;
       internalValueResult.scaleUpFactor = this._scaleUpFactor;
     }
-    if (this._scaleUpMinWorkerFraction) {
+    if (this._scaleUpMinWorkerFraction !== undefined) {
       hasAnyValues = true;
       internalValueResult.scaleUpMinWorkerFraction = this._scaleUpMinWorkerFraction;
     }
@@ -296,11 +296,11 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
   public get internalValue(): DataprocAutoscalingPolicyBasicAlgorithm | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cooldownPeriod) {
+    if (this._cooldownPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.cooldownPeriod = this._cooldownPeriod;
     }
-    if (this._yarnConfig?.internalValue) {
+    if (this._yarnConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.yarnConfig = this._yarnConfig?.internalValue;
     }
@@ -412,15 +412,15 @@ export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference exten
   public get internalValue(): DataprocAutoscalingPolicySecondaryWorkerConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxInstances) {
+    if (this._maxInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxInstances = this._maxInstances;
     }
-    if (this._minInstances) {
+    if (this._minInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.minInstances = this._minInstances;
     }
-    if (this._weight) {
+    if (this._weight !== undefined) {
       hasAnyValues = true;
       internalValueResult.weight = this._weight;
     }
@@ -532,15 +532,15 @@ export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.Comp
   public get internalValue(): DataprocAutoscalingPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -671,15 +671,15 @@ export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.
   public get internalValue(): DataprocAutoscalingPolicyWorkerConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxInstances) {
+    if (this._maxInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxInstances = this._maxInstances;
     }
-    if (this._minInstances) {
+    if (this._minInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.minInstances = this._minInstances;
     }
-    if (this._weight) {
+    if (this._weight !== undefined) {
       hasAnyValues = true;
       internalValueResult.weight = this._weight;
     }

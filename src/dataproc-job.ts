@@ -148,7 +148,7 @@ export class DataprocJobHadoopConfigLoggingConfigOutputReference extends cdktf.C
   public get internalValue(): DataprocJobHadoopConfigLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -263,35 +263,35 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
   public get internalValue(): DataprocJobHadoopConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._mainClass) {
+    if (this._mainClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainClass = this._mainClass;
     }
-    if (this._mainJarFileUri) {
+    if (this._mainJarFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainJarFileUri = this._mainJarFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -521,27 +521,27 @@ export class DataprocJobHiveConfigOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobHiveConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._continueOnFailure) {
+    if (this._continueOnFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.continueOnFailure = this._continueOnFailure;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._queryList) {
+    if (this._queryList !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList;
     }
-    if (this._scriptVariables) {
+    if (this._scriptVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
@@ -701,7 +701,7 @@ export class DataprocJobPigConfigLoggingConfigOutputReference extends cdktf.Comp
   public get internalValue(): DataprocJobPigConfigLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -809,31 +809,31 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobPigConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._continueOnFailure) {
+    if (this._continueOnFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.continueOnFailure = this._continueOnFailure;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._queryList) {
+    if (this._queryList !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList;
     }
-    if (this._scriptVariables) {
+    if (this._scriptVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1011,7 +1011,7 @@ export class DataprocJobPlacementOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobPlacement | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterName) {
+    if (this._clusterName !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterName = this._clusterName;
     }
@@ -1076,7 +1076,7 @@ export class DataprocJobPysparkConfigLoggingConfigOutputReference extends cdktf.
   public get internalValue(): DataprocJobPysparkConfigLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -1191,35 +1191,35 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
   public get internalValue(): DataprocJobPysparkConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._mainPythonFileUri) {
+    if (this._mainPythonFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainPythonFileUri = this._mainPythonFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._pythonFileUris) {
+    if (this._pythonFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.pythonFileUris = this._pythonFileUris;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1411,7 +1411,7 @@ export class DataprocJobReferenceOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._jobId) {
+    if (this._jobId !== undefined) {
       hasAnyValues = true;
       internalValueResult.jobId = this._jobId;
     }
@@ -1486,11 +1486,11 @@ export class DataprocJobSchedulingOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobScheduling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxFailuresPerHour) {
+    if (this._maxFailuresPerHour !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFailuresPerHour = this._maxFailuresPerHour;
     }
-    if (this._maxFailuresTotal) {
+    if (this._maxFailuresTotal !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFailuresTotal = this._maxFailuresTotal;
     }
@@ -1570,7 +1570,7 @@ export class DataprocJobSparkConfigLoggingConfigOutputReference extends cdktf.Co
   public get internalValue(): DataprocJobSparkConfigLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -1685,35 +1685,35 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobSparkConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveUris) {
+    if (this._archiveUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveUris = this._archiveUris;
     }
-    if (this._args) {
+    if (this._args !== undefined) {
       hasAnyValues = true;
       internalValueResult.args = this._args;
     }
-    if (this._fileUris) {
+    if (this._fileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUris = this._fileUris;
     }
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._mainClass) {
+    if (this._mainClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainClass = this._mainClass;
     }
-    if (this._mainJarFileUri) {
+    if (this._mainJarFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainJarFileUri = this._mainJarFileUri;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -1908,7 +1908,7 @@ export class DataprocJobSparksqlConfigLoggingConfigOutputReference extends cdktf
   public get internalValue(): DataprocJobSparksqlConfigLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._driverLogLevels) {
+    if (this._driverLogLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverLogLevels = this._driverLogLevels;
     }
@@ -2009,27 +2009,27 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
   public get internalValue(): DataprocJobSparksqlConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._jarFileUris) {
+    if (this._jarFileUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.jarFileUris = this._jarFileUris;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._queryFileUri) {
+    if (this._queryFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryFileUri = this._queryFileUri;
     }
-    if (this._queryList) {
+    if (this._queryList !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryList = this._queryList;
     }
-    if (this._scriptVariables) {
+    if (this._scriptVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptVariables = this._scriptVariables;
     }
-    if (this._loggingConfig?.internalValue) {
+    if (this._loggingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
     }
@@ -2192,11 +2192,11 @@ export class DataprocJobTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataprocJobTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

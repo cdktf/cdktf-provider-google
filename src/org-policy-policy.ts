@@ -87,19 +87,19 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
   public get internalValue(): OrgPolicyPolicySpecRulesCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._description) {
+    if (this._description !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description;
     }
-    if (this._expression) {
+    if (this._expression !== undefined) {
       hasAnyValues = true;
       internalValueResult.expression = this._expression;
     }
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._title) {
+    if (this._title !== undefined) {
       hasAnyValues = true;
       internalValueResult.title = this._title;
     }
@@ -228,11 +228,11 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
   public get internalValue(): OrgPolicyPolicySpecRulesValues | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedValues) {
+    if (this._allowedValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedValues = this._allowedValues;
     }
-    if (this._deniedValues) {
+    if (this._deniedValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.deniedValues = this._deniedValues;
     }
@@ -379,15 +379,15 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
   public get internalValue(): OrgPolicyPolicySpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._inheritFromParent) {
+    if (this._inheritFromParent !== undefined) {
       hasAnyValues = true;
       internalValueResult.inheritFromParent = this._inheritFromParent;
     }
-    if (this._reset) {
+    if (this._reset !== undefined) {
       hasAnyValues = true;
       internalValueResult.reset = this._reset;
     }
-    if (this._rules) {
+    if (this._rules !== undefined) {
       hasAnyValues = true;
       internalValueResult.rules = this._rules;
     }
@@ -500,15 +500,15 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): OrgPolicyPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

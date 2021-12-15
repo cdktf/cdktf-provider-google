@@ -76,7 +76,7 @@ export class ServiceAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ServiceAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }

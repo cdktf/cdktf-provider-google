@@ -126,15 +126,15 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   public get internalValue(): ComputeRegionNetworkEndpointGroupAppEngine | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._service) {
+    if (this._service !== undefined) {
       hasAnyValues = true;
       internalValueResult.service = this._service;
     }
-    if (this._urlMask) {
+    if (this._urlMask !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlMask = this._urlMask;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -253,11 +253,11 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
   public get internalValue(): ComputeRegionNetworkEndpointGroupCloudFunction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._function) {
+    if (this._function !== undefined) {
       hasAnyValues = true;
       internalValueResult.function = this._function;
     }
-    if (this._urlMask) {
+    if (this._urlMask !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlMask = this._urlMask;
     }
@@ -369,15 +369,15 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   public get internalValue(): ComputeRegionNetworkEndpointGroupCloudRun | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._service) {
+    if (this._service !== undefined) {
       hasAnyValues = true;
       internalValueResult.service = this._service;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._urlMask) {
+    if (this._urlMask !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlMask = this._urlMask;
     }
@@ -484,11 +484,11 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
   public get internalValue(): ComputeRegionNetworkEndpointGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

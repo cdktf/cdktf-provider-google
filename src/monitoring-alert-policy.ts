@@ -240,11 +240,11 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
   public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._percent) {
+    if (this._percent !== undefined) {
       hasAnyValues = true;
       internalValueResult.percent = this._percent;
     }
@@ -366,19 +366,19 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsent | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._duration) {
+    if (this._duration !== undefined) {
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
-    if (this._filter) {
+    if (this._filter !== undefined) {
       hasAnyValues = true;
       internalValueResult.filter = this._filter;
     }
-    if (this._aggregations) {
+    if (this._aggregations !== undefined) {
       hasAnyValues = true;
       internalValueResult.aggregations = this._aggregations;
     }
-    if (this._trigger?.internalValue) {
+    if (this._trigger?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
@@ -509,11 +509,11 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
   public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._percent) {
+    if (this._percent !== undefined) {
       hasAnyValues = true;
       internalValueResult.percent = this._percent;
     }
@@ -627,15 +627,15 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._duration) {
+    if (this._duration !== undefined) {
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
-    if (this._query) {
+    if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._trigger?.internalValue) {
+    if (this._trigger?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
@@ -962,11 +962,11 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
   public get internalValue(): MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._percent) {
+    if (this._percent !== undefined) {
       hasAnyValues = true;
       internalValueResult.percent = this._percent;
     }
@@ -1148,35 +1148,35 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   public get internalValue(): MonitoringAlertPolicyConditionsConditionThreshold | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._comparison) {
+    if (this._comparison !== undefined) {
       hasAnyValues = true;
       internalValueResult.comparison = this._comparison;
     }
-    if (this._denominatorFilter) {
+    if (this._denominatorFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.denominatorFilter = this._denominatorFilter;
     }
-    if (this._duration) {
+    if (this._duration !== undefined) {
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
-    if (this._filter) {
+    if (this._filter !== undefined) {
       hasAnyValues = true;
       internalValueResult.filter = this._filter;
     }
-    if (this._thresholdValue) {
+    if (this._thresholdValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.thresholdValue = this._thresholdValue;
     }
-    if (this._aggregations) {
+    if (this._aggregations !== undefined) {
       hasAnyValues = true;
       internalValueResult.aggregations = this._aggregations;
     }
-    if (this._denominatorAggregations) {
+    if (this._denominatorAggregations !== undefined) {
       hasAnyValues = true;
       internalValueResult.denominatorAggregations = this._denominatorAggregations;
     }
-    if (this._trigger?.internalValue) {
+    if (this._trigger?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
@@ -1421,11 +1421,11 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
   public get internalValue(): MonitoringAlertPolicyDocumentation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._content) {
+    if (this._content !== undefined) {
       hasAnyValues = true;
       internalValueResult.content = this._content;
     }
-    if (this._mimeType) {
+    if (this._mimeType !== undefined) {
       hasAnyValues = true;
       internalValueResult.mimeType = this._mimeType;
     }
@@ -1519,15 +1519,15 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): MonitoringAlertPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -72,7 +72,7 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
   public get internalValue(): ComputeSecurityPolicyRuleMatchConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._srcIpRanges) {
+    if (this._srcIpRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.srcIpRanges = this._srcIpRanges;
     }
@@ -137,7 +137,7 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
   public get internalValue(): ComputeSecurityPolicyRuleMatchExpr | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expression) {
+    if (this._expression !== undefined) {
       hasAnyValues = true;
       internalValueResult.expression = this._expression;
     }
@@ -216,15 +216,15 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   public get internalValue(): ComputeSecurityPolicyRuleMatch | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._versionedExpr) {
+    if (this._versionedExpr !== undefined) {
       hasAnyValues = true;
       internalValueResult.versionedExpr = this._versionedExpr;
     }
-    if (this._config?.internalValue) {
+    if (this._config?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.config = this._config?.internalValue;
     }
-    if (this._expr?.internalValue) {
+    if (this._expr?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.expr = this._expr?.internalValue;
     }
@@ -383,15 +383,15 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): ComputeSecurityPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

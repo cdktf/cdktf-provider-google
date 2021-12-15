@@ -146,19 +146,19 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maskingCharacter) {
+    if (this._maskingCharacter !== undefined) {
       hasAnyValues = true;
       internalValueResult.maskingCharacter = this._maskingCharacter;
     }
-    if (this._numberToMask) {
+    if (this._numberToMask !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberToMask = this._numberToMask;
     }
-    if (this._reverseOrder) {
+    if (this._reverseOrder !== undefined) {
       hasAnyValues = true;
       internalValueResult.reverseOrder = this._reverseOrder;
     }
-    if (this._charactersToIgnore) {
+    if (this._charactersToIgnore !== undefined) {
       hasAnyValues = true;
       internalValueResult.charactersToIgnore = this._charactersToIgnore;
     }
@@ -281,7 +281,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -358,11 +358,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cryptoKeyName) {
+    if (this._cryptoKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.cryptoKeyName = this._cryptoKeyName;
     }
-    if (this._wrappedKey) {
+    if (this._wrappedKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.wrappedKey = this._wrappedKey;
     }
@@ -442,7 +442,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -509,7 +509,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._key) {
+    if (this._key !== undefined) {
       hasAnyValues = true;
       internalValueResult.key = this._key;
     }
@@ -588,15 +588,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsWrapped?.internalValue) {
+    if (this._kmsWrapped?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsWrapped = this._kmsWrapped?.internalValue;
     }
-    if (this._transient?.internalValue) {
+    if (this._transient?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.transient = this._transient?.internalValue;
     }
-    if (this._unwrapped?.internalValue) {
+    if (this._unwrapped?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.unwrapped = this._unwrapped?.internalValue;
     }
@@ -700,7 +700,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -782,15 +782,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._context?.internalValue) {
+    if (this._context?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.context = this._context?.internalValue;
     }
-    if (this._cryptoKey?.internalValue) {
+    if (this._cryptoKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cryptoKey = this._cryptoKey?.internalValue;
     }
-    if (this._surrogateInfoType?.internalValue) {
+    if (this._surrogateInfoType?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.surrogateInfoType = this._surrogateInfoType?.internalValue;
     }
@@ -894,7 +894,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -971,11 +971,11 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cryptoKeyName) {
+    if (this._cryptoKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.cryptoKeyName = this._cryptoKeyName;
     }
-    if (this._wrappedKey) {
+    if (this._wrappedKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.wrappedKey = this._wrappedKey;
     }
@@ -1055,7 +1055,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -1122,7 +1122,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._key) {
+    if (this._key !== undefined) {
       hasAnyValues = true;
       internalValueResult.key = this._key;
     }
@@ -1201,15 +1201,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsWrapped?.internalValue) {
+    if (this._kmsWrapped?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsWrapped = this._kmsWrapped?.internalValue;
     }
-    if (this._transient?.internalValue) {
+    if (this._transient?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.transient = this._transient?.internalValue;
     }
-    if (this._unwrapped?.internalValue) {
+    if (this._unwrapped?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.unwrapped = this._unwrapped?.internalValue;
     }
@@ -1313,7 +1313,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -1418,27 +1418,27 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._commonAlphabet) {
+    if (this._commonAlphabet !== undefined) {
       hasAnyValues = true;
       internalValueResult.commonAlphabet = this._commonAlphabet;
     }
-    if (this._customAlphabet) {
+    if (this._customAlphabet !== undefined) {
       hasAnyValues = true;
       internalValueResult.customAlphabet = this._customAlphabet;
     }
-    if (this._radix) {
+    if (this._radix !== undefined) {
       hasAnyValues = true;
       internalValueResult.radix = this._radix;
     }
-    if (this._context?.internalValue) {
+    if (this._context?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.context = this._context?.internalValue;
     }
-    if (this._cryptoKey?.internalValue) {
+    if (this._cryptoKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cryptoKey = this._cryptoKey?.internalValue;
     }
-    if (this._surrogateInfoType?.internalValue) {
+    if (this._surrogateInfoType?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.surrogateInfoType = this._surrogateInfoType?.internalValue;
     }
@@ -1611,15 +1611,15 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._day) {
+    if (this._day !== undefined) {
       hasAnyValues = true;
       internalValueResult.day = this._day;
     }
-    if (this._month) {
+    if (this._month !== undefined) {
       hasAnyValues = true;
       internalValueResult.month = this._month;
     }
-    if (this._year) {
+    if (this._year !== undefined) {
       hasAnyValues = true;
       internalValueResult.year = this._year;
     }
@@ -1744,19 +1744,19 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hours) {
+    if (this._hours !== undefined) {
       hasAnyValues = true;
       internalValueResult.hours = this._hours;
     }
-    if (this._minutes) {
+    if (this._minutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1928,35 +1928,35 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._booleanValue) {
+    if (this._booleanValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.booleanValue = this._booleanValue;
     }
-    if (this._dayOfWeekValue) {
+    if (this._dayOfWeekValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeekValue = this._dayOfWeekValue;
     }
-    if (this._floatValue) {
+    if (this._floatValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.floatValue = this._floatValue;
     }
-    if (this._integerValue) {
+    if (this._integerValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.integerValue = this._integerValue;
     }
-    if (this._stringValue) {
+    if (this._stringValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringValue = this._stringValue;
     }
-    if (this._timestampValue) {
+    if (this._timestampValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timestampValue = this._timestampValue;
     }
-    if (this._dateValue?.internalValue) {
+    if (this._dateValue?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dateValue = this._dateValue?.internalValue;
     }
-    if (this._timeValue?.internalValue) {
+    if (this._timeValue?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeValue = this._timeValue?.internalValue;
     }
@@ -2150,7 +2150,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._newValue?.internalValue) {
+    if (this._newValue?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.newValue = this._newValue?.internalValue;
     }
@@ -2243,23 +2243,23 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._replaceWithInfoTypeConfig) {
+    if (this._replaceWithInfoTypeConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.replaceWithInfoTypeConfig = this._replaceWithInfoTypeConfig;
     }
-    if (this._characterMaskConfig?.internalValue) {
+    if (this._characterMaskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.characterMaskConfig = this._characterMaskConfig?.internalValue;
     }
-    if (this._cryptoDeterministicConfig?.internalValue) {
+    if (this._cryptoDeterministicConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cryptoDeterministicConfig = this._cryptoDeterministicConfig?.internalValue;
     }
-    if (this._cryptoReplaceFfxFpeConfig?.internalValue) {
+    if (this._cryptoReplaceFfxFpeConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cryptoReplaceFfxFpeConfig = this._cryptoReplaceFfxFpeConfig?.internalValue;
     }
-    if (this._replaceConfig?.internalValue) {
+    if (this._replaceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.replaceConfig = this._replaceConfig?.internalValue;
     }
@@ -2425,7 +2425,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransfo
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._transformations) {
+    if (this._transformations !== undefined) {
       hasAnyValues = true;
       internalValueResult.transformations = this._transformations;
     }
@@ -2491,7 +2491,7 @@ export class DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference
   public get internalValue(): DataLossPreventionDeidentifyTemplateDeidentifyConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._infoTypeTransformations?.internalValue) {
+    if (this._infoTypeTransformations?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.infoTypeTransformations = this._infoTypeTransformations?.internalValue;
     }
@@ -2564,15 +2564,15 @@ export class DataLossPreventionDeidentifyTemplateTimeoutsOutputReference extends
   public get internalValue(): DataLossPreventionDeidentifyTemplateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

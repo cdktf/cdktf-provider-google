@@ -259,11 +259,11 @@ export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.Com
   public get internalValue(): NotebooksInstanceAcceleratorConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._coreCount) {
+    if (this._coreCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.coreCount = this._coreCount;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -351,11 +351,11 @@ export class NotebooksInstanceContainerImageOutputReference extends cdktf.Comple
   public get internalValue(): NotebooksInstanceContainerImage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._repository) {
+    if (this._repository !== undefined) {
       hasAnyValues = true;
       internalValueResult.repository = this._repository;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
@@ -459,15 +459,15 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   public get internalValue(): NotebooksInstanceShieldedInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableIntegrityMonitoring) {
+    if (this._enableIntegrityMonitoring !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
     }
-    if (this._enableSecureBoot) {
+    if (this._enableSecureBoot !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableSecureBoot = this._enableSecureBoot;
     }
-    if (this._enableVtpm) {
+    if (this._enableVtpm !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableVtpm = this._enableVtpm;
     }
@@ -579,15 +579,15 @@ export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): NotebooksInstanceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -706,15 +706,15 @@ export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject
   public get internalValue(): NotebooksInstanceVmImage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._imageFamily) {
+    if (this._imageFamily !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageFamily = this._imageFamily;
     }
-    if (this._imageName) {
+    if (this._imageName !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageName = this._imageName;
     }
-    if (this._project) {
+    if (this._project !== undefined) {
       hasAnyValues = true;
       internalValueResult.project = this._project;
     }

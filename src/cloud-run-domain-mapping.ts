@@ -163,15 +163,15 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
   public get internalValue(): CloudRunDomainMappingMetadata | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._annotations) {
+    if (this._annotations !== undefined) {
       hasAnyValues = true;
       internalValueResult.annotations = this._annotations;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._namespace) {
+    if (this._namespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.namespace = this._namespace;
     }
@@ -292,15 +292,15 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
   public get internalValue(): CloudRunDomainMappingSpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._certificateMode) {
+    if (this._certificateMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.certificateMode = this._certificateMode;
     }
-    if (this._forceOverride) {
+    if (this._forceOverride !== undefined) {
       hasAnyValues = true;
       internalValueResult.forceOverride = this._forceOverride;
     }
-    if (this._routeName) {
+    if (this._routeName !== undefined) {
       hasAnyValues = true;
       internalValueResult.routeName = this._routeName;
     }
@@ -404,11 +404,11 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): CloudRunDomainMappingTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

@@ -332,11 +332,11 @@ export class ComputeInstanceFromTemplateAdvancedMachineFeaturesOutputReference e
   public get internalValue(): ComputeInstanceFromTemplateAdvancedMachineFeatures | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableNestedVirtualization) {
+    if (this._enableNestedVirtualization !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableNestedVirtualization = this._enableNestedVirtualization;
     }
-    if (this._threadsPerCore) {
+    if (this._threadsPerCore !== undefined) {
       hasAnyValues = true;
       internalValueResult.threadsPerCore = this._threadsPerCore;
     }
@@ -443,19 +443,19 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
   public get internalValue(): ComputeInstanceFromTemplateBootDiskInitializeParams | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._image) {
+    if (this._image !== undefined) {
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._size) {
+    if (this._size !== undefined) {
       hasAnyValues = true;
       internalValueResult.size = this._size;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -620,31 +620,31 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
   public get internalValue(): ComputeInstanceFromTemplateBootDisk | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoDelete) {
+    if (this._autoDelete !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoDelete = this._autoDelete;
     }
-    if (this._deviceName) {
+    if (this._deviceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.deviceName = this._deviceName;
     }
-    if (this._diskEncryptionKeyRaw) {
+    if (this._diskEncryptionKeyRaw !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionKeyRaw = this._diskEncryptionKeyRaw;
     }
-    if (this._kmsKeySelfLink) {
+    if (this._kmsKeySelfLink !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
     }
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._source) {
+    if (this._source !== undefined) {
       hasAnyValues = true;
       internalValueResult.source = this._source;
     }
-    if (this._initializeParams?.internalValue) {
+    if (this._initializeParams?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.initializeParams = this._initializeParams?.internalValue;
     }
@@ -820,7 +820,7 @@ export class ComputeInstanceFromTemplateConfidentialInstanceConfigOutputReferenc
   public get internalValue(): ComputeInstanceFromTemplateConfidentialInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableConfidentialCompute) {
+    if (this._enableConfidentialCompute !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableConfidentialCompute = this._enableConfidentialCompute;
     }
@@ -1042,11 +1042,11 @@ export class ComputeInstanceFromTemplateReservationAffinitySpecificReservationOu
   public get internalValue(): ComputeInstanceFromTemplateReservationAffinitySpecificReservation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._key) {
+    if (this._key !== undefined) {
       hasAnyValues = true;
       internalValueResult.key = this._key;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -1133,11 +1133,11 @@ export class ComputeInstanceFromTemplateReservationAffinityOutputReference exten
   public get internalValue(): ComputeInstanceFromTemplateReservationAffinity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._specificReservation?.internalValue) {
+    if (this._specificReservation?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.specificReservation = this._specificReservation?.internalValue;
     }
@@ -1273,23 +1273,23 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
   public get internalValue(): ComputeInstanceFromTemplateScheduling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._automaticRestart) {
+    if (this._automaticRestart !== undefined) {
       hasAnyValues = true;
       internalValueResult.automaticRestart = this._automaticRestart;
     }
-    if (this._minNodeCpus) {
+    if (this._minNodeCpus !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNodeCpus = this._minNodeCpus;
     }
-    if (this._onHostMaintenance) {
+    if (this._onHostMaintenance !== undefined) {
       hasAnyValues = true;
       internalValueResult.onHostMaintenance = this._onHostMaintenance;
     }
-    if (this._preemptible) {
+    if (this._preemptible !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
-    if (this._nodeAffinities) {
+    if (this._nodeAffinities !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeAffinities = this._nodeAffinities;
     }
@@ -1444,15 +1444,15 @@ export class ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference ex
   public get internalValue(): ComputeInstanceFromTemplateShieldedInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableIntegrityMonitoring) {
+    if (this._enableIntegrityMonitoring !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
     }
-    if (this._enableSecureBoot) {
+    if (this._enableSecureBoot !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableSecureBoot = this._enableSecureBoot;
     }
-    if (this._enableVtpm) {
+    if (this._enableVtpm !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableVtpm = this._enableVtpm;
     }
@@ -1564,15 +1564,15 @@ export class ComputeInstanceFromTemplateTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): ComputeInstanceFromTemplateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

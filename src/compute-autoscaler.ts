@@ -109,11 +109,11 @@ export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference ext
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyCpuUtilization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._predictiveMethod) {
+    if (this._predictiveMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.predictiveMethod = this._predictiveMethod;
     }
-    if (this._target) {
+    if (this._target !== undefined) {
       hasAnyValues = true;
       internalValueResult.target = this._target;
     }
@@ -198,7 +198,7 @@ export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputRef
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._target) {
+    if (this._target !== undefined) {
       hasAnyValues = true;
       internalValueResult.target = this._target;
     }
@@ -317,11 +317,11 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fixed) {
+    if (this._fixed !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixed = this._fixed;
     }
-    if (this._percent) {
+    if (this._percent !== undefined) {
       hasAnyValues = true;
       internalValueResult.percent = this._percent;
     }
@@ -415,11 +415,11 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference ext
   public get internalValue(): ComputeAutoscalerAutoscalingPolicyScaleInControl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._timeWindowSec) {
+    if (this._timeWindowSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeWindowSec = this._timeWindowSec;
     }
-    if (this._maxScaledInReplicas?.internalValue) {
+    if (this._maxScaledInReplicas?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxScaledInReplicas = this._maxScaledInReplicas?.internalValue;
     }
@@ -635,39 +635,39 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   public get internalValue(): ComputeAutoscalerAutoscalingPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cooldownPeriod) {
+    if (this._cooldownPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.cooldownPeriod = this._cooldownPeriod;
     }
-    if (this._maxReplicas) {
+    if (this._maxReplicas !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxReplicas = this._maxReplicas;
     }
-    if (this._minReplicas) {
+    if (this._minReplicas !== undefined) {
       hasAnyValues = true;
       internalValueResult.minReplicas = this._minReplicas;
     }
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._cpuUtilization?.internalValue) {
+    if (this._cpuUtilization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpuUtilization = this._cpuUtilization?.internalValue;
     }
-    if (this._loadBalancingUtilization?.internalValue) {
+    if (this._loadBalancingUtilization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.loadBalancingUtilization = this._loadBalancingUtilization?.internalValue;
     }
-    if (this._metric) {
+    if (this._metric !== undefined) {
       hasAnyValues = true;
       internalValueResult.metric = this._metric;
     }
-    if (this._scaleInControl?.internalValue) {
+    if (this._scaleInControl?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.scaleInControl = this._scaleInControl?.internalValue;
     }
-    if (this._scalingSchedules) {
+    if (this._scalingSchedules !== undefined) {
       hasAnyValues = true;
       internalValueResult.scalingSchedules = this._scalingSchedules;
     }
@@ -883,15 +883,15 @@ export class ComputeAutoscalerTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ComputeAutoscalerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

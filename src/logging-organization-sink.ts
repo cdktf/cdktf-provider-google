@@ -96,7 +96,7 @@ export class LoggingOrganizationSinkBigqueryOptionsOutputReference extends cdktf
   public get internalValue(): LoggingOrganizationSinkBigqueryOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._usePartitionedTables) {
+    if (this._usePartitionedTables !== undefined) {
       hasAnyValues = true;
       internalValueResult.usePartitionedTables = this._usePartitionedTables;
     }

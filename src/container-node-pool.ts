@@ -139,11 +139,11 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
   public get internalValue(): ContainerNodePoolAutoscaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxNodeCount) {
+    if (this._maxNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNodeCount = this._maxNodeCount;
     }
-    if (this._minNodeCount) {
+    if (this._minNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNodeCount = this._minNodeCount;
     }
@@ -230,11 +230,11 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   public get internalValue(): ContainerNodePoolManagement | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoRepair) {
+    if (this._autoRepair !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoRepair = this._autoRepair;
     }
-    if (this._autoUpgrade) {
+    if (this._autoUpgrade !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoUpgrade = this._autoUpgrade;
     }
@@ -381,11 +381,11 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   public get internalValue(): ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableIntegrityMonitoring) {
+    if (this._enableIntegrityMonitoring !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
     }
-    if (this._enableSecureBoot) {
+    if (this._enableSecureBoot !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableSecureBoot = this._enableSecureBoot;
     }
@@ -478,11 +478,11 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   public get internalValue(): ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._nodeMetadata) {
+    if (this._nodeMetadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeMetadata = this._nodeMetadata;
     }
@@ -673,67 +673,67 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   public get internalValue(): ContainerNodePoolNodeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._diskType) {
+    if (this._diskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskType = this._diskType;
     }
-    if (this._guestAccelerator) {
+    if (this._guestAccelerator !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestAccelerator = this._guestAccelerator;
     }
-    if (this._imageType) {
+    if (this._imageType !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageType = this._imageType;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._localSsdCount) {
+    if (this._localSsdCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.localSsdCount = this._localSsdCount;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
-    if (this._preemptible) {
+    if (this._preemptible !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._taint) {
+    if (this._taint !== undefined) {
       hasAnyValues = true;
       internalValueResult.taint = this._taint;
     }
-    if (this._shieldedInstanceConfig?.internalValue) {
+    if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
-    if (this._workloadMetadataConfig?.internalValue) {
+    if (this._workloadMetadataConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workloadMetadataConfig = this._workloadMetadataConfig?.internalValue;
     }
@@ -1083,15 +1083,15 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ContainerNodePoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1202,11 +1202,11 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
   public get internalValue(): ContainerNodePoolUpgradeSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxSurge) {
+    if (this._maxSurge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxSurge = this._maxSurge;
     }
-    if (this._maxUnavailable) {
+    if (this._maxUnavailable !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnavailable = this._maxUnavailable;
     }

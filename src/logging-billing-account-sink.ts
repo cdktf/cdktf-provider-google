@@ -90,7 +90,7 @@ export class LoggingBillingAccountSinkBigqueryOptionsOutputReference extends cdk
   public get internalValue(): LoggingBillingAccountSinkBigqueryOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._usePartitionedTables) {
+    if (this._usePartitionedTables !== undefined) {
       hasAnyValues = true;
       internalValueResult.usePartitionedTables = this._usePartitionedTables;
     }

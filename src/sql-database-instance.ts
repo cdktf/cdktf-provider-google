@@ -165,11 +165,11 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   public get internalValue(): SqlDatabaseInstanceClone | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pointInTime) {
+    if (this._pointInTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.pointInTime = this._pointInTime;
     }
-    if (this._sourceInstanceName) {
+    if (this._sourceInstanceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceInstanceName = this._sourceInstanceName;
     }
@@ -322,47 +322,47 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   public get internalValue(): SqlDatabaseInstanceReplicaConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caCertificate) {
+    if (this._caCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.caCertificate = this._caCertificate;
     }
-    if (this._clientCertificate) {
+    if (this._clientCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientCertificate = this._clientCertificate;
     }
-    if (this._clientKey) {
+    if (this._clientKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientKey = this._clientKey;
     }
-    if (this._connectRetryInterval) {
+    if (this._connectRetryInterval !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectRetryInterval = this._connectRetryInterval;
     }
-    if (this._dumpFilePath) {
+    if (this._dumpFilePath !== undefined) {
       hasAnyValues = true;
       internalValueResult.dumpFilePath = this._dumpFilePath;
     }
-    if (this._failoverTarget) {
+    if (this._failoverTarget !== undefined) {
       hasAnyValues = true;
       internalValueResult.failoverTarget = this._failoverTarget;
     }
-    if (this._masterHeartbeatPeriod) {
+    if (this._masterHeartbeatPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterHeartbeatPeriod = this._masterHeartbeatPeriod;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sslCipher) {
+    if (this._sslCipher !== undefined) {
       hasAnyValues = true;
       internalValueResult.sslCipher = this._sslCipher;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._verifyServerCertificate) {
+    if (this._verifyServerCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.verifyServerCertificate = this._verifyServerCertificate;
     }
@@ -624,15 +624,15 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   public get internalValue(): SqlDatabaseInstanceRestoreBackupContext | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backupRunId) {
+    if (this._backupRunId !== undefined) {
       hasAnyValues = true;
       internalValueResult.backupRunId = this._backupRunId;
     }
-    if (this._instanceId) {
+    if (this._instanceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.instanceId = this._instanceId;
     }
-    if (this._project) {
+    if (this._project !== undefined) {
       hasAnyValues = true;
       internalValueResult.project = this._project;
     }
@@ -740,11 +740,11 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
   public get internalValue(): SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._retainedBackups) {
+    if (this._retainedBackups !== undefined) {
       hasAnyValues = true;
       internalValueResult.retainedBackups = this._retainedBackups;
     }
-    if (this._retentionUnit) {
+    if (this._retentionUnit !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionUnit = this._retentionUnit;
     }
@@ -869,31 +869,31 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   public get internalValue(): SqlDatabaseInstanceSettingsBackupConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._binaryLogEnabled) {
+    if (this._binaryLogEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.binaryLogEnabled = this._binaryLogEnabled;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._pointInTimeRecoveryEnabled) {
+    if (this._pointInTimeRecoveryEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.pointInTimeRecoveryEnabled = this._pointInTimeRecoveryEnabled;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._transactionLogRetentionDays) {
+    if (this._transactionLogRetentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.transactionLogRetentionDays = this._transactionLogRetentionDays;
     }
-    if (this._backupRetentionSettings?.internalValue) {
+    if (this._backupRetentionSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.backupRetentionSettings = this._backupRetentionSettings?.internalValue;
     }
@@ -1116,19 +1116,19 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   public get internalValue(): SqlDatabaseInstanceSettingsInsightsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._queryInsightsEnabled) {
+    if (this._queryInsightsEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryInsightsEnabled = this._queryInsightsEnabled;
     }
-    if (this._queryStringLength) {
+    if (this._queryStringLength !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryStringLength = this._queryStringLength;
     }
-    if (this._recordApplicationTags) {
+    if (this._recordApplicationTags !== undefined) {
       hasAnyValues = true;
       internalValueResult.recordApplicationTags = this._recordApplicationTags;
     }
-    if (this._recordClientAddress) {
+    if (this._recordClientAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.recordClientAddress = this._recordClientAddress;
     }
@@ -1296,19 +1296,19 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   public get internalValue(): SqlDatabaseInstanceSettingsIpConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ipv4Enabled) {
+    if (this._ipv4Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipv4Enabled = this._ipv4Enabled;
     }
-    if (this._privateNetwork) {
+    if (this._privateNetwork !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateNetwork = this._privateNetwork;
     }
-    if (this._requireSsl) {
+    if (this._requireSsl !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireSsl = this._requireSsl;
     }
-    if (this._authorizedNetworks) {
+    if (this._authorizedNetworks !== undefined) {
       hasAnyValues = true;
       internalValueResult.authorizedNetworks = this._authorizedNetworks;
     }
@@ -1438,11 +1438,11 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
   public get internalValue(): SqlDatabaseInstanceSettingsLocationPreference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._followGaeApplication) {
+    if (this._followGaeApplication !== undefined) {
       hasAnyValues = true;
       internalValueResult.followGaeApplication = this._followGaeApplication;
     }
-    if (this._zone) {
+    if (this._zone !== undefined) {
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
@@ -1542,15 +1542,15 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   public get internalValue(): SqlDatabaseInstanceSettingsMaintenanceWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._day) {
+    if (this._day !== undefined) {
       hasAnyValues = true;
       internalValueResult.day = this._day;
     }
-    if (this._hour) {
+    if (this._hour !== undefined) {
       hasAnyValues = true;
       internalValueResult.hour = this._hour;
     }
-    if (this._updateTrack) {
+    if (this._updateTrack !== undefined) {
       hasAnyValues = true;
       internalValueResult.updateTrack = this._updateTrack;
     }
@@ -1783,79 +1783,79 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   public get internalValue(): SqlDatabaseInstanceSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._activationPolicy) {
+    if (this._activationPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.activationPolicy = this._activationPolicy;
     }
-    if (this._authorizedGaeApplications) {
+    if (this._authorizedGaeApplications !== undefined) {
       hasAnyValues = true;
       internalValueResult.authorizedGaeApplications = this._authorizedGaeApplications;
     }
-    if (this._availabilityType) {
+    if (this._availabilityType !== undefined) {
       hasAnyValues = true;
       internalValueResult.availabilityType = this._availabilityType;
     }
-    if (this._collation) {
+    if (this._collation !== undefined) {
       hasAnyValues = true;
       internalValueResult.collation = this._collation;
     }
-    if (this._crashSafeReplication) {
+    if (this._crashSafeReplication !== undefined) {
       hasAnyValues = true;
       internalValueResult.crashSafeReplication = this._crashSafeReplication;
     }
-    if (this._diskAutoresize) {
+    if (this._diskAutoresize !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskAutoresize = this._diskAutoresize;
     }
-    if (this._diskAutoresizeLimit) {
+    if (this._diskAutoresizeLimit !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskAutoresizeLimit = this._diskAutoresizeLimit;
     }
-    if (this._diskSize) {
+    if (this._diskSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSize = this._diskSize;
     }
-    if (this._diskType) {
+    if (this._diskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskType = this._diskType;
     }
-    if (this._pricingPlan) {
+    if (this._pricingPlan !== undefined) {
       hasAnyValues = true;
       internalValueResult.pricingPlan = this._pricingPlan;
     }
-    if (this._replicationType) {
+    if (this._replicationType !== undefined) {
       hasAnyValues = true;
       internalValueResult.replicationType = this._replicationType;
     }
-    if (this._tier) {
+    if (this._tier !== undefined) {
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
-    if (this._userLabels) {
+    if (this._userLabels !== undefined) {
       hasAnyValues = true;
       internalValueResult.userLabels = this._userLabels;
     }
-    if (this._backupConfiguration?.internalValue) {
+    if (this._backupConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.backupConfiguration = this._backupConfiguration?.internalValue;
     }
-    if (this._databaseFlags) {
+    if (this._databaseFlags !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseFlags = this._databaseFlags;
     }
-    if (this._insightsConfig?.internalValue) {
+    if (this._insightsConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.insightsConfig = this._insightsConfig?.internalValue;
     }
-    if (this._ipConfiguration?.internalValue) {
+    if (this._ipConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
     }
-    if (this._locationPreference?.internalValue) {
+    if (this._locationPreference?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.locationPreference = this._locationPreference?.internalValue;
     }
-    if (this._maintenanceWindow?.internalValue) {
+    if (this._maintenanceWindow?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.maintenanceWindow = this._maintenanceWindow?.internalValue;
     }
@@ -2254,15 +2254,15 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): SqlDatabaseInstanceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

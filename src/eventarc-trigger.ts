@@ -110,15 +110,15 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   public get internalValue(): EventarcTriggerDestinationCloudRunService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._region) {
+    if (this._region !== undefined) {
       hasAnyValues = true;
       internalValueResult.region = this._region;
     }
-    if (this._service) {
+    if (this._service !== undefined) {
       hasAnyValues = true;
       internalValueResult.service = this._service;
     }
@@ -226,11 +226,11 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   public get internalValue(): EventarcTriggerDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudFunction) {
+    if (this._cloudFunction !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudFunction = this._cloudFunction;
     }
-    if (this._cloudRunService?.internalValue) {
+    if (this._cloudRunService?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudRunService = this._cloudRunService?.internalValue;
     }
@@ -350,15 +350,15 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): EventarcTriggerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -462,7 +462,7 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
   public get internalValue(): EventarcTriggerTransportPubsub | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._topic) {
+    if (this._topic !== undefined) {
       hasAnyValues = true;
       internalValueResult.topic = this._topic;
     }
@@ -530,7 +530,7 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
   public get internalValue(): EventarcTriggerTransport | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pubsub?.internalValue) {
+    if (this._pubsub?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.pubsub = this._pubsub?.internalValue;
     }

@@ -114,15 +114,15 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   public get internalValue(): MonitoringNotificationChannelSensitiveLabels | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._authToken) {
+    if (this._authToken !== undefined) {
       hasAnyValues = true;
       internalValueResult.authToken = this._authToken;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._serviceKey) {
+    if (this._serviceKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceKey = this._serviceKey;
     }
@@ -234,15 +234,15 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   public get internalValue(): MonitoringNotificationChannelTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

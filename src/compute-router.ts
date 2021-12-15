@@ -144,19 +144,19 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ComputeRouterBgp | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._advertiseMode) {
+    if (this._advertiseMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertiseMode = this._advertiseMode;
     }
-    if (this._advertisedGroups) {
+    if (this._advertisedGroups !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedGroups = this._advertisedGroups;
     }
-    if (this._asn) {
+    if (this._asn !== undefined) {
       hasAnyValues = true;
       internalValueResult.asn = this._asn;
     }
-    if (this._advertisedIpRanges) {
+    if (this._advertisedIpRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedIpRanges = this._advertisedIpRanges;
     }
@@ -284,15 +284,15 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ComputeRouterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

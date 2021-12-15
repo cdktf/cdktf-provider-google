@@ -108,15 +108,15 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   public get internalValue(): CloudTasksQueueAppEngineRoutingOverride | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instance) {
+    if (this._instance !== undefined) {
       hasAnyValues = true;
       internalValueResult.instance = this._instance;
     }
-    if (this._service) {
+    if (this._service !== undefined) {
       hasAnyValues = true;
       internalValueResult.service = this._service;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -232,11 +232,11 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): CloudTasksQueueRateLimits | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxConcurrentDispatches) {
+    if (this._maxConcurrentDispatches !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxConcurrentDispatches = this._maxConcurrentDispatches;
     }
-    if (this._maxDispatchesPerSecond) {
+    if (this._maxDispatchesPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDispatchesPerSecond = this._maxDispatchesPerSecond;
     }
@@ -373,23 +373,23 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   public get internalValue(): CloudTasksQueueRetryConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxAttempts) {
+    if (this._maxAttempts !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAttempts = this._maxAttempts;
     }
-    if (this._maxBackoff) {
+    if (this._maxBackoff !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxBackoff = this._maxBackoff;
     }
-    if (this._maxDoublings) {
+    if (this._maxDoublings !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDoublings = this._maxDoublings;
     }
-    if (this._maxRetryDuration) {
+    if (this._maxRetryDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRetryDuration = this._maxRetryDuration;
     }
-    if (this._minBackoff) {
+    if (this._minBackoff !== undefined) {
       hasAnyValues = true;
       internalValueResult.minBackoff = this._minBackoff;
     }
@@ -531,7 +531,7 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
   public get internalValue(): CloudTasksQueueStackdriverLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._samplingRatio) {
+    if (this._samplingRatio !== undefined) {
       hasAnyValues = true;
       internalValueResult.samplingRatio = this._samplingRatio;
     }
@@ -604,15 +604,15 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CloudTasksQueueTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

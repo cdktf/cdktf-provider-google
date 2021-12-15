@@ -138,7 +138,7 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
   public get internalValue(): BigqueryTableEncryptionConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -238,27 +238,27 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
   public get internalValue(): BigqueryTableExternalDataConfigurationCsvOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowJaggedRows) {
+    if (this._allowJaggedRows !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowJaggedRows = this._allowJaggedRows;
     }
-    if (this._allowQuotedNewlines) {
+    if (this._allowQuotedNewlines !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowQuotedNewlines = this._allowQuotedNewlines;
     }
-    if (this._encoding) {
+    if (this._encoding !== undefined) {
       hasAnyValues = true;
       internalValueResult.encoding = this._encoding;
     }
-    if (this._fieldDelimiter) {
+    if (this._fieldDelimiter !== undefined) {
       hasAnyValues = true;
       internalValueResult.fieldDelimiter = this._fieldDelimiter;
     }
-    if (this._quote) {
+    if (this._quote !== undefined) {
       hasAnyValues = true;
       internalValueResult.quote = this._quote;
     }
-    if (this._skipLeadingRows) {
+    if (this._skipLeadingRows !== undefined) {
       hasAnyValues = true;
       internalValueResult.skipLeadingRows = this._skipLeadingRows;
     }
@@ -420,11 +420,11 @@ export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputRefe
   public get internalValue(): BigqueryTableExternalDataConfigurationGoogleSheetsOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._range) {
+    if (this._range !== undefined) {
       hasAnyValues = true;
       internalValueResult.range = this._range;
     }
-    if (this._skipLeadingRows) {
+    if (this._skipLeadingRows !== undefined) {
       hasAnyValues = true;
       internalValueResult.skipLeadingRows = this._skipLeadingRows;
     }
@@ -524,15 +524,15 @@ export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutput
   public get internalValue(): BigqueryTableExternalDataConfigurationHivePartitioningOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._requirePartitionFilter) {
+    if (this._requirePartitionFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.requirePartitionFilter = this._requirePartitionFilter;
     }
-    if (this._sourceUriPrefix) {
+    if (this._sourceUriPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceUriPrefix = this._sourceUriPrefix;
     }
@@ -699,43 +699,43 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   public get internalValue(): BigqueryTableExternalDataConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autodetect) {
+    if (this._autodetect !== undefined) {
       hasAnyValues = true;
       internalValueResult.autodetect = this._autodetect;
     }
-    if (this._compression) {
+    if (this._compression !== undefined) {
       hasAnyValues = true;
       internalValueResult.compression = this._compression;
     }
-    if (this._ignoreUnknownValues) {
+    if (this._ignoreUnknownValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.ignoreUnknownValues = this._ignoreUnknownValues;
     }
-    if (this._maxBadRecords) {
+    if (this._maxBadRecords !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxBadRecords = this._maxBadRecords;
     }
-    if (this._schema) {
+    if (this._schema !== undefined) {
       hasAnyValues = true;
       internalValueResult.schema = this._schema;
     }
-    if (this._sourceFormat) {
+    if (this._sourceFormat !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceFormat = this._sourceFormat;
     }
-    if (this._sourceUris) {
+    if (this._sourceUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceUris = this._sourceUris;
     }
-    if (this._csvOptions?.internalValue) {
+    if (this._csvOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.csvOptions = this._csvOptions?.internalValue;
     }
-    if (this._googleSheetsOptions?.internalValue) {
+    if (this._googleSheetsOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.googleSheetsOptions = this._googleSheetsOptions?.internalValue;
     }
-    if (this._hivePartitioningOptions?.internalValue) {
+    if (this._hivePartitioningOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hivePartitioningOptions = this._hivePartitioningOptions?.internalValue;
     }
@@ -970,15 +970,15 @@ export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexO
   public get internalValue(): BigqueryTableMaterializedView | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableRefresh) {
+    if (this._enableRefresh !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableRefresh = this._enableRefresh;
     }
-    if (this._query) {
+    if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._refreshIntervalMs) {
+    if (this._refreshIntervalMs !== undefined) {
       hasAnyValues = true;
       internalValueResult.refreshIntervalMs = this._refreshIntervalMs;
     }
@@ -1093,15 +1093,15 @@ export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.Co
   public get internalValue(): BigqueryTableRangePartitioningRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._end) {
+    if (this._end !== undefined) {
       hasAnyValues = true;
       internalValueResult.end = this._end;
     }
-    if (this._interval) {
+    if (this._interval !== undefined) {
       hasAnyValues = true;
       internalValueResult.interval = this._interval;
     }
-    if (this._start) {
+    if (this._start !== undefined) {
       hasAnyValues = true;
       internalValueResult.start = this._start;
     }
@@ -1203,11 +1203,11 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
   public get internalValue(): BigqueryTableRangePartitioning | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._field) {
+    if (this._field !== undefined) {
       hasAnyValues = true;
       internalValueResult.field = this._field;
     }
-    if (this._range?.internalValue) {
+    if (this._range?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -1308,19 +1308,19 @@ export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexO
   public get internalValue(): BigqueryTableTimePartitioning | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expirationMs) {
+    if (this._expirationMs !== undefined) {
       hasAnyValues = true;
       internalValueResult.expirationMs = this._expirationMs;
     }
-    if (this._field) {
+    if (this._field !== undefined) {
       hasAnyValues = true;
       internalValueResult.field = this._field;
     }
-    if (this._requirePartitionFilter) {
+    if (this._requirePartitionFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.requirePartitionFilter = this._requirePartitionFilter;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1446,11 +1446,11 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigqueryTableView | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._query) {
+    if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._useLegacySql) {
+    if (this._useLegacySql !== undefined) {
       hasAnyValues = true;
       internalValueResult.useLegacySql = this._useLegacySql;
     }

@@ -166,11 +166,11 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ComputeRouterNatLogConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enable) {
+    if (this._enable !== undefined) {
       hasAnyValues = true;
       internalValueResult.enable = this._enable;
     }
-    if (this._filter) {
+    if (this._filter !== undefined) {
       hasAnyValues = true;
       internalValueResult.filter = this._filter;
     }
@@ -297,15 +297,15 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): ComputeRouterNatTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

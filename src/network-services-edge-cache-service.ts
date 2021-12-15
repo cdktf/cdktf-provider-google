@@ -130,11 +130,11 @@ export class NetworkServicesEdgeCacheServiceLogConfigOutputReference extends cdk
   public get internalValue(): NetworkServicesEdgeCacheServiceLogConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enable) {
+    if (this._enable !== undefined) {
       hasAnyValues = true;
       internalValueResult.enable = this._enable;
     }
-    if (this._sampleRate) {
+    if (this._sampleRate !== undefined) {
       hasAnyValues = true;
       internalValueResult.sampleRate = this._sampleRate;
     }
@@ -385,19 +385,19 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeaderToAdd) {
+    if (this._requestHeaderToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeaderToAdd = this._requestHeaderToAdd;
     }
-    if (this._requestHeaderToRemove) {
+    if (this._requestHeaderToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeaderToRemove = this._requestHeaderToRemove;
     }
-    if (this._responseHeaderToAdd) {
+    if (this._responseHeaderToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeaderToAdd = this._responseHeaderToAdd;
     }
-    if (this._responseHeaderToRemove) {
+    if (this._responseHeaderToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeaderToRemove = this._responseHeaderToRemove;
     }
@@ -726,27 +726,27 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._excludeHost) {
+    if (this._excludeHost !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludeHost = this._excludeHost;
     }
-    if (this._excludeQueryString) {
+    if (this._excludeQueryString !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludeQueryString = this._excludeQueryString;
     }
-    if (this._excludedQueryParameters) {
+    if (this._excludedQueryParameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludedQueryParameters = this._excludedQueryParameters;
     }
-    if (this._includeProtocol) {
+    if (this._includeProtocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeProtocol = this._includeProtocol;
     }
-    if (this._includedHeaderNames) {
+    if (this._includedHeaderNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.includedHeaderNames = this._includedHeaderNames;
     }
-    if (this._includedQueryParameters) {
+    if (this._includedQueryParameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.includedQueryParameters = this._includedQueryParameters;
     }
@@ -1013,39 +1013,39 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cacheMode) {
+    if (this._cacheMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheMode = this._cacheMode;
     }
-    if (this._clientTtl) {
+    if (this._clientTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientTtl = this._clientTtl;
     }
-    if (this._defaultTtl) {
+    if (this._defaultTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultTtl = this._defaultTtl;
     }
-    if (this._maxTtl) {
+    if (this._maxTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTtl = this._maxTtl;
     }
-    if (this._negativeCaching) {
+    if (this._negativeCaching !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCaching = this._negativeCaching;
     }
-    if (this._negativeCachingPolicy) {
+    if (this._negativeCachingPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy;
     }
-    if (this._signedRequestKeyset) {
+    if (this._signedRequestKeyset !== undefined) {
       hasAnyValues = true;
       internalValueResult.signedRequestKeyset = this._signedRequestKeyset;
     }
-    if (this._signedRequestMode) {
+    if (this._signedRequestMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.signedRequestMode = this._signedRequestMode;
     }
-    if (this._cacheKeyPolicy?.internalValue) {
+    if (this._cacheKeyPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
     }
@@ -1310,31 +1310,31 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -1534,15 +1534,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
-    if (this._pathTemplateRewrite) {
+    if (this._pathTemplateRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathTemplateRewrite = this._pathTemplateRewrite;
     }
@@ -1660,15 +1660,15 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cdnPolicy?.internalValue) {
+    if (this._cdnPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cdnPolicy = this._cdnPolicy?.internalValue;
     }
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
@@ -1823,27 +1823,27 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedire
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -2109,11 +2109,11 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
   public get internalValue(): NetworkServicesEdgeCacheServiceRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRule) {
+    if (this._hostRule !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRule = this._hostRule;
     }
-    if (this._pathMatcher) {
+    if (this._pathMatcher !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathMatcher = this._pathMatcher;
     }
@@ -2203,15 +2203,15 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
   public get internalValue(): NetworkServicesEdgeCacheServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

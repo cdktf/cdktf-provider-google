@@ -156,23 +156,23 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   public get internalValue(): OsConfigPatchDeploymentInstanceFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._all) {
+    if (this._all !== undefined) {
       hasAnyValues = true;
       internalValueResult.all = this._all;
     }
-    if (this._instanceNamePrefixes) {
+    if (this._instanceNamePrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.instanceNamePrefixes = this._instanceNamePrefixes;
     }
-    if (this._instances) {
+    if (this._instances !== undefined) {
       hasAnyValues = true;
       internalValueResult.instances = this._instances;
     }
-    if (this._zones) {
+    if (this._zones !== undefined) {
       hasAnyValues = true;
       internalValueResult.zones = this._zones;
     }
-    if (this._groupLabels) {
+    if (this._groupLabels !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupLabels = this._groupLabels;
     }
@@ -314,7 +314,7 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
   public get internalValue(): OsConfigPatchDeploymentOneTimeSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._executeTime) {
+    if (this._executeTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.executeTime = this._executeTime;
     }
@@ -395,15 +395,15 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   public get internalValue(): OsConfigPatchDeploymentPatchConfigApt | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._excludes) {
+    if (this._excludes !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludes = this._excludes;
     }
-    if (this._exclusivePackages) {
+    if (this._exclusivePackages !== undefined) {
       hasAnyValues = true;
       internalValueResult.exclusivePackages = this._exclusivePackages;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -507,7 +507,7 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
   public get internalValue(): OsConfigPatchDeploymentPatchConfigGoo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -586,15 +586,15 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucket) {
+    if (this._bucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucket = this._bucket;
     }
-    if (this._generationNumber) {
+    if (this._generationNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.generationNumber = this._generationNumber;
     }
-    if (this._object) {
+    if (this._object !== undefined) {
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
@@ -711,19 +711,19 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedSuccessCodes) {
+    if (this._allowedSuccessCodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
     }
-    if (this._interpreter) {
+    if (this._interpreter !== undefined) {
       hasAnyValues = true;
       internalValueResult.interpreter = this._interpreter;
     }
-    if (this._localPath) {
+    if (this._localPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject?.internalValue) {
+    if (this._gcsObject?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -860,15 +860,15 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucket) {
+    if (this._bucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucket = this._bucket;
     }
-    if (this._generationNumber) {
+    if (this._generationNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.generationNumber = this._generationNumber;
     }
-    if (this._object) {
+    if (this._object !== undefined) {
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
@@ -985,19 +985,19 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedSuccessCodes) {
+    if (this._allowedSuccessCodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
     }
-    if (this._interpreter) {
+    if (this._interpreter !== undefined) {
       hasAnyValues = true;
       internalValueResult.interpreter = this._interpreter;
     }
-    if (this._localPath) {
+    if (this._localPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject?.internalValue) {
+    if (this._gcsObject?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -1127,11 +1127,11 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStep | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linuxExecStepConfig?.internalValue) {
+    if (this._linuxExecStepConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.linuxExecStepConfig = this._linuxExecStepConfig?.internalValue;
     }
-    if (this._windowsExecStepConfig?.internalValue) {
+    if (this._windowsExecStepConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowsExecStepConfig = this._windowsExecStepConfig?.internalValue;
     }
@@ -1231,15 +1231,15 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucket) {
+    if (this._bucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucket = this._bucket;
     }
-    if (this._generationNumber) {
+    if (this._generationNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.generationNumber = this._generationNumber;
     }
-    if (this._object) {
+    if (this._object !== undefined) {
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
@@ -1356,19 +1356,19 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedSuccessCodes) {
+    if (this._allowedSuccessCodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
     }
-    if (this._interpreter) {
+    if (this._interpreter !== undefined) {
       hasAnyValues = true;
       internalValueResult.interpreter = this._interpreter;
     }
-    if (this._localPath) {
+    if (this._localPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject?.internalValue) {
+    if (this._gcsObject?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -1505,15 +1505,15 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucket) {
+    if (this._bucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucket = this._bucket;
     }
-    if (this._generationNumber) {
+    if (this._generationNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.generationNumber = this._generationNumber;
     }
-    if (this._object) {
+    if (this._object !== undefined) {
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
@@ -1630,19 +1630,19 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedSuccessCodes) {
+    if (this._allowedSuccessCodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedSuccessCodes = this._allowedSuccessCodes;
     }
-    if (this._interpreter) {
+    if (this._interpreter !== undefined) {
       hasAnyValues = true;
       internalValueResult.interpreter = this._interpreter;
     }
-    if (this._localPath) {
+    if (this._localPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.localPath = this._localPath;
     }
-    if (this._gcsObject?.internalValue) {
+    if (this._gcsObject?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcsObject = this._gcsObject?.internalValue;
     }
@@ -1772,11 +1772,11 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStep | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linuxExecStepConfig?.internalValue) {
+    if (this._linuxExecStepConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.linuxExecStepConfig = this._linuxExecStepConfig?.internalValue;
     }
-    if (this._windowsExecStepConfig?.internalValue) {
+    if (this._windowsExecStepConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowsExecStepConfig = this._windowsExecStepConfig?.internalValue;
     }
@@ -1877,15 +1877,15 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   public get internalValue(): OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._classifications) {
+    if (this._classifications !== undefined) {
       hasAnyValues = true;
       internalValueResult.classifications = this._classifications;
     }
-    if (this._excludes) {
+    if (this._excludes !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludes = this._excludes;
     }
-    if (this._exclusivePatches) {
+    if (this._exclusivePatches !== undefined) {
       hasAnyValues = true;
       internalValueResult.exclusivePatches = this._exclusivePatches;
     }
@@ -2012,19 +2012,19 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   public get internalValue(): OsConfigPatchDeploymentPatchConfigYum | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._excludes) {
+    if (this._excludes !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludes = this._excludes;
     }
-    if (this._exclusivePackages) {
+    if (this._exclusivePackages !== undefined) {
       hasAnyValues = true;
       internalValueResult.exclusivePackages = this._exclusivePackages;
     }
-    if (this._minimal) {
+    if (this._minimal !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimal = this._minimal;
     }
-    if (this._security) {
+    if (this._security !== undefined) {
       hasAnyValues = true;
       internalValueResult.security = this._security;
     }
@@ -2182,27 +2182,27 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   public get internalValue(): OsConfigPatchDeploymentPatchConfigZypper | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._categories) {
+    if (this._categories !== undefined) {
       hasAnyValues = true;
       internalValueResult.categories = this._categories;
     }
-    if (this._excludes) {
+    if (this._excludes !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludes = this._excludes;
     }
-    if (this._exclusivePatches) {
+    if (this._exclusivePatches !== undefined) {
       hasAnyValues = true;
       internalValueResult.exclusivePatches = this._exclusivePatches;
     }
-    if (this._severities) {
+    if (this._severities !== undefined) {
       hasAnyValues = true;
       internalValueResult.severities = this._severities;
     }
-    if (this._withOptional) {
+    if (this._withOptional !== undefined) {
       hasAnyValues = true;
       internalValueResult.withOptional = this._withOptional;
     }
-    if (this._withUpdate) {
+    if (this._withUpdate !== undefined) {
       hasAnyValues = true;
       internalValueResult.withUpdate = this._withUpdate;
     }
@@ -2409,35 +2409,35 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   public get internalValue(): OsConfigPatchDeploymentPatchConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._rebootConfig) {
+    if (this._rebootConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.rebootConfig = this._rebootConfig;
     }
-    if (this._apt?.internalValue) {
+    if (this._apt?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.apt = this._apt?.internalValue;
     }
-    if (this._goo?.internalValue) {
+    if (this._goo?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.goo = this._goo?.internalValue;
     }
-    if (this._postStep?.internalValue) {
+    if (this._postStep?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.postStep = this._postStep?.internalValue;
     }
-    if (this._preStep?.internalValue) {
+    if (this._preStep?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.preStep = this._preStep?.internalValue;
     }
-    if (this._windowsUpdate?.internalValue) {
+    if (this._windowsUpdate?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowsUpdate = this._windowsUpdate?.internalValue;
     }
-    if (this._yum?.internalValue) {
+    if (this._yum?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.yum = this._yum?.internalValue;
     }
-    if (this._zypper?.internalValue) {
+    if (this._zypper?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.zypper = this._zypper?.internalValue;
     }
@@ -2638,11 +2638,11 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dayOfWeek) {
+    if (this._dayOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeek = this._dayOfWeek;
     }
-    if (this._weekOrdinal) {
+    if (this._weekOrdinal !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekOrdinal = this._weekOrdinal;
     }
@@ -2731,11 +2731,11 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._monthDay) {
+    if (this._monthDay !== undefined) {
       hasAnyValues = true;
       internalValueResult.monthDay = this._monthDay;
     }
-    if (this._weekDayOfMonth?.internalValue) {
+    if (this._weekDayOfMonth?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekDayOfMonth = this._weekDayOfMonth?.internalValue;
     }
@@ -2843,19 +2843,19 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeOfDay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hours) {
+    if (this._hours !== undefined) {
       hasAnyValues = true;
       internalValueResult.hours = this._hours;
     }
-    if (this._minutes) {
+    if (this._minutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -2984,11 +2984,11 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeZone | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._id) {
+    if (this._id !== undefined) {
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -3071,7 +3071,7 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleWeekly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dayOfWeek) {
+    if (this._dayOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeek = this._dayOfWeek;
     }
@@ -3173,27 +3173,27 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   public get internalValue(): OsConfigPatchDeploymentRecurringSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endTime) {
+    if (this._endTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.endTime = this._endTime;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._monthly?.internalValue) {
+    if (this._monthly?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.monthly = this._monthly?.internalValue;
     }
-    if (this._timeOfDay?.internalValue) {
+    if (this._timeOfDay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeOfDay = this._timeOfDay?.internalValue;
     }
-    if (this._timeZone?.internalValue) {
+    if (this._timeZone?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeZone = this._timeZone?.internalValue;
     }
-    if (this._weekly?.internalValue) {
+    if (this._weekly?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekly = this._weekly?.internalValue;
     }
@@ -3352,11 +3352,11 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
   public get internalValue(): OsConfigPatchDeploymentRolloutDisruptionBudget | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fixed) {
+    if (this._fixed !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixed = this._fixed;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -3449,11 +3449,11 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   public get internalValue(): OsConfigPatchDeploymentRollout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._disruptionBudget?.internalValue) {
+    if (this._disruptionBudget?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.disruptionBudget = this._disruptionBudget?.internalValue;
     }
@@ -3536,11 +3536,11 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): OsConfigPatchDeploymentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

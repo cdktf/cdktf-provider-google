@@ -77,7 +77,7 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
   public get internalValue(): GkeHubMembershipAuthority | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._issuer) {
+    if (this._issuer !== undefined) {
       hasAnyValues = true;
       internalValueResult.issuer = this._issuer;
     }
@@ -146,7 +146,7 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
   public get internalValue(): GkeHubMembershipEndpointGkeCluster | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resourceLink) {
+    if (this._resourceLink !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceLink = this._resourceLink;
     }
@@ -211,7 +211,7 @@ export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject
   public get internalValue(): GkeHubMembershipEndpoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._gkeCluster?.internalValue) {
+    if (this._gkeCluster?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gkeCluster = this._gkeCluster?.internalValue;
     }
@@ -287,15 +287,15 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): GkeHubMembershipTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

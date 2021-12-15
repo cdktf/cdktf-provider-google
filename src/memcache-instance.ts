@@ -143,7 +143,7 @@ export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.Com
   public get internalValue(): MemcacheInstanceMemcacheParameters | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._params) {
+    if (this._params !== undefined) {
       hasAnyValues = true;
       internalValueResult.params = this._params;
     }
@@ -219,11 +219,11 @@ export class MemcacheInstanceNodeConfigOutputReference extends cdktf.ComplexObje
   public get internalValue(): MemcacheInstanceNodeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cpuCount) {
+    if (this._cpuCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpuCount = this._cpuCount;
     }
-    if (this._memorySizeMb) {
+    if (this._memorySizeMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.memorySizeMb = this._memorySizeMb;
     }
@@ -311,15 +311,15 @@ export class MemcacheInstanceTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): MemcacheInstanceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

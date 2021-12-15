@@ -127,15 +127,15 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
   public get internalValue(): ComputeNodeGroupAutoscalingPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxNodes) {
+    if (this._maxNodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNodes = this._maxNodes;
     }
-    if (this._minNodes) {
+    if (this._minNodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNodes = this._minNodes;
     }
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
@@ -239,7 +239,7 @@ export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.Comp
   public get internalValue(): ComputeNodeGroupMaintenanceWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
@@ -312,15 +312,15 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): ComputeNodeGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

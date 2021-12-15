@@ -185,7 +185,7 @@ export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.Complex
   public get internalValue(): DataCatalogEntryGcsFilesetSpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._filePatterns) {
+    if (this._filePatterns !== undefined) {
       hasAnyValues = true;
       internalValueResult.filePatterns = this._filePatterns;
     }
@@ -258,15 +258,15 @@ export class DataCatalogEntryTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): DataCatalogEntryTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

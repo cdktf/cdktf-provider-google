@@ -119,11 +119,11 @@ export class CloudIdentityGroupGroupKeyOutputReference extends cdktf.ComplexObje
   public get internalValue(): CloudIdentityGroupGroupKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._id) {
+    if (this._id !== undefined) {
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
-    if (this._namespace) {
+    if (this._namespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.namespace = this._namespace;
     }
@@ -214,15 +214,15 @@ export class CloudIdentityGroupTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): CloudIdentityGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

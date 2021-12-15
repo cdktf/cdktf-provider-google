@@ -166,35 +166,35 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   public get internalValue(): ComputeUrlMapDefaultRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOriginRegexes) {
+    if (this._allowOriginRegexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -397,11 +397,11 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputRefer
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpStatus) {
+    if (this._httpStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpStatus = this._httpStatus;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -496,11 +496,11 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayO
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -594,11 +594,11 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay?.internalValue) {
+    if (this._fixedDelay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -691,11 +691,11 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort?.internalValue) {
+    if (this._abort?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay?.internalValue) {
+    if (this._delay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -781,7 +781,7 @@ export class ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference e
   public get internalValue(): ComputeUrlMapDefaultRouteActionRequestMirrorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendService) {
+    if (this._backendService !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendService = this._backendService;
     }
@@ -855,11 +855,11 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputRefere
   public get internalValue(): ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -974,15 +974,15 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   public get internalValue(): ComputeUrlMapDefaultRouteActionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numRetries) {
+    if (this._numRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.numRetries = this._numRetries;
     }
-    if (this._retryConditions) {
+    if (this._retryConditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout?.internalValue) {
+    if (this._perTryTimeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -1095,11 +1095,11 @@ export class ComputeUrlMapDefaultRouteActionTimeoutOutputReference extends cdktf
   public get internalValue(): ComputeUrlMapDefaultRouteActionTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1198,11 +1198,11 @@ export class ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference extends cd
   public get internalValue(): ComputeUrlMapDefaultRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
@@ -1379,19 +1379,19 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   public get internalValue(): ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -1599,31 +1599,31 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   public get internalValue(): ComputeUrlMapDefaultRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy?.internalValue) {
+    if (this._faultInjectionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy?.internalValue) {
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy?.internalValue) {
+    if (this._retryPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout?.internalValue) {
+    if (this._timeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices) {
+    if (this._weightedBackendServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.weightedBackendServices = this._weightedBackendServices;
     }
@@ -1862,27 +1862,27 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   public get internalValue(): ComputeUrlMapDefaultUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -2130,19 +2130,19 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ComputeUrlMapHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -2357,35 +2357,35 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOriginRegexes) {
+    if (this._allowOriginRegexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -2588,11 +2588,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpStatus) {
+    if (this._httpStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpStatus = this._httpStatus;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -2687,11 +2687,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -2785,11 +2785,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay?.internalValue) {
+    if (this._fixedDelay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -2882,11 +2882,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort?.internalValue) {
+    if (this._abort?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay?.internalValue) {
+    if (this._delay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -2972,7 +2972,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutput
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendService) {
+    if (this._backendService !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendService = this._backendService;
     }
@@ -3046,11 +3046,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutO
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -3165,15 +3165,15 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numRetries) {
+    if (this._numRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.numRetries = this._numRetries;
     }
-    if (this._retryConditions) {
+    if (this._retryConditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout?.internalValue) {
+    if (this._perTryTimeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -3286,11 +3286,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference ex
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -3389,11 +3389,11 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
@@ -3570,19 +3570,19 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -3790,31 +3790,31 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy?.internalValue) {
+    if (this._faultInjectionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy?.internalValue) {
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy?.internalValue) {
+    if (this._retryPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout?.internalValue) {
+    if (this._timeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices) {
+    if (this._weightedBackendServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.weightedBackendServices = this._weightedBackendServices;
     }
@@ -4053,27 +4053,27 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   public get internalValue(): ComputeUrlMapPathMatcherDefaultUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -4321,19 +4321,19 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   public get internalValue(): ComputeUrlMapPathMatcherHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -4512,35 +4512,35 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOriginRegexes) {
+    if (this._allowOriginRegexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -4741,11 +4741,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbor
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpStatus) {
+    if (this._httpStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpStatus = this._httpStatus;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -4835,11 +4835,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -4931,11 +4931,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay?.internalValue) {
+    if (this._fixedDelay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -5022,11 +5022,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort?.internalValue) {
+    if (this._abort?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay?.internalValue) {
+    if (this._delay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -5112,7 +5112,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutpu
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendService) {
+    if (this._backendService !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendService = this._backendService;
     }
@@ -5187,11 +5187,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -5309,15 +5309,15 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numRetries) {
+    if (this._numRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.numRetries = this._numRetries;
     }
-    if (this._retryConditions) {
+    if (this._retryConditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout?.internalValue) {
+    if (this._perTryTimeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -5431,11 +5431,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference e
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -5529,11 +5529,11 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReferenc
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
@@ -5712,19 +5712,19 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -5930,31 +5930,31 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy?.internalValue) {
+    if (this._faultInjectionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy?.internalValue) {
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy?.internalValue) {
+    if (this._retryPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout?.internalValue) {
+    if (this._timeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices) {
+    if (this._weightedBackendServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.weightedBackendServices = this._weightedBackendServices;
     }
@@ -6196,27 +6196,27 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -6507,19 +6507,19 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -6650,11 +6650,11 @@ export class ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._rangeEnd) {
+    if (this._rangeEnd !== undefined) {
       hasAnyValues = true;
       internalValueResult.rangeEnd = this._rangeEnd;
     }
-    if (this._rangeStart) {
+    if (this._rangeStart !== undefined) {
       hasAnyValues = true;
       internalValueResult.rangeStart = this._rangeStart;
     }
@@ -7055,35 +7055,35 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOriginRegexes) {
+    if (this._allowOriginRegexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -7287,11 +7287,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAb
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpStatus) {
+    if (this._httpStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpStatus = this._httpStatus;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -7387,11 +7387,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -7483,11 +7483,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay?.internalValue) {
+    if (this._fixedDelay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -7580,11 +7580,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort?.internalValue) {
+    if (this._abort?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay?.internalValue) {
+    if (this._delay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -7670,7 +7670,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOut
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendService) {
+    if (this._backendService !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendService = this._backendService;
     }
@@ -7745,11 +7745,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeo
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -7867,15 +7867,15 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numRetries) {
+    if (this._numRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.numRetries = this._numRetries;
     }
-    if (this._retryConditions) {
+    if (this._retryConditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout?.internalValue) {
+    if (this._perTryTimeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -7986,11 +7986,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -8084,11 +8084,11 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputRefere
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
@@ -8267,19 +8267,19 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -8485,31 +8485,31 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy?.internalValue) {
+    if (this._faultInjectionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy?.internalValue) {
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy?.internalValue) {
+    if (this._retryPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout?.internalValue) {
+    if (this._timeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices) {
+    if (this._weightedBackendServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.weightedBackendServices = this._weightedBackendServices;
     }
@@ -8740,27 +8740,27 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -9109,15 +9109,15 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ComputeUrlMapTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

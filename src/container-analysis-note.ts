@@ -95,7 +95,7 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
   public get internalValue(): ContainerAnalysisNoteAttestationAuthorityHint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._humanReadableName) {
+    if (this._humanReadableName !== undefined) {
       hasAnyValues = true;
       internalValueResult.humanReadableName = this._humanReadableName;
     }
@@ -160,7 +160,7 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
   public get internalValue(): ContainerAnalysisNoteAttestationAuthority | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hint?.internalValue) {
+    if (this._hint?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hint = this._hint?.internalValue;
     }
@@ -259,15 +259,15 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): ContainerAnalysisNoteTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

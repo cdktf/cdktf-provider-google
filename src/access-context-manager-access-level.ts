@@ -160,27 +160,27 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
   public get internalValue(): AccessContextManagerAccessLevelBasicConditionsDevicePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedDeviceManagementLevels) {
+    if (this._allowedDeviceManagementLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedDeviceManagementLevels = this._allowedDeviceManagementLevels;
     }
-    if (this._allowedEncryptionStatuses) {
+    if (this._allowedEncryptionStatuses !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedEncryptionStatuses = this._allowedEncryptionStatuses;
     }
-    if (this._requireAdminApproval) {
+    if (this._requireAdminApproval !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireAdminApproval = this._requireAdminApproval;
     }
-    if (this._requireCorpOwned) {
+    if (this._requireCorpOwned !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireCorpOwned = this._requireCorpOwned;
     }
-    if (this._requireScreenLock) {
+    if (this._requireScreenLock !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireScreenLock = this._requireScreenLock;
     }
-    if (this._osConstraints) {
+    if (this._osConstraints !== undefined) {
       hasAnyValues = true;
       internalValueResult.osConstraints = this._osConstraints;
     }
@@ -428,11 +428,11 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
   public get internalValue(): AccessContextManagerAccessLevelBasic | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._combiningFunction) {
+    if (this._combiningFunction !== undefined) {
       hasAnyValues = true;
       internalValueResult.combiningFunction = this._combiningFunction;
     }
-    if (this._conditions) {
+    if (this._conditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.conditions = this._conditions;
     }
@@ -537,19 +537,19 @@ export class AccessContextManagerAccessLevelCustomExprOutputReference extends cd
   public get internalValue(): AccessContextManagerAccessLevelCustomExpr | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._description) {
+    if (this._description !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description;
     }
-    if (this._expression) {
+    if (this._expression !== undefined) {
       hasAnyValues = true;
       internalValueResult.expression = this._expression;
     }
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._title) {
+    if (this._title !== undefined) {
       hasAnyValues = true;
       internalValueResult.title = this._title;
     }
@@ -668,7 +668,7 @@ export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.
   public get internalValue(): AccessContextManagerAccessLevelCustom | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expr?.internalValue) {
+    if (this._expr?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.expr = this._expr?.internalValue;
     }
@@ -741,15 +741,15 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
   public get internalValue(): AccessContextManagerAccessLevelTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

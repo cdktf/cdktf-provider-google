@@ -95,11 +95,11 @@ export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf
   public get internalValue(): PubsubLiteTopicPartitionConfigCapacity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publishMibPerSec) {
+    if (this._publishMibPerSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.publishMibPerSec = this._publishMibPerSec;
     }
-    if (this._subscribeMibPerSec) {
+    if (this._subscribeMibPerSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.subscribeMibPerSec = this._subscribeMibPerSec;
     }
@@ -186,11 +186,11 @@ export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.Complex
   public get internalValue(): PubsubLiteTopicPartitionConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._capacity?.internalValue) {
+    if (this._capacity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity?.internalValue;
     }
@@ -273,7 +273,7 @@ export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.Compl
   public get internalValue(): PubsubLiteTopicReservationConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._throughputReservation) {
+    if (this._throughputReservation !== undefined) {
       hasAnyValues = true;
       internalValueResult.throughputReservation = this._throughputReservation;
     }
@@ -351,11 +351,11 @@ export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.Complex
   public get internalValue(): PubsubLiteTopicRetentionConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._perPartitionBytes) {
+    if (this._perPartitionBytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.perPartitionBytes = this._perPartitionBytes;
     }
-    if (this._period) {
+    if (this._period !== undefined) {
       hasAnyValues = true;
       internalValueResult.period = this._period;
     }
@@ -446,15 +446,15 @@ export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): PubsubLiteTopicTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

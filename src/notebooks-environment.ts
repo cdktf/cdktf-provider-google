@@ -104,11 +104,11 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
   public get internalValue(): NotebooksEnvironmentContainerImage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._repository) {
+    if (this._repository !== undefined) {
       hasAnyValues = true;
       internalValueResult.repository = this._repository;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
@@ -199,15 +199,15 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): NotebooksEnvironmentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -326,15 +326,15 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
   public get internalValue(): NotebooksEnvironmentVmImage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._imageFamily) {
+    if (this._imageFamily !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageFamily = this._imageFamily;
     }
-    if (this._imageName) {
+    if (this._imageName !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageName = this._imageName;
     }
-    if (this._project) {
+    if (this._project !== undefined) {
       hasAnyValues = true;
       internalValueResult.project = this._project;
     }

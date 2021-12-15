@@ -103,7 +103,7 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
   public get internalValue(): AppEngineApplicationFeatureSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._splitHealthChecks) {
+    if (this._splitHealthChecks !== undefined) {
       hasAnyValues = true;
       internalValueResult.splitHealthChecks = this._splitHealthChecks;
     }
@@ -182,15 +182,15 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   public get internalValue(): AppEngineApplicationIap | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._oauth2ClientId) {
+    if (this._oauth2ClientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauth2ClientId = this._oauth2ClientId;
     }
-    if (this._oauth2ClientSecret) {
+    if (this._oauth2ClientSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauth2ClientSecret = this._oauth2ClientSecret;
     }
@@ -291,11 +291,11 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): AppEngineApplicationTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

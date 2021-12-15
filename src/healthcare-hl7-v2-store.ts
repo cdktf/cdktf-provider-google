@@ -103,7 +103,7 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
   public get internalValue(): HealthcareHl7V2StoreNotificationConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pubsubTopic) {
+    if (this._pubsubTopic !== undefined) {
       hasAnyValues = true;
       internalValueResult.pubsubTopic = this._pubsubTopic;
     }
@@ -235,19 +235,19 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   public get internalValue(): HealthcareHl7V2StoreParserConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowNullHeader) {
+    if (this._allowNullHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowNullHeader = this._allowNullHeader;
     }
-    if (this._schema) {
+    if (this._schema !== undefined) {
       hasAnyValues = true;
       internalValueResult.schema = this._schema;
     }
-    if (this._segmentTerminator) {
+    if (this._segmentTerminator !== undefined) {
       hasAnyValues = true;
       internalValueResult.segmentTerminator = this._segmentTerminator;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -377,15 +377,15 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): HealthcareHl7V2StoreTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

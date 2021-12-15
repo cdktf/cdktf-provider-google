@@ -102,11 +102,11 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   public get internalValue(): FilestoreInstanceFileShares | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._capacityGb) {
+    if (this._capacityGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacityGb = this._capacityGb;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -230,15 +230,15 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): FilestoreInstanceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

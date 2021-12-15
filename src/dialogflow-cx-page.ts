@@ -112,7 +112,7 @@ export class DialogflowCxPageEntryFulfillmentMessagesTextOutputReference extends
   public get internalValue(): DialogflowCxPageEntryFulfillmentMessagesText | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -220,19 +220,19 @@ export class DialogflowCxPageEntryFulfillmentOutputReference extends cdktf.Compl
   public get internalValue(): DialogflowCxPageEntryFulfillment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._returnPartialResponses) {
+    if (this._returnPartialResponses !== undefined) {
       hasAnyValues = true;
       internalValueResult.returnPartialResponses = this._returnPartialResponses;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
-    if (this._messages) {
+    if (this._messages !== undefined) {
       hasAnyValues = true;
       internalValueResult.messages = this._messages;
     }
@@ -355,7 +355,7 @@ export class DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputRe
   public get internalValue(): DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -463,19 +463,19 @@ export class DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference exte
   public get internalValue(): DialogflowCxPageEventHandlersTriggerFulfillment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._returnPartialResponses) {
+    if (this._returnPartialResponses !== undefined) {
       hasAnyValues = true;
       internalValueResult.returnPartialResponses = this._returnPartialResponses;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
-    if (this._messages) {
+    if (this._messages !== undefined) {
       hasAnyValues = true;
       internalValueResult.messages = this._messages;
     }
@@ -640,7 +640,7 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentM
   public get internalValue(): DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -748,19 +748,19 @@ export class DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentO
   public get internalValue(): DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._returnPartialResponses) {
+    if (this._returnPartialResponses !== undefined) {
       hasAnyValues = true;
       internalValueResult.returnPartialResponses = this._returnPartialResponses;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
-    if (this._messages) {
+    if (this._messages !== undefined) {
       hasAnyValues = true;
       internalValueResult.messages = this._messages;
     }
@@ -883,7 +883,7 @@ export class DialogflowCxPageFormParametersFillBehaviorOutputReference extends c
   public get internalValue(): DialogflowCxPageFormParametersFillBehavior | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._initialPromptFulfillment?.internalValue) {
+    if (this._initialPromptFulfillment?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.initialPromptFulfillment = this._initialPromptFulfillment?.internalValue;
     }
@@ -1008,7 +1008,7 @@ export class DialogflowCxPageFormOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DialogflowCxPageForm | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -1085,15 +1085,15 @@ export class DialogflowCxPageTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): DialogflowCxPageTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1197,7 +1197,7 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutpu
   public get internalValue(): DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -1305,19 +1305,19 @@ export class DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference e
   public get internalValue(): DialogflowCxPageTransitionRoutesTriggerFulfillment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._returnPartialResponses) {
+    if (this._returnPartialResponses !== undefined) {
       hasAnyValues = true;
       internalValueResult.returnPartialResponses = this._returnPartialResponses;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
-    if (this._messages) {
+    if (this._messages !== undefined) {
       hasAnyValues = true;
       internalValueResult.messages = this._messages;
     }

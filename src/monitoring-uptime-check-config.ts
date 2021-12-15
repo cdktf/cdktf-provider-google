@@ -139,11 +139,11 @@ export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends
   public get internalValue(): MonitoringUptimeCheckConfigHttpCheckAuthInfo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -286,43 +286,43 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
   public get internalValue(): MonitoringUptimeCheckConfigHttpCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._body) {
+    if (this._body !== undefined) {
       hasAnyValues = true;
       internalValueResult.body = this._body;
     }
-    if (this._contentType) {
+    if (this._contentType !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentType = this._contentType;
     }
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._maskHeaders) {
+    if (this._maskHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.maskHeaders = this._maskHeaders;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._requestMethod) {
+    if (this._requestMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMethod = this._requestMethod;
     }
-    if (this._useSsl) {
+    if (this._useSsl !== undefined) {
       hasAnyValues = true;
       internalValueResult.useSsl = this._useSsl;
     }
-    if (this._validateSsl) {
+    if (this._validateSsl !== undefined) {
       hasAnyValues = true;
       internalValueResult.validateSsl = this._validateSsl;
     }
-    if (this._authInfo?.internalValue) {
+    if (this._authInfo?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.authInfo = this._authInfo?.internalValue;
     }
@@ -560,11 +560,11 @@ export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends
   public get internalValue(): MonitoringUptimeCheckConfigMonitoredResource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -652,11 +652,11 @@ export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdk
   public get internalValue(): MonitoringUptimeCheckConfigResourceGroup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._groupId) {
+    if (this._groupId !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupId = this._groupId;
     }
-    if (this._resourceType) {
+    if (this._resourceType !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceType = this._resourceType;
     }
@@ -742,7 +742,7 @@ export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.Co
   public get internalValue(): MonitoringUptimeCheckConfigTcpCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
@@ -815,15 +815,15 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): MonitoringUptimeCheckConfigTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

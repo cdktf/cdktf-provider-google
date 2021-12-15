@@ -182,7 +182,7 @@ export class StorageBucketEncryptionOutputReference extends cdktf.ComplexObject 
   public get internalValue(): StorageBucketEncryption | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultKmsKeyName) {
+    if (this._defaultKmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultKmsKeyName = this._defaultKmsKeyName;
     }
@@ -254,11 +254,11 @@ export class StorageBucketLifecycleRuleActionOutputReference extends cdktf.Compl
   public get internalValue(): StorageBucketLifecycleRuleAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._storageClass) {
+    if (this._storageClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageClass = this._storageClass;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -398,39 +398,39 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
   public get internalValue(): StorageBucketLifecycleRuleCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._age) {
+    if (this._age !== undefined) {
       hasAnyValues = true;
       internalValueResult.age = this._age;
     }
-    if (this._createdBefore) {
+    if (this._createdBefore !== undefined) {
       hasAnyValues = true;
       internalValueResult.createdBefore = this._createdBefore;
     }
-    if (this._customTimeBefore) {
+    if (this._customTimeBefore !== undefined) {
       hasAnyValues = true;
       internalValueResult.customTimeBefore = this._customTimeBefore;
     }
-    if (this._daysSinceCustomTime) {
+    if (this._daysSinceCustomTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysSinceCustomTime = this._daysSinceCustomTime;
     }
-    if (this._daysSinceNoncurrentTime) {
+    if (this._daysSinceNoncurrentTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysSinceNoncurrentTime = this._daysSinceNoncurrentTime;
     }
-    if (this._matchesStorageClass) {
+    if (this._matchesStorageClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchesStorageClass = this._matchesStorageClass;
     }
-    if (this._noncurrentTimeBefore) {
+    if (this._noncurrentTimeBefore !== undefined) {
       hasAnyValues = true;
       internalValueResult.noncurrentTimeBefore = this._noncurrentTimeBefore;
     }
-    if (this._numNewerVersions) {
+    if (this._numNewerVersions !== undefined) {
       hasAnyValues = true;
       internalValueResult.numNewerVersions = this._numNewerVersions;
     }
-    if (this._withState) {
+    if (this._withState !== undefined) {
       hasAnyValues = true;
       internalValueResult.withState = this._withState;
     }
@@ -675,11 +675,11 @@ export class StorageBucketLoggingOutputReference extends cdktf.ComplexObject {
   public get internalValue(): StorageBucketLogging | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._logBucket) {
+    if (this._logBucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.logBucket = this._logBucket;
     }
-    if (this._logObjectPrefix) {
+    if (this._logObjectPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.logObjectPrefix = this._logObjectPrefix;
     }
@@ -769,11 +769,11 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
   public get internalValue(): StorageBucketRetentionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._isLocked) {
+    if (this._isLocked !== undefined) {
       hasAnyValues = true;
       internalValueResult.isLocked = this._isLocked;
     }
-    if (this._retentionPeriod) {
+    if (this._retentionPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPeriod = this._retentionPeriod;
     }
@@ -856,7 +856,7 @@ export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject 
   public get internalValue(): StorageBucketVersioning | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -928,11 +928,11 @@ export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
   public get internalValue(): StorageBucketWebsite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mainPageSuffix) {
+    if (this._mainPageSuffix !== undefined) {
       hasAnyValues = true;
       internalValueResult.mainPageSuffix = this._mainPageSuffix;
     }
-    if (this._notFoundPage) {
+    if (this._notFoundPage !== undefined) {
       hasAnyValues = true;
       internalValueResult.notFoundPage = this._notFoundPage;
     }

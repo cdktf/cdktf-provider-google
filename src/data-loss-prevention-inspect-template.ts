@@ -77,7 +77,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -143,7 +143,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._words) {
+    if (this._words !== undefined) {
       hasAnyValues = true;
       internalValueResult.words = this._words;
     }
@@ -215,11 +215,11 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudStoragePath?.internalValue) {
+    if (this._cloudStoragePath?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
     }
-    if (this._wordList?.internalValue) {
+    if (this._wordList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.wordList = this._wordList?.internalValue;
     }
@@ -306,7 +306,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -379,11 +379,11 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._groupIndexes) {
+    if (this._groupIndexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupIndexes = this._groupIndexes;
     }
-    if (this._pattern) {
+    if (this._pattern !== undefined) {
       hasAnyValues = true;
       internalValueResult.pattern = this._pattern;
     }
@@ -468,7 +468,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -609,7 +609,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -714,15 +714,15 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimits | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxFindingsPerItem) {
+    if (this._maxFindingsPerItem !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFindingsPerItem = this._maxFindingsPerItem;
     }
-    if (this._maxFindingsPerRequest) {
+    if (this._maxFindingsPerRequest !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFindingsPerRequest = this._maxFindingsPerRequest;
     }
-    if (this._maxFindingsPerInfoType) {
+    if (this._maxFindingsPerInfoType !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxFindingsPerInfoType = this._maxFindingsPerInfoType;
     }
@@ -841,7 +841,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -907,7 +907,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._words) {
+    if (this._words !== undefined) {
       hasAnyValues = true;
       internalValueResult.words = this._words;
     }
@@ -979,11 +979,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudStoragePath?.internalValue) {
+    if (this._cloudStoragePath?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
     }
-    if (this._wordList?.internalValue) {
+    if (this._wordList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.wordList = this._wordList?.internalValue;
     }
@@ -1089,7 +1089,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._infoTypes) {
+    if (this._infoTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.infoTypes = this._infoTypes;
     }
@@ -1163,11 +1163,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._groupIndexes) {
+    if (this._groupIndexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupIndexes = this._groupIndexes;
     }
-    if (this._pattern) {
+    if (this._pattern !== undefined) {
       hasAnyValues = true;
       internalValueResult.pattern = this._pattern;
     }
@@ -1272,19 +1272,19 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._matchingType) {
+    if (this._matchingType !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchingType = this._matchingType;
     }
-    if (this._dictionary?.internalValue) {
+    if (this._dictionary?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dictionary = this._dictionary?.internalValue;
     }
-    if (this._excludeInfoTypes?.internalValue) {
+    if (this._excludeInfoTypes?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludeInfoTypes = this._excludeInfoTypes?.internalValue;
     }
-    if (this._regex?.internalValue) {
+    if (this._regex?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.regex = this._regex?.internalValue;
     }
@@ -1412,11 +1412,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._groupIndexes) {
+    if (this._groupIndexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupIndexes = this._groupIndexes;
     }
-    if (this._pattern) {
+    if (this._pattern !== undefined) {
       hasAnyValues = true;
       internalValueResult.pattern = this._pattern;
     }
@@ -1512,11 +1512,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fixedLikelihood) {
+    if (this._fixedLikelihood !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedLikelihood = this._fixedLikelihood;
     }
-    if (this._relativeLikelihood) {
+    if (this._relativeLikelihood !== undefined) {
       hasAnyValues = true;
       internalValueResult.relativeLikelihood = this._relativeLikelihood;
     }
@@ -1609,11 +1609,11 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._windowAfter) {
+    if (this._windowAfter !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowAfter = this._windowAfter;
     }
-    if (this._windowBefore) {
+    if (this._windowBefore !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowBefore = this._windowBefore;
     }
@@ -1713,15 +1713,15 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hotwordRegex?.internalValue) {
+    if (this._hotwordRegex?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hotwordRegex = this._hotwordRegex?.internalValue;
     }
-    if (this._likelihoodAdjustment?.internalValue) {
+    if (this._likelihoodAdjustment?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.likelihoodAdjustment = this._likelihoodAdjustment?.internalValue;
     }
-    if (this._proximity?.internalValue) {
+    if (this._proximity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.proximity = this._proximity?.internalValue;
     }
@@ -1917,35 +1917,35 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._contentOptions) {
+    if (this._contentOptions !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentOptions = this._contentOptions;
     }
-    if (this._excludeInfoTypes) {
+    if (this._excludeInfoTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludeInfoTypes = this._excludeInfoTypes;
     }
-    if (this._includeQuote) {
+    if (this._includeQuote !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeQuote = this._includeQuote;
     }
-    if (this._minLikelihood) {
+    if (this._minLikelihood !== undefined) {
       hasAnyValues = true;
       internalValueResult.minLikelihood = this._minLikelihood;
     }
-    if (this._customInfoTypes) {
+    if (this._customInfoTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.customInfoTypes = this._customInfoTypes;
     }
-    if (this._infoTypes) {
+    if (this._infoTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.infoTypes = this._infoTypes;
     }
-    if (this._limits?.internalValue) {
+    if (this._limits?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.limits = this._limits?.internalValue;
     }
-    if (this._ruleSet) {
+    if (this._ruleSet !== undefined) {
       hasAnyValues = true;
       internalValueResult.ruleSet = this._ruleSet;
     }
@@ -2150,15 +2150,15 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   public get internalValue(): DataLossPreventionInspectTemplateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

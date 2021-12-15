@@ -180,27 +180,27 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   public get internalValue(): AccessContextManagerAccessLevelConditionDevicePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedDeviceManagementLevels) {
+    if (this._allowedDeviceManagementLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedDeviceManagementLevels = this._allowedDeviceManagementLevels;
     }
-    if (this._allowedEncryptionStatuses) {
+    if (this._allowedEncryptionStatuses !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedEncryptionStatuses = this._allowedEncryptionStatuses;
     }
-    if (this._requireAdminApproval) {
+    if (this._requireAdminApproval !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireAdminApproval = this._requireAdminApproval;
     }
-    if (this._requireCorpOwned) {
+    if (this._requireCorpOwned !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireCorpOwned = this._requireCorpOwned;
     }
-    if (this._requireScreenLock) {
+    if (this._requireScreenLock !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireScreenLock = this._requireScreenLock;
     }
-    if (this._osConstraints) {
+    if (this._osConstraints !== undefined) {
       hasAnyValues = true;
       internalValueResult.osConstraints = this._osConstraints;
     }
@@ -362,11 +362,11 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
   public get internalValue(): AccessContextManagerAccessLevelConditionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

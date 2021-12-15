@@ -109,7 +109,7 @@ export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cd
   public get internalValue(): LoggingMetricBucketOptionsExplicitBuckets | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bounds) {
+    if (this._bounds !== undefined) {
       hasAnyValues = true;
       internalValueResult.bounds = this._bounds;
     }
@@ -189,15 +189,15 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
   public get internalValue(): LoggingMetricBucketOptionsExponentialBuckets | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._growthFactor) {
+    if (this._growthFactor !== undefined) {
       hasAnyValues = true;
       internalValueResult.growthFactor = this._growthFactor;
     }
-    if (this._numFiniteBuckets) {
+    if (this._numFiniteBuckets !== undefined) {
       hasAnyValues = true;
       internalValueResult.numFiniteBuckets = this._numFiniteBuckets;
     }
-    if (this._scale) {
+    if (this._scale !== undefined) {
       hasAnyValues = true;
       internalValueResult.scale = this._scale;
     }
@@ -315,15 +315,15 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
   public get internalValue(): LoggingMetricBucketOptionsLinearBuckets | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numFiniteBuckets) {
+    if (this._numFiniteBuckets !== undefined) {
       hasAnyValues = true;
       internalValueResult.numFiniteBuckets = this._numFiniteBuckets;
     }
-    if (this._offset) {
+    if (this._offset !== undefined) {
       hasAnyValues = true;
       internalValueResult.offset = this._offset;
     }
-    if (this._width) {
+    if (this._width !== undefined) {
       hasAnyValues = true;
       internalValueResult.width = this._width;
     }
@@ -441,15 +441,15 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
   public get internalValue(): LoggingMetricBucketOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._explicitBuckets?.internalValue) {
+    if (this._explicitBuckets?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.explicitBuckets = this._explicitBuckets?.internalValue;
     }
-    if (this._exponentialBuckets?.internalValue) {
+    if (this._exponentialBuckets?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.exponentialBuckets = this._exponentialBuckets?.internalValue;
     }
-    if (this._linearBuckets?.internalValue) {
+    if (this._linearBuckets?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.linearBuckets = this._linearBuckets?.internalValue;
     }
@@ -622,23 +622,23 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   public get internalValue(): LoggingMetricMetricDescriptor | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._displayName) {
+    if (this._displayName !== undefined) {
       hasAnyValues = true;
       internalValueResult.displayName = this._displayName;
     }
-    if (this._metricKind) {
+    if (this._metricKind !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricKind = this._metricKind;
     }
-    if (this._unit) {
+    if (this._unit !== undefined) {
       hasAnyValues = true;
       internalValueResult.unit = this._unit;
     }
-    if (this._valueType) {
+    if (this._valueType !== undefined) {
       hasAnyValues = true;
       internalValueResult.valueType = this._valueType;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
@@ -781,15 +781,15 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): LoggingMetricTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -173,15 +173,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
   public get internalValue(): NetworkServicesEdgeCacheOriginTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._connectTimeout) {
+    if (this._connectTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectTimeout = this._connectTimeout;
     }
-    if (this._maxAttemptsTimeout) {
+    if (this._maxAttemptsTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAttemptsTimeout = this._maxAttemptsTimeout;
     }
-    if (this._responseTimeout) {
+    if (this._responseTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseTimeout = this._responseTimeout;
     }
@@ -293,15 +293,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
   public get internalValue(): NetworkServicesEdgeCacheOriginTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

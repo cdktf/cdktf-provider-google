@@ -84,7 +84,7 @@ export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.
   public get internalValue(): FolderOrganizationPolicyBooleanPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enforced) {
+    if (this._enforced !== undefined) {
       hasAnyValues = true;
       internalValueResult.enforced = this._enforced;
     }
@@ -156,11 +156,11 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
   public get internalValue(): FolderOrganizationPolicyListPolicyAllow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._all) {
+    if (this._all !== undefined) {
       hasAnyValues = true;
       internalValueResult.all = this._all;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -253,11 +253,11 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
   public get internalValue(): FolderOrganizationPolicyListPolicyDeny | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._all) {
+    if (this._all !== undefined) {
       hasAnyValues = true;
       internalValueResult.all = this._all;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -364,19 +364,19 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   public get internalValue(): FolderOrganizationPolicyListPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._inheritFromParent) {
+    if (this._inheritFromParent !== undefined) {
       hasAnyValues = true;
       internalValueResult.inheritFromParent = this._inheritFromParent;
     }
-    if (this._suggestedValue) {
+    if (this._suggestedValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.suggestedValue = this._suggestedValue;
     }
-    if (this._allow?.internalValue) {
+    if (this._allow?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.allow = this._allow?.internalValue;
     }
-    if (this._deny?.internalValue) {
+    if (this._deny?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.deny = this._deny?.internalValue;
     }
@@ -498,7 +498,7 @@ export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.
   public get internalValue(): FolderOrganizationPolicyRestorePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._default) {
+    if (this._default !== undefined) {
       hasAnyValues = true;
       internalValueResult.default = this._default;
     }
@@ -576,19 +576,19 @@ export class FolderOrganizationPolicyTimeoutsOutputReference extends cdktf.Compl
   public get internalValue(): FolderOrganizationPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

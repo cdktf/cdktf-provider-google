@@ -124,19 +124,19 @@ export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends c
   public get internalValue(): IdentityPlatformInboundSamlConfigIdpConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._idpEntityId) {
+    if (this._idpEntityId !== undefined) {
       hasAnyValues = true;
       internalValueResult.idpEntityId = this._idpEntityId;
     }
-    if (this._signRequest) {
+    if (this._signRequest !== undefined) {
       hasAnyValues = true;
       internalValueResult.signRequest = this._signRequest;
     }
-    if (this._ssoUrl) {
+    if (this._ssoUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.ssoUrl = this._ssoUrl;
     }
-    if (this._idpCertificates) {
+    if (this._idpCertificates !== undefined) {
       hasAnyValues = true;
       internalValueResult.idpCertificates = this._idpCertificates;
     }
@@ -257,11 +257,11 @@ export class IdentityPlatformInboundSamlConfigSpConfigOutputReference extends cd
   public get internalValue(): IdentityPlatformInboundSamlConfigSpConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._callbackUri) {
+    if (this._callbackUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.callbackUri = this._callbackUri;
     }
-    if (this._spEntityId) {
+    if (this._spEntityId !== undefined) {
       hasAnyValues = true;
       internalValueResult.spEntityId = this._spEntityId;
     }
@@ -355,15 +355,15 @@ export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cd
   public get internalValue(): IdentityPlatformInboundSamlConfigTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
