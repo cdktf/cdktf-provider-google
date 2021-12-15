@@ -227,23 +227,23 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   public get internalValue(): ComputeSubnetworkLogConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aggregationInterval) {
+    if (this._aggregationInterval !== undefined) {
       hasAnyValues = true;
       internalValueResult.aggregationInterval = this._aggregationInterval;
     }
-    if (this._filterExpr) {
+    if (this._filterExpr !== undefined) {
       hasAnyValues = true;
       internalValueResult.filterExpr = this._filterExpr;
     }
-    if (this._flowSampling) {
+    if (this._flowSampling !== undefined) {
       hasAnyValues = true;
       internalValueResult.flowSampling = this._flowSampling;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._metadataFields) {
+    if (this._metadataFields !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadataFields = this._metadataFields;
     }
@@ -391,15 +391,15 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ComputeSubnetworkTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

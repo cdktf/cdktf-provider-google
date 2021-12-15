@@ -449,23 +449,23 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   public get internalValue(): ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._includeHost) {
+    if (this._includeHost !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeHost = this._includeHost;
     }
-    if (this._includeProtocol) {
+    if (this._includeProtocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeProtocol = this._includeProtocol;
     }
-    if (this._includeQueryString) {
+    if (this._includeQueryString !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeQueryString = this._includeQueryString;
     }
-    if (this._queryStringBlacklist) {
+    if (this._queryStringBlacklist !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryStringBlacklist = this._queryStringBlacklist;
     }
-    if (this._queryStringWhitelist) {
+    if (this._queryStringWhitelist !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryStringWhitelist = this._queryStringWhitelist;
     }
@@ -692,39 +692,39 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   public get internalValue(): ComputeRegionBackendServiceCdnPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cacheMode) {
+    if (this._cacheMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheMode = this._cacheMode;
     }
-    if (this._clientTtl) {
+    if (this._clientTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientTtl = this._clientTtl;
     }
-    if (this._defaultTtl) {
+    if (this._defaultTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultTtl = this._defaultTtl;
     }
-    if (this._maxTtl) {
+    if (this._maxTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTtl = this._maxTtl;
     }
-    if (this._negativeCaching) {
+    if (this._negativeCaching !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCaching = this._negativeCaching;
     }
-    if (this._serveWhileStale) {
+    if (this._serveWhileStale !== undefined) {
       hasAnyValues = true;
       internalValueResult.serveWhileStale = this._serveWhileStale;
     }
-    if (this._signedUrlCacheMaxAgeSec) {
+    if (this._signedUrlCacheMaxAgeSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
     }
-    if (this._cacheKeyPolicy?.internalValue) {
+    if (this._cacheKeyPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
     }
-    if (this._negativeCachingPolicy) {
+    if (this._negativeCachingPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy;
     }
@@ -972,23 +972,23 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   public get internalValue(): ComputeRegionBackendServiceCircuitBreakers | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxConnections) {
+    if (this._maxConnections !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxConnections = this._maxConnections;
     }
-    if (this._maxPendingRequests) {
+    if (this._maxPendingRequests !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxPendingRequests = this._maxPendingRequests;
     }
-    if (this._maxRequests) {
+    if (this._maxRequests !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRequests = this._maxRequests;
     }
-    if (this._maxRequestsPerConnection) {
+    if (this._maxRequestsPerConnection !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRequestsPerConnection = this._maxRequestsPerConnection;
     }
-    if (this._maxRetries) {
+    if (this._maxRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRetries = this._maxRetries;
     }
@@ -1139,11 +1139,11 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
   public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1240,15 +1240,15 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
   public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookie | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._ttl?.internalValue) {
+    if (this._ttl?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ttl = this._ttl?.internalValue;
     }
@@ -1372,15 +1372,15 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
   public get internalValue(): ComputeRegionBackendServiceConsistentHash | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpHeaderName) {
+    if (this._httpHeaderName !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpHeaderName = this._httpHeaderName;
     }
-    if (this._minimumRingSize) {
+    if (this._minimumRingSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimumRingSize = this._minimumRingSize;
     }
-    if (this._httpCookie?.internalValue) {
+    if (this._httpCookie?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpCookie = this._httpCookie?.internalValue;
     }
@@ -1515,15 +1515,15 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
   public get internalValue(): ComputeRegionBackendServiceFailoverPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disableConnectionDrainOnFailover) {
+    if (this._disableConnectionDrainOnFailover !== undefined) {
       hasAnyValues = true;
       internalValueResult.disableConnectionDrainOnFailover = this._disableConnectionDrainOnFailover;
     }
-    if (this._dropTrafficIfUnhealthy) {
+    if (this._dropTrafficIfUnhealthy !== undefined) {
       hasAnyValues = true;
       internalValueResult.dropTrafficIfUnhealthy = this._dropTrafficIfUnhealthy;
     }
-    if (this._failoverRatio) {
+    if (this._failoverRatio !== undefined) {
       hasAnyValues = true;
       internalValueResult.failoverRatio = this._failoverRatio;
     }
@@ -1634,11 +1634,11 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
   public get internalValue(): ComputeRegionBackendServiceIap | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._oauth2ClientId) {
+    if (this._oauth2ClientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauth2ClientId = this._oauth2ClientId;
     }
-    if (this._oauth2ClientSecret) {
+    if (this._oauth2ClientSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauth2ClientSecret = this._oauth2ClientSecret;
     }
@@ -1728,11 +1728,11 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
   public get internalValue(): ComputeRegionBackendServiceLogConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enable) {
+    if (this._enable !== undefined) {
       hasAnyValues = true;
       internalValueResult.enable = this._enable;
     }
-    if (this._sampleRate) {
+    if (this._sampleRate !== undefined) {
       hasAnyValues = true;
       internalValueResult.sampleRate = this._sampleRate;
     }
@@ -1828,11 +1828,11 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
   public get internalValue(): ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1925,11 +1925,11 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetectionInterval | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -2105,47 +2105,47 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetection | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._consecutiveErrors) {
+    if (this._consecutiveErrors !== undefined) {
       hasAnyValues = true;
       internalValueResult.consecutiveErrors = this._consecutiveErrors;
     }
-    if (this._consecutiveGatewayFailure) {
+    if (this._consecutiveGatewayFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.consecutiveGatewayFailure = this._consecutiveGatewayFailure;
     }
-    if (this._enforcingConsecutiveErrors) {
+    if (this._enforcingConsecutiveErrors !== undefined) {
       hasAnyValues = true;
       internalValueResult.enforcingConsecutiveErrors = this._enforcingConsecutiveErrors;
     }
-    if (this._enforcingConsecutiveGatewayFailure) {
+    if (this._enforcingConsecutiveGatewayFailure !== undefined) {
       hasAnyValues = true;
       internalValueResult.enforcingConsecutiveGatewayFailure = this._enforcingConsecutiveGatewayFailure;
     }
-    if (this._enforcingSuccessRate) {
+    if (this._enforcingSuccessRate !== undefined) {
       hasAnyValues = true;
       internalValueResult.enforcingSuccessRate = this._enforcingSuccessRate;
     }
-    if (this._maxEjectionPercent) {
+    if (this._maxEjectionPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxEjectionPercent = this._maxEjectionPercent;
     }
-    if (this._successRateMinimumHosts) {
+    if (this._successRateMinimumHosts !== undefined) {
       hasAnyValues = true;
       internalValueResult.successRateMinimumHosts = this._successRateMinimumHosts;
     }
-    if (this._successRateRequestVolume) {
+    if (this._successRateRequestVolume !== undefined) {
       hasAnyValues = true;
       internalValueResult.successRateRequestVolume = this._successRateRequestVolume;
     }
-    if (this._successRateStdevFactor) {
+    if (this._successRateStdevFactor !== undefined) {
       hasAnyValues = true;
       internalValueResult.successRateStdevFactor = this._successRateStdevFactor;
     }
-    if (this._baseEjectionTime?.internalValue) {
+    if (this._baseEjectionTime?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.baseEjectionTime = this._baseEjectionTime?.internalValue;
     }
-    if (this._interval?.internalValue) {
+    if (this._interval?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.interval = this._interval?.internalValue;
     }
@@ -2401,15 +2401,15 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): ComputeRegionBackendServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -327,11 +327,11 @@ export class ContainerClusterAddonsConfigCloudrunConfigOutputReference extends c
   public get internalValue(): ContainerClusterAddonsConfigCloudrunConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._loadBalancerType) {
+    if (this._loadBalancerType !== undefined) {
       hasAnyValues = true;
       internalValueResult.loadBalancerType = this._loadBalancerType;
     }
@@ -412,7 +412,7 @@ export class ContainerClusterAddonsConfigHorizontalPodAutoscalingOutputReference
   public get internalValue(): ContainerClusterAddonsConfigHorizontalPodAutoscaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
@@ -475,7 +475,7 @@ export class ContainerClusterAddonsConfigHttpLoadBalancingOutputReference extend
   public get internalValue(): ContainerClusterAddonsConfigHttpLoadBalancing | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
@@ -538,7 +538,7 @@ export class ContainerClusterAddonsConfigNetworkPolicyConfigOutputReference exte
   public get internalValue(): ContainerClusterAddonsConfigNetworkPolicyConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
@@ -624,19 +624,19 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
   public get internalValue(): ContainerClusterAddonsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudrunConfig?.internalValue) {
+    if (this._cloudrunConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudrunConfig = this._cloudrunConfig?.internalValue;
     }
-    if (this._horizontalPodAutoscaling?.internalValue) {
+    if (this._horizontalPodAutoscaling?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.horizontalPodAutoscaling = this._horizontalPodAutoscaling?.internalValue;
     }
-    if (this._httpLoadBalancing?.internalValue) {
+    if (this._httpLoadBalancing?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpLoadBalancing = this._httpLoadBalancing?.internalValue;
     }
-    if (this._networkPolicyConfig?.internalValue) {
+    if (this._networkPolicyConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkPolicyConfig = this._networkPolicyConfig?.internalValue;
     }
@@ -758,7 +758,7 @@ export class ContainerClusterAuthenticatorGroupsConfigOutputReference extends cd
   public get internalValue(): ContainerClusterAuthenticatorGroupsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._securityGroup) {
+    if (this._securityGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.securityGroup = this._securityGroup;
     }
@@ -830,11 +830,11 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
   public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaults | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
@@ -967,15 +967,15 @@ export class ContainerClusterClusterAutoscalingOutputReference extends cdktf.Com
   public get internalValue(): ContainerClusterClusterAutoscaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._autoProvisioningDefaults?.internalValue) {
+    if (this._autoProvisioningDefaults?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoProvisioningDefaults = this._autoProvisioningDefaults?.internalValue;
     }
-    if (this._resourceLimits) {
+    if (this._resourceLimits !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceLimits = this._resourceLimits;
     }
@@ -1084,11 +1084,11 @@ export class ContainerClusterDatabaseEncryptionOutputReference extends cdktf.Com
   public get internalValue(): ContainerClusterDatabaseEncryption | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyName) {
+    if (this._keyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyName = this._keyName;
     }
-    if (this._state) {
+    if (this._state !== undefined) {
       hasAnyValues = true;
       internalValueResult.state = this._state;
     }
@@ -1171,7 +1171,7 @@ export class ContainerClusterDefaultSnatStatusOutputReference extends cdktf.Comp
   public get internalValue(): ContainerClusterDefaultSnatStatus | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
@@ -1257,19 +1257,19 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
   public get internalValue(): ContainerClusterIpAllocationPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterIpv4CidrBlock) {
+    if (this._clusterIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterIpv4CidrBlock = this._clusterIpv4CidrBlock;
     }
-    if (this._clusterSecondaryRangeName) {
+    if (this._clusterSecondaryRangeName !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterSecondaryRangeName = this._clusterSecondaryRangeName;
     }
-    if (this._servicesIpv4CidrBlock) {
+    if (this._servicesIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.servicesIpv4CidrBlock = this._servicesIpv4CidrBlock;
     }
-    if (this._servicesSecondaryRangeName) {
+    if (this._servicesSecondaryRangeName !== undefined) {
       hasAnyValues = true;
       internalValueResult.servicesSecondaryRangeName = this._servicesSecondaryRangeName;
     }
@@ -1391,7 +1391,7 @@ export class ContainerClusterLoggingConfigOutputReference extends cdktf.ComplexO
   public get internalValue(): ContainerClusterLoggingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableComponents) {
+    if (this._enableComponents !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableComponents = this._enableComponents;
     }
@@ -1454,7 +1454,7 @@ export class ContainerClusterMaintenancePolicyDailyMaintenanceWindowOutputRefere
   public get internalValue(): ContainerClusterMaintenancePolicyDailyMaintenanceWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
@@ -1554,15 +1554,15 @@ export class ContainerClusterMaintenancePolicyRecurringWindowOutputReference ext
   public get internalValue(): ContainerClusterMaintenancePolicyRecurringWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endTime) {
+    if (this._endTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.endTime = this._endTime;
     }
-    if (this._recurrence) {
+    if (this._recurrence !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrence = this._recurrence;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
@@ -1671,15 +1671,15 @@ export class ContainerClusterMaintenancePolicyOutputReference extends cdktf.Comp
   public get internalValue(): ContainerClusterMaintenancePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dailyMaintenanceWindow?.internalValue) {
+    if (this._dailyMaintenanceWindow?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dailyMaintenanceWindow = this._dailyMaintenanceWindow?.internalValue;
     }
-    if (this._maintenanceExclusion) {
+    if (this._maintenanceExclusion !== undefined) {
       hasAnyValues = true;
       internalValueResult.maintenanceExclusion = this._maintenanceExclusion;
     }
-    if (this._recurringWindow?.internalValue) {
+    if (this._recurringWindow?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurringWindow = this._recurringWindow?.internalValue;
     }
@@ -1784,7 +1784,7 @@ export class ContainerClusterMasterAuthClientCertificateConfigOutputReference ex
   public get internalValue(): ContainerClusterMasterAuthClientCertificateConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._issueClientCertificate) {
+    if (this._issueClientCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.issueClientCertificate = this._issueClientCertificate;
     }
@@ -1863,15 +1863,15 @@ export class ContainerClusterMasterAuthOutputReference extends cdktf.ComplexObje
   public get internalValue(): ContainerClusterMasterAuth | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._clientCertificateConfig?.internalValue) {
+    if (this._clientCertificateConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientCertificateConfig = this._clientCertificateConfig?.internalValue;
     }
@@ -2001,7 +2001,7 @@ export class ContainerClusterMasterAuthorizedNetworksConfigOutputReference exten
   public get internalValue(): ContainerClusterMasterAuthorizedNetworksConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cidrBlocks) {
+    if (this._cidrBlocks !== undefined) {
       hasAnyValues = true;
       internalValueResult.cidrBlocks = this._cidrBlocks;
     }
@@ -2070,7 +2070,7 @@ export class ContainerClusterMonitoringConfigOutputReference extends cdktf.Compl
   public get internalValue(): ContainerClusterMonitoringConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableComponents) {
+    if (this._enableComponents !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableComponents = this._enableComponents;
     }
@@ -2142,11 +2142,11 @@ export class ContainerClusterNetworkPolicyOutputReference extends cdktf.ComplexO
   public get internalValue(): ContainerClusterNetworkPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._provider) {
+    if (this._provider !== undefined) {
       hasAnyValues = true;
       internalValueResult.provider = this._provider;
     }
@@ -2290,11 +2290,11 @@ export class ContainerClusterNodeConfigShieldedInstanceConfigOutputReference ext
   public get internalValue(): ContainerClusterNodeConfigShieldedInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableIntegrityMonitoring) {
+    if (this._enableIntegrityMonitoring !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
     }
-    if (this._enableSecureBoot) {
+    if (this._enableSecureBoot !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableSecureBoot = this._enableSecureBoot;
     }
@@ -2387,11 +2387,11 @@ export class ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference ext
   public get internalValue(): ContainerClusterNodeConfigWorkloadMetadataConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._nodeMetadata) {
+    if (this._nodeMetadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeMetadata = this._nodeMetadata;
     }
@@ -2582,67 +2582,67 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
   public get internalValue(): ContainerClusterNodeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._diskType) {
+    if (this._diskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskType = this._diskType;
     }
-    if (this._guestAccelerator) {
+    if (this._guestAccelerator !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestAccelerator = this._guestAccelerator;
     }
-    if (this._imageType) {
+    if (this._imageType !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageType = this._imageType;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._localSsdCount) {
+    if (this._localSsdCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.localSsdCount = this._localSsdCount;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
-    if (this._preemptible) {
+    if (this._preemptible !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._taint) {
+    if (this._taint !== undefined) {
       hasAnyValues = true;
       internalValueResult.taint = this._taint;
     }
-    if (this._shieldedInstanceConfig?.internalValue) {
+    if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
-    if (this._workloadMetadataConfig?.internalValue) {
+    if (this._workloadMetadataConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workloadMetadataConfig = this._workloadMetadataConfig?.internalValue;
     }
@@ -2991,11 +2991,11 @@ export class ContainerClusterNodePoolAutoscalingOutputReference extends cdktf.Co
   public get internalValue(): ContainerClusterNodePoolAutoscaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxNodeCount) {
+    if (this._maxNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNodeCount = this._maxNodeCount;
     }
-    if (this._minNodeCount) {
+    if (this._minNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNodeCount = this._minNodeCount;
     }
@@ -3082,11 +3082,11 @@ export class ContainerClusterNodePoolManagementOutputReference extends cdktf.Com
   public get internalValue(): ContainerClusterNodePoolManagement | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoRepair) {
+    if (this._autoRepair !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoRepair = this._autoRepair;
     }
-    if (this._autoUpgrade) {
+    if (this._autoUpgrade !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoUpgrade = this._autoUpgrade;
     }
@@ -3233,11 +3233,11 @@ export class ContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputRefer
   public get internalValue(): ContainerClusterNodePoolNodeConfigShieldedInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableIntegrityMonitoring) {
+    if (this._enableIntegrityMonitoring !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
     }
-    if (this._enableSecureBoot) {
+    if (this._enableSecureBoot !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableSecureBoot = this._enableSecureBoot;
     }
@@ -3330,11 +3330,11 @@ export class ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputRefer
   public get internalValue(): ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._nodeMetadata) {
+    if (this._nodeMetadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeMetadata = this._nodeMetadata;
     }
@@ -3525,67 +3525,67 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
   public get internalValue(): ContainerClusterNodePoolNodeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._diskType) {
+    if (this._diskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskType = this._diskType;
     }
-    if (this._guestAccelerator) {
+    if (this._guestAccelerator !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestAccelerator = this._guestAccelerator;
     }
-    if (this._imageType) {
+    if (this._imageType !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageType = this._imageType;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._localSsdCount) {
+    if (this._localSsdCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.localSsdCount = this._localSsdCount;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
-    if (this._preemptible) {
+    if (this._preemptible !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._taint) {
+    if (this._taint !== undefined) {
       hasAnyValues = true;
       internalValueResult.taint = this._taint;
     }
-    if (this._shieldedInstanceConfig?.internalValue) {
+    if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
-    if (this._workloadMetadataConfig?.internalValue) {
+    if (this._workloadMetadataConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workloadMetadataConfig = this._workloadMetadataConfig?.internalValue;
     }
@@ -3934,11 +3934,11 @@ export class ContainerClusterNodePoolUpgradeSettingsOutputReference extends cdkt
   public get internalValue(): ContainerClusterNodePoolUpgradeSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxSurge) {
+    if (this._maxSurge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxSurge = this._maxSurge;
     }
-    if (this._maxUnavailable) {
+    if (this._maxUnavailable !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnavailable = this._maxUnavailable;
     }
@@ -4107,7 +4107,7 @@ export class ContainerClusterPodSecurityPolicyConfigOutputReference extends cdkt
   public get internalValue(): ContainerClusterPodSecurityPolicyConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -4172,7 +4172,7 @@ export class ContainerClusterPrivateClusterConfigMasterGlobalAccessConfigOutputR
   public get internalValue(): ContainerClusterPrivateClusterConfigMasterGlobalAccessConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -4258,19 +4258,19 @@ export class ContainerClusterPrivateClusterConfigOutputReference extends cdktf.C
   public get internalValue(): ContainerClusterPrivateClusterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enablePrivateEndpoint) {
+    if (this._enablePrivateEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.enablePrivateEndpoint = this._enablePrivateEndpoint;
     }
-    if (this._enablePrivateNodes) {
+    if (this._enablePrivateNodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.enablePrivateNodes = this._enablePrivateNodes;
     }
-    if (this._masterIpv4CidrBlock) {
+    if (this._masterIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterIpv4CidrBlock = this._masterIpv4CidrBlock;
     }
-    if (this._masterGlobalAccessConfig?.internalValue) {
+    if (this._masterGlobalAccessConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterGlobalAccessConfig = this._masterGlobalAccessConfig?.internalValue;
     }
@@ -4393,7 +4393,7 @@ export class ContainerClusterReleaseChannelOutputReference extends cdktf.Complex
   public get internalValue(): ContainerClusterReleaseChannel | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._channel) {
+    if (this._channel !== undefined) {
       hasAnyValues = true;
       internalValueResult.channel = this._channel;
     }
@@ -4458,7 +4458,7 @@ export class ContainerClusterResourceUsageExportConfigBigqueryDestinationOutputR
   public get internalValue(): ContainerClusterResourceUsageExportConfigBigqueryDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
@@ -4537,15 +4537,15 @@ export class ContainerClusterResourceUsageExportConfigOutputReference extends cd
   public get internalValue(): ContainerClusterResourceUsageExportConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableNetworkEgressMetering) {
+    if (this._enableNetworkEgressMetering !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableNetworkEgressMetering = this._enableNetworkEgressMetering;
     }
-    if (this._enableResourceConsumptionMetering) {
+    if (this._enableResourceConsumptionMetering !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableResourceConsumptionMetering = this._enableResourceConsumptionMetering;
     }
-    if (this._bigqueryDestination?.internalValue) {
+    if (this._bigqueryDestination?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.bigqueryDestination = this._bigqueryDestination?.internalValue;
     }
@@ -4659,19 +4659,19 @@ export class ContainerClusterTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): ContainerClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -4793,7 +4793,7 @@ export class ContainerClusterVerticalPodAutoscalingOutputReference extends cdktf
   public get internalValue(): ContainerClusterVerticalPodAutoscaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -4865,11 +4865,11 @@ export class ContainerClusterWorkloadIdentityConfigOutputReference extends cdktf
   public get internalValue(): ContainerClusterWorkloadIdentityConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityNamespace) {
+    if (this._identityNamespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityNamespace = this._identityNamespace;
     }
-    if (this._workloadPool) {
+    if (this._workloadPool !== undefined) {
       hasAnyValues = true;
       internalValueResult.workloadPool = this._workloadPool;
     }

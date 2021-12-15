@@ -72,11 +72,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecEgressPol
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressFrom | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identities) {
+    if (this._identities !== undefined) {
       hasAnyValues = true;
       internalValueResult.identities = this._identities;
     }
-    if (this._identityType) {
+    if (this._identityType !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityType = this._identityType;
     }
@@ -230,11 +230,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecEgressPol
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resources) {
+    if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations) {
+    if (this._operations !== undefined) {
       hasAnyValues = true;
       internalValueResult.operations = this._operations;
     }
@@ -403,15 +403,15 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecIngressPo
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressFrom | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identities) {
+    if (this._identities !== undefined) {
       hasAnyValues = true;
       internalValueResult.identities = this._identities;
     }
-    if (this._identityType) {
+    if (this._identityType !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityType = this._identityType;
     }
-    if (this._sources) {
+    if (this._sources !== undefined) {
       hasAnyValues = true;
       internalValueResult.sources = this._sources;
     }
@@ -587,11 +587,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecIngressPo
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpecIngressPoliciesIngressTo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resources) {
+    if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations) {
+    if (this._operations !== undefined) {
       hasAnyValues = true;
       internalValueResult.operations = this._operations;
     }
@@ -713,11 +713,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccess
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpecVpcAccessibleServices | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedServices) {
+    if (this._allowedServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedServices = this._allowedServices;
     }
-    if (this._enableRestriction) {
+    if (this._enableRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableRestriction = this._enableRestriction;
     }
@@ -853,27 +853,27 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecOutputRef
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accessLevels) {
+    if (this._accessLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.accessLevels = this._accessLevels;
     }
-    if (this._resources) {
+    if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._restrictedServices) {
+    if (this._restrictedServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.restrictedServices = this._restrictedServices;
     }
-    if (this._egressPolicies) {
+    if (this._egressPolicies !== undefined) {
       hasAnyValues = true;
       internalValueResult.egressPolicies = this._egressPolicies;
     }
-    if (this._ingressPolicies) {
+    if (this._ingressPolicies !== undefined) {
       hasAnyValues = true;
       internalValueResult.ingressPolicies = this._ingressPolicies;
     }
-    if (this._vpcAccessibleServices?.internalValue) {
+    if (this._vpcAccessibleServices?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.vpcAccessibleServices = this._vpcAccessibleServices?.internalValue;
     }
@@ -1044,11 +1044,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusEgressP
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressFrom | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identities) {
+    if (this._identities !== undefined) {
       hasAnyValues = true;
       internalValueResult.identities = this._identities;
     }
-    if (this._identityType) {
+    if (this._identityType !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityType = this._identityType;
     }
@@ -1202,11 +1202,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusEgressP
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resources) {
+    if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations) {
+    if (this._operations !== undefined) {
       hasAnyValues = true;
       internalValueResult.operations = this._operations;
     }
@@ -1375,15 +1375,15 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusIngress
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressFrom | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identities) {
+    if (this._identities !== undefined) {
       hasAnyValues = true;
       internalValueResult.identities = this._identities;
     }
-    if (this._identityType) {
+    if (this._identityType !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityType = this._identityType;
     }
-    if (this._sources) {
+    if (this._sources !== undefined) {
       hasAnyValues = true;
       internalValueResult.sources = this._sources;
     }
@@ -1559,11 +1559,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusIngress
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatusIngressPoliciesIngressTo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resources) {
+    if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations) {
+    if (this._operations !== undefined) {
       hasAnyValues = true;
       internalValueResult.operations = this._operations;
     }
@@ -1685,11 +1685,11 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusVpcAcce
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatusVpcAccessibleServices | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedServices) {
+    if (this._allowedServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedServices = this._allowedServices;
     }
-    if (this._enableRestriction) {
+    if (this._enableRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableRestriction = this._enableRestriction;
     }
@@ -1825,27 +1825,27 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusOutputR
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatus | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accessLevels) {
+    if (this._accessLevels !== undefined) {
       hasAnyValues = true;
       internalValueResult.accessLevels = this._accessLevels;
     }
-    if (this._resources) {
+    if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._restrictedServices) {
+    if (this._restrictedServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.restrictedServices = this._restrictedServices;
     }
-    if (this._egressPolicies) {
+    if (this._egressPolicies !== undefined) {
       hasAnyValues = true;
       internalValueResult.egressPolicies = this._egressPolicies;
     }
-    if (this._ingressPolicies) {
+    if (this._ingressPolicies !== undefined) {
       hasAnyValues = true;
       internalValueResult.ingressPolicies = this._ingressPolicies;
     }
-    if (this._vpcAccessibleServices?.internalValue) {
+    if (this._vpcAccessibleServices?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.vpcAccessibleServices = this._vpcAccessibleServices?.internalValue;
     }
@@ -2100,15 +2100,15 @@ export class AccessContextManagerServicePerimetersTimeoutsOutputReference extend
   public get internalValue(): AccessContextManagerServicePerimetersTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

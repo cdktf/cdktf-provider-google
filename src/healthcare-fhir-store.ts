@@ -151,7 +151,7 @@ export class HealthcareFhirStoreNotificationConfigOutputReference extends cdktf.
   public get internalValue(): HealthcareFhirStoreNotificationConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pubsubTopic) {
+    if (this._pubsubTopic !== undefined) {
       hasAnyValues = true;
       internalValueResult.pubsubTopic = this._pubsubTopic;
     }
@@ -228,11 +228,11 @@ export class HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfigOutp
   public get internalValue(): HealthcareFhirStoreStreamConfigsBigqueryDestinationSchemaConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._recursiveStructureDepth) {
+    if (this._recursiveStructureDepth !== undefined) {
       hasAnyValues = true;
       internalValueResult.recursiveStructureDepth = this._recursiveStructureDepth;
     }
-    if (this._schemaType) {
+    if (this._schemaType !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaType = this._schemaType;
     }
@@ -322,11 +322,11 @@ export class HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference 
   public get internalValue(): HealthcareFhirStoreStreamConfigsBigqueryDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetUri) {
+    if (this._datasetUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetUri = this._datasetUri;
     }
-    if (this._schemaConfig?.internalValue) {
+    if (this._schemaConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaConfig = this._schemaConfig?.internalValue;
     }
@@ -442,15 +442,15 @@ export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): HealthcareFhirStoreTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

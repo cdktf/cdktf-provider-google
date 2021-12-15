@@ -145,7 +145,7 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
   public get internalValue(): BigqueryDataTransferConfigEmailPreferences | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableFailureEmail) {
+    if (this._enableFailureEmail !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableFailureEmail = this._enableFailureEmail;
     }
@@ -235,15 +235,15 @@ export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cd
   public get internalValue(): BigqueryDataTransferConfigScheduleOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disableAutoScheduling) {
+    if (this._disableAutoScheduling !== undefined) {
       hasAnyValues = true;
       internalValueResult.disableAutoScheduling = this._disableAutoScheduling;
     }
-    if (this._endTime) {
+    if (this._endTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.endTime = this._endTime;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
@@ -347,7 +347,7 @@ export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cd
   public get internalValue(): BigqueryDataTransferConfigSensitiveParams | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._secretAccessKey) {
+    if (this._secretAccessKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretAccessKey = this._secretAccessKey;
     }
@@ -420,15 +420,15 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): BigqueryDataTransferConfigTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

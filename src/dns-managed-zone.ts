@@ -179,19 +179,19 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   public get internalValue(): DnsManagedZoneDnssecConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kind) {
+    if (this._kind !== undefined) {
       hasAnyValues = true;
       internalValueResult.kind = this._kind;
     }
-    if (this._nonExistence) {
+    if (this._nonExistence !== undefined) {
       hasAnyValues = true;
       internalValueResult.nonExistence = this._nonExistence;
     }
-    if (this._state) {
+    if (this._state !== undefined) {
       hasAnyValues = true;
       internalValueResult.state = this._state;
     }
-    if (this._defaultKeySpecs) {
+    if (this._defaultKeySpecs !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultKeySpecs = this._defaultKeySpecs;
     }
@@ -342,7 +342,7 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   public get internalValue(): DnsManagedZoneForwardingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetNameServers) {
+    if (this._targetNameServers !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetNameServers = this._targetNameServers;
     }
@@ -410,7 +410,7 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
   public get internalValue(): DnsManagedZonePeeringConfigTargetNetwork | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._networkUrl) {
+    if (this._networkUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkUrl = this._networkUrl;
     }
@@ -475,7 +475,7 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
   public get internalValue(): DnsManagedZonePeeringConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetNetwork?.internalValue) {
+    if (this._targetNetwork?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetNetwork = this._targetNetwork?.internalValue;
     }
@@ -561,7 +561,7 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   public get internalValue(): DnsManagedZonePrivateVisibilityConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._networks) {
+    if (this._networks !== undefined) {
       hasAnyValues = true;
       internalValueResult.networks = this._networks;
     }
@@ -635,15 +635,15 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DnsManagedZoneTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

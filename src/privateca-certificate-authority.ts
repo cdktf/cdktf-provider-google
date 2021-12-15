@@ -188,35 +188,35 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputRefere
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfigSubject | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._commonName) {
+    if (this._commonName !== undefined) {
       hasAnyValues = true;
       internalValueResult.commonName = this._commonName;
     }
-    if (this._countryCode) {
+    if (this._countryCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.countryCode = this._countryCode;
     }
-    if (this._locality) {
+    if (this._locality !== undefined) {
       hasAnyValues = true;
       internalValueResult.locality = this._locality;
     }
-    if (this._organization) {
+    if (this._organization !== undefined) {
       hasAnyValues = true;
       internalValueResult.organization = this._organization;
     }
-    if (this._organizationalUnit) {
+    if (this._organizationalUnit !== undefined) {
       hasAnyValues = true;
       internalValueResult.organizationalUnit = this._organizationalUnit;
     }
-    if (this._postalCode) {
+    if (this._postalCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.postalCode = this._postalCode;
     }
-    if (this._province) {
+    if (this._province !== undefined) {
       hasAnyValues = true;
       internalValueResult.province = this._province;
     }
-    if (this._streetAddress) {
+    if (this._streetAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.streetAddress = this._streetAddress;
     }
@@ -425,19 +425,19 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutpu
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dnsNames) {
+    if (this._dnsNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsNames = this._dnsNames;
     }
-    if (this._emailAddresses) {
+    if (this._emailAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAddresses = this._emailAddresses;
     }
-    if (this._ipAddresses) {
+    if (this._ipAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAddresses = this._ipAddresses;
     }
-    if (this._uris) {
+    if (this._uris !== undefined) {
       hasAnyValues = true;
       internalValueResult.uris = this._uris;
     }
@@ -566,11 +566,11 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subject?.internalValue) {
+    if (this._subject?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.subject = this._subject?.internalValue;
     }
-    if (this._subjectAltName?.internalValue) {
+    if (this._subjectAltName?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.subjectAltName = this._subjectAltName?.internalValue;
     }
@@ -653,7 +653,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsOb
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._objectIdPath) {
+    if (this._objectIdPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.objectIdPath = this._objectIdPath;
     }
@@ -763,11 +763,11 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReferen
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigCaOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._isCa) {
+    if (this._isCa !== undefined) {
       hasAnyValues = true;
       internalValueResult.isCa = this._isCa;
     }
-    if (this._maxIssuerPathLength) {
+    if (this._maxIssuerPathLength !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxIssuerPathLength = this._maxIssuerPathLength;
     }
@@ -906,39 +906,39 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOu
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._certSign) {
+    if (this._certSign !== undefined) {
       hasAnyValues = true;
       internalValueResult.certSign = this._certSign;
     }
-    if (this._contentCommitment) {
+    if (this._contentCommitment !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentCommitment = this._contentCommitment;
     }
-    if (this._crlSign) {
+    if (this._crlSign !== undefined) {
       hasAnyValues = true;
       internalValueResult.crlSign = this._crlSign;
     }
-    if (this._dataEncipherment) {
+    if (this._dataEncipherment !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataEncipherment = this._dataEncipherment;
     }
-    if (this._decipherOnly) {
+    if (this._decipherOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.decipherOnly = this._decipherOnly;
     }
-    if (this._digitalSignature) {
+    if (this._digitalSignature !== undefined) {
       hasAnyValues = true;
       internalValueResult.digitalSignature = this._digitalSignature;
     }
-    if (this._encipherOnly) {
+    if (this._encipherOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.encipherOnly = this._encipherOnly;
     }
-    if (this._keyAgreement) {
+    if (this._keyAgreement !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyAgreement = this._keyAgreement;
     }
-    if (this._keyEncipherment) {
+    if (this._keyEncipherment !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyEncipherment = this._keyEncipherment;
     }
@@ -1185,27 +1185,27 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsa
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientAuth) {
+    if (this._clientAuth !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientAuth = this._clientAuth;
     }
-    if (this._codeSigning) {
+    if (this._codeSigning !== undefined) {
       hasAnyValues = true;
       internalValueResult.codeSigning = this._codeSigning;
     }
-    if (this._emailProtection) {
+    if (this._emailProtection !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailProtection = this._emailProtection;
     }
-    if (this._ocspSigning) {
+    if (this._ocspSigning !== undefined) {
       hasAnyValues = true;
       internalValueResult.ocspSigning = this._ocspSigning;
     }
-    if (this._serverAuth) {
+    if (this._serverAuth !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverAuth = this._serverAuth;
     }
-    if (this._timeStamping) {
+    if (this._timeStamping !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeStamping = this._timeStamping;
     }
@@ -1396,15 +1396,15 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseKeyUsage?.internalValue) {
+    if (this._baseKeyUsage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.baseKeyUsage = this._baseKeyUsage?.internalValue;
     }
-    if (this._extendedKeyUsage?.internalValue) {
+    if (this._extendedKeyUsage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.extendedKeyUsage = this._extendedKeyUsage?.internalValue;
     }
-    if (this._unknownExtendedKeyUsages) {
+    if (this._unknownExtendedKeyUsages !== undefined) {
       hasAnyValues = true;
       internalValueResult.unknownExtendedKeyUsages = this._unknownExtendedKeyUsages;
     }
@@ -1551,23 +1551,23 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509Config | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aiaOcspServers) {
+    if (this._aiaOcspServers !== undefined) {
       hasAnyValues = true;
       internalValueResult.aiaOcspServers = this._aiaOcspServers;
     }
-    if (this._additionalExtensions) {
+    if (this._additionalExtensions !== undefined) {
       hasAnyValues = true;
       internalValueResult.additionalExtensions = this._additionalExtensions;
     }
-    if (this._caOptions?.internalValue) {
+    if (this._caOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.caOptions = this._caOptions?.internalValue;
     }
-    if (this._keyUsage?.internalValue) {
+    if (this._keyUsage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyUsage = this._keyUsage?.internalValue;
     }
-    if (this._policyIds) {
+    if (this._policyIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyIds = this._policyIds;
     }
@@ -1710,11 +1710,11 @@ export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.C
   public get internalValue(): PrivatecaCertificateAuthorityConfigA | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subjectConfig?.internalValue) {
+    if (this._subjectConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.subjectConfig = this._subjectConfig?.internalValue;
     }
-    if (this._x509Config?.internalValue) {
+    if (this._x509Config?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.x509Config = this._x509Config?.internalValue;
     }
@@ -1803,11 +1803,11 @@ export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.C
   public get internalValue(): PrivatecaCertificateAuthorityKeySpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._algorithm) {
+    if (this._algorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.algorithm = this._algorithm;
     }
-    if (this._cloudKmsKeyVersion) {
+    if (this._cloudKmsKeyVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudKmsKeyVersion = this._cloudKmsKeyVersion;
     }
@@ -1896,11 +1896,11 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
   public get internalValue(): PrivatecaCertificateAuthorityTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

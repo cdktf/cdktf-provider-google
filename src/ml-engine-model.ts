@@ -95,7 +95,7 @@ export class MlEngineModelDefaultVersionOutputReference extends cdktf.ComplexObj
   public get internalValue(): MlEngineModelDefaultVersion | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -163,11 +163,11 @@ export class MlEngineModelTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MlEngineModelTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

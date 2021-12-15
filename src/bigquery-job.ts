@@ -154,7 +154,7 @@ export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference ex
   public get internalValue(): BigqueryJobCopyDestinationEncryptionConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -234,15 +234,15 @@ export class BigqueryJobCopyDestinationTableOutputReference extends cdktf.Comple
   public get internalValue(): BigqueryJobCopyDestinationTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -413,23 +413,23 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigqueryJobCopy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._createDisposition) {
+    if (this._createDisposition !== undefined) {
       hasAnyValues = true;
       internalValueResult.createDisposition = this._createDisposition;
     }
-    if (this._writeDisposition) {
+    if (this._writeDisposition !== undefined) {
       hasAnyValues = true;
       internalValueResult.writeDisposition = this._writeDisposition;
     }
-    if (this._destinationEncryptionConfiguration?.internalValue) {
+    if (this._destinationEncryptionConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationEncryptionConfiguration = this._destinationEncryptionConfiguration?.internalValue;
     }
-    if (this._destinationTable?.internalValue) {
+    if (this._destinationTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
-    if (this._sourceTables) {
+    if (this._sourceTables !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceTables = this._sourceTables;
     }
@@ -581,15 +581,15 @@ export class BigqueryJobExtractSourceModelOutputReference extends cdktf.ComplexO
   public get internalValue(): BigqueryJobExtractSourceModel | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._modelId) {
+    if (this._modelId !== undefined) {
       hasAnyValues = true;
       internalValueResult.modelId = this._modelId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
@@ -699,15 +699,15 @@ export class BigqueryJobExtractSourceTableOutputReference extends cdktf.ComplexO
   public get internalValue(): BigqueryJobExtractSourceTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -861,35 +861,35 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigqueryJobExtract | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._compression) {
+    if (this._compression !== undefined) {
       hasAnyValues = true;
       internalValueResult.compression = this._compression;
     }
-    if (this._destinationFormat) {
+    if (this._destinationFormat !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationFormat = this._destinationFormat;
     }
-    if (this._destinationUris) {
+    if (this._destinationUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationUris = this._destinationUris;
     }
-    if (this._fieldDelimiter) {
+    if (this._fieldDelimiter !== undefined) {
       hasAnyValues = true;
       internalValueResult.fieldDelimiter = this._fieldDelimiter;
     }
-    if (this._printHeader) {
+    if (this._printHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.printHeader = this._printHeader;
     }
-    if (this._useAvroLogicalTypes) {
+    if (this._useAvroLogicalTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.useAvroLogicalTypes = this._useAvroLogicalTypes;
     }
-    if (this._sourceModel?.internalValue) {
+    if (this._sourceModel?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceModel = this._sourceModel?.internalValue;
     }
-    if (this._sourceTable?.internalValue) {
+    if (this._sourceTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceTable = this._sourceTable?.internalValue;
     }
@@ -1081,7 +1081,7 @@ export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference ex
   public get internalValue(): BigqueryJobLoadDestinationEncryptionConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -1161,15 +1161,15 @@ export class BigqueryJobLoadDestinationTableOutputReference extends cdktf.Comple
   public get internalValue(): BigqueryJobLoadDestinationTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -1287,15 +1287,15 @@ export class BigqueryJobLoadTimePartitioningOutputReference extends cdktf.Comple
   public get internalValue(): BigqueryJobLoadTimePartitioning | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expirationMs) {
+    if (this._expirationMs !== undefined) {
       hasAnyValues = true;
       internalValueResult.expirationMs = this._expirationMs;
     }
-    if (this._field) {
+    if (this._field !== undefined) {
       hasAnyValues = true;
       internalValueResult.field = this._field;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1573,79 +1573,79 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigqueryJobLoad | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowJaggedRows) {
+    if (this._allowJaggedRows !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowJaggedRows = this._allowJaggedRows;
     }
-    if (this._allowQuotedNewlines) {
+    if (this._allowQuotedNewlines !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowQuotedNewlines = this._allowQuotedNewlines;
     }
-    if (this._autodetect) {
+    if (this._autodetect !== undefined) {
       hasAnyValues = true;
       internalValueResult.autodetect = this._autodetect;
     }
-    if (this._createDisposition) {
+    if (this._createDisposition !== undefined) {
       hasAnyValues = true;
       internalValueResult.createDisposition = this._createDisposition;
     }
-    if (this._encoding) {
+    if (this._encoding !== undefined) {
       hasAnyValues = true;
       internalValueResult.encoding = this._encoding;
     }
-    if (this._fieldDelimiter) {
+    if (this._fieldDelimiter !== undefined) {
       hasAnyValues = true;
       internalValueResult.fieldDelimiter = this._fieldDelimiter;
     }
-    if (this._ignoreUnknownValues) {
+    if (this._ignoreUnknownValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.ignoreUnknownValues = this._ignoreUnknownValues;
     }
-    if (this._maxBadRecords) {
+    if (this._maxBadRecords !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxBadRecords = this._maxBadRecords;
     }
-    if (this._nullMarker) {
+    if (this._nullMarker !== undefined) {
       hasAnyValues = true;
       internalValueResult.nullMarker = this._nullMarker;
     }
-    if (this._projectionFields) {
+    if (this._projectionFields !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectionFields = this._projectionFields;
     }
-    if (this._quote) {
+    if (this._quote !== undefined) {
       hasAnyValues = true;
       internalValueResult.quote = this._quote;
     }
-    if (this._schemaUpdateOptions) {
+    if (this._schemaUpdateOptions !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaUpdateOptions = this._schemaUpdateOptions;
     }
-    if (this._skipLeadingRows) {
+    if (this._skipLeadingRows !== undefined) {
       hasAnyValues = true;
       internalValueResult.skipLeadingRows = this._skipLeadingRows;
     }
-    if (this._sourceFormat) {
+    if (this._sourceFormat !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceFormat = this._sourceFormat;
     }
-    if (this._sourceUris) {
+    if (this._sourceUris !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceUris = this._sourceUris;
     }
-    if (this._writeDisposition) {
+    if (this._writeDisposition !== undefined) {
       hasAnyValues = true;
       internalValueResult.writeDisposition = this._writeDisposition;
     }
-    if (this._destinationEncryptionConfiguration?.internalValue) {
+    if (this._destinationEncryptionConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationEncryptionConfiguration = this._destinationEncryptionConfiguration?.internalValue;
     }
-    if (this._destinationTable?.internalValue) {
+    if (this._destinationTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
-    if (this._timePartitioning?.internalValue) {
+    if (this._timePartitioning?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timePartitioning = this._timePartitioning?.internalValue;
     }
@@ -2039,11 +2039,11 @@ export class BigqueryJobQueryDefaultDatasetOutputReference extends cdktf.Complex
   public get internalValue(): BigqueryJobQueryDefaultDataset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
@@ -2127,7 +2127,7 @@ export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference e
   public get internalValue(): BigqueryJobQueryDestinationEncryptionConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -2207,15 +2207,15 @@ export class BigqueryJobQueryDestinationTableOutputReference extends cdktf.Compl
   public get internalValue(): BigqueryJobQueryDestinationTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -2331,15 +2331,15 @@ export class BigqueryJobQueryScriptOptionsOutputReference extends cdktf.ComplexO
   public get internalValue(): BigqueryJobQueryScriptOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyResultStatement) {
+    if (this._keyResultStatement !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyResultStatement = this._keyResultStatement;
     }
-    if (this._statementByteBudget) {
+    if (this._statementByteBudget !== undefined) {
       hasAnyValues = true;
       internalValueResult.statementByteBudget = this._statementByteBudget;
     }
-    if (this._statementTimeoutMs) {
+    if (this._statementTimeoutMs !== undefined) {
       hasAnyValues = true;
       internalValueResult.statementTimeoutMs = this._statementTimeoutMs;
     }
@@ -2606,71 +2606,71 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigqueryJobQuery | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowLargeResults) {
+    if (this._allowLargeResults !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowLargeResults = this._allowLargeResults;
     }
-    if (this._createDisposition) {
+    if (this._createDisposition !== undefined) {
       hasAnyValues = true;
       internalValueResult.createDisposition = this._createDisposition;
     }
-    if (this._flattenResults) {
+    if (this._flattenResults !== undefined) {
       hasAnyValues = true;
       internalValueResult.flattenResults = this._flattenResults;
     }
-    if (this._maximumBillingTier) {
+    if (this._maximumBillingTier !== undefined) {
       hasAnyValues = true;
       internalValueResult.maximumBillingTier = this._maximumBillingTier;
     }
-    if (this._maximumBytesBilled) {
+    if (this._maximumBytesBilled !== undefined) {
       hasAnyValues = true;
       internalValueResult.maximumBytesBilled = this._maximumBytesBilled;
     }
-    if (this._parameterMode) {
+    if (this._parameterMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameterMode = this._parameterMode;
     }
-    if (this._priority) {
+    if (this._priority !== undefined) {
       hasAnyValues = true;
       internalValueResult.priority = this._priority;
     }
-    if (this._query) {
+    if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._schemaUpdateOptions) {
+    if (this._schemaUpdateOptions !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaUpdateOptions = this._schemaUpdateOptions;
     }
-    if (this._useLegacySql) {
+    if (this._useLegacySql !== undefined) {
       hasAnyValues = true;
       internalValueResult.useLegacySql = this._useLegacySql;
     }
-    if (this._useQueryCache) {
+    if (this._useQueryCache !== undefined) {
       hasAnyValues = true;
       internalValueResult.useQueryCache = this._useQueryCache;
     }
-    if (this._writeDisposition) {
+    if (this._writeDisposition !== undefined) {
       hasAnyValues = true;
       internalValueResult.writeDisposition = this._writeDisposition;
     }
-    if (this._defaultDataset?.internalValue) {
+    if (this._defaultDataset?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultDataset = this._defaultDataset?.internalValue;
     }
-    if (this._destinationEncryptionConfiguration?.internalValue) {
+    if (this._destinationEncryptionConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationEncryptionConfiguration = this._destinationEncryptionConfiguration?.internalValue;
     }
-    if (this._destinationTable?.internalValue) {
+    if (this._destinationTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
-    if (this._scriptOptions?.internalValue) {
+    if (this._scriptOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptOptions = this._scriptOptions?.internalValue;
     }
-    if (this._userDefinedFunctionResources) {
+    if (this._userDefinedFunctionResources !== undefined) {
       hasAnyValues = true;
       internalValueResult.userDefinedFunctionResources = this._userDefinedFunctionResources;
     }
@@ -3027,11 +3027,11 @@ export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigqueryJobTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

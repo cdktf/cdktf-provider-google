@@ -89,7 +89,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputRef
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -155,7 +155,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference e
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionaryWordList | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._words) {
+    if (this._words !== undefined) {
       hasAnyValues = true;
       internalValueResult.words = this._words;
     }
@@ -227,11 +227,11 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionary | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudStoragePath?.internalValue) {
+    if (this._cloudStoragePath?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
     }
-    if (this._wordList?.internalValue) {
+    if (this._wordList?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.wordList = this._wordList?.internalValue;
     }
@@ -317,7 +317,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldF
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -396,15 +396,15 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldT
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -506,11 +506,11 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._field?.internalValue) {
+    if (this._field?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.field = this._field?.internalValue;
     }
-    if (this._table?.internalValue) {
+    if (this._table?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.table = this._table?.internalValue;
     }
@@ -590,7 +590,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFi
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
@@ -655,7 +655,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutp
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -734,15 +734,15 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionary | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bigQueryField?.internalValue) {
+    if (this._bigQueryField?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.bigQueryField = this._bigQueryField?.internalValue;
     }
-    if (this._cloudStorageFileSet?.internalValue) {
+    if (this._cloudStorageFileSet?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudStorageFileSet = this._cloudStorageFileSet?.internalValue;
     }
-    if (this._outputPath?.internalValue) {
+    if (this._outputPath?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.outputPath = this._outputPath?.internalValue;
     }
@@ -851,11 +851,11 @@ export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.
   public get internalValue(): DataLossPreventionStoredInfoTypeRegex | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._groupIndexes) {
+    if (this._groupIndexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupIndexes = this._groupIndexes;
     }
-    if (this._pattern) {
+    if (this._pattern !== undefined) {
       hasAnyValues = true;
       internalValueResult.pattern = this._pattern;
     }
@@ -947,15 +947,15 @@ export class DataLossPreventionStoredInfoTypeTimeoutsOutputReference extends cdk
   public get internalValue(): DataLossPreventionStoredInfoTypeTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

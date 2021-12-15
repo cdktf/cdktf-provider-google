@@ -93,7 +93,7 @@ export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.Co
   public get internalValue(): ComputeManagedSslCertificateManaged | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._domains) {
+    if (this._domains !== undefined) {
       hasAnyValues = true;
       internalValueResult.domains = this._domains;
     }
@@ -161,11 +161,11 @@ export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.C
   public get internalValue(): ComputeManagedSslCertificateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

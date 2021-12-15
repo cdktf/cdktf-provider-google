@@ -101,11 +101,11 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
   public get internalValue(): AppEngineDomainMappingSslSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._certificateId) {
+    if (this._certificateId !== undefined) {
       hasAnyValues = true;
       internalValueResult.certificateId = this._certificateId;
     }
-    if (this._sslManagementType) {
+    if (this._sslManagementType !== undefined) {
       hasAnyValues = true;
       internalValueResult.sslManagementType = this._sslManagementType;
     }
@@ -196,15 +196,15 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): AppEngineDomainMappingTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

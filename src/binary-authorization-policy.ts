@@ -174,15 +174,15 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   public get internalValue(): BinaryAuthorizationPolicyDefaultAdmissionRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enforcementMode) {
+    if (this._enforcementMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.enforcementMode = this._enforcementMode;
     }
-    if (this._evaluationMode) {
+    if (this._evaluationMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.evaluationMode = this._evaluationMode;
     }
-    if (this._requireAttestationsBy) {
+    if (this._requireAttestationsBy !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireAttestationsBy = this._requireAttestationsBy;
     }
@@ -288,15 +288,15 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
   public get internalValue(): BinaryAuthorizationPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -118,15 +118,15 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): KmsCryptoKeyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -238,11 +238,11 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
   public get internalValue(): KmsCryptoKeyVersionTemplate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._algorithm) {
+    if (this._algorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.algorithm = this._algorithm;
     }
-    if (this._protectionLevel) {
+    if (this._protectionLevel !== undefined) {
       hasAnyValues = true;
       internalValueResult.protectionLevel = this._protectionLevel;
     }

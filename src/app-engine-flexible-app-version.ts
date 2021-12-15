@@ -244,23 +244,23 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   public get internalValue(): AppEngineFlexibleAppVersionApiConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._authFailAction) {
+    if (this._authFailAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.authFailAction = this._authFailAction;
     }
-    if (this._login) {
+    if (this._login !== undefined) {
       hasAnyValues = true;
       internalValueResult.login = this._login;
     }
-    if (this._script) {
+    if (this._script !== undefined) {
       hasAnyValues = true;
       internalValueResult.script = this._script;
     }
-    if (this._securityLevel) {
+    if (this._securityLevel !== undefined) {
       hasAnyValues = true;
       internalValueResult.securityLevel = this._securityLevel;
     }
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
@@ -404,11 +404,11 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aggregationWindowLength) {
+    if (this._aggregationWindowLength !== undefined) {
       hasAnyValues = true;
       internalValueResult.aggregationWindowLength = this._aggregationWindowLength;
     }
-    if (this._targetUtilization) {
+    if (this._targetUtilization !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetUtilization = this._targetUtilization;
     }
@@ -512,19 +512,19 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetReadBytesPerSecond) {
+    if (this._targetReadBytesPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetReadBytesPerSecond = this._targetReadBytesPerSecond;
     }
-    if (this._targetReadOpsPerSecond) {
+    if (this._targetReadOpsPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetReadOpsPerSecond = this._targetReadOpsPerSecond;
     }
-    if (this._targetWriteBytesPerSecond) {
+    if (this._targetWriteBytesPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetWriteBytesPerSecond = this._targetWriteBytesPerSecond;
     }
-    if (this._targetWriteOpsPerSecond) {
+    if (this._targetWriteOpsPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetWriteOpsPerSecond = this._targetWriteOpsPerSecond;
     }
@@ -667,19 +667,19 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetReceivedBytesPerSecond) {
+    if (this._targetReceivedBytesPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetReceivedBytesPerSecond = this._targetReceivedBytesPerSecond;
     }
-    if (this._targetReceivedPacketsPerSecond) {
+    if (this._targetReceivedPacketsPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetReceivedPacketsPerSecond = this._targetReceivedPacketsPerSecond;
     }
-    if (this._targetSentBytesPerSecond) {
+    if (this._targetSentBytesPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetSentBytesPerSecond = this._targetSentBytesPerSecond;
     }
-    if (this._targetSentPacketsPerSecond) {
+    if (this._targetSentPacketsPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetSentPacketsPerSecond = this._targetSentPacketsPerSecond;
     }
@@ -808,11 +808,11 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetConcurrentRequests) {
+    if (this._targetConcurrentRequests !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetConcurrentRequests = this._targetConcurrentRequests;
     }
-    if (this._targetRequestCountPerSecond) {
+    if (this._targetRequestCountPerSecond !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetRequestCountPerSecond = this._targetRequestCountPerSecond;
     }
@@ -979,51 +979,51 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._coolDownPeriod) {
+    if (this._coolDownPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.coolDownPeriod = this._coolDownPeriod;
     }
-    if (this._maxConcurrentRequests) {
+    if (this._maxConcurrentRequests !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxConcurrentRequests = this._maxConcurrentRequests;
     }
-    if (this._maxIdleInstances) {
+    if (this._maxIdleInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxIdleInstances = this._maxIdleInstances;
     }
-    if (this._maxPendingLatency) {
+    if (this._maxPendingLatency !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxPendingLatency = this._maxPendingLatency;
     }
-    if (this._maxTotalInstances) {
+    if (this._maxTotalInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTotalInstances = this._maxTotalInstances;
     }
-    if (this._minIdleInstances) {
+    if (this._minIdleInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.minIdleInstances = this._minIdleInstances;
     }
-    if (this._minPendingLatency) {
+    if (this._minPendingLatency !== undefined) {
       hasAnyValues = true;
       internalValueResult.minPendingLatency = this._minPendingLatency;
     }
-    if (this._minTotalInstances) {
+    if (this._minTotalInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.minTotalInstances = this._minTotalInstances;
     }
-    if (this._cpuUtilization?.internalValue) {
+    if (this._cpuUtilization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpuUtilization = this._cpuUtilization?.internalValue;
     }
-    if (this._diskUtilization?.internalValue) {
+    if (this._diskUtilization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskUtilization = this._diskUtilization?.internalValue;
     }
-    if (this._networkUtilization?.internalValue) {
+    if (this._networkUtilization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkUtilization = this._networkUtilization?.internalValue;
     }
-    if (this._requestUtilization?.internalValue) {
+    if (this._requestUtilization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestUtilization = this._requestUtilization?.internalValue;
     }
@@ -1295,11 +1295,11 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._appYamlPath) {
+    if (this._appYamlPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.appYamlPath = this._appYamlPath;
     }
-    if (this._cloudBuildTimeout) {
+    if (this._cloudBuildTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudBuildTimeout = this._cloudBuildTimeout;
     }
@@ -1383,7 +1383,7 @@ export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference exten
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentContainer | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._image) {
+    if (this._image !== undefined) {
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
@@ -1486,11 +1486,11 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentZip | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._filesCount) {
+    if (this._filesCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.filesCount = this._filesCount;
     }
-    if (this._sourceUrl) {
+    if (this._sourceUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceUrl = this._sourceUrl;
     }
@@ -1594,19 +1594,19 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   public get internalValue(): AppEngineFlexibleAppVersionDeployment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudBuildOptions?.internalValue) {
+    if (this._cloudBuildOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudBuildOptions = this._cloudBuildOptions?.internalValue;
     }
-    if (this._container?.internalValue) {
+    if (this._container?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.container = this._container?.internalValue;
     }
-    if (this._files) {
+    if (this._files !== undefined) {
       hasAnyValues = true;
       internalValueResult.files = this._files;
     }
-    if (this._zip?.internalValue) {
+    if (this._zip?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.zip = this._zip?.internalValue;
     }
@@ -1758,19 +1758,19 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   public get internalValue(): AppEngineFlexibleAppVersionEndpointsApiService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._configId) {
+    if (this._configId !== undefined) {
       hasAnyValues = true;
       internalValueResult.configId = this._configId;
     }
-    if (this._disableTraceSampling) {
+    if (this._disableTraceSampling !== undefined) {
       hasAnyValues = true;
       internalValueResult.disableTraceSampling = this._disableTraceSampling;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._rolloutStrategy) {
+    if (this._rolloutStrategy !== undefined) {
       hasAnyValues = true;
       internalValueResult.rolloutStrategy = this._rolloutStrategy;
     }
@@ -1889,7 +1889,7 @@ export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.
   public get internalValue(): AppEngineFlexibleAppVersionEntrypoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._shell) {
+    if (this._shell !== undefined) {
       hasAnyValues = true;
       internalValueResult.shell = this._shell;
     }
@@ -1954,7 +1954,7 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
   public get internalValue(): AppEngineFlexibleAppVersionHandlersScript | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._scriptPath) {
+    if (this._scriptPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.scriptPath = this._scriptPath;
     }
@@ -2068,31 +2068,31 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   public get internalValue(): AppEngineFlexibleAppVersionHandlersStaticFiles | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._applicationReadable) {
+    if (this._applicationReadable !== undefined) {
       hasAnyValues = true;
       internalValueResult.applicationReadable = this._applicationReadable;
     }
-    if (this._expiration) {
+    if (this._expiration !== undefined) {
       hasAnyValues = true;
       internalValueResult.expiration = this._expiration;
     }
-    if (this._httpHeaders) {
+    if (this._httpHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpHeaders = this._httpHeaders;
     }
-    if (this._mimeType) {
+    if (this._mimeType !== undefined) {
       hasAnyValues = true;
       internalValueResult.mimeType = this._mimeType;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._requireMatchingFile) {
+    if (this._requireMatchingFile !== undefined) {
       hasAnyValues = true;
       internalValueResult.requireMatchingFile = this._requireMatchingFile;
     }
-    if (this._uploadPathRegex) {
+    if (this._uploadPathRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.uploadPathRegex = this._uploadPathRegex;
     }
@@ -2373,31 +2373,31 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   public get internalValue(): AppEngineFlexibleAppVersionLivenessCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._checkInterval) {
+    if (this._checkInterval !== undefined) {
       hasAnyValues = true;
       internalValueResult.checkInterval = this._checkInterval;
     }
-    if (this._failureThreshold) {
+    if (this._failureThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.failureThreshold = this._failureThreshold;
     }
-    if (this._host) {
+    if (this._host !== undefined) {
       hasAnyValues = true;
       internalValueResult.host = this._host;
     }
-    if (this._initialDelay) {
+    if (this._initialDelay !== undefined) {
       hasAnyValues = true;
       internalValueResult.initialDelay = this._initialDelay;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._successThreshold) {
+    if (this._successThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.successThreshold = this._successThreshold;
     }
-    if (this._timeout) {
+    if (this._timeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout;
     }
@@ -2573,7 +2573,7 @@ export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdk
   public get internalValue(): AppEngineFlexibleAppVersionManualScaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instances) {
+    if (this._instances !== undefined) {
       hasAnyValues = true;
       internalValueResult.instances = this._instances;
     }
@@ -2671,23 +2671,23 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   public get internalValue(): AppEngineFlexibleAppVersionNetwork | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._forwardedPorts) {
+    if (this._forwardedPorts !== undefined) {
       hasAnyValues = true;
       internalValueResult.forwardedPorts = this._forwardedPorts;
     }
-    if (this._instanceTag) {
+    if (this._instanceTag !== undefined) {
       hasAnyValues = true;
       internalValueResult.instanceTag = this._instanceTag;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._sessionAffinity) {
+    if (this._sessionAffinity !== undefined) {
       hasAnyValues = true;
       internalValueResult.sessionAffinity = this._sessionAffinity;
     }
-    if (this._subnetwork) {
+    if (this._subnetwork !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetwork = this._subnetwork;
     }
@@ -2867,31 +2867,31 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   public get internalValue(): AppEngineFlexibleAppVersionReadinessCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._appStartTimeout) {
+    if (this._appStartTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.appStartTimeout = this._appStartTimeout;
     }
-    if (this._checkInterval) {
+    if (this._checkInterval !== undefined) {
       hasAnyValues = true;
       internalValueResult.checkInterval = this._checkInterval;
     }
-    if (this._failureThreshold) {
+    if (this._failureThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.failureThreshold = this._failureThreshold;
     }
-    if (this._host) {
+    if (this._host !== undefined) {
       hasAnyValues = true;
       internalValueResult.host = this._host;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._successThreshold) {
+    if (this._successThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.successThreshold = this._successThreshold;
     }
-    if (this._timeout) {
+    if (this._timeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout;
     }
@@ -3118,19 +3118,19 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   public get internalValue(): AppEngineFlexibleAppVersionResources | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cpu) {
+    if (this._cpu !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpu = this._cpu;
     }
-    if (this._diskGb) {
+    if (this._diskGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskGb = this._diskGb;
     }
-    if (this._memoryGb) {
+    if (this._memoryGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.memoryGb = this._memoryGb;
     }
-    if (this._volumes) {
+    if (this._volumes !== undefined) {
       hasAnyValues = true;
       internalValueResult.volumes = this._volumes;
     }
@@ -3261,15 +3261,15 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): AppEngineFlexibleAppVersionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -3373,7 +3373,7 @@ export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extend
   public get internalValue(): AppEngineFlexibleAppVersionVpcAccessConnector | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }

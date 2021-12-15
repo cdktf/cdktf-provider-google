@@ -77,11 +77,11 @@ export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.Comp
   public get internalValue(): AppEngineServiceSplitTrafficSplit | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allocations) {
+    if (this._allocations !== undefined) {
       hasAnyValues = true;
       internalValueResult.allocations = this._allocations;
     }
-    if (this._shardBy) {
+    if (this._shardBy !== undefined) {
       hasAnyValues = true;
       internalValueResult.shardBy = this._shardBy;
     }
@@ -173,15 +173,15 @@ export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.C
   public get internalValue(): AppEngineServiceSplitTrafficTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

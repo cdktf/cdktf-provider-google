@@ -99,11 +99,11 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowConfigBasedIssuance) {
+    if (this._allowConfigBasedIssuance !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowConfigBasedIssuance = this._allowConfigBasedIssuance;
     }
-    if (this._allowCsrBasedIssuance) {
+    if (this._allowCsrBasedIssuance !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCsrBasedIssuance = this._allowCsrBasedIssuance;
     }
@@ -183,7 +183,7 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputRefe
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._signatureAlgorithm) {
+    if (this._signatureAlgorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.signatureAlgorithm = this._signatureAlgorithm;
     }
@@ -257,11 +257,11 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxModulusSize) {
+    if (this._maxModulusSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxModulusSize = this._maxModulusSize;
     }
-    if (this._minModulusSize) {
+    if (this._minModulusSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.minModulusSize = this._minModulusSize;
     }
@@ -373,7 +373,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObje
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._objectIdPath) {
+    if (this._objectIdPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.objectIdPath = this._objectIdPath;
     }
@@ -483,11 +483,11 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._isCa) {
+    if (this._isCa !== undefined) {
       hasAnyValues = true;
       internalValueResult.isCa = this._isCa;
     }
-    if (this._maxIssuerPathLength) {
+    if (this._maxIssuerPathLength !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxIssuerPathLength = this._maxIssuerPathLength;
     }
@@ -629,39 +629,39 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._certSign) {
+    if (this._certSign !== undefined) {
       hasAnyValues = true;
       internalValueResult.certSign = this._certSign;
     }
-    if (this._contentCommitment) {
+    if (this._contentCommitment !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentCommitment = this._contentCommitment;
     }
-    if (this._crlSign) {
+    if (this._crlSign !== undefined) {
       hasAnyValues = true;
       internalValueResult.crlSign = this._crlSign;
     }
-    if (this._dataEncipherment) {
+    if (this._dataEncipherment !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataEncipherment = this._dataEncipherment;
     }
-    if (this._decipherOnly) {
+    if (this._decipherOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.decipherOnly = this._decipherOnly;
     }
-    if (this._digitalSignature) {
+    if (this._digitalSignature !== undefined) {
       hasAnyValues = true;
       internalValueResult.digitalSignature = this._digitalSignature;
     }
-    if (this._encipherOnly) {
+    if (this._encipherOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.encipherOnly = this._encipherOnly;
     }
-    if (this._keyAgreement) {
+    if (this._keyAgreement !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyAgreement = this._keyAgreement;
     }
-    if (this._keyEncipherment) {
+    if (this._keyEncipherment !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyEncipherment = this._keyEncipherment;
     }
@@ -908,27 +908,27 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientAuth) {
+    if (this._clientAuth !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientAuth = this._clientAuth;
     }
-    if (this._codeSigning) {
+    if (this._codeSigning !== undefined) {
       hasAnyValues = true;
       internalValueResult.codeSigning = this._codeSigning;
     }
-    if (this._emailProtection) {
+    if (this._emailProtection !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailProtection = this._emailProtection;
     }
-    if (this._ocspSigning) {
+    if (this._ocspSigning !== undefined) {
       hasAnyValues = true;
       internalValueResult.ocspSigning = this._ocspSigning;
     }
-    if (this._serverAuth) {
+    if (this._serverAuth !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverAuth = this._serverAuth;
     }
-    if (this._timeStamping) {
+    if (this._timeStamping !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeStamping = this._timeStamping;
     }
@@ -1119,15 +1119,15 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseKeyUsage?.internalValue) {
+    if (this._baseKeyUsage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.baseKeyUsage = this._baseKeyUsage?.internalValue;
     }
-    if (this._extendedKeyUsage?.internalValue) {
+    if (this._extendedKeyUsage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.extendedKeyUsage = this._extendedKeyUsage?.internalValue;
     }
-    if (this._unknownExtendedKeyUsages) {
+    if (this._unknownExtendedKeyUsages !== undefined) {
       hasAnyValues = true;
       internalValueResult.unknownExtendedKeyUsages = this._unknownExtendedKeyUsages;
     }
@@ -1274,23 +1274,23 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValues | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aiaOcspServers) {
+    if (this._aiaOcspServers !== undefined) {
       hasAnyValues = true;
       internalValueResult.aiaOcspServers = this._aiaOcspServers;
     }
-    if (this._additionalExtensions) {
+    if (this._additionalExtensions !== undefined) {
       hasAnyValues = true;
       internalValueResult.additionalExtensions = this._additionalExtensions;
     }
-    if (this._caOptions?.internalValue) {
+    if (this._caOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.caOptions = this._caOptions?.internalValue;
     }
-    if (this._keyUsage?.internalValue) {
+    if (this._keyUsage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyUsage = this._keyUsage?.internalValue;
     }
-    if (this._policyIds) {
+    if (this._policyIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyIds = this._policyIds;
     }
@@ -1447,19 +1447,19 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._description) {
+    if (this._description !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description;
     }
-    if (this._expression) {
+    if (this._expression !== undefined) {
       hasAnyValues = true;
       internalValueResult.expression = this._expression;
     }
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._title) {
+    if (this._title !== undefined) {
       hasAnyValues = true;
       internalValueResult.title = this._title;
     }
@@ -1594,15 +1594,15 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
   public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowSubjectAltNamesPassthrough) {
+    if (this._allowSubjectAltNamesPassthrough !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowSubjectAltNamesPassthrough = this._allowSubjectAltNamesPassthrough;
     }
-    if (this._allowSubjectPassthrough) {
+    if (this._allowSubjectPassthrough !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowSubjectPassthrough = this._allowSubjectPassthrough;
     }
-    if (this._celExpression?.internalValue) {
+    if (this._celExpression?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.celExpression = this._celExpression?.internalValue;
     }
@@ -1729,23 +1729,23 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   public get internalValue(): PrivatecaCaPoolIssuancePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maximumLifetime) {
+    if (this._maximumLifetime !== undefined) {
       hasAnyValues = true;
       internalValueResult.maximumLifetime = this._maximumLifetime;
     }
-    if (this._allowedIssuanceModes?.internalValue) {
+    if (this._allowedIssuanceModes?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedIssuanceModes = this._allowedIssuanceModes?.internalValue;
     }
-    if (this._allowedKeyTypes) {
+    if (this._allowedKeyTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedKeyTypes = this._allowedKeyTypes;
     }
-    if (this._baselineValues?.internalValue) {
+    if (this._baselineValues?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.baselineValues = this._baselineValues?.internalValue;
     }
-    if (this._identityConstraints?.internalValue) {
+    if (this._identityConstraints?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityConstraints = this._identityConstraints?.internalValue;
     }
@@ -1898,11 +1898,11 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
   public get internalValue(): PrivatecaCaPoolPublishingOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publishCaCert) {
+    if (this._publishCaCert !== undefined) {
       hasAnyValues = true;
       internalValueResult.publishCaCert = this._publishCaCert;
     }
-    if (this._publishCrl) {
+    if (this._publishCrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.publishCrl = this._publishCrl;
     }
@@ -1990,15 +1990,15 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): PrivatecaCaPoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

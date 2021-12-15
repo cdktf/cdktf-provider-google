@@ -166,15 +166,15 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
   public get internalValue(): BigqueryDatasetAccessView | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -343,7 +343,7 @@ export class BigqueryDatasetDefaultEncryptionConfigurationOutputReference extend
   public get internalValue(): BigqueryDatasetDefaultEncryptionConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -416,15 +416,15 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): BigqueryDatasetTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

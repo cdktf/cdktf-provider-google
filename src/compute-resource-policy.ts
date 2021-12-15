@@ -112,15 +112,15 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
   public get internalValue(): ComputeResourcePolicyGroupPlacementPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._availabilityDomainCount) {
+    if (this._availabilityDomainCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.availabilityDomainCount = this._availabilityDomainCount;
     }
-    if (this._collocation) {
+    if (this._collocation !== undefined) {
       hasAnyValues = true;
       internalValueResult.collocation = this._collocation;
     }
-    if (this._vmCount) {
+    if (this._vmCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmCount = this._vmCount;
     }
@@ -224,7 +224,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputRef
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._schedule) {
+    if (this._schedule !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule;
     }
@@ -289,7 +289,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputRefe
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._schedule) {
+    if (this._schedule !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule;
     }
@@ -383,23 +383,23 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expirationTime) {
+    if (this._expirationTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.expirationTime = this._expirationTime;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._timeZone) {
+    if (this._timeZone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeZone = this._timeZone;
     }
-    if (this._vmStartSchedule?.internalValue) {
+    if (this._vmStartSchedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmStartSchedule = this._vmStartSchedule?.internalValue;
     }
-    if (this._vmStopSchedule?.internalValue) {
+    if (this._vmStopSchedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmStopSchedule = this._vmStopSchedule?.internalValue;
     }
@@ -544,11 +544,11 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxRetentionDays) {
+    if (this._maxRetentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRetentionDays = this._maxRetentionDays;
     }
-    if (this._onSourceDiskDelete) {
+    if (this._onSourceDiskDelete !== undefined) {
       hasAnyValues = true;
       internalValueResult.onSourceDiskDelete = this._onSourceDiskDelete;
     }
@@ -640,11 +640,11 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._daysInCycle) {
+    if (this._daysInCycle !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysInCycle = this._daysInCycle;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
@@ -734,11 +734,11 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hoursInCycle) {
+    if (this._hoursInCycle !== undefined) {
       hasAnyValues = true;
       internalValueResult.hoursInCycle = this._hoursInCycle;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
@@ -845,7 +845,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOu
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dayOfWeeks) {
+    if (this._dayOfWeeks !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeeks = this._dayOfWeeks;
     }
@@ -925,15 +925,15 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dailySchedule?.internalValue) {
+    if (this._dailySchedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dailySchedule = this._dailySchedule?.internalValue;
     }
-    if (this._hourlySchedule?.internalValue) {
+    if (this._hourlySchedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hourlySchedule = this._hourlySchedule?.internalValue;
     }
-    if (this._weeklySchedule?.internalValue) {
+    if (this._weeklySchedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.weeklySchedule = this._weeklySchedule?.internalValue;
     }
@@ -1052,15 +1052,15 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._guestFlush) {
+    if (this._guestFlush !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestFlush = this._guestFlush;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._storageLocations) {
+    if (this._storageLocations !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageLocations = this._storageLocations;
     }
@@ -1179,15 +1179,15 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._retentionPolicy?.internalValue) {
+    if (this._retentionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
     }
-    if (this._schedule?.internalValue) {
+    if (this._schedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule?.internalValue;
     }
-    if (this._snapshotProperties?.internalValue) {
+    if (this._snapshotProperties?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.snapshotProperties = this._snapshotProperties?.internalValue;
     }
@@ -1291,11 +1291,11 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): ComputeResourcePolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

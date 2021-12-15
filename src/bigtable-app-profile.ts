@@ -98,11 +98,11 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
   public get internalValue(): BigtableAppProfileSingleClusterRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowTransactionalWrites) {
+    if (this._allowTransactionalWrites !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowTransactionalWrites = this._allowTransactionalWrites;
     }
-    if (this._clusterId) {
+    if (this._clusterId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterId = this._clusterId;
     }
@@ -193,15 +193,15 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): BigtableAppProfileTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

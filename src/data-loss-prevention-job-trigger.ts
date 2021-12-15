@@ -100,15 +100,15 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -220,11 +220,11 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._outputSchema) {
+    if (this._outputSchema !== undefined) {
       hasAnyValues = true;
       internalValueResult.outputSchema = this._outputSchema;
     }
-    if (this._table?.internalValue) {
+    if (this._table?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.table = this._table?.internalValue;
     }
@@ -307,7 +307,7 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputRefe
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._outputConfig?.internalValue) {
+    if (this._outputConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.outputConfig = this._outputConfig?.internalValue;
     }
@@ -405,15 +405,15 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsT
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._datasetId) {
+    if (this._datasetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.datasetId = this._datasetId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._tableId) {
+    if (this._tableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableId = this._tableId;
     }
@@ -508,7 +508,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsO
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._tableReference?.internalValue) {
+    if (this._tableReference?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableReference = this._tableReference?.internalValue;
     }
@@ -591,15 +591,15 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucketName) {
+    if (this._bucketName !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucketName = this._bucketName;
     }
-    if (this._excludeRegex) {
+    if (this._excludeRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludeRegex = this._excludeRegex;
     }
-    if (this._includeRegex) {
+    if (this._includeRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeRegex = this._includeRegex;
     }
@@ -712,11 +712,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
-    if (this._regexFileSet?.internalValue) {
+    if (this._regexFileSet?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.regexFileSet = this._regexFileSet?.internalValue;
     }
@@ -843,27 +843,27 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bytesLimitPerFile) {
+    if (this._bytesLimitPerFile !== undefined) {
       hasAnyValues = true;
       internalValueResult.bytesLimitPerFile = this._bytesLimitPerFile;
     }
-    if (this._bytesLimitPerFilePercent) {
+    if (this._bytesLimitPerFilePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.bytesLimitPerFilePercent = this._bytesLimitPerFilePercent;
     }
-    if (this._fileTypes) {
+    if (this._fileTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileTypes = this._fileTypes;
     }
-    if (this._filesLimitPercent) {
+    if (this._filesLimitPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.filesLimitPercent = this._filesLimitPercent;
     }
-    if (this._sampleMethod) {
+    if (this._sampleMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.sampleMethod = this._sampleMethod;
     }
-    if (this._fileSet?.internalValue) {
+    if (this._fileSet?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileSet = this._fileSet?.internalValue;
     }
@@ -1018,7 +1018,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -1090,11 +1090,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._namespaceId) {
+    if (this._namespaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.namespaceId = this._namespaceId;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
@@ -1184,11 +1184,11 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kind?.internalValue) {
+    if (this._kind?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.kind = this._kind?.internalValue;
     }
-    if (this._partitionId?.internalValue) {
+    if (this._partitionId?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.partitionId = this._partitionId?.internalValue;
     }
@@ -1275,7 +1275,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTi
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -1363,19 +1363,19 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOu
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableAutoPopulationOfTimespanConfig) {
+    if (this._enableAutoPopulationOfTimespanConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableAutoPopulationOfTimespanConfig = this._enableAutoPopulationOfTimespanConfig;
     }
-    if (this._endTime) {
+    if (this._endTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.endTime = this._endTime;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._timestampField?.internalValue) {
+    if (this._timestampField?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timestampField = this._timestampField?.internalValue;
     }
@@ -1515,19 +1515,19 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bigQueryOptions?.internalValue) {
+    if (this._bigQueryOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.bigQueryOptions = this._bigQueryOptions?.internalValue;
     }
-    if (this._cloudStorageOptions?.internalValue) {
+    if (this._cloudStorageOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudStorageOptions = this._cloudStorageOptions?.internalValue;
     }
-    if (this._datastoreOptions?.internalValue) {
+    if (this._datastoreOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.datastoreOptions = this._datastoreOptions?.internalValue;
     }
-    if (this._timespanConfig?.internalValue) {
+    if (this._timespanConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timespanConfig = this._timespanConfig?.internalValue;
     }
@@ -1663,15 +1663,15 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
   public get internalValue(): DataLossPreventionJobTriggerInspectJob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._inspectTemplateName) {
+    if (this._inspectTemplateName !== undefined) {
       hasAnyValues = true;
       internalValueResult.inspectTemplateName = this._inspectTemplateName;
     }
-    if (this._actions) {
+    if (this._actions !== undefined) {
       hasAnyValues = true;
       internalValueResult.actions = this._actions;
     }
-    if (this._storageConfig?.internalValue) {
+    if (this._storageConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageConfig = this._storageConfig?.internalValue;
     }
@@ -1775,15 +1775,15 @@ export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.C
   public get internalValue(): DataLossPreventionJobTriggerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1893,7 +1893,7 @@ export class DataLossPreventionJobTriggerTriggersScheduleOutputReference extends
   public get internalValue(): DataLossPreventionJobTriggerTriggersSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._recurrencePeriodDuration) {
+    if (this._recurrencePeriodDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrencePeriodDuration = this._recurrencePeriodDuration;
     }

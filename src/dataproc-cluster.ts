@@ -84,7 +84,7 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
   public get internalValue(): DataprocClusterClusterConfigAutoscalingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._policyUri) {
+    if (this._policyUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyUri = this._policyUri;
     }
@@ -149,7 +149,7 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
   public get internalValue(): DataprocClusterClusterConfigEncryptionConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -228,15 +228,15 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   public get internalValue(): DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableIntegrityMonitoring) {
+    if (this._enableIntegrityMonitoring !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
     }
-    if (this._enableSecureBoot) {
+    if (this._enableSecureBoot !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableSecureBoot = this._enableSecureBoot;
     }
-    if (this._enableVtpm) {
+    if (this._enableVtpm !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableVtpm = this._enableVtpm;
     }
@@ -396,39 +396,39 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   public get internalValue(): DataprocClusterClusterConfigGceClusterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._internalIpOnly) {
+    if (this._internalIpOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.internalIpOnly = this._internalIpOnly;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._network) {
+    if (this._network !== undefined) {
       hasAnyValues = true;
       internalValueResult.network = this._network;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
-    if (this._serviceAccountScopes) {
+    if (this._serviceAccountScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountScopes = this._serviceAccountScopes;
     }
-    if (this._subnetwork) {
+    if (this._subnetwork !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetwork = this._subnetwork;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._zone) {
+    if (this._zone !== undefined) {
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
-    if (this._shieldedInstanceConfig?.internalValue) {
+    if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
@@ -707,15 +707,15 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   public get internalValue(): DataprocClusterClusterConfigMasterConfigDiskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bootDiskSizeGb) {
+    if (this._bootDiskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
     }
-    if (this._bootDiskType) {
+    if (this._bootDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskType = this._bootDiskType;
     }
-    if (this._numLocalSsds) {
+    if (this._numLocalSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.numLocalSsds = this._numLocalSsds;
     }
@@ -854,27 +854,27 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   public get internalValue(): DataprocClusterClusterConfigMasterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._imageUri) {
+    if (this._imageUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageUri = this._imageUri;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._numInstances) {
+    if (this._numInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._accelerators) {
+    if (this._accelerators !== undefined) {
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig?.internalValue) {
+    if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -1047,15 +1047,15 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bootDiskSizeGb) {
+    if (this._bootDiskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
     }
-    if (this._bootDiskType) {
+    if (this._bootDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskType = this._bootDiskType;
     }
-    if (this._numLocalSsds) {
+    if (this._numLocalSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.numLocalSsds = this._numLocalSsds;
     }
@@ -1166,11 +1166,11 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numInstances) {
+    if (this._numInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._diskConfig?.internalValue) {
+    if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -1357,63 +1357,63 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   public get internalValue(): DataprocClusterClusterConfigSecurityConfigKerberosConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._crossRealmTrustAdminServer) {
+    if (this._crossRealmTrustAdminServer !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustAdminServer = this._crossRealmTrustAdminServer;
     }
-    if (this._crossRealmTrustKdc) {
+    if (this._crossRealmTrustKdc !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustKdc = this._crossRealmTrustKdc;
     }
-    if (this._crossRealmTrustRealm) {
+    if (this._crossRealmTrustRealm !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustRealm = this._crossRealmTrustRealm;
     }
-    if (this._crossRealmTrustSharedPasswordUri) {
+    if (this._crossRealmTrustSharedPasswordUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossRealmTrustSharedPasswordUri = this._crossRealmTrustSharedPasswordUri;
     }
-    if (this._enableKerberos) {
+    if (this._enableKerberos !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableKerberos = this._enableKerberos;
     }
-    if (this._kdcDbKeyUri) {
+    if (this._kdcDbKeyUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.kdcDbKeyUri = this._kdcDbKeyUri;
     }
-    if (this._keyPasswordUri) {
+    if (this._keyPasswordUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyPasswordUri = this._keyPasswordUri;
     }
-    if (this._keystorePasswordUri) {
+    if (this._keystorePasswordUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.keystorePasswordUri = this._keystorePasswordUri;
     }
-    if (this._keystoreUri) {
+    if (this._keystoreUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.keystoreUri = this._keystoreUri;
     }
-    if (this._kmsKeyUri) {
+    if (this._kmsKeyUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyUri = this._kmsKeyUri;
     }
-    if (this._realm) {
+    if (this._realm !== undefined) {
       hasAnyValues = true;
       internalValueResult.realm = this._realm;
     }
-    if (this._rootPrincipalPasswordUri) {
+    if (this._rootPrincipalPasswordUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootPrincipalPasswordUri = this._rootPrincipalPasswordUri;
     }
-    if (this._tgtLifetimeHours) {
+    if (this._tgtLifetimeHours !== undefined) {
       hasAnyValues = true;
       internalValueResult.tgtLifetimeHours = this._tgtLifetimeHours;
     }
-    if (this._truststorePasswordUri) {
+    if (this._truststorePasswordUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.truststorePasswordUri = this._truststorePasswordUri;
     }
-    if (this._truststoreUri) {
+    if (this._truststoreUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.truststoreUri = this._truststoreUri;
     }
@@ -1727,7 +1727,7 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
   public get internalValue(): DataprocClusterClusterConfigSecurityConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kerberosConfig?.internalValue) {
+    if (this._kerberosConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.kerberosConfig = this._kerberosConfig?.internalValue;
     }
@@ -1806,15 +1806,15 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   public get internalValue(): DataprocClusterClusterConfigSoftwareConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._imageVersion) {
+    if (this._imageVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageVersion = this._imageVersion;
     }
-    if (this._optionalComponents) {
+    if (this._optionalComponents !== undefined) {
       hasAnyValues = true;
       internalValueResult.optionalComponents = this._optionalComponents;
     }
-    if (this._overrideProperties) {
+    if (this._overrideProperties !== undefined) {
       hasAnyValues = true;
       internalValueResult.overrideProperties = this._overrideProperties;
     }
@@ -1959,15 +1959,15 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   public get internalValue(): DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bootDiskSizeGb) {
+    if (this._bootDiskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskSizeGb = this._bootDiskSizeGb;
     }
-    if (this._bootDiskType) {
+    if (this._bootDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.bootDiskType = this._bootDiskType;
     }
-    if (this._numLocalSsds) {
+    if (this._numLocalSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.numLocalSsds = this._numLocalSsds;
     }
@@ -2106,27 +2106,27 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   public get internalValue(): DataprocClusterClusterConfigWorkerConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._imageUri) {
+    if (this._imageUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageUri = this._imageUri;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._numInstances) {
+    if (this._numInstances !== undefined) {
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
-    if (this._accelerators) {
+    if (this._accelerators !== undefined) {
       hasAnyValues = true;
       internalValueResult.accelerators = this._accelerators;
     }
-    if (this._diskConfig?.internalValue) {
+    if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
@@ -2355,47 +2355,47 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   public get internalValue(): DataprocClusterClusterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._stagingBucket) {
+    if (this._stagingBucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.stagingBucket = this._stagingBucket;
     }
-    if (this._tempBucket) {
+    if (this._tempBucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.tempBucket = this._tempBucket;
     }
-    if (this._autoscalingConfig?.internalValue) {
+    if (this._autoscalingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
     }
-    if (this._encryptionConfig?.internalValue) {
+    if (this._encryptionConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.encryptionConfig = this._encryptionConfig?.internalValue;
     }
-    if (this._gceClusterConfig?.internalValue) {
+    if (this._gceClusterConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gceClusterConfig = this._gceClusterConfig?.internalValue;
     }
-    if (this._initializationAction) {
+    if (this._initializationAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.initializationAction = this._initializationAction;
     }
-    if (this._masterConfig?.internalValue) {
+    if (this._masterConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterConfig = this._masterConfig?.internalValue;
     }
-    if (this._preemptibleWorkerConfig?.internalValue) {
+    if (this._preemptibleWorkerConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptibleWorkerConfig = this._preemptibleWorkerConfig?.internalValue;
     }
-    if (this._securityConfig?.internalValue) {
+    if (this._securityConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.securityConfig = this._securityConfig?.internalValue;
     }
-    if (this._softwareConfig?.internalValue) {
+    if (this._softwareConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
     }
-    if (this._workerConfig?.internalValue) {
+    if (this._workerConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workerConfig = this._workerConfig?.internalValue;
     }
@@ -2652,15 +2652,15 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): DataprocClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

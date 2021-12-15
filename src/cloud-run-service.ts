@@ -168,15 +168,15 @@ export class CloudRunServiceMetadataOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CloudRunServiceMetadata | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._annotations) {
+    if (this._annotations !== undefined) {
       hasAnyValues = true;
       internalValueResult.annotations = this._annotations;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._namespace) {
+    if (this._namespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.namespace = this._namespace;
     }
@@ -316,19 +316,19 @@ export class CloudRunServiceTemplateMetadataOutputReference extends cdktf.Comple
   public get internalValue(): CloudRunServiceTemplateMetadata | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._annotations) {
+    if (this._annotations !== undefined) {
       hasAnyValues = true;
       internalValueResult.annotations = this._annotations;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._namespace) {
+    if (this._namespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.namespace = this._namespace;
     }
@@ -487,7 +487,7 @@ export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObject
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -559,11 +559,11 @@ export class CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputRefer
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._optional) {
+    if (this._optional !== undefined) {
       hasAnyValues = true;
       internalValueResult.optional = this._optional;
     }
-    if (this._localObjectReference?.internalValue) {
+    if (this._localObjectReference?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.localObjectReference = this._localObjectReference?.internalValue;
     }
@@ -651,7 +651,7 @@ export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectRef
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -723,11 +723,11 @@ export class CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReferenc
   public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFromSecretRef | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._optional) {
+    if (this._optional !== undefined) {
       hasAnyValues = true;
       internalValueResult.optional = this._optional;
     }
-    if (this._localObjectReference?.internalValue) {
+    if (this._localObjectReference?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.localObjectReference = this._localObjectReference?.internalValue;
     }
@@ -892,11 +892,11 @@ export class CloudRunServiceTemplateSpecContainersResourcesOutputReference exten
   public get internalValue(): CloudRunServiceTemplateSpecContainersResources | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._limits) {
+    if (this._limits !== undefined) {
       hasAnyValues = true;
       internalValueResult.limits = this._limits;
     }
-    if (this._requests) {
+    if (this._requests !== undefined) {
       hasAnyValues = true;
       internalValueResult.requests = this._requests;
     }
@@ -1101,19 +1101,19 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
   public get internalValue(): CloudRunServiceTemplateSpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._containerConcurrency) {
+    if (this._containerConcurrency !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerConcurrency = this._containerConcurrency;
     }
-    if (this._serviceAccountName) {
+    if (this._serviceAccountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountName = this._serviceAccountName;
     }
-    if (this._timeoutSeconds) {
+    if (this._timeoutSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeoutSeconds = this._timeoutSeconds;
     }
-    if (this._containers) {
+    if (this._containers !== undefined) {
       hasAnyValues = true;
       internalValueResult.containers = this._containers;
     }
@@ -1243,11 +1243,11 @@ export class CloudRunServiceTemplateOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CloudRunServiceTemplate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._metadata?.internalValue) {
+    if (this._metadata?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata?.internalValue;
     }
-    if (this._spec?.internalValue) {
+    if (this._spec?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.spec = this._spec?.internalValue;
     }
@@ -1341,15 +1341,15 @@ export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CloudRunServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -138,15 +138,15 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
   public get internalValue(): CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instance) {
+    if (this._instance !== undefined) {
       hasAnyValues = true;
       internalValueResult.instance = this._instance;
     }
-    if (this._service) {
+    if (this._service !== undefined) {
       hasAnyValues = true;
       internalValueResult.service = this._service;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -288,23 +288,23 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   public get internalValue(): CloudSchedulerJobAppEngineHttpTarget | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._body) {
+    if (this._body !== undefined) {
       hasAnyValues = true;
       internalValueResult.body = this._body;
     }
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._httpMethod) {
+    if (this._httpMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpMethod = this._httpMethod;
     }
-    if (this._relativeUri) {
+    if (this._relativeUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.relativeUri = this._relativeUri;
     }
-    if (this._appEngineRouting?.internalValue) {
+    if (this._appEngineRouting?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.appEngineRouting = this._appEngineRouting?.internalValue;
     }
@@ -451,11 +451,11 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
   public get internalValue(): CloudSchedulerJobHttpTargetOauthToken | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._scope) {
+    if (this._scope !== undefined) {
       hasAnyValues = true;
       internalValueResult.scope = this._scope;
     }
-    if (this._serviceAccountEmail) {
+    if (this._serviceAccountEmail !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
     }
@@ -547,11 +547,11 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
   public get internalValue(): CloudSchedulerJobHttpTargetOidcToken | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._audience) {
+    if (this._audience !== undefined) {
       hasAnyValues = true;
       internalValueResult.audience = this._audience;
     }
-    if (this._serviceAccountEmail) {
+    if (this._serviceAccountEmail !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
     }
@@ -674,27 +674,27 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   public get internalValue(): CloudSchedulerJobHttpTarget | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._body) {
+    if (this._body !== undefined) {
       hasAnyValues = true;
       internalValueResult.body = this._body;
     }
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._httpMethod) {
+    if (this._httpMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpMethod = this._httpMethod;
     }
-    if (this._uri) {
+    if (this._uri !== undefined) {
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._oauthToken?.internalValue) {
+    if (this._oauthToken?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthToken = this._oauthToken?.internalValue;
     }
-    if (this._oidcToken?.internalValue) {
+    if (this._oidcToken?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.oidcToken = this._oidcToken?.internalValue;
     }
@@ -871,15 +871,15 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
   public get internalValue(): CloudSchedulerJobPubsubTarget | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._attributes) {
+    if (this._attributes !== undefined) {
       hasAnyValues = true;
       internalValueResult.attributes = this._attributes;
     }
-    if (this._data) {
+    if (this._data !== undefined) {
       hasAnyValues = true;
       internalValueResult.data = this._data;
     }
-    if (this._topicName) {
+    if (this._topicName !== undefined) {
       hasAnyValues = true;
       internalValueResult.topicName = this._topicName;
     }
@@ -1018,23 +1018,23 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   public get internalValue(): CloudSchedulerJobRetryConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxBackoffDuration) {
+    if (this._maxBackoffDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxBackoffDuration = this._maxBackoffDuration;
     }
-    if (this._maxDoublings) {
+    if (this._maxDoublings !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDoublings = this._maxDoublings;
     }
-    if (this._maxRetryDuration) {
+    if (this._maxRetryDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRetryDuration = this._maxRetryDuration;
     }
-    if (this._minBackoffDuration) {
+    if (this._minBackoffDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.minBackoffDuration = this._minBackoffDuration;
     }
-    if (this._retryCount) {
+    if (this._retryCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryCount = this._retryCount;
     }
@@ -1182,15 +1182,15 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): CloudSchedulerJobTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

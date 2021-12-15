@@ -91,11 +91,11 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BigtableGcPolicyMaxAge | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._days) {
+    if (this._days !== undefined) {
       hasAnyValues = true;
       internalValueResult.days = this._days;
     }
-    if (this._duration) {
+    if (this._duration !== undefined) {
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }

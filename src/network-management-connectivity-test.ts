@@ -135,23 +135,23 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   public get internalValue(): NetworkManagementConnectivityTestDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instance) {
+    if (this._instance !== undefined) {
       hasAnyValues = true;
       internalValueResult.instance = this._instance;
     }
-    if (this._ipAddress) {
+    if (this._ipAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAddress = this._ipAddress;
     }
-    if (this._network) {
+    if (this._network !== undefined) {
       hasAnyValues = true;
       internalValueResult.network = this._network;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
@@ -338,27 +338,27 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   public get internalValue(): NetworkManagementConnectivityTestSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instance) {
+    if (this._instance !== undefined) {
       hasAnyValues = true;
       internalValueResult.instance = this._instance;
     }
-    if (this._ipAddress) {
+    if (this._ipAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAddress = this._ipAddress;
     }
-    if (this._network) {
+    if (this._network !== undefined) {
       hasAnyValues = true;
       internalValueResult.network = this._network;
     }
-    if (this._networkType) {
+    if (this._networkType !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkType = this._networkType;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
@@ -524,15 +524,15 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
   public get internalValue(): NetworkManagementConnectivityTestTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

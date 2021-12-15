@@ -105,7 +105,7 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputRe
   public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -213,19 +213,19 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._returnPartialResponses) {
+    if (this._returnPartialResponses !== undefined) {
       hasAnyValues = true;
       internalValueResult.returnPartialResponses = this._returnPartialResponses;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
-    if (this._messages) {
+    if (this._messages !== undefined) {
       hasAnyValues = true;
       internalValueResult.messages = this._messages;
     }
@@ -409,15 +409,15 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
   public get internalValue(): DialogflowCxFlowNluSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._classificationThreshold) {
+    if (this._classificationThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.classificationThreshold = this._classificationThreshold;
     }
-    if (this._modelTrainingMode) {
+    if (this._modelTrainingMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.modelTrainingMode = this._modelTrainingMode;
     }
-    if (this._modelType) {
+    if (this._modelType !== undefined) {
       hasAnyValues = true;
       internalValueResult.modelType = this._modelType;
     }
@@ -529,15 +529,15 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): DialogflowCxFlowTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -641,7 +641,7 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutpu
   public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -749,19 +749,19 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillment | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._returnPartialResponses) {
+    if (this._returnPartialResponses !== undefined) {
       hasAnyValues = true;
       internalValueResult.returnPartialResponses = this._returnPartialResponses;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
-    if (this._messages) {
+    if (this._messages !== undefined) {
       hasAnyValues = true;
       internalValueResult.messages = this._messages;
     }

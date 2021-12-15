@@ -180,7 +180,7 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
   public get internalValue(): CloudfunctionsFunctionEventTriggerFailurePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._retry) {
+    if (this._retry !== undefined) {
       hasAnyValues = true;
       internalValueResult.retry = this._retry;
     }
@@ -259,15 +259,15 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
   public get internalValue(): CloudfunctionsFunctionEventTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._eventType) {
+    if (this._eventType !== undefined) {
       hasAnyValues = true;
       internalValueResult.eventType = this._eventType;
     }
-    if (this._resource) {
+    if (this._resource !== undefined) {
       hasAnyValues = true;
       internalValueResult.resource = this._resource;
     }
-    if (this._failurePolicy?.internalValue) {
+    if (this._failurePolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.failurePolicy = this._failurePolicy?.internalValue;
     }
@@ -365,7 +365,7 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
   public get internalValue(): CloudfunctionsFunctionSourceRepository | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
@@ -443,19 +443,19 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): CloudfunctionsFunctionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

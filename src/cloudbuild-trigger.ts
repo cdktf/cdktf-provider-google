@@ -170,11 +170,11 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
   public get internalValue(): CloudbuildTriggerBuildArtifactsObjects | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._paths) {
+    if (this._paths !== undefined) {
       hasAnyValues = true;
       internalValueResult.paths = this._paths;
     }
@@ -273,11 +273,11 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   public get internalValue(): CloudbuildTriggerBuildArtifacts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._images) {
+    if (this._images !== undefined) {
       hasAnyValues = true;
       internalValueResult.images = this._images;
     }
-    if (this._objects?.internalValue) {
+    if (this._objects?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.objects = this._objects?.internalValue;
     }
@@ -489,51 +489,51 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   public get internalValue(): CloudbuildTriggerBuildOptions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._dynamicSubstitutions) {
+    if (this._dynamicSubstitutions !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicSubstitutions = this._dynamicSubstitutions;
     }
-    if (this._env) {
+    if (this._env !== undefined) {
       hasAnyValues = true;
       internalValueResult.env = this._env;
     }
-    if (this._logStreamingOption) {
+    if (this._logStreamingOption !== undefined) {
       hasAnyValues = true;
       internalValueResult.logStreamingOption = this._logStreamingOption;
     }
-    if (this._logging) {
+    if (this._logging !== undefined) {
       hasAnyValues = true;
       internalValueResult.logging = this._logging;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._requestedVerifyOption) {
+    if (this._requestedVerifyOption !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestedVerifyOption = this._requestedVerifyOption;
     }
-    if (this._secretEnv) {
+    if (this._secretEnv !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretEnv = this._secretEnv;
     }
-    if (this._sourceProvenanceHash) {
+    if (this._sourceProvenanceHash !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceProvenanceHash = this._sourceProvenanceHash;
     }
-    if (this._substitutionOption) {
+    if (this._substitutionOption !== undefined) {
       hasAnyValues = true;
       internalValueResult.substitutionOption = this._substitutionOption;
     }
-    if (this._workerPool) {
+    if (this._workerPool !== undefined) {
       hasAnyValues = true;
       internalValueResult.workerPool = this._workerPool;
     }
-    if (this._volumes) {
+    if (this._volumes !== undefined) {
       hasAnyValues = true;
       internalValueResult.volumes = this._volumes;
     }
@@ -885,35 +885,35 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
   public get internalValue(): CloudbuildTriggerBuildSourceRepoSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._branchName) {
+    if (this._branchName !== undefined) {
       hasAnyValues = true;
       internalValueResult.branchName = this._branchName;
     }
-    if (this._commitSha) {
+    if (this._commitSha !== undefined) {
       hasAnyValues = true;
       internalValueResult.commitSha = this._commitSha;
     }
-    if (this._dir) {
+    if (this._dir !== undefined) {
       hasAnyValues = true;
       internalValueResult.dir = this._dir;
     }
-    if (this._invertRegex) {
+    if (this._invertRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.invertRegex = this._invertRegex;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._repoName) {
+    if (this._repoName !== undefined) {
       hasAnyValues = true;
       internalValueResult.repoName = this._repoName;
     }
-    if (this._substitutions) {
+    if (this._substitutions !== undefined) {
       hasAnyValues = true;
       internalValueResult.substitutions = this._substitutions;
     }
-    if (this._tagName) {
+    if (this._tagName !== undefined) {
       hasAnyValues = true;
       internalValueResult.tagName = this._tagName;
     }
@@ -1121,15 +1121,15 @@ export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cd
   public get internalValue(): CloudbuildTriggerBuildSourceStorageSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bucket) {
+    if (this._bucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.bucket = this._bucket;
     }
-    if (this._generation) {
+    if (this._generation !== undefined) {
       hasAnyValues = true;
       internalValueResult.generation = this._generation;
     }
-    if (this._object) {
+    if (this._object !== undefined) {
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
@@ -1234,11 +1234,11 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   public get internalValue(): CloudbuildTriggerBuildSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._repoSource?.internalValue) {
+    if (this._repoSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.repoSource = this._repoSource?.internalValue;
     }
-    if (this._storageSource?.internalValue) {
+    if (this._storageSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageSource = this._storageSource?.internalValue;
     }
@@ -1575,47 +1575,47 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   public get internalValue(): CloudbuildTriggerBuild | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._images) {
+    if (this._images !== undefined) {
       hasAnyValues = true;
       internalValueResult.images = this._images;
     }
-    if (this._logsBucket) {
+    if (this._logsBucket !== undefined) {
       hasAnyValues = true;
       internalValueResult.logsBucket = this._logsBucket;
     }
-    if (this._queueTtl) {
+    if (this._queueTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.queueTtl = this._queueTtl;
     }
-    if (this._substitutions) {
+    if (this._substitutions !== undefined) {
       hasAnyValues = true;
       internalValueResult.substitutions = this._substitutions;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._timeout) {
+    if (this._timeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout;
     }
-    if (this._artifacts?.internalValue) {
+    if (this._artifacts?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.artifacts = this._artifacts?.internalValue;
     }
-    if (this._options?.internalValue) {
+    if (this._options?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.options = this._options?.internalValue;
     }
-    if (this._secret) {
+    if (this._secret !== undefined) {
       hasAnyValues = true;
       internalValueResult.secret = this._secret;
     }
-    if (this._source?.internalValue) {
+    if (this._source?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.source = this._source?.internalValue;
     }
-    if (this._step) {
+    if (this._step !== undefined) {
       hasAnyValues = true;
       internalValueResult.step = this._step;
     }
@@ -1877,15 +1877,15 @@ export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.Com
   public get internalValue(): CloudbuildTriggerGithubPullRequest | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._branch) {
+    if (this._branch !== undefined) {
       hasAnyValues = true;
       internalValueResult.branch = this._branch;
     }
-    if (this._commentControl) {
+    if (this._commentControl !== undefined) {
       hasAnyValues = true;
       internalValueResult.commentControl = this._commentControl;
     }
-    if (this._invertRegex) {
+    if (this._invertRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.invertRegex = this._invertRegex;
     }
@@ -2000,15 +2000,15 @@ export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObj
   public get internalValue(): CloudbuildTriggerGithubPush | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._branch) {
+    if (this._branch !== undefined) {
       hasAnyValues = true;
       internalValueResult.branch = this._branch;
     }
-    if (this._invertRegex) {
+    if (this._invertRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.invertRegex = this._invertRegex;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
@@ -2135,19 +2135,19 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CloudbuildTriggerGithub | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._owner) {
+    if (this._owner !== undefined) {
       hasAnyValues = true;
       internalValueResult.owner = this._owner;
     }
-    if (this._pullRequest?.internalValue) {
+    if (this._pullRequest?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.pullRequest = this._pullRequest?.internalValue;
     }
-    if (this._push?.internalValue) {
+    if (this._push?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.push = this._push?.internalValue;
     }
@@ -2276,11 +2276,11 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
   public get internalValue(): CloudbuildTriggerPubsubConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._serviceAccountEmail) {
+    if (this._serviceAccountEmail !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccountEmail = this._serviceAccountEmail;
     }
-    if (this._topic) {
+    if (this._topic !== undefined) {
       hasAnyValues = true;
       internalValueResult.topic = this._topic;
     }
@@ -2371,15 +2371,15 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): CloudbuildTriggerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -2532,31 +2532,31 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
   public get internalValue(): CloudbuildTriggerTriggerTemplate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._branchName) {
+    if (this._branchName !== undefined) {
       hasAnyValues = true;
       internalValueResult.branchName = this._branchName;
     }
-    if (this._commitSha) {
+    if (this._commitSha !== undefined) {
       hasAnyValues = true;
       internalValueResult.commitSha = this._commitSha;
     }
-    if (this._dir) {
+    if (this._dir !== undefined) {
       hasAnyValues = true;
       internalValueResult.dir = this._dir;
     }
-    if (this._invertRegex) {
+    if (this._invertRegex !== undefined) {
       hasAnyValues = true;
       internalValueResult.invertRegex = this._invertRegex;
     }
-    if (this._projectId) {
+    if (this._projectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectId = this._projectId;
     }
-    if (this._repoName) {
+    if (this._repoName !== undefined) {
       hasAnyValues = true;
       internalValueResult.repoName = this._repoName;
     }
-    if (this._tagName) {
+    if (this._tagName !== undefined) {
       hasAnyValues = true;
       internalValueResult.tagName = this._tagName;
     }
@@ -2732,7 +2732,7 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
   public get internalValue(): CloudbuildTriggerWebhookConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._secret) {
+    if (this._secret !== undefined) {
       hasAnyValues = true;
       internalValueResult.secret = this._secret;
     }

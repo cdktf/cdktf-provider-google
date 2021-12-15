@@ -138,7 +138,7 @@ export class TpuNodeSchedulingConfigOutputReference extends cdktf.ComplexObject 
   public get internalValue(): TpuNodeSchedulingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._preemptible) {
+    if (this._preemptible !== undefined) {
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
@@ -211,15 +211,15 @@ export class TpuNodeTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): TpuNodeTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

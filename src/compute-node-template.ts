@@ -110,11 +110,11 @@ export class ComputeNodeTemplateNodeTypeFlexibilityOutputReference extends cdktf
   public get internalValue(): ComputeNodeTemplateNodeTypeFlexibility | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cpus) {
+    if (this._cpus !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpus = this._cpus;
     }
-    if (this._memory) {
+    if (this._memory !== undefined) {
       hasAnyValues = true;
       internalValueResult.memory = this._memory;
     }
@@ -211,7 +211,7 @@ export class ComputeNodeTemplateServerBindingOutputReference extends cdktf.Compl
   public get internalValue(): ComputeNodeTemplateServerBinding | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -279,11 +279,11 @@ export class ComputeNodeTemplateTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): ComputeNodeTemplateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }

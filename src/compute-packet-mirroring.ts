@@ -103,7 +103,7 @@ export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.Com
   public get internalValue(): ComputePacketMirroringCollectorIlb | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
@@ -183,15 +183,15 @@ export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexOb
   public get internalValue(): ComputePacketMirroringFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cidrRanges) {
+    if (this._cidrRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.cidrRanges = this._cidrRanges;
     }
-    if (this._direction) {
+    if (this._direction !== undefined) {
       hasAnyValues = true;
       internalValueResult.direction = this._direction;
     }
-    if (this._ipProtocols) {
+    if (this._ipProtocols !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipProtocols = this._ipProtocols;
     }
@@ -347,15 +347,15 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   public get internalValue(): ComputePacketMirroringMirroredResources | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._instances) {
+    if (this._instances !== undefined) {
       hasAnyValues = true;
       internalValueResult.instances = this._instances;
     }
-    if (this._subnetworks) {
+    if (this._subnetworks !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetworks = this._subnetworks;
     }
@@ -461,7 +461,7 @@ export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexO
   public get internalValue(): ComputePacketMirroringNetwork | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
@@ -534,15 +534,15 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): ComputePacketMirroringTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

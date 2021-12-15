@@ -176,27 +176,27 @@ export class ComputeRegionUrlMapDefaultUrlRedirectOutputReference extends cdktf.
   public get internalValue(): ComputeRegionUrlMapDefaultUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -451,27 +451,27 @@ export class ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference ext
   public get internalValue(): ComputeRegionUrlMapPathMatcherDefaultUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -681,35 +681,35 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputRe
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOriginRegexes) {
+    if (this._allowOriginRegexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -910,11 +910,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpStatus) {
+    if (this._httpStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpStatus = this._httpStatus;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -1004,11 +1004,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1100,11 +1100,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay?.internalValue) {
+    if (this._fixedDelay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -1191,11 +1191,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort?.internalValue) {
+    if (this._abort?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay?.internalValue) {
+    if (this._delay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -1281,7 +1281,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolic
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendService) {
+    if (this._backendService !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendService = this._backendService;
     }
@@ -1356,11 +1356,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryT
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1478,15 +1478,15 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputR
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numRetries) {
+    if (this._numRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.numRetries = this._numRetries;
     }
-    if (this._retryConditions) {
+    if (this._retryConditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout?.internalValue) {
+    if (this._perTryTimeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -1600,11 +1600,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutputRefer
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -1698,11 +1698,11 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputRe
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
@@ -1881,19 +1881,19 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -2099,31 +2099,31 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy?.internalValue) {
+    if (this._faultInjectionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy?.internalValue) {
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy?.internalValue) {
+    if (this._retryPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout?.internalValue) {
+    if (this._timeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices) {
+    if (this._weightedBackendServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.weightedBackendServices = this._weightedBackendServices;
     }
@@ -2365,27 +2365,27 @@ export class ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference ex
   public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -2682,19 +2682,19 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -2825,11 +2825,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRang
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._rangeEnd) {
+    if (this._rangeEnd !== undefined) {
       hasAnyValues = true;
       internalValueResult.rangeEnd = this._rangeEnd;
     }
-    if (this._rangeStart) {
+    if (this._rangeStart !== undefined) {
       hasAnyValues = true;
       internalValueResult.rangeStart = this._rangeStart;
     }
@@ -3231,35 +3231,35 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutput
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowHeaders) {
+    if (this._allowHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowHeaders = this._allowHeaders;
     }
-    if (this._allowMethods) {
+    if (this._allowMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowMethods = this._allowMethods;
     }
-    if (this._allowOriginRegexes) {
+    if (this._allowOriginRegexes !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOriginRegexes = this._allowOriginRegexes;
     }
-    if (this._allowOrigins) {
+    if (this._allowOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowOrigins = this._allowOrigins;
     }
-    if (this._disabled) {
+    if (this._disabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabled = this._disabled;
     }
-    if (this._exposeHeaders) {
+    if (this._exposeHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposeHeaders = this._exposeHeaders;
     }
-    if (this._maxAge) {
+    if (this._maxAge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAge = this._maxAge;
     }
@@ -3463,11 +3463,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._httpStatus) {
+    if (this._httpStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpStatus = this._httpStatus;
     }
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
@@ -3563,11 +3563,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -3659,11 +3659,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._percentage) {
+    if (this._percentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.percentage = this._percentage;
     }
-    if (this._fixedDelay?.internalValue) {
+    if (this._fixedDelay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fixedDelay = this._fixedDelay?.internalValue;
     }
@@ -3756,11 +3756,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._abort?.internalValue) {
+    if (this._abort?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.abort = this._abort?.internalValue;
     }
-    if (this._delay?.internalValue) {
+    if (this._delay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.delay = this._delay?.internalValue;
     }
@@ -3846,7 +3846,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPol
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendService) {
+    if (this._backendService !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendService = this._backendService;
     }
@@ -3921,11 +3921,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTr
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -4043,15 +4043,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutpu
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._numRetries) {
+    if (this._numRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.numRetries = this._numRetries;
     }
-    if (this._retryConditions) {
+    if (this._retryConditions !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryConditions = this._retryConditions;
     }
-    if (this._perTryTimeout?.internalValue) {
+    if (this._perTryTimeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
     }
@@ -4162,11 +4162,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputRef
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._seconds) {
+    if (this._seconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.seconds = this._seconds;
     }
@@ -4260,11 +4260,11 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutput
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRewrite) {
+    if (this._hostRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRewrite = this._hostRewrite;
     }
-    if (this._pathPrefixRewrite) {
+    if (this._pathPrefixRewrite !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathPrefixRewrite = this._pathPrefixRewrite;
     }
@@ -4443,19 +4443,19 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeadersToRemove) {
+    if (this._requestHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
     }
-    if (this._responseHeadersToRemove) {
+    if (this._responseHeadersToRemove !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd) {
+    if (this._requestHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
     }
-    if (this._responseHeadersToAdd) {
+    if (this._responseHeadersToAdd !== undefined) {
       hasAnyValues = true;
       internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
     }
@@ -4661,31 +4661,31 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsPolicy?.internalValue) {
+    if (this._corsPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsPolicy = this._corsPolicy?.internalValue;
     }
-    if (this._faultInjectionPolicy?.internalValue) {
+    if (this._faultInjectionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.faultInjectionPolicy = this._faultInjectionPolicy?.internalValue;
     }
-    if (this._requestMirrorPolicy?.internalValue) {
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
     }
-    if (this._retryPolicy?.internalValue) {
+    if (this._retryPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
     }
-    if (this._timeout?.internalValue) {
+    if (this._timeout?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout?.internalValue;
     }
-    if (this._urlRewrite?.internalValue) {
+    if (this._urlRewrite?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices) {
+    if (this._weightedBackendServices !== undefined) {
       hasAnyValues = true;
       internalValueResult.weightedBackendServices = this._weightedBackendServices;
     }
@@ -4926,27 +4926,27 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference 
   public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRedirect) {
+    if (this._hostRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostRedirect = this._hostRedirect;
     }
-    if (this._httpsRedirect) {
+    if (this._httpsRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpsRedirect = this._httpsRedirect;
     }
-    if (this._pathRedirect) {
+    if (this._pathRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.pathRedirect = this._pathRedirect;
     }
-    if (this._prefixRedirect) {
+    if (this._prefixRedirect !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixRedirect = this._prefixRedirect;
     }
-    if (this._redirectResponseCode) {
+    if (this._redirectResponseCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectResponseCode = this._redirectResponseCode;
     }
-    if (this._stripQuery) {
+    if (this._stripQuery !== undefined) {
       hasAnyValues = true;
       internalValueResult.stripQuery = this._stripQuery;
     }
@@ -5282,15 +5282,15 @@ export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): ComputeRegionUrlMapTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

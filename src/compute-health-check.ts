@@ -183,19 +183,19 @@ export class ComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.Comp
   public get internalValue(): ComputeHealthCheckGrpcHealthCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._grpcServiceName) {
+    if (this._grpcServiceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.grpcServiceName = this._grpcServiceName;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._portName) {
+    if (this._portName !== undefined) {
       hasAnyValues = true;
       internalValueResult.portName = this._portName;
     }
-    if (this._portSpecification) {
+    if (this._portSpecification !== undefined) {
       hasAnyValues = true;
       internalValueResult.portSpecification = this._portSpecification;
     }
@@ -380,31 +380,31 @@ export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.Com
   public get internalValue(): ComputeHealthCheckHttp2HealthCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._host) {
+    if (this._host !== undefined) {
       hasAnyValues = true;
       internalValueResult.host = this._host;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._portName) {
+    if (this._portName !== undefined) {
       hasAnyValues = true;
       internalValueResult.portName = this._portName;
     }
-    if (this._portSpecification) {
+    if (this._portSpecification !== undefined) {
       hasAnyValues = true;
       internalValueResult.portSpecification = this._portSpecification;
     }
-    if (this._proxyHeader) {
+    if (this._proxyHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyHeader = this._proxyHeader;
     }
-    if (this._requestPath) {
+    if (this._requestPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestPath = this._requestPath;
     }
-    if (this._response) {
+    if (this._response !== undefined) {
       hasAnyValues = true;
       internalValueResult.response = this._response;
     }
@@ -643,31 +643,31 @@ export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.Comp
   public get internalValue(): ComputeHealthCheckHttpHealthCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._host) {
+    if (this._host !== undefined) {
       hasAnyValues = true;
       internalValueResult.host = this._host;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._portName) {
+    if (this._portName !== undefined) {
       hasAnyValues = true;
       internalValueResult.portName = this._portName;
     }
-    if (this._portSpecification) {
+    if (this._portSpecification !== undefined) {
       hasAnyValues = true;
       internalValueResult.portSpecification = this._portSpecification;
     }
-    if (this._proxyHeader) {
+    if (this._proxyHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyHeader = this._proxyHeader;
     }
-    if (this._requestPath) {
+    if (this._requestPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestPath = this._requestPath;
     }
-    if (this._response) {
+    if (this._response !== undefined) {
       hasAnyValues = true;
       internalValueResult.response = this._response;
     }
@@ -906,31 +906,31 @@ export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.Com
   public get internalValue(): ComputeHealthCheckHttpsHealthCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._host) {
+    if (this._host !== undefined) {
       hasAnyValues = true;
       internalValueResult.host = this._host;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._portName) {
+    if (this._portName !== undefined) {
       hasAnyValues = true;
       internalValueResult.portName = this._portName;
     }
-    if (this._portSpecification) {
+    if (this._portSpecification !== undefined) {
       hasAnyValues = true;
       internalValueResult.portSpecification = this._portSpecification;
     }
-    if (this._proxyHeader) {
+    if (this._proxyHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyHeader = this._proxyHeader;
     }
-    if (this._requestPath) {
+    if (this._requestPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestPath = this._requestPath;
     }
-    if (this._response) {
+    if (this._response !== undefined) {
       hasAnyValues = true;
       internalValueResult.response = this._response;
     }
@@ -1107,7 +1107,7 @@ export class ComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObj
   public get internalValue(): ComputeHealthCheckLogConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enable) {
+    if (this._enable !== undefined) {
       hasAnyValues = true;
       internalValueResult.enable = this._enable;
     }
@@ -1231,27 +1231,27 @@ export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.Compl
   public get internalValue(): ComputeHealthCheckSslHealthCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._portName) {
+    if (this._portName !== undefined) {
       hasAnyValues = true;
       internalValueResult.portName = this._portName;
     }
-    if (this._portSpecification) {
+    if (this._portSpecification !== undefined) {
       hasAnyValues = true;
       internalValueResult.portSpecification = this._portSpecification;
     }
-    if (this._proxyHeader) {
+    if (this._proxyHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyHeader = this._proxyHeader;
     }
-    if (this._request) {
+    if (this._request !== undefined) {
       hasAnyValues = true;
       internalValueResult.request = this._request;
     }
-    if (this._response) {
+    if (this._response !== undefined) {
       hasAnyValues = true;
       internalValueResult.response = this._response;
     }
@@ -1465,27 +1465,27 @@ export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.Compl
   public get internalValue(): ComputeHealthCheckTcpHealthCheck | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._portName) {
+    if (this._portName !== undefined) {
       hasAnyValues = true;
       internalValueResult.portName = this._portName;
     }
-    if (this._portSpecification) {
+    if (this._portSpecification !== undefined) {
       hasAnyValues = true;
       internalValueResult.portSpecification = this._portSpecification;
     }
-    if (this._proxyHeader) {
+    if (this._proxyHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyHeader = this._proxyHeader;
     }
-    if (this._request) {
+    if (this._request !== undefined) {
       hasAnyValues = true;
       internalValueResult.request = this._request;
     }
-    if (this._response) {
+    if (this._response !== undefined) {
       hasAnyValues = true;
       internalValueResult.response = this._response;
     }
@@ -1651,15 +1651,15 @@ export class ComputeHealthCheckTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): ComputeHealthCheckTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

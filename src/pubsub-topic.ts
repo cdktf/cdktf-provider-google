@@ -91,7 +91,7 @@ export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.Comple
   public get internalValue(): PubsubTopicMessageStoragePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedPersistenceRegions) {
+    if (this._allowedPersistenceRegions !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedPersistenceRegions = this._allowedPersistenceRegions;
     }
@@ -166,11 +166,11 @@ export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): PubsubTopicSchemaSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._encoding) {
+    if (this._encoding !== undefined) {
       hasAnyValues = true;
       internalValueResult.encoding = this._encoding;
     }
-    if (this._schema) {
+    if (this._schema !== undefined) {
       hasAnyValues = true;
       internalValueResult.schema = this._schema;
     }
@@ -261,15 +261,15 @@ export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): PubsubTopicTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -116,19 +116,19 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   public get internalValue(): BillingBudgetAllUpdatesRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disableDefaultIamRecipients) {
+    if (this._disableDefaultIamRecipients !== undefined) {
       hasAnyValues = true;
       internalValueResult.disableDefaultIamRecipients = this._disableDefaultIamRecipients;
     }
-    if (this._monitoringNotificationChannels) {
+    if (this._monitoringNotificationChannels !== undefined) {
       hasAnyValues = true;
       internalValueResult.monitoringNotificationChannels = this._monitoringNotificationChannels;
     }
-    if (this._pubsubTopic) {
+    if (this._pubsubTopic !== undefined) {
       hasAnyValues = true;
       internalValueResult.pubsubTopic = this._pubsubTopic;
     }
-    if (this._schemaVersion) {
+    if (this._schemaVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaVersion = this._schemaVersion;
     }
@@ -271,15 +271,15 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
   public get internalValue(): BillingBudgetAmountSpecifiedAmount | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._currencyCode) {
+    if (this._currencyCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.currencyCode = this._currencyCode;
     }
-    if (this._nanos) {
+    if (this._nanos !== undefined) {
       hasAnyValues = true;
       internalValueResult.nanos = this._nanos;
     }
-    if (this._units) {
+    if (this._units !== undefined) {
       hasAnyValues = true;
       internalValueResult.units = this._units;
     }
@@ -393,11 +393,11 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BillingBudgetAmount | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._lastPeriodAmount) {
+    if (this._lastPeriodAmount !== undefined) {
       hasAnyValues = true;
       internalValueResult.lastPeriodAmount = this._lastPeriodAmount;
     }
-    if (this._specifiedAmount?.internalValue) {
+    if (this._specifiedAmount?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.specifiedAmount = this._specifiedAmount?.internalValue;
     }
@@ -539,27 +539,27 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   public get internalValue(): BillingBudgetBudgetFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._creditTypes) {
+    if (this._creditTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.creditTypes = this._creditTypes;
     }
-    if (this._creditTypesTreatment) {
+    if (this._creditTypesTreatment !== undefined) {
       hasAnyValues = true;
       internalValueResult.creditTypesTreatment = this._creditTypesTreatment;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._projects) {
+    if (this._projects !== undefined) {
       hasAnyValues = true;
       internalValueResult.projects = this._projects;
     }
-    if (this._services) {
+    if (this._services !== undefined) {
       hasAnyValues = true;
       internalValueResult.services = this._services;
     }
-    if (this._subaccounts) {
+    if (this._subaccounts !== undefined) {
       hasAnyValues = true;
       internalValueResult.subaccounts = this._subaccounts;
     }
@@ -754,15 +754,15 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BillingBudgetTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

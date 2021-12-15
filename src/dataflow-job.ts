@@ -160,7 +160,7 @@ export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataflowJobTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

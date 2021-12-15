@@ -171,19 +171,19 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
   public get internalValue(): ComputeReservationSpecificReservationInstanceProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._minCpuPlatform) {
+    if (this._minCpuPlatform !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._guestAccelerators) {
+    if (this._guestAccelerators !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestAccelerators = this._guestAccelerators;
     }
-    if (this._localSsds) {
+    if (this._localSsds !== undefined) {
       hasAnyValues = true;
       internalValueResult.localSsds = this._localSsds;
     }
@@ -311,11 +311,11 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
   public get internalValue(): ComputeReservationSpecificReservation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._instanceProperties?.internalValue) {
+    if (this._instanceProperties?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.instanceProperties = this._instanceProperties?.internalValue;
     }
@@ -403,15 +403,15 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): ComputeReservationTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

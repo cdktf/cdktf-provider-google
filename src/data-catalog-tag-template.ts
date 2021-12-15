@@ -101,7 +101,7 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
   public get internalValue(): DataCatalogTagTemplateFieldsTypeEnumType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedValues) {
+    if (this._allowedValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedValues = this._allowedValues;
     }
@@ -175,11 +175,11 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
   public get internalValue(): DataCatalogTagTemplateFieldsType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._primitiveType) {
+    if (this._primitiveType !== undefined) {
       hasAnyValues = true;
       internalValueResult.primitiveType = this._primitiveType;
     }
-    if (this._enumType?.internalValue) {
+    if (this._enumType?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.enumType = this._enumType?.internalValue;
     }
@@ -327,15 +327,15 @@ export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): DataCatalogTagTemplateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

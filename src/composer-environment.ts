@@ -171,39 +171,39 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   public get internalValue(): ComposerEnvironmentConfigNodeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._ipAllocationPolicy) {
+    if (this._ipAllocationPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAllocationPolicy = this._ipAllocationPolicy;
     }
-    if (this._machineType) {
+    if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
     }
-    if (this._network) {
+    if (this._network !== undefined) {
       hasAnyValues = true;
       internalValueResult.network = this._network;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
-    if (this._serviceAccount) {
+    if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
-    if (this._subnetwork) {
+    if (this._subnetwork !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetwork = this._subnetwork;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._zone) {
+    if (this._zone !== undefined) {
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
@@ -437,19 +437,19 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   public get internalValue(): ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cloudSqlIpv4CidrBlock) {
+    if (this._cloudSqlIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudSqlIpv4CidrBlock = this._cloudSqlIpv4CidrBlock;
     }
-    if (this._enablePrivateEndpoint) {
+    if (this._enablePrivateEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.enablePrivateEndpoint = this._enablePrivateEndpoint;
     }
-    if (this._masterIpv4CidrBlock) {
+    if (this._masterIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterIpv4CidrBlock = this._masterIpv4CidrBlock;
     }
-    if (this._webServerIpv4CidrBlock) {
+    if (this._webServerIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.webServerIpv4CidrBlock = this._webServerIpv4CidrBlock;
     }
@@ -606,27 +606,27 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   public get internalValue(): ComposerEnvironmentConfigSoftwareConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._airflowConfigOverrides) {
+    if (this._airflowConfigOverrides !== undefined) {
       hasAnyValues = true;
       internalValueResult.airflowConfigOverrides = this._airflowConfigOverrides;
     }
-    if (this._envVariables) {
+    if (this._envVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.envVariables = this._envVariables;
     }
-    if (this._imageVersion) {
+    if (this._imageVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageVersion = this._imageVersion;
     }
-    if (this._pypiPackages) {
+    if (this._pypiPackages !== undefined) {
       hasAnyValues = true;
       internalValueResult.pypiPackages = this._pypiPackages;
     }
-    if (this._pythonVersion) {
+    if (this._pythonVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.pythonVersion = this._pythonVersion;
     }
-    if (this._schedulerCount) {
+    if (this._schedulerCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedulerCount = this._schedulerCount;
     }
@@ -808,19 +808,19 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   public get internalValue(): ComposerEnvironmentConfigA | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nodeCount) {
+    if (this._nodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeCount = this._nodeCount;
     }
-    if (this._nodeConfig?.internalValue) {
+    if (this._nodeConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeConfig = this._nodeConfig?.internalValue;
     }
-    if (this._privateEnvironmentConfig?.internalValue) {
+    if (this._privateEnvironmentConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateEnvironmentConfig = this._privateEnvironmentConfig?.internalValue;
     }
-    if (this._softwareConfig?.internalValue) {
+    if (this._softwareConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
     }
@@ -950,15 +950,15 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): ComposerEnvironmentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

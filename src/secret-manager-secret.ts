@@ -107,7 +107,7 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
   public get internalValue(): SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyName) {
+    if (this._kmsKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyName = this._kmsKeyName;
     }
@@ -198,7 +198,7 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
   public get internalValue(): SecretManagerSecretReplicationUserManaged | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._replicas) {
+    if (this._replicas !== undefined) {
       hasAnyValues = true;
       internalValueResult.replicas = this._replicas;
     }
@@ -271,11 +271,11 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   public get internalValue(): SecretManagerSecretReplication | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._automatic) {
+    if (this._automatic !== undefined) {
       hasAnyValues = true;
       internalValueResult.automatic = this._automatic;
     }
-    if (this._userManaged?.internalValue) {
+    if (this._userManaged?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.userManaged = this._userManaged?.internalValue;
     }
@@ -370,11 +370,11 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
   public get internalValue(): SecretManagerSecretRotation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nextRotationTime) {
+    if (this._nextRotationTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.nextRotationTime = this._nextRotationTime;
     }
-    if (this._rotationPeriod) {
+    if (this._rotationPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.rotationPeriod = this._rotationPeriod;
     }
@@ -468,15 +468,15 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): SecretManagerSecretTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

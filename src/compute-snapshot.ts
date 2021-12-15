@@ -122,15 +122,15 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
   public get internalValue(): ComputeSnapshotSnapshotEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeySelfLink) {
+    if (this._kmsKeySelfLink !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
     }
-    if (this._kmsKeyServiceAccount) {
+    if (this._kmsKeyServiceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
     }
-    if (this._rawKey) {
+    if (this._rawKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.rawKey = this._rawKey;
     }
@@ -243,11 +243,11 @@ export class ComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf
   public get internalValue(): ComputeSnapshotSourceDiskEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._kmsKeyServiceAccount) {
+    if (this._kmsKeyServiceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
     }
-    if (this._rawKey) {
+    if (this._rawKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.rawKey = this._rawKey;
     }
@@ -341,15 +341,15 @@ export class ComputeSnapshotTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): ComputeSnapshotTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

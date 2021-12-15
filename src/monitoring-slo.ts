@@ -109,7 +109,7 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
   public get internalValue(): MonitoringSloBasicSliAvailability | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -179,7 +179,7 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
   public get internalValue(): MonitoringSloBasicSliLatency | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._threshold) {
+    if (this._threshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
@@ -287,23 +287,23 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MonitoringSloBasicSli | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._method) {
+    if (this._method !== undefined) {
       hasAnyValues = true;
       internalValueResult.method = this._method;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._availability?.internalValue) {
+    if (this._availability?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.availability = this._availability?.internalValue;
     }
-    if (this._latency?.internalValue) {
+    if (this._latency?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.latency = this._latency?.internalValue;
     }
@@ -454,11 +454,11 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
   public get internalValue(): MonitoringSloRequestBasedSliDistributionCutRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._max) {
+    if (this._max !== undefined) {
       hasAnyValues = true;
       internalValueResult.max = this._max;
     }
-    if (this._min) {
+    if (this._min !== undefined) {
       hasAnyValues = true;
       internalValueResult.min = this._min;
     }
@@ -555,11 +555,11 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
   public get internalValue(): MonitoringSloRequestBasedSliDistributionCut | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._distributionFilter) {
+    if (this._distributionFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.distributionFilter = this._distributionFilter;
     }
-    if (this._range?.internalValue) {
+    if (this._range?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -675,15 +675,15 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
   public get internalValue(): MonitoringSloRequestBasedSliGoodTotalRatio | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._badServiceFilter) {
+    if (this._badServiceFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.badServiceFilter = this._badServiceFilter;
     }
-    if (this._goodServiceFilter) {
+    if (this._goodServiceFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.goodServiceFilter = this._goodServiceFilter;
     }
-    if (this._totalServiceFilter) {
+    if (this._totalServiceFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.totalServiceFilter = this._totalServiceFilter;
     }
@@ -794,11 +794,11 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
   public get internalValue(): MonitoringSloRequestBasedSli | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._distributionCut?.internalValue) {
+    if (this._distributionCut?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.distributionCut = this._distributionCut?.internalValue;
     }
-    if (this._goodTotalRatio?.internalValue) {
+    if (this._goodTotalRatio?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.goodTotalRatio = this._goodTotalRatio?.internalValue;
     }
@@ -892,15 +892,15 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MonitoringSloTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1004,7 +1004,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -1074,7 +1074,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._threshold) {
+    if (this._threshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
@@ -1182,23 +1182,23 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._method) {
+    if (this._method !== undefined) {
       hasAnyValues = true;
       internalValueResult.method = this._method;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._availability?.internalValue) {
+    if (this._availability?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.availability = this._availability?.internalValue;
     }
-    if (this._latency?.internalValue) {
+    if (this._latency?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.latency = this._latency?.internalValue;
     }
@@ -1349,11 +1349,11 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._max) {
+    if (this._max !== undefined) {
       hasAnyValues = true;
       internalValueResult.max = this._max;
     }
-    if (this._min) {
+    if (this._min !== undefined) {
       hasAnyValues = true;
       internalValueResult.min = this._min;
     }
@@ -1450,11 +1450,11 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._distributionFilter) {
+    if (this._distributionFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.distributionFilter = this._distributionFilter;
     }
-    if (this._range?.internalValue) {
+    if (this._range?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -1568,15 +1568,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._badServiceFilter) {
+    if (this._badServiceFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.badServiceFilter = this._badServiceFilter;
     }
-    if (this._goodServiceFilter) {
+    if (this._goodServiceFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.goodServiceFilter = this._goodServiceFilter;
     }
-    if (this._totalServiceFilter) {
+    if (this._totalServiceFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.totalServiceFilter = this._totalServiceFilter;
     }
@@ -1687,11 +1687,11 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._distributionCut?.internalValue) {
+    if (this._distributionCut?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.distributionCut = this._distributionCut?.internalValue;
     }
-    if (this._goodTotalRatio?.internalValue) {
+    if (this._goodTotalRatio?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.goodTotalRatio = this._goodTotalRatio?.internalValue;
     }
@@ -1792,15 +1792,15 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._threshold) {
+    if (this._threshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
-    if (this._basicSliPerformance?.internalValue) {
+    if (this._basicSliPerformance?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.basicSliPerformance = this._basicSliPerformance?.internalValue;
     }
-    if (this._performance?.internalValue) {
+    if (this._performance?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.performance = this._performance?.internalValue;
     }
@@ -1915,11 +1915,11 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
   public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRangeRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._max) {
+    if (this._max !== undefined) {
       hasAnyValues = true;
       internalValueResult.max = this._max;
     }
-    if (this._min) {
+    if (this._min !== undefined) {
       hasAnyValues = true;
       internalValueResult.min = this._min;
     }
@@ -2017,11 +2017,11 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
   public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._timeSeries) {
+    if (this._timeSeries !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeSeries = this._timeSeries;
     }
-    if (this._range?.internalValue) {
+    if (this._range?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -2112,11 +2112,11 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
   public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRangeRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._max) {
+    if (this._max !== undefined) {
       hasAnyValues = true;
       internalValueResult.max = this._max;
     }
-    if (this._min) {
+    if (this._min !== undefined) {
       hasAnyValues = true;
       internalValueResult.min = this._min;
     }
@@ -2216,11 +2216,11 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
   public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._timeSeries) {
+    if (this._timeSeries !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeSeries = this._timeSeries;
     }
-    if (this._range?.internalValue) {
+    if (this._range?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.range = this._range?.internalValue;
     }
@@ -2334,23 +2334,23 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   public get internalValue(): MonitoringSloWindowsBasedSli | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._goodBadMetricFilter) {
+    if (this._goodBadMetricFilter !== undefined) {
       hasAnyValues = true;
       internalValueResult.goodBadMetricFilter = this._goodBadMetricFilter;
     }
-    if (this._windowPeriod) {
+    if (this._windowPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowPeriod = this._windowPeriod;
     }
-    if (this._goodTotalRatioThreshold?.internalValue) {
+    if (this._goodTotalRatioThreshold?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.goodTotalRatioThreshold = this._goodTotalRatioThreshold?.internalValue;
     }
-    if (this._metricMeanInRange?.internalValue) {
+    if (this._metricMeanInRange?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricMeanInRange = this._metricMeanInRange?.internalValue;
     }
-    if (this._metricSumInRange?.internalValue) {
+    if (this._metricSumInRange?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricSumInRange = this._metricSumInRange?.internalValue;
     }

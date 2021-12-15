@@ -136,7 +136,7 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
   public get internalValue(): DeploymentManagerDeploymentTargetConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._content) {
+    if (this._content !== undefined) {
       hasAnyValues = true;
       internalValueResult.content = this._content;
     }
@@ -235,11 +235,11 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   public get internalValue(): DeploymentManagerDeploymentTarget | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._config?.internalValue) {
+    if (this._config?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.config = this._config?.internalValue;
     }
-    if (this._imports) {
+    if (this._imports !== undefined) {
       hasAnyValues = true;
       internalValueResult.imports = this._imports;
     }
@@ -331,15 +331,15 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): DeploymentManagerDeploymentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

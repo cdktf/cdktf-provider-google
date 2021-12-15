@@ -104,7 +104,7 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
   public get internalValue(): SccNotificationConfigStreamingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._filter) {
+    if (this._filter !== undefined) {
       hasAnyValues = true;
       internalValueResult.filter = this._filter;
     }
@@ -177,15 +177,15 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): SccNotificationConfigTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

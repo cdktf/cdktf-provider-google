@@ -129,19 +129,19 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
   public get internalValue(): CloudAssetOrganizationFeedCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._description) {
+    if (this._description !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description;
     }
-    if (this._expression) {
+    if (this._expression !== undefined) {
       hasAnyValues = true;
       internalValueResult.expression = this._expression;
     }
-    if (this._location) {
+    if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._title) {
+    if (this._title !== undefined) {
       hasAnyValues = true;
       internalValueResult.title = this._title;
     }
@@ -260,7 +260,7 @@ export class CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputRe
   public get internalValue(): CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._topic) {
+    if (this._topic !== undefined) {
       hasAnyValues = true;
       internalValueResult.topic = this._topic;
     }
@@ -325,7 +325,7 @@ export class CloudAssetOrganizationFeedFeedOutputConfigOutputReference extends c
   public get internalValue(): CloudAssetOrganizationFeedFeedOutputConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._pubsubDestination?.internalValue) {
+    if (this._pubsubDestination?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.pubsubDestination = this._pubsubDestination?.internalValue;
     }
@@ -398,15 +398,15 @@ export class CloudAssetOrganizationFeedTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): CloudAssetOrganizationFeedTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

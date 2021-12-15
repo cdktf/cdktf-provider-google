@@ -149,11 +149,11 @@ export class CloudiotDeviceCredentialsPublicKeyOutputReference extends cdktf.Com
   public get internalValue(): CloudiotDeviceCredentialsPublicKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._format) {
+    if (this._format !== undefined) {
       hasAnyValues = true;
       internalValueResult.format = this._format;
     }
-    if (this._key) {
+    if (this._key !== undefined) {
       hasAnyValues = true;
       internalValueResult.key = this._key;
     }
@@ -266,11 +266,11 @@ export class CloudiotDeviceGatewayConfigOutputReference extends cdktf.ComplexObj
   public get internalValue(): CloudiotDeviceGatewayConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._gatewayAuthMethod) {
+    if (this._gatewayAuthMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.gatewayAuthMethod = this._gatewayAuthMethod;
     }
-    if (this._gatewayType) {
+    if (this._gatewayType !== undefined) {
       hasAnyValues = true;
       internalValueResult.gatewayType = this._gatewayType;
     }
@@ -364,15 +364,15 @@ export class CloudiotDeviceTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): CloudiotDeviceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

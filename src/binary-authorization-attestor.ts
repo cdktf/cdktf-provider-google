@@ -83,11 +83,11 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
   public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publicKeyPem) {
+    if (this._publicKeyPem !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicKeyPem = this._publicKeyPem;
     }
-    if (this._signatureAlgorithm) {
+    if (this._signatureAlgorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.signatureAlgorithm = this._signatureAlgorithm;
     }
@@ -238,11 +238,11 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNote | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._noteReference) {
+    if (this._noteReference !== undefined) {
       hasAnyValues = true;
       internalValueResult.noteReference = this._noteReference;
     }
-    if (this._publicKeys) {
+    if (this._publicKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicKeys = this._publicKeys;
     }
@@ -334,15 +334,15 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): BinaryAuthorizationAttestorTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
