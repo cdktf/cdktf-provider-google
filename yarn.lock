@@ -859,9 +859,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 constructs@^10.0.0, constructs@^10.0.12:
-  version "10.0.21"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.21.tgz#005af33ac0d79ef44c5fb9dd6d10e58621743771"
-  integrity sha512-J2qEE4N/ZHSaveXrrUan+/ccUq+nEXCweLTxuEZhK0VWEr9K51s9swd61KIMzL8fB9V8JZln03vBAU9VoIvAJA==
+  version "10.0.22"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.22.tgz#a8540f0f3fcfb7ae1a3bdbc9b554bf3ef66bcf3a"
+  integrity sha512-GKcEeKhW/job0wGONqxXDalh2kpj0GYZMWKuyreoT7LcP9VR4dflvVWeA5iD7QB/u0BO0Hqz5Cahisf7Otu89w==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2212,9 +2212,9 @@ jsii-rosetta@^1.39.0, jsii-rosetta@^1.50.0:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.406:
-  version "0.1.433"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.433.tgz#6a717e13a976e86843433b81ac962566b7e920f5"
-  integrity sha512-5AUv7Az1YiH5Bazp2bgoQIG2zBtHG530wEaUjn4mw366HbiHC2VBjHxX2VPPCzEgWRVrBbYYsX4TJVaxpGj1xw==
+  version "0.1.434"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.434.tgz#33d7e9b29583a82805a0d1f0b44cbd8fc65b560e"
+  integrity sha512-52U8+/us17J6KwaM9q4Pv3V2/ORuoX3q8Ww91w8H4eK6jEUKnDTfaga0Zor3MddK4Qudm7BwsXPOc2ZECqxlpQ==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.50.0"
@@ -2751,9 +2751,9 @@ npm-bundled@^1.1.1:
     npm-normalize-package-bin "^1.0.1"
 
 npm-check-updates@^12:
-  version "12.0.5"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.0.5.tgz#bd5606b4a645e5edfc31cc7a1c93e60dd3e14b9a"
-  integrity sha512-ns1liBBogwjmOVZY/PYgeIoarItwdOSBxccJDZKKkxsMkXges/Bp5CAnQIvYwlsz6fByQJFvqXSOqwIUBY6gpQ==
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.1.0.tgz#bf316bc35f90817880df9de175f2d69755eb9ff5"
+  integrity sha512-9GtSetBvcth7MuL+0MpOmWgdfiEgZcWRfnvoYnNZxbZpleHZCT0Z3HnbsL6/EAT2M+ye7FTZ+YjmDmZptt7Rkg==
   dependencies:
     chalk "^4.1.2"
     cint "^8.2.1"
@@ -3083,9 +3083,9 @@ path-type@^4.0.0:
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
 picomatch@^2.2.3:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
-  integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
+  integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
 pify@^2.3.0:
   version "2.3.0"
