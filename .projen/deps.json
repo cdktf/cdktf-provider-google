@@ -39,10 +39,6 @@
       "type": "build"
     },
     {
-      "name": "jsii-pacmak",
-      "type": "build"
-    },
-    {
       "name": "jsii",
       "version": "^1.46.0",
       "type": "build"
