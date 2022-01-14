@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html
+// https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface ComputeTargetTcpProxyConfig extends cdktf.TerraformMetaArgument
   /**
   * A reference to the BackendService resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#backend_service ComputeTargetTcpProxy#backend_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#backend_service ComputeTargetTcpProxy#backend_service}
   */
   readonly backendService: string;
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#description ComputeTargetTcpProxy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#description ComputeTargetTcpProxy#description}
   */
   readonly description?: string;
   /**
@@ -28,45 +28,45 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#name ComputeTargetTcpProxy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#name ComputeTargetTcpProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#project ComputeTargetTcpProxy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#project ComputeTargetTcpProxy#project}
   */
   readonly project?: string;
   /**
   * This field only applies when the forwarding rule that references
 this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#proxy_bind ComputeTargetTcpProxy#proxy_bind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#proxy_bind ComputeTargetTcpProxy#proxy_bind}
   */
   readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
   * Specifies the type of proxy header to append before sending data to
 the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#proxy_header ComputeTargetTcpProxy#proxy_header}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#proxy_header ComputeTargetTcpProxy#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#timeouts ComputeTargetTcpProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#timeouts ComputeTargetTcpProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetTcpProxyTimeouts;
 }
 export interface ComputeTargetTcpProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#create ComputeTargetTcpProxy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#create ComputeTargetTcpProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#delete ComputeTargetTcpProxy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#delete ComputeTargetTcpProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html#update ComputeTargetTcpProxy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy#update ComputeTargetTcpProxy#update}
   */
   readonly update?: string;
 }
@@ -178,7 +178,7 @@ export class ComputeTargetTcpProxyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html google_compute_target_tcp_proxy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy google_compute_target_tcp_proxy}
 */
 export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
 
@@ -192,7 +192,7 @@ export class ComputeTargetTcpProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy.html google_compute_target_tcp_proxy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_tcp_proxy google_compute_target_tcp_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

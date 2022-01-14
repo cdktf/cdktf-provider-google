@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html
+// https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaA
   /**
   * The name of the Group to create this membership in.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#group CloudIdentityGroupMembership#group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#group CloudIdentityGroupMembership#group}
   */
   readonly group: string;
   /**
   * preferred_member_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
   */
   readonly preferredMemberKey?: CloudIdentityGroupMembershipPreferredMemberKey;
   /**
   * roles block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#roles CloudIdentityGroupMembership#roles}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#roles CloudIdentityGroupMembership#roles}
   */
   readonly roles: CloudIdentityGroupMembershipRoles[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#timeouts CloudIdentityGroupMembership#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#timeouts CloudIdentityGroupMembership#timeouts}
   */
   readonly timeouts?: CloudIdentityGroupMembershipTimeouts;
 }
@@ -44,7 +44,7 @@ to the Identity Source's requirements.
 
 Must be unique within a namespace.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#id CloudIdentityGroupMembership#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
   */
   readonly id: string;
   /**
@@ -57,7 +57,7 @@ If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of 'identitysources/{identity_source_id}'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#namespace CloudIdentityGroupMembership#namespace}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#namespace CloudIdentityGroupMembership#namespace}
   */
   readonly namespace?: string;
 }
@@ -145,7 +145,7 @@ export interface CloudIdentityGroupMembershipRoles {
   /**
   * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: ["OWNER", "MANAGER", "MEMBER"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#name CloudIdentityGroupMembership#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#name CloudIdentityGroupMembership#name}
   */
   readonly name: string;
 }
@@ -162,15 +162,15 @@ export function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdent
 
 export interface CloudIdentityGroupMembershipTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#create CloudIdentityGroupMembership#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#create CloudIdentityGroupMembership#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#delete CloudIdentityGroupMembership#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#delete CloudIdentityGroupMembership#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html#update CloudIdentityGroupMembership#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#update CloudIdentityGroupMembership#update}
   */
   readonly update?: string;
 }
@@ -282,7 +282,7 @@ export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html google_cloud_identity_group_membership}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership google_cloud_identity_group_membership}
 */
 export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
 
@@ -296,7 +296,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership.html google_cloud_identity_group_membership} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership google_cloud_identity_group_membership} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

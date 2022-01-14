@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface StorageBucketIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy.html#bucket StorageBucketIamPolicy#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy#bucket StorageBucketIamPolicy#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy.html#policy_data StorageBucketIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy#policy_data StorageBucketIamPolicy#policy_data}
   */
   readonly policyData: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy.html google_storage_bucket_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy google_storage_bucket_iam_policy}
 */
 export class StorageBucketIamPolicy extends cdktf.TerraformResource {
 
@@ -32,7 +32,7 @@ export class StorageBucketIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy.html google_storage_bucket_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_policy google_storage_bucket_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

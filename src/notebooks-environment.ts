@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/notebooks_environment.html
+// https://www.terraform.io/docs/providers/google/r/notebooks_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,55 +10,55 @@ export interface NotebooksEnvironmentConfig extends cdktf.TerraformMetaArguments
   /**
   * A brief description of this environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#description NotebooksEnvironment#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#description NotebooksEnvironment#description}
   */
   readonly description?: string;
   /**
   * Display name of this environment for the UI.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#display_name NotebooksEnvironment#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#display_name NotebooksEnvironment#display_name}
   */
   readonly displayName?: string;
   /**
   * A reference to the zone where the machine resides.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#location NotebooksEnvironment#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#location NotebooksEnvironment#location}
   */
   readonly location: string;
   /**
   * The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#name NotebooksEnvironment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#name NotebooksEnvironment#name}
   */
   readonly name: string;
   /**
   * Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#post_startup_script NotebooksEnvironment#post_startup_script}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
   */
   readonly postStartupScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#project NotebooksEnvironment#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#project NotebooksEnvironment#project}
   */
   readonly project?: string;
   /**
   * container_image block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#container_image NotebooksEnvironment#container_image}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#container_image NotebooksEnvironment#container_image}
   */
   readonly containerImage?: NotebooksEnvironmentContainerImage;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#timeouts NotebooksEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#timeouts NotebooksEnvironment#timeouts}
   */
   readonly timeouts?: NotebooksEnvironmentTimeouts;
   /**
   * vm_image block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#vm_image NotebooksEnvironment#vm_image}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#vm_image NotebooksEnvironment#vm_image}
   */
   readonly vmImage?: NotebooksEnvironmentVmImage;
 }
@@ -67,13 +67,13 @@ export interface NotebooksEnvironmentContainerImage {
   * The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#repository NotebooksEnvironment#repository}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#repository NotebooksEnvironment#repository}
   */
   readonly repository: string;
   /**
   * The tag of the container image. If not specified, this defaults to the latest tag.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#tag NotebooksEnvironment#tag}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#tag NotebooksEnvironment#tag}
   */
   readonly tag?: string;
 }
@@ -159,15 +159,15 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
 }
 export interface NotebooksEnvironmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#create NotebooksEnvironment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#create NotebooksEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#delete NotebooksEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#delete NotebooksEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#update NotebooksEnvironment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#update NotebooksEnvironment#update}
   */
   readonly update?: string;
 }
@@ -281,20 +281,20 @@ export interface NotebooksEnvironmentVmImage {
   /**
   * Use this VM image family to find the image; the newest image in this family will be used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#image_family NotebooksEnvironment#image_family}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#image_family NotebooksEnvironment#image_family}
   */
   readonly imageFamily?: string;
   /**
   * Use VM image name to find the image.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#image_name NotebooksEnvironment#image_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#image_name NotebooksEnvironment#image_name}
   */
   readonly imageName?: string;
   /**
   * The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html#project NotebooksEnvironment#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment#project NotebooksEnvironment#project}
   */
   readonly project: string;
 }
@@ -403,7 +403,7 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html google_notebooks_environment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment google_notebooks_environment}
 */
 export class NotebooksEnvironment extends cdktf.TerraformResource {
 
@@ -417,7 +417,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment.html google_notebooks_environment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_environment google_notebooks_environment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

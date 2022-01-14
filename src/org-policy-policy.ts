@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/org_policy_policy.html
+// https://www.terraform.io/docs/providers/google/r/org_policy_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface OrgPolicyPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#name OrgPolicyPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#name OrgPolicyPolicy#name}
   */
   readonly name: string;
   /**
   * The parent of the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#parent OrgPolicyPolicy#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#parent OrgPolicyPolicy#parent}
   */
   readonly parent: string;
   /**
   * spec block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#spec OrgPolicyPolicy#spec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#spec OrgPolicyPolicy#spec}
   */
   readonly spec?: OrgPolicyPolicySpec;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#timeouts OrgPolicyPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#timeouts OrgPolicyPolicy#timeouts}
   */
   readonly timeouts?: OrgPolicyPolicyTimeouts;
 }
@@ -36,25 +36,25 @@ export interface OrgPolicyPolicySpecRulesCondition {
   /**
   * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#description OrgPolicyPolicy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#description OrgPolicyPolicy#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#expression OrgPolicyPolicy#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#expression OrgPolicyPolicy#expression}
   */
   readonly expression?: string;
   /**
   * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#location OrgPolicyPolicy#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#location OrgPolicyPolicy#location}
   */
   readonly location?: string;
   /**
   * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#title OrgPolicyPolicy#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#title OrgPolicyPolicy#title}
   */
   readonly title?: string;
 }
@@ -191,13 +191,13 @@ export interface OrgPolicyPolicySpecRulesValues {
   /**
   * List of values allowed at this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#allowed_values OrgPolicyPolicy#allowed_values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#allowed_values OrgPolicyPolicy#allowed_values}
   */
   readonly allowedValues?: string[];
   /**
   * List of values denied at this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#denied_values OrgPolicyPolicy#denied_values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#denied_values OrgPolicyPolicy#denied_values}
   */
   readonly deniedValues?: string[];
 }
@@ -288,31 +288,31 @@ export interface OrgPolicyPolicySpecRules {
   /**
   * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#allow_all OrgPolicyPolicy#allow_all}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#allow_all OrgPolicyPolicy#allow_all}
   */
   readonly allowAll?: string;
   /**
   * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#deny_all OrgPolicyPolicy#deny_all}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#deny_all OrgPolicyPolicy#deny_all}
   */
   readonly denyAll?: string;
   /**
   * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#enforce OrgPolicyPolicy#enforce}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#enforce OrgPolicyPolicy#enforce}
   */
   readonly enforce?: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#condition OrgPolicyPolicy#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#condition OrgPolicyPolicy#condition}
   */
   readonly condition?: OrgPolicyPolicySpecRulesCondition;
   /**
   * values block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#values OrgPolicyPolicy#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#values OrgPolicyPolicy#values}
   */
   readonly values?: OrgPolicyPolicySpecRulesValues;
 }
@@ -335,19 +335,19 @@ export interface OrgPolicyPolicySpec {
   /**
   * Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#inherit_from_parent OrgPolicyPolicy#inherit_from_parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#inherit_from_parent OrgPolicyPolicy#inherit_from_parent}
   */
   readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#reset OrgPolicyPolicy#reset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#reset OrgPolicyPolicy#reset}
   */
   readonly reset?: boolean | cdktf.IResolvable;
   /**
   * rules block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#rules OrgPolicyPolicy#rules}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#rules OrgPolicyPolicy#rules}
   */
   readonly rules?: OrgPolicyPolicySpecRules[];
 }
@@ -460,15 +460,15 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
 }
 export interface OrgPolicyPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#create OrgPolicyPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#create OrgPolicyPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#delete OrgPolicyPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#delete OrgPolicyPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html#update OrgPolicyPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#update OrgPolicyPolicy#update}
   */
   readonly update?: string;
 }
@@ -580,7 +580,7 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html google_org_policy_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy google_org_policy_policy}
 */
 export class OrgPolicyPolicy extends cdktf.TerraformResource {
 
@@ -594,7 +594,7 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy.html google_org_policy_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy google_org_policy_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

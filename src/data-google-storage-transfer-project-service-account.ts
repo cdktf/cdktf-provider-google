@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account.html
+// https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleStorageTransferProjectServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account.html#project DataGoogleStorageTransferProjectServiceAccount#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account#project DataGoogleStorageTransferProjectServiceAccount#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account.html google_storage_transfer_project_service_account}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account google_storage_transfer_project_service_account}
 */
 export class DataGoogleStorageTransferProjectServiceAccount extends cdktf.TerraformDataSource {
 
@@ -28,7 +28,7 @@ export class DataGoogleStorageTransferProjectServiceAccount extends cdktf.Terraf
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account.html google_storage_transfer_project_service_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account google_storage_transfer_project_service_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

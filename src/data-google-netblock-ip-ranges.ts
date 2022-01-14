@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html
+// https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleNetblockIpRangesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html#range_type DataGoogleNetblockIpRanges#range_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}
   */
   readonly rangeType?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html google_netblock_ip_ranges}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges google_netblock_ip_ranges}
 */
 export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
 
@@ -28,7 +28,7 @@ export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges.html google_netblock_ip_ranges} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/netblock_ip_ranges google_netblock_ip_ranges} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html
+// https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,43 +10,43 @@ export interface OrganizationIamCustomRoleConfig extends cdktf.TerraformMetaArgu
   /**
   * A human-readable description for the role.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html#description OrganizationIamCustomRole#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role#description OrganizationIamCustomRole#description}
   */
   readonly description?: string;
   /**
   * The numeric ID of the organization in which you want to create a custom role.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html#org_id OrganizationIamCustomRole#org_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role#org_id OrganizationIamCustomRole#org_id}
   */
   readonly orgId: string;
   /**
   * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html#permissions OrganizationIamCustomRole#permissions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role#permissions OrganizationIamCustomRole#permissions}
   */
   readonly permissions: string[];
   /**
   * The role id to use for this role.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html#role_id OrganizationIamCustomRole#role_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role#role_id OrganizationIamCustomRole#role_id}
   */
   readonly roleId: string;
   /**
   * The current launch stage of the role. Defaults to GA.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html#stage OrganizationIamCustomRole#stage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role#stage OrganizationIamCustomRole#stage}
   */
   readonly stage?: string;
   /**
   * A human-readable title for the role.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html#title OrganizationIamCustomRole#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role#title OrganizationIamCustomRole#title}
   */
   readonly title: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html google_organization_iam_custom_role}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role google_organization_iam_custom_role}
 */
 export class OrganizationIamCustomRole extends cdktf.TerraformResource {
 
@@ -60,7 +60,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role.html google_organization_iam_custom_role} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_custom_role google_organization_iam_custom_role} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

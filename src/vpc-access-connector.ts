@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html
+// https://www.terraform.io/docs/providers/google/r/vpc_access_connector
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,57 +10,57 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   /**
   * The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#ip_cidr_range VpcAccessConnector#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#ip_cidr_range VpcAccessConnector#ip_cidr_range}
   */
   readonly ipCidrRange?: string;
   /**
   * Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 300.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#max_throughput VpcAccessConnector#max_throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#max_throughput VpcAccessConnector#max_throughput}
   */
   readonly maxThroughput?: number;
   /**
   * Minimum throughput of the connector in Mbps. Default and min is 200.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#min_throughput VpcAccessConnector#min_throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#min_throughput VpcAccessConnector#min_throughput}
   */
   readonly minThroughput?: number;
   /**
   * The name of the resource (Max 25 characters).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#name VpcAccessConnector#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#name VpcAccessConnector#name}
   */
   readonly name: string;
   /**
   * Name of the VPC network. Required if 'ip_cidr_range' is set.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#network VpcAccessConnector#network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#network VpcAccessConnector#network}
   */
   readonly network?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#project VpcAccessConnector#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#project VpcAccessConnector#project}
   */
   readonly project?: string;
   /**
   * Region where the VPC Access connector resides. If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#region VpcAccessConnector#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#region VpcAccessConnector#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#timeouts VpcAccessConnector#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#timeouts VpcAccessConnector#timeouts}
   */
   readonly timeouts?: VpcAccessConnectorTimeouts;
 }
 export interface VpcAccessConnectorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#create VpcAccessConnector#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#create VpcAccessConnector#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html#delete VpcAccessConnector#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#delete VpcAccessConnector#delete}
   */
   readonly delete?: string;
 }
@@ -149,7 +149,7 @@ export class VpcAccessConnectorTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html google_vpc_access_connector}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector google_vpc_access_connector}
 */
 export class VpcAccessConnector extends cdktf.TerraformResource {
 
@@ -163,7 +163,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector.html google_vpc_access_connector} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector google_vpc_access_connector} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

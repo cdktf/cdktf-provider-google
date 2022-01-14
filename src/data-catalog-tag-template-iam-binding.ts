@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataCatalogTagTemplateIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#members DataCatalogTagTemplateIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#members DataCatalogTagTemplateIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#project DataCatalogTagTemplateIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#project DataCatalogTagTemplateIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#region DataCatalogTagTemplateIamBinding#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#region DataCatalogTagTemplateIamBinding#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#role DataCatalogTagTemplateIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#role DataCatalogTagTemplateIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#tag_template DataCatalogTagTemplateIamBinding#tag_template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#tag_template DataCatalogTagTemplateIamBinding#tag_template}
   */
   readonly tagTemplate: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#condition DataCatalogTagTemplateIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#condition DataCatalogTagTemplateIamBinding#condition}
   */
   readonly condition?: DataCatalogTagTemplateIamBindingCondition;
 }
 export interface DataCatalogTagTemplateIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#description DataCatalogTagTemplateIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#description DataCatalogTagTemplateIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#expression DataCatalogTagTemplateIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#expression DataCatalogTagTemplateIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html#title DataCatalogTagTemplateIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding#title DataCatalogTagTemplateIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class DataCatalogTagTemplateIamBindingConditionOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html google_data_catalog_tag_template_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding google_data_catalog_tag_template_iam_binding}
 */
 export class DataCatalogTagTemplateIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class DataCatalogTagTemplateIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding.html google_data_catalog_tag_template_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_binding google_data_catalog_tag_template_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

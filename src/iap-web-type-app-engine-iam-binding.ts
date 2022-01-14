@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebTypeAppEngineIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#app_id IapWebTypeAppEngineIamBinding#app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#app_id IapWebTypeAppEngineIamBinding#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#members IapWebTypeAppEngineIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#members IapWebTypeAppEngineIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#project IapWebTypeAppEngineIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#project IapWebTypeAppEngineIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#role IapWebTypeAppEngineIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#role IapWebTypeAppEngineIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#condition IapWebTypeAppEngineIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#condition IapWebTypeAppEngineIamBinding#condition}
   */
   readonly condition?: IapWebTypeAppEngineIamBindingCondition;
 }
 export interface IapWebTypeAppEngineIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#description IapWebTypeAppEngineIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#description IapWebTypeAppEngineIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#expression IapWebTypeAppEngineIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#expression IapWebTypeAppEngineIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html#title IapWebTypeAppEngineIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding#title IapWebTypeAppEngineIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class IapWebTypeAppEngineIamBindingConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html google_iap_web_type_app_engine_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding google_iap_web_type_app_engine_iam_binding}
 */
 export class IapWebTypeAppEngineIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class IapWebTypeAppEngineIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding.html google_iap_web_type_app_engine_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_app_engine_iam_binding google_iap_web_type_app_engine_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

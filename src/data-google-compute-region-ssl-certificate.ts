@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate.html
+// https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,24 +19,24 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate.html#name DataGoogleComputeRegionSslCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate#name DataGoogleComputeRegionSslCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate.html#project DataGoogleComputeRegionSslCertificate#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate#project DataGoogleComputeRegionSslCertificate#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created regional ssl certificate should reside.
 If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate.html#region DataGoogleComputeRegionSslCertificate#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate#region DataGoogleComputeRegionSslCertificate#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate.html google_compute_region_ssl_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate google_compute_region_ssl_certificate}
 */
 export class DataGoogleComputeRegionSslCertificate extends cdktf.TerraformDataSource {
 
@@ -50,7 +50,7 @@ export class DataGoogleComputeRegionSslCertificate extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate.html google_compute_region_ssl_certificate} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_region_ssl_certificate google_compute_region_ssl_certificate} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

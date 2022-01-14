@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_node_types.html
+// https://www.terraform.io/docs/providers/google/d/compute_node_types
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeNodeTypesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_node_types.html#project DataGoogleComputeNodeTypes#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_node_types#project DataGoogleComputeNodeTypes#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_node_types.html#zone DataGoogleComputeNodeTypes#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_node_types#zone DataGoogleComputeNodeTypes#zone}
   */
   readonly zone?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_node_types.html google_compute_node_types}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_node_types google_compute_node_types}
 */
 export class DataGoogleComputeNodeTypes extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleComputeNodeTypes extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_node_types.html google_compute_node_types} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_node_types google_compute_node_types} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

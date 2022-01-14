@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/folder_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/folder_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface FolderIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#folder FolderIamMember#folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#folder FolderIamMember#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#member FolderIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#member FolderIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#role FolderIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#role FolderIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#condition FolderIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#condition FolderIamMember#condition}
   */
   readonly condition?: FolderIamMemberCondition;
 }
 export interface FolderIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#description FolderIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#description FolderIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#expression FolderIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#expression FolderIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html#title FolderIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member#title FolderIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class FolderIamMemberConditionOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html google_folder_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member google_folder_iam_member}
 */
 export class FolderIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class FolderIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member.html google_folder_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_iam_member google_folder_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

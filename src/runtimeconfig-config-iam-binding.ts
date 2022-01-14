@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface RuntimeconfigConfigIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#config RuntimeconfigConfigIamBinding#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#config RuntimeconfigConfigIamBinding#config}
   */
   readonly config: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#members RuntimeconfigConfigIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#members RuntimeconfigConfigIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#project RuntimeconfigConfigIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#project RuntimeconfigConfigIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#role RuntimeconfigConfigIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#role RuntimeconfigConfigIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#condition RuntimeconfigConfigIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#condition RuntimeconfigConfigIamBinding#condition}
   */
   readonly condition?: RuntimeconfigConfigIamBindingCondition;
 }
 export interface RuntimeconfigConfigIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#description RuntimeconfigConfigIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#description RuntimeconfigConfigIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#expression RuntimeconfigConfigIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#expression RuntimeconfigConfigIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html#title RuntimeconfigConfigIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding#title RuntimeconfigConfigIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class RuntimeconfigConfigIamBindingConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html google_runtimeconfig_config_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding google_runtimeconfig_config_iam_binding}
 */
 export class RuntimeconfigConfigIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class RuntimeconfigConfigIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding.html google_runtimeconfig_config_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_binding google_runtimeconfig_config_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

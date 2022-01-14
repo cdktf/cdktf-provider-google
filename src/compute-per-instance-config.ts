@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html
+// https://www.terraform.io/docs/providers/google/r/compute_per_instance_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,47 +10,47 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   /**
   * The instance group manager this instance config is part of.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#instance_group_manager ComputePerInstanceConfig#instance_group_manager}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#instance_group_manager ComputePerInstanceConfig#instance_group_manager}
   */
   readonly instanceGroupManager: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#minimal_action ComputePerInstanceConfig#minimal_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#minimal_action ComputePerInstanceConfig#minimal_action}
   */
   readonly minimalAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
   */
   readonly mostDisruptiveAllowedAction?: string;
   /**
   * The name for this per-instance config and its corresponding instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#name ComputePerInstanceConfig#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#name ComputePerInstanceConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#project ComputePerInstanceConfig#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#project ComputePerInstanceConfig#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#remove_instance_state_on_destroy ComputePerInstanceConfig#remove_instance_state_on_destroy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#remove_instance_state_on_destroy ComputePerInstanceConfig#remove_instance_state_on_destroy}
   */
   readonly removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * Zone where the containing instance group manager is located
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#zone ComputePerInstanceConfig#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#zone ComputePerInstanceConfig#zone}
   */
   readonly zone?: string;
   /**
   * preserved_state block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#preserved_state ComputePerInstanceConfig#preserved_state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#preserved_state ComputePerInstanceConfig#preserved_state}
   */
   readonly preservedState?: ComputePerInstanceConfigPreservedState;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#timeouts ComputePerInstanceConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#timeouts ComputePerInstanceConfig#timeouts}
   */
   readonly timeouts?: ComputePerInstanceConfigTimeouts;
 }
@@ -62,26 +62,26 @@ The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'.
 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently
 deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#delete_rule ComputePerInstanceConfig#delete_rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#delete_rule ComputePerInstanceConfig#delete_rule}
   */
   readonly deleteRule?: string;
   /**
   * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#device_name ComputePerInstanceConfig#device_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#device_name ComputePerInstanceConfig#device_name}
   */
   readonly deviceName: string;
   /**
   * The mode of the disk. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#mode ComputePerInstanceConfig#mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#mode ComputePerInstanceConfig#mode}
   */
   readonly mode?: string;
   /**
   * The URI of an existing persistent disk to attach under the specified device-name in the format
 'projects/project-id/zones/zone/disks/disk-name'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#source ComputePerInstanceConfig#source}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#source ComputePerInstanceConfig#source}
   */
   readonly source: string;
 }
@@ -103,13 +103,13 @@ export interface ComputePerInstanceConfigPreservedState {
   /**
   * Preserved metadata defined for this instance. This is a list of key->value pairs.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#metadata ComputePerInstanceConfig#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#metadata ComputePerInstanceConfig#metadata}
   */
   readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * disk block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#disk ComputePerInstanceConfig#disk}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#disk ComputePerInstanceConfig#disk}
   */
   readonly disk?: ComputePerInstanceConfigPreservedStateDisk[];
 }
@@ -200,15 +200,15 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
 }
 export interface ComputePerInstanceConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#create ComputePerInstanceConfig#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#create ComputePerInstanceConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#delete ComputePerInstanceConfig#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#delete ComputePerInstanceConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html#update ComputePerInstanceConfig#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#update ComputePerInstanceConfig#update}
   */
   readonly update?: string;
 }
@@ -320,7 +320,7 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html google_compute_per_instance_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config google_compute_per_instance_config}
 */
 export class ComputePerInstanceConfig extends cdktf.TerraformResource {
 
@@ -334,7 +334,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config.html google_compute_per_instance_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config google_compute_per_instance_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

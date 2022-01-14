@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/dns_managed_zone.html
+// https://www.terraform.io/docs/providers/google/d/dns_managed_zone
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone.html#name DataGoogleDnsManagedZone#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#name DataGoogleDnsManagedZone#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone.html#project DataGoogleDnsManagedZone#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#project DataGoogleDnsManagedZone#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone.html google_dns_managed_zone}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone google_dns_managed_zone}
 */
 export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone.html google_dns_managed_zone} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone google_dns_managed_zone} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

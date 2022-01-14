@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html
+// https://www.terraform.io/docs/providers/google/r/storage_default_object_acl
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface StorageDefaultObjectAclConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html#bucket StorageDefaultObjectAcl#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl#bucket StorageDefaultObjectAcl#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html#role_entity StorageDefaultObjectAcl#role_entity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl#role_entity StorageDefaultObjectAcl#role_entity}
   */
   readonly roleEntity?: string[];
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html google_storage_default_object_acl}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl google_storage_default_object_acl}
 */
 export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
 
@@ -32,7 +32,7 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl.html google_storage_default_object_acl} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_default_object_acl google_storage_default_object_acl} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

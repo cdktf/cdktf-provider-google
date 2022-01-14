@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSubnetworkIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#policy_data ComputeSubnetworkIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy#policy_data ComputeSubnetworkIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#project ComputeSubnetworkIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy#project ComputeSubnetworkIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#region ComputeSubnetworkIamPolicy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy#region ComputeSubnetworkIamPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html#subnetwork ComputeSubnetworkIamPolicy#subnetwork}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy#subnetwork ComputeSubnetworkIamPolicy#subnetwork}
   */
   readonly subnetwork: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html google_compute_subnetwork_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy}
 */
 export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class ComputeSubnetworkIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy.html google_compute_subnetwork_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_policy google_compute_subnetwork_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

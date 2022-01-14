@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/pubsub_schema.html
+// https://www.terraform.io/docs/providers/google/r/pubsub_schema
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,43 +12,43 @@ export interface PubsubSchemaConfig extends cdktf.TerraformMetaArguments {
 This should contain a string representing the full definition of the schema
 that is a valid schema definition of the type specified in type.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#definition PubsubSchema#definition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#definition PubsubSchema#definition}
   */
   readonly definition?: string;
   /**
   * The ID to use for the schema, which will become the final component of the schema's resource name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#name PubsubSchema#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#name PubsubSchema#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#project PubsubSchema#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#project PubsubSchema#project}
   */
   readonly project?: string;
   /**
   * The type of the schema definition Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "PROTOCOL_BUFFER", "AVRO"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#type PubsubSchema#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#type PubsubSchema#type}
   */
   readonly type?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#timeouts PubsubSchema#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#timeouts PubsubSchema#timeouts}
   */
   readonly timeouts?: PubsubSchemaTimeouts;
 }
 export interface PubsubSchemaTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#create PubsubSchema#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#create PubsubSchema#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#delete PubsubSchema#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#delete PubsubSchema#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html#update PubsubSchema#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#update PubsubSchema#update}
   */
   readonly update?: string;
 }
@@ -160,7 +160,7 @@ export class PubsubSchemaTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html google_pubsub_schema}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema google_pubsub_schema}
 */
 export class PubsubSchema extends cdktf.TerraformResource {
 
@@ -174,7 +174,7 @@ export class PubsubSchema extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema.html google_pubsub_schema} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema google_pubsub_schema} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

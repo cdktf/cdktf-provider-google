@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/spanner_instance.html
+// https://www.terraform.io/docs/providers/google/d/spanner_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,25 +15,25 @@ is stored. Values are typically of the form 'regional-europe-west1' , 'us-centra
 In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#config DataGoogleSpannerInstance#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#config DataGoogleSpannerInstance#config}
   */
   readonly config?: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
 unique per project and between 4 and 30 characters in length.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#display_name DataGoogleSpannerInstance#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#display_name DataGoogleSpannerInstance#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#force_destroy DataGoogleSpannerInstance#force_destroy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#force_destroy DataGoogleSpannerInstance#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
   * An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#labels DataGoogleSpannerInstance#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#labels DataGoogleSpannerInstance#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -44,31 +44,31 @@ in length.
 
 If not provided, a random string starting with 'tf-' will be selected.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#name DataGoogleSpannerInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#name DataGoogleSpannerInstance#name}
   */
   readonly name: string;
   /**
   * The number of nodes allocated to this instance. At most one of either node_count or processing_units
 can be present in terraform.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#num_nodes DataGoogleSpannerInstance#num_nodes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#num_nodes DataGoogleSpannerInstance#num_nodes}
   */
   readonly numNodes?: number;
   /**
   * The number of processing units allocated to this instance. At most one of processing_units 
 or node_count can be present in terraform.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#processing_units DataGoogleSpannerInstance#processing_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#processing_units DataGoogleSpannerInstance#processing_units}
   */
   readonly processingUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html#project DataGoogleSpannerInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#project DataGoogleSpannerInstance#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html google_spanner_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/spanner_instance google_spanner_instance}
 */
 export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
 
@@ -82,7 +82,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/spanner_instance.html google_spanner_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/spanner_instance google_spanner_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

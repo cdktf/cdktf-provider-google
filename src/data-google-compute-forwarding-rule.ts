@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule.html
+// https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMe
   /**
   * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule.html#name DataGoogleComputeForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule#name DataGoogleComputeForwardingRule#name}
   */
   readonly name: string;
   /**
   * The project this resource belongs in.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule.html#project DataGoogleComputeForwardingRule#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule#project DataGoogleComputeForwardingRule#project}
   */
   readonly project?: string;
   /**
   * The location of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule.html#region DataGoogleComputeForwardingRule#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule#region DataGoogleComputeForwardingRule#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule.html google_compute_forwarding_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule google_compute_forwarding_rule}
 */
 export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
@@ -42,7 +42,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule.html google_compute_forwarding_rule} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule google_compute_forwarding_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

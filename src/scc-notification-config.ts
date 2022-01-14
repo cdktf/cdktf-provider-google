@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/scc_notification_config.html
+// https://www.terraform.io/docs/providers/google/r/scc_notification_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,39 +10,39 @@ export interface SccNotificationConfigConfig extends cdktf.TerraformMetaArgument
   /**
   * This must be unique within the organization.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#config_id SccNotificationConfig#config_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#config_id SccNotificationConfig#config_id}
   */
   readonly configId: string;
   /**
   * The description of the notification config (max of 1024 characters).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#description SccNotificationConfig#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#description SccNotificationConfig#description}
   */
   readonly description?: string;
   /**
   * The organization whose Cloud Security Command Center the Notification
 Config lives in.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#organization SccNotificationConfig#organization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#organization SccNotificationConfig#organization}
   */
   readonly organization: string;
   /**
   * The Pub/Sub topic to send notifications to. Its format is
 "projects/[project_id]/topics/[topic]".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#pubsub_topic SccNotificationConfig#pubsub_topic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#pubsub_topic SccNotificationConfig#pubsub_topic}
   */
   readonly pubsubTopic: string;
   /**
   * streaming_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#streaming_config SccNotificationConfig#streaming_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#streaming_config SccNotificationConfig#streaming_config}
   */
   readonly streamingConfig: SccNotificationConfigStreamingConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#timeouts SccNotificationConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#timeouts SccNotificationConfig#timeouts}
   */
   readonly timeouts?: SccNotificationConfigTimeouts;
 }
@@ -74,7 +74,7 @@ See
 [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
 for information on how to write a filter.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#filter SccNotificationConfig#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#filter SccNotificationConfig#filter}
   */
   readonly filter: string;
 }
@@ -137,15 +137,15 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
 }
 export interface SccNotificationConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#create SccNotificationConfig#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#create SccNotificationConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#delete SccNotificationConfig#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#delete SccNotificationConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html#update SccNotificationConfig#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config#update SccNotificationConfig#update}
   */
   readonly update?: string;
 }
@@ -257,7 +257,7 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html google_scc_notification_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config google_scc_notification_config}
 */
 export class SccNotificationConfig extends cdktf.TerraformResource {
 
@@ -271,7 +271,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config.html google_scc_notification_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/scc_notification_config google_scc_notification_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeDiskIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#member ComputeDiskIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#member ComputeDiskIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#name ComputeDiskIamMember#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#name ComputeDiskIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#project ComputeDiskIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#project ComputeDiskIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#role ComputeDiskIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#role ComputeDiskIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#zone ComputeDiskIamMember#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#zone ComputeDiskIamMember#zone}
   */
   readonly zone?: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#condition ComputeDiskIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#condition ComputeDiskIamMember#condition}
   */
   readonly condition?: ComputeDiskIamMemberCondition;
 }
 export interface ComputeDiskIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#description ComputeDiskIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#description ComputeDiskIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#expression ComputeDiskIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#expression ComputeDiskIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html#title ComputeDiskIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member#title ComputeDiskIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class ComputeDiskIamMemberConditionOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html google_compute_disk_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member google_compute_disk_iam_member}
 */
 export class ComputeDiskIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class ComputeDiskIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member.html google_compute_disk_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_member google_compute_disk_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface IapAppEngineServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#app_id IapAppEngineServiceIamMember#app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#app_id IapAppEngineServiceIamMember#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#member IapAppEngineServiceIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#member IapAppEngineServiceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#project IapAppEngineServiceIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#project IapAppEngineServiceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#role IapAppEngineServiceIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#role IapAppEngineServiceIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#service IapAppEngineServiceIamMember#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#service IapAppEngineServiceIamMember#service}
   */
   readonly service: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#condition IapAppEngineServiceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#condition IapAppEngineServiceIamMember#condition}
   */
   readonly condition?: IapAppEngineServiceIamMemberCondition;
 }
 export interface IapAppEngineServiceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#description IapAppEngineServiceIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#description IapAppEngineServiceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#expression IapAppEngineServiceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#expression IapAppEngineServiceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html#title IapAppEngineServiceIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member#title IapAppEngineServiceIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class IapAppEngineServiceIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html google_iap_app_engine_service_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member google_iap_app_engine_service_iam_member}
 */
 export class IapAppEngineServiceIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class IapAppEngineServiceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member.html google_iap_app_engine_service_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_member google_iap_app_engine_service_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

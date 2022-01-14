@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebTypeComputeIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#members IapWebTypeComputeIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#members IapWebTypeComputeIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#project IapWebTypeComputeIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#project IapWebTypeComputeIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#role IapWebTypeComputeIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#role IapWebTypeComputeIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#condition IapWebTypeComputeIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#condition IapWebTypeComputeIamBinding#condition}
   */
   readonly condition?: IapWebTypeComputeIamBindingCondition;
 }
 export interface IapWebTypeComputeIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#description IapWebTypeComputeIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#description IapWebTypeComputeIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#expression IapWebTypeComputeIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#expression IapWebTypeComputeIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html#title IapWebTypeComputeIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#title IapWebTypeComputeIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class IapWebTypeComputeIamBindingConditionOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html google_iap_web_type_compute_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding google_iap_web_type_compute_iam_binding}
 */
 export class IapWebTypeComputeIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class IapWebTypeComputeIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding.html google_iap_web_type_compute_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding google_iap_web_type_compute_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

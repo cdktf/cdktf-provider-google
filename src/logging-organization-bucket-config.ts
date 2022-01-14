@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html
+// https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,37 +10,37 @@ export interface LoggingOrganizationBucketConfigConfig extends cdktf.TerraformMe
   /**
   * The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html#bucket_id LoggingOrganizationBucketConfig#bucket_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#bucket_id LoggingOrganizationBucketConfig#bucket_id}
   */
   readonly bucketId: string;
   /**
   * An optional description for this bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html#description LoggingOrganizationBucketConfig#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#description LoggingOrganizationBucketConfig#description}
   */
   readonly description?: string;
   /**
   * The location of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html#location LoggingOrganizationBucketConfig#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#location LoggingOrganizationBucketConfig#location}
   */
   readonly location: string;
   /**
   * The parent resource that contains the logging bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html#organization LoggingOrganizationBucketConfig#organization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#organization LoggingOrganizationBucketConfig#organization}
   */
   readonly organization: string;
   /**
   * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html#retention_days LoggingOrganizationBucketConfig#retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#retention_days LoggingOrganizationBucketConfig#retention_days}
   */
   readonly retentionDays?: number;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html google_logging_organization_bucket_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config google_logging_organization_bucket_config}
 */
 export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
 
@@ -54,7 +54,7 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config.html google_logging_organization_bucket_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config google_logging_organization_bucket_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

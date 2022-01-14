@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/spanner_instance.html
+// https://www.terraform.io/docs/providers/google/r/spanner_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,25 +15,25 @@ is stored. Values are typically of the form 'regional-europe-west1' , 'us-centra
 In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#config SpannerInstance#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#config SpannerInstance#config}
   */
   readonly config: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
 unique per project and between 4 and 30 characters in length.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#display_name SpannerInstance#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#display_name SpannerInstance#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#force_destroy SpannerInstance#force_destroy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#force_destroy SpannerInstance#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
   * An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#labels SpannerInstance#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#labels SpannerInstance#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -44,45 +44,45 @@ in length.
 
 If not provided, a random string starting with 'tf-' will be selected.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#name SpannerInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#name SpannerInstance#name}
   */
   readonly name?: string;
   /**
   * The number of nodes allocated to this instance. At most one of either node_count or processing_units
 can be present in terraform.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#num_nodes SpannerInstance#num_nodes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#num_nodes SpannerInstance#num_nodes}
   */
   readonly numNodes?: number;
   /**
   * The number of processing units allocated to this instance. At most one of processing_units 
 or node_count can be present in terraform.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#processing_units SpannerInstance#processing_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#processing_units SpannerInstance#processing_units}
   */
   readonly processingUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#project SpannerInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#project SpannerInstance#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#timeouts SpannerInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#timeouts SpannerInstance#timeouts}
   */
   readonly timeouts?: SpannerInstanceTimeouts;
 }
 export interface SpannerInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#create SpannerInstance#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#create SpannerInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#delete SpannerInstance#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#delete SpannerInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html#update SpannerInstance#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#update SpannerInstance#update}
   */
   readonly update?: string;
 }
@@ -194,7 +194,7 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html google_spanner_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_instance google_spanner_instance}
 */
 export class SpannerInstance extends cdktf.TerraformResource {
 
@@ -208,7 +208,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_instance.html google_spanner_instance} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_instance google_spanner_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

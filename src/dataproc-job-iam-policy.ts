@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataprocJobIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#job_id DataprocJobIamPolicy#job_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy#job_id DataprocJobIamPolicy#job_id}
   */
   readonly jobId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#policy_data DataprocJobIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy#policy_data DataprocJobIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#project DataprocJobIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy#project DataprocJobIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html#region DataprocJobIamPolicy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy#region DataprocJobIamPolicy#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html google_dataproc_job_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy google_dataproc_job_iam_policy}
 */
 export class DataprocJobIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class DataprocJobIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy.html google_dataproc_job_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_policy google_dataproc_job_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

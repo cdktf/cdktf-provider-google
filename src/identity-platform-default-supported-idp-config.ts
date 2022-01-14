@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html
+// https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,19 +10,19 @@ export interface IdentityPlatformDefaultSupportedIdpConfigConfig extends cdktf.T
   /**
   * OAuth client ID
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#client_id IdentityPlatformDefaultSupportedIdpConfig#client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#client_id IdentityPlatformDefaultSupportedIdpConfig#client_id}
   */
   readonly clientId: string;
   /**
   * OAuth client secret
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#client_secret IdentityPlatformDefaultSupportedIdpConfig#client_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#client_secret IdentityPlatformDefaultSupportedIdpConfig#client_secret}
   */
   readonly clientSecret: string;
   /**
   * If this IDP allows the user to sign in
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#enabled IdentityPlatformDefaultSupportedIdpConfig#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#enabled IdentityPlatformDefaultSupportedIdpConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
@@ -48,31 +48,31 @@ export interface IdentityPlatformDefaultSupportedIdpConfigConfig extends cdktf.T
 
 * 'yahoo.com'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#idp_id IdentityPlatformDefaultSupportedIdpConfig#idp_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#idp_id IdentityPlatformDefaultSupportedIdpConfig#idp_id}
   */
   readonly idpId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#project IdentityPlatformDefaultSupportedIdpConfig#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#project IdentityPlatformDefaultSupportedIdpConfig#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#timeouts IdentityPlatformDefaultSupportedIdpConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#timeouts IdentityPlatformDefaultSupportedIdpConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformDefaultSupportedIdpConfigTimeouts;
 }
 export interface IdentityPlatformDefaultSupportedIdpConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#create IdentityPlatformDefaultSupportedIdpConfig#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#create IdentityPlatformDefaultSupportedIdpConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#delete IdentityPlatformDefaultSupportedIdpConfig#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#delete IdentityPlatformDefaultSupportedIdpConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html#update IdentityPlatformDefaultSupportedIdpConfig#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config#update IdentityPlatformDefaultSupportedIdpConfig#update}
   */
   readonly update?: string;
 }
@@ -184,7 +184,7 @@ export class IdentityPlatformDefaultSupportedIdpConfigTimeoutsOutputReference ex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html google_identity_platform_default_supported_idp_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config google_identity_platform_default_supported_idp_config}
 */
 export class IdentityPlatformDefaultSupportedIdpConfig extends cdktf.TerraformResource {
 
@@ -198,7 +198,7 @@ export class IdentityPlatformDefaultSupportedIdpConfig extends cdktf.TerraformRe
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config.html google_identity_platform_default_supported_idp_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_default_supported_idp_config google_identity_platform_default_supported_idp_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

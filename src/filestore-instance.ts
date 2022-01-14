@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/filestore_instance.html
+// https://www.terraform.io/docs/providers/google/r/filestore_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,53 +10,53 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#description FilestoreInstance#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#description FilestoreInstance#description}
   */
   readonly description?: string;
   /**
   * Resource labels to represent user-provided metadata.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#labels FilestoreInstance#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#labels FilestoreInstance#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The resource name of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#name FilestoreInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#project FilestoreInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#project FilestoreInstance#project}
   */
   readonly project?: string;
   /**
   * The service tier of the instance. Possible values: ["TIER_UNSPECIFIED", "STANDARD", "PREMIUM", "BASIC_HDD", "BASIC_SSD", "HIGH_SCALE_SSD"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#tier FilestoreInstance#tier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#tier FilestoreInstance#tier}
   */
   readonly tier: string;
   /**
   * The name of the Filestore zone of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#zone FilestoreInstance#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#zone FilestoreInstance#zone}
   */
   readonly zone: string;
   /**
   * file_shares block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#file_shares FilestoreInstance#file_shares}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#file_shares FilestoreInstance#file_shares}
   */
   readonly fileShares: FilestoreInstanceFileShares;
   /**
   * networks block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#networks FilestoreInstance#networks}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#networks FilestoreInstance#networks}
   */
   readonly networks: FilestoreInstanceNetworks[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#timeouts FilestoreInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#timeouts FilestoreInstance#timeouts}
   */
   readonly timeouts?: FilestoreInstanceTimeouts;
 }
@@ -65,13 +65,13 @@ export interface FilestoreInstanceFileShares {
   * File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#capacity_gb FilestoreInstance#capacity_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#capacity_gb FilestoreInstance#capacity_gb}
   */
   readonly capacityGb: number;
   /**
   * The name of the fileshare (16 characters or less)
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#name FilestoreInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
 }
@@ -157,21 +157,21 @@ export interface FilestoreInstanceNetworks {
   * IP versions for which the instance has
 IP addresses assigned. Possible values: ["ADDRESS_MODE_UNSPECIFIED", "MODE_IPV4", "MODE_IPV6"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#modes FilestoreInstance#modes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#modes FilestoreInstance#modes}
   */
   readonly modes: string[];
   /**
   * The name of the GCE VPC network to which the
 instance is connected.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#network FilestoreInstance#network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#network FilestoreInstance#network}
   */
   readonly network: string;
   /**
   * A /29 CIDR block that identifies the range of IP
 addresses reserved for this instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#reserved_ip_range FilestoreInstance#reserved_ip_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#reserved_ip_range FilestoreInstance#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
 }
@@ -190,15 +190,15 @@ export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceN
 
 export interface FilestoreInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#create FilestoreInstance#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#create FilestoreInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#delete FilestoreInstance#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#delete FilestoreInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html#update FilestoreInstance#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#update FilestoreInstance#update}
   */
   readonly update?: string;
 }
@@ -310,7 +310,7 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html google_filestore_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/filestore_instance google_filestore_instance}
 */
 export class FilestoreInstance extends cdktf.TerraformResource {
 
@@ -324,7 +324,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/filestore_instance.html google_filestore_instance} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/filestore_instance google_filestore_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

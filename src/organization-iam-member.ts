@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/organization_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/organization_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,37 +8,37 @@ import * as cdktf from 'cdktf';
 
 export interface OrganizationIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#member OrganizationIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#member OrganizationIamMember#member}
   */
   readonly member: string;
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#org_id OrganizationIamMember#org_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#org_id OrganizationIamMember#org_id}
   */
   readonly orgId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#role OrganizationIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#role OrganizationIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#condition OrganizationIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#condition OrganizationIamMember#condition}
   */
   readonly condition?: OrganizationIamMemberCondition;
 }
 export interface OrganizationIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#description OrganizationIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#description OrganizationIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#expression OrganizationIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#expression OrganizationIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html#title OrganizationIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member#title OrganizationIamMember#title}
   */
   readonly title: string;
 }
@@ -144,7 +144,7 @@ export class OrganizationIamMemberConditionOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html google_organization_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member google_organization_iam_member}
 */
 export class OrganizationIamMember extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class OrganizationIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member.html google_organization_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_member google_organization_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

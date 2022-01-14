@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,7 +12,7 @@ export interface BigqueryDatasetConfig extends cdktf.TerraformMetaArguments {
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#dataset_id BigqueryDataset#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
   /**
@@ -32,7 +32,7 @@ table. If you provide an explicit 'timePartitioning.expirationMs' when
 creating or updating a partitioned table, that value takes precedence
 over the default partition expiration time indicated by this property.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
   */
   readonly defaultPartitionExpirationMs?: number;
   /**
@@ -50,30 +50,30 @@ table expires, or if you provide an explicit 'expirationTime' when
 creating a table, that value takes precedence over the default
 expiration time indicated by this property.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
   */
   readonly defaultTableExpirationMs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
   */
   readonly deleteContentsOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * A user-friendly description of the dataset
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#description BigqueryDataset#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#description BigqueryDataset#description}
   */
   readonly description?: string;
   /**
   * A descriptive name for the dataset
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#friendly_name BigqueryDataset#friendly_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
   */
   readonly friendlyName?: string;
   /**
   * The labels associated with this dataset. You can use these to
 organize and group your datasets
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#labels BigqueryDataset#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#labels BigqueryDataset#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -90,29 +90,29 @@ contains at least two geographic places.
 The default value is multi-regional location 'US'.
 Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#location BigqueryDataset#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#location BigqueryDataset#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#project BigqueryDataset#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#project BigqueryDataset#project}
   */
   readonly project?: string;
   /**
   * access block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#access BigqueryDataset#access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#access BigqueryDataset#access}
   */
   readonly access?: BigqueryDatasetAccess[];
   /**
   * default_encryption_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
   */
   readonly defaultEncryptionConfiguration?: BigqueryDatasetDefaultEncryptionConfiguration;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#timeouts BigqueryDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#timeouts BigqueryDataset#timeouts}
   */
   readonly timeouts?: BigqueryDatasetTimeouts;
 }
@@ -120,13 +120,13 @@ export interface BigqueryDatasetAccessView {
   /**
   * The ID of the dataset containing this table.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#dataset_id BigqueryDataset#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#project_id BigqueryDataset#project_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#project_id BigqueryDataset#project_id}
   */
   readonly projectId: string;
   /**
@@ -134,7 +134,7 @@ export interface BigqueryDatasetAccessView {
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#table_id BigqueryDataset#table_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#table_id BigqueryDataset#table_id}
   */
   readonly tableId: string;
 }
@@ -240,13 +240,13 @@ export interface BigqueryDatasetAccess {
   * A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#domain BigqueryDataset#domain}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#domain BigqueryDataset#domain}
   */
   readonly domain?: string;
   /**
   * An email address of a Google Group to grant access to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#group_by_email BigqueryDataset#group_by_email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#group_by_email BigqueryDataset#group_by_email}
   */
   readonly groupByEmail?: string;
   /**
@@ -256,7 +256,7 @@ are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#role BigqueryDataset#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#role BigqueryDataset#role}
   */
   readonly role?: string;
   /**
@@ -274,20 +274,20 @@ are swapped by the API to their basic counterparts. See
 
 * 'allAuthenticatedUsers': All authenticated BigQuery users.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#special_group BigqueryDataset#special_group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#special_group BigqueryDataset#special_group}
   */
   readonly specialGroup?: string;
   /**
   * An email address of a user to grant access to. For example:
 fred@example.com
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#user_by_email BigqueryDataset#user_by_email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
   */
   readonly userByEmail?: string;
   /**
   * view block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#view BigqueryDataset#view}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#view BigqueryDataset#view}
   */
   readonly view?: BigqueryDatasetAccessView;
 }
@@ -313,7 +313,7 @@ export interface BigqueryDatasetDefaultEncryptionConfiguration {
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#kms_key_name BigqueryDataset#kms_key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -376,15 +376,15 @@ export class BigqueryDatasetDefaultEncryptionConfigurationOutputReference extend
 }
 export interface BigqueryDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#create BigqueryDataset#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#create BigqueryDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#delete BigqueryDataset#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#delete BigqueryDataset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html#update BigqueryDataset#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#update BigqueryDataset#update}
   */
   readonly update?: string;
 }
@@ -496,7 +496,7 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html google_bigquery_dataset}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset google_bigquery_dataset}
 */
 export class BigqueryDataset extends cdktf.TerraformResource {
 
@@ -510,7 +510,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset.html google_bigquery_dataset} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset google_bigquery_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

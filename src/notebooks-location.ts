@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/notebooks_location.html
+// https://www.terraform.io/docs/providers/google/r/notebooks_location
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,31 +10,31 @@ export interface NotebooksLocationConfig extends cdktf.TerraformMetaArguments {
   /**
   * Name of the Location resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#name NotebooksLocation#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location#name NotebooksLocation#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#project NotebooksLocation#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location#project NotebooksLocation#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#timeouts NotebooksLocation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location#timeouts NotebooksLocation#timeouts}
   */
   readonly timeouts?: NotebooksLocationTimeouts;
 }
 export interface NotebooksLocationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#create NotebooksLocation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location#create NotebooksLocation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#delete NotebooksLocation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location#delete NotebooksLocation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html#update NotebooksLocation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_location#update NotebooksLocation#update}
   */
   readonly update?: string;
 }
@@ -146,7 +146,7 @@ export class NotebooksLocationTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html google_notebooks_location}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_location google_notebooks_location}
 */
 export class NotebooksLocation extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class NotebooksLocation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_location.html google_notebooks_location} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/notebooks_location google_notebooks_location} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/project.html
+// https://www.terraform.io/docs/providers/google/d/project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface DataGoogleProjectConfig extends cdktf.TerraformMetaArguments {
   /**
   * The project ID. Changing this forces a new project to be created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project.html#project_id DataGoogleProject#project_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project#project_id DataGoogleProject#project_id}
   */
   readonly projectId?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/project.html google_project}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/project google_project}
 */
 export class DataGoogleProject extends cdktf.TerraformDataSource {
 
@@ -30,7 +30,7 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/project.html google_project} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/project google_project} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

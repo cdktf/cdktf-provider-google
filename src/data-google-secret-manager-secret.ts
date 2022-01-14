@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/secret_manager_secret.html
+// https://www.terraform.io/docs/providers/google/d/secret_manager_secret
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSecretManagerSecretConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret.html#project DataGoogleSecretManagerSecret#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret#project DataGoogleSecretManagerSecret#project}
   */
   readonly project?: string;
   /**
   * This must be unique within the project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret.html#secret_id DataGoogleSecretManagerSecret#secret_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret#secret_id DataGoogleSecretManagerSecret#secret_id}
   */
   readonly secretId: string;
 }
@@ -80,7 +80,7 @@ export class DataGoogleSecretManagerSecretTopics extends cdktf.ComplexComputedLi
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret.html google_secret_manager_secret}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret google_secret_manager_secret}
 */
 export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
 
@@ -94,7 +94,7 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret.html google_secret_manager_secret} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret google_secret_manager_secret} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

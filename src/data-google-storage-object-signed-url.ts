@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html
+// https://www.terraform.io/docs/providers/google/d/storage_object_signed_url
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,41 +8,41 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleStorageObjectSignedUrlConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#bucket DataGoogleStorageObjectSignedUrl#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#bucket DataGoogleStorageObjectSignedUrl#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#content_md5 DataGoogleStorageObjectSignedUrl#content_md5}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#content_md5 DataGoogleStorageObjectSignedUrl#content_md5}
   */
   readonly contentMd5?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#content_type DataGoogleStorageObjectSignedUrl#content_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#content_type DataGoogleStorageObjectSignedUrl#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#credentials DataGoogleStorageObjectSignedUrl#credentials}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#credentials DataGoogleStorageObjectSignedUrl#credentials}
   */
   readonly credentials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#duration DataGoogleStorageObjectSignedUrl#duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#duration DataGoogleStorageObjectSignedUrl#duration}
   */
   readonly duration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#extension_headers DataGoogleStorageObjectSignedUrl#extension_headers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#extension_headers DataGoogleStorageObjectSignedUrl#extension_headers}
   */
   readonly extensionHeaders?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#http_method DataGoogleStorageObjectSignedUrl#http_method}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#http_method DataGoogleStorageObjectSignedUrl#http_method}
   */
   readonly httpMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html#path DataGoogleStorageObjectSignedUrl#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#path DataGoogleStorageObjectSignedUrl#path}
   */
   readonly path: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html google_storage_object_signed_url}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url google_storage_object_signed_url}
 */
 export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource {
 
@@ -56,7 +56,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url.html google_storage_object_signed_url} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url google_storage_object_signed_url} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

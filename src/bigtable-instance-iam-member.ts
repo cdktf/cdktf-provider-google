@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface BigtableInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#instance BigtableInstanceIamMember#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#member BigtableInstanceIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#project BigtableInstanceIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#role BigtableInstanceIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#condition BigtableInstanceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#condition BigtableInstanceIamMember#condition}
   */
   readonly condition?: BigtableInstanceIamMemberCondition;
 }
 export interface BigtableInstanceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#description BigtableInstanceIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#expression BigtableInstanceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html#title BigtableInstanceIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class BigtableInstanceIamMemberConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html google_bigtable_instance_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member google_bigtable_instance_iam_member}
 */
 export class BigtableInstanceIamMember extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class BigtableInstanceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member.html google_bigtable_instance_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_member google_bigtable_instance_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface SpannerInstanceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy.html#instance SpannerInstanceIamPolicy#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#instance SpannerInstanceIamPolicy#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy.html#policy_data SpannerInstanceIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#policy_data SpannerInstanceIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy.html#project SpannerInstanceIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#project SpannerInstanceIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy.html google_spanner_instance_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy google_spanner_instance_iam_policy}
 */
 export class SpannerInstanceIamPolicy extends cdktf.TerraformResource {
 
@@ -36,7 +36,7 @@ export class SpannerInstanceIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy.html google_spanner_instance_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy google_spanner_instance_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

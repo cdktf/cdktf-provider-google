@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html
+// https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface ComputeTargetGrpcProxyConfig extends cdktf.TerraformMetaArgumen
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#description ComputeTargetGrpcProxy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#description ComputeTargetGrpcProxy#description}
   */
   readonly description?: string;
   /**
@@ -22,11 +22,11 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#name ComputeTargetGrpcProxy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#name ComputeTargetGrpcProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#project ComputeTargetGrpcProxy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#project ComputeTargetGrpcProxy#project}
   */
   readonly project?: string;
   /**
@@ -34,7 +34,7 @@ except the last character, which cannot be a dash.
 the BackendService. The protocol field in the BackendService
 must be set to GRPC.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#url_map ComputeTargetGrpcProxy#url_map}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#url_map ComputeTargetGrpcProxy#url_map}
   */
   readonly urlMap?: string;
   /**
@@ -49,27 +49,27 @@ applications via a sidecar proxy. In this case, a gRPC application
 must not use "xds:///" scheme in the target URI of the service
 it is connecting to
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#validate_for_proxyless ComputeTargetGrpcProxy#validate_for_proxyless}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#validate_for_proxyless ComputeTargetGrpcProxy#validate_for_proxyless}
   */
   readonly validateForProxyless?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#timeouts ComputeTargetGrpcProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#timeouts ComputeTargetGrpcProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetGrpcProxyTimeouts;
 }
 export interface ComputeTargetGrpcProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#create ComputeTargetGrpcProxy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#create ComputeTargetGrpcProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#delete ComputeTargetGrpcProxy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#delete ComputeTargetGrpcProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html#update ComputeTargetGrpcProxy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy#update ComputeTargetGrpcProxy#update}
   */
   readonly update?: string;
 }
@@ -181,7 +181,7 @@ export class ComputeTargetGrpcProxyTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html google_compute_target_grpc_proxy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy google_compute_target_grpc_proxy}
 */
 export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
 
@@ -195,7 +195,7 @@ export class ComputeTargetGrpcProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy.html google_compute_target_grpc_proxy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy google_compute_target_grpc_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

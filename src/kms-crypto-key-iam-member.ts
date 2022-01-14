@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface KmsCryptoKeyIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}
   */
   readonly cryptoKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#member KmsCryptoKeyIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#member KmsCryptoKeyIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#role KmsCryptoKeyIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#role KmsCryptoKeyIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#condition KmsCryptoKeyIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#condition KmsCryptoKeyIamMember#condition}
   */
   readonly condition?: KmsCryptoKeyIamMemberCondition;
 }
 export interface KmsCryptoKeyIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#description KmsCryptoKeyIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#description KmsCryptoKeyIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#expression KmsCryptoKeyIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#expression KmsCryptoKeyIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html#title KmsCryptoKeyIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member#title KmsCryptoKeyIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class KmsCryptoKeyIamMemberConditionOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html google_kms_crypto_key_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member google_kms_crypto_key_iam_member}
 */
 export class KmsCryptoKeyIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class KmsCryptoKeyIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member.html google_kms_crypto_key_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_member google_kms_crypto_key_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

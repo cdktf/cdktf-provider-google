@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html
+// https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends
   /**
   * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
   */
   readonly deploymentId: string;
 }
@@ -36,7 +36,7 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout}
 */
 export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.TerraformDataSource {
 
@@ -50,7 +50,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

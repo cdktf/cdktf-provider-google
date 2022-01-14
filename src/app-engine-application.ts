@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/app_engine_application.html
+// https://www.terraform.io/docs/providers/google/r/app_engine_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,47 +10,47 @@ export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments
   /**
   * The domain to authenticate users with when using App Engine's User API.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#auth_domain AppEngineApplication#auth_domain}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#auth_domain AppEngineApplication#auth_domain}
   */
   readonly authDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#database_type AppEngineApplication#database_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#database_type AppEngineApplication#database_type}
   */
   readonly databaseType?: string;
   /**
   * The location to serve the app from.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#location_id AppEngineApplication#location_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#location_id AppEngineApplication#location_id}
   */
   readonly locationId: string;
   /**
   * The project ID to create the application under.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#project AppEngineApplication#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#project AppEngineApplication#project}
   */
   readonly project?: string;
   /**
   * The serving status of the app.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#serving_status AppEngineApplication#serving_status}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#serving_status AppEngineApplication#serving_status}
   */
   readonly servingStatus?: string;
   /**
   * feature_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#feature_settings AppEngineApplication#feature_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#feature_settings AppEngineApplication#feature_settings}
   */
   readonly featureSettings?: AppEngineApplicationFeatureSettings;
   /**
   * iap block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#iap AppEngineApplication#iap}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#iap AppEngineApplication#iap}
   */
   readonly iap?: AppEngineApplicationIap;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#timeouts AppEngineApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#timeouts AppEngineApplication#timeouts}
   */
   readonly timeouts?: AppEngineApplicationTimeouts;
 }
@@ -73,7 +73,7 @@ export class AppEngineApplicationUrlDispatchRule extends cdktf.ComplexComputedLi
 }
 export interface AppEngineApplicationFeatureSettings {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#split_health_checks AppEngineApplication#split_health_checks}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#split_health_checks AppEngineApplication#split_health_checks}
   */
   readonly splitHealthChecks: boolean | cdktf.IResolvable;
 }
@@ -138,19 +138,19 @@ export interface AppEngineApplicationIap {
   /**
   * Adapted for use with the app
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#enabled AppEngineApplication#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#enabled AppEngineApplication#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * OAuth2 client ID to use for the authentication flow.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#oauth2_client_id AppEngineApplication#oauth2_client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#oauth2_client_id AppEngineApplication#oauth2_client_id}
   */
   readonly oauth2ClientId: string;
   /**
   * OAuth2 client secret to use for the authentication flow. The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#oauth2_client_secret AppEngineApplication#oauth2_client_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#oauth2_client_secret AppEngineApplication#oauth2_client_secret}
   */
   readonly oauth2ClientSecret: string;
 }
@@ -256,11 +256,11 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
 }
 export interface AppEngineApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#create AppEngineApplication#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#create AppEngineApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html#update AppEngineApplication#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#update AppEngineApplication#update}
   */
   readonly update?: string;
 }
@@ -349,7 +349,7 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html google_app_engine_application}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_application google_app_engine_application}
 */
 export class AppEngineApplication extends cdktf.TerraformResource {
 
@@ -363,7 +363,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_application.html google_app_engine_application} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_application google_app_engine_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

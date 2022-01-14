@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface PrivatecaCaPoolIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html#ca_pool PrivatecaCaPoolIamPolicy#ca_pool}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy#ca_pool PrivatecaCaPoolIamPolicy#ca_pool}
   */
   readonly caPool: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html#location PrivatecaCaPoolIamPolicy#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy#location PrivatecaCaPoolIamPolicy#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html#policy_data PrivatecaCaPoolIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy#policy_data PrivatecaCaPoolIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html#project PrivatecaCaPoolIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy#project PrivatecaCaPoolIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html google_privateca_ca_pool_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy google_privateca_ca_pool_iam_policy}
 */
 export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class PrivatecaCaPoolIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy.html google_privateca_ca_pool_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_policy google_privateca_ca_pool_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

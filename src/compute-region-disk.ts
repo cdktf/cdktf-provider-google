@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_region_disk.html
+// https://www.terraform.io/docs/providers/google/r/compute_region_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,13 +11,13 @@ export interface ComputeRegionDiskConfig extends cdktf.TerraformMetaArguments {
   * An optional description of this resource. Provide this property when
 you create the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#description ComputeRegionDisk#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#description ComputeRegionDisk#description}
   */
   readonly description?: string;
   /**
   * Labels to apply to this disk.  A list of key->value pairs.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#labels ComputeRegionDisk#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#labels ComputeRegionDisk#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -29,7 +29,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#name ComputeRegionDisk#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#name ComputeRegionDisk#name}
   */
   readonly name: string;
   /**
@@ -39,23 +39,23 @@ are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#physical_block_size_bytes ComputeRegionDisk#physical_block_size_bytes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#physical_block_size_bytes ComputeRegionDisk#physical_block_size_bytes}
   */
   readonly physicalBlockSizeBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#project ComputeRegionDisk#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#project ComputeRegionDisk#project}
   */
   readonly project?: string;
   /**
   * A reference to the region where the disk resides.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#region ComputeRegionDisk#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#region ComputeRegionDisk#region}
   */
   readonly region?: string;
   /**
   * URLs of the zones where the disk should be replicated to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#replica_zones ComputeRegionDisk#replica_zones}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#replica_zones ComputeRegionDisk#replica_zones}
   */
   readonly replicaZones: string[];
   /**
@@ -68,7 +68,7 @@ If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#size ComputeRegionDisk#size}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#size ComputeRegionDisk#size}
   */
   readonly size?: number;
   /**
@@ -81,32 +81,32 @@ valid values:
 * 'global/snapshots/snapshot'
 * 'snapshot'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#snapshot ComputeRegionDisk#snapshot}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#snapshot ComputeRegionDisk#snapshot}
   */
   readonly snapshot?: string;
   /**
   * URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#type ComputeRegionDisk#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#type ComputeRegionDisk#type}
   */
   readonly type?: string;
   /**
   * disk_encryption_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#disk_encryption_key ComputeRegionDisk#disk_encryption_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#disk_encryption_key ComputeRegionDisk#disk_encryption_key}
   */
   readonly diskEncryptionKey?: ComputeRegionDiskDiskEncryptionKey;
   /**
   * source_snapshot_encryption_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#source_snapshot_encryption_key ComputeRegionDisk#source_snapshot_encryption_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#source_snapshot_encryption_key ComputeRegionDisk#source_snapshot_encryption_key}
   */
   readonly sourceSnapshotEncryptionKey?: ComputeRegionDiskSourceSnapshotEncryptionKey;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#timeouts ComputeRegionDisk#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#timeouts ComputeRegionDisk#timeouts}
   */
   readonly timeouts?: ComputeRegionDiskTimeouts;
 }
@@ -115,7 +115,7 @@ export interface ComputeRegionDiskDiskEncryptionKey {
   * Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#raw_key ComputeRegionDisk#raw_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#raw_key ComputeRegionDisk#raw_key}
   */
   readonly rawKey?: string;
 }
@@ -184,7 +184,7 @@ export interface ComputeRegionDiskSourceSnapshotEncryptionKey {
   * Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#raw_key ComputeRegionDisk#raw_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#raw_key ComputeRegionDisk#raw_key}
   */
   readonly rawKey?: string;
 }
@@ -250,15 +250,15 @@ export class ComputeRegionDiskSourceSnapshotEncryptionKeyOutputReference extends
 }
 export interface ComputeRegionDiskTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#create ComputeRegionDisk#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#create ComputeRegionDisk#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#delete ComputeRegionDisk#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#delete ComputeRegionDisk#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html#update ComputeRegionDisk#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#update ComputeRegionDisk#update}
   */
   readonly update?: string;
 }
@@ -370,7 +370,7 @@ export class ComputeRegionDiskTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html google_compute_region_disk}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk google_compute_region_disk}
 */
 export class ComputeRegionDisk extends cdktf.TerraformResource {
 
@@ -384,7 +384,7 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk.html google_compute_region_disk} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk google_compute_region_disk} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html
+// https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,17 +12,17 @@ export interface ContainerAnalysisOccurrenceConfig extends cdktf.TerraformMetaAr
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#note_name ContainerAnalysisOccurrence#note_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#note_name ContainerAnalysisOccurrence#note_name}
   */
   readonly noteName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#project ContainerAnalysisOccurrence#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#project ContainerAnalysisOccurrence#project}
   */
   readonly project?: string;
   /**
   * A description of actions that can be taken to remedy the note.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#remediation ContainerAnalysisOccurrence#remediation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#remediation ContainerAnalysisOccurrence#remediation}
   */
   readonly remediation?: string;
   /**
@@ -30,19 +30,19 @@ filter in list requests.
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#resource_uri ContainerAnalysisOccurrence#resource_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#resource_uri ContainerAnalysisOccurrence#resource_uri}
   */
   readonly resourceUri: string;
   /**
   * attestation block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#attestation ContainerAnalysisOccurrence#attestation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#attestation ContainerAnalysisOccurrence#attestation}
   */
   readonly attestation: ContainerAnalysisOccurrenceAttestation;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#timeouts ContainerAnalysisOccurrence#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#timeouts ContainerAnalysisOccurrence#timeouts}
   */
   readonly timeouts?: ContainerAnalysisOccurrenceTimeouts;
 }
@@ -60,7 +60,7 @@ Examples of valid values:
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
     * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#public_key_id ContainerAnalysisOccurrence#public_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#public_key_id ContainerAnalysisOccurrence#public_key_id}
   */
   readonly publicKeyId: string;
   /**
@@ -72,7 +72,7 @@ payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
 unambiguously computed to derive the payload.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#signature ContainerAnalysisOccurrence#signature}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#signature ContainerAnalysisOccurrence#signature}
   */
   readonly signature?: string;
 }
@@ -93,13 +93,13 @@ export interface ContainerAnalysisOccurrenceAttestation {
   * The serialized payload that is verified by one or
 more signatures. A base64-encoded string.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#serialized_payload ContainerAnalysisOccurrence#serialized_payload}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#serialized_payload ContainerAnalysisOccurrence#serialized_payload}
   */
   readonly serializedPayload: string;
   /**
   * signatures block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#signatures ContainerAnalysisOccurrence#signatures}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#signatures ContainerAnalysisOccurrence#signatures}
   */
   readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[];
 }
@@ -183,15 +183,15 @@ export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf
 }
 export interface ContainerAnalysisOccurrenceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#create ContainerAnalysisOccurrence#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#create ContainerAnalysisOccurrence#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#delete ContainerAnalysisOccurrence#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#delete ContainerAnalysisOccurrence#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html#update ContainerAnalysisOccurrence#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#update ContainerAnalysisOccurrence#update}
   */
   readonly update?: string;
 }
@@ -303,7 +303,7 @@ export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html google_container_analysis_occurrence}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence google_container_analysis_occurrence}
 */
 export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
 
@@ -317,7 +317,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence.html google_container_analysis_occurrence} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence google_container_analysis_occurrence} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

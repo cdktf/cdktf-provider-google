@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/organization_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,37 +8,37 @@ import * as cdktf from 'cdktf';
 
 export interface OrganizationIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#members OrganizationIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#members OrganizationIamBinding#members}
   */
   readonly members: string[];
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#org_id OrganizationIamBinding#org_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#org_id OrganizationIamBinding#org_id}
   */
   readonly orgId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#role OrganizationIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#role OrganizationIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#condition OrganizationIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#condition OrganizationIamBinding#condition}
   */
   readonly condition?: OrganizationIamBindingCondition;
 }
 export interface OrganizationIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#description OrganizationIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#description OrganizationIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#expression OrganizationIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#expression OrganizationIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html#title OrganizationIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding#title OrganizationIamBinding#title}
   */
   readonly title: string;
 }
@@ -144,7 +144,7 @@ export class OrganizationIamBindingConditionOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html google_organization_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding google_organization_iam_binding}
 */
 export class OrganizationIamBinding extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class OrganizationIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding.html google_organization_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_iam_binding google_organization_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

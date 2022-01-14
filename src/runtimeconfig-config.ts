@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html
+// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface RuntimeconfigConfigConfig extends cdktf.TerraformMetaArguments 
   /**
   * The description to associate with the runtime config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html#description RuntimeconfigConfig#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config#description RuntimeconfigConfig#description}
   */
   readonly description?: string;
   /**
   * The name of the runtime config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html#name RuntimeconfigConfig#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config#name RuntimeconfigConfig#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html#project RuntimeconfigConfig#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config#project RuntimeconfigConfig#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html google_runtimeconfig_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config google_runtimeconfig_config}
 */
 export class RuntimeconfigConfig extends cdktf.TerraformResource {
 
@@ -42,7 +42,7 @@ export class RuntimeconfigConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config.html google_runtimeconfig_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config google_runtimeconfig_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html
+// https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,46 +10,46 @@ export interface ComputeInstanceGroupNamedPortAConfig extends cdktf.TerraformMet
   /**
   * The name of the instance group.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#group ComputeInstanceGroupNamedPortA#group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#group ComputeInstanceGroupNamedPortA#group}
   */
   readonly group: string;
   /**
   * The name for this named port. The name must be 1-63 characters
 long, and comply with RFC1035.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#name ComputeInstanceGroupNamedPortA#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#name ComputeInstanceGroupNamedPortA#name}
   */
   readonly name: string;
   /**
   * The port number, which can be a value between 1 and 65535.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#port ComputeInstanceGroupNamedPortA#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#port ComputeInstanceGroupNamedPortA#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#project ComputeInstanceGroupNamedPortA#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#project ComputeInstanceGroupNamedPortA#project}
   */
   readonly project?: string;
   /**
   * The zone of the instance group.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#zone ComputeInstanceGroupNamedPortA#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#zone ComputeInstanceGroupNamedPortA#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#timeouts ComputeInstanceGroupNamedPortA#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#timeouts ComputeInstanceGroupNamedPortA#timeouts}
   */
   readonly timeouts?: ComputeInstanceGroupNamedPortTimeouts;
 }
 export interface ComputeInstanceGroupNamedPortTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#create ComputeInstanceGroupNamedPortA#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#create ComputeInstanceGroupNamedPortA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html#delete ComputeInstanceGroupNamedPortA#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port#delete ComputeInstanceGroupNamedPortA#delete}
   */
   readonly delete?: string;
 }
@@ -138,7 +138,7 @@ export class ComputeInstanceGroupNamedPortTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html google_compute_instance_group_named_port}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port google_compute_instance_group_named_port}
 */
 export class ComputeInstanceGroupNamedPortA extends cdktf.TerraformResource {
 
@@ -152,7 +152,7 @@ export class ComputeInstanceGroupNamedPortA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port.html google_compute_instance_group_named_port} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_named_port google_compute_instance_group_named_port} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html
+// https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,39 +10,39 @@ export interface ComputeProjectMetadataItemConfig extends cdktf.TerraformMetaArg
   /**
   * The metadata key to set.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#key ComputeProjectMetadataItem#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#key ComputeProjectMetadataItem#key}
   */
   readonly key: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#project ComputeProjectMetadataItem#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#project ComputeProjectMetadataItem#project}
   */
   readonly project?: string;
   /**
   * The value to set for the given metadata key.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#value ComputeProjectMetadataItem#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#value ComputeProjectMetadataItem#value}
   */
   readonly value: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#timeouts ComputeProjectMetadataItem#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#timeouts ComputeProjectMetadataItem#timeouts}
   */
   readonly timeouts?: ComputeProjectMetadataItemTimeouts;
 }
 export interface ComputeProjectMetadataItemTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#create ComputeProjectMetadataItem#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#create ComputeProjectMetadataItem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#delete ComputeProjectMetadataItem#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#delete ComputeProjectMetadataItem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html#update ComputeProjectMetadataItem#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item#update ComputeProjectMetadataItem#update}
   */
   readonly update?: string;
 }
@@ -154,7 +154,7 @@ export class ComputeProjectMetadataItemTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html google_compute_project_metadata_item}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item google_compute_project_metadata_item}
 */
 export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
 
@@ -168,7 +168,7 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item.html google_compute_project_metadata_item} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata_item google_compute_project_metadata_item} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

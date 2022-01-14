@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface IapAppEngineServiceIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#app_id IapAppEngineServiceIamBinding#app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#app_id IapAppEngineServiceIamBinding#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#members IapAppEngineServiceIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#members IapAppEngineServiceIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#project IapAppEngineServiceIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#project IapAppEngineServiceIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#role IapAppEngineServiceIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#role IapAppEngineServiceIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#service IapAppEngineServiceIamBinding#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#service IapAppEngineServiceIamBinding#service}
   */
   readonly service: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#condition IapAppEngineServiceIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#condition IapAppEngineServiceIamBinding#condition}
   */
   readonly condition?: IapAppEngineServiceIamBindingCondition;
 }
 export interface IapAppEngineServiceIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#description IapAppEngineServiceIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#description IapAppEngineServiceIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#expression IapAppEngineServiceIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#expression IapAppEngineServiceIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html#title IapAppEngineServiceIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding#title IapAppEngineServiceIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class IapAppEngineServiceIamBindingConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html google_iap_app_engine_service_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding google_iap_app_engine_service_iam_binding}
 */
 export class IapAppEngineServiceIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class IapAppEngineServiceIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding.html google_iap_app_engine_service_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_binding google_iap_app_engine_service_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

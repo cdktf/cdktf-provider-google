@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataprocJobIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#job_id DataprocJobIamMember#job_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#job_id DataprocJobIamMember#job_id}
   */
   readonly jobId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#member DataprocJobIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#member DataprocJobIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#project DataprocJobIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#project DataprocJobIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#region DataprocJobIamMember#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#region DataprocJobIamMember#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#role DataprocJobIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#role DataprocJobIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#condition DataprocJobIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#condition DataprocJobIamMember#condition}
   */
   readonly condition?: DataprocJobIamMemberCondition;
 }
 export interface DataprocJobIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#description DataprocJobIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#description DataprocJobIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#expression DataprocJobIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#expression DataprocJobIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html#title DataprocJobIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member#title DataprocJobIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class DataprocJobIamMemberConditionOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html google_dataproc_job_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member google_dataproc_job_iam_member}
 */
 export class DataprocJobIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class DataprocJobIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member.html google_dataproc_job_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_job_iam_member google_dataproc_job_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

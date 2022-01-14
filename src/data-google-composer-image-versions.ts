@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/composer_image_versions.html
+// https://www.terraform.io/docs/providers/google/d/composer_image_versions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,11 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComposerImageVersionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions.html#project DataGoogleComposerImageVersions#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#project DataGoogleComposerImageVersions#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions.html#region DataGoogleComposerImageVersions#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#region DataGoogleComposerImageVersions#region}
   */
   readonly region?: string;
 }
@@ -30,7 +30,7 @@ export class DataGoogleComposerImageVersionsImageVersions extends cdktf.ComplexC
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions.html google_composer_image_versions}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions google_composer_image_versions}
 */
 export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
 
@@ -44,7 +44,7 @@ export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions.html google_composer_image_versions} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions google_composer_image_versions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

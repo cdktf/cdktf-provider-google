@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface BillingAccountIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#billing_account_id BillingAccountIamBinding#billing_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#billing_account_id BillingAccountIamBinding#billing_account_id}
   */
   readonly billingAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#members BillingAccountIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#members BillingAccountIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#role BillingAccountIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#role BillingAccountIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#condition BillingAccountIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#condition BillingAccountIamBinding#condition}
   */
   readonly condition?: BillingAccountIamBindingCondition;
 }
 export interface BillingAccountIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#description BillingAccountIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#description BillingAccountIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#expression BillingAccountIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#expression BillingAccountIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html#title BillingAccountIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding#title BillingAccountIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class BillingAccountIamBindingConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html google_billing_account_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding google_billing_account_iam_binding}
 */
 export class BillingAccountIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class BillingAccountIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding.html google_billing_account_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding google_billing_account_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html
+// https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,46 +10,46 @@ export interface DialogflowCxEnvironmentConfig extends cdktf.TerraformMetaArgume
   /**
   * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#description DialogflowCxEnvironment#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#description DialogflowCxEnvironment#description}
   */
   readonly description?: string;
   /**
   * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#display_name DialogflowCxEnvironment#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#display_name DialogflowCxEnvironment#display_name}
   */
   readonly displayName: string;
   /**
   * The Agent to create an Environment for. 
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#parent DialogflowCxEnvironment#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#parent DialogflowCxEnvironment#parent}
   */
   readonly parent?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#timeouts DialogflowCxEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#timeouts DialogflowCxEnvironment#timeouts}
   */
   readonly timeouts?: DialogflowCxEnvironmentTimeouts;
   /**
   * version_configs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#version_configs DialogflowCxEnvironment#version_configs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#version_configs DialogflowCxEnvironment#version_configs}
   */
   readonly versionConfigs: DialogflowCxEnvironmentVersionConfigs[];
 }
 export interface DialogflowCxEnvironmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#create DialogflowCxEnvironment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#create DialogflowCxEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#delete DialogflowCxEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#delete DialogflowCxEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#update DialogflowCxEnvironment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#update DialogflowCxEnvironment#update}
   */
   readonly update?: string;
 }
@@ -163,7 +163,7 @@ export interface DialogflowCxEnvironmentVersionConfigs {
   /**
   * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html#version DialogflowCxEnvironment#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#version DialogflowCxEnvironment#version}
   */
   readonly version: string;
 }
@@ -180,7 +180,7 @@ export function dialogflowCxEnvironmentVersionConfigsToTerraform(struct?: Dialog
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html google_dialogflow_cx_environment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment google_dialogflow_cx_environment}
 */
 export class DialogflowCxEnvironment extends cdktf.TerraformResource {
 
@@ -194,7 +194,7 @@ export class DialogflowCxEnvironment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment.html google_dialogflow_cx_environment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment google_dialogflow_cx_environment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

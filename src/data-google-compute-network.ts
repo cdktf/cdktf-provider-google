@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_network.html
+// https://www.terraform.io/docs/providers/google/d/compute_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network.html#name DataGoogleComputeNetwork#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network#name DataGoogleComputeNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network.html#project DataGoogleComputeNetwork#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network#project DataGoogleComputeNetwork#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_network.html google_compute_network}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_network google_compute_network}
 */
 export class DataGoogleComputeNetwork extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleComputeNetwork extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_network.html google_compute_network} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_network google_compute_network} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

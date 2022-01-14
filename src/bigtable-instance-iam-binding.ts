@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface BigtableInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#instance BigtableInstanceIamBinding#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#members BigtableInstanceIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#project BigtableInstanceIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#role BigtableInstanceIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#condition BigtableInstanceIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#condition BigtableInstanceIamBinding#condition}
   */
   readonly condition?: BigtableInstanceIamBindingCondition;
 }
 export interface BigtableInstanceIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#description BigtableInstanceIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#expression BigtableInstanceIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html#title BigtableInstanceIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class BigtableInstanceIamBindingConditionOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html google_bigtable_instance_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding google_bigtable_instance_iam_binding}
 */
 export class BigtableInstanceIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class BigtableInstanceIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding.html google_bigtable_instance_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding google_bigtable_instance_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

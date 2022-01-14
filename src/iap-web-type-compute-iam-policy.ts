@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebTypeComputeIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy.html#policy_data IapWebTypeComputeIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy#policy_data IapWebTypeComputeIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy.html#project IapWebTypeComputeIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy#project IapWebTypeComputeIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy.html google_iap_web_type_compute_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy google_iap_web_type_compute_iam_policy}
 */
 export class IapWebTypeComputeIamPolicy extends cdktf.TerraformResource {
 
@@ -32,7 +32,7 @@ export class IapWebTypeComputeIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy.html google_iap_web_type_compute_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_policy google_iap_web_type_compute_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

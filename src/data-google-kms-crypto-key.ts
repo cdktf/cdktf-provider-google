@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/kms_crypto_key.html
+// https://www.terraform.io/docs/providers/google/d/kms_crypto_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,13 +11,13 @@ export interface DataGoogleKmsCryptoKeyConfig extends cdktf.TerraformMetaArgumen
   * The KeyRing that this key belongs to.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key.html#key_ring DataGoogleKmsCryptoKey#key_ring}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key#key_ring DataGoogleKmsCryptoKey#key_ring}
   */
   readonly keyRing: string;
   /**
   * The resource name for the CryptoKey.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key.html#name DataGoogleKmsCryptoKey#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key#name DataGoogleKmsCryptoKey#name}
   */
   readonly name: string;
 }
@@ -35,7 +35,7 @@ export class DataGoogleKmsCryptoKeyVersionTemplate extends cdktf.ComplexComputed
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key.html google_kms_crypto_key}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key google_kms_crypto_key}
 */
 export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
@@ -49,7 +49,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key.html google_kms_crypto_key} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key google_kms_crypto_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

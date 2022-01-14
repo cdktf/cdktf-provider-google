@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html
+// https://www.terraform.io/docs/providers/google/r/bigtable_app_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   /**
   * The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#app_profile_id BigtableAppProfile#app_profile_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#app_profile_id BigtableAppProfile#app_profile_id}
   */
   readonly appProfileId: string;
   /**
   * Long form description of the use case for this app profile.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#description BigtableAppProfile#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#description BigtableAppProfile#description}
   */
   readonly description?: string;
   /**
   * If true, ignore safety checks when deleting/updating the app profile.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#ignore_warnings BigtableAppProfile#ignore_warnings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#ignore_warnings BigtableAppProfile#ignore_warnings}
   */
   readonly ignoreWarnings?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance to create the app profile within.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#instance BigtableAppProfile#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#instance BigtableAppProfile#instance}
   */
   readonly instance?: string;
   /**
@@ -36,23 +36,23 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
   */
   readonly multiClusterRoutingUseAny?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#project BigtableAppProfile#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#project BigtableAppProfile#project}
   */
   readonly project?: string;
   /**
   * single_cluster_routing block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#single_cluster_routing BigtableAppProfile#single_cluster_routing}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#single_cluster_routing BigtableAppProfile#single_cluster_routing}
   */
   readonly singleClusterRouting?: BigtableAppProfileSingleClusterRouting;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#timeouts BigtableAppProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#timeouts BigtableAppProfile#timeouts}
   */
   readonly timeouts?: BigtableAppProfileTimeouts;
 }
@@ -61,13 +61,13 @@ export interface BigtableAppProfileSingleClusterRouting {
   * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
   */
   readonly allowTransactionalWrites?: boolean | cdktf.IResolvable;
   /**
   * The cluster to which read/write requests should be routed.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#cluster_id BigtableAppProfile#cluster_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#cluster_id BigtableAppProfile#cluster_id}
   */
   readonly clusterId: string;
 }
@@ -153,15 +153,15 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
 }
 export interface BigtableAppProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#create BigtableAppProfile#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#create BigtableAppProfile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#delete BigtableAppProfile#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#delete BigtableAppProfile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html#update BigtableAppProfile#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#update BigtableAppProfile#update}
   */
   readonly update?: string;
 }
@@ -273,7 +273,7 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html google_bigtable_app_profile}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile google_bigtable_app_profile}
 */
 export class BigtableAppProfile extends cdktf.TerraformResource {
 
@@ -287,7 +287,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile.html google_bigtable_app_profile} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile google_bigtable_app_profile} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

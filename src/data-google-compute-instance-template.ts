@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_instance_template.html
+// https://www.terraform.io/docs/providers/google/d/compute_instance_template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html#filter DataGoogleComputeInstanceTemplate#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#filter DataGoogleComputeInstanceTemplate#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html#most_recent DataGoogleComputeInstanceTemplate#most_recent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#most_recent DataGoogleComputeInstanceTemplate#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html#name DataGoogleComputeInstanceTemplate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#name DataGoogleComputeInstanceTemplate#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html#project DataGoogleComputeInstanceTemplate#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#project DataGoogleComputeInstanceTemplate#project}
   */
   readonly project: string;
 }
@@ -352,7 +352,7 @@ export class DataGoogleComputeInstanceTemplateShieldedInstanceConfig extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html google_compute_instance_template}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template google_compute_instance_template}
 */
 export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource {
 
@@ -366,7 +366,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template.html google_compute_instance_template} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template google_compute_instance_template} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

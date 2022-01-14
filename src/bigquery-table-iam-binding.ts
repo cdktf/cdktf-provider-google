@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface BigqueryTableIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#dataset_id BigqueryTableIamBinding#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#dataset_id BigqueryTableIamBinding#dataset_id}
   */
   readonly datasetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#members BigqueryTableIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#members BigqueryTableIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#project BigqueryTableIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#project BigqueryTableIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#role BigqueryTableIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#role BigqueryTableIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#table_id BigqueryTableIamBinding#table_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#table_id BigqueryTableIamBinding#table_id}
   */
   readonly tableId: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#condition BigqueryTableIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#condition BigqueryTableIamBinding#condition}
   */
   readonly condition?: BigqueryTableIamBindingCondition;
 }
 export interface BigqueryTableIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#description BigqueryTableIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#description BigqueryTableIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#expression BigqueryTableIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#expression BigqueryTableIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html#title BigqueryTableIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding#title BigqueryTableIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class BigqueryTableIamBindingConditionOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html google_bigquery_table_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding google_bigquery_table_iam_binding}
 */
 export class BigqueryTableIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class BigqueryTableIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding.html google_bigquery_table_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_binding google_bigquery_table_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDatasetIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy.html#dataset_id HealthcareDatasetIamPolicy#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy#dataset_id HealthcareDatasetIamPolicy#dataset_id}
   */
   readonly datasetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy.html#policy_data HealthcareDatasetIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy#policy_data HealthcareDatasetIamPolicy#policy_data}
   */
   readonly policyData: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy.html google_healthcare_dataset_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy google_healthcare_dataset_iam_policy}
 */
 export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
 
@@ -32,7 +32,7 @@ export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy.html google_healthcare_dataset_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dataset_iam_policy google_healthcare_dataset_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

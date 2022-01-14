@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html
+// https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceSerialPortConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#instance DataGoogleComputeInstanceSerialPort#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#port DataGoogleComputeInstanceSerialPort#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#project DataGoogleComputeInstanceSerialPort#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html#zone DataGoogleComputeInstanceSerialPort#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}
   */
   readonly zone?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html google_compute_instance_serial_port}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port google_compute_instance_serial_port}
 */
 export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSource {
 
@@ -40,7 +40,7 @@ export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port.html google_compute_instance_serial_port} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_instance_serial_port google_compute_instance_serial_port} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

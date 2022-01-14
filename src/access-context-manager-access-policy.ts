@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html
+// https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,33 +11,33 @@ export interface AccessContextManagerAccessPolicyConfig extends cdktf.TerraformM
   * The parent of this AccessPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html#parent AccessContextManagerAccessPolicy#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#parent AccessContextManagerAccessPolicy#parent}
   */
   readonly parent: string;
   /**
   * Human readable title. Does not affect behavior.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html#title AccessContextManagerAccessPolicy#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#title AccessContextManagerAccessPolicy#title}
   */
   readonly title: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html#timeouts AccessContextManagerAccessPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#timeouts AccessContextManagerAccessPolicy#timeouts}
   */
   readonly timeouts?: AccessContextManagerAccessPolicyTimeouts;
 }
 export interface AccessContextManagerAccessPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html#create AccessContextManagerAccessPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#create AccessContextManagerAccessPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html#delete AccessContextManagerAccessPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#delete AccessContextManagerAccessPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html#update AccessContextManagerAccessPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#update AccessContextManagerAccessPolicy#update}
   */
   readonly update?: string;
 }
@@ -149,7 +149,7 @@ export class AccessContextManagerAccessPolicyTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html google_access_context_manager_access_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy google_access_context_manager_access_policy}
 */
 export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
 
@@ -163,7 +163,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy.html google_access_context_manager_access_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy google_access_context_manager_access_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

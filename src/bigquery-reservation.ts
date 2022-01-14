@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_reservation
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,51 +12,51 @@ export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments 
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#ignore_idle_slots BigqueryReservation#ignore_idle_slots}
   */
   readonly ignoreIdleSlots?: boolean | cdktf.IResolvable;
   /**
   * The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#location BigqueryReservation#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#location BigqueryReservation#location}
   */
   readonly location?: string;
   /**
   * The name of the reservation. This field must only contain alphanumeric characters or dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#name BigqueryReservation#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#name BigqueryReservation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#project BigqueryReservation#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#project BigqueryReservation#project}
   */
   readonly project?: string;
   /**
   * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#slot_capacity BigqueryReservation#slot_capacity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#slot_capacity BigqueryReservation#slot_capacity}
   */
   readonly slotCapacity: number;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#timeouts BigqueryReservation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#timeouts BigqueryReservation#timeouts}
   */
   readonly timeouts?: BigqueryReservationTimeouts;
 }
 export interface BigqueryReservationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#create BigqueryReservation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#create BigqueryReservation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#delete BigqueryReservation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#delete BigqueryReservation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html#update BigqueryReservation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#update BigqueryReservation#update}
   */
   readonly update?: string;
 }
@@ -168,7 +168,7 @@ export class BigqueryReservationTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html google_bigquery_reservation}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation google_bigquery_reservation}
 */
 export class BigqueryReservation extends cdktf.TerraformResource {
 
@@ -182,7 +182,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation.html google_bigquery_reservation} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation google_bigquery_reservation} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

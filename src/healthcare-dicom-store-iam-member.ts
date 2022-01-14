@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDicomStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#dicom_store_id HealthcareDicomStoreIamMember#dicom_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#dicom_store_id HealthcareDicomStoreIamMember#dicom_store_id}
   */
   readonly dicomStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#member HealthcareDicomStoreIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#member HealthcareDicomStoreIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#role HealthcareDicomStoreIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#role HealthcareDicomStoreIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#condition HealthcareDicomStoreIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#condition HealthcareDicomStoreIamMember#condition}
   */
   readonly condition?: HealthcareDicomStoreIamMemberCondition;
 }
 export interface HealthcareDicomStoreIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#description HealthcareDicomStoreIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#description HealthcareDicomStoreIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#expression HealthcareDicomStoreIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#expression HealthcareDicomStoreIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html#title HealthcareDicomStoreIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member#title HealthcareDicomStoreIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class HealthcareDicomStoreIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html google_healthcare_dicom_store_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member google_healthcare_dicom_store_iam_member}
 */
 export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class HealthcareDicomStoreIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member.html google_healthcare_dicom_store_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_member google_healthcare_dicom_store_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html
+// https://www.terraform.io/docs/providers/google/d/compute_resource_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,17 +16,17 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html#name DataGoogleComputeResourcePolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy#name DataGoogleComputeResourcePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html#project DataGoogleComputeResourcePolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}
   */
   readonly project?: string;
   /**
   * Region where resource policy resides.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html#region DataGoogleComputeResourcePolicy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy#region DataGoogleComputeResourcePolicy#region}
   */
   readonly region?: string;
 }
@@ -206,7 +206,7 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicy extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html google_compute_resource_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy google_compute_resource_policy}
 */
 export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
@@ -220,7 +220,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy.html google_compute_resource_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_resource_policy google_compute_resource_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

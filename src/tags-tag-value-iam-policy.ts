@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface TagsTagValueIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy.html#policy_data TagsTagValueIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy#policy_data TagsTagValueIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy.html#tag_value TagsTagValueIamPolicy#tag_value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy#tag_value TagsTagValueIamPolicy#tag_value}
   */
   readonly tagValue: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy.html google_tags_tag_value_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy google_tags_tag_value_iam_policy}
 */
 export class TagsTagValueIamPolicy extends cdktf.TerraformResource {
 
@@ -32,7 +32,7 @@ export class TagsTagValueIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy.html google_tags_tag_value_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_policy google_tags_tag_value_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

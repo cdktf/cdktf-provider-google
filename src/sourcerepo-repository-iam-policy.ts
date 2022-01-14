@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface SourcerepoRepositoryIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy.html#policy_data SourcerepoRepositoryIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy#policy_data SourcerepoRepositoryIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy.html#project SourcerepoRepositoryIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy#project SourcerepoRepositoryIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy.html#repository SourcerepoRepositoryIamPolicy#repository}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy#repository SourcerepoRepositoryIamPolicy#repository}
   */
   readonly repository: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy.html google_sourcerepo_repository_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy google_sourcerepo_repository_iam_policy}
 */
 export class SourcerepoRepositoryIamPolicy extends cdktf.TerraformResource {
 
@@ -36,7 +36,7 @@ export class SourcerepoRepositoryIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy.html google_sourcerepo_repository_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_policy google_sourcerepo_repository_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

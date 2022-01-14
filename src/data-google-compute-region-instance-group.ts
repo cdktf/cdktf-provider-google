@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html
+// https://www.terraform.io/docs/providers/google/d/compute_region_instance_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeRegionInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#name DataGoogleComputeRegionInstanceGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group#name DataGoogleComputeRegionInstanceGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#project DataGoogleComputeRegionInstanceGroup#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group#project DataGoogleComputeRegionInstanceGroup#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#region DataGoogleComputeRegionInstanceGroup#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group#region DataGoogleComputeRegionInstanceGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html#self_link DataGoogleComputeRegionInstanceGroup#self_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group#self_link DataGoogleComputeRegionInstanceGroup#self_link}
   */
   readonly selfLink?: string;
 }
@@ -56,7 +56,7 @@ export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html google_compute_region_instance_group}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group google_compute_region_instance_group}
 */
 export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSource {
 
@@ -70,7 +70,7 @@ export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group.html google_compute_region_instance_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_region_instance_group google_compute_region_instance_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
