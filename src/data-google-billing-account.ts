@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/billing_account.html
+// https://www.terraform.io/docs/providers/google/d/billing_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleBillingAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account.html#billing_account DataGoogleBillingAccount#billing_account}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account#billing_account DataGoogleBillingAccount#billing_account}
   */
   readonly billingAccount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account.html#display_name DataGoogleBillingAccount#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account#display_name DataGoogleBillingAccount#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account.html#open DataGoogleBillingAccount#open}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account#open DataGoogleBillingAccount#open}
   */
   readonly open?: boolean | cdktf.IResolvable;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/billing_account.html google_billing_account}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/billing_account google_billing_account}
 */
 export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/billing_account.html google_billing_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/billing_account google_billing_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

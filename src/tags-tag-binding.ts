@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html
+// https://www.terraform.io/docs/providers/google/r/tags_tag_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,29 +10,29 @@ export interface TagsTagBindingConfig extends cdktf.TerraformMetaArguments {
   /**
   * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#parent TagsTagBinding#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding#parent TagsTagBinding#parent}
   */
   readonly parent: string;
   /**
   * The TagValue of the TagBinding. Must be of the form tagValues/456.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#tag_value TagsTagBinding#tag_value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding#tag_value TagsTagBinding#tag_value}
   */
   readonly tagValue: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#timeouts TagsTagBinding#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding#timeouts TagsTagBinding#timeouts}
   */
   readonly timeouts?: TagsTagBindingTimeouts;
 }
 export interface TagsTagBindingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#create TagsTagBinding#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding#create TagsTagBinding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html#delete TagsTagBinding#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding#delete TagsTagBinding#delete}
   */
   readonly delete?: string;
 }
@@ -121,7 +121,7 @@ export class TagsTagBindingTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html google_tags_tag_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding google_tags_tag_binding}
 */
 export class TagsTagBinding extends cdktf.TerraformResource {
 
@@ -135,7 +135,7 @@ export class TagsTagBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding.html google_tags_tag_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_binding google_tags_tag_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

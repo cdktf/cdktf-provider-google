@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/iam_policy.html
+// https://www.terraform.io/docs/providers/google/d/iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,23 +10,23 @@ export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments 
   /**
   * audit_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#audit_config DataGoogleIamPolicy#audit_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#audit_config DataGoogleIamPolicy#audit_config}
   */
   readonly auditConfig?: DataGoogleIamPolicyAuditConfig[];
   /**
   * binding block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#binding DataGoogleIamPolicy#binding}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#binding DataGoogleIamPolicy#binding}
   */
   readonly binding?: DataGoogleIamPolicyBinding[];
 }
 export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#exempted_members DataGoogleIamPolicy#exempted_members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#exempted_members DataGoogleIamPolicy#exempted_members}
   */
   readonly exemptedMembers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#log_type DataGoogleIamPolicy#log_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#log_type DataGoogleIamPolicy#log_type}
   */
   readonly logType: string;
 }
@@ -44,13 +44,13 @@ export function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?
 
 export interface DataGoogleIamPolicyAuditConfig {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#service DataGoogleIamPolicy#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#service DataGoogleIamPolicy#service}
   */
   readonly service: string;
   /**
   * audit_log_configs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
   */
   readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[];
 }
@@ -68,15 +68,15 @@ export function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIam
 
 export interface DataGoogleIamPolicyBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#description DataGoogleIamPolicy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#description DataGoogleIamPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#expression DataGoogleIamPolicy#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#expression DataGoogleIamPolicy#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#title DataGoogleIamPolicy#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#title DataGoogleIamPolicy#title}
   */
   readonly title: string;
 }
@@ -182,17 +182,17 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
 }
 export interface DataGoogleIamPolicyBinding {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#members DataGoogleIamPolicy#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#members DataGoogleIamPolicy#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#role DataGoogleIamPolicy#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#role DataGoogleIamPolicy#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html#condition DataGoogleIamPolicy#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#condition DataGoogleIamPolicy#condition}
   */
   readonly condition?: DataGoogleIamPolicyBindingCondition;
 }
@@ -211,7 +211,7 @@ export function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPoli
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html google_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_policy google_iam_policy}
 */
 export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
 
@@ -225,7 +225,7 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_policy.html google_iam_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_policy google_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

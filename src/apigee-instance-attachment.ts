@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html
+// https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,30 +10,30 @@ export interface ApigeeInstanceAttachmentConfig extends cdktf.TerraformMetaArgum
   /**
   * The resource ID of the environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html#environment ApigeeInstanceAttachment#environment}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment#environment ApigeeInstanceAttachment#environment}
   */
   readonly environment: string;
   /**
   * The Apigee instance associated with the Apigee environment,
 in the format 'organisations/{{org_name}}/instances/{{instance_name}}'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html#instance_id ApigeeInstanceAttachment#instance_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment#instance_id ApigeeInstanceAttachment#instance_id}
   */
   readonly instanceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html#timeouts ApigeeInstanceAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment#timeouts ApigeeInstanceAttachment#timeouts}
   */
   readonly timeouts?: ApigeeInstanceAttachmentTimeouts;
 }
 export interface ApigeeInstanceAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html#create ApigeeInstanceAttachment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment#create ApigeeInstanceAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html#delete ApigeeInstanceAttachment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment#delete ApigeeInstanceAttachment#delete}
   */
   readonly delete?: string;
 }
@@ -122,7 +122,7 @@ export class ApigeeInstanceAttachmentTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html google_apigee_instance_attachment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment google_apigee_instance_attachment}
 */
 export class ApigeeInstanceAttachment extends cdktf.TerraformResource {
 
@@ -136,7 +136,7 @@ export class ApigeeInstanceAttachment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment.html google_apigee_instance_attachment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment google_apigee_instance_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

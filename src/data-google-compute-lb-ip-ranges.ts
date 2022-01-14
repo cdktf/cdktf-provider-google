@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges.html
+// https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleComputeLbIpRangesConfig extends cdktf.TerraformMetaAr
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges.html google_compute_lb_ip_ranges}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges google_compute_lb_ip_ranges}
 */
 export class DataGoogleComputeLbIpRanges extends cdktf.TerraformDataSource {
 
@@ -24,7 +24,7 @@ export class DataGoogleComputeLbIpRanges extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges.html google_compute_lb_ip_ranges} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges google_compute_lb_ip_ranges} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

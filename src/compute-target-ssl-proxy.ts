@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html
+// https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   /**
   * A reference to the BackendService resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#backend_service ComputeTargetSslProxy#backend_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#backend_service ComputeTargetSslProxy#backend_service}
   */
   readonly backendService: string;
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#description ComputeTargetSslProxy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#description ComputeTargetSslProxy#description}
   */
   readonly description?: string;
   /**
@@ -28,18 +28,18 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#name ComputeTargetSslProxy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#name ComputeTargetSslProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#project ComputeTargetSslProxy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#project ComputeTargetSslProxy#project}
   */
   readonly project?: string;
   /**
   * Specifies the type of proxy header to append before sending data to
 the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#proxy_header ComputeTargetSslProxy#proxy_header}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#proxy_header ComputeTargetSslProxy#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
@@ -47,7 +47,7 @@ the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#ssl_certificates ComputeTargetSslProxy#ssl_certificates}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#ssl_certificates ComputeTargetSslProxy#ssl_certificates}
   */
   readonly sslCertificates: string[];
   /**
@@ -55,27 +55,27 @@ SSL certificate must be specified.
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#ssl_policy ComputeTargetSslProxy#ssl_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#ssl_policy ComputeTargetSslProxy#ssl_policy}
   */
   readonly sslPolicy?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#timeouts ComputeTargetSslProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#timeouts ComputeTargetSslProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetSslProxyTimeouts;
 }
 export interface ComputeTargetSslProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#create ComputeTargetSslProxy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#create ComputeTargetSslProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#delete ComputeTargetSslProxy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#delete ComputeTargetSslProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html#update ComputeTargetSslProxy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#update ComputeTargetSslProxy#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class ComputeTargetSslProxyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html google_compute_target_ssl_proxy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy google_compute_target_ssl_proxy}
 */
 export class ComputeTargetSslProxy extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy.html google_compute_target_ssl_proxy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy google_compute_target_ssl_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

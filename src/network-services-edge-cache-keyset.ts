@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html
+// https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   /**
   * A human-readable description of the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#description NetworkServicesEdgeCacheKeyset#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#description NetworkServicesEdgeCacheKeyset#description}
   */
   readonly description?: string;
   /**
   * Set of label tags associated with the EdgeCache resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#labels NetworkServicesEdgeCacheKeyset#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -24,23 +24,23 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#name NetworkServicesEdgeCacheKeyset#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#name NetworkServicesEdgeCacheKeyset#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#project NetworkServicesEdgeCacheKeyset#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#project NetworkServicesEdgeCacheKeyset#project}
   */
   readonly project?: string;
   /**
   * public_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#public_key NetworkServicesEdgeCacheKeyset#public_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#public_key NetworkServicesEdgeCacheKeyset#public_key}
   */
   readonly publicKey: NetworkServicesEdgeCacheKeysetPublicKey[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#timeouts NetworkServicesEdgeCacheKeyset#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#timeouts NetworkServicesEdgeCacheKeyset#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheKeysetTimeouts;
 }
@@ -50,14 +50,14 @@ export interface NetworkServicesEdgeCacheKeysetPublicKey {
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
 which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#id NetworkServicesEdgeCacheKeyset#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
   */
   readonly id: string;
   /**
   * The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
 Representations or encodings of the public key other than this will be rejected with an error.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#value NetworkServicesEdgeCacheKeyset#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#value NetworkServicesEdgeCacheKeyset#value}
   */
   readonly value: string;
 }
@@ -75,15 +75,15 @@ export function networkServicesEdgeCacheKeysetPublicKeyToTerraform(struct?: Netw
 
 export interface NetworkServicesEdgeCacheKeysetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#create NetworkServicesEdgeCacheKeyset#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#create NetworkServicesEdgeCacheKeyset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#delete NetworkServicesEdgeCacheKeyset#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#delete NetworkServicesEdgeCacheKeyset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html#update NetworkServicesEdgeCacheKeyset#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#update NetworkServicesEdgeCacheKeyset#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class NetworkServicesEdgeCacheKeysetTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html google_network_services_edge_cache_keyset}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset google_network_services_edge_cache_keyset}
 */
 export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset.html google_network_services_edge_cache_keyset} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset google_network_services_edge_cache_keyset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

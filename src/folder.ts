@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/folder.html
+// https://www.terraform.io/docs/providers/google/r/folder
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,37 +10,37 @@ export interface FolderConfig extends cdktf.TerraformMetaArguments {
   /**
   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#display_name Folder#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#display_name Folder#display_name}
   */
   readonly displayName: string;
   /**
   * The resource name of the parent Folder or Organization. Must be of the form folders/{folder_id} or organizations/{org_id}.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#parent Folder#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#parent Folder#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#timeouts Folder#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#timeouts Folder#timeouts}
   */
   readonly timeouts?: FolderTimeouts;
 }
 export interface FolderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#create Folder#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#create Folder#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#delete Folder#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#delete Folder#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#read Folder#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#read Folder#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder.html#update Folder#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder#update Folder#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class FolderTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder.html google_folder}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder google_folder}
 */
 export class Folder extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class Folder extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder.html google_folder} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder google_folder} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

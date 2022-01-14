@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/folder_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface FolderIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#folder FolderIamBinding#folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#folder FolderIamBinding#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#members FolderIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#members FolderIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#role FolderIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#role FolderIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#condition FolderIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#condition FolderIamBinding#condition}
   */
   readonly condition?: FolderIamBindingCondition;
 }
 export interface FolderIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#description FolderIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#description FolderIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#expression FolderIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#expression FolderIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html#title FolderIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding#title FolderIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class FolderIamBindingConditionOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html google_folder_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding google_folder_iam_binding}
 */
 export class FolderIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class FolderIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding.html google_folder_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_iam_binding google_folder_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

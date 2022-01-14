@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataCatalogTagTemplateIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#policy_data DataCatalogTagTemplateIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy#policy_data DataCatalogTagTemplateIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#project DataCatalogTagTemplateIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy#project DataCatalogTagTemplateIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#region DataCatalogTagTemplateIamPolicy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy#region DataCatalogTagTemplateIamPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html#tag_template DataCatalogTagTemplateIamPolicy#tag_template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy#tag_template DataCatalogTagTemplateIamPolicy#tag_template}
   */
   readonly tagTemplate: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html google_data_catalog_tag_template_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy google_data_catalog_tag_template_iam_policy}
 */
 export class DataCatalogTagTemplateIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class DataCatalogTagTemplateIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy.html google_data_catalog_tag_template_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_policy google_data_catalog_tag_template_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

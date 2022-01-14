@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html
+// https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface ComputeManagedSslCertificateConfig extends cdktf.TerraformMetaA
   /**
   * The unique identifier for the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#certificate_id ComputeManagedSslCertificate#certificate_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
   */
   readonly certificateId?: number;
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#description ComputeManagedSslCertificate#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
   */
   readonly description?: string;
   /**
@@ -31,30 +31,30 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#name ComputeManagedSslCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#project ComputeManagedSslCertificate#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}
   */
   readonly project?: string;
   /**
   * Enum field whose value is always 'MANAGED' - used to signal to the API
 which type this is. Default value: "MANAGED" Possible values: ["MANAGED"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#type ComputeManagedSslCertificate#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
   */
   readonly type?: string;
   /**
   * managed block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#managed ComputeManagedSslCertificate#managed}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
   */
   readonly managed?: ComputeManagedSslCertificateManaged;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#timeouts ComputeManagedSslCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
   */
   readonly timeouts?: ComputeManagedSslCertificateTimeouts;
 }
@@ -63,7 +63,7 @@ export interface ComputeManagedSslCertificateManaged {
   * Domains for which a managed SSL certificate will be valid.  Currently,
 there can be up to 100 domains in this list.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#domains ComputeManagedSslCertificate#domains}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
   */
   readonly domains: string[];
 }
@@ -126,11 +126,11 @@ export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.Co
 }
 export interface ComputeManagedSslCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#create ComputeManagedSslCertificate#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html#delete ComputeManagedSslCertificate#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}
   */
   readonly delete?: string;
 }
@@ -219,7 +219,7 @@ export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html google_compute_managed_ssl_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}
 */
 export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
 
@@ -233,7 +233,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate.html google_compute_managed_ssl_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_managed_ssl_certificate google_compute_managed_ssl_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

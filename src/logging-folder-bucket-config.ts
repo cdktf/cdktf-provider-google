@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html
+// https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,37 +10,37 @@ export interface LoggingFolderBucketConfigConfig extends cdktf.TerraformMetaArgu
   /**
   * The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html#bucket_id LoggingFolderBucketConfig#bucket_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config#bucket_id LoggingFolderBucketConfig#bucket_id}
   */
   readonly bucketId: string;
   /**
   * An optional description for this bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html#description LoggingFolderBucketConfig#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config#description LoggingFolderBucketConfig#description}
   */
   readonly description?: string;
   /**
   * The parent resource that contains the logging bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html#folder LoggingFolderBucketConfig#folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config#folder LoggingFolderBucketConfig#folder}
   */
   readonly folder: string;
   /**
   * The location of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html#location LoggingFolderBucketConfig#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config#location LoggingFolderBucketConfig#location}
   */
   readonly location: string;
   /**
   * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html#retention_days LoggingFolderBucketConfig#retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config#retention_days LoggingFolderBucketConfig#retention_days}
   */
   readonly retentionDays?: number;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html google_logging_folder_bucket_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config google_logging_folder_bucket_config}
 */
 export class LoggingFolderBucketConfig extends cdktf.TerraformResource {
 
@@ -54,7 +54,7 @@ export class LoggingFolderBucketConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config.html google_logging_folder_bucket_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config google_logging_folder_bucket_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

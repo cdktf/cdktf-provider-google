@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html
+// https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface ComputeRegionTargetHttpsProxyConfig extends cdktf.TerraformMeta
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#description ComputeRegionTargetHttpsProxy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#description ComputeRegionTargetHttpsProxy#description}
   */
   readonly description?: string;
   /**
@@ -22,18 +22,18 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#name ComputeRegionTargetHttpsProxy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#name ComputeRegionTargetHttpsProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#project ComputeRegionTargetHttpsProxy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#project ComputeRegionTargetHttpsProxy#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created target https proxy should reside.
 If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#region ComputeRegionTargetHttpsProxy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#region ComputeRegionTargetHttpsProxy#region}
   */
   readonly region?: string;
   /**
@@ -41,34 +41,34 @@ If it is not provided, the provider region is used.
 connections between users and the load balancer. Currently, exactly
 one SSL certificate must be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#ssl_certificates ComputeRegionTargetHttpsProxy#ssl_certificates}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#ssl_certificates ComputeRegionTargetHttpsProxy#ssl_certificates}
   */
   readonly sslCertificates: string[];
   /**
   * A reference to the RegionUrlMap resource that defines the mapping from URL
 to the RegionBackendService.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#url_map ComputeRegionTargetHttpsProxy#url_map}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#url_map ComputeRegionTargetHttpsProxy#url_map}
   */
   readonly urlMap: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#timeouts ComputeRegionTargetHttpsProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#timeouts ComputeRegionTargetHttpsProxy#timeouts}
   */
   readonly timeouts?: ComputeRegionTargetHttpsProxyTimeouts;
 }
 export interface ComputeRegionTargetHttpsProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#create ComputeRegionTargetHttpsProxy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#create ComputeRegionTargetHttpsProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#delete ComputeRegionTargetHttpsProxy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#delete ComputeRegionTargetHttpsProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html#update ComputeRegionTargetHttpsProxy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy#update ComputeRegionTargetHttpsProxy#update}
   */
   readonly update?: string;
 }
@@ -180,7 +180,7 @@ export class ComputeRegionTargetHttpsProxyTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html google_compute_region_target_https_proxy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy google_compute_region_target_https_proxy}
 */
 export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
 
@@ -194,7 +194,7 @@ export class ComputeRegionTargetHttpsProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy.html google_compute_region_target_https_proxy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy google_compute_region_target_https_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface PrivatecaCaPoolIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#ca_pool PrivatecaCaPoolIamMember#ca_pool}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#ca_pool PrivatecaCaPoolIamMember#ca_pool}
   */
   readonly caPool: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#location PrivatecaCaPoolIamMember#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#location PrivatecaCaPoolIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#member PrivatecaCaPoolIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#member PrivatecaCaPoolIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#project PrivatecaCaPoolIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#project PrivatecaCaPoolIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#role PrivatecaCaPoolIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#role PrivatecaCaPoolIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#condition PrivatecaCaPoolIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#condition PrivatecaCaPoolIamMember#condition}
   */
   readonly condition?: PrivatecaCaPoolIamMemberCondition;
 }
 export interface PrivatecaCaPoolIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#description PrivatecaCaPoolIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#description PrivatecaCaPoolIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#expression PrivatecaCaPoolIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#expression PrivatecaCaPoolIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html#title PrivatecaCaPoolIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member#title PrivatecaCaPoolIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class PrivatecaCaPoolIamMemberConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html google_privateca_ca_pool_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member google_privateca_ca_pool_iam_member}
 */
 export class PrivatecaCaPoolIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class PrivatecaCaPoolIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member.html google_privateca_ca_pool_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_member google_privateca_ca_pool_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

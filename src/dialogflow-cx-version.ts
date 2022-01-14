@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html
+// https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,26 +10,26 @@ export interface DialogflowCxVersionConfig extends cdktf.TerraformMetaArguments 
   /**
   * The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#description DialogflowCxVersion#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#description DialogflowCxVersion#description}
   */
   readonly description?: string;
   /**
   * The human-readable name of the version. Limit of 64 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#display_name DialogflowCxVersion#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#display_name DialogflowCxVersion#display_name}
   */
   readonly displayName: string;
   /**
   * The Flow to create an Version for. 
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#parent DialogflowCxVersion#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#parent DialogflowCxVersion#parent}
   */
   readonly parent?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#timeouts DialogflowCxVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#timeouts DialogflowCxVersion#timeouts}
   */
   readonly timeouts?: DialogflowCxVersionTimeouts;
 }
@@ -52,15 +52,15 @@ export class DialogflowCxVersionNluSettings extends cdktf.ComplexComputedList {
 }
 export interface DialogflowCxVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#create DialogflowCxVersion#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#create DialogflowCxVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#delete DialogflowCxVersion#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#delete DialogflowCxVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html#update DialogflowCxVersion#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#update DialogflowCxVersion#update}
   */
   readonly update?: string;
 }
@@ -172,7 +172,7 @@ export class DialogflowCxVersionTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html google_dialogflow_cx_version}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version google_dialogflow_cx_version}
 */
 export class DialogflowCxVersion extends cdktf.TerraformResource {
 
@@ -186,7 +186,7 @@ export class DialogflowCxVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version.html google_dialogflow_cx_version} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version google_dialogflow_cx_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

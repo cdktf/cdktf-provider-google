@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html
+// https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,29 +13,29 @@ applied by default to all realms and clusters. For example,
 
 'projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#default_game_server_config GameServicesGameServerDeploymentRollout#default_game_server_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#default_game_server_config GameServicesGameServerDeploymentRollout#default_game_server_config}
   */
   readonly defaultGameServerConfig: string;
   /**
   * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#deployment_id GameServicesGameServerDeploymentRollout#deployment_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#deployment_id GameServicesGameServerDeploymentRollout#deployment_id}
   */
   readonly deploymentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#project GameServicesGameServerDeploymentRollout#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#project GameServicesGameServerDeploymentRollout#project}
   */
   readonly project?: string;
   /**
   * game_server_config_overrides block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#game_server_config_overrides GameServicesGameServerDeploymentRollout#game_server_config_overrides}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#game_server_config_overrides GameServicesGameServerDeploymentRollout#game_server_config_overrides}
   */
   readonly gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#timeouts GameServicesGameServerDeploymentRollout#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#timeouts GameServicesGameServerDeploymentRollout#timeouts}
   */
   readonly timeouts?: GameServicesGameServerDeploymentRolloutTimeouts;
 }
@@ -43,7 +43,7 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   /**
   * List of realms to match against.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#realms GameServicesGameServerDeploymentRollout#realms}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#realms GameServicesGameServerDeploymentRollout#realms}
   */
   readonly realms?: string[];
 }
@@ -111,13 +111,13 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   /**
   * Version of the configuration.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#config_version GameServicesGameServerDeploymentRollout#config_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#config_version GameServicesGameServerDeploymentRollout#config_version}
   */
   readonly configVersion?: string;
   /**
   * realms_selector block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#realms_selector GameServicesGameServerDeploymentRollout#realms_selector}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#realms_selector GameServicesGameServerDeploymentRollout#realms_selector}
   */
   readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector;
 }
@@ -135,15 +135,15 @@ export function gameServicesGameServerDeploymentRolloutGameServerConfigOverrides
 
 export interface GameServicesGameServerDeploymentRolloutTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#create GameServicesGameServerDeploymentRollout#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#create GameServicesGameServerDeploymentRollout#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#delete GameServicesGameServerDeploymentRollout#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#delete GameServicesGameServerDeploymentRollout#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html#update GameServicesGameServerDeploymentRollout#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#update GameServicesGameServerDeploymentRollout#update}
   */
   readonly update?: string;
 }
@@ -255,7 +255,7 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout}
 */
 export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformResource {
 
@@ -269,7 +269,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout.html google_game_services_game_server_deployment_rollout} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

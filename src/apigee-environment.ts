@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/apigee_environment.html
+// https://www.terraform.io/docs/providers/google/r/apigee_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,46 +10,46 @@ export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#description ApigeeEnvironment#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#description ApigeeEnvironment#description}
   */
   readonly description?: string;
   /**
   * Display name of the environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#display_name ApigeeEnvironment#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#display_name ApigeeEnvironment#display_name}
   */
   readonly displayName?: string;
   /**
   * The resource ID of the environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#name ApigeeEnvironment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#name ApigeeEnvironment#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment,
 in the format 'organizations/{{org_name}}'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#org_id ApigeeEnvironment#org_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#org_id ApigeeEnvironment#org_id}
   */
   readonly orgId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#timeouts ApigeeEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#timeouts ApigeeEnvironment#timeouts}
   */
   readonly timeouts?: ApigeeEnvironmentTimeouts;
 }
 export interface ApigeeEnvironmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#create ApigeeEnvironment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#create ApigeeEnvironment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#delete ApigeeEnvironment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#delete ApigeeEnvironment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html#update ApigeeEnvironment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#update ApigeeEnvironment#update}
   */
   readonly update?: string;
 }
@@ -161,7 +161,7 @@ export class ApigeeEnvironmentTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html google_apigee_environment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_environment google_apigee_environment}
 */
 export class ApigeeEnvironment extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_environment.html google_apigee_environment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_environment google_apigee_environment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html
+// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,23 +11,23 @@ export interface SourcerepoRepositoryConfig extends cdktf.TerraformMetaArguments
   * Resource name of the repository, of the form '{{repo}}'.
 The repo name may contain slashes. eg, 'name/with/slash'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#name SourcerepoRepository#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#name SourcerepoRepository#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#project SourcerepoRepository#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#project SourcerepoRepository#project}
   */
   readonly project?: string;
   /**
   * pubsub_configs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#pubsub_configs SourcerepoRepository#pubsub_configs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
   */
   readonly pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#timeouts SourcerepoRepository#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
   */
   readonly timeouts?: SourcerepoRepositoryTimeouts;
 }
@@ -37,7 +37,7 @@ export interface SourcerepoRepositoryPubsubConfigs {
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#message_format SourcerepoRepository#message_format}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#message_format SourcerepoRepository#message_format}
   */
   readonly messageFormat: string;
   /**
@@ -46,11 +46,11 @@ This service account needs to be in the same project as the PubsubConfig. When a
 the caller needs to have iam.serviceAccounts.actAs permission on this service account. 
 If unspecified, it defaults to the compute engine default service account.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#service_account_email SourcerepoRepository#service_account_email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#topic SourcerepoRepository#topic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#topic SourcerepoRepository#topic}
   */
   readonly topic: string;
 }
@@ -69,15 +69,15 @@ export function sourcerepoRepositoryPubsubConfigsToTerraform(struct?: Sourcerepo
 
 export interface SourcerepoRepositoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#create SourcerepoRepository#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#create SourcerepoRepository#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#delete SourcerepoRepository#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#delete SourcerepoRepository#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html#update SourcerepoRepository#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#update SourcerepoRepository#update}
   */
   readonly update?: string;
 }
@@ -189,7 +189,7 @@ export class SourcerepoRepositoryTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html google_sourcerepo_repository}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository google_sourcerepo_repository}
 */
 export class SourcerepoRepository extends cdktf.TerraformResource {
 
@@ -203,7 +203,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository.html google_sourcerepo_repository} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository google_sourcerepo_repository} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

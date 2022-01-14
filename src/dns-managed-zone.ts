@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html
+// https://www.terraform.io/docs/providers/google/r/dns_managed_zone
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,71 +10,71 @@ export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * A textual description field. Defaults to 'Managed by Terraform'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#description DnsManagedZone#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#description DnsManagedZone#description}
   */
   readonly description?: string;
   /**
   * The DNS name of this managed zone, for instance "example.com.".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#dns_name DnsManagedZone#dns_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#dns_name DnsManagedZone#dns_name}
   */
   readonly dnsName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#force_destroy DnsManagedZone#force_destroy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#force_destroy DnsManagedZone#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
   * A set of key/value label pairs to assign to this ManagedZone.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#labels DnsManagedZone#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#labels DnsManagedZone#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * User assigned name for this resource.
 Must be unique within the project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#name DnsManagedZone#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#name DnsManagedZone#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#project DnsManagedZone#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#project DnsManagedZone#project}
   */
   readonly project?: string;
   /**
   * The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources. Default value: "public" Possible values: ["private", "public"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#visibility DnsManagedZone#visibility}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#visibility DnsManagedZone#visibility}
   */
   readonly visibility?: string;
   /**
   * dnssec_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#dnssec_config DnsManagedZone#dnssec_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#dnssec_config DnsManagedZone#dnssec_config}
   */
   readonly dnssecConfig?: DnsManagedZoneDnssecConfig;
   /**
   * forwarding_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#forwarding_config DnsManagedZone#forwarding_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#forwarding_config DnsManagedZone#forwarding_config}
   */
   readonly forwardingConfig?: DnsManagedZoneForwardingConfig;
   /**
   * peering_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#peering_config DnsManagedZone#peering_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#peering_config DnsManagedZone#peering_config}
   */
   readonly peeringConfig?: DnsManagedZonePeeringConfig;
   /**
   * private_visibility_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#private_visibility_config DnsManagedZone#private_visibility_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#private_visibility_config DnsManagedZone#private_visibility_config}
   */
   readonly privateVisibilityConfig?: DnsManagedZonePrivateVisibilityConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#timeouts DnsManagedZone#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#timeouts DnsManagedZone#timeouts}
   */
   readonly timeouts?: DnsManagedZoneTimeouts;
 }
@@ -82,13 +82,13 @@ export interface DnsManagedZoneDnssecConfigDefaultKeySpecs {
   /**
   * String mnemonic specifying the DNSSEC algorithm of this key Possible values: ["ecdsap256sha256", "ecdsap384sha384", "rsasha1", "rsasha256", "rsasha512"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#algorithm DnsManagedZone#algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#algorithm DnsManagedZone#algorithm}
   */
   readonly algorithm?: string;
   /**
   * Length of the keys in bits
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#key_length DnsManagedZone#key_length}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#key_length DnsManagedZone#key_length}
   */
   readonly keyLength?: number;
   /**
@@ -99,13 +99,13 @@ resource record sets of type DNSKEY. Zone signing keys do
 not have the Secure Entry Point flag set and will be used
 to sign all other types of resource record sets. Possible values: ["keySigning", "zoneSigning"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#key_type DnsManagedZone#key_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#key_type DnsManagedZone#key_type}
   */
   readonly keyType?: string;
   /**
   * Identifies what kind of resource this is
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#kind DnsManagedZone#kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#kind DnsManagedZone#kind}
   */
   readonly kind?: string;
 }
@@ -127,26 +127,26 @@ export interface DnsManagedZoneDnssecConfig {
   /**
   * Identifies what kind of resource this is
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#kind DnsManagedZone#kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#kind DnsManagedZone#kind}
   */
   readonly kind?: string;
   /**
   * Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is 'off'. Possible values: ["nsec", "nsec3"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#non_existence DnsManagedZone#non_existence}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#non_existence DnsManagedZone#non_existence}
   */
   readonly nonExistence?: string;
   /**
   * Specifies whether DNSSEC is enabled, and what mode it is in Possible values: ["off", "on", "transfer"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#state DnsManagedZone#state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#state DnsManagedZone#state}
   */
   readonly state?: string;
   /**
   * default_key_specs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#default_key_specs DnsManagedZone#default_key_specs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#default_key_specs DnsManagedZone#default_key_specs}
   */
   readonly defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[];
 }
@@ -286,13 +286,13 @@ export interface DnsManagedZoneForwardingConfigTargetNameServers {
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#forwarding_path DnsManagedZone#forwarding_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#forwarding_path DnsManagedZone#forwarding_path}
   */
   readonly forwardingPath?: string;
   /**
   * IPv4 address of a target name server.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#ipv4_address DnsManagedZone#ipv4_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#ipv4_address DnsManagedZone#ipv4_address}
   */
   readonly ipv4Address: string;
 }
@@ -312,7 +312,7 @@ export interface DnsManagedZoneForwardingConfig {
   /**
   * target_name_servers block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#target_name_servers DnsManagedZone#target_name_servers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#target_name_servers DnsManagedZone#target_name_servers}
   */
   readonly targetNameServers: DnsManagedZoneForwardingConfigTargetNameServers[];
 }
@@ -380,7 +380,7 @@ export interface DnsManagedZonePeeringConfigTargetNetwork {
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#network_url DnsManagedZone#network_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#network_url DnsManagedZone#network_url}
   */
   readonly networkUrl: string;
 }
@@ -445,7 +445,7 @@ export interface DnsManagedZonePeeringConfig {
   /**
   * target_network block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#target_network DnsManagedZone#target_network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#target_network DnsManagedZone#target_network}
   */
   readonly targetNetwork: DnsManagedZonePeeringConfigTargetNetwork;
 }
@@ -512,7 +512,7 @@ export interface DnsManagedZonePrivateVisibilityConfigNetworks {
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#network_url DnsManagedZone#network_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#network_url DnsManagedZone#network_url}
   */
   readonly networkUrl: string;
 }
@@ -531,7 +531,7 @@ export interface DnsManagedZonePrivateVisibilityConfig {
   /**
   * networks block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#networks DnsManagedZone#networks}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#networks DnsManagedZone#networks}
   */
   readonly networks: DnsManagedZonePrivateVisibilityConfigNetworks[];
 }
@@ -595,15 +595,15 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
 }
 export interface DnsManagedZoneTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#create DnsManagedZone#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#create DnsManagedZone#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#delete DnsManagedZone#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#delete DnsManagedZone#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html#update DnsManagedZone#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#update DnsManagedZone#update}
   */
   readonly update?: string;
 }
@@ -715,7 +715,7 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html google_dns_managed_zone}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone google_dns_managed_zone}
 */
 export class DnsManagedZone extends cdktf.TerraformResource {
 
@@ -729,7 +729,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone.html google_dns_managed_zone} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone google_dns_managed_zone} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

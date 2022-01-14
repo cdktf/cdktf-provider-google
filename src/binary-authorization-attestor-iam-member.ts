@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface BinaryAuthorizationAttestorIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#attestor BinaryAuthorizationAttestorIamMember#attestor}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#attestor BinaryAuthorizationAttestorIamMember#attestor}
   */
   readonly attestor: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#member BinaryAuthorizationAttestorIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#member BinaryAuthorizationAttestorIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#project BinaryAuthorizationAttestorIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#project BinaryAuthorizationAttestorIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#role BinaryAuthorizationAttestorIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#role BinaryAuthorizationAttestorIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#condition BinaryAuthorizationAttestorIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#condition BinaryAuthorizationAttestorIamMember#condition}
   */
   readonly condition?: BinaryAuthorizationAttestorIamMemberCondition;
 }
 export interface BinaryAuthorizationAttestorIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#description BinaryAuthorizationAttestorIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#description BinaryAuthorizationAttestorIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#expression BinaryAuthorizationAttestorIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#expression BinaryAuthorizationAttestorIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html#title BinaryAuthorizationAttestorIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#title BinaryAuthorizationAttestorIamMember#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class BinaryAuthorizationAttestorIamMemberConditionOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html google_binary_authorization_attestor_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member google_binary_authorization_attestor_iam_member}
 */
 export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member.html google_binary_authorization_attestor_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member google_binary_authorization_attestor_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html
+// https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,43 +10,43 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the column family.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#column_family BigtableGcPolicy#column_family}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#column_family BigtableGcPolicy#column_family}
   */
   readonly columnFamily: string;
   /**
   * The name of the Bigtable instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#instance_name BigtableGcPolicy#instance_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#instance_name BigtableGcPolicy#instance_name}
   */
   readonly instanceName: string;
   /**
   * If multiple policies are set, you should choose between UNION OR INTERSECTION.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#mode BigtableGcPolicy#mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#mode BigtableGcPolicy#mode}
   */
   readonly mode?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#project BigtableGcPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#project BigtableGcPolicy#project}
   */
   readonly project?: string;
   /**
   * The name of the table.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#table BigtableGcPolicy#table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#table BigtableGcPolicy#table}
   */
   readonly table: string;
   /**
   * max_age block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#max_age BigtableGcPolicy#max_age}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#max_age BigtableGcPolicy#max_age}
   */
   readonly maxAge?: BigtableGcPolicyMaxAge;
   /**
   * max_version block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#max_version BigtableGcPolicy#max_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#max_version BigtableGcPolicy#max_version}
   */
   readonly maxVersion?: BigtableGcPolicyMaxVersion[];
 }
@@ -54,13 +54,13 @@ export interface BigtableGcPolicyMaxAge {
   /**
   * Number of days before applying GC policy.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#days BigtableGcPolicy#days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#days BigtableGcPolicy#days}
   */
   readonly days?: number;
   /**
   * Duration before applying GC policy
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#duration BigtableGcPolicy#duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#duration BigtableGcPolicy#duration}
   */
   readonly duration?: string;
 }
@@ -151,7 +151,7 @@ export interface BigtableGcPolicyMaxVersion {
   /**
   * Number of version before applying the GC policy.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html#number BigtableGcPolicy#number}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#number BigtableGcPolicy#number}
   */
   readonly number: number;
 }
@@ -168,7 +168,7 @@ export function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyM
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html google_bigtable_gc_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy google_bigtable_gc_policy}
 */
 export class BigtableGcPolicy extends cdktf.TerraformResource {
 
@@ -182,7 +182,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy.html google_bigtable_gc_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy google_bigtable_gc_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

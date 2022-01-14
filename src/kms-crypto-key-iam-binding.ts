@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface KmsCryptoKeyIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#crypto_key_id KmsCryptoKeyIamBinding#crypto_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#crypto_key_id KmsCryptoKeyIamBinding#crypto_key_id}
   */
   readonly cryptoKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#members KmsCryptoKeyIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#members KmsCryptoKeyIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#role KmsCryptoKeyIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#role KmsCryptoKeyIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#condition KmsCryptoKeyIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#condition KmsCryptoKeyIamBinding#condition}
   */
   readonly condition?: KmsCryptoKeyIamBindingCondition;
 }
 export interface KmsCryptoKeyIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#description KmsCryptoKeyIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#description KmsCryptoKeyIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#expression KmsCryptoKeyIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#expression KmsCryptoKeyIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html#title KmsCryptoKeyIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding#title KmsCryptoKeyIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class KmsCryptoKeyIamBindingConditionOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html google_kms_crypto_key_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding google_kms_crypto_key_iam_binding}
 */
 export class KmsCryptoKeyIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class KmsCryptoKeyIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding.html google_kms_crypto_key_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key_iam_binding google_kms_crypto_key_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

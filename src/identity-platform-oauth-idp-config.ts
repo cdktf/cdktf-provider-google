@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html
+// https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,61 +10,61 @@ export interface IdentityPlatformOauthIdpConfigConfig extends cdktf.TerraformMet
   /**
   * The client id of an OAuth client.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#client_id IdentityPlatformOauthIdpConfig#client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#client_id IdentityPlatformOauthIdpConfig#client_id}
   */
   readonly clientId: string;
   /**
   * The client secret of the OAuth client, to enable OIDC code flow.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#client_secret IdentityPlatformOauthIdpConfig#client_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#client_secret IdentityPlatformOauthIdpConfig#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * Human friendly display name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#display_name IdentityPlatformOauthIdpConfig#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#display_name IdentityPlatformOauthIdpConfig#display_name}
   */
   readonly displayName?: string;
   /**
   * If this config allows users to sign in with the provider.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#enabled IdentityPlatformOauthIdpConfig#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#enabled IdentityPlatformOauthIdpConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * For OIDC Idps, the issuer identifier.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#issuer IdentityPlatformOauthIdpConfig#issuer}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#issuer IdentityPlatformOauthIdpConfig#issuer}
   */
   readonly issuer: string;
   /**
   * The name of the OauthIdpConfig. Must start with 'oidc.'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#name IdentityPlatformOauthIdpConfig#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#name IdentityPlatformOauthIdpConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#project IdentityPlatformOauthIdpConfig#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#project IdentityPlatformOauthIdpConfig#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#timeouts IdentityPlatformOauthIdpConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#timeouts IdentityPlatformOauthIdpConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformOauthIdpConfigTimeouts;
 }
 export interface IdentityPlatformOauthIdpConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#create IdentityPlatformOauthIdpConfig#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#create IdentityPlatformOauthIdpConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#delete IdentityPlatformOauthIdpConfig#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#delete IdentityPlatformOauthIdpConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html#update IdentityPlatformOauthIdpConfig#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config#update IdentityPlatformOauthIdpConfig#update}
   */
   readonly update?: string;
 }
@@ -176,7 +176,7 @@ export class IdentityPlatformOauthIdpConfigTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html google_identity_platform_oauth_idp_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config google_identity_platform_oauth_idp_config}
 */
 export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
 
@@ -190,7 +190,7 @@ export class IdentityPlatformOauthIdpConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config.html google_identity_platform_oauth_idp_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_oauth_idp_config google_identity_platform_oauth_idp_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

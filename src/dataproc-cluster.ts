@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html
+// https://www.terraform.io/docs/providers/google/r/dataproc_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,43 +10,43 @@ export interface DataprocClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a terraform apply
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#graceful_decommission_timeout DataprocCluster#graceful_decommission_timeout}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#graceful_decommission_timeout DataprocCluster#graceful_decommission_timeout}
   */
   readonly gracefulDecommissionTimeout?: string;
   /**
   * The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#labels DataprocCluster#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#labels DataprocCluster#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name of the cluster, unique within the project and zone.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#name DataprocCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#name DataprocCluster#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the cluster will exist. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#project DataprocCluster#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#project DataprocCluster#project}
   */
   readonly project?: string;
   /**
   * The region in which the cluster and associated nodes will be created in. Defaults to global.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#region DataprocCluster#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#region DataprocCluster#region}
   */
   readonly region?: string;
   /**
   * cluster_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#cluster_config DataprocCluster#cluster_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#cluster_config DataprocCluster#cluster_config}
   */
   readonly clusterConfig?: DataprocClusterClusterConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#timeouts DataprocCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#timeouts DataprocCluster#timeouts}
   */
   readonly timeouts?: DataprocClusterTimeouts;
 }
@@ -54,7 +54,7 @@ export interface DataprocClusterClusterConfigAutoscalingConfig {
   /**
   * The autoscaling policy used by the cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#policy_uri DataprocCluster#policy_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#policy_uri DataprocCluster#policy_uri}
   */
   readonly policyUri: string;
 }
@@ -119,7 +119,7 @@ export interface DataprocClusterClusterConfigEncryptionConfig {
   /**
   * The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#kms_key_name DataprocCluster#kms_key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#kms_key_name DataprocCluster#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -184,19 +184,19 @@ export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceCon
   /**
   * Defines whether instances have integrity monitoring enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_integrity_monitoring DataprocCluster#enable_integrity_monitoring}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#enable_integrity_monitoring DataprocCluster#enable_integrity_monitoring}
   */
   readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
   /**
   * Defines whether instances have Secure Boot enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_secure_boot DataprocCluster#enable_secure_boot}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#enable_secure_boot DataprocCluster#enable_secure_boot}
   */
   readonly enableSecureBoot?: boolean | cdktf.IResolvable;
   /**
   * Defines whether instances have the vTPM enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_vtpm DataprocCluster#enable_vtpm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#enable_vtpm DataprocCluster#enable_vtpm}
   */
   readonly enableVtpm?: boolean | cdktf.IResolvable;
 }
@@ -310,55 +310,55 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
   /**
   * By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#internal_ip_only DataprocCluster#internal_ip_only}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#internal_ip_only DataprocCluster#internal_ip_only}
   */
   readonly internalIpOnly?: boolean | cdktf.IResolvable;
   /**
   * A map of the Compute Engine metadata entries to add to all instances
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#metadata DataprocCluster#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#metadata DataprocCluster#metadata}
   */
   readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The name or self_link of the Google Compute Engine network to the cluster will be part of. Conflicts with subnetwork. If neither is specified, this defaults to the "default" network.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#network DataprocCluster#network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#network DataprocCluster#network}
   */
   readonly network?: string;
   /**
   * The service account to be used by the Node VMs. If not specified, the "default" service account is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#service_account DataprocCluster#service_account}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#service_account DataprocCluster#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * The set of Google API scopes to be made available on all of the node VMs under the service_account specified. These can be either FQDNs, or scope aliases.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#service_account_scopes DataprocCluster#service_account_scopes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#service_account_scopes DataprocCluster#service_account_scopes}
   */
   readonly serviceAccountScopes?: string[];
   /**
   * The name or self_link of the Google Compute Engine subnetwork the cluster will be part of. Conflicts with network.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#subnetwork DataprocCluster#subnetwork}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#subnetwork DataprocCluster#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * The list of instance tags applied to instances in the cluster. Tags are used to identify valid sources or targets for network firewalls.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#tags DataprocCluster#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#tags DataprocCluster#tags}
   */
   readonly tags?: string[];
   /**
   * The GCP zone where your data is stored and used (i.e. where the master and the worker nodes will be created in). If region is set to 'global' (default) then zone is mandatory, otherwise GCP is able to make use of Auto Zone Placement to determine this automatically for you. Note: This setting additionally determines and restricts which computing resources are available for use with other configs such as cluster_config.master_config.machine_type and cluster_config.worker_config.machine_type.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#zone DataprocCluster#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#zone DataprocCluster#zone}
   */
   readonly zone?: string;
   /**
   * shielded_instance_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#shielded_instance_config DataprocCluster#shielded_instance_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#shielded_instance_config DataprocCluster#shielded_instance_config}
   */
   readonly shieldedInstanceConfig?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig;
 }
@@ -611,13 +611,13 @@ export interface DataprocClusterClusterConfigInitializationAction {
   /**
   * The script to be executed during initialization of the cluster. The script must be a GCS file with a gs:// prefix.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#script DataprocCluster#script}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#script DataprocCluster#script}
   */
   readonly script: string;
   /**
   * The maximum duration (in seconds) which script is allowed to take to execute its action. GCP will default to a predetermined computed value if not set (currently 300).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#timeout_sec DataprocCluster#timeout_sec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#timeout_sec DataprocCluster#timeout_sec}
   */
   readonly timeoutSec?: number;
 }
@@ -637,13 +637,13 @@ export interface DataprocClusterClusterConfigMasterConfigAccelerators {
   /**
   * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#accelerator_count DataprocCluster#accelerator_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerator_count DataprocCluster#accelerator_count}
   */
   readonly acceleratorCount: number;
   /**
   * The short name of the accelerator type to expose to this instance. For example, nvidia-tesla-k80.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#accelerator_type DataprocCluster#accelerator_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerator_type DataprocCluster#accelerator_type}
   */
   readonly acceleratorType: string;
 }
@@ -663,19 +663,19 @@ export interface DataprocClusterClusterConfigMasterConfigDiskConfig {
   /**
   * Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#boot_disk_size_gb DataprocCluster#boot_disk_size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_size_gb DataprocCluster#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
   * The disk type of the primary disk attached to each node. One of "pd-ssd" or "pd-standard". Defaults to "pd-standard".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#boot_disk_type DataprocCluster#boot_disk_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_type DataprocCluster#boot_disk_type}
   */
   readonly bootDiskType?: string;
   /**
   * The amount of local SSD disks that will be attached to each master cluster node. Defaults to 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#num_local_ssds DataprocCluster#num_local_ssds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#num_local_ssds DataprocCluster#num_local_ssds}
   */
   readonly numLocalSsds?: number;
 }
@@ -789,37 +789,37 @@ export interface DataprocClusterClusterConfigMasterConfig {
   /**
   * The URI for the image to use for this master/worker
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#image_uri DataprocCluster#image_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#image_uri DataprocCluster#image_uri}
   */
   readonly imageUri?: string;
   /**
   * The name of a Google Compute Engine machine type to create for the master/worker
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#machine_type DataprocCluster#machine_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#machine_type DataprocCluster#machine_type}
   */
   readonly machineType?: string;
   /**
   * The name of a minimum generation of CPU family for the master/worker. If not specified, GCP will default to a predetermined computed value for each zone.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#min_cpu_platform DataprocCluster#min_cpu_platform}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#min_cpu_platform DataprocCluster#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
   * Specifies the number of master/worker nodes to create. If not specified, GCP will default to a predetermined computed value.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#num_instances DataprocCluster#num_instances}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#num_instances DataprocCluster#num_instances}
   */
   readonly numInstances?: number;
   /**
   * accelerators block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#accelerators DataprocCluster#accelerators}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerators DataprocCluster#accelerators}
   */
   readonly accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[];
   /**
   * disk_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#disk_config DataprocCluster#disk_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#disk_config DataprocCluster#disk_config}
   */
   readonly diskConfig?: DataprocClusterClusterConfigMasterConfigDiskConfig;
 }
@@ -1003,19 +1003,19 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
   /**
   * Size of the primary disk attached to each preemptible worker node, specified in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#boot_disk_size_gb DataprocCluster#boot_disk_size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_size_gb DataprocCluster#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
   * The disk type of the primary disk attached to each preemptible worker node. One of "pd-ssd" or "pd-standard". Defaults to "pd-standard".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#boot_disk_type DataprocCluster#boot_disk_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_type DataprocCluster#boot_disk_type}
   */
   readonly bootDiskType?: string;
   /**
   * The amount of local SSD disks that will be attached to each preemptible worker node. Defaults to 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#num_local_ssds DataprocCluster#num_local_ssds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#num_local_ssds DataprocCluster#num_local_ssds}
   */
   readonly numLocalSsds?: number;
 }
@@ -1129,13 +1129,13 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfig {
   /**
   * Specifies the number of preemptible nodes to create. Defaults to 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#num_instances DataprocCluster#num_instances}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#num_instances DataprocCluster#num_instances}
   */
   readonly numInstances?: number;
   /**
   * disk_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#disk_config DataprocCluster#disk_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#disk_config DataprocCluster#disk_config}
   */
   readonly diskConfig?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig;
 }
@@ -1226,44 +1226,44 @@ export interface DataprocClusterClusterConfigSecurityConfigKerberosConfig {
   /**
   * The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#cross_realm_trust_admin_server DataprocCluster#cross_realm_trust_admin_server}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#cross_realm_trust_admin_server DataprocCluster#cross_realm_trust_admin_server}
   */
   readonly crossRealmTrustAdminServer?: string;
   /**
   * The KDC (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#cross_realm_trust_kdc DataprocCluster#cross_realm_trust_kdc}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#cross_realm_trust_kdc DataprocCluster#cross_realm_trust_kdc}
   */
   readonly crossRealmTrustKdc?: string;
   /**
   * The remote realm the Dataproc on-cluster KDC will trust, should the user enable cross realm trust.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#cross_realm_trust_realm DataprocCluster#cross_realm_trust_realm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#cross_realm_trust_realm DataprocCluster#cross_realm_trust_realm}
   */
   readonly crossRealmTrustRealm?: string;
   /**
   * The Cloud Storage URI of a KMS encrypted file containing the shared password between the on-cluster
 Kerberos realm and the remote trusted realm, in a cross realm trust relationship.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#cross_realm_trust_shared_password_uri DataprocCluster#cross_realm_trust_shared_password_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#cross_realm_trust_shared_password_uri DataprocCluster#cross_realm_trust_shared_password_uri}
   */
   readonly crossRealmTrustSharedPasswordUri?: string;
   /**
   * Flag to indicate whether to Kerberize the cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#enable_kerberos DataprocCluster#enable_kerberos}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#enable_kerberos DataprocCluster#enable_kerberos}
   */
   readonly enableKerberos?: boolean | cdktf.IResolvable;
   /**
   * The Cloud Storage URI of a KMS encrypted file containing the master key of the KDC database.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#kdc_db_key_uri DataprocCluster#kdc_db_key_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#kdc_db_key_uri DataprocCluster#kdc_db_key_uri}
   */
   readonly kdcDbKeyUri?: string;
   /**
   * The Cloud Storage URI of a KMS encrypted file containing the password to the user provided key. For the self-signed certificate, this password is generated by Dataproc.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#key_password_uri DataprocCluster#key_password_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#key_password_uri DataprocCluster#key_password_uri}
   */
   readonly keyPasswordUri?: string;
   /**
@@ -1271,49 +1271,49 @@ Kerberos realm and the remote trusted realm, in a cross realm trust relationship
 the password to the user provided keystore. For the self-signed certificate, this password is generated
 by Dataproc
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#keystore_password_uri DataprocCluster#keystore_password_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#keystore_password_uri DataprocCluster#keystore_password_uri}
   */
   readonly keystorePasswordUri?: string;
   /**
   * The Cloud Storage URI of the keystore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#keystore_uri DataprocCluster#keystore_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#keystore_uri DataprocCluster#keystore_uri}
   */
   readonly keystoreUri?: string;
   /**
   * The uri of the KMS key used to encrypt various sensitive files.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#kms_key_uri DataprocCluster#kms_key_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#kms_key_uri DataprocCluster#kms_key_uri}
   */
   readonly kmsKeyUri: string;
   /**
   * The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#realm DataprocCluster#realm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#realm DataprocCluster#realm}
   */
   readonly realm?: string;
   /**
   * The cloud Storage URI of a KMS encrypted file containing the root principal password.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#root_principal_password_uri DataprocCluster#root_principal_password_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#root_principal_password_uri DataprocCluster#root_principal_password_uri}
   */
   readonly rootPrincipalPasswordUri: string;
   /**
   * The lifetime of the ticket granting ticket, in hours.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#tgt_lifetime_hours DataprocCluster#tgt_lifetime_hours}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#tgt_lifetime_hours DataprocCluster#tgt_lifetime_hours}
   */
   readonly tgtLifetimeHours?: number;
   /**
   * The Cloud Storage URI of a KMS encrypted file containing the password to the user provided truststore. For the self-signed certificate, this password is generated by Dataproc.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#truststore_password_uri DataprocCluster#truststore_password_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#truststore_password_uri DataprocCluster#truststore_password_uri}
   */
   readonly truststorePasswordUri?: string;
   /**
   * The Cloud Storage URI of the truststore file used for SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#truststore_uri DataprocCluster#truststore_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#truststore_uri DataprocCluster#truststore_uri}
   */
   readonly truststoreUri?: string;
 }
@@ -1697,7 +1697,7 @@ export interface DataprocClusterClusterConfigSecurityConfig {
   /**
   * kerberos_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#kerberos_config DataprocCluster#kerberos_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#kerberos_config DataprocCluster#kerberos_config}
   */
   readonly kerberosConfig: DataprocClusterClusterConfigSecurityConfigKerberosConfig;
 }
@@ -1762,19 +1762,19 @@ export interface DataprocClusterClusterConfigSoftwareConfig {
   /**
   * The Cloud Dataproc image version to use for the cluster - this controls the sets of software versions installed onto the nodes when you create clusters. If not specified, defaults to the latest version.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#image_version DataprocCluster#image_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#image_version DataprocCluster#image_version}
   */
   readonly imageVersion?: string;
   /**
   * The set of optional components to activate on the cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#optional_components DataprocCluster#optional_components}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#optional_components DataprocCluster#optional_components}
   */
   readonly optionalComponents?: string[];
   /**
   * A list of override and additional properties (key/value pairs) used to modify various aspects of the common configuration files used when creating a cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#override_properties DataprocCluster#override_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#override_properties DataprocCluster#override_properties}
   */
   readonly overrideProperties?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -1889,13 +1889,13 @@ export interface DataprocClusterClusterConfigWorkerConfigAccelerators {
   /**
   * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#accelerator_count DataprocCluster#accelerator_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerator_count DataprocCluster#accelerator_count}
   */
   readonly acceleratorCount: number;
   /**
   * The short name of the accelerator type to expose to this instance. For example, nvidia-tesla-k80.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#accelerator_type DataprocCluster#accelerator_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerator_type DataprocCluster#accelerator_type}
   */
   readonly acceleratorType: string;
 }
@@ -1915,19 +1915,19 @@ export interface DataprocClusterClusterConfigWorkerConfigDiskConfig {
   /**
   * Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#boot_disk_size_gb DataprocCluster#boot_disk_size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_size_gb DataprocCluster#boot_disk_size_gb}
   */
   readonly bootDiskSizeGb?: number;
   /**
   * The disk type of the primary disk attached to each node. One of "pd-ssd" or "pd-standard". Defaults to "pd-standard".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#boot_disk_type DataprocCluster#boot_disk_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_type DataprocCluster#boot_disk_type}
   */
   readonly bootDiskType?: string;
   /**
   * The amount of local SSD disks that will be attached to each master cluster node. Defaults to 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#num_local_ssds DataprocCluster#num_local_ssds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#num_local_ssds DataprocCluster#num_local_ssds}
   */
   readonly numLocalSsds?: number;
 }
@@ -2041,37 +2041,37 @@ export interface DataprocClusterClusterConfigWorkerConfig {
   /**
   * The URI for the image to use for this master/worker
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#image_uri DataprocCluster#image_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#image_uri DataprocCluster#image_uri}
   */
   readonly imageUri?: string;
   /**
   * The name of a Google Compute Engine machine type to create for the master/worker
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#machine_type DataprocCluster#machine_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#machine_type DataprocCluster#machine_type}
   */
   readonly machineType?: string;
   /**
   * The name of a minimum generation of CPU family for the master/worker. If not specified, GCP will default to a predetermined computed value for each zone.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#min_cpu_platform DataprocCluster#min_cpu_platform}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#min_cpu_platform DataprocCluster#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
   * Specifies the number of master/worker nodes to create. If not specified, GCP will default to a predetermined computed value.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#num_instances DataprocCluster#num_instances}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#num_instances DataprocCluster#num_instances}
   */
   readonly numInstances?: number;
   /**
   * accelerators block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#accelerators DataprocCluster#accelerators}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerators DataprocCluster#accelerators}
   */
   readonly accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[];
   /**
   * disk_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#disk_config DataprocCluster#disk_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#disk_config DataprocCluster#disk_config}
   */
   readonly diskConfig?: DataprocClusterClusterConfigWorkerConfigDiskConfig;
 }
@@ -2255,67 +2255,67 @@ export interface DataprocClusterClusterConfig {
   /**
   * The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster. Note: If you don't explicitly specify a staging_bucket then GCP will auto create / assign one for you. However, you are not guaranteed an auto generated bucket which is solely dedicated to your cluster; it may be shared with other clusters in the same region/zone also choosing to use the auto generation option.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#staging_bucket DataprocCluster#staging_bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#staging_bucket DataprocCluster#staging_bucket}
   */
   readonly stagingBucket?: string;
   /**
   * The Cloud Storage temp bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. Note: If you don't explicitly specify a temp_bucket then GCP will auto create / assign one for you.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#temp_bucket DataprocCluster#temp_bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#temp_bucket DataprocCluster#temp_bucket}
   */
   readonly tempBucket?: string;
   /**
   * autoscaling_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#autoscaling_config DataprocCluster#autoscaling_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#autoscaling_config DataprocCluster#autoscaling_config}
   */
   readonly autoscalingConfig?: DataprocClusterClusterConfigAutoscalingConfig;
   /**
   * encryption_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#encryption_config DataprocCluster#encryption_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#encryption_config DataprocCluster#encryption_config}
   */
   readonly encryptionConfig?: DataprocClusterClusterConfigEncryptionConfig;
   /**
   * gce_cluster_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#gce_cluster_config DataprocCluster#gce_cluster_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#gce_cluster_config DataprocCluster#gce_cluster_config}
   */
   readonly gceClusterConfig?: DataprocClusterClusterConfigGceClusterConfig;
   /**
   * initialization_action block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#initialization_action DataprocCluster#initialization_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#initialization_action DataprocCluster#initialization_action}
   */
   readonly initializationAction?: DataprocClusterClusterConfigInitializationAction[];
   /**
   * master_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#master_config DataprocCluster#master_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#master_config DataprocCluster#master_config}
   */
   readonly masterConfig?: DataprocClusterClusterConfigMasterConfig;
   /**
   * preemptible_worker_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#preemptible_worker_config DataprocCluster#preemptible_worker_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#preemptible_worker_config DataprocCluster#preemptible_worker_config}
   */
   readonly preemptibleWorkerConfig?: DataprocClusterClusterConfigPreemptibleWorkerConfig;
   /**
   * security_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#security_config DataprocCluster#security_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#security_config DataprocCluster#security_config}
   */
   readonly securityConfig?: DataprocClusterClusterConfigSecurityConfig;
   /**
   * software_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#software_config DataprocCluster#software_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#software_config DataprocCluster#software_config}
   */
   readonly softwareConfig?: DataprocClusterClusterConfigSoftwareConfig;
   /**
   * worker_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#worker_config DataprocCluster#worker_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#worker_config DataprocCluster#worker_config}
   */
   readonly workerConfig?: DataprocClusterClusterConfigWorkerConfig;
 }
@@ -2612,15 +2612,15 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
 }
 export interface DataprocClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#create DataprocCluster#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#create DataprocCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#delete DataprocCluster#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#delete DataprocCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html#update DataprocCluster#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#update DataprocCluster#update}
   */
   readonly update?: string;
 }
@@ -2732,7 +2732,7 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html google_dataproc_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster google_dataproc_cluster}
 */
 export class DataprocCluster extends cdktf.TerraformResource {
 
@@ -2746,7 +2746,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster.html google_dataproc_cluster} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster google_dataproc_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

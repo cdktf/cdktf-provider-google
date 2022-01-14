@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/project_organization_policy.html
+// https://www.terraform.io/docs/providers/google/d/project_organization_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface DataGoogleProjectOrganizationPolicyConfig extends cdktf.Terrafo
   /**
   * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html#constraint DataGoogleProjectOrganizationPolicy#constraint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy#constraint DataGoogleProjectOrganizationPolicy#constraint}
   */
   readonly constraint: string;
   /**
   * The project ID.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html#project DataGoogleProjectOrganizationPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy#project DataGoogleProjectOrganizationPolicy#project}
   */
   readonly project: string;
 }
@@ -84,7 +84,7 @@ export class DataGoogleProjectOrganizationPolicyRestorePolicy extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html google_project_organization_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy google_project_organization_policy}
 */
 export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSource {
 
@@ -98,7 +98,7 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy.html google_project_organization_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/project_organization_policy google_project_organization_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

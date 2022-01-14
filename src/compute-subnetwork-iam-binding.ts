@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSubnetworkIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#members ComputeSubnetworkIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#members ComputeSubnetworkIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#project ComputeSubnetworkIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#project ComputeSubnetworkIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#region ComputeSubnetworkIamBinding#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#region ComputeSubnetworkIamBinding#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#role ComputeSubnetworkIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#role ComputeSubnetworkIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#subnetwork ComputeSubnetworkIamBinding#subnetwork}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#subnetwork ComputeSubnetworkIamBinding#subnetwork}
   */
   readonly subnetwork: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#condition ComputeSubnetworkIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#condition ComputeSubnetworkIamBinding#condition}
   */
   readonly condition?: ComputeSubnetworkIamBindingCondition;
 }
 export interface ComputeSubnetworkIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#description ComputeSubnetworkIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#description ComputeSubnetworkIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#expression ComputeSubnetworkIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#expression ComputeSubnetworkIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html#title ComputeSubnetworkIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding#title ComputeSubnetworkIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class ComputeSubnetworkIamBindingConditionOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html google_compute_subnetwork_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding google_compute_subnetwork_iam_binding}
 */
 export class ComputeSubnetworkIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class ComputeSubnetworkIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding.html google_compute_subnetwork_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork_iam_binding google_compute_subnetwork_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

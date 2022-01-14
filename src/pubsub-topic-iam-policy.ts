@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface PubsubTopicIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy.html#policy_data PubsubTopicIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy#policy_data PubsubTopicIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy.html#project PubsubTopicIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy#project PubsubTopicIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy.html#topic PubsubTopicIamPolicy#topic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy#topic PubsubTopicIamPolicy#topic}
   */
   readonly topic: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy.html google_pubsub_topic_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy google_pubsub_topic_iam_policy}
 */
 export class PubsubTopicIamPolicy extends cdktf.TerraformResource {
 
@@ -36,7 +36,7 @@ export class PubsubTopicIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy.html google_pubsub_topic_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_policy google_pubsub_topic_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

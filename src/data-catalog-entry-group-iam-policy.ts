@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataCatalogEntryGroupIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#entry_group DataCatalogEntryGroupIamPolicy#entry_group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy#entry_group DataCatalogEntryGroupIamPolicy#entry_group}
   */
   readonly entryGroup: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#policy_data DataCatalogEntryGroupIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy#policy_data DataCatalogEntryGroupIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#project DataCatalogEntryGroupIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy#project DataCatalogEntryGroupIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html#region DataCatalogEntryGroupIamPolicy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy#region DataCatalogEntryGroupIamPolicy#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html google_data_catalog_entry_group_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy google_data_catalog_entry_group_iam_policy}
 */
 export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class DataCatalogEntryGroupIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy.html google_data_catalog_entry_group_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group_iam_policy google_data_catalog_entry_group_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

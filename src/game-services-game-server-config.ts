@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html
+// https://www.terraform.io/docs/providers/google/r/game_services_game_server_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,54 +10,54 @@ export interface GameServicesGameServerConfigConfig extends cdktf.TerraformMetaA
   /**
   * A unique id for the deployment config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#config_id GameServicesGameServerConfig#config_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#config_id GameServicesGameServerConfig#config_id}
   */
   readonly configId: string;
   /**
   * A unique id for the deployment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#deployment_id GameServicesGameServerConfig#deployment_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#deployment_id GameServicesGameServerConfig#deployment_id}
   */
   readonly deploymentId: string;
   /**
   * The description of the game server config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#description GameServicesGameServerConfig#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#description GameServicesGameServerConfig#description}
   */
   readonly description?: string;
   /**
   * The labels associated with this game server config. Each label is a
 key-value pair.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#labels GameServicesGameServerConfig#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Location of the Deployment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#location GameServicesGameServerConfig#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#location GameServicesGameServerConfig#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#project GameServicesGameServerConfig#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#project GameServicesGameServerConfig#project}
   */
   readonly project?: string;
   /**
   * fleet_configs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#fleet_configs GameServicesGameServerConfig#fleet_configs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#fleet_configs GameServicesGameServerConfig#fleet_configs}
   */
   readonly fleetConfigs: GameServicesGameServerConfigFleetConfigs[];
   /**
   * scaling_configs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#scaling_configs GameServicesGameServerConfig#scaling_configs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#scaling_configs GameServicesGameServerConfig#scaling_configs}
   */
   readonly scalingConfigs?: GameServicesGameServerConfigScalingConfigs[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#timeouts GameServicesGameServerConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#timeouts GameServicesGameServerConfig#timeouts}
   */
   readonly timeouts?: GameServicesGameServerConfigTimeouts;
 }
@@ -73,13 +73,13 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 The format of the spec can be found :
 'https://agones.dev/site/docs/reference/fleet/'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#fleet_spec GameServicesGameServerConfig#fleet_spec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#fleet_spec GameServicesGameServerConfig#fleet_spec}
   */
   readonly fleetSpec: string;
   /**
   * The name of the FleetConfig.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#name GameServicesGameServerConfig#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#name GameServicesGameServerConfig#name}
   */
   readonly name?: string;
 }
@@ -102,7 +102,7 @@ after the cron job's start time.
 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#cron_job_duration GameServicesGameServerConfig#cron_job_duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#cron_job_duration GameServicesGameServerConfig#cron_job_duration}
   */
   readonly cronJobDuration?: string;
   /**
@@ -110,7 +110,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#cron_spec GameServicesGameServerConfig#cron_spec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#cron_spec GameServicesGameServerConfig#cron_spec}
   */
   readonly cronSpec?: string;
   /**
@@ -118,7 +118,7 @@ defined by the realm.
 
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#end_time GameServicesGameServerConfig#end_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#end_time GameServicesGameServerConfig#end_time}
   */
   readonly endTime?: string;
   /**
@@ -126,7 +126,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#start_time GameServicesGameServerConfig#start_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#start_time GameServicesGameServerConfig#start_time}
   */
   readonly startTime?: string;
 }
@@ -148,7 +148,7 @@ export interface GameServicesGameServerConfigScalingConfigsSelectors {
   /**
   * Set of labels to group by.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#labels GameServicesGameServerConfig#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -169,25 +169,25 @@ export interface GameServicesGameServerConfigScalingConfigs {
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#fleet_autoscaler_spec GameServicesGameServerConfig#fleet_autoscaler_spec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#fleet_autoscaler_spec GameServicesGameServerConfig#fleet_autoscaler_spec}
   */
   readonly fleetAutoscalerSpec: string;
   /**
   * The name of the ScalingConfig
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#name GameServicesGameServerConfig#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#name GameServicesGameServerConfig#name}
   */
   readonly name: string;
   /**
   * schedules block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#schedules GameServicesGameServerConfig#schedules}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#schedules GameServicesGameServerConfig#schedules}
   */
   readonly schedules?: GameServicesGameServerConfigScalingConfigsSchedules[];
   /**
   * selectors block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#selectors GameServicesGameServerConfig#selectors}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#selectors GameServicesGameServerConfig#selectors}
   */
   readonly selectors?: GameServicesGameServerConfigScalingConfigsSelectors[];
 }
@@ -207,11 +207,11 @@ export function gameServicesGameServerConfigScalingConfigsToTerraform(struct?: G
 
 export interface GameServicesGameServerConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#create GameServicesGameServerConfig#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#create GameServicesGameServerConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html#delete GameServicesGameServerConfig#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#delete GameServicesGameServerConfig#delete}
   */
   readonly delete?: string;
 }
@@ -300,7 +300,7 @@ export class GameServicesGameServerConfigTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html google_game_services_game_server_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config google_game_services_game_server_config}
 */
 export class GameServicesGameServerConfig extends cdktf.TerraformResource {
 
@@ -314,7 +314,7 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config.html google_game_services_game_server_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config google_game_services_game_server_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

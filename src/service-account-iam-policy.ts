@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/service_account_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/service_account_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceAccountIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy.html#policy_data ServiceAccountIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy#policy_data ServiceAccountIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy.html#service_account_id ServiceAccountIamPolicy#service_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy#service_account_id ServiceAccountIamPolicy#service_account_id}
   */
   readonly serviceAccountId: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy.html google_service_account_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy google_service_account_iam_policy}
 */
 export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
 
@@ -32,7 +32,7 @@ export class ServiceAccountIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy.html google_service_account_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_policy google_service_account_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

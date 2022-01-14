@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html
+// https://www.terraform.io/docs/providers/google/d/cloud_identity_groups
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,7 +14,7 @@ Cloud Identity resource hierarchy.
 Must be of the form identitysources/{identity_source_id} for external-identity-mapped
 groups or customers/{customer_id} for Google Groups.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html#parent DataGoogleCloudIdentityGroups#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups#parent DataGoogleCloudIdentityGroups#parent}
   */
   readonly parent: string;
 }
@@ -81,7 +81,7 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html google_cloud_identity_groups}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups google_cloud_identity_groups}
 */
 export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
 
@@ -95,7 +95,7 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups.html google_cloud_identity_groups} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups google_cloud_identity_groups} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

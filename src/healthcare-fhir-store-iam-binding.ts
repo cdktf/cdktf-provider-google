@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareFhirStoreIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#fhir_store_id HealthcareFhirStoreIamBinding#fhir_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#fhir_store_id HealthcareFhirStoreIamBinding#fhir_store_id}
   */
   readonly fhirStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#members HealthcareFhirStoreIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#members HealthcareFhirStoreIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#role HealthcareFhirStoreIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#role HealthcareFhirStoreIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#condition HealthcareFhirStoreIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#condition HealthcareFhirStoreIamBinding#condition}
   */
   readonly condition?: HealthcareFhirStoreIamBindingCondition;
 }
 export interface HealthcareFhirStoreIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#description HealthcareFhirStoreIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#description HealthcareFhirStoreIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#expression HealthcareFhirStoreIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#expression HealthcareFhirStoreIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html#title HealthcareFhirStoreIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding#title HealthcareFhirStoreIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class HealthcareFhirStoreIamBindingConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html google_healthcare_fhir_store_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding google_healthcare_fhir_store_iam_binding}
 */
 export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class HealthcareFhirStoreIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding.html google_healthcare_fhir_store_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_binding google_healthcare_fhir_store_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

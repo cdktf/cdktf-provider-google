@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway.html
+// https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway.html#name DataGoogleComputeVpnGateway#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway.html#project DataGoogleComputeVpnGateway#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway.html#region DataGoogleComputeVpnGateway#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway.html google_compute_vpn_gateway}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway google_compute_vpn_gateway}
 */
 export class DataGoogleComputeVpnGateway extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleComputeVpnGateway extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway.html google_compute_vpn_gateway} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway google_compute_vpn_gateway} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

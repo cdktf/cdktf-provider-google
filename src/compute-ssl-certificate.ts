@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html
+// https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,13 +12,13 @@ export interface ComputeSslCertificateConfig extends cdktf.TerraformMetaArgument
 The certificate chain must be no greater than 5 certs long.
 The chain must include at least one intermediate cert.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#certificate ComputeSslCertificate#certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#certificate ComputeSslCertificate#certificate}
   */
   readonly certificate: string;
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#description ComputeSslCertificate#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#description ComputeSslCertificate#description}
   */
   readonly description?: string;
   /**
@@ -33,39 +33,39 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#name ComputeSslCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#name ComputeSslCertificate#name}
   */
   readonly name?: string;
   /**
   * Creates a unique name beginning with the specified prefix. Conflicts with name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#name_prefix ComputeSslCertificate#name_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#name_prefix ComputeSslCertificate#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * The write-only private key in PEM format.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#private_key ComputeSslCertificate#private_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#private_key ComputeSslCertificate#private_key}
   */
   readonly privateKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#project ComputeSslCertificate#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#project ComputeSslCertificate#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#timeouts ComputeSslCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#timeouts ComputeSslCertificate#timeouts}
   */
   readonly timeouts?: ComputeSslCertificateTimeouts;
 }
 export interface ComputeSslCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#create ComputeSslCertificate#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#create ComputeSslCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html#delete ComputeSslCertificate#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate#delete ComputeSslCertificate#delete}
   */
   readonly delete?: string;
 }
@@ -154,7 +154,7 @@ export class ComputeSslCertificateTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html google_compute_ssl_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate google_compute_ssl_certificate}
 */
 export class ComputeSslCertificate extends cdktf.TerraformResource {
 
@@ -168,7 +168,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate.html google_compute_ssl_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_certificate google_compute_ssl_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

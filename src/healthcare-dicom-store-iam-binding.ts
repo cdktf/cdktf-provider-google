@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDicomStoreIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#dicom_store_id HealthcareDicomStoreIamBinding#dicom_store_id}
   */
   readonly dicomStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#members HealthcareDicomStoreIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#members HealthcareDicomStoreIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#role HealthcareDicomStoreIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#role HealthcareDicomStoreIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#condition HealthcareDicomStoreIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#condition HealthcareDicomStoreIamBinding#condition}
   */
   readonly condition?: HealthcareDicomStoreIamBindingCondition;
 }
 export interface HealthcareDicomStoreIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#description HealthcareDicomStoreIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#description HealthcareDicomStoreIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#expression HealthcareDicomStoreIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#expression HealthcareDicomStoreIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html#title HealthcareDicomStoreIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding#title HealthcareDicomStoreIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class HealthcareDicomStoreIamBindingConditionOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html google_healthcare_dicom_store_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding google_healthcare_dicom_store_iam_binding}
 */
 export class HealthcareDicomStoreIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class HealthcareDicomStoreIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding.html google_healthcare_dicom_store_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store_iam_binding google_healthcare_dicom_store_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

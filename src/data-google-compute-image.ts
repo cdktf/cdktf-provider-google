@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_image.html
+// https://www.terraform.io/docs/providers/google/d/compute_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image.html#family DataGoogleComputeImage#family}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image#family DataGoogleComputeImage#family}
   */
   readonly family?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image.html#filter DataGoogleComputeImage#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image#filter DataGoogleComputeImage#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image.html#name DataGoogleComputeImage#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image#name DataGoogleComputeImage#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image.html#project DataGoogleComputeImage#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_image#project DataGoogleComputeImage#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_image.html google_compute_image}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_image google_compute_image}
 */
 export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
 
@@ -40,7 +40,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_image.html google_compute_image} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_image google_compute_image} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

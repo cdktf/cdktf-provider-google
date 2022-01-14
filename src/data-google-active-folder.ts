@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/active_folder.html
+// https://www.terraform.io/docs/providers/google/d/active_folder
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleActiveFolderConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder.html#display_name DataGoogleActiveFolder#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#display_name DataGoogleActiveFolder#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder.html#parent DataGoogleActiveFolder#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#parent DataGoogleActiveFolder#parent}
   */
   readonly parent: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/active_folder.html google_active_folder}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/active_folder google_active_folder}
 */
 export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleActiveFolder extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/active_folder.html google_active_folder} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/active_folder google_active_folder} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

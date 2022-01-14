@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface SourcerepoRepositoryIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#members SourcerepoRepositoryIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#members SourcerepoRepositoryIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#project SourcerepoRepositoryIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#project SourcerepoRepositoryIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#repository SourcerepoRepositoryIamBinding#repository}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#repository SourcerepoRepositoryIamBinding#repository}
   */
   readonly repository: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#role SourcerepoRepositoryIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#role SourcerepoRepositoryIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#condition SourcerepoRepositoryIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#condition SourcerepoRepositoryIamBinding#condition}
   */
   readonly condition?: SourcerepoRepositoryIamBindingCondition;
 }
 export interface SourcerepoRepositoryIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#description SourcerepoRepositoryIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#description SourcerepoRepositoryIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#expression SourcerepoRepositoryIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#expression SourcerepoRepositoryIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html#title SourcerepoRepositoryIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding#title SourcerepoRepositoryIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class SourcerepoRepositoryIamBindingConditionOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html google_sourcerepo_repository_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding google_sourcerepo_repository_iam_binding}
 */
 export class SourcerepoRepositoryIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class SourcerepoRepositoryIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding.html google_sourcerepo_repository_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding google_sourcerepo_repository_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

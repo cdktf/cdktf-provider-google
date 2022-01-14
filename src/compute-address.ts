@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_address.html
+// https://www.terraform.io/docs/providers/google/r/compute_address
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,19 +13,19 @@ IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
 if any.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#address ComputeAddress#address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#address ComputeAddress#address}
   */
   readonly address?: string;
   /**
   * The type of address to reserve. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#address_type ComputeAddress#address_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#address_type ComputeAddress#address_type}
   */
   readonly addressType?: string;
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#description ComputeAddress#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#description ComputeAddress#description}
   */
   readonly description?: string;
   /**
@@ -36,7 +36,7 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#name ComputeAddress#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#name ComputeAddress#name}
   */
   readonly name: string;
   /**
@@ -44,24 +44,24 @@ except the last character, which cannot be a dash.
 can only be used with INTERNAL type with the VPC_PEERING and
 IPSEC_INTERCONNECT purposes.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#network ComputeAddress#network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#network ComputeAddress#network}
   */
   readonly network?: string;
   /**
   * The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#network_tier ComputeAddress#network_tier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#network_tier ComputeAddress#network_tier}
   */
   readonly networkTier?: string;
   /**
   * The prefix length if the resource represents an IP range.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#prefix_length ComputeAddress#prefix_length}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#prefix_length ComputeAddress#prefix_length}
   */
   readonly prefixLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#project ComputeAddress#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#project ComputeAddress#project}
   */
   readonly project?: string;
   /**
@@ -85,14 +85,14 @@ can use this purpose.
 
 This should only be set when using an Internal address.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#purpose ComputeAddress#purpose}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#purpose ComputeAddress#purpose}
   */
   readonly purpose?: string;
   /**
   * The Region in which the created address should reside.
 If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#region ComputeAddress#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#region ComputeAddress#region}
   */
   readonly region?: string;
   /**
@@ -101,23 +101,23 @@ address is specified, it must be within the subnetwork's IP range.
 This field can only be used with INTERNAL type with
 GCE_ENDPOINT/DNS_RESOLVER purposes.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#subnetwork ComputeAddress#subnetwork}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#subnetwork ComputeAddress#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#timeouts ComputeAddress#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#timeouts ComputeAddress#timeouts}
   */
   readonly timeouts?: ComputeAddressTimeouts;
 }
 export interface ComputeAddressTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#create ComputeAddress#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#create ComputeAddress#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address.html#delete ComputeAddress#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#delete ComputeAddress#delete}
   */
   readonly delete?: string;
 }
@@ -206,7 +206,7 @@ export class ComputeAddressTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_address.html google_compute_address}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_address google_compute_address}
 */
 export class ComputeAddress extends cdktf.TerraformResource {
 
@@ -220,7 +220,7 @@ export class ComputeAddress extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_address.html google_compute_address} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_address google_compute_address} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

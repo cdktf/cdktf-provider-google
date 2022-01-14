@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataCatalogTagTemplateIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#member DataCatalogTagTemplateIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#member DataCatalogTagTemplateIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#project DataCatalogTagTemplateIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#project DataCatalogTagTemplateIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#region DataCatalogTagTemplateIamMember#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#region DataCatalogTagTemplateIamMember#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#role DataCatalogTagTemplateIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#role DataCatalogTagTemplateIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#tag_template DataCatalogTagTemplateIamMember#tag_template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#tag_template DataCatalogTagTemplateIamMember#tag_template}
   */
   readonly tagTemplate: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#condition DataCatalogTagTemplateIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#condition DataCatalogTagTemplateIamMember#condition}
   */
   readonly condition?: DataCatalogTagTemplateIamMemberCondition;
 }
 export interface DataCatalogTagTemplateIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#description DataCatalogTagTemplateIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#description DataCatalogTagTemplateIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#expression DataCatalogTagTemplateIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#expression DataCatalogTagTemplateIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html#title DataCatalogTagTemplateIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member#title DataCatalogTagTemplateIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class DataCatalogTagTemplateIamMemberConditionOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html google_data_catalog_tag_template_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member google_data_catalog_tag_template_iam_member}
 */
 export class DataCatalogTagTemplateIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class DataCatalogTagTemplateIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member.html google_data_catalog_tag_template_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template_iam_member google_data_catalog_tag_template_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

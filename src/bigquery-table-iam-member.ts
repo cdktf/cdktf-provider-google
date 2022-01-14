@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface BigqueryTableIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#dataset_id BigqueryTableIamMember#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#dataset_id BigqueryTableIamMember#dataset_id}
   */
   readonly datasetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#member BigqueryTableIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#member BigqueryTableIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#project BigqueryTableIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#project BigqueryTableIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#role BigqueryTableIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#role BigqueryTableIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#table_id BigqueryTableIamMember#table_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#table_id BigqueryTableIamMember#table_id}
   */
   readonly tableId: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#condition BigqueryTableIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#condition BigqueryTableIamMember#condition}
   */
   readonly condition?: BigqueryTableIamMemberCondition;
 }
 export interface BigqueryTableIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#description BigqueryTableIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#description BigqueryTableIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#expression BigqueryTableIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#expression BigqueryTableIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html#title BigqueryTableIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member#title BigqueryTableIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class BigqueryTableIamMemberConditionOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html google_bigquery_table_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member google_bigquery_table_iam_member}
 */
 export class BigqueryTableIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class BigqueryTableIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member.html google_bigquery_table_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_table_iam_member google_bigquery_table_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

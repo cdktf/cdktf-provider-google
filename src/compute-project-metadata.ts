@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html
+// https://www.terraform.io/docs/providers/google/r/compute_project_metadata
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,29 +10,29 @@ export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArgumen
   /**
   * A series of key value pairs.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#metadata ComputeProjectMetadata#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata#metadata ComputeProjectMetadata#metadata}
   */
   readonly metadata: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#project ComputeProjectMetadata#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata#project ComputeProjectMetadata#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#timeouts ComputeProjectMetadata#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata#timeouts ComputeProjectMetadata#timeouts}
   */
   readonly timeouts?: ComputeProjectMetadataTimeouts;
 }
 export interface ComputeProjectMetadataTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#create ComputeProjectMetadata#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata#create ComputeProjectMetadata#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html#delete ComputeProjectMetadata#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata#delete ComputeProjectMetadata#delete}
   */
   readonly delete?: string;
 }
@@ -121,7 +121,7 @@ export class ComputeProjectMetadataTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html google_compute_project_metadata}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata google_compute_project_metadata}
 */
 export class ComputeProjectMetadata extends cdktf.TerraformResource {
 
@@ -135,7 +135,7 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata.html google_compute_project_metadata} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata google_compute_project_metadata} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_network.html
+// https://www.terraform.io/docs/providers/google/r/compute_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,25 +15,25 @@ it will create a subnet for each region automatically across the
 When set to 'false', the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#auto_create_subnetworks ComputeNetwork#auto_create_subnetworks}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#auto_create_subnetworks ComputeNetwork#auto_create_subnetworks}
   */
   readonly autoCreateSubnetworks?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#delete_default_routes_on_create ComputeNetwork#delete_default_routes_on_create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#delete_default_routes_on_create ComputeNetwork#delete_default_routes_on_create}
   */
   readonly deleteDefaultRoutesOnCreate?: boolean | cdktf.IResolvable;
   /**
   * An optional description of this resource. The resource must be
 recreated to modify this field.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#description ComputeNetwork#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#description ComputeNetwork#description}
   */
   readonly description?: string;
   /**
   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#mtu ComputeNetwork#mtu}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#mtu ComputeNetwork#mtu}
   */
   readonly mtu?: number;
   /**
@@ -45,11 +45,11 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#name ComputeNetwork#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#name ComputeNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#project ComputeNetwork#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#project ComputeNetwork#project}
   */
   readonly project?: string;
   /**
@@ -59,27 +59,27 @@ of this network in the same region as the router. If set to 'GLOBAL',
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions. Possible values: ["REGIONAL", "GLOBAL"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#routing_mode ComputeNetwork#routing_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#routing_mode ComputeNetwork#routing_mode}
   */
   readonly routingMode?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#timeouts ComputeNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#timeouts ComputeNetwork#timeouts}
   */
   readonly timeouts?: ComputeNetworkTimeouts;
 }
 export interface ComputeNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#create ComputeNetwork#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#create ComputeNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#delete ComputeNetwork#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#delete ComputeNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network.html#update ComputeNetwork#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#update ComputeNetwork#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class ComputeNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network.html google_compute_network}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network google_compute_network}
 */
 export class ComputeNetwork extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network.html google_compute_network} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network google_compute_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

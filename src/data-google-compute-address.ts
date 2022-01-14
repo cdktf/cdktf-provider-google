@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_address.html
+// https://www.terraform.io/docs/providers/google/d/compute_address
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeAddressConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address.html#name DataGoogleComputeAddress#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#name DataGoogleComputeAddress#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address.html#project DataGoogleComputeAddress#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#project DataGoogleComputeAddress#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address.html#region DataGoogleComputeAddress#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#region DataGoogleComputeAddress#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_address.html google_compute_address}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_address google_compute_address}
 */
 export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_address.html google_compute_address} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_address google_compute_address} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

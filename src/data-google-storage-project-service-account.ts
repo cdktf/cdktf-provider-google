@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html
+// https://www.terraform.io/docs/providers/google/d/storage_project_service_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleStorageProjectServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html#project DataGoogleStorageProjectServiceAccount#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account#project DataGoogleStorageProjectServiceAccount#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html#user_project DataGoogleStorageProjectServiceAccount#user_project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account#user_project DataGoogleStorageProjectServiceAccount#user_project}
   */
   readonly userProject?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html google_storage_project_service_account}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account google_storage_project_service_account}
 */
 export class DataGoogleStorageProjectServiceAccount extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleStorageProjectServiceAccount extends cdktf.TerraformDataS
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account.html google_storage_project_service_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_project_service_account google_storage_project_service_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

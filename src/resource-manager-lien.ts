@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html
+// https://www.terraform.io/docs/providers/google/r/resource_manager_lien
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,7 +12,7 @@ export interface ResourceManagerLienConfig extends cdktf.TerraformMetaArguments 
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#origin ResourceManagerLien#origin}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#origin ResourceManagerLien#origin}
   */
   readonly origin: string;
   /**
@@ -21,14 +21,14 @@ The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#parent ResourceManagerLien#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#parent ResourceManagerLien#parent}
   */
   readonly parent: string;
   /**
   * Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#reason ResourceManagerLien#reason}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#reason ResourceManagerLien#reason}
   */
   readonly reason: string;
   /**
@@ -38,23 +38,23 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#restrictions ResourceManagerLien#restrictions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#restrictions ResourceManagerLien#restrictions}
   */
   readonly restrictions: string[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#timeouts ResourceManagerLien#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#timeouts ResourceManagerLien#timeouts}
   */
   readonly timeouts?: ResourceManagerLienTimeouts;
 }
 export interface ResourceManagerLienTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#create ResourceManagerLien#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#create ResourceManagerLien#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html#delete ResourceManagerLien#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#delete ResourceManagerLien#delete}
   */
   readonly delete?: string;
 }
@@ -143,7 +143,7 @@ export class ResourceManagerLienTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html google_resource_manager_lien}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien google_resource_manager_lien}
 */
 export class ResourceManagerLien extends cdktf.TerraformResource {
 
@@ -157,7 +157,7 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien.html google_resource_manager_lien} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien google_resource_manager_lien} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

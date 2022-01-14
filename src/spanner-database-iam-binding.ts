@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SpannerDatabaseIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#database SpannerDatabaseIamBinding#database}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#database SpannerDatabaseIamBinding#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#instance SpannerDatabaseIamBinding#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#instance SpannerDatabaseIamBinding#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#members SpannerDatabaseIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#members SpannerDatabaseIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#project SpannerDatabaseIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#project SpannerDatabaseIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#role SpannerDatabaseIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#role SpannerDatabaseIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#condition SpannerDatabaseIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#condition SpannerDatabaseIamBinding#condition}
   */
   readonly condition?: SpannerDatabaseIamBindingCondition;
 }
 export interface SpannerDatabaseIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#description SpannerDatabaseIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#description SpannerDatabaseIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#expression SpannerDatabaseIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#expression SpannerDatabaseIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html#title SpannerDatabaseIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding#title SpannerDatabaseIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class SpannerDatabaseIamBindingConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html google_spanner_database_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding google_spanner_database_iam_binding}
 */
 export class SpannerDatabaseIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class SpannerDatabaseIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding.html google_spanner_database_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_binding google_spanner_database_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

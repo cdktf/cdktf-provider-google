@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/iap_web_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#member IapWebIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#member IapWebIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#project IapWebIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#project IapWebIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#role IapWebIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#role IapWebIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#condition IapWebIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#condition IapWebIamMember#condition}
   */
   readonly condition?: IapWebIamMemberCondition;
 }
 export interface IapWebIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#description IapWebIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#description IapWebIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#expression IapWebIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#expression IapWebIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html#title IapWebIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member#title IapWebIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class IapWebIamMemberConditionOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html google_iap_web_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member google_iap_web_iam_member}
 */
 export class IapWebIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class IapWebIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member.html google_iap_web_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_member google_iap_web_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebBackendServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#member IapWebBackendServiceIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#member IapWebBackendServiceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#project IapWebBackendServiceIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#project IapWebBackendServiceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#role IapWebBackendServiceIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#role IapWebBackendServiceIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#web_backend_service IapWebBackendServiceIamMember#web_backend_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#web_backend_service IapWebBackendServiceIamMember#web_backend_service}
   */
   readonly webBackendService: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#condition IapWebBackendServiceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#condition IapWebBackendServiceIamMember#condition}
   */
   readonly condition?: IapWebBackendServiceIamMemberCondition;
 }
 export interface IapWebBackendServiceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#description IapWebBackendServiceIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#description IapWebBackendServiceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#expression IapWebBackendServiceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#expression IapWebBackendServiceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html#title IapWebBackendServiceIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member#title IapWebBackendServiceIamMember#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class IapWebBackendServiceIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html google_iap_web_backend_service_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member google_iap_web_backend_service_iam_member}
 */
 export class IapWebBackendServiceIamMember extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class IapWebBackendServiceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member.html google_iap_web_backend_service_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_web_backend_service_iam_member google_iap_web_backend_service_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

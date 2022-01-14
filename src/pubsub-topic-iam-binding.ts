@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface PubsubTopicIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#members PubsubTopicIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#members PubsubTopicIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#project PubsubTopicIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#project PubsubTopicIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#role PubsubTopicIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#role PubsubTopicIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#topic PubsubTopicIamBinding#topic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#topic PubsubTopicIamBinding#topic}
   */
   readonly topic: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#condition PubsubTopicIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#condition PubsubTopicIamBinding#condition}
   */
   readonly condition?: PubsubTopicIamBindingCondition;
 }
 export interface PubsubTopicIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#description PubsubTopicIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#description PubsubTopicIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#expression PubsubTopicIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#expression PubsubTopicIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html#title PubsubTopicIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding#title PubsubTopicIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class PubsubTopicIamBindingConditionOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html google_pubsub_topic_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding google_pubsub_topic_iam_binding}
 */
 export class PubsubTopicIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class PubsubTopicIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding.html google_pubsub_topic_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding google_pubsub_topic_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html
+// https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,65 +10,65 @@ export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaAr
   /**
   * A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#display_name MonitoringUptimeCheckConfig#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#display_name MonitoringUptimeCheckConfig#display_name}
   */
   readonly displayName: string;
   /**
   * How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#period MonitoringUptimeCheckConfig#period}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#period MonitoringUptimeCheckConfig#period}
   */
   readonly period?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#project MonitoringUptimeCheckConfig#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#project MonitoringUptimeCheckConfig#project}
   */
   readonly project?: string;
   /**
   * The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#selected_regions MonitoringUptimeCheckConfig#selected_regions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#selected_regions MonitoringUptimeCheckConfig#selected_regions}
   */
   readonly selectedRegions?: string[];
   /**
   * The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#timeout MonitoringUptimeCheckConfig#timeout}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#timeout MonitoringUptimeCheckConfig#timeout}
   */
   readonly timeout: string;
   /**
   * content_matchers block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#content_matchers MonitoringUptimeCheckConfig#content_matchers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#content_matchers MonitoringUptimeCheckConfig#content_matchers}
   */
   readonly contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[];
   /**
   * http_check block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#http_check MonitoringUptimeCheckConfig#http_check}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#http_check MonitoringUptimeCheckConfig#http_check}
   */
   readonly httpCheck?: MonitoringUptimeCheckConfigHttpCheck;
   /**
   * monitored_resource block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#monitored_resource MonitoringUptimeCheckConfig#monitored_resource}
   */
   readonly monitoredResource?: MonitoringUptimeCheckConfigMonitoredResource;
   /**
   * resource_group block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#resource_group MonitoringUptimeCheckConfig#resource_group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#resource_group MonitoringUptimeCheckConfig#resource_group}
   */
   readonly resourceGroup?: MonitoringUptimeCheckConfigResourceGroup;
   /**
   * tcp_check block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#tcp_check MonitoringUptimeCheckConfig#tcp_check}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#tcp_check MonitoringUptimeCheckConfig#tcp_check}
   */
   readonly tcpCheck?: MonitoringUptimeCheckConfigTcpCheck;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#timeouts MonitoringUptimeCheckConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#timeouts MonitoringUptimeCheckConfig#timeouts}
   */
   readonly timeouts?: MonitoringUptimeCheckConfigTimeouts;
 }
@@ -76,13 +76,13 @@ export interface MonitoringUptimeCheckConfigContentMatchers {
   /**
   * String or regex content to match (max 1024 bytes)
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#content MonitoringUptimeCheckConfig#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#content MonitoringUptimeCheckConfig#content}
   */
   readonly content: string;
   /**
   * The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value: "CONTAINS_STRING" Possible values: ["CONTAINS_STRING", "NOT_CONTAINS_STRING", "MATCHES_REGEX", "NOT_MATCHES_REGEX"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#matcher MonitoringUptimeCheckConfig#matcher}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#matcher MonitoringUptimeCheckConfig#matcher}
   */
   readonly matcher?: string;
 }
@@ -102,13 +102,13 @@ export interface MonitoringUptimeCheckConfigHttpCheckAuthInfo {
   /**
   * The password to authenticate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#password MonitoringUptimeCheckConfig#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#password MonitoringUptimeCheckConfig#password}
   */
   readonly password: string;
   /**
   * The username to authenticate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#username MonitoringUptimeCheckConfig#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#username MonitoringUptimeCheckConfig#username}
   */
   readonly username: string;
 }
@@ -193,61 +193,61 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   /**
   * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#body MonitoringUptimeCheckConfig#body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#body MonitoringUptimeCheckConfig#body}
   */
   readonly body?: string;
   /**
   * The content type to use for the check. Possible values: ["TYPE_UNSPECIFIED", "URL_ENCODED"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#content_type MonitoringUptimeCheckConfig#content_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#content_type MonitoringUptimeCheckConfig#content_type}
   */
   readonly contentType?: string;
   /**
   * The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#headers MonitoringUptimeCheckConfig#headers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#headers MonitoringUptimeCheckConfig#headers}
   */
   readonly headers?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#mask_headers MonitoringUptimeCheckConfig#mask_headers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#mask_headers MonitoringUptimeCheckConfig#mask_headers}
   */
   readonly maskHeaders?: boolean | cdktf.IResolvable;
   /**
   * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#path MonitoringUptimeCheckConfig#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#path MonitoringUptimeCheckConfig#path}
   */
   readonly path?: string;
   /**
   * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#port MonitoringUptimeCheckConfig#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
   */
   readonly port?: number;
   /**
   * The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value: "GET" Possible values: ["METHOD_UNSPECIFIED", "GET", "POST"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#request_method MonitoringUptimeCheckConfig#request_method}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#request_method MonitoringUptimeCheckConfig#request_method}
   */
   readonly requestMethod?: string;
   /**
   * If true, use HTTPS instead of HTTP to run the check.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#use_ssl MonitoringUptimeCheckConfig#use_ssl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#use_ssl MonitoringUptimeCheckConfig#use_ssl}
   */
   readonly useSsl?: boolean | cdktf.IResolvable;
   /**
   * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#validate_ssl MonitoringUptimeCheckConfig#validate_ssl}
   */
   readonly validateSsl?: boolean | cdktf.IResolvable;
   /**
   * auth_info block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#auth_info MonitoringUptimeCheckConfig#auth_info}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#auth_info MonitoringUptimeCheckConfig#auth_info}
   */
   readonly authInfo?: MonitoringUptimeCheckConfigHttpCheckAuthInfo;
 }
@@ -523,13 +523,13 @@ export interface MonitoringUptimeCheckConfigMonitoredResource {
   /**
   * Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#labels MonitoringUptimeCheckConfig#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#labels MonitoringUptimeCheckConfig#labels}
   */
   readonly labels: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#type MonitoringUptimeCheckConfig#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#type MonitoringUptimeCheckConfig#type}
   */
   readonly type: string;
 }
@@ -615,13 +615,13 @@ export interface MonitoringUptimeCheckConfigResourceGroup {
   /**
   * The group of resources being monitored. Should be the 'name' of a group
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#group_id MonitoringUptimeCheckConfig#group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#group_id MonitoringUptimeCheckConfig#group_id}
   */
   readonly groupId?: string;
   /**
   * The resource type of the group members. Possible values: ["RESOURCE_TYPE_UNSPECIFIED", "INSTANCE", "AWS_ELB_LOAD_BALANCER"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#resource_type MonitoringUptimeCheckConfig#resource_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#resource_type MonitoringUptimeCheckConfig#resource_type}
   */
   readonly resourceType?: string;
 }
@@ -712,7 +712,7 @@ export interface MonitoringUptimeCheckConfigTcpCheck {
   /**
   * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#port MonitoringUptimeCheckConfig#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#port MonitoringUptimeCheckConfig#port}
   */
   readonly port: number;
 }
@@ -775,15 +775,15 @@ export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.Co
 }
 export interface MonitoringUptimeCheckConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#create MonitoringUptimeCheckConfig#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#create MonitoringUptimeCheckConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#delete MonitoringUptimeCheckConfig#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#delete MonitoringUptimeCheckConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html#update MonitoringUptimeCheckConfig#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#update MonitoringUptimeCheckConfig#update}
   */
   readonly update?: string;
 }
@@ -895,7 +895,7 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html google_monitoring_uptime_check_config}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config google_monitoring_uptime_check_config}
 */
 export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
 
@@ -909,7 +909,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config.html google_monitoring_uptime_check_config} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config google_monitoring_uptime_check_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

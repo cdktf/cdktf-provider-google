@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html
+// https://www.terraform.io/docs/providers/google/d/iam_testable_permissions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleIamTestablePermissionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}
   */
   readonly customSupportLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}
   */
   readonly fullResourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html#stages DataGoogleIamTestablePermissions#stages}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}
   */
   readonly stages?: string[];
 }
@@ -49,7 +49,7 @@ export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexCo
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html google_iam_testable_permissions}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions google_iam_testable_permissions}
 */
 export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource {
 
@@ -63,7 +63,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions.html google_iam_testable_permissions} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions google_iam_testable_permissions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

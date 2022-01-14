@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface StorageBucketIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#bucket StorageBucketIamBinding#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#bucket StorageBucketIamBinding#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#members StorageBucketIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#members StorageBucketIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#role StorageBucketIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#role StorageBucketIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#condition StorageBucketIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#condition StorageBucketIamBinding#condition}
   */
   readonly condition?: StorageBucketIamBindingCondition;
 }
 export interface StorageBucketIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#description StorageBucketIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#description StorageBucketIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#expression StorageBucketIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#expression StorageBucketIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html#title StorageBucketIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding#title StorageBucketIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class StorageBucketIamBindingConditionOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html google_storage_bucket_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding google_storage_bucket_iam_binding}
 */
 export class StorageBucketIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class StorageBucketIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding.html google_storage_bucket_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding google_storage_bucket_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

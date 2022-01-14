@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/redis_instance.html
+// https://www.terraform.io/docs/providers/google/d/redis_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArgume
   /**
   * The ID of the instance or a fully qualified identifier for the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html#name DataGoogleRedisInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#name DataGoogleRedisInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html#project DataGoogleRedisInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#project DataGoogleRedisInstance#project}
   */
   readonly project?: string;
   /**
   * The name of the Redis region of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html#region DataGoogleRedisInstance#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/redis_instance#region DataGoogleRedisInstance#region}
   */
   readonly region?: string;
 }
@@ -53,7 +53,7 @@ export class DataGoogleRedisInstanceServerCaCerts extends cdktf.ComplexComputedL
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html google_redis_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/redis_instance google_redis_instance}
 */
 export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
@@ -67,7 +67,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/redis_instance.html google_redis_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/redis_instance google_redis_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

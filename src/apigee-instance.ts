@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/apigee_instance.html
+// https://www.terraform.io/docs/providers/google/r/apigee_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,20 +10,20 @@ export interface ApigeeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#description ApigeeInstance#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#description ApigeeInstance#description}
   */
   readonly description?: string;
   /**
   * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
 Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#disk_encryption_key_name ApigeeInstance#disk_encryption_key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#disk_encryption_key_name ApigeeInstance#disk_encryption_key_name}
   */
   readonly diskEncryptionKeyName?: string;
   /**
   * Display name of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#display_name ApigeeInstance#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#display_name ApigeeInstance#display_name}
   */
   readonly displayName?: string;
   /**
@@ -31,42 +31,42 @@ Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
 subscriptions, the location must be a Compute Engine zone. For paid organization
 subscriptions, it should correspond to a Compute Engine region.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#location ApigeeInstance#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#location ApigeeInstance#location}
   */
   readonly location: string;
   /**
   * Resource ID of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#name ApigeeInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#name ApigeeInstance#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee instance,
 in the format 'organizations/{{org_name}}'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#org_id ApigeeInstance#org_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#org_id ApigeeInstance#org_id}
   */
   readonly orgId: string;
   /**
   * The size of the CIDR block range that will be reserved by the instance. Possible values: ["SLASH_16", "SLASH_20", "SLASH_22"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#peering_cidr_range ApigeeInstance#peering_cidr_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#peering_cidr_range ApigeeInstance#peering_cidr_range}
   */
   readonly peeringCidrRange?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#timeouts ApigeeInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#timeouts ApigeeInstance#timeouts}
   */
   readonly timeouts?: ApigeeInstanceTimeouts;
 }
 export interface ApigeeInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#create ApigeeInstance#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#create ApigeeInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html#delete ApigeeInstance#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#delete ApigeeInstance#delete}
   */
   readonly delete?: string;
 }
@@ -155,7 +155,7 @@ export class ApigeeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html google_apigee_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_instance google_apigee_instance}
 */
 export class ApigeeInstance extends cdktf.TerraformResource {
 
@@ -169,7 +169,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_instance.html google_apigee_instance} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/apigee_instance google_apigee_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

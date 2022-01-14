@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html
+// https://www.terraform.io/docs/providers/google/d/compute_subnetwork
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#name DataGoogleComputeSubnetwork#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork#name DataGoogleComputeSubnetwork#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#project DataGoogleComputeSubnetwork#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork#project DataGoogleComputeSubnetwork#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#region DataGoogleComputeSubnetwork#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork#region DataGoogleComputeSubnetwork#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html#self_link DataGoogleComputeSubnetwork#self_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork#self_link DataGoogleComputeSubnetwork#self_link}
   */
   readonly selfLink?: string;
 }
@@ -38,7 +38,7 @@ export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexCo
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html google_compute_subnetwork}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork google_compute_subnetwork}
 */
 export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
@@ -52,7 +52,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork.html google_compute_subnetwork} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork google_compute_subnetwork} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

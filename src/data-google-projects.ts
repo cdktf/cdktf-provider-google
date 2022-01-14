@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/projects.html
+// https://www.terraform.io/docs/providers/google/d/projects
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleProjectsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/projects.html#filter DataGoogleProjects#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/projects#filter DataGoogleProjects#filter}
   */
   readonly filter: string;
 }
@@ -53,7 +53,7 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/projects.html google_projects}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/projects google_projects}
 */
 export class DataGoogleProjects extends cdktf.TerraformDataSource {
 
@@ -67,7 +67,7 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/projects.html google_projects} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/projects google_projects} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

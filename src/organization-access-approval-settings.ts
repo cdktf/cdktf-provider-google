@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html
+// https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,25 +12,25 @@ export interface OrganizationAccessApprovalSettingsConfig extends cdktf.Terrafor
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#notification_emails OrganizationAccessApprovalSettings#notification_emails}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#notification_emails OrganizationAccessApprovalSettings#notification_emails}
   */
   readonly notificationEmails?: string[];
   /**
   * ID of the organization of the access approval settings.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#organization_id OrganizationAccessApprovalSettings#organization_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#organization_id OrganizationAccessApprovalSettings#organization_id}
   */
   readonly organizationId: string;
   /**
   * enrolled_services block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#enrolled_services OrganizationAccessApprovalSettings#enrolled_services}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#enrolled_services OrganizationAccessApprovalSettings#enrolled_services}
   */
   readonly enrolledServices: OrganizationAccessApprovalSettingsEnrolledServices[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#timeouts OrganizationAccessApprovalSettings#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#timeouts OrganizationAccessApprovalSettings#timeouts}
   */
   readonly timeouts?: OrganizationAccessApprovalSettingsTimeouts;
 }
@@ -48,13 +48,13 @@ export interface OrganizationAccessApprovalSettingsEnrolledServices {
   pubsub.googleapis.com
   storage.googleapis.com
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#cloud_product OrganizationAccessApprovalSettings#cloud_product}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#cloud_product OrganizationAccessApprovalSettings#cloud_product}
   */
   readonly cloudProduct: string;
   /**
   * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#enrollment_level OrganizationAccessApprovalSettings#enrollment_level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#enrollment_level OrganizationAccessApprovalSettings#enrollment_level}
   */
   readonly enrollmentLevel?: string;
 }
@@ -72,15 +72,15 @@ export function organizationAccessApprovalSettingsEnrolledServicesToTerraform(st
 
 export interface OrganizationAccessApprovalSettingsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#create OrganizationAccessApprovalSettings#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#create OrganizationAccessApprovalSettings#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#delete OrganizationAccessApprovalSettings#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#delete OrganizationAccessApprovalSettings#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html#update OrganizationAccessApprovalSettings#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings#update OrganizationAccessApprovalSettings#update}
   */
   readonly update?: string;
 }
@@ -192,7 +192,7 @@ export class OrganizationAccessApprovalSettingsTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html google_organization_access_approval_settings}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings google_organization_access_approval_settings}
 */
 export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource {
 
@@ -206,7 +206,7 @@ export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings.html google_organization_access_approval_settings} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/organization_access_approval_settings google_organization_access_approval_settings} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

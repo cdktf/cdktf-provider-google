@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html
+// https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface StorageBucketAccessControlConfig extends cdktf.TerraformMetaArg
   /**
   * The name of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#bucket StorageBucketAccessControl#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#bucket StorageBucketAccessControl#bucket}
   */
   readonly bucket: string;
   /**
@@ -30,33 +30,33 @@ Examples:
   To refer to all members of the Google Apps for Business domain
   example.com, the entity would be domain-example.com.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#entity StorageBucketAccessControl#entity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#entity StorageBucketAccessControl#entity}
   */
   readonly entity: string;
   /**
   * The access permission for the entity. Possible values: ["OWNER", "READER", "WRITER"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#role StorageBucketAccessControl#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#role StorageBucketAccessControl#role}
   */
   readonly role?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#timeouts StorageBucketAccessControl#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#timeouts StorageBucketAccessControl#timeouts}
   */
   readonly timeouts?: StorageBucketAccessControlTimeouts;
 }
 export interface StorageBucketAccessControlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#create StorageBucketAccessControl#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#create StorageBucketAccessControl#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#delete StorageBucketAccessControl#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#delete StorageBucketAccessControl#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html#update StorageBucketAccessControl#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control#update StorageBucketAccessControl#update}
   */
   readonly update?: string;
 }
@@ -168,7 +168,7 @@ export class StorageBucketAccessControlTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html google_storage_bucket_access_control}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control google_storage_bucket_access_control}
 */
 export class StorageBucketAccessControl extends cdktf.TerraformResource {
 
@@ -182,7 +182,7 @@ export class StorageBucketAccessControl extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control.html google_storage_bucket_access_control} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_access_control google_storage_bucket_access_control} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

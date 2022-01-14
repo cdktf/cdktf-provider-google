@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface RuntimeconfigConfigIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy.html#config RuntimeconfigConfigIamPolicy#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy#config RuntimeconfigConfigIamPolicy#config}
   */
   readonly config: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy.html#policy_data RuntimeconfigConfigIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy#policy_data RuntimeconfigConfigIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy.html#project RuntimeconfigConfigIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy#project RuntimeconfigConfigIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy.html google_runtimeconfig_config_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy google_runtimeconfig_config_iam_policy}
 */
 export class RuntimeconfigConfigIamPolicy extends cdktf.TerraformResource {
 
@@ -36,7 +36,7 @@ export class RuntimeconfigConfigIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy.html google_runtimeconfig_config_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_policy google_runtimeconfig_config_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

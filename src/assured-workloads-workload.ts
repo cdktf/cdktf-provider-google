@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html
+// https://www.terraform.io/docs/providers/google/r/assured_workloads_workload
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,61 +10,61 @@ export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArgum
   /**
   * Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, 'billingAccounts/012345-567890-ABCDEF`.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#billing_account AssuredWorkloadsWorkload#billing_account}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#billing_account AssuredWorkloadsWorkload#billing_account}
   */
   readonly billingAccount: string;
   /**
   * Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#compliance_regime AssuredWorkloadsWorkload#compliance_regime}
   */
   readonly complianceRegime: string;
   /**
   * Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#display_name AssuredWorkloadsWorkload#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#display_name AssuredWorkloadsWorkload#display_name}
   */
   readonly displayName: string;
   /**
   * Optional. Labels applied to the workload.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#labels AssuredWorkloadsWorkload#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#labels AssuredWorkloadsWorkload#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The location for the resource
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#location AssuredWorkloadsWorkload#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#location AssuredWorkloadsWorkload#location}
   */
   readonly location: string;
   /**
   * The organization for the resource
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#organization AssuredWorkloadsWorkload#organization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#organization AssuredWorkloadsWorkload#organization}
   */
   readonly organization: string;
   /**
   * Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#provisioned_resources_parent AssuredWorkloadsWorkload#provisioned_resources_parent}
   */
   readonly provisionedResourcesParent?: string;
   /**
   * kms_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#kms_settings AssuredWorkloadsWorkload#kms_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#kms_settings AssuredWorkloadsWorkload#kms_settings}
   */
   readonly kmsSettings?: AssuredWorkloadsWorkloadKmsSettings;
   /**
   * resource_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_settings AssuredWorkloadsWorkload#resource_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#resource_settings AssuredWorkloadsWorkload#resource_settings}
   */
   readonly resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#timeouts AssuredWorkloadsWorkload#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#timeouts AssuredWorkloadsWorkload#timeouts}
   */
   readonly timeouts?: AssuredWorkloadsWorkloadTimeouts;
 }
@@ -84,13 +84,13 @@ export interface AssuredWorkloadsWorkloadKmsSettings {
   /**
   * Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#next_rotation_time AssuredWorkloadsWorkload#next_rotation_time}
   */
   readonly nextRotationTime: string;
   /**
   * Required. Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#rotation_period AssuredWorkloadsWorkload#rotation_period}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#rotation_period AssuredWorkloadsWorkload#rotation_period}
   */
   readonly rotationPeriod: string;
 }
@@ -175,13 +175,13 @@ export interface AssuredWorkloadsWorkloadResourceSettings {
   /**
   * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_id AssuredWorkloadsWorkload#resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#resource_id AssuredWorkloadsWorkload#resource_id}
   */
   readonly resourceId?: string;
   /**
   * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#resource_type AssuredWorkloadsWorkload#resource_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#resource_type AssuredWorkloadsWorkload#resource_type}
   */
   readonly resourceType?: string;
 }
@@ -199,15 +199,15 @@ export function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: Ass
 
 export interface AssuredWorkloadsWorkloadTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#create AssuredWorkloadsWorkload#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#create AssuredWorkloadsWorkload#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#delete AssuredWorkloadsWorkload#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#delete AssuredWorkloadsWorkload#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html#update AssuredWorkloadsWorkload#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#update AssuredWorkloadsWorkload#update}
   */
   readonly update?: string;
 }
@@ -319,7 +319,7 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html google_assured_workloads_workload}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload google_assured_workloads_workload}
 */
 export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
 
@@ -333,7 +333,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload.html google_assured_workloads_workload} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload google_assured_workloads_workload} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

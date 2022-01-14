@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html
+// https://www.terraform.io/docs/providers/google/r/compute_subnetwork
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,7 +12,7 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
 you create the resource. This field can be set only at resource
 creation time.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#description ComputeSubnetwork#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#description ComputeSubnetwork#description}
   */
   readonly description?: string;
   /**
@@ -21,7 +21,7 @@ Provide this property when you create the subnetwork. For example,
 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
 non-overlapping within a network. Only IPv4 is supported.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
   */
   readonly ipCidrRange: string;
   /**
@@ -29,7 +29,7 @@ non-overlapping within a network. Only IPv4 is supported.
 or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
 cannot enable direct path. Possible values: ["EXTERNAL"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#ipv6_access_type ComputeSubnetwork#ipv6_access_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#ipv6_access_type ComputeSubnetwork#ipv6_access_type}
   */
   readonly ipv6AccessType?: string;
   /**
@@ -41,31 +41,31 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#name ComputeSubnetwork#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#name ComputeSubnetwork#name}
   */
   readonly name: string;
   /**
   * The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#network ComputeSubnetwork#network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#network ComputeSubnetwork#network}
   */
   readonly network: string;
   /**
   * When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#private_ip_google_access ComputeSubnetwork#private_ip_google_access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#private_ip_google_access ComputeSubnetwork#private_ip_google_access}
   */
   readonly privateIpGoogleAccess?: boolean | cdktf.IResolvable;
   /**
   * The private IPv6 google access type for the VMs in this subnet.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#private_ipv6_google_access ComputeSubnetwork#private_ipv6_google_access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#private_ipv6_google_access ComputeSubnetwork#private_ipv6_google_access}
   */
   readonly privateIpv6GoogleAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#project ComputeSubnetwork#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#project ComputeSubnetwork#project}
   */
   readonly project?: string;
   /**
@@ -77,13 +77,13 @@ purpose defaults to PRIVATE.
 
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set 'role'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#purpose ComputeSubnetwork#purpose}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#purpose ComputeSubnetwork#purpose}
   */
   readonly purpose?: string;
   /**
   * The GCP region for this subnetwork.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#region ComputeSubnetwork#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#region ComputeSubnetwork#region}
   */
   readonly region?: string;
   /**
@@ -93,7 +93,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining. Possible values: ["ACTIVE", "BACKUP"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#role ComputeSubnetwork#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#role ComputeSubnetwork#role}
   */
   readonly role?: string;
   /**
@@ -108,36 +108,36 @@ of zero objects you must use the following syntax:
 'example=[]'
 For more details about this behavior, see [this section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
   */
   readonly secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[];
   /**
   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
 If not specified IPV4_ONLY will be used. Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#stack_type ComputeSubnetwork#stack_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#stack_type ComputeSubnetwork#stack_type}
   */
   readonly stackType?: string;
   /**
   * log_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#log_config ComputeSubnetwork#log_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#log_config ComputeSubnetwork#log_config}
   */
   readonly logConfig?: ComputeSubnetworkLogConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#timeouts ComputeSubnetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#timeouts ComputeSubnetwork#timeouts}
   */
   readonly timeouts?: ComputeSubnetworkTimeouts;
 }
 export interface ComputeSubnetworkSecondaryIpRange {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
   */
   readonly ipCidrRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#range_name ComputeSubnetwork#range_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#range_name ComputeSubnetwork#range_name}
   */
   readonly rangeName?: string;
 }
@@ -160,7 +160,7 @@ Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection. Default value: "INTERVAL_5_SEC" Possible values: ["INTERVAL_5_SEC", "INTERVAL_30_SEC", "INTERVAL_1_MIN", "INTERVAL_5_MIN", "INTERVAL_10_MIN", "INTERVAL_15_MIN"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#aggregation_interval ComputeSubnetwork#aggregation_interval}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#aggregation_interval ComputeSubnetwork#aggregation_interval}
   */
   readonly aggregationInterval?: string;
   /**
@@ -168,7 +168,7 @@ lasting connections. Default is an interval of 5 seconds per connection. Default
 https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 The default value is 'true', which evaluates to include everything.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#filter_expr ComputeSubnetwork#filter_expr}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#filter_expr ComputeSubnetwork#filter_expr}
   */
   readonly filterExpr?: string;
   /**
@@ -178,7 +178,7 @@ flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#flow_sampling ComputeSubnetwork#flow_sampling}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#flow_sampling ComputeSubnetwork#flow_sampling}
   */
   readonly flowSampling?: number;
   /**
@@ -186,14 +186,14 @@ half of all collected logs are reported.
 Configures whether metadata fields should be added to the reported VPC
 flow logs. Default value: "INCLUDE_ALL_METADATA" Possible values: ["EXCLUDE_ALL_METADATA", "INCLUDE_ALL_METADATA", "CUSTOM_METADATA"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#metadata ComputeSubnetwork#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#metadata ComputeSubnetwork#metadata}
   */
   readonly metadata?: string;
   /**
   * List of metadata fields that should be added to reported logs.
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#metadata_fields ComputeSubnetwork#metadata_fields}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#metadata_fields ComputeSubnetwork#metadata_fields}
   */
   readonly metadataFields?: string[];
 }
@@ -351,15 +351,15 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
 }
 export interface ComputeSubnetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#create ComputeSubnetwork#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#create ComputeSubnetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#delete ComputeSubnetwork#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#delete ComputeSubnetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html#update ComputeSubnetwork#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#update ComputeSubnetwork#update}
   */
   readonly update?: string;
 }
@@ -471,7 +471,7 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html google_compute_subnetwork}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork google_compute_subnetwork}
 */
 export class ComputeSubnetwork extends cdktf.TerraformResource {
 
@@ -485,7 +485,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork.html google_compute_subnetwork} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork google_compute_subnetwork} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

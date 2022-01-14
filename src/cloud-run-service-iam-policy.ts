@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface CloudRunServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#location CloudRunServiceIamPolicy#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy#location CloudRunServiceIamPolicy#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#policy_data CloudRunServiceIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy#policy_data CloudRunServiceIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#project CloudRunServiceIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy#project CloudRunServiceIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html#service CloudRunServiceIamPolicy#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy#service CloudRunServiceIamPolicy#service}
   */
   readonly service: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html google_cloud_run_service_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy google_cloud_run_service_iam_policy}
 */
 export class CloudRunServiceIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class CloudRunServiceIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy.html google_cloud_run_service_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy google_cloud_run_service_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

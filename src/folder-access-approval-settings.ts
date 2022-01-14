@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html
+// https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaA
   /**
   * ID of the folder of the access approval settings.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#folder_id FolderAccessApprovalSettings#folder_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#folder_id FolderAccessApprovalSettings#folder_id}
   */
   readonly folderId: string;
   /**
@@ -18,19 +18,19 @@ export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaA
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#notification_emails FolderAccessApprovalSettings#notification_emails}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#notification_emails FolderAccessApprovalSettings#notification_emails}
   */
   readonly notificationEmails?: string[];
   /**
   * enrolled_services block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#enrolled_services FolderAccessApprovalSettings#enrolled_services}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#enrolled_services FolderAccessApprovalSettings#enrolled_services}
   */
   readonly enrolledServices: FolderAccessApprovalSettingsEnrolledServices[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#timeouts FolderAccessApprovalSettings#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#timeouts FolderAccessApprovalSettings#timeouts}
   */
   readonly timeouts?: FolderAccessApprovalSettingsTimeouts;
 }
@@ -61,13 +61,13 @@ Note: These values are supported as input, but considered a legacy format:
   * pubsub.googleapis.com
   * storage.googleapis.com
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#cloud_product FolderAccessApprovalSettings#cloud_product}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#cloud_product FolderAccessApprovalSettings#cloud_product}
   */
   readonly cloudProduct: string;
   /**
   * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#enrollment_level FolderAccessApprovalSettings#enrollment_level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#enrollment_level FolderAccessApprovalSettings#enrollment_level}
   */
   readonly enrollmentLevel?: string;
 }
@@ -85,15 +85,15 @@ export function folderAccessApprovalSettingsEnrolledServicesToTerraform(struct?:
 
 export interface FolderAccessApprovalSettingsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#create FolderAccessApprovalSettings#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#create FolderAccessApprovalSettings#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#delete FolderAccessApprovalSettings#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#delete FolderAccessApprovalSettings#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html#update FolderAccessApprovalSettings#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#update FolderAccessApprovalSettings#update}
   */
   readonly update?: string;
 }
@@ -205,7 +205,7 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html google_folder_access_approval_settings}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings google_folder_access_approval_settings}
 */
 export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
 
@@ -219,7 +219,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings.html google_folder_access_approval_settings} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings google_folder_access_approval_settings} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

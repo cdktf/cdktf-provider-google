@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeImageIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#image ComputeImageIamBinding#image}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#image ComputeImageIamBinding#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#members ComputeImageIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#members ComputeImageIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#project ComputeImageIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#project ComputeImageIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#role ComputeImageIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#role ComputeImageIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#condition ComputeImageIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#condition ComputeImageIamBinding#condition}
   */
   readonly condition?: ComputeImageIamBindingCondition;
 }
 export interface ComputeImageIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#description ComputeImageIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#description ComputeImageIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#expression ComputeImageIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#expression ComputeImageIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html#title ComputeImageIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding#title ComputeImageIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class ComputeImageIamBindingConditionOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html google_compute_image_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding google_compute_image_iam_binding}
 */
 export class ComputeImageIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class ComputeImageIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding.html google_compute_image_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding google_compute_image_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

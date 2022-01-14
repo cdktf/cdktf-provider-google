@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/service_account_access_token.html
+// https://www.terraform.io/docs/providers/google/d/service_account_access_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleServiceAccountAccessTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#delegates DataGoogleServiceAccountAccessToken#delegates}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token#delegates DataGoogleServiceAccountAccessToken#delegates}
   */
   readonly delegates?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#lifetime DataGoogleServiceAccountAccessToken#lifetime}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token#lifetime DataGoogleServiceAccountAccessToken#lifetime}
   */
   readonly lifetime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#scopes DataGoogleServiceAccountAccessToken#scopes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token#scopes DataGoogleServiceAccountAccessToken#scopes}
   */
   readonly scopes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html#target_service_account DataGoogleServiceAccountAccessToken#target_service_account}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token#target_service_account DataGoogleServiceAccountAccessToken#target_service_account}
   */
   readonly targetServiceAccount: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html google_service_account_access_token}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token google_service_account_access_token}
 */
 export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSource {
 
@@ -40,7 +40,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token.html google_service_account_access_token} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_access_token google_service_account_access_token} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

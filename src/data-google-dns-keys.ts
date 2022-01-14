@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/dns_keys.html
+// https://www.terraform.io/docs/providers/google/d/dns_keys
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,11 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDnsKeysConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys.html#managed_zone DataGoogleDnsKeys#managed_zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
   */
   readonly managedZone: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys.html#project DataGoogleDnsKeys#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#project DataGoogleDnsKeys#project}
   */
   readonly project?: string;
 }
@@ -143,7 +143,7 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_keys.html google_dns_keys}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_keys google_dns_keys}
 */
 export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
 
@@ -157,7 +157,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/dns_keys.html google_dns_keys} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/dns_keys google_dns_keys} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

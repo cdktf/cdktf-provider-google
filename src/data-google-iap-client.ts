@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/iap_client.html
+// https://www.terraform.io/docs/providers/google/d/iap_client
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,19 +12,19 @@ export interface DataGoogleIapClientConfig extends cdktf.TerraformMetaArguments 
 is attached to. The format is
 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client.html#brand DataGoogleIapClient#brand}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client#brand DataGoogleIapClient#brand}
   */
   readonly brand: string;
   /**
   * Output only. Unique identifier of the OAuth client.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client.html#client_id DataGoogleIapClient#client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client#client_id DataGoogleIapClient#client_id}
   */
   readonly clientId: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/iap_client.html google_iap_client}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/iap_client google_iap_client}
 */
 export class DataGoogleIapClient extends cdktf.TerraformDataSource {
 
@@ -38,7 +38,7 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iap_client.html google_iap_client} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iap_client google_iap_client} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

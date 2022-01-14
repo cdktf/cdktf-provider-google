@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html
+// https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,53 +10,53 @@ export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMe
   /**
   * The MySQL version running on your source database server. Possible values: ["MYSQL_5_5", "MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#database_version SqlSourceRepresentationInstance#database_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#database_version SqlSourceRepresentationInstance#database_version}
   */
   readonly databaseVersion: string;
   /**
   * The externally accessible IPv4 address for the source database server.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#host SqlSourceRepresentationInstance#host}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#host SqlSourceRepresentationInstance#host}
   */
   readonly host: string;
   /**
   * The name of the source representation instance. Use any valid Cloud SQL instance name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#name SqlSourceRepresentationInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#name SqlSourceRepresentationInstance#name}
   */
   readonly name: string;
   /**
   * The externally accessible port for the source database server.
 Defaults to 3306.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#port SqlSourceRepresentationInstance#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#port SqlSourceRepresentationInstance#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#project SqlSourceRepresentationInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#project SqlSourceRepresentationInstance#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#region SqlSourceRepresentationInstance#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#timeouts SqlSourceRepresentationInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#timeouts SqlSourceRepresentationInstance#timeouts}
   */
   readonly timeouts?: SqlSourceRepresentationInstanceTimeouts;
 }
 export interface SqlSourceRepresentationInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#create SqlSourceRepresentationInstance#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#create SqlSourceRepresentationInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html#delete SqlSourceRepresentationInstance#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#delete SqlSourceRepresentationInstance#delete}
   */
   readonly delete?: string;
 }
@@ -145,7 +145,7 @@ export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html google_sql_source_representation_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance google_sql_source_representation_instance}
 */
 export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
 
@@ -159,7 +159,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance.html google_sql_source_representation_instance} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance google_sql_source_representation_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html
+// https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,41 +10,41 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#display_name VertexAiDataset#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#display_name VertexAiDataset#display_name}
   */
   readonly displayName: string;
   /**
   * A set of key/value label pairs to assign to this Workflow.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#labels VertexAiDataset#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#labels VertexAiDataset#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#metadata_schema_uri VertexAiDataset#metadata_schema_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#metadata_schema_uri VertexAiDataset#metadata_schema_uri}
   */
   readonly metadataSchemaUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#project VertexAiDataset#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#project VertexAiDataset#project}
   */
   readonly project?: string;
   /**
   * The region of the dataset. eg us-central1
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#region VertexAiDataset#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#region VertexAiDataset#region}
   */
   readonly region?: string;
   /**
   * encryption_spec block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#encryption_spec VertexAiDataset#encryption_spec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#encryption_spec VertexAiDataset#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiDatasetEncryptionSpec;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#timeouts VertexAiDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#timeouts VertexAiDataset#timeouts}
   */
   readonly timeouts?: VertexAiDatasetTimeouts;
 }
@@ -53,7 +53,7 @@ export interface VertexAiDatasetEncryptionSpec {
   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. 
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#kms_key_name VertexAiDataset#kms_key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#kms_key_name VertexAiDataset#kms_key_name}
   */
   readonly kmsKeyName?: string;
 }
@@ -119,15 +119,15 @@ export class VertexAiDatasetEncryptionSpecOutputReference extends cdktf.ComplexO
 }
 export interface VertexAiDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#create VertexAiDataset#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#create VertexAiDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#delete VertexAiDataset#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#delete VertexAiDataset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html#update VertexAiDataset#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#update VertexAiDataset#update}
   */
   readonly update?: string;
 }
@@ -239,7 +239,7 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html google_vertex_ai_dataset}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset google_vertex_ai_dataset}
 */
 export class VertexAiDataset extends cdktf.TerraformResource {
 
@@ -253,7 +253,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset.html google_vertex_ai_dataset} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset google_vertex_ai_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

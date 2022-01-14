@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/container_registry_repository.html
+// https://www.terraform.io/docs/providers/google/d/container_registry_repository
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleContainerRegistryRepositoryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository.html#project DataGoogleContainerRegistryRepository#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#project DataGoogleContainerRegistryRepository#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository.html#region DataGoogleContainerRegistryRepository#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#region DataGoogleContainerRegistryRepository#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository.html google_container_registry_repository}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository google_container_registry_repository}
 */
 export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository.html google_container_registry_repository} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository google_container_registry_repository} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/logging_metric.html
+// https://www.terraform.io/docs/providers/google/r/logging_metric
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,14 +11,14 @@ export interface LoggingMetricConfig extends cdktf.TerraformMetaArguments {
   * A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#description LoggingMetric#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#description LoggingMetric#description}
   */
   readonly description?: string;
   /**
   * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#filter LoggingMetric#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#filter LoggingMetric#filter}
   */
   readonly filter: string;
   /**
@@ -27,7 +27,7 @@ entry field and assign as the label value. Each label key specified in the Label
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#label_extractors LoggingMetric#label_extractors}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#label_extractors LoggingMetric#label_extractors}
   */
   readonly labelExtractors?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -37,11 +37,11 @@ characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#name LoggingMetric#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#name LoggingMetric#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#project LoggingMetric#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#project LoggingMetric#project}
   */
   readonly project?: string;
   /**
@@ -53,25 +53,25 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#value_extractor LoggingMetric#value_extractor}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#value_extractor LoggingMetric#value_extractor}
   */
   readonly valueExtractor?: string;
   /**
   * bucket_options block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#bucket_options LoggingMetric#bucket_options}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#bucket_options LoggingMetric#bucket_options}
   */
   readonly bucketOptions?: LoggingMetricBucketOptions;
   /**
   * metric_descriptor block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#metric_descriptor LoggingMetric#metric_descriptor}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#metric_descriptor LoggingMetric#metric_descriptor}
   */
   readonly metricDescriptor: LoggingMetricMetricDescriptor;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#timeouts LoggingMetric#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#timeouts LoggingMetric#timeouts}
   */
   readonly timeouts?: LoggingMetricTimeouts;
 }
@@ -79,7 +79,7 @@ export interface LoggingMetricBucketOptionsExplicitBuckets {
   /**
   * The values must be monotonically increasing.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#bounds LoggingMetric#bounds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#bounds LoggingMetric#bounds}
   */
   readonly bounds: number[];
 }
@@ -145,19 +145,19 @@ export interface LoggingMetricBucketOptionsExponentialBuckets {
   /**
   * Must be greater than 1.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#growth_factor LoggingMetric#growth_factor}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#growth_factor LoggingMetric#growth_factor}
   */
   readonly growthFactor?: number;
   /**
   * Must be greater than 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#num_finite_buckets LoggingMetric#num_finite_buckets}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#num_finite_buckets LoggingMetric#num_finite_buckets}
   */
   readonly numFiniteBuckets?: number;
   /**
   * Must be greater than 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#scale LoggingMetric#scale}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#scale LoggingMetric#scale}
   */
   readonly scale?: number;
 }
@@ -271,19 +271,19 @@ export interface LoggingMetricBucketOptionsLinearBuckets {
   /**
   * Must be greater than 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#num_finite_buckets LoggingMetric#num_finite_buckets}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#num_finite_buckets LoggingMetric#num_finite_buckets}
   */
   readonly numFiniteBuckets?: number;
   /**
   * Lower bound of the first bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#offset LoggingMetric#offset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#offset LoggingMetric#offset}
   */
   readonly offset?: number;
   /**
   * Must be greater than 0.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#width LoggingMetric#width}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#width LoggingMetric#width}
   */
   readonly width?: number;
 }
@@ -397,19 +397,19 @@ export interface LoggingMetricBucketOptions {
   /**
   * explicit_buckets block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#explicit_buckets LoggingMetric#explicit_buckets}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#explicit_buckets LoggingMetric#explicit_buckets}
   */
   readonly explicitBuckets?: LoggingMetricBucketOptionsExplicitBuckets;
   /**
   * exponential_buckets block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#exponential_buckets LoggingMetric#exponential_buckets}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#exponential_buckets LoggingMetric#exponential_buckets}
   */
   readonly exponentialBuckets?: LoggingMetricBucketOptionsExponentialBuckets;
   /**
   * linear_buckets block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#linear_buckets LoggingMetric#linear_buckets}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#linear_buckets LoggingMetric#linear_buckets}
   */
   readonly linearBuckets?: LoggingMetricBucketOptionsLinearBuckets;
 }
@@ -523,19 +523,19 @@ export interface LoggingMetricMetricDescriptorLabels {
   /**
   * A human-readable description for the label.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#description LoggingMetric#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#description LoggingMetric#description}
   */
   readonly description?: string;
   /**
   * The label key.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#key LoggingMetric#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#key LoggingMetric#key}
   */
   readonly key: string;
   /**
   * The type of data that can be assigned to the label. Default value: "STRING" Possible values: ["BOOL", "INT64", "STRING"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#value_type LoggingMetric#value_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#value_type LoggingMetric#value_type}
   */
   readonly valueType?: string;
 }
@@ -558,7 +558,7 @@ export interface LoggingMetricMetricDescriptor {
 without an ending period, for example "Request count". This field is optional but it is 
 recommended to be set for any metrics associated with user-visible concepts, such as Quota.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#display_name LoggingMetric#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#display_name LoggingMetric#display_name}
   */
   readonly displayName?: string;
   /**
@@ -566,7 +566,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA. Possible values: ["DELTA", "GAUGE", "CUMULATIVE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#metric_kind LoggingMetric#metric_kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#metric_kind LoggingMetric#metric_kind}
   */
   readonly metricKind: string;
   /**
@@ -574,7 +574,7 @@ For counter metrics, set this to DELTA. Possible values: ["DELTA", "GAUGE", "CUM
 'INT64', 'DOUBLE', or 'DISTRIBUTION'. The supported units are a subset of
 [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#unit LoggingMetric#unit}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#unit LoggingMetric#unit}
   */
   readonly unit?: string;
   /**
@@ -582,13 +582,13 @@ For counter metrics, set this to DELTA. Possible values: ["DELTA", "GAUGE", "CUM
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to INT64. Possible values: ["BOOL", "INT64", "DOUBLE", "STRING", "DISTRIBUTION", "MONEY"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#value_type LoggingMetric#value_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#value_type LoggingMetric#value_type}
   */
   readonly valueType: string;
   /**
   * labels block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#labels LoggingMetric#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#labels LoggingMetric#labels}
   */
   readonly labels?: LoggingMetricMetricDescriptorLabels[];
 }
@@ -741,15 +741,15 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
 }
 export interface LoggingMetricTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#create LoggingMetric#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#create LoggingMetric#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#delete LoggingMetric#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#delete LoggingMetric#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html#update LoggingMetric#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#update LoggingMetric#update}
   */
   readonly update?: string;
 }
@@ -861,7 +861,7 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html google_logging_metric}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_metric google_logging_metric}
 */
 export class LoggingMetric extends cdktf.TerraformResource {
 
@@ -875,7 +875,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_metric.html google_logging_metric} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_metric google_logging_metric} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

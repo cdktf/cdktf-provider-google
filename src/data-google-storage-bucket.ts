@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/storage_bucket.html
+// https://www.terraform.io/docs/providers/google/d/storage_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleStorageBucketConfig extends cdktf.TerraformMetaArgume
   /**
   * The name of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket.html#name DataGoogleStorageBucket#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket#name DataGoogleStorageBucket#name}
   */
   readonly name: string;
 }
@@ -161,7 +161,7 @@ export class DataGoogleStorageBucketWebsite extends cdktf.ComplexComputedList {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket.html google_storage_bucket}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket google_storage_bucket}
 */
 export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
 
@@ -175,7 +175,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket.html google_storage_bucket} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket google_storage_bucket} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

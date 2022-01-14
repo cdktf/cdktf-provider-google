@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext.html
+// https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleKmsSecretCiphertextConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext.html#crypto_key DataGoogleKmsSecretCiphertext#crypto_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext#crypto_key DataGoogleKmsSecretCiphertext#crypto_key}
   */
   readonly cryptoKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext.html#plaintext DataGoogleKmsSecretCiphertext#plaintext}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext#plaintext DataGoogleKmsSecretCiphertext#plaintext}
   */
   readonly plaintext: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext.html google_kms_secret_ciphertext}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext google_kms_secret_ciphertext}
 */
 export class DataGoogleKmsSecretCiphertext extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleKmsSecretCiphertext extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext.html google_kms_secret_ciphertext} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_secret_ciphertext google_kms_secret_ciphertext} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

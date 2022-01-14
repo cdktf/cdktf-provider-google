@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html
+// https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,50 +10,50 @@ export interface DataCatalogEntryGroupConfig extends cdktf.TerraformMetaArgument
   /**
   * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#description DataCatalogEntryGroup#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#description DataCatalogEntryGroup#description}
   */
   readonly description?: string;
   /**
   * A short name to identify the entry group, for example, "analytics data - jan 2011".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#display_name DataCatalogEntryGroup#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
   */
   readonly displayName?: string;
   /**
   * The id of the entry group to create. The id must begin with a letter or underscore,
 contain only English letters, numbers and underscores, and be at most 64 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#entry_group_id DataCatalogEntryGroup#entry_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
   */
   readonly entryGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#project DataCatalogEntryGroup#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#project DataCatalogEntryGroup#project}
   */
   readonly project?: string;
   /**
   * EntryGroup location region.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#region DataCatalogEntryGroup#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#region DataCatalogEntryGroup#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#timeouts DataCatalogEntryGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
   */
   readonly timeouts?: DataCatalogEntryGroupTimeouts;
 }
 export interface DataCatalogEntryGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#create DataCatalogEntryGroup#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#create DataCatalogEntryGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#delete DataCatalogEntryGroup#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html#update DataCatalogEntryGroup#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group#update DataCatalogEntryGroup#update}
   */
   readonly update?: string;
 }
@@ -165,7 +165,7 @@ export class DataCatalogEntryGroupTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html google_data_catalog_entry_group}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group google_data_catalog_entry_group}
 */
 export class DataCatalogEntryGroup extends cdktf.TerraformResource {
 
@@ -179,7 +179,7 @@ export class DataCatalogEntryGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group.html google_data_catalog_entry_group} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/data_catalog_entry_group google_data_catalog_entry_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

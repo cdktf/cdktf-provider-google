@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html
+// https://www.terraform.io/docs/providers/google/r/compute_service_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,20 +11,20 @@ export interface ComputeServiceAttachmentConfig extends cdktf.TerraformMetaArgum
   * The connection preference to use for this service attachment. Valid
 values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#connection_preference ComputeServiceAttachment#connection_preference}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#connection_preference ComputeServiceAttachment#connection_preference}
   */
   readonly connectionPreference: string;
   /**
   * An array of projects that are not allowed to connect to this service
 attachment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#consumer_reject_lists ComputeServiceAttachment#consumer_reject_lists}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#consumer_reject_lists ComputeServiceAttachment#consumer_reject_lists}
   */
   readonly consumerRejectLists?: string[];
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#description ComputeServiceAttachment#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#description ComputeServiceAttachment#description}
   */
   readonly description?: string;
   /**
@@ -32,7 +32,7 @@ attachment.
 address data in TCP connections that traverse proxies on their way to
 destination servers.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#enable_proxy_protocol ComputeServiceAttachment#enable_proxy_protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#enable_proxy_protocol ComputeServiceAttachment#enable_proxy_protocol}
   */
   readonly enableProxyProtocol: boolean | cdktf.IResolvable;
   /**
@@ -43,42 +43,42 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#name ComputeServiceAttachment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#name ComputeServiceAttachment#name}
   */
   readonly name: string;
   /**
   * An array of subnets that is provided for NAT in this service attachment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#nat_subnets ComputeServiceAttachment#nat_subnets}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#nat_subnets ComputeServiceAttachment#nat_subnets}
   */
   readonly natSubnets: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#project ComputeServiceAttachment#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#project ComputeServiceAttachment#project}
   */
   readonly project?: string;
   /**
   * URL of the region where the resource resides.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#region ComputeServiceAttachment#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#region ComputeServiceAttachment#region}
   */
   readonly region?: string;
   /**
   * The URL of a forwarding rule that represents the service identified by
 this service attachment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#target_service ComputeServiceAttachment#target_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#target_service ComputeServiceAttachment#target_service}
   */
   readonly targetService: string;
   /**
   * consumer_accept_lists block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#consumer_accept_lists ComputeServiceAttachment#consumer_accept_lists}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#consumer_accept_lists ComputeServiceAttachment#consumer_accept_lists}
   */
   readonly consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#timeouts ComputeServiceAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#timeouts ComputeServiceAttachment#timeouts}
   */
   readonly timeouts?: ComputeServiceAttachmentTimeouts;
 }
@@ -99,13 +99,13 @@ export interface ComputeServiceAttachmentConsumerAcceptLists {
   * The number of consumer forwarding rules the consumer project can
 create.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#connection_limit ComputeServiceAttachment#connection_limit}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#connection_limit ComputeServiceAttachment#connection_limit}
   */
   readonly connectionLimit: number;
   /**
   * A project that is allowed to connect to this service attachment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#project_id_or_num ComputeServiceAttachment#project_id_or_num}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#project_id_or_num ComputeServiceAttachment#project_id_or_num}
   */
   readonly projectIdOrNum: string;
 }
@@ -123,15 +123,15 @@ export function computeServiceAttachmentConsumerAcceptListsToTerraform(struct?: 
 
 export interface ComputeServiceAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#create ComputeServiceAttachment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#create ComputeServiceAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#delete ComputeServiceAttachment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#delete ComputeServiceAttachment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html#update ComputeServiceAttachment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#update ComputeServiceAttachment#update}
   */
   readonly update?: string;
 }
@@ -243,7 +243,7 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html google_compute_service_attachment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment google_compute_service_attachment}
 */
 export class ComputeServiceAttachment extends cdktf.TerraformResource {
 
@@ -257,7 +257,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment.html google_compute_service_attachment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment google_compute_service_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
