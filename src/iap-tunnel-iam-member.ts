@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface IapTunnelIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#member IapTunnelIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#member IapTunnelIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#project IapTunnelIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#project IapTunnelIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#role IapTunnelIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#role IapTunnelIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#condition IapTunnelIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#condition IapTunnelIamMember#condition}
   */
   readonly condition?: IapTunnelIamMemberCondition;
 }
 export interface IapTunnelIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#description IapTunnelIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#description IapTunnelIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#expression IapTunnelIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#expression IapTunnelIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html#title IapTunnelIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member#title IapTunnelIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class IapTunnelIamMemberConditionOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html google_iap_tunnel_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member google_iap_tunnel_iam_member}
 */
 export class IapTunnelIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class IapTunnelIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member.html google_iap_tunnel_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_iam_member google_iap_tunnel_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

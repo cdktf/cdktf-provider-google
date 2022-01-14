@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html
+// https://www.terraform.io/docs/providers/google/r/storage_hmac_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface StorageHmacKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#project StorageHmacKey#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#project StorageHmacKey#project}
   */
   readonly project?: string;
   /**
   * The email address of the key's associated service account.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#service_account_email StorageHmacKey#service_account_email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#service_account_email StorageHmacKey#service_account_email}
   */
   readonly serviceAccountEmail: string;
   /**
   * The state of the key. Can be set to one of ACTIVE, INACTIVE. Default value: "ACTIVE" Possible values: ["ACTIVE", "INACTIVE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#state StorageHmacKey#state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#state StorageHmacKey#state}
   */
   readonly state?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#timeouts StorageHmacKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#timeouts StorageHmacKey#timeouts}
   */
   readonly timeouts?: StorageHmacKeyTimeouts;
 }
 export interface StorageHmacKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#create StorageHmacKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#create StorageHmacKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#delete StorageHmacKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#delete StorageHmacKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html#update StorageHmacKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#update StorageHmacKey#update}
   */
   readonly update?: string;
 }
@@ -152,7 +152,7 @@ export class StorageHmacKeyTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html google_storage_hmac_key}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key google_storage_hmac_key}
 */
 export class StorageHmacKey extends cdktf.TerraformResource {
 
@@ -166,7 +166,7 @@ export class StorageHmacKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key.html google_storage_hmac_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key google_storage_hmac_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships.html
+// https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleCloudIdentityGroupMembershipsConfig extends cdktf.Ter
   /**
   * The name of the Group to get memberships from.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships.html#group DataGoogleCloudIdentityGroupMemberships#group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships#group DataGoogleCloudIdentityGroupMemberships#group}
   */
   readonly group: string;
 }
@@ -74,7 +74,7 @@ export class DataGoogleCloudIdentityGroupMembershipsMemberships extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships.html google_cloud_identity_group_memberships}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships google_cloud_identity_group_memberships}
 */
 export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformDataSource {
 
@@ -88,7 +88,7 @@ export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships.html google_cloud_identity_group_memberships} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_group_memberships google_cloud_identity_group_memberships} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

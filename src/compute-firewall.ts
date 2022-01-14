@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_firewall.html
+// https://www.terraform.io/docs/providers/google/r/compute_firewall
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,7 +11,7 @@ export interface ComputeFirewallConfig extends cdktf.TerraformMetaArguments {
   * An optional description of this resource. Provide this property when
 you create the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#description ComputeFirewall#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#description ComputeFirewall#description}
   */
   readonly description?: string;
   /**
@@ -19,7 +19,7 @@ you create the resource.
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#destination_ranges ComputeFirewall#destination_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#destination_ranges ComputeFirewall#destination_ranges}
   */
   readonly destinationRanges?: string[];
   /**
@@ -28,7 +28,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags. Possible values: ["INGRESS", "EGRESS"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#direction ComputeFirewall#direction}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#direction ComputeFirewall#direction}
   */
   readonly direction?: string;
   /**
@@ -37,13 +37,13 @@ network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#disabled ComputeFirewall#disabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#disabled ComputeFirewall#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported to Stackdriver.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#enable_logging ComputeFirewall#enable_logging}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#enable_logging ComputeFirewall#enable_logging}
   */
   readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
@@ -55,13 +55,13 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#name ComputeFirewall#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#name ComputeFirewall#name}
   */
   readonly name: string;
   /**
   * The name or self_link of the network to attach this firewall to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#network ComputeFirewall#network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#network ComputeFirewall#network}
   */
   readonly network: string;
   /**
@@ -72,11 +72,11 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#priority ComputeFirewall#priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#priority ComputeFirewall#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#project ComputeFirewall#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#project ComputeFirewall#project}
   */
   readonly project?: string;
   /**
@@ -89,7 +89,7 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#source_ranges ComputeFirewall#source_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_ranges ComputeFirewall#source_ranges}
   */
   readonly sourceRanges?: string[];
   /**
@@ -105,7 +105,7 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#source_service_accounts ComputeFirewall#source_service_accounts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_service_accounts ComputeFirewall#source_service_accounts}
   */
   readonly sourceServiceAccounts?: string[];
   /**
@@ -119,7 +119,7 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#source_tags ComputeFirewall#source_tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_tags ComputeFirewall#source_tags}
   */
   readonly sourceTags?: string[];
   /**
@@ -130,7 +130,7 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#target_service_accounts ComputeFirewall#target_service_accounts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#target_service_accounts ComputeFirewall#target_service_accounts}
   */
   readonly targetServiceAccounts?: string[];
   /**
@@ -139,31 +139,31 @@ network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#target_tags ComputeFirewall#target_tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#target_tags ComputeFirewall#target_tags}
   */
   readonly targetTags?: string[];
   /**
   * allow block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#allow ComputeFirewall#allow}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#allow ComputeFirewall#allow}
   */
   readonly allow?: ComputeFirewallAllow[];
   /**
   * deny block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#deny ComputeFirewall#deny}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#deny ComputeFirewall#deny}
   */
   readonly deny?: ComputeFirewallDeny[];
   /**
   * log_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#log_config ComputeFirewall#log_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#log_config ComputeFirewall#log_config}
   */
   readonly logConfig?: ComputeFirewallLogConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#timeouts ComputeFirewall#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#timeouts ComputeFirewall#timeouts}
   */
   readonly timeouts?: ComputeFirewallTimeouts;
 }
@@ -177,7 +177,7 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#ports ComputeFirewall#ports}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#ports ComputeFirewall#ports}
   */
   readonly ports?: string[];
   /**
@@ -186,7 +186,7 @@ required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#protocol ComputeFirewall#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#protocol ComputeFirewall#protocol}
   */
   readonly protocol: string;
 }
@@ -212,7 +212,7 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#ports ComputeFirewall#ports}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#ports ComputeFirewall#ports}
   */
   readonly ports?: string[];
   /**
@@ -221,7 +221,7 @@ required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#protocol ComputeFirewall#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#protocol ComputeFirewall#protocol}
   */
   readonly protocol: string;
 }
@@ -241,7 +241,7 @@ export interface ComputeFirewallLogConfig {
   /**
   * This field denotes whether to include or exclude metadata for firewall logs. Possible values: ["EXCLUDE_ALL_METADATA", "INCLUDE_ALL_METADATA"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#metadata ComputeFirewall#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#metadata ComputeFirewall#metadata}
   */
   readonly metadata: string;
 }
@@ -304,15 +304,15 @@ export class ComputeFirewallLogConfigOutputReference extends cdktf.ComplexObject
 }
 export interface ComputeFirewallTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#create ComputeFirewall#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#create ComputeFirewall#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#delete ComputeFirewall#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#delete ComputeFirewall#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html#update ComputeFirewall#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#update ComputeFirewall#update}
   */
   readonly update?: string;
 }
@@ -424,7 +424,7 @@ export class ComputeFirewallTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html google_compute_firewall}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_firewall google_compute_firewall}
 */
 export class ComputeFirewall extends cdktf.TerraformResource {
 
@@ -438,7 +438,7 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_firewall.html google_compute_firewall} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_firewall google_compute_firewall} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

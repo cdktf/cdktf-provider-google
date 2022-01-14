@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataprocClusterIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#cluster DataprocClusterIamBinding#cluster}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#cluster DataprocClusterIamBinding#cluster}
   */
   readonly cluster: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#members DataprocClusterIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#members DataprocClusterIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#project DataprocClusterIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#project DataprocClusterIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#region DataprocClusterIamBinding#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#region DataprocClusterIamBinding#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#role DataprocClusterIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#role DataprocClusterIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#condition DataprocClusterIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#condition DataprocClusterIamBinding#condition}
   */
   readonly condition?: DataprocClusterIamBindingCondition;
 }
 export interface DataprocClusterIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#description DataprocClusterIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#description DataprocClusterIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#expression DataprocClusterIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#expression DataprocClusterIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html#title DataprocClusterIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding#title DataprocClusterIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class DataprocClusterIamBindingConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html google_dataproc_cluster_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding google_dataproc_cluster_iam_binding}
 */
 export class DataprocClusterIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class DataprocClusterIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding.html google_dataproc_cluster_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_binding google_dataproc_cluster_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

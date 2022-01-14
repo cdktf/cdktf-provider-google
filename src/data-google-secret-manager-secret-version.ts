@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version.html
+// https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleSecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version.html#project DataGoogleSecretManagerSecretVersion#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version#project DataGoogleSecretManagerSecretVersion#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version.html#secret DataGoogleSecretManagerSecretVersion#secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version#secret DataGoogleSecretManagerSecretVersion#secret}
   */
   readonly secret: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version.html#version DataGoogleSecretManagerSecretVersion#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version#version DataGoogleSecretManagerSecretVersion#version}
   */
   readonly version?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version.html google_secret_manager_secret_version}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version google_secret_manager_secret_version}
 */
 export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version.html google_secret_manager_secret_version} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/secret_manager_secret_version google_secret_manager_secret_version} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

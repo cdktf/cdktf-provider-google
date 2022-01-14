@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/kms_key_ring.html
+// https://www.terraform.io/docs/providers/google/d/kms_key_ring
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,23 +11,23 @@ export interface DataGoogleKmsKeyRingConfig extends cdktf.TerraformMetaArguments
   * The location for the KeyRing.
 A full list of valid locations can be found by running 'gcloud kms locations list'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring.html#location DataGoogleKmsKeyRing#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring#location DataGoogleKmsKeyRing#location}
   */
   readonly location: string;
   /**
   * The resource name for the KeyRing.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring.html#name DataGoogleKmsKeyRing#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring#name DataGoogleKmsKeyRing#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring.html#project DataGoogleKmsKeyRing#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring#project DataGoogleKmsKeyRing#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring.html google_kms_key_ring}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring google_kms_key_ring}
 */
 export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
 
@@ -41,7 +41,7 @@ export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring.html google_kms_key_ring} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_key_ring google_kms_key_ring} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

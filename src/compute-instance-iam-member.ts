@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#instance_name ComputeInstanceIamMember#instance_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#instance_name ComputeInstanceIamMember#instance_name}
   */
   readonly instanceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#member ComputeInstanceIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#member ComputeInstanceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#project ComputeInstanceIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#project ComputeInstanceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#role ComputeInstanceIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#role ComputeInstanceIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#zone ComputeInstanceIamMember#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#zone ComputeInstanceIamMember#zone}
   */
   readonly zone?: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#condition ComputeInstanceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#condition ComputeInstanceIamMember#condition}
   */
   readonly condition?: ComputeInstanceIamMemberCondition;
 }
 export interface ComputeInstanceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#description ComputeInstanceIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#description ComputeInstanceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#expression ComputeInstanceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#expression ComputeInstanceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html#title ComputeInstanceIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member#title ComputeInstanceIamMember#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class ComputeInstanceIamMemberConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html google_compute_instance_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member google_compute_instance_iam_member}
 */
 export class ComputeInstanceIamMember extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class ComputeInstanceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member.html google_compute_instance_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member google_compute_instance_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

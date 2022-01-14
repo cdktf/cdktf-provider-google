@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html
+// https://www.terraform.io/docs/providers/google/r/compute_ssl_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,20 +19,20 @@ for which ciphers are available to use. **Note**: this argument
 *must* be present when using the 'CUSTOM' profile. This argument
 *must not* be present when using any other profile.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#custom_features ComputeSslPolicy#custom_features}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#custom_features ComputeSslPolicy#custom_features}
   */
   readonly customFeatures?: string[];
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#description ComputeSslPolicy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#description ComputeSslPolicy#description}
   */
   readonly description?: string;
   /**
   * The minimum version of SSL protocol that can be used by the clients
 to establish a connection with the load balancer. Default value: "TLS_1_0" Possible values: ["TLS_1_0", "TLS_1_1", "TLS_1_2"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#min_tls_version ComputeSslPolicy#min_tls_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#min_tls_version ComputeSslPolicy#min_tls_version}
   */
   readonly minTlsVersion?: string;
   /**
@@ -44,7 +44,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#name ComputeSslPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#name ComputeSslPolicy#name}
   */
   readonly name: string;
   /**
@@ -57,31 +57,31 @@ See the [official documentation](https://cloud.google.com/compute/docs/load-bala
 for information on what cipher suites each profile provides. If
 'CUSTOM' is used, the 'custom_features' attribute **must be set**. Default value: "COMPATIBLE" Possible values: ["COMPATIBLE", "MODERN", "RESTRICTED", "CUSTOM"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#profile ComputeSslPolicy#profile}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#profile ComputeSslPolicy#profile}
   */
   readonly profile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#project ComputeSslPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#project ComputeSslPolicy#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#timeouts ComputeSslPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#timeouts ComputeSslPolicy#timeouts}
   */
   readonly timeouts?: ComputeSslPolicyTimeouts;
 }
 export interface ComputeSslPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#create ComputeSslPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#create ComputeSslPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#delete ComputeSslPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#delete ComputeSslPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html#update ComputeSslPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy#update ComputeSslPolicy#update}
   */
   readonly update?: string;
 }
@@ -193,7 +193,7 @@ export class ComputeSslPolicyTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html google_compute_ssl_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy google_compute_ssl_policy}
 */
 export class ComputeSslPolicy extends cdktf.TerraformResource {
 
@@ -207,7 +207,7 @@ export class ComputeSslPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy.html google_compute_ssl_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_ssl_policy google_compute_ssl_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

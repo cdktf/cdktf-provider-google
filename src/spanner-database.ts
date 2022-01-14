@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/spanner_database.html
+// https://www.terraform.io/docs/providers/google/r/spanner_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,40 +13,40 @@ database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#ddl SpannerDatabase#ddl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#ddl SpannerDatabase#ddl}
   */
   readonly ddl?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#deletion_protection SpannerDatabase#deletion_protection}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#deletion_protection SpannerDatabase#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The instance to create the database on.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#instance SpannerDatabase#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#instance SpannerDatabase#instance}
   */
   readonly instance: string;
   /**
   * A unique identifier for the database, which cannot be changed after
 the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#name SpannerDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#name SpannerDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#project SpannerDatabase#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#project SpannerDatabase#project}
   */
   readonly project?: string;
   /**
   * encryption_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#encryption_config SpannerDatabase#encryption_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#encryption_config SpannerDatabase#encryption_config}
   */
   readonly encryptionConfig?: SpannerDatabaseEncryptionConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#timeouts SpannerDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#timeouts SpannerDatabase#timeouts}
   */
   readonly timeouts?: SpannerDatabaseTimeouts;
 }
@@ -55,7 +55,7 @@ export interface SpannerDatabaseEncryptionConfig {
   * Fully qualified name of the KMS key to use to encrypt this database. This key must exist
 in the same location as the Spanner Database.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#kms_key_name SpannerDatabase#kms_key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#kms_key_name SpannerDatabase#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -118,15 +118,15 @@ export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.Comple
 }
 export interface SpannerDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#create SpannerDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#create SpannerDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#delete SpannerDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#delete SpannerDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html#update SpannerDatabase#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#update SpannerDatabase#update}
   */
   readonly update?: string;
 }
@@ -238,7 +238,7 @@ export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html google_spanner_database}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_database google_spanner_database}
 */
 export class SpannerDatabase extends cdktf.TerraformResource {
 
@@ -252,7 +252,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_database.html google_spanner_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/spanner_database google_spanner_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

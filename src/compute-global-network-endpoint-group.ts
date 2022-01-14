@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html
+// https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,14 +11,14 @@ export interface ComputeGlobalNetworkEndpointGroupConfig extends cdktf.Terraform
   * The default port used if the port number is not specified in the
 network endpoint.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#default_port ComputeGlobalNetworkEndpointGroup#default_port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#default_port ComputeGlobalNetworkEndpointGroup#default_port}
   */
   readonly defaultPort?: number;
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#description ComputeGlobalNetworkEndpointGroup#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#description ComputeGlobalNetworkEndpointGroup#description}
   */
   readonly description?: string;
   /**
@@ -30,33 +30,33 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#name ComputeGlobalNetworkEndpointGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#name ComputeGlobalNetworkEndpointGroup#name}
   */
   readonly name: string;
   /**
   * Type of network endpoints in this network endpoint group. Possible values: ["INTERNET_IP_PORT", "INTERNET_FQDN_PORT"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#network_endpoint_type ComputeGlobalNetworkEndpointGroup#network_endpoint_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#network_endpoint_type ComputeGlobalNetworkEndpointGroup#network_endpoint_type}
   */
   readonly networkEndpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#project ComputeGlobalNetworkEndpointGroup#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#project ComputeGlobalNetworkEndpointGroup#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#timeouts ComputeGlobalNetworkEndpointGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#timeouts ComputeGlobalNetworkEndpointGroup#timeouts}
   */
   readonly timeouts?: ComputeGlobalNetworkEndpointGroupTimeouts;
 }
 export interface ComputeGlobalNetworkEndpointGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#create ComputeGlobalNetworkEndpointGroup#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#create ComputeGlobalNetworkEndpointGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html#delete ComputeGlobalNetworkEndpointGroup#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group#delete ComputeGlobalNetworkEndpointGroup#delete}
   */
   readonly delete?: string;
 }
@@ -145,7 +145,7 @@ export class ComputeGlobalNetworkEndpointGroupTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html google_compute_global_network_endpoint_group}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group google_compute_global_network_endpoint_group}
 */
 export class ComputeGlobalNetworkEndpointGroup extends cdktf.TerraformResource {
 
@@ -159,7 +159,7 @@ export class ComputeGlobalNetworkEndpointGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group.html google_compute_global_network_endpoint_group} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint_group google_compute_global_network_endpoint_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

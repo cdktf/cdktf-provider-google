@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html
+// https://www.terraform.io/docs/providers/google/r/monitoring_custom_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,30 +10,30 @@ export interface MonitoringCustomServiceConfig extends cdktf.TerraformMetaArgume
   /**
   * Name used for UI elements listing this Service.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#display_name MonitoringCustomService#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#display_name MonitoringCustomService#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#project MonitoringCustomService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#project MonitoringCustomService#project}
   */
   readonly project?: string;
   /**
   * An optional service ID to use. If not given, the server will generate a
 service ID.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#service_id MonitoringCustomService#service_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#service_id MonitoringCustomService#service_id}
   */
   readonly serviceId?: string;
   /**
   * telemetry block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#telemetry MonitoringCustomService#telemetry}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#telemetry MonitoringCustomService#telemetry}
   */
   readonly telemetry?: MonitoringCustomServiceTelemetry;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#timeouts MonitoringCustomService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#timeouts MonitoringCustomService#timeouts}
   */
   readonly timeouts?: MonitoringCustomServiceTimeouts;
 }
@@ -43,7 +43,7 @@ export interface MonitoringCustomServiceTelemetry {
 Formatted as described in
 https://cloud.google.com/apis/design/resource_names.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#resource_name MonitoringCustomService#resource_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#resource_name MonitoringCustomService#resource_name}
   */
   readonly resourceName?: string;
 }
@@ -109,15 +109,15 @@ export class MonitoringCustomServiceTelemetryOutputReference extends cdktf.Compl
 }
 export interface MonitoringCustomServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#create MonitoringCustomService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#create MonitoringCustomService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#delete MonitoringCustomService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#delete MonitoringCustomService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html#update MonitoringCustomService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#update MonitoringCustomService#update}
   */
   readonly update?: string;
 }
@@ -229,7 +229,7 @@ export class MonitoringCustomServiceTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html google_monitoring_custom_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service google_monitoring_custom_service}
 */
 export class MonitoringCustomService extends cdktf.TerraformResource {
 
@@ -243,7 +243,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service.html google_monitoring_custom_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service google_monitoring_custom_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

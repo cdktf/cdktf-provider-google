@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html
+// https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleTpuTensorflowVersionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html#project DataGoogleTpuTensorflowVersions#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions#project DataGoogleTpuTensorflowVersions#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html#zone DataGoogleTpuTensorflowVersions#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions#zone DataGoogleTpuTensorflowVersions#zone}
   */
   readonly zone?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html google_tpu_tensorflow_versions}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions google_tpu_tensorflow_versions}
 */
 export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
 
@@ -32,7 +32,7 @@ export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions.html google_tpu_tensorflow_versions} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/tpu_tensorflow_versions google_tpu_tensorflow_versions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

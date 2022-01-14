@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_backend_service.html
+// https://www.terraform.io/docs/providers/google/d/compute_backend_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service.html#name DataGoogleComputeBackendService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service#name DataGoogleComputeBackendService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service.html#project DataGoogleComputeBackendService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service#project DataGoogleComputeBackendService#project}
   */
   readonly project?: string;
 }
@@ -358,7 +358,7 @@ export class DataGoogleComputeBackendServiceOutlierDetection extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service.html google_compute_backend_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service google_compute_backend_service}
 */
 export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
@@ -372,7 +372,7 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service.html google_compute_backend_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service google_compute_backend_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

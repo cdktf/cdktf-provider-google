@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html
+// https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,35 +10,35 @@ export interface ComputeFirewallPolicyAssociationConfig extends cdktf.TerraformM
   /**
   * The target that the firewall policy is attached to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html#attachment_target ComputeFirewallPolicyAssociation#attachment_target}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#attachment_target ComputeFirewallPolicyAssociation#attachment_target}
   */
   readonly attachmentTarget: string;
   /**
   * The firewall policy ID of the association.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html#firewall_policy ComputeFirewallPolicyAssociation#firewall_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#firewall_policy ComputeFirewallPolicyAssociation#firewall_policy}
   */
   readonly firewallPolicy: string;
   /**
   * The name for an association.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html#name ComputeFirewallPolicyAssociation#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#name ComputeFirewallPolicyAssociation#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html#timeouts ComputeFirewallPolicyAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#timeouts ComputeFirewallPolicyAssociation#timeouts}
   */
   readonly timeouts?: ComputeFirewallPolicyAssociationTimeouts;
 }
 export interface ComputeFirewallPolicyAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html#create ComputeFirewallPolicyAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#create ComputeFirewallPolicyAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html#delete ComputeFirewallPolicyAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#delete ComputeFirewallPolicyAssociation#delete}
   */
   readonly delete?: string;
 }
@@ -127,7 +127,7 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html google_compute_firewall_policy_association}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association google_compute_firewall_policy_association}
 */
 export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
 
@@ -141,7 +141,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association.html google_compute_firewall_policy_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association google_compute_firewall_policy_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

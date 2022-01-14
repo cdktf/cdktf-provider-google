@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html
+// https://www.terraform.io/docs/providers/google/r/identity_platform_tenant
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArgumen
   /**
   * Whether to allow email/password user authentication.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#allow_password_signup IdentityPlatformTenant#allow_password_signup}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#allow_password_signup IdentityPlatformTenant#allow_password_signup}
   */
   readonly allowPasswordSignup?: boolean | cdktf.IResolvable;
   /**
@@ -18,43 +18,43 @@ export interface IdentityPlatformTenantConfig extends cdktf.TerraformMetaArgumen
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#disable_auth IdentityPlatformTenant#disable_auth}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#disable_auth IdentityPlatformTenant#disable_auth}
   */
   readonly disableAuth?: boolean | cdktf.IResolvable;
   /**
   * Human friendly display name of the tenant.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#display_name IdentityPlatformTenant#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#display_name IdentityPlatformTenant#display_name}
   */
   readonly displayName: string;
   /**
   * Whether to enable email link user authentication.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#enable_email_link_signin IdentityPlatformTenant#enable_email_link_signin}
   */
   readonly enableEmailLinkSignin?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#project IdentityPlatformTenant#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#project IdentityPlatformTenant#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#timeouts IdentityPlatformTenant#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#timeouts IdentityPlatformTenant#timeouts}
   */
   readonly timeouts?: IdentityPlatformTenantTimeouts;
 }
 export interface IdentityPlatformTenantTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#create IdentityPlatformTenant#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#create IdentityPlatformTenant#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#delete IdentityPlatformTenant#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#delete IdentityPlatformTenant#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html#update IdentityPlatformTenant#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant#update IdentityPlatformTenant#update}
   */
   readonly update?: string;
 }
@@ -166,7 +166,7 @@ export class IdentityPlatformTenantTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html google_identity_platform_tenant}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant google_identity_platform_tenant}
 */
 export class IdentityPlatformTenant extends cdktf.TerraformResource {
 
@@ -180,7 +180,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant.html google_identity_platform_tenant} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_tenant google_identity_platform_tenant} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

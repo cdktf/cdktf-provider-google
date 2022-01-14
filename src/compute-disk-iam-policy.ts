@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeDiskIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html#name ComputeDiskIamPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy#name ComputeDiskIamPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html#policy_data ComputeDiskIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy#policy_data ComputeDiskIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html#project ComputeDiskIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy#project ComputeDiskIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html#zone ComputeDiskIamPolicy#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy#zone ComputeDiskIamPolicy#zone}
   */
   readonly zone?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html google_compute_disk_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy google_compute_disk_iam_policy}
 */
 export class ComputeDiskIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class ComputeDiskIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy.html google_compute_disk_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy google_compute_disk_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

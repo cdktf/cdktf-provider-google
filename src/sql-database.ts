@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sql_database.html
+// https://www.terraform.io/docs/providers/google/r/sql_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -14,7 +14,7 @@ and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static
 for more details and supported values. Postgres databases only support
 a value of 'UTF8' at creation time.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#charset SqlDatabase#charset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#charset SqlDatabase#charset}
   */
   readonly charset?: string;
   /**
@@ -24,45 +24,45 @@ and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/col
 for more details and supported values. Postgres databases only support
 a value of 'en_US.UTF8' at creation time.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#collation SqlDatabase#collation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#collation SqlDatabase#collation}
   */
   readonly collation?: string;
   /**
   * The name of the Cloud SQL instance. This does not include the project
 ID.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#instance SqlDatabase#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#instance SqlDatabase#instance}
   */
   readonly instance: string;
   /**
   * The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#name SqlDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#name SqlDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#project SqlDatabase#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#project SqlDatabase#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#timeouts SqlDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#timeouts SqlDatabase#timeouts}
   */
   readonly timeouts?: SqlDatabaseTimeouts;
 }
 export interface SqlDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#create SqlDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#create SqlDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#delete SqlDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#delete SqlDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database.html#update SqlDatabase#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#update SqlDatabase#update}
   */
   readonly update?: string;
 }
@@ -174,7 +174,7 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_database.html google_sql_database}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_database google_sql_database}
 */
 export class SqlDatabase extends cdktf.TerraformResource {
 
@@ -188,7 +188,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_database.html google_sql_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_database google_sql_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

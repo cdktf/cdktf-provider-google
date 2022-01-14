@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/composer_environment.html
+// https://www.terraform.io/docs/providers/google/d/composer_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,19 +10,19 @@ export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMeta
   /**
   * Name of the environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html#name DataGoogleComposerEnvironment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment#name DataGoogleComposerEnvironment#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html#project DataGoogleComposerEnvironment#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment#project DataGoogleComposerEnvironment#project}
   */
   readonly project?: string;
   /**
   * The location or Compute Engine region for the environment.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html#region DataGoogleComposerEnvironment#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment#region DataGoogleComposerEnvironment#region}
   */
   readonly region?: string;
 }
@@ -200,7 +200,7 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html google_composer_environment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_environment google_composer_environment}
 */
 export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
@@ -214,7 +214,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/composer_environment.html google_composer_environment} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/composer_environment google_composer_environment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

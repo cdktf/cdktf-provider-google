@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html
+// https://www.terraform.io/docs/providers/google/r/logging_project_exclusion
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,35 +10,35 @@ export interface LoggingProjectExclusionConfig extends cdktf.TerraformMetaArgume
   /**
   * A human-readable description.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html#description LoggingProjectExclusion#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#description LoggingProjectExclusion#description}
   */
   readonly description?: string;
   /**
   * Whether this exclusion rule should be disabled or not. This defaults to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html#disabled LoggingProjectExclusion#disabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html#filter LoggingProjectExclusion#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#filter LoggingProjectExclusion#filter}
   */
   readonly filter: string;
   /**
   * The name of the logging exclusion.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html#name LoggingProjectExclusion#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#name LoggingProjectExclusion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html#project LoggingProjectExclusion#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#project LoggingProjectExclusion#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html google_logging_project_exclusion}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion google_logging_project_exclusion}
 */
 export class LoggingProjectExclusion extends cdktf.TerraformResource {
 
@@ -52,7 +52,7 @@ export class LoggingProjectExclusion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion.html google_logging_project_exclusion} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion google_logging_project_exclusion} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

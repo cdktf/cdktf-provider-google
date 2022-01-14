@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html
+// https://www.terraform.io/docs/providers/google/d/compute_backend_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html#name DataGoogleComputeBackendBucket#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket#name DataGoogleComputeBackendBucket#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html#project DataGoogleComputeBackendBucket#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket#project DataGoogleComputeBackendBucket#project}
   */
   readonly project?: string;
 }
@@ -81,7 +81,7 @@ export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComput
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html google_compute_backend_bucket}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket google_compute_backend_bucket}
 */
 export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
 
@@ -95,7 +95,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket.html google_compute_backend_bucket} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket google_compute_backend_bucket} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

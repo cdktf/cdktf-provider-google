@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html
+// https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,48 +10,48 @@ export interface GameServicesGameServerClusterConfig extends cdktf.TerraformMeta
   /**
   * Required. The resource name of the game server cluster
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#cluster_id GameServicesGameServerCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#cluster_id GameServicesGameServerCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
   * Human readable description of the cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#description GameServicesGameServerCluster#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#description GameServicesGameServerCluster#description}
   */
   readonly description?: string;
   /**
   * The labels associated with this game server cluster. Each label is a
 key-value pair.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#labels GameServicesGameServerCluster#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#labels GameServicesGameServerCluster#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Location of the Cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#location GameServicesGameServerCluster#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#location GameServicesGameServerCluster#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#project GameServicesGameServerCluster#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#project GameServicesGameServerCluster#project}
   */
   readonly project?: string;
   /**
   * The realm id of the game server realm.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#realm_id GameServicesGameServerCluster#realm_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#realm_id GameServicesGameServerCluster#realm_id}
   */
   readonly realmId: string;
   /**
   * connection_info block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#connection_info GameServicesGameServerCluster#connection_info}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#connection_info GameServicesGameServerCluster#connection_info}
   */
   readonly connectionInfo: GameServicesGameServerClusterConnectionInfo;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#timeouts GameServicesGameServerCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#timeouts GameServicesGameServerCluster#timeouts}
   */
   readonly timeouts?: GameServicesGameServerClusterTimeouts;
 }
@@ -68,7 +68,7 @@ If project and location are not specified, the project and location of the
 GameServerCluster resource are used to generate the full name of the
 GKE cluster.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#cluster GameServicesGameServerCluster#cluster}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#cluster GameServicesGameServerCluster#cluster}
   */
   readonly cluster: string;
 }
@@ -135,13 +135,13 @@ export interface GameServicesGameServerClusterConnectionInfo {
 instances will be created. The namespace existence will be validated
 during creation.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#namespace GameServicesGameServerCluster#namespace}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#namespace GameServicesGameServerCluster#namespace}
   */
   readonly namespace: string;
   /**
   * gke_cluster_reference block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#gke_cluster_reference GameServicesGameServerCluster#gke_cluster_reference}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#gke_cluster_reference GameServicesGameServerCluster#gke_cluster_reference}
   */
   readonly gkeClusterReference: GameServicesGameServerClusterConnectionInfoGkeClusterReference;
 }
@@ -224,15 +224,15 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
 }
 export interface GameServicesGameServerClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#create GameServicesGameServerCluster#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#create GameServicesGameServerCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#delete GameServicesGameServerCluster#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html#update GameServicesGameServerCluster#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#update GameServicesGameServerCluster#update}
   */
   readonly update?: string;
 }
@@ -344,7 +344,7 @@ export class GameServicesGameServerClusterTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html google_game_services_game_server_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster google_game_services_game_server_cluster}
 */
 export class GameServicesGameServerCluster extends cdktf.TerraformResource {
 
@@ -358,7 +358,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster.html google_game_services_game_server_cluster} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster google_game_services_game_server_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

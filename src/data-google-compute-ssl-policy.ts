@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_ssl_policy.html
+// https://www.terraform.io/docs/providers/google/d/compute_ssl_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,17 +16,17 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy.html#name DataGoogleComputeSslPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy#name DataGoogleComputeSslPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy.html#project DataGoogleComputeSslPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy#project DataGoogleComputeSslPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy.html google_compute_ssl_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy google_compute_ssl_policy}
 */
 export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
 
@@ -40,7 +40,7 @@ export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy.html google_compute_ssl_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_policy google_compute_ssl_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

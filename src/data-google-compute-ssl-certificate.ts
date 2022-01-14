@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate.html
+// https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,17 +19,17 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate.html#name DataGoogleComputeSslCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate#name DataGoogleComputeSslCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate.html#project DataGoogleComputeSslCertificate#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate#project DataGoogleComputeSslCertificate#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate.html google_compute_ssl_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate google_compute_ssl_certificate}
 */
 export class DataGoogleComputeSslCertificate extends cdktf.TerraformDataSource {
 
@@ -43,7 +43,7 @@ export class DataGoogleComputeSslCertificate extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate.html google_compute_ssl_certificate} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_ssl_certificate google_compute_ssl_certificate} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

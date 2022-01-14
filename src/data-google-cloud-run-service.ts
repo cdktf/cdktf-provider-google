@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/cloud_run_service.html
+// https://www.terraform.io/docs/providers/google/d/cloud_run_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleCloudRunServiceConfig extends cdktf.TerraformMetaArgu
   /**
   * The location of the cloud run instance. eg us-central1
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service.html#location DataGoogleCloudRunService#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#location DataGoogleCloudRunService#location}
   */
   readonly location: string;
   /**
@@ -19,11 +19,11 @@ Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service.html#name DataGoogleCloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#name DataGoogleCloudRunService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service.html#project DataGoogleCloudRunService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#project DataGoogleCloudRunService#project}
   */
   readonly project?: string;
 }
@@ -369,7 +369,7 @@ export class DataGoogleCloudRunServiceTraffic extends cdktf.ComplexComputedList 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service.html google_cloud_run_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service google_cloud_run_service}
 */
 export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
 
@@ -383,7 +383,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service.html google_cloud_run_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service google_cloud_run_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

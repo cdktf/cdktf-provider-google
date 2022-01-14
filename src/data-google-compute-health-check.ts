@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_health_check.html
+// https://www.terraform.io/docs/providers/google/d/compute_health_check
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html#name DataGoogleComputeHealthCheck#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_health_check#name DataGoogleComputeHealthCheck#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html#project DataGoogleComputeHealthCheck#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_health_check#project DataGoogleComputeHealthCheck#project}
   */
   readonly project?: string;
 }
@@ -230,7 +230,7 @@ export class DataGoogleComputeHealthCheckTcpHealthCheck extends cdktf.ComplexCom
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html google_compute_health_check}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_health_check google_compute_health_check}
 */
 export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
@@ -244,7 +244,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_health_check.html google_compute_health_check} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_health_check google_compute_health_check} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface TagsTagKeyIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#members TagsTagKeyIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#members TagsTagKeyIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#role TagsTagKeyIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#role TagsTagKeyIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#tag_key TagsTagKeyIamBinding#tag_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#tag_key TagsTagKeyIamBinding#tag_key}
   */
   readonly tagKey: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#condition TagsTagKeyIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#condition TagsTagKeyIamBinding#condition}
   */
   readonly condition?: TagsTagKeyIamBindingCondition;
 }
 export interface TagsTagKeyIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#description TagsTagKeyIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#description TagsTagKeyIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#expression TagsTagKeyIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#expression TagsTagKeyIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html#title TagsTagKeyIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding#title TagsTagKeyIamBinding#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class TagsTagKeyIamBindingConditionOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html google_tags_tag_key_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding google_tags_tag_key_iam_binding}
 */
 export class TagsTagKeyIamBinding extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class TagsTagKeyIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding.html google_tags_tag_key_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_binding google_tags_tag_key_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

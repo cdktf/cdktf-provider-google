@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html
+// https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,25 +11,25 @@ export interface DataGoogleMonitoringMeshIstioServiceConfig extends cdktf.Terraf
   * Identifier for the mesh in which this Istio service is defined.
                         Corresponds to the meshUid metric label in Istio metrics.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html#mesh_uid DataGoogleMonitoringMeshIstioService#mesh_uid}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service#mesh_uid DataGoogleMonitoringMeshIstioService#mesh_uid}
   */
   readonly meshUid: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html#project DataGoogleMonitoringMeshIstioService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service#project DataGoogleMonitoringMeshIstioService#project}
   */
   readonly project?: string;
   /**
   * The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html#service_name DataGoogleMonitoringMeshIstioService#service_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service#service_name DataGoogleMonitoringMeshIstioService#service_name}
   */
   readonly serviceName: string;
   /**
   * The namespace of the Istio service underlying this service.
                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html#service_namespace DataGoogleMonitoringMeshIstioService#service_namespace}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service#service_namespace DataGoogleMonitoringMeshIstioService#service_namespace}
   */
   readonly serviceNamespace: string;
 }
@@ -42,7 +42,7 @@ export class DataGoogleMonitoringMeshIstioServiceTelemetry extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html google_monitoring_mesh_istio_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service google_monitoring_mesh_istio_service}
 */
 export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSource {
 
@@ -56,7 +56,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service.html google_monitoring_mesh_istio_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_mesh_istio_service google_monitoring_mesh_istio_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

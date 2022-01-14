@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/service_account_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceAccountIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#member ServiceAccountIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#member ServiceAccountIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#role ServiceAccountIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#role ServiceAccountIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#service_account_id ServiceAccountIamMember#service_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#service_account_id ServiceAccountIamMember#service_account_id}
   */
   readonly serviceAccountId: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#condition ServiceAccountIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#condition ServiceAccountIamMember#condition}
   */
   readonly condition?: ServiceAccountIamMemberCondition;
 }
 export interface ServiceAccountIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#description ServiceAccountIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#description ServiceAccountIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#expression ServiceAccountIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#expression ServiceAccountIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html#title ServiceAccountIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member#title ServiceAccountIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class ServiceAccountIamMemberConditionOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html google_service_account_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member google_service_account_iam_member}
 */
 export class ServiceAccountIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class ServiceAccountIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member.html google_service_account_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/service_account_iam_member google_service_account_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

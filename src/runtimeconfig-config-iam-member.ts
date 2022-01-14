@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface RuntimeconfigConfigIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#config RuntimeconfigConfigIamMember#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#config RuntimeconfigConfigIamMember#config}
   */
   readonly config: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#member RuntimeconfigConfigIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#member RuntimeconfigConfigIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#project RuntimeconfigConfigIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#project RuntimeconfigConfigIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#role RuntimeconfigConfigIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#role RuntimeconfigConfigIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#condition RuntimeconfigConfigIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#condition RuntimeconfigConfigIamMember#condition}
   */
   readonly condition?: RuntimeconfigConfigIamMemberCondition;
 }
 export interface RuntimeconfigConfigIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#description RuntimeconfigConfigIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#description RuntimeconfigConfigIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#expression RuntimeconfigConfigIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#expression RuntimeconfigConfigIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html#title RuntimeconfigConfigIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#title RuntimeconfigConfigIamMember#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class RuntimeconfigConfigIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html google_runtimeconfig_config_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member google_runtimeconfig_config_iam_member}
 */
 export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member.html google_runtimeconfig_config_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member google_runtimeconfig_config_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

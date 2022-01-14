@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/cloud_run_service.html
+// https://www.terraform.io/docs/providers/google/r/cloud_run_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface CloudRunServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#autogenerate_revision_name CloudRunService#autogenerate_revision_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#autogenerate_revision_name CloudRunService#autogenerate_revision_name}
   */
   readonly autogenerateRevisionName?: boolean | cdktf.IResolvable;
   /**
   * The location of the cloud run instance. eg us-central1
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#location CloudRunService#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#location CloudRunService#location}
   */
   readonly location: string;
   /**
@@ -23,35 +23,35 @@ Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#name CloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#project CloudRunService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#project CloudRunService#project}
   */
   readonly project?: string;
   /**
   * metadata block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#metadata CloudRunService#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#metadata CloudRunService#metadata}
   */
   readonly metadata?: CloudRunServiceMetadata;
   /**
   * template block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#template CloudRunService#template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#template CloudRunService#template}
   */
   readonly template?: CloudRunServiceTemplate;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#timeouts CloudRunService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#timeouts CloudRunService#timeouts}
   */
   readonly timeouts?: CloudRunServiceTimeouts;
   /**
   * traffic block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#traffic CloudRunService#traffic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#traffic CloudRunService#traffic}
   */
   readonly traffic?: CloudRunServiceTraffic[];
 }
@@ -120,7 +120,7 @@ Cloud Run (fully managed) uses the following annotation keys to configure featur
 - 'run.googleapis.com/ingress' sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
   for the Service. For example, '"run.googleapis.com/ingress" = "all"'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#annotations CloudRunService#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#annotations CloudRunService#annotations}
   */
   readonly annotations?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -129,14 +129,14 @@ Cloud Run (fully managed) uses the following annotation keys to configure featur
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#labels CloudRunService#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#labels CloudRunService#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * In Cloud Run the namespace must be equal to either the
 project ID or project number.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#namespace CloudRunService#namespace}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#namespace CloudRunService#namespace}
   */
   readonly namespace?: string;
 }
@@ -258,7 +258,7 @@ info: http://kubernetes.io/docs/user-guide/annotations
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#annotations CloudRunService#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#annotations CloudRunService#annotations}
   */
   readonly annotations?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -267,7 +267,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#labels CloudRunService#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#labels CloudRunService#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -276,14 +276,14 @@ Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#name CloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name?: string;
   /**
   * In Cloud Run the namespace must be equal to either the
 project ID or project number. It will default to the resource's project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#namespace CloudRunService#namespace}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#namespace CloudRunService#namespace}
   */
   readonly namespace?: string;
 }
@@ -422,7 +422,7 @@ export interface CloudRunServiceTemplateSpecContainersEnv {
   /**
   * Name of the environment variable.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#name CloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name?: string;
   /**
@@ -435,7 +435,7 @@ references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#value CloudRunService#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#value CloudRunService#value}
   */
   readonly value?: string;
 }
@@ -457,7 +457,7 @@ export interface CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalOb
 More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#name CloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name: string;
 }
@@ -522,13 +522,13 @@ export interface CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef {
   /**
   * Specify whether the ConfigMap must be defined
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#optional CloudRunService#optional}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#optional CloudRunService#optional}
   */
   readonly optional?: boolean | cdktf.IResolvable;
   /**
   * local_object_reference block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#local_object_reference CloudRunService#local_object_reference}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#local_object_reference CloudRunService#local_object_reference}
   */
   readonly localObjectReference?: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference;
 }
@@ -621,7 +621,7 @@ export interface CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjec
 More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#name CloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name: string;
 }
@@ -686,13 +686,13 @@ export interface CloudRunServiceTemplateSpecContainersEnvFromSecretRef {
   /**
   * Specify whether the Secret must be defined
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#optional CloudRunService#optional}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#optional CloudRunService#optional}
   */
   readonly optional?: boolean | cdktf.IResolvable;
   /**
   * local_object_reference block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#local_object_reference CloudRunService#local_object_reference}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#local_object_reference CloudRunService#local_object_reference}
   */
   readonly localObjectReference?: CloudRunServiceTemplateSpecContainersEnvFromSecretRefLocalObjectReference;
 }
@@ -783,19 +783,19 @@ export interface CloudRunServiceTemplateSpecContainersEnvFrom {
   /**
   * An optional identifier to prepend to each key in the ConfigMap.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#prefix CloudRunService#prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#prefix CloudRunService#prefix}
   */
   readonly prefix?: string;
   /**
   * config_map_ref block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#config_map_ref CloudRunService#config_map_ref}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#config_map_ref CloudRunService#config_map_ref}
   */
   readonly configMapRef?: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef;
   /**
   * secret_ref block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#secret_ref CloudRunService#secret_ref}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#secret_ref CloudRunService#secret_ref}
   */
   readonly secretRef?: CloudRunServiceTemplateSpecContainersEnvFromSecretRef;
 }
@@ -816,19 +816,19 @@ export interface CloudRunServiceTemplateSpecContainersPorts {
   /**
   * Port number.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#container_port CloudRunService#container_port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#container_port CloudRunService#container_port}
   */
   readonly containerPort: number;
   /**
   * Name of the port.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#name CloudRunService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name?: string;
   /**
   * Protocol used on port. Defaults to TCP.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#protocol CloudRunService#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#protocol CloudRunService#protocol}
   */
   readonly protocol?: string;
 }
@@ -851,7 +851,7 @@ export interface CloudRunServiceTemplateSpecContainersResources {
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#limits CloudRunService#limits}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#limits CloudRunService#limits}
   */
   readonly limits?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -861,7 +861,7 @@ explicitly specified, otherwise to an implementation-defined value.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#requests CloudRunService#requests}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#requests CloudRunService#requests}
   */
   readonly requests?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -962,7 +962,7 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#args CloudRunService#args}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#args CloudRunService#args}
   */
   readonly args?: string[];
   /**
@@ -976,7 +976,7 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#command CloudRunService#command}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#command CloudRunService#command}
   */
   readonly command?: string[];
   /**
@@ -984,7 +984,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 in the container registry, such as gcr.io/cloudrun/hello
 More info: https://kubernetes.io/docs/concepts/containers/images
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#image CloudRunService#image}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#image CloudRunService#image}
   */
   readonly image: string;
   /**
@@ -992,31 +992,31 @@ More info: https://kubernetes.io/docs/concepts/containers/images
 If not specified, the container runtime's default will be used, which
 might be configured in the container image.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#working_dir CloudRunService#working_dir}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#working_dir CloudRunService#working_dir}
   */
   readonly workingDir?: string;
   /**
   * env block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#env CloudRunService#env}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#env CloudRunService#env}
   */
   readonly env?: CloudRunServiceTemplateSpecContainersEnv[];
   /**
   * env_from block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#env_from CloudRunService#env_from}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#env_from CloudRunService#env_from}
   */
   readonly envFrom?: CloudRunServiceTemplateSpecContainersEnvFrom[];
   /**
   * ports block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#ports CloudRunService#ports}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#ports CloudRunService#ports}
   */
   readonly ports?: CloudRunServiceTemplateSpecContainersPorts[];
   /**
   * resources block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#resources CloudRunService#resources}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#resources CloudRunService#resources}
   */
   readonly resources?: CloudRunServiceTemplateSpecContainersResources;
 }
@@ -1047,7 +1047,7 @@ requests per container of the Revision. Values are:
 - '1' not-thread-safe. Single concurrency
 - '2-N' thread-safe, max concurrency of N
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#container_concurrency CloudRunService#container_concurrency}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#container_concurrency CloudRunService#container_concurrency}
   */
   readonly containerConcurrency?: number;
   /**
@@ -1056,19 +1056,19 @@ service. The service account represents the identity of the running revision,
 and determines what permissions the revision has. If not provided, the revision
 will use the project's default service account.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#service_account_name CloudRunService#service_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#service_account_name CloudRunService#service_account_name}
   */
   readonly serviceAccountName?: string;
   /**
   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#timeout_seconds CloudRunService#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#timeout_seconds CloudRunService#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
   /**
   * containers block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#containers CloudRunService#containers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#containers CloudRunService#containers}
   */
   readonly containers?: CloudRunServiceTemplateSpecContainers[];
 }
@@ -1206,13 +1206,13 @@ export interface CloudRunServiceTemplate {
   /**
   * metadata block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#metadata CloudRunService#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#metadata CloudRunService#metadata}
   */
   readonly metadata?: CloudRunServiceTemplateMetadata;
   /**
   * spec block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#spec CloudRunService#spec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#spec CloudRunService#spec}
   */
   readonly spec?: CloudRunServiceTemplateSpec;
 }
@@ -1301,15 +1301,15 @@ export class CloudRunServiceTemplateOutputReference extends cdktf.ComplexObject 
 }
 export interface CloudRunServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#create CloudRunService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#create CloudRunService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#delete CloudRunService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#delete CloudRunService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#update CloudRunService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#update CloudRunService#update}
   */
   readonly update?: string;
 }
@@ -1426,19 +1426,19 @@ Revision of the Configuration should be used for this traffic target. When
 provided LatestRevision must be true if RevisionName is empty; it must be
 false when RevisionName is non-empty.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#latest_revision CloudRunService#latest_revision}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#latest_revision CloudRunService#latest_revision}
   */
   readonly latestRevision?: boolean | cdktf.IResolvable;
   /**
   * Percent specifies percent of the traffic to this Revision or Configuration.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#percent CloudRunService#percent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#percent CloudRunService#percent}
   */
   readonly percent: number;
   /**
   * RevisionName of a specific revision to which to send this portion of traffic.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html#revision_name CloudRunService#revision_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#revision_name CloudRunService#revision_name}
   */
   readonly revisionName?: string;
 }
@@ -1457,7 +1457,7 @@ export function cloudRunServiceTrafficToTerraform(struct?: CloudRunServiceTraffi
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html google_cloud_run_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service google_cloud_run_service}
 */
 export class CloudRunService extends cdktf.TerraformResource {
 
@@ -1471,7 +1471,7 @@ export class CloudRunService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service.html google_cloud_run_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service google_cloud_run_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html
+// https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,11 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleKmsCryptoKeyVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html#crypto_key DataGoogleKmsCryptoKeyVersion#crypto_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version#crypto_key DataGoogleKmsCryptoKeyVersion#crypto_key}
   */
   readonly cryptoKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html#version DataGoogleKmsCryptoKeyVersion#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version#version DataGoogleKmsCryptoKeyVersion#version}
   */
   readonly version?: number;
 }
@@ -30,7 +30,7 @@ export class DataGoogleKmsCryptoKeyVersionPublicKey extends cdktf.ComplexCompute
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html google_kms_crypto_key_version}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version google_kms_crypto_key_version}
 */
 export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
 
@@ -44,7 +44,7 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version.html google_kms_crypto_key_version} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/kms_crypto_key_version google_kms_crypto_key_version} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

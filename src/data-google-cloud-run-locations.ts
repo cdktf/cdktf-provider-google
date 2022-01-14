@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html
+// https://www.terraform.io/docs/providers/google/d/cloud_run_locations
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudRunLocationsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html#project DataGoogleCloudRunLocations#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations#project DataGoogleCloudRunLocations#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html google_cloud_run_locations}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations google_cloud_run_locations}
 */
 export class DataGoogleCloudRunLocations extends cdktf.TerraformDataSource {
 
@@ -28,7 +28,7 @@ export class DataGoogleCloudRunLocations extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations.html google_cloud_run_locations} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloud_run_locations google_cloud_run_locations} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

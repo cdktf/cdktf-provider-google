@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html
+// https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,40 +10,40 @@ export interface ComputeDiskResourcePolicyAttachmentConfig extends cdktf.Terrafo
   /**
   * The name of the disk in which the resource policies are attached to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#disk ComputeDiskResourcePolicyAttachment#disk}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#disk ComputeDiskResourcePolicyAttachment#disk}
   */
   readonly disk: string;
   /**
   * The resource policy to be attached to the disk for scheduling snapshot
 creation. Do not specify the self link.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#name ComputeDiskResourcePolicyAttachment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#name ComputeDiskResourcePolicyAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#project ComputeDiskResourcePolicyAttachment#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#project ComputeDiskResourcePolicyAttachment#project}
   */
   readonly project?: string;
   /**
   * A reference to the zone where the disk resides.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#zone ComputeDiskResourcePolicyAttachment#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#zone ComputeDiskResourcePolicyAttachment#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#timeouts ComputeDiskResourcePolicyAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#timeouts ComputeDiskResourcePolicyAttachment#timeouts}
   */
   readonly timeouts?: ComputeDiskResourcePolicyAttachmentTimeouts;
 }
 export interface ComputeDiskResourcePolicyAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#create ComputeDiskResourcePolicyAttachment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#create ComputeDiskResourcePolicyAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html#delete ComputeDiskResourcePolicyAttachment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment#delete ComputeDiskResourcePolicyAttachment#delete}
   */
   readonly delete?: string;
 }
@@ -132,7 +132,7 @@ export class ComputeDiskResourcePolicyAttachmentTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html google_compute_disk_resource_policy_attachment}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment google_compute_disk_resource_policy_attachment}
 */
 export class ComputeDiskResourcePolicyAttachment extends cdktf.TerraformResource {
 
@@ -146,7 +146,7 @@ export class ComputeDiskResourcePolicyAttachment extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment.html google_compute_disk_resource_policy_attachment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_disk_resource_policy_attachment google_compute_disk_resource_policy_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

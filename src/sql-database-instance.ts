@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sql_database_instance.html
+// https://www.terraform.io/docs/providers/google/r/sql_database_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,73 +10,73 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   /**
   * The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#database_version SqlDatabaseInstance#database_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#database_version SqlDatabaseInstance#database_version}
   */
   readonly databaseVersion?: string;
   /**
   * Used to block Terraform from deleting a SQL Instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#deletion_protection SqlDatabaseInstance#deletion_protection}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#deletion_protection SqlDatabaseInstance#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance that will act as the master in the replication setup. Note, this requires the master to have binary_log_enabled set, as well as existing backups.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#master_instance_name SqlDatabaseInstance#master_instance_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#master_instance_name SqlDatabaseInstance#master_instance_name}
   */
   readonly masterInstanceName?: string;
   /**
   * The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#name SqlDatabaseInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#name SqlDatabaseInstance#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#project SqlDatabaseInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#project SqlDatabaseInstance#project}
   */
   readonly project?: string;
   /**
   * The region the instance will sit in. Note, Cloud SQL is not available in all regions. A valid region must be provided to use this resource. If a region is not provided in the resource definition, the provider region will be used instead, but this will be an apply-time error for instances if the provider region is not supported with Cloud SQL. If you choose not to provide the region argument for this resource, make sure you understand this.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#region SqlDatabaseInstance#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#region SqlDatabaseInstance#region}
   */
   readonly region?: string;
   /**
   * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#root_password SqlDatabaseInstance#root_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#root_password SqlDatabaseInstance#root_password}
   */
   readonly rootPassword?: string;
   /**
   * clone block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#clone SqlDatabaseInstance#clone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#clone SqlDatabaseInstance#clone}
   */
   readonly clone?: SqlDatabaseInstanceClone;
   /**
   * replica_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#replica_configuration SqlDatabaseInstance#replica_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#replica_configuration SqlDatabaseInstance#replica_configuration}
   */
   readonly replicaConfiguration?: SqlDatabaseInstanceReplicaConfiguration;
   /**
   * restore_backup_context block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#restore_backup_context SqlDatabaseInstance#restore_backup_context}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#restore_backup_context SqlDatabaseInstance#restore_backup_context}
   */
   readonly restoreBackupContext?: SqlDatabaseInstanceRestoreBackupContext;
   /**
   * settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#settings SqlDatabaseInstance#settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#settings SqlDatabaseInstance#settings}
   */
   readonly settings?: SqlDatabaseInstanceSettings;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#timeouts SqlDatabaseInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#timeouts SqlDatabaseInstance#timeouts}
   */
   readonly timeouts?: SqlDatabaseInstanceTimeouts;
 }
@@ -128,13 +128,13 @@ export interface SqlDatabaseInstanceClone {
   /**
   * The timestamp of the point in time that should be restored.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#point_in_time SqlDatabaseInstance#point_in_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#point_in_time SqlDatabaseInstance#point_in_time}
   */
   readonly pointInTime?: string;
   /**
   * The name of the instance from which the point in time should be restored.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#source_instance_name SqlDatabaseInstance#source_instance_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#source_instance_name SqlDatabaseInstance#source_instance_name}
   */
   readonly sourceInstanceName: string;
 }
@@ -222,67 +222,67 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   /**
   * PEM representation of the trusted CA's x509 certificate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#ca_certificate SqlDatabaseInstance#ca_certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#ca_certificate SqlDatabaseInstance#ca_certificate}
   */
   readonly caCertificate?: string;
   /**
   * PEM representation of the replica's x509 certificate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#client_certificate SqlDatabaseInstance#client_certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#client_certificate SqlDatabaseInstance#client_certificate}
   */
   readonly clientCertificate?: string;
   /**
   * PEM representation of the replica's private key. The corresponding public key in encoded in the client_certificate.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#client_key SqlDatabaseInstance#client_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#client_key SqlDatabaseInstance#client_key}
   */
   readonly clientKey?: string;
   /**
   * The number of seconds between connect retries.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#connect_retry_interval SqlDatabaseInstance#connect_retry_interval}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#connect_retry_interval SqlDatabaseInstance#connect_retry_interval}
   */
   readonly connectRetryInterval?: number;
   /**
   * Path to a SQL file in Google Cloud Storage from which replica instances are created. Format is gs://bucket/filename.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#dump_file_path SqlDatabaseInstance#dump_file_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#dump_file_path SqlDatabaseInstance#dump_file_path}
   */
   readonly dumpFilePath?: string;
   /**
   * Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#failover_target SqlDatabaseInstance#failover_target}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#failover_target SqlDatabaseInstance#failover_target}
   */
   readonly failoverTarget?: boolean | cdktf.IResolvable;
   /**
   * Time in ms between replication heartbeats.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#master_heartbeat_period SqlDatabaseInstance#master_heartbeat_period}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#master_heartbeat_period SqlDatabaseInstance#master_heartbeat_period}
   */
   readonly masterHeartbeatPeriod?: number;
   /**
   * Password for the replication connection.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#password SqlDatabaseInstance#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#password SqlDatabaseInstance#password}
   */
   readonly password?: string;
   /**
   * Permissible ciphers for use in SSL encryption.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#ssl_cipher SqlDatabaseInstance#ssl_cipher}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#ssl_cipher SqlDatabaseInstance#ssl_cipher}
   */
   readonly sslCipher?: string;
   /**
   * Username for replication connection.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#username SqlDatabaseInstance#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#username SqlDatabaseInstance#username}
   */
   readonly username?: string;
   /**
   * True if the master's common name value is checked during the SSL handshake.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#verify_server_certificate SqlDatabaseInstance#verify_server_certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#verify_server_certificate SqlDatabaseInstance#verify_server_certificate}
   */
   readonly verifyServerCertificate?: boolean | cdktf.IResolvable;
 }
@@ -580,19 +580,19 @@ export interface SqlDatabaseInstanceRestoreBackupContext {
   /**
   * The ID of the backup run to restore from.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#backup_run_id SqlDatabaseInstance#backup_run_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#backup_run_id SqlDatabaseInstance#backup_run_id}
   */
   readonly backupRunId: number;
   /**
   * The ID of the instance that the backup was taken from.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#instance_id SqlDatabaseInstance#instance_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#instance_id SqlDatabaseInstance#instance_id}
   */
   readonly instanceId?: string;
   /**
   * The full project ID of the source instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#project SqlDatabaseInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#project SqlDatabaseInstance#project}
   */
   readonly project?: string;
 }
@@ -703,13 +703,13 @@ export interface SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSe
   /**
   * Number of backups to retain.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#retained_backups SqlDatabaseInstance#retained_backups}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#retained_backups SqlDatabaseInstance#retained_backups}
   */
   readonly retainedBackups: number;
   /**
   * The unit that 'retainedBackups' represents. Defaults to COUNT
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#retention_unit SqlDatabaseInstance#retention_unit}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#retention_unit SqlDatabaseInstance#retention_unit}
   */
   readonly retentionUnit?: string;
 }
@@ -797,43 +797,43 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
   /**
   * True if binary logging is enabled. If settings.backup_configuration.enabled is false, this must be as well. Cannot be used with Postgres.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#binary_log_enabled SqlDatabaseInstance#binary_log_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#binary_log_enabled SqlDatabaseInstance#binary_log_enabled}
   */
   readonly binaryLogEnabled?: boolean | cdktf.IResolvable;
   /**
   * True if backup configuration is enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#enabled SqlDatabaseInstance#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#enabled SqlDatabaseInstance#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Location of the backup configuration.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#location SqlDatabaseInstance#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#location SqlDatabaseInstance#location}
   */
   readonly location?: string;
   /**
   * True if Point-in-time recovery is enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#point_in_time_recovery_enabled SqlDatabaseInstance#point_in_time_recovery_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#point_in_time_recovery_enabled SqlDatabaseInstance#point_in_time_recovery_enabled}
   */
   readonly pointInTimeRecoveryEnabled?: boolean | cdktf.IResolvable;
   /**
   * HH:MM format time indicating when backup configuration starts.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#start_time SqlDatabaseInstance#start_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#start_time SqlDatabaseInstance#start_time}
   */
   readonly startTime?: string;
   /**
   * The number of days of transaction logs we retain for point in time restore, from 1-7.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#transaction_log_retention_days SqlDatabaseInstance#transaction_log_retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#transaction_log_retention_days SqlDatabaseInstance#transaction_log_retention_days}
   */
   readonly transactionLogRetentionDays?: number;
   /**
   * backup_retention_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#backup_retention_settings SqlDatabaseInstance#backup_retention_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#backup_retention_settings SqlDatabaseInstance#backup_retention_settings}
   */
   readonly backupRetentionSettings?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings;
 }
@@ -1039,13 +1039,13 @@ export interface SqlDatabaseInstanceSettingsDatabaseFlags {
   /**
   * Name of the flag.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#name SqlDatabaseInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#name SqlDatabaseInstance#name}
   */
   readonly name: string;
   /**
   * Value of the flag.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#value SqlDatabaseInstance#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#value SqlDatabaseInstance#value}
   */
   readonly value: string;
 }
@@ -1065,25 +1065,25 @@ export interface SqlDatabaseInstanceSettingsInsightsConfig {
   /**
   * True if Query Insights feature is enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#query_insights_enabled SqlDatabaseInstance#query_insights_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#query_insights_enabled SqlDatabaseInstance#query_insights_enabled}
   */
   readonly queryInsightsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#query_string_length SqlDatabaseInstance#query_string_length}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#query_string_length SqlDatabaseInstance#query_string_length}
   */
   readonly queryStringLength?: number;
   /**
   * True if Query Insights will record application tags from query when enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#record_application_tags SqlDatabaseInstance#record_application_tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#record_application_tags SqlDatabaseInstance#record_application_tags}
   */
   readonly recordApplicationTags?: boolean | cdktf.IResolvable;
   /**
   * True if Query Insights will record client address when enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#record_client_address SqlDatabaseInstance#record_client_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#record_client_address SqlDatabaseInstance#record_client_address}
   */
   readonly recordClientAddress?: boolean | cdktf.IResolvable;
 }
@@ -1218,15 +1218,15 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
 }
 export interface SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#expiration_time SqlDatabaseInstance#expiration_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#expiration_time SqlDatabaseInstance#expiration_time}
   */
   readonly expirationTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#name SqlDatabaseInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#name SqlDatabaseInstance#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#value SqlDatabaseInstance#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#value SqlDatabaseInstance#value}
   */
   readonly value: string;
 }
@@ -1247,23 +1247,23 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   /**
   * Whether this Cloud SQL instance should be assigned a public IPV4 address. At least ipv4_enabled must be enabled or a private_network must be configured.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#ipv4_enabled SqlDatabaseInstance#ipv4_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#ipv4_enabled SqlDatabaseInstance#ipv4_enabled}
   */
   readonly ipv4Enabled?: boolean | cdktf.IResolvable;
   /**
   * The VPC network from which the Cloud SQL instance is accessible for private IP. For example, projects/myProject/global/networks/default. Specifying a network enables private IP. At least ipv4_enabled must be enabled or a private_network must be configured. This setting can be updated, but it cannot be removed after it is set.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#private_network SqlDatabaseInstance#private_network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#private_network SqlDatabaseInstance#private_network}
   */
   readonly privateNetwork?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#require_ssl SqlDatabaseInstance#require_ssl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#require_ssl SqlDatabaseInstance#require_ssl}
   */
   readonly requireSsl?: boolean | cdktf.IResolvable;
   /**
   * authorized_networks block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#authorized_networks SqlDatabaseInstance#authorized_networks}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#authorized_networks SqlDatabaseInstance#authorized_networks}
   */
   readonly authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[];
 }
@@ -1401,13 +1401,13 @@ export interface SqlDatabaseInstanceSettingsLocationPreference {
   /**
   * A Google App Engine application whose zone to remain in. Must be in the same region as this instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#follow_gae_application SqlDatabaseInstance#follow_gae_application}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#follow_gae_application SqlDatabaseInstance#follow_gae_application}
   */
   readonly followGaeApplication?: string;
   /**
   * The preferred compute engine zone.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#zone SqlDatabaseInstance#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#zone SqlDatabaseInstance#zone}
   */
   readonly zone?: string;
 }
@@ -1498,19 +1498,19 @@ export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
   /**
   * Day of week (1-7), starting on Monday
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#day SqlDatabaseInstance#day}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#day SqlDatabaseInstance#day}
   */
   readonly day?: number;
   /**
   * Hour of day (0-23), ignored if day not set
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#hour SqlDatabaseInstance#hour}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#hour SqlDatabaseInstance#hour}
   */
   readonly hour?: number;
   /**
   * Receive updates earlier (canary) or later (stable)
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#update_track SqlDatabaseInstance#update_track}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#update_track SqlDatabaseInstance#update_track}
   */
   readonly updateTrack?: string;
 }
@@ -1624,13 +1624,13 @@ export interface SqlDatabaseInstanceSettings {
   /**
   * This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#activation_policy SqlDatabaseInstance#activation_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#activation_policy SqlDatabaseInstance#activation_policy}
   */
   readonly activationPolicy?: string;
   /**
   * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see https://cloud.google.com/sql/docs/mysql/deprecation-notice for information on how to upgrade to Second Generation instances. A list of Google App Engine project names that are allowed to access this instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#authorized_gae_applications SqlDatabaseInstance#authorized_gae_applications}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#authorized_gae_applications SqlDatabaseInstance#authorized_gae_applications}
   */
   readonly authorizedGaeApplications?: string[];
   /**
@@ -1639,103 +1639,103 @@ export interface SqlDatabaseInstanceSettings {
 settings.backup_configuration.enabled and
 settings.backup_configuration.binary_log_enabled are both set to true.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#availability_type SqlDatabaseInstance#availability_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#availability_type SqlDatabaseInstance#availability_type}
   */
   readonly availabilityType?: string;
   /**
   * The name of server instance collation.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#collation SqlDatabaseInstance#collation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#collation SqlDatabaseInstance#collation}
   */
   readonly collation?: string;
   /**
   * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see here for information on how to upgrade to Second Generation instances. Specific to read instances, indicates when crash-safe replication flags are enabled.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#crash_safe_replication SqlDatabaseInstance#crash_safe_replication}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#crash_safe_replication SqlDatabaseInstance#crash_safe_replication}
   */
   readonly crashSafeReplication?: boolean | cdktf.IResolvable;
   /**
   * Configuration to increase storage size automatically.  Note that future terraform apply calls will attempt to resize the disk to the value specified in disk_size - if this is set, do not set disk_size.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_autoresize SqlDatabaseInstance#disk_autoresize}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_autoresize SqlDatabaseInstance#disk_autoresize}
   */
   readonly diskAutoresize?: boolean | cdktf.IResolvable;
   /**
   * The maximum size, in GB, to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_autoresize_limit SqlDatabaseInstance#disk_autoresize_limit}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_autoresize_limit SqlDatabaseInstance#disk_autoresize_limit}
   */
   readonly diskAutoresizeLimit?: number;
   /**
   * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_size SqlDatabaseInstance#disk_size}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_size SqlDatabaseInstance#disk_size}
   */
   readonly diskSize?: number;
   /**
   * The type of data disk: PD_SSD or PD_HDD.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#disk_type SqlDatabaseInstance#disk_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_type SqlDatabaseInstance#disk_type}
   */
   readonly diskType?: string;
   /**
   * Pricing plan for this instance, can only be PER_USE.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#pricing_plan SqlDatabaseInstance#pricing_plan}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#pricing_plan SqlDatabaseInstance#pricing_plan}
   */
   readonly pricingPlan?: string;
   /**
   * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see here for information on how to upgrade to Second Generation instances. Replication type for this instance, can be one of ASYNCHRONOUS or SYNCHRONOUS.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#replication_type SqlDatabaseInstance#replication_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#replication_type SqlDatabaseInstance#replication_type}
   */
   readonly replicationType?: string;
   /**
   * The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#tier SqlDatabaseInstance#tier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#tier SqlDatabaseInstance#tier}
   */
   readonly tier: string;
   /**
   * A set of key/value user label pairs to assign to the instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#user_labels SqlDatabaseInstance#user_labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#user_labels SqlDatabaseInstance#user_labels}
   */
   readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * backup_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#backup_configuration SqlDatabaseInstance#backup_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#backup_configuration SqlDatabaseInstance#backup_configuration}
   */
   readonly backupConfiguration?: SqlDatabaseInstanceSettingsBackupConfiguration;
   /**
   * database_flags block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#database_flags SqlDatabaseInstance#database_flags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#database_flags SqlDatabaseInstance#database_flags}
   */
   readonly databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[];
   /**
   * insights_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#insights_config SqlDatabaseInstance#insights_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#insights_config SqlDatabaseInstance#insights_config}
   */
   readonly insightsConfig?: SqlDatabaseInstanceSettingsInsightsConfig;
   /**
   * ip_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#ip_configuration SqlDatabaseInstance#ip_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#ip_configuration SqlDatabaseInstance#ip_configuration}
   */
   readonly ipConfiguration?: SqlDatabaseInstanceSettingsIpConfiguration;
   /**
   * location_preference block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#location_preference SqlDatabaseInstance#location_preference}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#location_preference SqlDatabaseInstance#location_preference}
   */
   readonly locationPreference?: SqlDatabaseInstanceSettingsLocationPreference;
   /**
   * maintenance_window block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#maintenance_window SqlDatabaseInstance#maintenance_window}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#maintenance_window SqlDatabaseInstance#maintenance_window}
   */
   readonly maintenanceWindow?: SqlDatabaseInstanceSettingsMaintenanceWindow;
 }
@@ -2214,15 +2214,15 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
 }
 export interface SqlDatabaseInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#create SqlDatabaseInstance#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#create SqlDatabaseInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#delete SqlDatabaseInstance#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#delete SqlDatabaseInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html#update SqlDatabaseInstance#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#update SqlDatabaseInstance#update}
   */
   readonly update?: string;
 }
@@ -2334,7 +2334,7 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html google_sql_database_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance google_sql_database_instance}
 */
 export class SqlDatabaseInstance extends cdktf.TerraformResource {
 
@@ -2348,7 +2348,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance.html google_sql_database_instance} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance google_sql_database_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

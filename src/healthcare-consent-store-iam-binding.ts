@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareConsentStoreIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#consent_store_id HealthcareConsentStoreIamBinding#consent_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#consent_store_id HealthcareConsentStoreIamBinding#consent_store_id}
   */
   readonly consentStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#dataset HealthcareConsentStoreIamBinding#dataset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#dataset HealthcareConsentStoreIamBinding#dataset}
   */
   readonly dataset: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#members HealthcareConsentStoreIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#members HealthcareConsentStoreIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#role HealthcareConsentStoreIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#role HealthcareConsentStoreIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#condition HealthcareConsentStoreIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#condition HealthcareConsentStoreIamBinding#condition}
   */
   readonly condition?: HealthcareConsentStoreIamBindingCondition;
 }
 export interface HealthcareConsentStoreIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#description HealthcareConsentStoreIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#description HealthcareConsentStoreIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#expression HealthcareConsentStoreIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#expression HealthcareConsentStoreIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html#title HealthcareConsentStoreIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding#title HealthcareConsentStoreIamBinding#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class HealthcareConsentStoreIamBindingConditionOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html google_healthcare_consent_store_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding google_healthcare_consent_store_iam_binding}
 */
 export class HealthcareConsentStoreIamBinding extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class HealthcareConsentStoreIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding.html google_healthcare_consent_store_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_binding google_healthcare_consent_store_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

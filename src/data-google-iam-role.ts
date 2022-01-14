@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/iam_role.html
+// https://www.terraform.io/docs/providers/google/d/iam_role
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleIamRoleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_role.html#name DataGoogleIamRole#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_role#name DataGoogleIamRole#name}
   */
   readonly name: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_role.html google_iam_role}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_role google_iam_role}
 */
 export class DataGoogleIamRole extends cdktf.TerraformDataSource {
 
@@ -28,7 +28,7 @@ export class DataGoogleIamRole extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_role.html google_iam_role} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/iam_role google_iam_role} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface IapAppEngineServiceIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html#app_id IapAppEngineServiceIamPolicy#app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#app_id IapAppEngineServiceIamPolicy#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html#policy_data IapAppEngineServiceIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#policy_data IapAppEngineServiceIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html#project IapAppEngineServiceIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#project IapAppEngineServiceIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html#service IapAppEngineServiceIamPolicy#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#service IapAppEngineServiceIamPolicy#service}
   */
   readonly service: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html google_iap_app_engine_service_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy google_iap_app_engine_service_iam_policy}
 */
 export class IapAppEngineServiceIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class IapAppEngineServiceIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy.html google_iap_app_engine_service_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy google_iap_app_engine_service_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

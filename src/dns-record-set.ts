@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dns_record_set.html
+// https://www.terraform.io/docs/providers/google/r/dns_record_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,43 +10,43 @@ export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the zone in which this record set will reside.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#managed_zone DnsRecordSet#managed_zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#managed_zone DnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
   * The DNS name this record set will apply to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#name DnsRecordSet#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#name DnsRecordSet#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#project DnsRecordSet#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#project DnsRecordSet#project}
   */
   readonly project?: string;
   /**
   * The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters").
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#rrdatas DnsRecordSet#rrdatas}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#rrdatas DnsRecordSet#rrdatas}
   */
   readonly rrdatas: string[];
   /**
   * The time-to-live of this record set (seconds).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#ttl DnsRecordSet#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#ttl DnsRecordSet#ttl}
   */
   readonly ttl?: number;
   /**
   * The DNS record set type.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html#type DnsRecordSet#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#type DnsRecordSet#type}
   */
   readonly type: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html google_dns_record_set}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_record_set google_dns_record_set}
 */
 export class DnsRecordSet extends cdktf.TerraformResource {
 
@@ -60,7 +60,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dns_record_set.html google_dns_record_set} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dns_record_set google_dns_record_set} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface SourcerepoRepositoryIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#member SourcerepoRepositoryIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#member SourcerepoRepositoryIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#project SourcerepoRepositoryIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#project SourcerepoRepositoryIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#repository SourcerepoRepositoryIamMember#repository}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#repository SourcerepoRepositoryIamMember#repository}
   */
   readonly repository: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#role SourcerepoRepositoryIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#role SourcerepoRepositoryIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#condition SourcerepoRepositoryIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#condition SourcerepoRepositoryIamMember#condition}
   */
   readonly condition?: SourcerepoRepositoryIamMemberCondition;
 }
 export interface SourcerepoRepositoryIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#description SourcerepoRepositoryIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#description SourcerepoRepositoryIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#expression SourcerepoRepositoryIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#expression SourcerepoRepositoryIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html#title SourcerepoRepositoryIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member#title SourcerepoRepositoryIamMember#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class SourcerepoRepositoryIamMemberConditionOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html google_sourcerepo_repository_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member google_sourcerepo_repository_iam_member}
 */
 export class SourcerepoRepositoryIamMember extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class SourcerepoRepositoryIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member.html google_sourcerepo_repository_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member google_sourcerepo_repository_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

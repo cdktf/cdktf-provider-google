@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html
+// https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,35 +10,35 @@ export interface ProjectUsageExportBucketConfig extends cdktf.TerraformMetaArgum
   /**
   * The bucket to store reports in.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#bucket_name ProjectUsageExportBucket#bucket_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
   */
   readonly bucketName: string;
   /**
   * A prefix for the reports, for instance, the project name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#prefix ProjectUsageExportBucket#prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
   */
   readonly prefix?: string;
   /**
   * The project to set the export bucket on. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#project ProjectUsageExportBucket#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#project ProjectUsageExportBucket#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#timeouts ProjectUsageExportBucket#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
   */
   readonly timeouts?: ProjectUsageExportBucketTimeouts;
 }
 export interface ProjectUsageExportBucketTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#create ProjectUsageExportBucket#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#create ProjectUsageExportBucket#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html#delete ProjectUsageExportBucket#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}
   */
   readonly delete?: string;
 }
@@ -127,7 +127,7 @@ export class ProjectUsageExportBucketTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html google_project_usage_export_bucket}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket google_project_usage_export_bucket}
 */
 export class ProjectUsageExportBucket extends cdktf.TerraformResource {
 
@@ -141,7 +141,7 @@ export class ProjectUsageExportBucket extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket.html google_project_usage_export_bucket} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket google_project_usage_export_bucket} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

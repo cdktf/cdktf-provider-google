@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html
+// https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface NetworkServicesEdgeCacheOriginConfig extends cdktf.TerraformMet
   /**
   * A human-readable description of the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#description NetworkServicesEdgeCacheOrigin#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#description NetworkServicesEdgeCacheOrigin#description}
   */
   readonly description?: string;
   /**
@@ -20,13 +20,13 @@ After maxAttempts is reached, the configured failoverOrigin will be used to fulf
 The value of timeout.maxAttemptsTimeout dictates the timeout across all origins.
 A reference to a Topic resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#failover_origin NetworkServicesEdgeCacheOrigin#failover_origin}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#failover_origin NetworkServicesEdgeCacheOrigin#failover_origin}
   */
   readonly failoverOrigin?: string;
   /**
   * Set of label tags associated with the EdgeCache resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#labels NetworkServicesEdgeCacheOrigin#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#labels NetworkServicesEdgeCacheOrigin#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -43,7 +43,7 @@ If no origin returns a valid response, an HTTP 503 will be returned to the clien
 
 Defaults to 1. Must be a value greater than 0 and less than 4.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#max_attempts NetworkServicesEdgeCacheOrigin#max_attempts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#max_attempts NetworkServicesEdgeCacheOrigin#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
@@ -51,7 +51,7 @@ Defaults to 1. Must be a value greater than 0 and less than 4.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#name NetworkServicesEdgeCacheOrigin#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#name NetworkServicesEdgeCacheOrigin#name}
   */
   readonly name: string;
   /**
@@ -62,18 +62,18 @@ This address will be used as the origin for cache requests - e.g. FQDN: media-ba
 When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Google public DNS) and IP addresses must be publicly routable.
 If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#origin_address NetworkServicesEdgeCacheOrigin#origin_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#origin_address NetworkServicesEdgeCacheOrigin#origin_address}
   */
   readonly originAddress: string;
   /**
   * The port to connect to the origin on.
 Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#port NetworkServicesEdgeCacheOrigin#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#port NetworkServicesEdgeCacheOrigin#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#project NetworkServicesEdgeCacheOrigin#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#project NetworkServicesEdgeCacheOrigin#project}
   */
   readonly project?: string;
   /**
@@ -81,7 +81,7 @@ Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
 
 When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#protocol NetworkServicesEdgeCacheOrigin#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#protocol NetworkServicesEdgeCacheOrigin#protocol}
   */
   readonly protocol?: string;
   /**
@@ -103,19 +103,19 @@ Valid values are:
 - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
 - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet. Possible values: ["CONNECT_FAILURE", "HTTP_5XX", "GATEWAY_ERROR", "RETRIABLE_4XX", "NOT_FOUND"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#retry_conditions NetworkServicesEdgeCacheOrigin#retry_conditions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#retry_conditions NetworkServicesEdgeCacheOrigin#retry_conditions}
   */
   readonly retryConditions?: string[];
   /**
   * timeout block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#timeout NetworkServicesEdgeCacheOrigin#timeout}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#timeout NetworkServicesEdgeCacheOrigin#timeout}
   */
   readonly timeout?: NetworkServicesEdgeCacheOriginTimeout;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#timeouts NetworkServicesEdgeCacheOrigin#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#timeouts NetworkServicesEdgeCacheOrigin#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheOriginTimeouts;
 }
@@ -125,7 +125,7 @@ export interface NetworkServicesEdgeCacheOriginTimeout {
 
 Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#connect_timeout NetworkServicesEdgeCacheOrigin#connect_timeout}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#connect_timeout NetworkServicesEdgeCacheOrigin#connect_timeout}
   */
   readonly connectTimeout?: string;
   /**
@@ -133,7 +133,7 @@ Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
 
 Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#max_attempts_timeout NetworkServicesEdgeCacheOrigin#max_attempts_timeout}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#max_attempts_timeout NetworkServicesEdgeCacheOrigin#max_attempts_timeout}
   */
   readonly maxAttemptsTimeout?: string;
   /**
@@ -141,7 +141,7 @@ Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
 
 Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#response_timeout NetworkServicesEdgeCacheOrigin#response_timeout}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#response_timeout NetworkServicesEdgeCacheOrigin#response_timeout}
   */
   readonly responseTimeout?: string;
 }
@@ -253,15 +253,15 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
 }
 export interface NetworkServicesEdgeCacheOriginTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#create NetworkServicesEdgeCacheOrigin#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#create NetworkServicesEdgeCacheOrigin#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#delete NetworkServicesEdgeCacheOrigin#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#delete NetworkServicesEdgeCacheOrigin#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html#update NetworkServicesEdgeCacheOrigin#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#update NetworkServicesEdgeCacheOrigin#update}
   */
   readonly update?: string;
 }
@@ -373,7 +373,7 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html google_network_services_edge_cache_origin}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin google_network_services_edge_cache_origin}
 */
 export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
 
@@ -387,7 +387,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin.html google_network_services_edge_cache_origin} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin google_network_services_edge_cache_origin} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

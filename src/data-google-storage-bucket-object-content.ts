@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html
+// https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,19 +10,19 @@ export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.Terraf
   /**
   * The name of the containing bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html#bucket DataGoogleStorageBucketObjectContent#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content#bucket DataGoogleStorageBucketObjectContent#bucket}
   */
   readonly bucket: string;
   /**
   * Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html#content DataGoogleStorageBucketObjectContent#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content#content DataGoogleStorageBucketObjectContent#content}
   */
   readonly content?: string;
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html#name DataGoogleStorageBucketObjectContent#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content#name DataGoogleStorageBucketObjectContent#name}
   */
   readonly name: string;
 }
@@ -40,7 +40,7 @@ export class DataGoogleStorageBucketObjectContentCustomerEncryption extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html google_storage_bucket_object_content}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content google_storage_bucket_object_content}
 */
 export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSource {
 
@@ -54,7 +54,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content.html google_storage_bucket_object_content} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content google_storage_bucket_object_content} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

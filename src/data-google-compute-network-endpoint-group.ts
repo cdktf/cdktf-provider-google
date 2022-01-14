@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html
+// https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,27 +16,27 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html#name DataGoogleComputeNetworkEndpointGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group#name DataGoogleComputeNetworkEndpointGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html#project DataGoogleComputeNetworkEndpointGroup#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group#project DataGoogleComputeNetworkEndpointGroup#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html#self_link DataGoogleComputeNetworkEndpointGroup#self_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group#self_link DataGoogleComputeNetworkEndpointGroup#self_link}
   */
   readonly selfLink?: string;
   /**
   * Zone where the network endpoint group is located.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html#zone DataGoogleComputeNetworkEndpointGroup#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group#zone DataGoogleComputeNetworkEndpointGroup#zone}
   */
   readonly zone?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html google_compute_network_endpoint_group}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group google_compute_network_endpoint_group}
 */
 export class DataGoogleComputeNetworkEndpointGroup extends cdktf.TerraformDataSource {
 
@@ -50,7 +50,7 @@ export class DataGoogleComputeNetworkEndpointGroup extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group.html google_compute_network_endpoint_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group google_compute_network_endpoint_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

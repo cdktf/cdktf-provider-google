@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html
+// https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface BigtableTableIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#instance BigtableTableIamPolicy#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy#instance BigtableTableIamPolicy#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#policy_data BigtableTableIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy#policy_data BigtableTableIamPolicy#policy_data}
   */
   readonly policyData: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#project BigtableTableIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy#project BigtableTableIamPolicy#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html#table BigtableTableIamPolicy#table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy#table BigtableTableIamPolicy#table}
   */
   readonly table: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html google_bigtable_table_iam_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy google_bigtable_table_iam_policy}
 */
 export class BigtableTableIamPolicy extends cdktf.TerraformResource {
 
@@ -40,7 +40,7 @@ export class BigtableTableIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy.html google_bigtable_table_iam_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_policy google_bigtable_table_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

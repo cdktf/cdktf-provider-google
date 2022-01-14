@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/container_engine_versions.html
+// https://www.terraform.io/docs/providers/google/d/container_engine_versions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleContainerEngineVersionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html#location DataGoogleContainerEngineVersions#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions#location DataGoogleContainerEngineVersions#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html#project DataGoogleContainerEngineVersions#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions#project DataGoogleContainerEngineVersions#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html#version_prefix DataGoogleContainerEngineVersions#version_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions#version_prefix DataGoogleContainerEngineVersions#version_prefix}
   */
   readonly versionPrefix?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html google_container_engine_versions}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions google_container_engine_versions}
 */
 export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions.html google_container_engine_versions} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_engine_versions google_container_engine_versions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

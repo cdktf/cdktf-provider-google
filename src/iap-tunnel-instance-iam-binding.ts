@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html
+// https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface IapTunnelInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#instance IapTunnelInstanceIamBinding#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#instance IapTunnelInstanceIamBinding#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#members IapTunnelInstanceIamBinding#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#members IapTunnelInstanceIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#project IapTunnelInstanceIamBinding#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#project IapTunnelInstanceIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#role IapTunnelInstanceIamBinding#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#role IapTunnelInstanceIamBinding#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#zone IapTunnelInstanceIamBinding#zone}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#zone IapTunnelInstanceIamBinding#zone}
   */
   readonly zone?: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#condition IapTunnelInstanceIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#condition IapTunnelInstanceIamBinding#condition}
   */
   readonly condition?: IapTunnelInstanceIamBindingCondition;
 }
 export interface IapTunnelInstanceIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#description IapTunnelInstanceIamBinding#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#description IapTunnelInstanceIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#expression IapTunnelInstanceIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#expression IapTunnelInstanceIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html#title IapTunnelInstanceIamBinding#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding#title IapTunnelInstanceIamBinding#title}
   */
   readonly title: string;
 }
@@ -150,7 +150,7 @@ export class IapTunnelInstanceIamBindingConditionOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html google_iap_tunnel_instance_iam_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding google_iap_tunnel_instance_iam_binding}
 */
 export class IapTunnelInstanceIamBinding extends cdktf.TerraformResource {
 
@@ -164,7 +164,7 @@ export class IapTunnelInstanceIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding.html google_iap_tunnel_instance_iam_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_binding google_iap_tunnel_instance_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

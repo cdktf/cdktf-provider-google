@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/sql_database_instance.html
+// https://www.terraform.io/docs/providers/google/d/sql_database_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMeta
   /**
   * The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance.html#name DataGoogleSqlDatabaseInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance#name DataGoogleSqlDatabaseInstance#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance.html#project DataGoogleSqlDatabaseInstance#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance#project DataGoogleSqlDatabaseInstance#project}
   */
   readonly project?: string;
 }
@@ -414,7 +414,7 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance.html google_sql_database_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance google_sql_database_instance}
 */
 export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
 
@@ -428,7 +428,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance.html google_sql_database_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_database_instance google_sql_database_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html
+// https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface DialogflowEntityTypeConfig extends cdktf.TerraformMetaArguments
   /**
   * The name of this entity type to be displayed on the console.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#display_name DialogflowEntityType#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#display_name DialogflowEntityType#display_name}
   */
   readonly displayName: string;
   /**
   * Enables fuzzy entity extraction during classification.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#enable_fuzzy_extraction DialogflowEntityType#enable_fuzzy_extraction}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#enable_fuzzy_extraction DialogflowEntityType#enable_fuzzy_extraction}
   */
   readonly enableFuzzyExtraction?: boolean | cdktf.IResolvable;
   /**
@@ -26,23 +26,23 @@ export interface DialogflowEntityTypeConfig extends cdktf.TerraformMetaArguments
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#kind DialogflowEntityType#kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#kind DialogflowEntityType#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#project DialogflowEntityType#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#project DialogflowEntityType#project}
   */
   readonly project?: string;
   /**
   * entities block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#entities DialogflowEntityType#entities}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#entities DialogflowEntityType#entities}
   */
   readonly entities?: DialogflowEntityTypeEntities[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#timeouts DialogflowEntityType#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#timeouts DialogflowEntityType#timeouts}
   */
   readonly timeouts?: DialogflowEntityTypeTimeouts;
 }
@@ -53,7 +53,7 @@ could be green onions.
 For KIND_LIST entity types:
 * This collection must contain exactly one synonym equal to value.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#synonyms DialogflowEntityType#synonyms}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#synonyms DialogflowEntityType#synonyms}
   */
   readonly synonyms: string[];
   /**
@@ -64,7 +64,7 @@ For KIND_MAP entity types:
 For KIND_LIST entity types:
 * A string that can contain references to other entity types (with or without aliases).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#value DialogflowEntityType#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#value DialogflowEntityType#value}
   */
   readonly value: string;
 }
@@ -82,15 +82,15 @@ export function dialogflowEntityTypeEntitiesToTerraform(struct?: DialogflowEntit
 
 export interface DialogflowEntityTypeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#create DialogflowEntityType#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#create DialogflowEntityType#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#delete DialogflowEntityType#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#delete DialogflowEntityType#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html#update DialogflowEntityType#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#update DialogflowEntityType#update}
   */
   readonly update?: string;
 }
@@ -202,7 +202,7 @@ export class DialogflowEntityTypeTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html google_dialogflow_entity_type}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type google_dialogflow_entity_type}
 */
 export class DialogflowEntityType extends cdktf.TerraformResource {
 
@@ -216,7 +216,7 @@ export class DialogflowEntityType extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type.html google_dialogflow_entity_type} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type google_dialogflow_entity_type} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

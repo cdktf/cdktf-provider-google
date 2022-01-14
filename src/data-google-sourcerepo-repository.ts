@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/sourcerepo_repository.html
+// https://www.terraform.io/docs/providers/google/d/sourcerepo_repository
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,11 +11,11 @@ export interface DataGoogleSourcerepoRepositoryConfig extends cdktf.TerraformMet
   * Resource name of the repository, of the form '{{repo}}'.
 The repo name may contain slashes. eg, 'name/with/slash'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository.html#name DataGoogleSourcerepoRepository#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository#name DataGoogleSourcerepoRepository#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository.html#project DataGoogleSourcerepoRepository#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository#project DataGoogleSourcerepoRepository#project}
   */
   readonly project?: string;
 }
@@ -38,7 +38,7 @@ export class DataGoogleSourcerepoRepositoryPubsubConfigs extends cdktf.ComplexCo
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository.html google_sourcerepo_repository}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository google_sourcerepo_repository}
 */
 export class DataGoogleSourcerepoRepository extends cdktf.TerraformDataSource {
 
@@ -52,7 +52,7 @@ export class DataGoogleSourcerepoRepository extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository.html google_sourcerepo_repository} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository google_sourcerepo_repository} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

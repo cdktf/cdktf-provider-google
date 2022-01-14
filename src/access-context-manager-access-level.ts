@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html
+// https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface AccessContextManagerAccessLevelConfig extends cdktf.TerraformMe
   /**
   * Description of the AccessLevel and its use. Does not affect behavior.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#description AccessContextManagerAccessLevel#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#description AccessContextManagerAccessLevel#description}
   */
   readonly description?: string;
   /**
@@ -18,38 +18,38 @@ export interface AccessContextManagerAccessLevelConfig extends cdktf.TerraformMe
 with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#name AccessContextManagerAccessLevel#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#name AccessContextManagerAccessLevel#name}
   */
   readonly name: string;
   /**
   * The AccessPolicy this AccessLevel lives in.
 Format: accessPolicies/{policy_id}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#parent AccessContextManagerAccessLevel#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#parent AccessContextManagerAccessLevel#parent}
   */
   readonly parent: string;
   /**
   * Human readable title. Must be unique within the Policy.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#title AccessContextManagerAccessLevel#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#title AccessContextManagerAccessLevel#title}
   */
   readonly title: string;
   /**
   * basic block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#basic AccessContextManagerAccessLevel#basic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#basic AccessContextManagerAccessLevel#basic}
   */
   readonly basic?: AccessContextManagerAccessLevelBasic;
   /**
   * custom block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#custom AccessContextManagerAccessLevel#custom}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#custom AccessContextManagerAccessLevel#custom}
   */
   readonly custom?: AccessContextManagerAccessLevelCustom;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#timeouts AccessContextManagerAccessLevel#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#timeouts AccessContextManagerAccessLevel#timeouts}
   */
   readonly timeouts?: AccessContextManagerAccessLevelTimeouts;
 }
@@ -59,19 +59,19 @@ export interface AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsCon
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#minimum_version AccessContextManagerAccessLevel#minimum_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#minimum_version AccessContextManagerAccessLevel#minimum_version}
   */
   readonly minimumVersion?: string;
   /**
   * The operating system type of the device. Possible values: ["OS_UNSPECIFIED", "DESKTOP_MAC", "DESKTOP_WINDOWS", "DESKTOP_LINUX", "DESKTOP_CHROME_OS", "ANDROID", "IOS"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#os_type AccessContextManagerAccessLevel#os_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#os_type AccessContextManagerAccessLevel#os_type}
   */
   readonly osType: string;
   /**
   * If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_verified_chrome_os AccessContextManagerAccessLevel#require_verified_chrome_os}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#require_verified_chrome_os AccessContextManagerAccessLevel#require_verified_chrome_os}
   */
   readonly requireVerifiedChromeOs?: boolean | cdktf.IResolvable;
 }
@@ -93,39 +93,39 @@ export interface AccessContextManagerAccessLevelBasicConditionsDevicePolicy {
   * A list of allowed device management levels.
 An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#allowed_device_management_levels AccessContextManagerAccessLevel#allowed_device_management_levels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#allowed_device_management_levels AccessContextManagerAccessLevel#allowed_device_management_levels}
   */
   readonly allowedDeviceManagementLevels?: string[];
   /**
   * A list of allowed encryptions statuses.
 An empty list allows all statuses. Possible values: ["ENCRYPTION_UNSPECIFIED", "ENCRYPTION_UNSUPPORTED", "UNENCRYPTED", "ENCRYPTED"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#allowed_encryption_statuses AccessContextManagerAccessLevel#allowed_encryption_statuses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#allowed_encryption_statuses AccessContextManagerAccessLevel#allowed_encryption_statuses}
   */
   readonly allowedEncryptionStatuses?: string[];
   /**
   * Whether the device needs to be approved by the customer admin.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_admin_approval AccessContextManagerAccessLevel#require_admin_approval}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#require_admin_approval AccessContextManagerAccessLevel#require_admin_approval}
   */
   readonly requireAdminApproval?: boolean | cdktf.IResolvable;
   /**
   * Whether the device needs to be corp owned.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_corp_owned AccessContextManagerAccessLevel#require_corp_owned}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#require_corp_owned AccessContextManagerAccessLevel#require_corp_owned}
   */
   readonly requireCorpOwned?: boolean | cdktf.IResolvable;
   /**
   * Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#require_screen_lock AccessContextManagerAccessLevel#require_screen_lock}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#require_screen_lock AccessContextManagerAccessLevel#require_screen_lock}
   */
   readonly requireScreenLock?: boolean | cdktf.IResolvable;
   /**
   * os_constraints block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#os_constraints AccessContextManagerAccessLevel#os_constraints}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#os_constraints AccessContextManagerAccessLevel#os_constraints}
   */
   readonly osConstraints?: AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints[];
 }
@@ -318,7 +318,7 @@ is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#ip_subnetworks AccessContextManagerAccessLevel#ip_subnetworks}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#ip_subnetworks AccessContextManagerAccessLevel#ip_subnetworks}
   */
   readonly ipSubnetworks?: string[];
   /**
@@ -331,7 +331,7 @@ from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: 'user:{emailid}', 'serviceAccount:{emailid}'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#members AccessContextManagerAccessLevel#members}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#members AccessContextManagerAccessLevel#members}
   */
   readonly members?: string[];
   /**
@@ -339,7 +339,7 @@ Formats: 'user:{emailid}', 'serviceAccount:{emailid}'
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#negate AccessContextManagerAccessLevel#negate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#negate AccessContextManagerAccessLevel#negate}
   */
   readonly negate?: boolean | cdktf.IResolvable;
   /**
@@ -347,7 +347,7 @@ the Condition overall to be satisfied. Defaults to false.
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#regions AccessContextManagerAccessLevel#regions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#regions AccessContextManagerAccessLevel#regions}
   */
   readonly regions?: string[];
   /**
@@ -357,13 +357,13 @@ does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#required_access_levels AccessContextManagerAccessLevel#required_access_levels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#required_access_levels AccessContextManagerAccessLevel#required_access_levels}
   */
   readonly requiredAccessLevels?: string[];
   /**
   * device_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#device_policy AccessContextManagerAccessLevel#device_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#device_policy AccessContextManagerAccessLevel#device_policy}
   */
   readonly devicePolicy?: AccessContextManagerAccessLevelBasicConditionsDevicePolicy;
 }
@@ -391,13 +391,13 @@ conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND", "OR"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#combining_function AccessContextManagerAccessLevel#combining_function}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#combining_function AccessContextManagerAccessLevel#combining_function}
   */
   readonly combiningFunction?: string;
   /**
   * conditions block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#conditions AccessContextManagerAccessLevel#conditions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#conditions AccessContextManagerAccessLevel#conditions}
   */
   readonly conditions: AccessContextManagerAccessLevelBasicConditions[];
 }
@@ -486,25 +486,25 @@ export interface AccessContextManagerAccessLevelCustomExpr {
   /**
   * Description of the expression
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#description AccessContextManagerAccessLevel#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#description AccessContextManagerAccessLevel#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#expression AccessContextManagerAccessLevel#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#expression AccessContextManagerAccessLevel#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#location AccessContextManagerAccessLevel#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#location AccessContextManagerAccessLevel#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#title AccessContextManagerAccessLevel#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#title AccessContextManagerAccessLevel#title}
   */
   readonly title?: string;
 }
@@ -638,7 +638,7 @@ export interface AccessContextManagerAccessLevelCustom {
   /**
   * expr block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#expr AccessContextManagerAccessLevel#expr}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#expr AccessContextManagerAccessLevel#expr}
   */
   readonly expr: AccessContextManagerAccessLevelCustomExpr;
 }
@@ -701,15 +701,15 @@ export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.
 }
 export interface AccessContextManagerAccessLevelTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#create AccessContextManagerAccessLevel#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#create AccessContextManagerAccessLevel#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#delete AccessContextManagerAccessLevel#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#delete AccessContextManagerAccessLevel#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html#update AccessContextManagerAccessLevel#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#update AccessContextManagerAccessLevel#update}
   */
   readonly update?: string;
 }
@@ -821,7 +821,7 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html google_access_context_manager_access_level}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level google_access_context_manager_access_level}
 */
 export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
 
@@ -835,7 +835,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level.html google_access_context_manager_access_level} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level google_access_context_manager_access_level} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

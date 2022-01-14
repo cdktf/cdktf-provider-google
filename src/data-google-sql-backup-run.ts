@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/sql_backup_run.html
+// https://www.terraform.io/docs/providers/google/d/sql_backup_run
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArgumen
   /**
   * The identifier for this backup run. Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#backup_id DataGoogleSqlBackupRun#backup_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
   */
   readonly backupId?: number;
   /**
   * Name of the database instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#instance DataGoogleSqlBackupRun#instance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
   */
   readonly instance: string;
   /**
   * Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html#most_recent DataGoogleSqlBackupRun#most_recent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html google_sql_backup_run}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run google_sql_backup_run}
 */
 export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
 
@@ -42,7 +42,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run.html google_sql_backup_run} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run google_sql_backup_run} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

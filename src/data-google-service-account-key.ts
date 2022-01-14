@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/service_account_key.html
+// https://www.terraform.io/docs/providers/google/d/service_account_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html#name DataGoogleServiceAccountKey#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key#name DataGoogleServiceAccountKey#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html#project DataGoogleServiceAccountKey#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key#project DataGoogleServiceAccountKey#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html#public_key_type DataGoogleServiceAccountKey#public_key_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_key#public_key_type DataGoogleServiceAccountKey#public_key_type}
   */
   readonly publicKeyType?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html google_service_account_key}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account_key google_service_account_key}
 */
 export class DataGoogleServiceAccountKey extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleServiceAccountKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_key.html google_service_account_key} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account_key google_service_account_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

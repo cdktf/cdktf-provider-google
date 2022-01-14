@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html
+// https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface ComputeRegionTargetHttpProxyConfig extends cdktf.TerraformMetaA
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#description ComputeRegionTargetHttpProxy#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#description ComputeRegionTargetHttpProxy#description}
   */
   readonly description?: string;
   /**
@@ -22,45 +22,45 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#name ComputeRegionTargetHttpProxy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#name ComputeRegionTargetHttpProxy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#project ComputeRegionTargetHttpProxy#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#project ComputeRegionTargetHttpProxy#project}
   */
   readonly project?: string;
   /**
   * The Region in which the created target https proxy should reside.
 If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#region ComputeRegionTargetHttpProxy#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#region ComputeRegionTargetHttpProxy#region}
   */
   readonly region?: string;
   /**
   * A reference to the RegionUrlMap resource that defines the mapping from URL
 to the BackendService.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#url_map ComputeRegionTargetHttpProxy#url_map}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#url_map ComputeRegionTargetHttpProxy#url_map}
   */
   readonly urlMap: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#timeouts ComputeRegionTargetHttpProxy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#timeouts ComputeRegionTargetHttpProxy#timeouts}
   */
   readonly timeouts?: ComputeRegionTargetHttpProxyTimeouts;
 }
 export interface ComputeRegionTargetHttpProxyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#create ComputeRegionTargetHttpProxy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#create ComputeRegionTargetHttpProxy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#delete ComputeRegionTargetHttpProxy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#delete ComputeRegionTargetHttpProxy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html#update ComputeRegionTargetHttpProxy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#update ComputeRegionTargetHttpProxy#update}
   */
   readonly update?: string;
 }
@@ -172,7 +172,7 @@ export class ComputeRegionTargetHttpProxyTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html google_compute_region_target_http_proxy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy google_compute_region_target_http_proxy}
 */
 export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
 
@@ -186,7 +186,7 @@ export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy.html google_compute_region_target_http_proxy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy google_compute_region_target_http_proxy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

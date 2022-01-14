@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface BigqueryDatasetIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#dataset_id BigqueryDatasetIamMember#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#dataset_id BigqueryDatasetIamMember#dataset_id}
   */
   readonly datasetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#member BigqueryDatasetIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#member BigqueryDatasetIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#project BigqueryDatasetIamMember#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#project BigqueryDatasetIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#role BigqueryDatasetIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#role BigqueryDatasetIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#condition BigqueryDatasetIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#condition BigqueryDatasetIamMember#condition}
   */
   readonly condition?: BigqueryDatasetIamMemberCondition;
 }
 export interface BigqueryDatasetIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#description BigqueryDatasetIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#description BigqueryDatasetIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#expression BigqueryDatasetIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#expression BigqueryDatasetIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html#title BigqueryDatasetIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#title BigqueryDatasetIamMember#title}
   */
   readonly title: string;
 }
@@ -146,7 +146,7 @@ export class BigqueryDatasetIamMemberConditionOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html google_bigquery_dataset_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member google_bigquery_dataset_iam_member}
 */
 export class BigqueryDatasetIamMember extends cdktf.TerraformResource {
 
@@ -160,7 +160,7 @@ export class BigqueryDatasetIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member.html google_bigquery_dataset_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member google_bigquery_dataset_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

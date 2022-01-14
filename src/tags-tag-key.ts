@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/tags_tag_key.html
+// https://www.terraform.io/docs/providers/google/r/tags_tag_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface TagsTagKeyConfig extends cdktf.TerraformMetaArguments {
   /**
   * User-assigned description of the TagKey. Must not exceed 256 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#description TagsTagKey#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#description TagsTagKey#description}
   */
   readonly description?: string;
   /**
   * Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id}.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#parent TagsTagKey#parent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#parent TagsTagKey#parent}
   */
   readonly parent: string;
   /**
@@ -24,27 +24,27 @@ export interface TagsTagKeyConfig extends cdktf.TerraformMetaArguments {
 
 The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#short_name TagsTagKey#short_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#short_name TagsTagKey#short_name}
   */
   readonly shortName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#timeouts TagsTagKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#timeouts TagsTagKey#timeouts}
   */
   readonly timeouts?: TagsTagKeyTimeouts;
 }
 export interface TagsTagKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#create TagsTagKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#create TagsTagKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#delete TagsTagKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#delete TagsTagKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html#update TagsTagKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key#update TagsTagKey#update}
   */
   readonly update?: string;
 }
@@ -156,7 +156,7 @@ export class TagsTagKeyTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html google_tags_tag_key}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key google_tags_tag_key}
 */
 export class TagsTagKey extends cdktf.TerraformResource {
 
@@ -170,7 +170,7 @@ export class TagsTagKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key.html google_tags_tag_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_tag_key google_tags_tag_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

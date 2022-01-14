@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html
+// https://www.terraform.io/docs/providers/google/d/folder_organization_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,13 @@ export interface DataGoogleFolderOrganizationPolicyConfig extends cdktf.Terrafor
   /**
   * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html#constraint DataGoogleFolderOrganizationPolicy#constraint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy#constraint DataGoogleFolderOrganizationPolicy#constraint}
   */
   readonly constraint: string;
   /**
   * The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html#folder DataGoogleFolderOrganizationPolicy#folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy#folder DataGoogleFolderOrganizationPolicy#folder}
   */
   readonly folder: string;
 }
@@ -84,7 +84,7 @@ export class DataGoogleFolderOrganizationPolicyRestorePolicy extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html google_folder_organization_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy google_folder_organization_policy}
 */
 export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSource {
 
@@ -98,7 +98,7 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy.html google_folder_organization_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/folder_organization_policy google_folder_organization_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

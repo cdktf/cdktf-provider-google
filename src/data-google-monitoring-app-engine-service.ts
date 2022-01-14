@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html
+// https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,11 +12,11 @@ export interface DataGoogleMonitoringAppEngineServiceConfig extends cdktf.Terraf
 Corresponds to the 'moduleId' resource label for a 'gae_app'
 monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app)
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html#module_id DataGoogleMonitoringAppEngineService#module_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service#module_id DataGoogleMonitoringAppEngineService#module_id}
   */
   readonly moduleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html#project DataGoogleMonitoringAppEngineService#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service#project DataGoogleMonitoringAppEngineService#project}
   */
   readonly project?: string;
 }
@@ -29,7 +29,7 @@ export class DataGoogleMonitoringAppEngineServiceTelemetry extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html google_monitoring_app_engine_service}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service google_monitoring_app_engine_service}
 */
 export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSource {
 
@@ -43,7 +43,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service.html google_monitoring_app_engine_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/monitoring_app_engine_service google_monitoring_app_engine_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

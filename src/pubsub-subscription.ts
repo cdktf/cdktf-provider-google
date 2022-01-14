@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html
+// https://www.terraform.io/docs/providers/google/r/pubsub_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -27,7 +27,7 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#ack_deadline_seconds PubsubSubscription#ack_deadline_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#ack_deadline_seconds PubsubSubscription#ack_deadline_seconds}
   */
   readonly ackDeadlineSeconds?: number;
   /**
@@ -35,7 +35,7 @@ will eventually redeliver the message.
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
 may be delivered in any order.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#enable_message_ordering PubsubSubscription#enable_message_ordering}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#enable_message_ordering PubsubSubscription#enable_message_ordering}
   */
   readonly enableMessageOrdering?: boolean | cdktf.IResolvable;
   /**
@@ -44,13 +44,13 @@ Pub/Sub automatically acknowledges the messages that don't match the filter. You
 by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription, 
 you can't modify the filter.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#filter PubsubSubscription#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#filter PubsubSubscription#filter}
   */
   readonly filter?: string;
   /**
   * A set of key/value label pairs to assign to this Subscription.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#labels PubsubSubscription#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#labels PubsubSubscription#labels}
   */
   readonly labels?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -64,17 +64,17 @@ than 7 days ('"604800s"') or less than 10 minutes ('"600s"').
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: '"600.5s"'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#message_retention_duration PubsubSubscription#message_retention_duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#message_retention_duration PubsubSubscription#message_retention_duration}
   */
   readonly messageRetentionDuration?: string;
   /**
   * Name of the subscription.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#name PubsubSubscription#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#name PubsubSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#project PubsubSubscription#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#project PubsubSubscription#project}
   */
   readonly project?: string;
   /**
@@ -83,43 +83,43 @@ messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#retain_acked_messages PubsubSubscription#retain_acked_messages}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#retain_acked_messages PubsubSubscription#retain_acked_messages}
   */
   readonly retainAckedMessages?: boolean | cdktf.IResolvable;
   /**
   * A reference to a Topic resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#topic PubsubSubscription#topic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#topic PubsubSubscription#topic}
   */
   readonly topic: string;
   /**
   * dead_letter_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#dead_letter_policy PubsubSubscription#dead_letter_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#dead_letter_policy PubsubSubscription#dead_letter_policy}
   */
   readonly deadLetterPolicy?: PubsubSubscriptionDeadLetterPolicy;
   /**
   * expiration_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#expiration_policy PubsubSubscription#expiration_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#expiration_policy PubsubSubscription#expiration_policy}
   */
   readonly expirationPolicy?: PubsubSubscriptionExpirationPolicy;
   /**
   * push_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#push_config PubsubSubscription#push_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#push_config PubsubSubscription#push_config}
   */
   readonly pushConfig?: PubsubSubscriptionPushConfig;
   /**
   * retry_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#retry_policy PubsubSubscription#retry_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#retry_policy PubsubSubscription#retry_policy}
   */
   readonly retryPolicy?: PubsubSubscriptionRetryPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#timeouts PubsubSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#timeouts PubsubSubscription#timeouts}
   */
   readonly timeouts?: PubsubSubscriptionTimeouts;
 }
@@ -137,7 +137,7 @@ The operation will fail if the topic does not exist.
 Users should ensure that there is a subscription attached to this topic
 since messages published to a topic with no subscriptions are lost.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#dead_letter_topic PubsubSubscription#dead_letter_topic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#dead_letter_topic PubsubSubscription#dead_letter_topic}
   */
   readonly deadLetterTopic?: string;
   /**
@@ -154,7 +154,7 @@ This field will be honored on a best effort basis.
 
 If this parameter is 0, a default value of 5 is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#max_delivery_attempts PubsubSubscription#max_delivery_attempts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#max_delivery_attempts PubsubSubscription#max_delivery_attempts}
   */
   readonly maxDeliveryAttempts?: number;
 }
@@ -249,7 +249,7 @@ If ttl is not set, the associated resource never expires.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
 Example - "3.5s".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#ttl PubsubSubscription#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#ttl PubsubSubscription#ttl}
   */
   readonly ttl: string;
 }
@@ -319,7 +319,7 @@ for the audience field is not supported. More info about the OIDC JWT
 token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
 Note: if not specified, the Push endpoint URL will be used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#audience PubsubSubscription#audience}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#audience PubsubSubscription#audience}
   */
   readonly audience?: string;
   /**
@@ -328,7 +328,7 @@ The caller (for subscriptions.create, subscriptions.patch, and
 subscriptions.modifyPushConfig RPCs) must have the
 iam.serviceAccounts.actAs permission for the service account.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#service_account_email PubsubSubscription#service_account_email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#service_account_email PubsubSubscription#service_account_email}
   */
   readonly serviceAccountEmail: string;
 }
@@ -438,7 +438,7 @@ The possible values for this attribute are:
 - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
 - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#attributes PubsubSubscription#attributes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#attributes PubsubSubscription#attributes}
   */
   readonly attributes?: { [key: string]: string } | cdktf.IResolvable;
   /**
@@ -446,13 +446,13 @@ The possible values for this attribute are:
 For example, a Webhook endpoint might use
 "https://example.com/push".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#push_endpoint PubsubSubscription#push_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#push_endpoint PubsubSubscription#push_endpoint}
   */
   readonly pushEndpoint: string;
   /**
   * oidc_token block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#oidc_token PubsubSubscription#oidc_token}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#oidc_token PubsubSubscription#oidc_token}
   */
   readonly oidcToken?: PubsubSubscriptionPushConfigOidcToken;
 }
@@ -565,14 +565,14 @@ export interface PubsubSubscriptionRetryPolicy {
   * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#maximum_backoff PubsubSubscription#maximum_backoff}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#maximum_backoff PubsubSubscription#maximum_backoff}
   */
   readonly maximumBackoff?: string;
   /**
   * The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#minimum_backoff PubsubSubscription#minimum_backoff}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#minimum_backoff PubsubSubscription#minimum_backoff}
   */
   readonly minimumBackoff?: string;
 }
@@ -661,15 +661,15 @@ export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexO
 }
 export interface PubsubSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#create PubsubSubscription#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#create PubsubSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#delete PubsubSubscription#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#delete PubsubSubscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html#update PubsubSubscription#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#update PubsubSubscription#update}
   */
   readonly update?: string;
 }
@@ -781,7 +781,7 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html google_pubsub_subscription}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription google_pubsub_subscription}
 */
 export class PubsubSubscription extends cdktf.TerraformResource {
 
@@ -795,7 +795,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription.html google_pubsub_subscription} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription google_pubsub_subscription} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

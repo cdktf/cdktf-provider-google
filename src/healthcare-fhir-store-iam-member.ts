@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareFhirStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#fhir_store_id HealthcareFhirStoreIamMember#fhir_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#fhir_store_id HealthcareFhirStoreIamMember#fhir_store_id}
   */
   readonly fhirStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#member HealthcareFhirStoreIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#member HealthcareFhirStoreIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#role HealthcareFhirStoreIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#role HealthcareFhirStoreIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#condition HealthcareFhirStoreIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#condition HealthcareFhirStoreIamMember#condition}
   */
   readonly condition?: HealthcareFhirStoreIamMemberCondition;
 }
 export interface HealthcareFhirStoreIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#description HealthcareFhirStoreIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#description HealthcareFhirStoreIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#expression HealthcareFhirStoreIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#expression HealthcareFhirStoreIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html#title HealthcareFhirStoreIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member#title HealthcareFhirStoreIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class HealthcareFhirStoreIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html google_healthcare_fhir_store_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member google_healthcare_fhir_store_iam_member}
 */
 export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member.html google_healthcare_fhir_store_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store_iam_member google_healthcare_fhir_store_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

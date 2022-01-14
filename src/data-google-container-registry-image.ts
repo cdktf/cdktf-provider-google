@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/container_registry_image.html
+// https://www.terraform.io/docs/providers/google/d/container_registry_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,29 +8,29 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleContainerRegistryImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#digest DataGoogleContainerRegistryImage#digest}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image#digest DataGoogleContainerRegistryImage#digest}
   */
   readonly digest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#name DataGoogleContainerRegistryImage#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image#name DataGoogleContainerRegistryImage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#project DataGoogleContainerRegistryImage#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image#project DataGoogleContainerRegistryImage#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#region DataGoogleContainerRegistryImage#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image#region DataGoogleContainerRegistryImage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html#tag DataGoogleContainerRegistryImage#tag}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_image#tag DataGoogleContainerRegistryImage#tag}
   */
   readonly tag?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html google_container_registry_image}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/container_registry_image google_container_registry_image}
 */
 export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource {
 
@@ -44,7 +44,7 @@ export class DataGoogleContainerRegistryImage extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_registry_image.html google_container_registry_image} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/container_registry_image google_container_registry_image} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

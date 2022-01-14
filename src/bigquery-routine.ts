@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/bigquery_routine.html
+// https://www.terraform.io/docs/providers/google/r/bigquery_routine
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,43 +10,43 @@ export interface BigqueryRoutineConfig extends cdktf.TerraformMetaArguments {
   /**
   * The ID of the dataset containing this routine
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#dataset_id BigqueryRoutine#dataset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#dataset_id BigqueryRoutine#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#definition_body BigqueryRoutine#definition_body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#definition_body BigqueryRoutine#definition_body}
   */
   readonly definitionBody: string;
   /**
   * The description of the routine if defined.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#description BigqueryRoutine#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#description BigqueryRoutine#description}
   */
   readonly description?: string;
   /**
   * The determinism level of the JavaScript UDF if defined. Possible values: ["DETERMINISM_LEVEL_UNSPECIFIED", "DETERMINISTIC", "NOT_DETERMINISTIC"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#determinism_level BigqueryRoutine#determinism_level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#determinism_level BigqueryRoutine#determinism_level}
   */
   readonly determinismLevel?: string;
   /**
   * Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#imported_libraries BigqueryRoutine#imported_libraries}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#imported_libraries BigqueryRoutine#imported_libraries}
   */
   readonly importedLibraries?: string[];
   /**
   * The language of the routine. Possible values: ["SQL", "JAVASCRIPT"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#language BigqueryRoutine#language}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#language BigqueryRoutine#language}
   */
   readonly language?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#project BigqueryRoutine#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#project BigqueryRoutine#project}
   */
   readonly project?: string;
   /**
@@ -60,31 +60,31 @@ d the order of values or replaced STRUCT field type with RECORD field type, we c
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#return_type BigqueryRoutine#return_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#return_type BigqueryRoutine#return_type}
   */
   readonly returnType?: string;
   /**
   * The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#routine_id BigqueryRoutine#routine_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#routine_id BigqueryRoutine#routine_id}
   */
   readonly routineId: string;
   /**
   * The type of routine. Possible values: ["SCALAR_FUNCTION", "PROCEDURE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#routine_type BigqueryRoutine#routine_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#routine_type BigqueryRoutine#routine_type}
   */
   readonly routineType?: string;
   /**
   * arguments block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#arguments BigqueryRoutine#arguments}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#arguments BigqueryRoutine#arguments}
   */
   readonly arguments?: BigqueryRoutineArguments[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#timeouts BigqueryRoutine#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#timeouts BigqueryRoutine#timeouts}
   */
   readonly timeouts?: BigqueryRoutineTimeouts;
 }
@@ -92,7 +92,7 @@ export interface BigqueryRoutineArguments {
   /**
   * Defaults to FIXED_TYPE. Default value: "FIXED_TYPE" Possible values: ["FIXED_TYPE", "ANY_TYPE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#argument_kind BigqueryRoutine#argument_kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#argument_kind BigqueryRoutine#argument_kind}
   */
   readonly argumentKind?: string;
   /**
@@ -104,19 +104,19 @@ or replaced STRUCT field type with RECORD field type, we currently cannot
 suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#data_type BigqueryRoutine#data_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#data_type BigqueryRoutine#data_type}
   */
   readonly dataType?: string;
   /**
   * Specifies whether the argument is input or output. Can be set for procedures only. Possible values: ["IN", "OUT", "INOUT"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#mode BigqueryRoutine#mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#mode BigqueryRoutine#mode}
   */
   readonly mode?: string;
   /**
   * The name of this argument. Can be absent for function return argument.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#name BigqueryRoutine#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#name BigqueryRoutine#name}
   */
   readonly name?: string;
 }
@@ -136,15 +136,15 @@ export function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArgu
 
 export interface BigqueryRoutineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#create BigqueryRoutine#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#create BigqueryRoutine#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#delete BigqueryRoutine#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#delete BigqueryRoutine#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html#update BigqueryRoutine#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#update BigqueryRoutine#update}
   */
   readonly update?: string;
 }
@@ -256,7 +256,7 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html google_bigquery_routine}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine google_bigquery_routine}
 */
 export class BigqueryRoutine extends cdktf.TerraformResource {
 
@@ -270,7 +270,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine.html google_bigquery_routine} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine google_bigquery_routine} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html
+// https://www.terraform.io/docs/providers/google/d/cloudfunctions_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,19 +10,19 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformM
   /**
   * A user-defined name of the function. Function names must be unique globally.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#name DataGoogleCloudfunctionsFunction#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
   */
   readonly name: string;
   /**
   * Project of the function. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#project DataGoogleCloudfunctionsFunction#project}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function#project DataGoogleCloudfunctionsFunction#project}
   */
   readonly project?: string;
   /**
   * Region of function. If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html#region DataGoogleCloudfunctionsFunction#region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function#region DataGoogleCloudfunctionsFunction#region}
   */
   readonly region?: string;
 }
@@ -65,7 +65,7 @@ export class DataGoogleCloudfunctionsFunctionSourceRepository extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html google_cloudfunctions_function}
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function google_cloudfunctions_function}
 */
 export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource {
 
@@ -79,7 +79,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function.html google_cloudfunctions_function} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function google_cloudfunctions_function} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

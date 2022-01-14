@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html
+// https://www.terraform.io/docs/providers/google/r/storage_bucket_acl
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,31 +10,31 @@ export interface StorageBucketAclConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the bucket it applies to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#bucket StorageBucketAcl#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#bucket StorageBucketAcl#bucket}
   */
   readonly bucket: string;
   /**
   * Configure this ACL to be the default ACL.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#default_acl StorageBucketAcl#default_acl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
   */
   readonly defaultAcl?: string;
   /**
   * The canned GCS ACL to apply. Must be set if role_entity is not.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#predefined_acl StorageBucketAcl#predefined_acl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
   */
   readonly predefinedAcl?: string;
   /**
   * List of role/entity pairs in the form ROLE:entity. See GCS Bucket ACL documentation  for more details. Must be set if predefined_acl is not.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html#role_entity StorageBucketAcl#role_entity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
   */
   readonly roleEntity?: string[];
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html google_storage_bucket_acl}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl google_storage_bucket_acl}
 */
 export class StorageBucketAcl extends cdktf.TerraformResource {
 
@@ -48,7 +48,7 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl.html google_storage_bucket_acl} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl google_storage_bucket_acl} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

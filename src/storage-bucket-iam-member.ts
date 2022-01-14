@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html
+// https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface StorageBucketIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#bucket StorageBucketIamMember#bucket}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#bucket StorageBucketIamMember#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#member StorageBucketIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#member StorageBucketIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#role StorageBucketIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#role StorageBucketIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#condition StorageBucketIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#condition StorageBucketIamMember#condition}
   */
   readonly condition?: StorageBucketIamMemberCondition;
 }
 export interface StorageBucketIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#description StorageBucketIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#description StorageBucketIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#expression StorageBucketIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#expression StorageBucketIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html#title StorageBucketIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member#title StorageBucketIamMember#title}
   */
   readonly title: string;
 }
@@ -142,7 +142,7 @@ export class StorageBucketIamMemberConditionOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html google_storage_bucket_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member google_storage_bucket_iam_member}
 */
 export class StorageBucketIamMember extends cdktf.TerraformResource {
 
@@ -156,7 +156,7 @@ export class StorageBucketIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member.html google_storage_bucket_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_member google_storage_bucket_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
