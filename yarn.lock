@@ -93,9 +93,9 @@
     jsii-srcmak "^0.1.406"
 
 "@cdktf/provider-project@^0.2.8":
-  version "0.2.27"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.27.tgz#46dd15dd3bc8edc8efb2292577235854416cd8aa"
-  integrity sha512-X7YMXKLvlb+/na03clYvE5kl3jveXK6S4E8KVctyveeR6BmSjjhQb7D+eINU1OVgPT+8CST97E5bACSHZznhkA==
+  version "0.2.28"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.28.tgz#f0fb32461922cff5e0d93843b917640ebd548078"
+  integrity sha512-boRyubli3lT1Nj+T2WMWBl6zSMCTIU5z/ScNHsWXCbetZQNepTHawNg0rE9RmRFdKjAYZdFMkOPSRNqHCNPbLg==
   dependencies:
     change-case "^4.1.2"
 
@@ -1347,9 +1347,9 @@ exit-on-epipe@~1.0.1:
   integrity sha512-h2z5mrROTxce56S+pnvAV890uu7ls7f1kEvVGJbw1OlFH3/mlJ5bkXu0KRyW94v37zzHPiUd55iLn3DA7TjWpw==
 
 fast-glob@^3.2.9:
-  version "3.2.10"
-  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.10.tgz#2734f83baa7f43b7fd41e13bc34438f4ffe284ee"
-  integrity sha512-s9nFhFnvR63wls6/kM88kQqDhMu0AfdjqouE2l5GVQPbqLgyFjjU5ry/r2yKsJxpb9Py1EYNqieFrmMaX4v++A==
+  version "3.2.11"
+  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
+  integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
