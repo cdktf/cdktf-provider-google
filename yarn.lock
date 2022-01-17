@@ -2200,9 +2200,9 @@ jsii-rosetta@^1.39.0, jsii-rosetta@^1.52.1:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.406:
-  version "0.1.446"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.446.tgz#11c06979e6fa2229e80f97152c9d7098605807b7"
-  integrity sha512-CsZRntLo2JRQjyI1khgUvb9jKpMHNclwA5Sr0PXDcyXkB11CcFAlpMZyCw46/Lzs4B+ULarKoALS9h1scz6swg==
+  version "0.1.447"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.447.tgz#c3a2643f846006c6095a95b2efe98a7471e8499a"
+  integrity sha512-6lhvTNwa7SGQzCruZhhWxRmlg1dBafxnVVTQqhAG9MZ0eSyL/qcGPun0LwtmKZR2Zaf64T31ambEvc8zTzNGZw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.52.1"
@@ -2672,9 +2672,9 @@ no-case@^3.0.4:
     tslib "^2.0.3"
 
 node-fetch@^2.6.1:
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.6.tgz#1751a7c01834e8e1697758732e9efb6eeadfaf89"
-  integrity sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
 
