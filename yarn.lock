@@ -33,9 +33,9 @@
     js-tokens "^4.0.0"
 
 "@babel/parser@^7.16.7":
-  version "7.16.10"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.10.tgz#aba1b1cb9696a24a19f59c41af9cf17d1c716a88"
-  integrity sha512-Sm/S9Or6nN8uiFsQU1yodyDW3MWXQhFeqzMPM+t8MJjM+pLsnFVxFZzkpXKvUXh+Gz9cbMoYYs484+Jw/NTEFQ==
+  version "7.16.12"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.12.tgz#9474794f9a650cf5e2f892444227f98e28cdf8b6"
+  integrity sha512-VfaV15po8RiZssrkPweyvbGVSe4x2y+aciFCgn0n0/SJMR22cwofRV1mtnJQYcSB1wUTaA/X1LnA3es66MCO5A==
 
 "@babel/template@^7.14.5":
   version "7.16.7"
@@ -859,9 +859,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 constructs@^10.0.0, constructs@^10.0.25:
-  version "10.0.40"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.40.tgz#2ba6a69b5f2f9b433dd3a756899cdef625ef52cf"
-  integrity sha512-BvjCHmkERjTjKI42atS6cRt6DdPDVQ/dF5TJFmEHcKutiDFon5Lje7Ch6gOZuny/i5/g7MfFnufccz+06GJzaA==
+  version "10.0.41"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.41.tgz#4deeb04baf2502110807f2d028cedd5a18bf326a"
+  integrity sha512-h8HytpdxtuO9PPndcvZGX90Silp9lCWxf0XlzGhWOGpZchIyDFR+pqy4n0eiyEsPcclPF0CMfCA3UcGugu3+vw==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -1915,7 +1915,7 @@ is-ci@^2.0.0:
   dependencies:
     ci-info "^2.0.0"
 
-is-core-module@^2.5.0, is-core-module@^2.8.0:
+is-core-module@^2.5.0, is-core-module@^2.8.0, is-core-module@^2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.1.tgz#f59fdfca701d5879d0a6b100a40aa1560ce27211"
   integrity sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==
@@ -2204,9 +2204,9 @@ jsii-rosetta@^1.39.0, jsii-rosetta@^1.52.1:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.406:
-  version "0.1.452"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.452.tgz#f3883e7ae7b7d8466da0d2991a8cce3d568567f0"
-  integrity sha512-DouBHDN0TDyCTEbKCI01j0u97lvLuTWi/Afl0OVHE7LAmmnGu4hdx+3OA7vqsIP4lil8hEJf7nKarzlDp6pqYw==
+  version "0.1.453"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.453.tgz#90de0f8c1b944a050a8c49357b163f5eee684c5f"
+  integrity sha512-cMH4f2r1c2ykXdlvvsbPy0DUGFCiphqJ6pdTMKT+R07nY+epHQ9aF/8BV38hGzxiqMVX+7f/FHJ6VYQYEnEXBw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.52.1"
@@ -3353,11 +3353,11 @@ resolve@^1.1.6:
     supports-preserve-symlinks-flag "^1.0.0"
 
 resolve@^1.10.0:
-  version "1.21.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.21.1.tgz#1a88c73f5ca8ab0aabc8b888c4170de26c92c4cc"
-  integrity sha512-lfEImVbnolPuaSZuLQ52cAxPBHeI77sPwCOWRdy12UG/CNa8an7oBHH1R+Fp1/mUqSJi4c8TIP6FOIPSZAUrEQ==
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.0.tgz#5e0b8c67c15df57a89bdbabe603a002f21731198"
+  integrity sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==
   dependencies:
-    is-core-module "^2.8.0"
+    is-core-module "^2.8.1"
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
