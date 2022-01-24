@@ -859,9 +859,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 constructs@^10.0.0, constructs@^10.0.25:
-  version "10.0.41"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.41.tgz#4deeb04baf2502110807f2d028cedd5a18bf326a"
-  integrity sha512-h8HytpdxtuO9PPndcvZGX90Silp9lCWxf0XlzGhWOGpZchIyDFR+pqy4n0eiyEsPcclPF0CMfCA3UcGugu3+vw==
+  version "10.0.42"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.42.tgz#b7b5926a209b323e9a3712deef9428cbd41779aa"
+  integrity sha512-NC/OGRj9a+TCBAuJP6jV99CFMtKEhyRmfMmyKX2WDdbedmmjKk0C2TXgaqGUqsj9PbS0guGP8B4cMIRzmf/7Xg==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2204,9 +2204,9 @@ jsii-rosetta@^1.39.0, jsii-rosetta@^1.52.1:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.406:
-  version "0.1.453"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.453.tgz#90de0f8c1b944a050a8c49357b163f5eee684c5f"
-  integrity sha512-cMH4f2r1c2ykXdlvvsbPy0DUGFCiphqJ6pdTMKT+R07nY+epHQ9aF/8BV38hGzxiqMVX+7f/FHJ6VYQYEnEXBw==
+  version "0.1.454"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.454.tgz#db15c5be2ab74bcce0ff2f26e0ac3001253b9975"
+  integrity sha512-TN0J2q2QQ92bzJuxKheb0NNSChy2AqDK9TBznBsbzYqPv5QwNZIMsnPrD1HVJRPVvS5Vz8+VttNjVniLw4QArg==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.52.1"
@@ -2419,9 +2419,9 @@ lodash@^4.17.15, lodash@^4.17.21:
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log4js@^6.3.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.4.0.tgz#3f63ccfc8033c83cd617a4d2d50e48be5944eae9"
-  integrity sha512-ysc/XUecZJuN8NoKOssk3V0cQ29xY4fra6fnigZa5VwxFsCsvdqsdnEuAxNN89LlHpbE4KUD3zGcn+kFqonSVQ==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.4.1.tgz#9d3a8bf2c31c1e213fe3fc398a6053f7a2bc53e8"
+  integrity sha512-iUiYnXqAmNKiIZ1XSAitQ4TmNs8CdZYTAWINARF3LjnsLN8tY5m0vRwd6uuWj/yNY0YHxeZodnbmxKFUOM2rMg==
   dependencies:
     date-format "^4.0.3"
     debug "^4.3.3"
@@ -2658,9 +2658,9 @@ ncp@^2.0.0:
   integrity sha1-GVoh1sRuNh0vsSgbo4uR6d9727M=
 
 negotiator@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
-  integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
+  integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
 neo-async@^2.6.0:
   version "2.6.2"
