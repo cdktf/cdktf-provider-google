@@ -54,13 +54,13 @@ must begin with a letter.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#user_labels MonitoringAlertPolicy#user_labels}
   */
-  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly userLabels?: { [key: string]: string };
   /**
   * conditions block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#conditions MonitoringAlertPolicy#conditions}
   */
-  readonly conditions: MonitoringAlertPolicyConditions[];
+  readonly conditions: MonitoringAlertPolicyConditions[] | cdktf.IResolvable;
   /**
   * documentation block
   * 
@@ -182,8 +182,8 @@ returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_IN
   readonly perSeriesAligner?: string;
 }
 
-export function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentAggregations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentAggregations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -215,7 +215,7 @@ condition to be triggered.
 }
 
 export function monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference | MonitoringAlertPolicyConditionsConditionAbsentTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -233,7 +233,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -329,7 +329,7 @@ in length.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
   */
-  readonly aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[];
+  readonly aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable;
   /**
   * trigger block
   * 
@@ -339,7 +339,7 @@ in length.
 }
 
 export function monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct?: MonitoringAlertPolicyConditionsConditionAbsentOutputReference | MonitoringAlertPolicyConditionsConditionAbsent): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -359,7 +359,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -432,12 +432,12 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
 
   // aggregations - computed: false, optional: true, required: false
-  private _aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[]; 
+  private _aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable; 
   public get aggregations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aggregations') as any;
+    return this.interpolationForAttribute('aggregations');
   }
-  public set aggregations(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations[]) {
+  public set aggregations(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable) {
     this._aggregations = value;
   }
   public resetAggregations() {
@@ -449,7 +449,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference(this, "trigger", true);
   public get trigger() {
     return this._trigger;
   }
@@ -484,7 +484,7 @@ condition to be triggered.
 }
 
 export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference | MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -502,7 +502,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -601,7 +601,7 @@ alerted on quickly.
 }
 
 export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutputReference | MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -620,7 +620,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -684,7 +684,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference(this, "trigger", true);
   public get trigger() {
     return this._trigger;
   }
@@ -795,8 +795,8 @@ returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_IN
   readonly perSeriesAligner?: string;
 }
 
-export function monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdAggregations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdAggregations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -904,8 +904,8 @@ returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_IN
   readonly perSeriesAligner?: string;
 }
 
-export function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -937,7 +937,7 @@ condition to be triggered.
 }
 
 export function monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference | MonitoringAlertPolicyConditionsConditionThresholdTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -955,7 +955,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1101,13 +1101,13 @@ series.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
   */
-  readonly aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[];
+  readonly aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable;
   /**
   * denominator_aggregations block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#denominator_aggregations MonitoringAlertPolicy#denominator_aggregations}
   */
-  readonly denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[];
+  readonly denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable;
   /**
   * trigger block
   * 
@@ -1117,7 +1117,7 @@ series.
 }
 
 export function monitoringAlertPolicyConditionsConditionThresholdToTerraform(struct?: MonitoringAlertPolicyConditionsConditionThresholdOutputReference | MonitoringAlertPolicyConditionsConditionThreshold): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1141,7 +1141,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1283,12 +1283,12 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
 
   // aggregations - computed: false, optional: true, required: false
-  private _aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[]; 
+  private _aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable; 
   public get aggregations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aggregations') as any;
+    return this.interpolationForAttribute('aggregations');
   }
-  public set aggregations(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations[]) {
+  public set aggregations(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable) {
     this._aggregations = value;
   }
   public resetAggregations() {
@@ -1300,12 +1300,12 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
 
   // denominator_aggregations - computed: false, optional: true, required: false
-  private _denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[]; 
+  private _denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable; 
   public get denominatorAggregations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('denominator_aggregations') as any;
+    return this.interpolationForAttribute('denominator_aggregations');
   }
-  public set denominatorAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[]) {
+  public set denominatorAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable) {
     this._denominatorAggregations = value;
   }
   public resetDenominatorAggregations() {
@@ -1317,7 +1317,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference(this, "trigger", true);
   public get trigger() {
     return this._trigger;
   }
@@ -1363,8 +1363,8 @@ policy.
   readonly conditionThreshold?: MonitoringAlertPolicyConditionsConditionThreshold;
 }
 
-export function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAlertPolicyConditions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAlertPolicyConditions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1396,7 +1396,7 @@ whichever is smaller.
 }
 
 export function monitoringAlertPolicyDocumentationToTerraform(struct?: MonitoringAlertPolicyDocumentationOutputReference | MonitoringAlertPolicyDocumentation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1414,7 +1414,7 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1492,8 +1492,8 @@ export interface MonitoringAlertPolicyTimeouts {
   readonly update?: string;
 }
 
-export function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAlertPolicyTimeoutsOutputReference | MonitoringAlertPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAlertPolicyTimeoutsOutputReference | MonitoringAlertPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1512,7 +1512,7 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1660,7 +1660,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
 
   // creation_record - computed: true, optional: false, required: false
   public creationRecord(index: string) {
-    return new MonitoringAlertPolicyCreationRecord(this, 'creation_record', index);
+    return new MonitoringAlertPolicyCreationRecord(this, 'creation_record', index, false);
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -1679,7 +1679,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -1735,12 +1735,11 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _userLabels?: { [key: string]: string }; 
   public get userLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_labels') as any;
+    return this.getStringMapAttribute('user_labels');
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set userLabels(value: { [key: string]: string }) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -1752,12 +1751,12 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // conditions - computed: false, optional: false, required: true
-  private _conditions?: MonitoringAlertPolicyConditions[]; 
+  private _conditions?: MonitoringAlertPolicyConditions[] | cdktf.IResolvable; 
   public get conditions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('conditions') as any;
+    return this.interpolationForAttribute('conditions');
   }
-  public set conditions(value: MonitoringAlertPolicyConditions[]) {
+  public set conditions(value: MonitoringAlertPolicyConditions[] | cdktf.IResolvable) {
     this._conditions = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1766,7 +1765,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // documentation - computed: false, optional: true, required: false
-  private _documentation = new MonitoringAlertPolicyDocumentationOutputReference(this as any, "documentation", true);
+  private _documentation = new MonitoringAlertPolicyDocumentationOutputReference(this, "documentation", true);
   public get documentation() {
     return this._documentation;
   }
@@ -1782,7 +1781,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringAlertPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1808,7 +1807,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       notification_channels: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationChannels),
       project: cdktf.stringToTerraform(this._project),
-      user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
+      user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
       conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions),
       documentation: monitoringAlertPolicyDocumentationToTerraform(this._documentation.internalValue),
       timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),

@@ -49,8 +49,8 @@ export interface ProjectDefaultServiceAccountsTimeouts {
   readonly read?: string;
 }
 
-export function projectDefaultServiceAccountsTimeoutsToTerraform(struct?: ProjectDefaultServiceAccountsTimeoutsOutputReference | ProjectDefaultServiceAccountsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function projectDefaultServiceAccountsTimeoutsToTerraform(struct?: ProjectDefaultServiceAccountsTimeoutsOutputReference | ProjectDefaultServiceAccountsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -69,7 +69,7 @@ export class ProjectDefaultServiceAccountsTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -245,12 +245,12 @@ export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
   }
 
   // service_accounts - computed: true, optional: false, required: false
-  public serviceAccounts(key: string): string {
+  public serviceAccounts(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'service_accounts').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ProjectDefaultServiceAccountsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ProjectDefaultServiceAccountsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

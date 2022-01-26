@@ -181,7 +181,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
 
   // telemetry - computed: true, optional: false, required: false
   public telemetry(index: string) {
-    return new DataGoogleMonitoringClusterIstioServiceTelemetry(this, 'telemetry', index);
+    return new DataGoogleMonitoringClusterIstioServiceTelemetry(this, 'telemetry', index, false);
   }
 
   // =========

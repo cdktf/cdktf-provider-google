@@ -30,7 +30,7 @@ export interface ComputeSecurityPolicyConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_security_policy#rule ComputeSecurityPolicy#rule}
   */
-  readonly rule?: ComputeSecurityPolicyRule[];
+  readonly rule?: ComputeSecurityPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -48,7 +48,7 @@ export interface ComputeSecurityPolicyRuleMatchConfig {
 }
 
 export function computeSecurityPolicyRuleMatchConfigToTerraform(struct?: ComputeSecurityPolicyRuleMatchConfigOutputReference | ComputeSecurityPolicyRuleMatchConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -65,7 +65,7 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -93,7 +93,7 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
   // src_ip_ranges - computed: false, optional: false, required: true
   private _srcIpRanges?: string[]; 
   public get srcIpRanges() {
-    return this.getListAttribute('src_ip_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('src_ip_ranges'));
   }
   public set srcIpRanges(value: string[]) {
     this._srcIpRanges = value;
@@ -113,7 +113,7 @@ export interface ComputeSecurityPolicyRuleMatchExpr {
 }
 
 export function computeSecurityPolicyRuleMatchExprToTerraform(struct?: ComputeSecurityPolicyRuleMatchExprOutputReference | ComputeSecurityPolicyRuleMatchExpr): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -130,7 +130,7 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -190,7 +190,7 @@ export interface ComputeSecurityPolicyRuleMatch {
 }
 
 export function computeSecurityPolicyRuleMatchToTerraform(struct?: ComputeSecurityPolicyRuleMatchOutputReference | ComputeSecurityPolicyRuleMatch): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -209,7 +209,7 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -263,7 +263,7 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   // config - computed: false, optional: true, required: false
-  private _config = new ComputeSecurityPolicyRuleMatchConfigOutputReference(this as any, "config", true);
+  private _config = new ComputeSecurityPolicyRuleMatchConfigOutputReference(this, "config", true);
   public get config() {
     return this._config;
   }
@@ -279,7 +279,7 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   // expr - computed: false, optional: true, required: false
-  private _expr = new ComputeSecurityPolicyRuleMatchExprOutputReference(this as any, "expr", true);
+  private _expr = new ComputeSecurityPolicyRuleMatchExprOutputReference(this, "expr", true);
   public get expr() {
     return this._expr;
   }
@@ -327,8 +327,8 @@ export interface ComputeSecurityPolicyRule {
   readonly match: ComputeSecurityPolicyRuleMatch;
 }
 
-export function computeSecurityPolicyRuleToTerraform(struct?: ComputeSecurityPolicyRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeSecurityPolicyRuleToTerraform(struct?: ComputeSecurityPolicyRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -356,8 +356,8 @@ export interface ComputeSecurityPolicyTimeouts {
   readonly update?: string;
 }
 
-export function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurityPolicyTimeoutsOutputReference | ComputeSecurityPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeSecurityPolicyTimeoutsToTerraform(struct?: ComputeSecurityPolicyTimeoutsOutputReference | ComputeSecurityPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -376,7 +376,7 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -566,12 +566,12 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: ComputeSecurityPolicyRule[]; 
+  private _rule?: ComputeSecurityPolicyRule[] | cdktf.IResolvable; 
   public get rule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rule')));
   }
-  public set rule(value: ComputeSecurityPolicyRule[]) {
+  public set rule(value: ComputeSecurityPolicyRule[] | cdktf.IResolvable) {
     this._rule = value;
   }
   public resetRule() {
@@ -583,7 +583,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeSecurityPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeSecurityPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

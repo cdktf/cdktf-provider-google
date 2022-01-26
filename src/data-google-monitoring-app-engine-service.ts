@@ -119,7 +119,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
 
   // telemetry - computed: true, optional: false, required: false
   public telemetry(index: string) {
-    return new DataGoogleMonitoringAppEngineServiceTelemetry(this, 'telemetry', index);
+    return new DataGoogleMonitoringAppEngineServiceTelemetry(this, 'telemetry', index, false);
   }
 
   // =========

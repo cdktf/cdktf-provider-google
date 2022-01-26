@@ -73,8 +73,8 @@ export interface StorageObjectAccessControlTimeouts {
   readonly update?: string;
 }
 
-export function storageObjectAccessControlTimeoutsToTerraform(struct?: StorageObjectAccessControlTimeoutsOutputReference | StorageObjectAccessControlTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageObjectAccessControlTimeoutsToTerraform(struct?: StorageObjectAccessControlTimeoutsOutputReference | StorageObjectAccessControlTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -93,7 +93,7 @@ export class StorageObjectAccessControlTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -288,7 +288,7 @@ export class StorageObjectAccessControl extends cdktf.TerraformResource {
 
   // project_team - computed: true, optional: false, required: false
   public projectTeam(index: string) {
-    return new StorageObjectAccessControlProjectTeam(this, 'project_team', index);
+    return new StorageObjectAccessControlProjectTeam(this, 'project_team', index, false);
   }
 
   // role - computed: false, optional: false, required: true
@@ -305,7 +305,7 @@ export class StorageObjectAccessControl extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageObjectAccessControlTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageObjectAccessControlTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

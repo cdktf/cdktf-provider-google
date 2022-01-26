@@ -33,7 +33,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/active_directory_domain#labels ActiveDirectoryDomain#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/] 
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
@@ -74,8 +74,8 @@ export interface ActiveDirectoryDomainTimeouts {
   readonly update?: string;
 }
 
-export function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomainTimeoutsOutputReference | ActiveDirectoryDomainTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function activeDirectoryDomainTimeoutsToTerraform(struct?: ActiveDirectoryDomainTimeoutsOutputReference | ActiveDirectoryDomainTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class ActiveDirectoryDomainTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -245,7 +245,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   // authorized_networks - computed: false, optional: true, required: false
   private _authorizedNetworks?: string[]; 
   public get authorizedNetworks() {
-    return this.getListAttribute('authorized_networks');
+    return cdktf.Fn.tolist(this.getListAttribute('authorized_networks'));
   }
   public set authorizedNetworks(value: string[]) {
     this._authorizedNetworks = value;
@@ -282,12 +282,11 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -346,7 +345,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ActiveDirectoryDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ActiveDirectoryDomainTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -370,7 +369,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
       admin: cdktf.stringToTerraform(this._admin),
       authorized_networks: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedNetworks),
       domain_name: cdktf.stringToTerraform(this._domainName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       locations: cdktf.listMapper(cdktf.stringToTerraform)(this._locations),
       project: cdktf.stringToTerraform(this._project),
       reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),

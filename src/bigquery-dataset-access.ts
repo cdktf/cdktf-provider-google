@@ -99,8 +99,8 @@ export interface BigqueryDatasetAccessTimeouts {
   readonly delete?: string;
 }
 
-export function bigqueryDatasetAccessTimeoutsToTerraform(struct?: BigqueryDatasetAccessTimeoutsOutputReference | BigqueryDatasetAccessTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryDatasetAccessTimeoutsToTerraform(struct?: BigqueryDatasetAccessTimeoutsOutputReference | BigqueryDatasetAccessTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,7 +118,7 @@ export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -205,7 +205,7 @@ is 1,024 characters.
 }
 
 export function bigqueryDatasetAccessViewAToTerraform(struct?: BigqueryDatasetAccessViewAOutputReference | BigqueryDatasetAccessViewA): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -224,7 +224,7 @@ export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -351,7 +351,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
 
   // api_updated_member - computed: true, optional: false, required: false
   public get apiUpdatedMember() {
-    return this.getBooleanAttribute('api_updated_member') as any;
+    return this.getBooleanAttribute('api_updated_member');
   }
 
   // dataset_id - computed: false, optional: false, required: true
@@ -485,7 +485,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryDatasetAccessTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryDatasetAccessTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -501,7 +501,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   }
 
   // view - computed: false, optional: true, required: false
-  private _view = new BigqueryDatasetAccessViewAOutputReference(this as any, "view", true);
+  private _view = new BigqueryDatasetAccessViewAOutputReference(this, "view", true);
   public get view() {
     return this._view;
   }

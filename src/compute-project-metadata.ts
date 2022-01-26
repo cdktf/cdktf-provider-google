@@ -12,7 +12,7 @@ export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_metadata#metadata ComputeProjectMetadata#metadata}
   */
-  readonly metadata: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata: { [key: string]: string };
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
@@ -37,8 +37,8 @@ export interface ComputeProjectMetadataTimeouts {
   readonly delete?: string;
 }
 
-export function computeProjectMetadataTimeoutsToTerraform(struct?: ComputeProjectMetadataTimeoutsOutputReference | ComputeProjectMetadataTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeProjectMetadataTimeoutsToTerraform(struct?: ComputeProjectMetadataTimeoutsOutputReference | ComputeProjectMetadataTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -56,7 +56,7 @@ export class ComputeProjectMetadataTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -167,12 +167,11 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: false, required: true
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -197,7 +196,7 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeProjectMetadataTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeProjectMetadataTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -218,7 +217,7 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       project: cdktf.stringToTerraform(this._project),
       timeouts: computeProjectMetadataTimeoutsToTerraform(this._timeouts.internalValue),
     };

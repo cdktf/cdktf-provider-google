@@ -110,7 +110,7 @@ For more details about this behavior, see [this section](https://www.terraform.i
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_subnetwork#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
   */
-  readonly secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[];
+  readonly secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[] | cdktf.IResolvable;
   /**
   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
 If not specified IPV4_ONLY will be used. Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
@@ -142,8 +142,8 @@ export interface ComputeSubnetworkSecondaryIpRange {
   readonly rangeName?: string;
 }
 
-export function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSubnetworkSecondaryIpRange): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeSubnetworkSecondaryIpRangeToTerraform(struct?: ComputeSubnetworkSecondaryIpRange | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -199,7 +199,7 @@ Can only be specified if VPC flow logs for this subnetwork is enabled and "metad
 }
 
 export function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetworkLogConfigOutputReference | ComputeSubnetworkLogConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -220,7 +220,7 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -336,7 +336,7 @@ export class ComputeSubnetworkLogConfigOutputReference extends cdktf.ComplexObje
   // metadata_fields - computed: false, optional: true, required: false
   private _metadataFields?: string[]; 
   public get metadataFields() {
-    return this.getListAttribute('metadata_fields');
+    return cdktf.Fn.tolist(this.getListAttribute('metadata_fields'));
   }
   public set metadataFields(value: string[]) {
     this._metadataFields = value;
@@ -364,8 +364,8 @@ export interface ComputeSubnetworkTimeouts {
   readonly update?: string;
 }
 
-export function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkTimeoutsOutputReference | ComputeSubnetworkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeSubnetworkTimeoutsToTerraform(struct?: ComputeSubnetworkTimeoutsOutputReference | ComputeSubnetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -384,7 +384,7 @@ export class ComputeSubnetworkTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -627,7 +627,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   // private_ip_google_access - computed: false, optional: true, required: false
   private _privateIpGoogleAccess?: boolean | cdktf.IResolvable; 
   public get privateIpGoogleAccess() {
-    return this.getBooleanAttribute('private_ip_google_access') as any;
+    return this.getBooleanAttribute('private_ip_google_access');
   }
   public set privateIpGoogleAccess(value: boolean | cdktf.IResolvable) {
     this._privateIpGoogleAccess = value;
@@ -721,12 +721,12 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
 
   // secondary_ip_range - computed: true, optional: true, required: false
-  private _secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[]; 
+  private _secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[] | cdktf.IResolvable; 
   public get secondaryIpRange() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secondary_ip_range') as any;
+    return this.interpolationForAttribute('secondary_ip_range');
   }
-  public set secondaryIpRange(value: ComputeSubnetworkSecondaryIpRange[]) {
+  public set secondaryIpRange(value: ComputeSubnetworkSecondaryIpRange[] | cdktf.IResolvable) {
     this._secondaryIpRange = value;
   }
   public resetSecondaryIpRange() {
@@ -759,7 +759,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeSubnetworkLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeSubnetworkLogConfigOutputReference(this, "log_config", true);
   public get logConfig() {
     return this._logConfig;
   }
@@ -775,7 +775,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeSubnetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeSubnetworkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

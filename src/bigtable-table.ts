@@ -36,7 +36,7 @@ export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table#column_family BigtableTable#column_family}
   */
-  readonly columnFamily?: BigtableTableColumnFamily[];
+  readonly columnFamily?: BigtableTableColumnFamily[] | cdktf.IResolvable;
 }
 export interface BigtableTableColumnFamily {
   /**
@@ -47,8 +47,8 @@ export interface BigtableTableColumnFamily {
   readonly family: string;
 }
 
-export function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigtableTableColumnFamilyToTerraform(struct?: BigtableTableColumnFamily | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -165,12 +165,12 @@ export class BigtableTable extends cdktf.TerraformResource {
   }
 
   // column_family - computed: false, optional: true, required: false
-  private _columnFamily?: BigtableTableColumnFamily[]; 
+  private _columnFamily?: BigtableTableColumnFamily[] | cdktf.IResolvable; 
   public get columnFamily() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('column_family') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('column_family')));
   }
-  public set columnFamily(value: BigtableTableColumnFamily[]) {
+  public set columnFamily(value: BigtableTableColumnFamily[] | cdktf.IResolvable) {
     this._columnFamily = value;
   }
   public resetColumnFamily() {

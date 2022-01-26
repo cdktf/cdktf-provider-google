@@ -76,7 +76,7 @@ If 'MANUAL', 'certificateId' must be manually specified in order to configure SS
 }
 
 export function appEngineDomainMappingSslSettingsToTerraform(struct?: AppEngineDomainMappingSslSettingsOutputReference | AppEngineDomainMappingSslSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -141,6 +141,11 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
     return this._certificateId;
   }
 
+  // pending_managed_certificate_id - computed: true, optional: false, required: false
+  public get pendingManagedCertificateId() {
+    return this.getStringAttribute('pending_managed_certificate_id');
+  }
+
   // ssl_management_type - computed: false, optional: false, required: true
   private _sslManagementType?: string; 
   public get sslManagementType() {
@@ -169,8 +174,8 @@ export interface AppEngineDomainMappingTimeouts {
   readonly update?: string;
 }
 
-export function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappingTimeoutsOutputReference | AppEngineDomainMappingTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appEngineDomainMappingTimeoutsToTerraform(struct?: AppEngineDomainMappingTimeoutsOutputReference | AppEngineDomainMappingTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -189,7 +194,7 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -375,11 +380,11 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
 
   // resource_records - computed: true, optional: false, required: false
   public resourceRecords(index: string) {
-    return new AppEngineDomainMappingResourceRecords(this, 'resource_records', index);
+    return new AppEngineDomainMappingResourceRecords(this, 'resource_records', index, false);
   }
 
   // ssl_settings - computed: false, optional: true, required: false
-  private _sslSettings = new AppEngineDomainMappingSslSettingsOutputReference(this as any, "ssl_settings", true);
+  private _sslSettings = new AppEngineDomainMappingSslSettingsOutputReference(this, "ssl_settings", true);
   public get sslSettings() {
     return this._sslSettings;
   }
@@ -395,7 +400,7 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineDomainMappingTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineDomainMappingTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

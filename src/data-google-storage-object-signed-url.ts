@@ -30,7 +30,7 @@ export interface DataGoogleStorageObjectSignedUrlConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#extension_headers DataGoogleStorageObjectSignedUrl#extension_headers}
   */
-  readonly extensionHeaders?: { [key: string]: string } | cdktf.IResolvable;
+  readonly extensionHeaders?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_object_signed_url#http_method DataGoogleStorageObjectSignedUrl#http_method}
   */
@@ -165,12 +165,11 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   }
 
   // extension_headers - computed: false, optional: true, required: false
-  private _extensionHeaders?: { [key: string]: string } | cdktf.IResolvable; 
+  private _extensionHeaders?: { [key: string]: string }; 
   public get extensionHeaders() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('extension_headers') as any;
+    return this.getStringMapAttribute('extension_headers');
   }
-  public set extensionHeaders(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set extensionHeaders(value: { [key: string]: string }) {
     this._extensionHeaders = value;
   }
   public resetExtensionHeaders() {
@@ -231,7 +230,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
       content_type: cdktf.stringToTerraform(this._contentType),
       credentials: cdktf.stringToTerraform(this._credentials),
       duration: cdktf.stringToTerraform(this._duration),
-      extension_headers: cdktf.hashMapper(cdktf.anyToTerraform)(this._extensionHeaders),
+      extension_headers: cdktf.hashMapper(cdktf.stringToTerraform)(this._extensionHeaders),
       http_method: cdktf.stringToTerraform(this._httpMethod),
       path: cdktf.stringToTerraform(this._path),
     };

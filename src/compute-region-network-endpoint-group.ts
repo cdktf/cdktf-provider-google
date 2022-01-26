@@ -100,7 +100,7 @@ Example value: "v1", "v2".
 }
 
 export function computeRegionNetworkEndpointGroupAppEngineToTerraform(struct?: ComputeRegionNetworkEndpointGroupAppEngineOutputReference | ComputeRegionNetworkEndpointGroupAppEngine): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -119,7 +119,7 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -228,7 +228,7 @@ will parse them to { function = "function1" } and { function = "function2" } res
 }
 
 export function computeRegionNetworkEndpointGroupCloudFunctionToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference | ComputeRegionNetworkEndpointGroupCloudFunction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -246,7 +246,7 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -343,7 +343,7 @@ and { service="bar2", tag="foo2" } respectively.
 }
 
 export function computeRegionNetworkEndpointGroupCloudRunToTerraform(struct?: ComputeRegionNetworkEndpointGroupCloudRunOutputReference | ComputeRegionNetworkEndpointGroupCloudRun): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -362,7 +362,7 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -458,8 +458,8 @@ export interface ComputeRegionNetworkEndpointGroupTimeouts {
   readonly delete?: string;
 }
 
-export function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeoutsOutputReference | ComputeRegionNetworkEndpointGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRegionNetworkEndpointGroupTimeoutsToTerraform(struct?: ComputeRegionNetworkEndpointGroupTimeoutsOutputReference | ComputeRegionNetworkEndpointGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -477,7 +477,7 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -673,7 +673,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // app_engine - computed: false, optional: true, required: false
-  private _appEngine = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this as any, "app_engine", true);
+  private _appEngine = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this, "app_engine", true);
   public get appEngine() {
     return this._appEngine;
   }
@@ -689,7 +689,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // cloud_function - computed: false, optional: true, required: false
-  private _cloudFunction = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this as any, "cloud_function", true);
+  private _cloudFunction = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this, "cloud_function", true);
   public get cloudFunction() {
     return this._cloudFunction;
   }
@@ -705,7 +705,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // cloud_run - computed: false, optional: true, required: false
-  private _cloudRun = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this as any, "cloud_run", true);
+  private _cloudRun = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this, "cloud_run", true);
   public get cloudRun() {
     return this._cloudRun;
   }
@@ -721,7 +721,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

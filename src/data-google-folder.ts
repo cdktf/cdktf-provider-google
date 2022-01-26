@@ -98,7 +98,7 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   // lookup_organization - computed: false, optional: true, required: false
   private _lookupOrganization?: boolean | cdktf.IResolvable; 
   public get lookupOrganization() {
-    return this.getBooleanAttribute('lookup_organization') as any;
+    return this.getBooleanAttribute('lookup_organization');
   }
   public set lookupOrganization(value: boolean | cdktf.IResolvable) {
     this._lookupOrganization = value;

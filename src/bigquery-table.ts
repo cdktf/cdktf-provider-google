@@ -48,7 +48,7 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#labels BigqueryTable#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The ID of the project in which the resource belongs.
   * 
@@ -114,7 +114,7 @@ export interface BigqueryTableEncryptionConfiguration {
 }
 
 export function bigqueryTableEncryptionConfigurationToTerraform(struct?: BigqueryTableEncryptionConfigurationOutputReference | BigqueryTableEncryptionConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,7 +131,7 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -167,6 +167,11 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get kmsKeyNameInput() {
     return this._kmsKeyName;
+  }
+
+  // kms_key_version - computed: true, optional: false, required: false
+  public get kmsKeyVersion() {
+    return this.getStringAttribute('kms_key_version');
   }
 }
 export interface BigqueryTableExternalDataConfigurationCsvOptions {
@@ -209,7 +214,7 @@ export interface BigqueryTableExternalDataConfigurationCsvOptions {
 }
 
 export function bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationCsvOptionsOutputReference | BigqueryTableExternalDataConfigurationCsvOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -231,7 +236,7 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -289,7 +294,7 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
   // allow_jagged_rows - computed: false, optional: true, required: false
   private _allowJaggedRows?: boolean | cdktf.IResolvable; 
   public get allowJaggedRows() {
-    return this.getBooleanAttribute('allow_jagged_rows') as any;
+    return this.getBooleanAttribute('allow_jagged_rows');
   }
   public set allowJaggedRows(value: boolean | cdktf.IResolvable) {
     this._allowJaggedRows = value;
@@ -305,7 +310,7 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
   // allow_quoted_newlines - computed: false, optional: true, required: false
   private _allowQuotedNewlines?: boolean | cdktf.IResolvable; 
   public get allowQuotedNewlines() {
-    return this.getBooleanAttribute('allow_quoted_newlines') as any;
+    return this.getBooleanAttribute('allow_quoted_newlines');
   }
   public set allowQuotedNewlines(value: boolean | cdktf.IResolvable) {
     this._allowQuotedNewlines = value;
@@ -395,7 +400,7 @@ export interface BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
 }
 
 export function bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference | BigqueryTableExternalDataConfigurationGoogleSheetsOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -413,7 +418,7 @@ export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -498,7 +503,7 @@ export interface BigqueryTableExternalDataConfigurationHivePartitioningOptions {
 }
 
 export function bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference | BigqueryTableExternalDataConfigurationHivePartitioningOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -517,7 +522,7 @@ export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -573,7 +578,7 @@ export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutput
   // require_partition_filter - computed: false, optional: true, required: false
   private _requirePartitionFilter?: boolean | cdktf.IResolvable; 
   public get requirePartitionFilter() {
-    return this.getBooleanAttribute('require_partition_filter') as any;
+    return this.getBooleanAttribute('require_partition_filter');
   }
   public set requirePartitionFilter(value: boolean | cdktf.IResolvable) {
     this._requirePartitionFilter = value;
@@ -666,7 +671,7 @@ export interface BigqueryTableExternalDataConfiguration {
 }
 
 export function bigqueryTableExternalDataConfigurationToTerraform(struct?: BigqueryTableExternalDataConfigurationOutputReference | BigqueryTableExternalDataConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -692,7 +697,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -774,7 +779,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   // autodetect - computed: false, optional: false, required: true
   private _autodetect?: boolean | cdktf.IResolvable; 
   public get autodetect() {
-    return this.getBooleanAttribute('autodetect') as any;
+    return this.getBooleanAttribute('autodetect');
   }
   public set autodetect(value: boolean | cdktf.IResolvable) {
     this._autodetect = value;
@@ -803,7 +808,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   // ignore_unknown_values - computed: false, optional: true, required: false
   private _ignoreUnknownValues?: boolean | cdktf.IResolvable; 
   public get ignoreUnknownValues() {
-    return this.getBooleanAttribute('ignore_unknown_values') as any;
+    return this.getBooleanAttribute('ignore_unknown_values');
   }
   public set ignoreUnknownValues(value: boolean | cdktf.IResolvable) {
     this._ignoreUnknownValues = value;
@@ -875,7 +880,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   // csv_options - computed: false, optional: true, required: false
-  private _csvOptions = new BigqueryTableExternalDataConfigurationCsvOptionsOutputReference(this as any, "csv_options", true);
+  private _csvOptions = new BigqueryTableExternalDataConfigurationCsvOptionsOutputReference(this, "csv_options", true);
   public get csvOptions() {
     return this._csvOptions;
   }
@@ -891,7 +896,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   // google_sheets_options - computed: false, optional: true, required: false
-  private _googleSheetsOptions = new BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference(this as any, "google_sheets_options", true);
+  private _googleSheetsOptions = new BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference(this, "google_sheets_options", true);
   public get googleSheetsOptions() {
     return this._googleSheetsOptions;
   }
@@ -907,7 +912,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   // hive_partitioning_options - computed: false, optional: true, required: false
-  private _hivePartitioningOptions = new BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference(this as any, "hive_partitioning_options", true);
+  private _hivePartitioningOptions = new BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference(this, "hive_partitioning_options", true);
   public get hivePartitioningOptions() {
     return this._hivePartitioningOptions;
   }
@@ -944,7 +949,7 @@ export interface BigqueryTableMaterializedView {
 }
 
 export function bigqueryTableMaterializedViewToTerraform(struct?: BigqueryTableMaterializedViewOutputReference | BigqueryTableMaterializedView): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -963,7 +968,7 @@ export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1003,7 +1008,7 @@ export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexO
   // enable_refresh - computed: false, optional: true, required: false
   private _enableRefresh?: boolean | cdktf.IResolvable; 
   public get enableRefresh() {
-    return this.getBooleanAttribute('enable_refresh') as any;
+    return this.getBooleanAttribute('enable_refresh');
   }
   public set enableRefresh(value: boolean | cdktf.IResolvable) {
     this._enableRefresh = value;
@@ -1067,7 +1072,7 @@ export interface BigqueryTableRangePartitioningRange {
 }
 
 export function bigqueryTableRangePartitioningRangeToTerraform(struct?: BigqueryTableRangePartitioningRangeOutputReference | BigqueryTableRangePartitioningRange): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1086,7 +1091,7 @@ export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1178,7 +1183,7 @@ export interface BigqueryTableRangePartitioning {
 }
 
 export function bigqueryTableRangePartitioningToTerraform(struct?: BigqueryTableRangePartitioningOutputReference | BigqueryTableRangePartitioning): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1196,7 +1201,7 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1241,7 +1246,7 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
   }
 
   // range - computed: false, optional: false, required: true
-  private _range = new BigqueryTableRangePartitioningRangeOutputReference(this as any, "range", true);
+  private _range = new BigqueryTableRangePartitioningRangeOutputReference(this, "range", true);
   public get range() {
     return this._range;
   }
@@ -1281,7 +1286,7 @@ export interface BigqueryTableTimePartitioning {
 }
 
 export function bigqueryTableTimePartitioningToTerraform(struct?: BigqueryTableTimePartitioningOutputReference | BigqueryTableTimePartitioning): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1301,7 +1306,7 @@ export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1379,7 +1384,7 @@ export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexO
   // require_partition_filter - computed: false, optional: true, required: false
   private _requirePartitionFilter?: boolean | cdktf.IResolvable; 
   public get requirePartitionFilter() {
-    return this.getBooleanAttribute('require_partition_filter') as any;
+    return this.getBooleanAttribute('require_partition_filter');
   }
   public set requirePartitionFilter(value: boolean | cdktf.IResolvable) {
     this._requirePartitionFilter = value;
@@ -1421,7 +1426,7 @@ export interface BigqueryTableView {
 }
 
 export function bigqueryTableViewToTerraform(struct?: BigqueryTableViewOutputReference | BigqueryTableView): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1439,7 +1444,7 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1486,7 +1491,7 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
   // use_legacy_sql - computed: false, optional: true, required: false
   private _useLegacySql?: boolean | cdktf.IResolvable; 
   public get useLegacySql() {
-    return this.getBooleanAttribute('use_legacy_sql') as any;
+    return this.getBooleanAttribute('use_legacy_sql');
   }
   public set useLegacySql(value: boolean | cdktf.IResolvable) {
     this._useLegacySql = value;
@@ -1591,7 +1596,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection') as any;
+    return this.getBooleanAttribute('deletion_protection');
   }
   public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
@@ -1663,12 +1668,11 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1760,7 +1764,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new BigqueryTableEncryptionConfigurationOutputReference(this as any, "encryption_configuration", true);
+  private _encryptionConfiguration = new BigqueryTableEncryptionConfigurationOutputReference(this, "encryption_configuration", true);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
@@ -1776,7 +1780,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // external_data_configuration - computed: false, optional: true, required: false
-  private _externalDataConfiguration = new BigqueryTableExternalDataConfigurationOutputReference(this as any, "external_data_configuration", true);
+  private _externalDataConfiguration = new BigqueryTableExternalDataConfigurationOutputReference(this, "external_data_configuration", true);
   public get externalDataConfiguration() {
     return this._externalDataConfiguration;
   }
@@ -1792,7 +1796,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // materialized_view - computed: false, optional: true, required: false
-  private _materializedView = new BigqueryTableMaterializedViewOutputReference(this as any, "materialized_view", true);
+  private _materializedView = new BigqueryTableMaterializedViewOutputReference(this, "materialized_view", true);
   public get materializedView() {
     return this._materializedView;
   }
@@ -1808,7 +1812,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // range_partitioning - computed: false, optional: true, required: false
-  private _rangePartitioning = new BigqueryTableRangePartitioningOutputReference(this as any, "range_partitioning", true);
+  private _rangePartitioning = new BigqueryTableRangePartitioningOutputReference(this, "range_partitioning", true);
   public get rangePartitioning() {
     return this._rangePartitioning;
   }
@@ -1824,7 +1828,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // time_partitioning - computed: false, optional: true, required: false
-  private _timePartitioning = new BigqueryTableTimePartitioningOutputReference(this as any, "time_partitioning", true);
+  private _timePartitioning = new BigqueryTableTimePartitioningOutputReference(this, "time_partitioning", true);
   public get timePartitioning() {
     return this._timePartitioning;
   }
@@ -1840,7 +1844,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // view - computed: false, optional: true, required: false
-  private _view = new BigqueryTableViewOutputReference(this as any, "view", true);
+  private _view = new BigqueryTableViewOutputReference(this, "view", true);
   public get view() {
     return this._view;
   }
@@ -1867,7 +1871,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       expiration_time: cdktf.numberToTerraform(this._expirationTime),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       schema: cdktf.stringToTerraform(this._schema),
       table_id: cdktf.stringToTerraform(this._tableId),

@@ -36,7 +36,7 @@ export class DataGoogleComputeInstanceAdvancedMachineFeatures extends cdktf.Comp
 
   // enable_nested_virtualization - computed: true, optional: false, required: false
   public get enableNestedVirtualization() {
-    return this.getBooleanAttribute('enable_nested_virtualization') as any;
+    return this.getBooleanAttribute('enable_nested_virtualization');
   }
 
   // threads_per_core - computed: true, optional: false, required: false
@@ -85,8 +85,7 @@ export class DataGoogleComputeInstanceBootDiskInitializeParams extends cdktf.Com
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
 
   // size - computed: true, optional: false, required: false
@@ -103,7 +102,7 @@ export class DataGoogleComputeInstanceBootDisk extends cdktf.ComplexComputedList
 
   // auto_delete - computed: true, optional: false, required: false
   public get autoDelete() {
-    return this.getBooleanAttribute('auto_delete') as any;
+    return this.getBooleanAttribute('auto_delete');
   }
 
   // device_name - computed: true, optional: false, required: false
@@ -124,7 +123,7 @@ export class DataGoogleComputeInstanceBootDisk extends cdktf.ComplexComputedList
   // initialize_params - computed: true, optional: false, required: false
   public get initializeParams() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('initialize_params') as any;
+    return this.interpolationForAttribute('initialize_params');
   }
 
   // kms_key_self_link - computed: true, optional: false, required: false
@@ -146,7 +145,7 @@ export class DataGoogleComputeInstanceConfidentialInstanceConfig extends cdktf.C
 
   // enable_confidential_compute - computed: true, optional: false, required: false
   public get enableConfidentialCompute() {
-    return this.getBooleanAttribute('enable_confidential_compute') as any;
+    return this.getBooleanAttribute('enable_confidential_compute');
   }
 }
 export class DataGoogleComputeInstanceGuestAccelerator extends cdktf.ComplexComputedList {
@@ -217,19 +216,19 @@ export class DataGoogleComputeInstanceNetworkInterface extends cdktf.ComplexComp
   // access_config - computed: true, optional: false, required: false
   public get accessConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('access_config') as any;
+    return this.interpolationForAttribute('access_config');
   }
 
   // alias_ip_range - computed: true, optional: false, required: false
   public get aliasIpRange() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('alias_ip_range') as any;
+    return this.interpolationForAttribute('alias_ip_range');
   }
 
   // ipv6_access_config - computed: true, optional: false, required: false
   public get ipv6AccessConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ipv6_access_config') as any;
+    return this.interpolationForAttribute('ipv6_access_config');
   }
 
   // ipv6_access_type - computed: true, optional: false, required: false
@@ -289,7 +288,7 @@ export class DataGoogleComputeInstanceReservationAffinity extends cdktf.ComplexC
   // specific_reservation - computed: true, optional: false, required: false
   public get specificReservation() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('specific_reservation') as any;
+    return this.interpolationForAttribute('specific_reservation');
   }
 
   // type - computed: true, optional: false, required: false
@@ -311,14 +310,14 @@ export class DataGoogleComputeInstanceSchedulingNodeAffinities extends cdktf.Com
 
   // values - computed: true, optional: false, required: false
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
 }
 export class DataGoogleComputeInstanceScheduling extends cdktf.ComplexComputedList {
 
   // automatic_restart - computed: true, optional: false, required: false
   public get automaticRestart() {
-    return this.getBooleanAttribute('automatic_restart') as any;
+    return this.getBooleanAttribute('automatic_restart');
   }
 
   // min_node_cpus - computed: true, optional: false, required: false
@@ -329,7 +328,7 @@ export class DataGoogleComputeInstanceScheduling extends cdktf.ComplexComputedLi
   // node_affinities - computed: true, optional: false, required: false
   public get nodeAffinities() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_affinities') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('node_affinities')));
   }
 
   // on_host_maintenance - computed: true, optional: false, required: false
@@ -339,7 +338,7 @@ export class DataGoogleComputeInstanceScheduling extends cdktf.ComplexComputedLi
 
   // preemptible - computed: true, optional: false, required: false
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible') as any;
+    return this.getBooleanAttribute('preemptible');
   }
 }
 export class DataGoogleComputeInstanceScratchDisk extends cdktf.ComplexComputedList {
@@ -358,24 +357,24 @@ export class DataGoogleComputeInstanceServiceAccount extends cdktf.ComplexComput
 
   // scopes - computed: true, optional: false, required: false
   public get scopes() {
-    return this.getListAttribute('scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('scopes'));
   }
 }
 export class DataGoogleComputeInstanceShieldedInstanceConfig extends cdktf.ComplexComputedList {
 
   // enable_integrity_monitoring - computed: true, optional: false, required: false
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
 
   // enable_secure_boot - computed: true, optional: false, required: false
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
 
   // enable_vtpm - computed: true, optional: false, required: false
   public get enableVtpm() {
-    return this.getBooleanAttribute('enable_vtpm') as any;
+    return this.getBooleanAttribute('enable_vtpm');
   }
 }
 
@@ -423,32 +422,32 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // advanced_machine_features - computed: true, optional: false, required: false
   public advancedMachineFeatures(index: string) {
-    return new DataGoogleComputeInstanceAdvancedMachineFeatures(this, 'advanced_machine_features', index);
+    return new DataGoogleComputeInstanceAdvancedMachineFeatures(this, 'advanced_machine_features', index, false);
   }
 
   // allow_stopping_for_update - computed: true, optional: false, required: false
   public get allowStoppingForUpdate() {
-    return this.getBooleanAttribute('allow_stopping_for_update') as any;
+    return this.getBooleanAttribute('allow_stopping_for_update');
   }
 
   // attached_disk - computed: true, optional: false, required: false
   public attachedDisk(index: string) {
-    return new DataGoogleComputeInstanceAttachedDisk(this, 'attached_disk', index);
+    return new DataGoogleComputeInstanceAttachedDisk(this, 'attached_disk', index, false);
   }
 
   // boot_disk - computed: true, optional: false, required: false
   public bootDisk(index: string) {
-    return new DataGoogleComputeInstanceBootDisk(this, 'boot_disk', index);
+    return new DataGoogleComputeInstanceBootDisk(this, 'boot_disk', index, false);
   }
 
   // can_ip_forward - computed: true, optional: false, required: false
   public get canIpForward() {
-    return this.getBooleanAttribute('can_ip_forward') as any;
+    return this.getBooleanAttribute('can_ip_forward');
   }
 
   // confidential_instance_config - computed: true, optional: false, required: false
   public confidentialInstanceConfig(index: string) {
-    return new DataGoogleComputeInstanceConfidentialInstanceConfig(this, 'confidential_instance_config', index);
+    return new DataGoogleComputeInstanceConfidentialInstanceConfig(this, 'confidential_instance_config', index, false);
   }
 
   // cpu_platform - computed: true, optional: false, required: false
@@ -463,7 +462,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // deletion_protection - computed: true, optional: false, required: false
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection') as any;
+    return this.getBooleanAttribute('deletion_protection');
   }
 
   // description - computed: true, optional: false, required: false
@@ -478,12 +477,12 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // enable_display - computed: true, optional: false, required: false
   public get enableDisplay() {
-    return this.getBooleanAttribute('enable_display') as any;
+    return this.getBooleanAttribute('enable_display');
   }
 
   // guest_accelerator - computed: true, optional: false, required: false
   public guestAccelerator(index: string) {
-    return new DataGoogleComputeInstanceGuestAccelerator(this, 'guest_accelerator', index);
+    return new DataGoogleComputeInstanceGuestAccelerator(this, 'guest_accelerator', index, false);
   }
 
   // hostname - computed: true, optional: false, required: false
@@ -507,7 +506,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -517,7 +516,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string {
+  public metadata(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'metadata').lookup(key);
   }
 
@@ -554,7 +553,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // network_interface - computed: true, optional: false, required: false
   public networkInterface(index: string) {
-    return new DataGoogleComputeInstanceNetworkInterface(this, 'network_interface', index);
+    return new DataGoogleComputeInstanceNetworkInterface(this, 'network_interface', index, false);
   }
 
   // project - computed: false, optional: true, required: false
@@ -575,7 +574,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // reservation_affinity - computed: true, optional: false, required: false
   public reservationAffinity(index: string) {
-    return new DataGoogleComputeInstanceReservationAffinity(this, 'reservation_affinity', index);
+    return new DataGoogleComputeInstanceReservationAffinity(this, 'reservation_affinity', index, false);
   }
 
   // resource_policies - computed: true, optional: false, required: false
@@ -585,12 +584,12 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // scheduling - computed: true, optional: false, required: false
   public scheduling(index: string) {
-    return new DataGoogleComputeInstanceScheduling(this, 'scheduling', index);
+    return new DataGoogleComputeInstanceScheduling(this, 'scheduling', index, false);
   }
 
   // scratch_disk - computed: true, optional: false, required: false
   public scratchDisk(index: string) {
-    return new DataGoogleComputeInstanceScratchDisk(this, 'scratch_disk', index);
+    return new DataGoogleComputeInstanceScratchDisk(this, 'scratch_disk', index, false);
   }
 
   // self_link - computed: false, optional: true, required: false
@@ -611,17 +610,17 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
   // service_account - computed: true, optional: false, required: false
   public serviceAccount(index: string) {
-    return new DataGoogleComputeInstanceServiceAccount(this, 'service_account', index);
+    return new DataGoogleComputeInstanceServiceAccount(this, 'service_account', index, false);
   }
 
   // shielded_instance_config - computed: true, optional: false, required: false
   public shieldedInstanceConfig(index: string) {
-    return new DataGoogleComputeInstanceShieldedInstanceConfig(this, 'shielded_instance_config', index);
+    return new DataGoogleComputeInstanceShieldedInstanceConfig(this, 'shielded_instance_config', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
-    return this.getListAttribute('tags');
+    return cdktf.Fn.tolist(this.getListAttribute('tags'));
   }
 
   // tags_fingerprint - computed: true, optional: false, required: false

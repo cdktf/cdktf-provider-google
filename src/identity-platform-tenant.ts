@@ -59,8 +59,8 @@ export interface IdentityPlatformTenantTimeouts {
   readonly update?: string;
 }
 
-export function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTenantTimeoutsOutputReference | IdentityPlatformTenantTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function identityPlatformTenantTimeoutsToTerraform(struct?: IdentityPlatformTenantTimeoutsOutputReference | IdentityPlatformTenantTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -79,7 +79,7 @@ export class IdentityPlatformTenantTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -212,7 +212,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // allow_password_signup - computed: false, optional: true, required: false
   private _allowPasswordSignup?: boolean | cdktf.IResolvable; 
   public get allowPasswordSignup() {
-    return this.getBooleanAttribute('allow_password_signup') as any;
+    return this.getBooleanAttribute('allow_password_signup');
   }
   public set allowPasswordSignup(value: boolean | cdktf.IResolvable) {
     this._allowPasswordSignup = value;
@@ -228,7 +228,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // disable_auth - computed: false, optional: true, required: false
   private _disableAuth?: boolean | cdktf.IResolvable; 
   public get disableAuth() {
-    return this.getBooleanAttribute('disable_auth') as any;
+    return this.getBooleanAttribute('disable_auth');
   }
   public set disableAuth(value: boolean | cdktf.IResolvable) {
     this._disableAuth = value;
@@ -257,7 +257,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   // enable_email_link_signin - computed: false, optional: true, required: false
   private _enableEmailLinkSignin?: boolean | cdktf.IResolvable; 
   public get enableEmailLinkSignin() {
-    return this.getBooleanAttribute('enable_email_link_signin') as any;
+    return this.getBooleanAttribute('enable_email_link_signin');
   }
   public set enableEmailLinkSignin(value: boolean | cdktf.IResolvable) {
     this._enableEmailLinkSignin = value;
@@ -297,7 +297,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IdentityPlatformTenantTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IdentityPlatformTenantTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -39,7 +39,7 @@ Must not contain more than one entry. Must contain the entry
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group#labels CloudIdentityGroup#labels}
   */
-  readonly labels: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels: { [key: string]: string };
   /**
   * The resource name of the entity under which this Group resides in the
 Cloud Identity resource hierarchy.
@@ -94,7 +94,7 @@ and must be in the form of 'identitysources/{identity_source_id}'.
 }
 
 export function cloudIdentityGroupGroupKeyToTerraform(struct?: CloudIdentityGroupGroupKeyOutputReference | CloudIdentityGroupGroupKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export class CloudIdentityGroupGroupKeyOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -187,8 +187,8 @@ export interface CloudIdentityGroupTimeouts {
   readonly update?: string;
 }
 
-export function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeoutsOutputReference | CloudIdentityGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudIdentityGroupTimeoutsToTerraform(struct?: CloudIdentityGroupTimeoutsOutputReference | CloudIdentityGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -207,7 +207,7 @@ export class CloudIdentityGroupTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -397,12 +397,11 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: false, required: true
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -434,7 +433,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // group_key - computed: false, optional: false, required: true
-  private _groupKey = new CloudIdentityGroupGroupKeyOutputReference(this as any, "group_key", true);
+  private _groupKey = new CloudIdentityGroupGroupKeyOutputReference(this, "group_key", true);
   public get groupKey() {
     return this._groupKey;
   }
@@ -447,7 +446,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudIdentityGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudIdentityGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -471,7 +470,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       initial_group_config: cdktf.stringToTerraform(this._initialGroupConfig),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       parent: cdktf.stringToTerraform(this._parent),
       group_key: cloudIdentityGroupGroupKeyToTerraform(this._groupKey.internalValue),
       timeouts: cloudIdentityGroupTimeoutsToTerraform(this._timeouts.internalValue),

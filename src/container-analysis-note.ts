@@ -52,7 +52,7 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_note#related_url ContainerAnalysisNote#related_url}
   */
-  readonly relatedUrl?: ContainerAnalysisNoteRelatedUrl[];
+  readonly relatedUrl?: ContainerAnalysisNoteRelatedUrl[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -71,7 +71,7 @@ example "qa".
 }
 
 export function containerAnalysisNoteAttestationAuthorityHintToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityHintOutputReference | ContainerAnalysisNoteAttestationAuthorityHint): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -136,7 +136,7 @@ export interface ContainerAnalysisNoteAttestationAuthority {
 }
 
 export function containerAnalysisNoteAttestationAuthorityToTerraform(struct?: ContainerAnalysisNoteAttestationAuthorityOutputReference | ContainerAnalysisNoteAttestationAuthority): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -153,7 +153,7 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -179,7 +179,7 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
   }
 
   // hint - computed: false, optional: false, required: true
-  private _hint = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this as any, "hint", true);
+  private _hint = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this, "hint", true);
   public get hint() {
     return this._hint;
   }
@@ -206,8 +206,8 @@ export interface ContainerAnalysisNoteRelatedUrl {
   readonly url: string;
 }
 
-export function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNoteRelatedUrl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerAnalysisNoteRelatedUrlToTerraform(struct?: ContainerAnalysisNoteRelatedUrl | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -232,8 +232,8 @@ export interface ContainerAnalysisNoteTimeouts {
   readonly update?: string;
 }
 
-export function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeoutsOutputReference | ContainerAnalysisNoteTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerAnalysisNoteTimeoutsToTerraform(struct?: ContainerAnalysisNoteTimeoutsOutputReference | ContainerAnalysisNoteTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -252,7 +252,7 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -464,7 +464,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   // related_note_names - computed: false, optional: true, required: false
   private _relatedNoteNames?: string[]; 
   public get relatedNoteNames() {
-    return this.getListAttribute('related_note_names');
+    return cdktf.Fn.tolist(this.getListAttribute('related_note_names'));
   }
   public set relatedNoteNames(value: string[]) {
     this._relatedNoteNames = value;
@@ -499,7 +499,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // attestation_authority - computed: false, optional: false, required: true
-  private _attestationAuthority = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this as any, "attestation_authority", true);
+  private _attestationAuthority = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this, "attestation_authority", true);
   public get attestationAuthority() {
     return this._attestationAuthority;
   }
@@ -512,12 +512,12 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // related_url - computed: false, optional: true, required: false
-  private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[]; 
+  private _relatedUrl?: ContainerAnalysisNoteRelatedUrl[] | cdktf.IResolvable; 
   public get relatedUrl() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('related_url') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('related_url')));
   }
-  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[]) {
+  public set relatedUrl(value: ContainerAnalysisNoteRelatedUrl[] | cdktf.IResolvable) {
     this._relatedUrl = value;
   }
   public resetRelatedUrl() {
@@ -529,7 +529,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerAnalysisNoteTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerAnalysisNoteTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

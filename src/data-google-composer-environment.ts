@@ -50,7 +50,7 @@ export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy ext
 
   // use_ip_aliases - computed: true, optional: false, required: false
   public get useIpAliases() {
-    return this.getBooleanAttribute('use_ip_aliases') as any;
+    return this.getBooleanAttribute('use_ip_aliases');
   }
 }
 export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.ComplexComputedList {
@@ -63,7 +63,7 @@ export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.Complex
   // ip_allocation_policy - computed: true, optional: false, required: false
   public get ipAllocationPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_allocation_policy') as any;
+    return this.interpolationForAttribute('ip_allocation_policy');
   }
 
   // machine_type - computed: true, optional: false, required: false
@@ -78,7 +78,7 @@ export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.Complex
 
   // oauth_scopes - computed: true, optional: false, required: false
   public get oauthScopes() {
-    return this.getListAttribute('oauth_scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('oauth_scopes'));
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -93,7 +93,7 @@ export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.Complex
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
-    return this.getListAttribute('tags');
+    return cdktf.Fn.tolist(this.getListAttribute('tags'));
   }
 
   // zone - computed: true, optional: false, required: false
@@ -110,7 +110,7 @@ export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig extends
 
   // enable_private_endpoint - computed: true, optional: false, required: false
   public get enablePrivateEndpoint() {
-    return this.getBooleanAttribute('enable_private_endpoint') as any;
+    return this.getBooleanAttribute('enable_private_endpoint');
   }
 
   // master_ipv4_cidr_block - computed: true, optional: false, required: false
@@ -127,14 +127,12 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
 
   // airflow_config_overrides - computed: true, optional: false, required: false
   public get airflowConfigOverrides() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('airflow_config_overrides') as any;
+    return this.getStringMapAttribute('airflow_config_overrides');
   }
 
   // env_variables - computed: true, optional: false, required: false
   public get envVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('env_variables') as any;
+    return this.getStringMapAttribute('env_variables');
   }
 
   // image_version - computed: true, optional: false, required: false
@@ -144,8 +142,7 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
 
   // pypi_packages - computed: true, optional: false, required: false
   public get pypiPackages() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('pypi_packages') as any;
+    return this.getStringMapAttribute('pypi_packages');
   }
 
   // python_version - computed: true, optional: false, required: false
@@ -178,7 +175,7 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
   // node_config - computed: true, optional: false, required: false
   public get nodeConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_config') as any;
+    return this.interpolationForAttribute('node_config');
   }
 
   // node_count - computed: true, optional: false, required: false
@@ -189,13 +186,13 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
   // private_environment_config - computed: true, optional: false, required: false
   public get privateEnvironmentConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('private_environment_config') as any;
+    return this.interpolationForAttribute('private_environment_config');
   }
 
   // software_config - computed: true, optional: false, required: false
   public get softwareConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('software_config') as any;
+    return this.interpolationForAttribute('software_config');
   }
 }
 
@@ -242,7 +239,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
   // config - computed: true, optional: false, required: false
   public config(index: string) {
-    return new DataGoogleComposerEnvironmentConfigA(this, 'config', index);
+    return new DataGoogleComposerEnvironmentConfigA(this, 'config', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -251,7 +248,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 

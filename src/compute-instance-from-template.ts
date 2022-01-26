@@ -18,7 +18,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#attached_disk ComputeInstanceFromTemplate#attached_disk}
   */
-  readonly attachedDisk?: ComputeInstanceFromTemplateAttachedDisk[];
+  readonly attachedDisk?: ComputeInstanceFromTemplateAttachedDisk[] | cdktf.IResolvable;
   /**
   * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
   * 
@@ -54,7 +54,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#guest_accelerator ComputeInstanceFromTemplate#guest_accelerator}
   */
-  readonly guestAccelerator?: ComputeInstanceFromTemplateGuestAccelerator[];
+  readonly guestAccelerator?: ComputeInstanceFromTemplateGuestAccelerator[] | cdktf.IResolvable;
   /**
   * A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
   * 
@@ -66,7 +66,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#labels ComputeInstanceFromTemplate#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The machine type to create.
   * 
@@ -78,7 +78,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#metadata ComputeInstanceFromTemplate#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Metadata startup scripts made available within the instance.
   * 
@@ -114,13 +114,13 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#scratch_disk ComputeInstanceFromTemplate#scratch_disk}
   */
-  readonly scratchDisk?: ComputeInstanceFromTemplateScratchDisk[];
+  readonly scratchDisk?: ComputeInstanceFromTemplateScratchDisk[] | cdktf.IResolvable;
   /**
   * The service account to attach to the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#service_account ComputeInstanceFromTemplate#service_account}
   */
-  readonly serviceAccount?: ComputeInstanceFromTemplateServiceAccount[];
+  readonly serviceAccount?: ComputeInstanceFromTemplateServiceAccount[] | cdktf.IResolvable;
   /**
   * Name or self link of an instance template to create the instance based on.
   * 
@@ -162,7 +162,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#network_interface ComputeInstanceFromTemplate#network_interface}
   */
-  readonly networkInterface?: ComputeInstanceFromTemplateNetworkInterface[];
+  readonly networkInterface?: ComputeInstanceFromTemplateNetworkInterface[] | cdktf.IResolvable;
   /**
   * reservation_affinity block
   * 
@@ -215,8 +215,8 @@ export interface ComputeInstanceFromTemplateAttachedDisk {
   readonly source?: string;
 }
 
-export function computeInstanceFromTemplateAttachedDiskToTerraform(struct?: ComputeInstanceFromTemplateAttachedDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateAttachedDiskToTerraform(struct?: ComputeInstanceFromTemplateAttachedDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -241,8 +241,8 @@ export interface ComputeInstanceFromTemplateGuestAccelerator {
   readonly type?: string;
 }
 
-export function computeInstanceFromTemplateGuestAcceleratorToTerraform(struct?: ComputeInstanceFromTemplateGuestAccelerator): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateGuestAcceleratorToTerraform(struct?: ComputeInstanceFromTemplateGuestAccelerator | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -259,8 +259,8 @@ export interface ComputeInstanceFromTemplateScratchDisk {
   readonly interface?: string;
 }
 
-export function computeInstanceFromTemplateScratchDiskToTerraform(struct?: ComputeInstanceFromTemplateScratchDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateScratchDiskToTerraform(struct?: ComputeInstanceFromTemplateScratchDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -280,8 +280,8 @@ export interface ComputeInstanceFromTemplateServiceAccount {
   readonly scopes?: string[];
 }
 
-export function computeInstanceFromTemplateServiceAccountToTerraform(struct?: ComputeInstanceFromTemplateServiceAccount): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateServiceAccountToTerraform(struct?: ComputeInstanceFromTemplateServiceAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -307,7 +307,7 @@ export interface ComputeInstanceFromTemplateAdvancedMachineFeatures {
 }
 
 export function computeInstanceFromTemplateAdvancedMachineFeaturesToTerraform(struct?: ComputeInstanceFromTemplateAdvancedMachineFeaturesOutputReference | ComputeInstanceFromTemplateAdvancedMachineFeatures): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -325,7 +325,7 @@ export class ComputeInstanceFromTemplateAdvancedMachineFeaturesOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -359,7 +359,7 @@ export class ComputeInstanceFromTemplateAdvancedMachineFeaturesOutputReference e
   // enable_nested_virtualization - computed: true, optional: true, required: false
   private _enableNestedVirtualization?: boolean | cdktf.IResolvable; 
   public get enableNestedVirtualization() {
-    return this.getBooleanAttribute('enable_nested_virtualization') as any;
+    return this.getBooleanAttribute('enable_nested_virtualization');
   }
   public set enableNestedVirtualization(value: boolean | cdktf.IResolvable) {
     this._enableNestedVirtualization = value;
@@ -400,7 +400,7 @@ export interface ComputeInstanceFromTemplateBootDiskInitializeParams {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#labels ComputeInstanceFromTemplate#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The size of the image in gigabytes.
   * 
@@ -416,13 +416,13 @@ export interface ComputeInstanceFromTemplateBootDiskInitializeParams {
 }
 
 export function computeInstanceFromTemplateBootDiskInitializeParamsToTerraform(struct?: ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference | ComputeInstanceFromTemplateBootDiskInitializeParams): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     image: cdktf.stringToTerraform(struct!.image),
-    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     size: cdktf.numberToTerraform(struct!.size),
     type: cdktf.stringToTerraform(struct!.type),
   }
@@ -436,7 +436,7 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -496,12 +496,11 @@ export class ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference 
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -590,7 +589,7 @@ export interface ComputeInstanceFromTemplateBootDisk {
 }
 
 export function computeInstanceFromTemplateBootDiskToTerraform(struct?: ComputeInstanceFromTemplateBootDiskOutputReference | ComputeInstanceFromTemplateBootDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -613,7 +612,7 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -677,7 +676,7 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
   // auto_delete - computed: true, optional: true, required: false
   private _autoDelete?: boolean | cdktf.IResolvable; 
   public get autoDelete() {
-    return this.getBooleanAttribute('auto_delete') as any;
+    return this.getBooleanAttribute('auto_delete');
   }
   public set autoDelete(value: boolean | cdktf.IResolvable) {
     this._autoDelete = value;
@@ -720,6 +719,11 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionKeyRawInput() {
     return this._diskEncryptionKeyRaw;
+  }
+
+  // disk_encryption_key_sha256 - computed: true, optional: false, required: false
+  public get diskEncryptionKeySha256() {
+    return this.getStringAttribute('disk_encryption_key_sha256');
   }
 
   // kms_key_self_link - computed: true, optional: true, required: false
@@ -771,7 +775,7 @@ export class ComputeInstanceFromTemplateBootDiskOutputReference extends cdktf.Co
   }
 
   // initialize_params - computed: false, optional: true, required: false
-  private _initializeParams = new ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference(this as any, "initialize_params", true);
+  private _initializeParams = new ComputeInstanceFromTemplateBootDiskInitializeParamsOutputReference(this, "initialize_params", true);
   public get initializeParams() {
     return this._initializeParams;
   }
@@ -796,7 +800,7 @@ export interface ComputeInstanceFromTemplateConfidentialInstanceConfig {
 }
 
 export function computeInstanceFromTemplateConfidentialInstanceConfigToTerraform(struct?: ComputeInstanceFromTemplateConfidentialInstanceConfigOutputReference | ComputeInstanceFromTemplateConfidentialInstanceConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -813,7 +817,7 @@ export class ComputeInstanceFromTemplateConfidentialInstanceConfigOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -841,7 +845,7 @@ export class ComputeInstanceFromTemplateConfidentialInstanceConfigOutputReferenc
   // enable_confidential_compute - computed: false, optional: false, required: true
   private _enableConfidentialCompute?: boolean | cdktf.IResolvable; 
   public get enableConfidentialCompute() {
-    return this.getBooleanAttribute('enable_confidential_compute') as any;
+    return this.getBooleanAttribute('enable_confidential_compute');
   }
   public set enableConfidentialCompute(value: boolean | cdktf.IResolvable) {
     this._enableConfidentialCompute = value;
@@ -866,8 +870,8 @@ export interface ComputeInstanceFromTemplateNetworkInterfaceAccessConfig {
   readonly publicPtrDomainName?: string;
 }
 
-export function computeInstanceFromTemplateNetworkInterfaceAccessConfigToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterfaceAccessConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateNetworkInterfaceAccessConfigToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterfaceAccessConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -889,8 +893,8 @@ export interface ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange {
   readonly subnetworkRangeName?: string;
 }
 
-export function computeInstanceFromTemplateNetworkInterfaceAliasIpRangeToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateNetworkInterfaceAliasIpRangeToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -915,8 +919,8 @@ export interface ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig {
   readonly publicPtrDomainName?: string;
 }
 
-export function computeInstanceFromTemplateNetworkInterfaceIpv6AccessConfigToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateNetworkInterfaceIpv6AccessConfigToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -932,13 +936,13 @@ export interface ComputeInstanceFromTemplateNetworkInterface {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#access_config ComputeInstanceFromTemplate#access_config}
   */
-  readonly accessConfig?: ComputeInstanceFromTemplateNetworkInterfaceAccessConfig[];
+  readonly accessConfig?: ComputeInstanceFromTemplateNetworkInterfaceAccessConfig[] | cdktf.IResolvable;
   /**
   * An array of alias IP ranges for this network interface.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#alias_ip_range ComputeInstanceFromTemplate#alias_ip_range}
   */
-  readonly aliasIpRange?: ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange[];
+  readonly aliasIpRange?: ComputeInstanceFromTemplateNetworkInterfaceAliasIpRange[] | cdktf.IResolvable;
   /**
   * The name or self_link of the network attached to this interface.
   * 
@@ -980,11 +984,11 @@ export interface ComputeInstanceFromTemplateNetworkInterface {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#ipv6_access_config ComputeInstanceFromTemplate#ipv6_access_config}
   */
-  readonly ipv6AccessConfig?: ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig[];
+  readonly ipv6AccessConfig?: ComputeInstanceFromTemplateNetworkInterfaceIpv6AccessConfig[] | cdktf.IResolvable;
 }
 
-export function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterface): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: ComputeInstanceFromTemplateNetworkInterface | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1017,7 +1021,7 @@ export interface ComputeInstanceFromTemplateReservationAffinitySpecificReservati
 }
 
 export function computeInstanceFromTemplateReservationAffinitySpecificReservationToTerraform(struct?: ComputeInstanceFromTemplateReservationAffinitySpecificReservationOutputReference | ComputeInstanceFromTemplateReservationAffinitySpecificReservation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1035,7 +1039,7 @@ export class ComputeInstanceFromTemplateReservationAffinitySpecificReservationOu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1108,7 +1112,7 @@ export interface ComputeInstanceFromTemplateReservationAffinity {
 }
 
 export function computeInstanceFromTemplateReservationAffinityToTerraform(struct?: ComputeInstanceFromTemplateReservationAffinityOutputReference | ComputeInstanceFromTemplateReservationAffinity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1126,7 +1130,7 @@ export class ComputeInstanceFromTemplateReservationAffinityOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1171,7 +1175,7 @@ export class ComputeInstanceFromTemplateReservationAffinityOutputReference exten
   }
 
   // specific_reservation - computed: false, optional: true, required: false
-  private _specificReservation = new ComputeInstanceFromTemplateReservationAffinitySpecificReservationOutputReference(this as any, "specific_reservation", true);
+  private _specificReservation = new ComputeInstanceFromTemplateReservationAffinitySpecificReservationOutputReference(this, "specific_reservation", true);
   public get specificReservation() {
     return this._specificReservation;
   }
@@ -1201,8 +1205,8 @@ export interface ComputeInstanceFromTemplateSchedulingNodeAffinities {
   readonly values: string[];
 }
 
-export function computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform(struct?: ComputeInstanceFromTemplateSchedulingNodeAffinities): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform(struct?: ComputeInstanceFromTemplateSchedulingNodeAffinities | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1241,11 +1245,11 @@ export interface ComputeInstanceFromTemplateScheduling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#node_affinities ComputeInstanceFromTemplate#node_affinities}
   */
-  readonly nodeAffinities?: ComputeInstanceFromTemplateSchedulingNodeAffinities[];
+  readonly nodeAffinities?: ComputeInstanceFromTemplateSchedulingNodeAffinities[] | cdktf.IResolvable;
 }
 
 export function computeInstanceFromTemplateSchedulingToTerraform(struct?: ComputeInstanceFromTemplateSchedulingOutputReference | ComputeInstanceFromTemplateScheduling): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1266,7 +1270,7 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1318,7 +1322,7 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
   // automatic_restart - computed: true, optional: true, required: false
   private _automaticRestart?: boolean | cdktf.IResolvable; 
   public get automaticRestart() {
-    return this.getBooleanAttribute('automatic_restart') as any;
+    return this.getBooleanAttribute('automatic_restart');
   }
   public set automaticRestart(value: boolean | cdktf.IResolvable) {
     this._automaticRestart = value;
@@ -1366,7 +1370,7 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
   // preemptible - computed: true, optional: true, required: false
   private _preemptible?: boolean | cdktf.IResolvable; 
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible') as any;
+    return this.getBooleanAttribute('preemptible');
   }
   public set preemptible(value: boolean | cdktf.IResolvable) {
     this._preemptible = value;
@@ -1380,12 +1384,12 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
   }
 
   // node_affinities - computed: false, optional: true, required: false
-  private _nodeAffinities?: ComputeInstanceFromTemplateSchedulingNodeAffinities[]; 
+  private _nodeAffinities?: ComputeInstanceFromTemplateSchedulingNodeAffinities[] | cdktf.IResolvable; 
   public get nodeAffinities() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_affinities') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('node_affinities')));
   }
-  public set nodeAffinities(value: ComputeInstanceFromTemplateSchedulingNodeAffinities[]) {
+  public set nodeAffinities(value: ComputeInstanceFromTemplateSchedulingNodeAffinities[] | cdktf.IResolvable) {
     this._nodeAffinities = value;
   }
   public resetNodeAffinities() {
@@ -1418,7 +1422,7 @@ export interface ComputeInstanceFromTemplateShieldedInstanceConfig {
 }
 
 export function computeInstanceFromTemplateShieldedInstanceConfigToTerraform(struct?: ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference | ComputeInstanceFromTemplateShieldedInstanceConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1437,7 +1441,7 @@ export class ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1477,7 +1481,7 @@ export class ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference ex
   // enable_integrity_monitoring - computed: true, optional: true, required: false
   private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
   public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
@@ -1493,7 +1497,7 @@ export class ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference ex
   // enable_secure_boot - computed: true, optional: true, required: false
   private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
   public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
@@ -1509,7 +1513,7 @@ export class ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference ex
   // enable_vtpm - computed: true, optional: true, required: false
   private _enableVtpm?: boolean | cdktf.IResolvable; 
   public get enableVtpm() {
-    return this.getBooleanAttribute('enable_vtpm') as any;
+    return this.getBooleanAttribute('enable_vtpm');
   }
   public set enableVtpm(value: boolean | cdktf.IResolvable) {
     this._enableVtpm = value;
@@ -1537,8 +1541,8 @@ export interface ComputeInstanceFromTemplateTimeouts {
   readonly update?: string;
 }
 
-export function computeInstanceFromTemplateTimeoutsToTerraform(struct?: ComputeInstanceFromTemplateTimeoutsOutputReference | ComputeInstanceFromTemplateTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceFromTemplateTimeoutsToTerraform(struct?: ComputeInstanceFromTemplateTimeoutsOutputReference | ComputeInstanceFromTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1557,7 +1561,7 @@ export class ComputeInstanceFromTemplateTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1714,7 +1718,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // allow_stopping_for_update - computed: true, optional: true, required: false
   private _allowStoppingForUpdate?: boolean | cdktf.IResolvable; 
   public get allowStoppingForUpdate() {
-    return this.getBooleanAttribute('allow_stopping_for_update') as any;
+    return this.getBooleanAttribute('allow_stopping_for_update');
   }
   public set allowStoppingForUpdate(value: boolean | cdktf.IResolvable) {
     this._allowStoppingForUpdate = value;
@@ -1728,12 +1732,12 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // attached_disk - computed: true, optional: true, required: false
-  private _attachedDisk?: ComputeInstanceFromTemplateAttachedDisk[]; 
+  private _attachedDisk?: ComputeInstanceFromTemplateAttachedDisk[] | cdktf.IResolvable; 
   public get attachedDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('attached_disk') as any;
+    return this.interpolationForAttribute('attached_disk');
   }
-  public set attachedDisk(value: ComputeInstanceFromTemplateAttachedDisk[]) {
+  public set attachedDisk(value: ComputeInstanceFromTemplateAttachedDisk[] | cdktf.IResolvable) {
     this._attachedDisk = value;
   }
   public resetAttachedDisk() {
@@ -1747,7 +1751,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // can_ip_forward - computed: true, optional: true, required: false
   private _canIpForward?: boolean | cdktf.IResolvable; 
   public get canIpForward() {
-    return this.getBooleanAttribute('can_ip_forward') as any;
+    return this.getBooleanAttribute('can_ip_forward');
   }
   public set canIpForward(value: boolean | cdktf.IResolvable) {
     this._canIpForward = value;
@@ -1773,7 +1777,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // deletion_protection - computed: true, optional: true, required: false
   private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection') as any;
+    return this.getBooleanAttribute('deletion_protection');
   }
   public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
@@ -1821,7 +1825,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // enable_display - computed: true, optional: true, required: false
   private _enableDisplay?: boolean | cdktf.IResolvable; 
   public get enableDisplay() {
-    return this.getBooleanAttribute('enable_display') as any;
+    return this.getBooleanAttribute('enable_display');
   }
   public set enableDisplay(value: boolean | cdktf.IResolvable) {
     this._enableDisplay = value;
@@ -1835,12 +1839,12 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // guest_accelerator - computed: true, optional: true, required: false
-  private _guestAccelerator?: ComputeInstanceFromTemplateGuestAccelerator[]; 
+  private _guestAccelerator?: ComputeInstanceFromTemplateGuestAccelerator[] | cdktf.IResolvable; 
   public get guestAccelerator() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_accelerator') as any;
+    return this.interpolationForAttribute('guest_accelerator');
   }
-  public set guestAccelerator(value: ComputeInstanceFromTemplateGuestAccelerator[]) {
+  public set guestAccelerator(value: ComputeInstanceFromTemplateGuestAccelerator[] | cdktf.IResolvable) {
     this._guestAccelerator = value;
   }
   public resetGuestAccelerator() {
@@ -1883,12 +1887,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1916,12 +1919,11 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -2015,12 +2017,12 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // scratch_disk - computed: true, optional: true, required: false
-  private _scratchDisk?: ComputeInstanceFromTemplateScratchDisk[]; 
+  private _scratchDisk?: ComputeInstanceFromTemplateScratchDisk[] | cdktf.IResolvable; 
   public get scratchDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scratch_disk') as any;
+    return this.interpolationForAttribute('scratch_disk');
   }
-  public set scratchDisk(value: ComputeInstanceFromTemplateScratchDisk[]) {
+  public set scratchDisk(value: ComputeInstanceFromTemplateScratchDisk[] | cdktf.IResolvable) {
     this._scratchDisk = value;
   }
   public resetScratchDisk() {
@@ -2037,12 +2039,12 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // service_account - computed: true, optional: true, required: false
-  private _serviceAccount?: ComputeInstanceFromTemplateServiceAccount[]; 
+  private _serviceAccount?: ComputeInstanceFromTemplateServiceAccount[] | cdktf.IResolvable; 
   public get serviceAccount() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('service_account') as any;
+    return this.interpolationForAttribute('service_account');
   }
-  public set serviceAccount(value: ComputeInstanceFromTemplateServiceAccount[]) {
+  public set serviceAccount(value: ComputeInstanceFromTemplateServiceAccount[] | cdktf.IResolvable) {
     this._serviceAccount = value;
   }
   public resetServiceAccount() {
@@ -2069,7 +2071,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   // tags - computed: true, optional: true, required: false
   private _tags?: string[]; 
   public get tags() {
-    return this.getListAttribute('tags');
+    return cdktf.Fn.tolist(this.getListAttribute('tags'));
   }
   public set tags(value: string[]) {
     this._tags = value;
@@ -2104,7 +2106,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // advanced_machine_features - computed: false, optional: true, required: false
-  private _advancedMachineFeatures = new ComputeInstanceFromTemplateAdvancedMachineFeaturesOutputReference(this as any, "advanced_machine_features", true);
+  private _advancedMachineFeatures = new ComputeInstanceFromTemplateAdvancedMachineFeaturesOutputReference(this, "advanced_machine_features", true);
   public get advancedMachineFeatures() {
     return this._advancedMachineFeatures;
   }
@@ -2120,7 +2122,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // boot_disk - computed: false, optional: true, required: false
-  private _bootDisk = new ComputeInstanceFromTemplateBootDiskOutputReference(this as any, "boot_disk", true);
+  private _bootDisk = new ComputeInstanceFromTemplateBootDiskOutputReference(this, "boot_disk", true);
   public get bootDisk() {
     return this._bootDisk;
   }
@@ -2136,7 +2138,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // confidential_instance_config - computed: false, optional: true, required: false
-  private _confidentialInstanceConfig = new ComputeInstanceFromTemplateConfidentialInstanceConfigOutputReference(this as any, "confidential_instance_config", true);
+  private _confidentialInstanceConfig = new ComputeInstanceFromTemplateConfidentialInstanceConfigOutputReference(this, "confidential_instance_config", true);
   public get confidentialInstanceConfig() {
     return this._confidentialInstanceConfig;
   }
@@ -2152,12 +2154,12 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // network_interface - computed: false, optional: true, required: false
-  private _networkInterface?: ComputeInstanceFromTemplateNetworkInterface[]; 
+  private _networkInterface?: ComputeInstanceFromTemplateNetworkInterface[] | cdktf.IResolvable; 
   public get networkInterface() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_interface') as any;
+    return this.interpolationForAttribute('network_interface');
   }
-  public set networkInterface(value: ComputeInstanceFromTemplateNetworkInterface[]) {
+  public set networkInterface(value: ComputeInstanceFromTemplateNetworkInterface[] | cdktf.IResolvable) {
     this._networkInterface = value;
   }
   public resetNetworkInterface() {
@@ -2169,7 +2171,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
-  private _reservationAffinity = new ComputeInstanceFromTemplateReservationAffinityOutputReference(this as any, "reservation_affinity", true);
+  private _reservationAffinity = new ComputeInstanceFromTemplateReservationAffinityOutputReference(this, "reservation_affinity", true);
   public get reservationAffinity() {
     return this._reservationAffinity;
   }
@@ -2185,7 +2187,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // scheduling - computed: false, optional: true, required: false
-  private _scheduling = new ComputeInstanceFromTemplateSchedulingOutputReference(this as any, "scheduling", true);
+  private _scheduling = new ComputeInstanceFromTemplateSchedulingOutputReference(this, "scheduling", true);
   public get scheduling() {
     return this._scheduling;
   }
@@ -2201,7 +2203,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new ComputeInstanceFromTemplateShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -2217,7 +2219,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeInstanceFromTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInstanceFromTemplateTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2247,9 +2249,9 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       enable_display: cdktf.booleanToTerraform(this._enableDisplay),
       guest_accelerator: cdktf.listMapper(computeInstanceFromTemplateGuestAcceleratorToTerraform)(this._guestAccelerator),
       hostname: cdktf.stringToTerraform(this._hostname),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       machine_type: cdktf.stringToTerraform(this._machineType),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       metadata_startup_script: cdktf.stringToTerraform(this._metadataStartupScript),
       min_cpu_platform: cdktf.stringToTerraform(this._minCpuPlatform),
       name: cdktf.stringToTerraform(this._name),

@@ -12,7 +12,7 @@ export interface ComposerEnvironmentConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#labels ComposerEnvironment#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Name of the environment.
   * 
@@ -67,8 +67,8 @@ export interface ComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
   readonly useIpAliases?: boolean | cdktf.IResolvable;
 }
 
-export function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -93,7 +93,7 @@ export interface ComposerEnvironmentConfigNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#ip_allocation_policy ComposerEnvironment#ip_allocation_policy}
   */
-  readonly ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[];
+  readonly ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[] | cdktf.IResolvable;
   /**
   * The Compute Engine machine type used for cluster instances, specified as a name or relative resource name. For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
   * 
@@ -139,7 +139,7 @@ export interface ComposerEnvironmentConfigNodeConfig {
 }
 
 export function composerEnvironmentConfigNodeConfigToTerraform(struct?: ComposerEnvironmentConfigNodeConfigOutputReference | ComposerEnvironmentConfigNodeConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -164,7 +164,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -254,12 +254,12 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   }
 
   // ip_allocation_policy - computed: true, optional: true, required: false
-  private _ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[]; 
+  private _ipAllocationPolicy?: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[] | cdktf.IResolvable; 
   public get ipAllocationPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_allocation_policy') as any;
+    return this.interpolationForAttribute('ip_allocation_policy');
   }
-  public set ipAllocationPolicy(value: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[]) {
+  public set ipAllocationPolicy(value: ComposerEnvironmentConfigNodeConfigIpAllocationPolicy[] | cdktf.IResolvable) {
     this._ipAllocationPolicy = value;
   }
   public resetIpAllocationPolicy() {
@@ -305,7 +305,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   // oauth_scopes - computed: true, optional: true, required: false
   private _oauthScopes?: string[]; 
   public get oauthScopes() {
-    return this.getListAttribute('oauth_scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('oauth_scopes'));
   }
   public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
@@ -353,7 +353,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   // tags - computed: false, optional: true, required: false
   private _tags?: string[]; 
   public get tags() {
-    return this.getListAttribute('tags');
+    return cdktf.Fn.tolist(this.getListAttribute('tags'));
   }
   public set tags(value: string[]) {
     this._tags = value;
@@ -410,7 +410,7 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
 }
 
 export function composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct?: ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference | ComposerEnvironmentConfigPrivateEnvironmentConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -430,7 +430,7 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -492,7 +492,7 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   // enable_private_endpoint - computed: false, optional: true, required: false
   private _enablePrivateEndpoint?: boolean | cdktf.IResolvable; 
   public get enablePrivateEndpoint() {
-    return this.getBooleanAttribute('enable_private_endpoint') as any;
+    return this.getBooleanAttribute('enable_private_endpoint');
   }
   public set enablePrivateEndpoint(value: boolean | cdktf.IResolvable) {
     this._enablePrivateEndpoint = value;
@@ -543,13 +543,13 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#airflow_config_overrides ComposerEnvironment#airflow_config_overrides}
   */
-  readonly airflowConfigOverrides?: { [key: string]: string } | cdktf.IResolvable;
+  readonly airflowConfigOverrides?: { [key: string]: string };
   /**
   * Additional environment variables to provide to the Apache Airflow schedulerf, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#env_variables ComposerEnvironment#env_variables}
   */
-  readonly envVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly envVariables?: { [key: string]: string };
   /**
   * The version of the software running in the environment. This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?. The Cloud Composer portion of the version is a semantic version. The portion of the image version following 'airflow-' is an official Apache Airflow repository release name. See documentation for allowed release names.
   * 
@@ -561,7 +561,7 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#pypi_packages ComposerEnvironment#pypi_packages}
   */
-  readonly pypiPackages?: { [key: string]: string } | cdktf.IResolvable;
+  readonly pypiPackages?: { [key: string]: string };
   /**
   * The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3.
   * 
@@ -577,15 +577,15 @@ export interface ComposerEnvironmentConfigSoftwareConfig {
 }
 
 export function composerEnvironmentConfigSoftwareConfigToTerraform(struct?: ComposerEnvironmentConfigSoftwareConfigOutputReference | ComposerEnvironmentConfigSoftwareConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    airflow_config_overrides: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.airflowConfigOverrides),
-    env_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.envVariables),
+    airflow_config_overrides: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.airflowConfigOverrides),
+    env_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.envVariables),
     image_version: cdktf.stringToTerraform(struct!.imageVersion),
-    pypi_packages: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.pypiPackages),
+    pypi_packages: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.pypiPackages),
     python_version: cdktf.stringToTerraform(struct!.pythonVersion),
     scheduler_count: cdktf.numberToTerraform(struct!.schedulerCount),
   }
@@ -599,7 +599,7 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -655,12 +655,11 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
 
   // airflow_config_overrides - computed: false, optional: true, required: false
-  private _airflowConfigOverrides?: { [key: string]: string } | cdktf.IResolvable; 
+  private _airflowConfigOverrides?: { [key: string]: string }; 
   public get airflowConfigOverrides() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('airflow_config_overrides') as any;
+    return this.getStringMapAttribute('airflow_config_overrides');
   }
-  public set airflowConfigOverrides(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set airflowConfigOverrides(value: { [key: string]: string }) {
     this._airflowConfigOverrides = value;
   }
   public resetAirflowConfigOverrides() {
@@ -672,12 +671,11 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
 
   // env_variables - computed: false, optional: true, required: false
-  private _envVariables?: { [key: string]: string } | cdktf.IResolvable; 
+  private _envVariables?: { [key: string]: string }; 
   public get envVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('env_variables') as any;
+    return this.getStringMapAttribute('env_variables');
   }
-  public set envVariables(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set envVariables(value: { [key: string]: string }) {
     this._envVariables = value;
   }
   public resetEnvVariables() {
@@ -705,12 +703,11 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   }
 
   // pypi_packages - computed: false, optional: true, required: false
-  private _pypiPackages?: { [key: string]: string } | cdktf.IResolvable; 
+  private _pypiPackages?: { [key: string]: string }; 
   public get pypiPackages() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('pypi_packages') as any;
+    return this.getStringMapAttribute('pypi_packages');
   }
-  public set pypiPackages(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set pypiPackages(value: { [key: string]: string }) {
     this._pypiPackages = value;
   }
   public resetPypiPackages() {
@@ -781,7 +778,7 @@ export interface ComposerEnvironmentConfigA {
 }
 
 export function composerEnvironmentConfigAToTerraform(struct?: ComposerEnvironmentConfigAOutputReference | ComposerEnvironmentConfigA): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -801,7 +798,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -844,6 +841,21 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
     }
   }
 
+  // airflow_uri - computed: true, optional: false, required: false
+  public get airflowUri() {
+    return this.getStringAttribute('airflow_uri');
+  }
+
+  // dag_gcs_prefix - computed: true, optional: false, required: false
+  public get dagGcsPrefix() {
+    return this.getStringAttribute('dag_gcs_prefix');
+  }
+
+  // gke_cluster - computed: true, optional: false, required: false
+  public get gkeCluster() {
+    return this.getStringAttribute('gke_cluster');
+  }
+
   // node_count - computed: true, optional: true, required: false
   private _nodeCount?: number; 
   public get nodeCount() {
@@ -861,7 +873,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   // node_config - computed: false, optional: true, required: false
-  private _nodeConfig = new ComposerEnvironmentConfigNodeConfigOutputReference(this as any, "node_config", true);
+  private _nodeConfig = new ComposerEnvironmentConfigNodeConfigOutputReference(this, "node_config", true);
   public get nodeConfig() {
     return this._nodeConfig;
   }
@@ -877,7 +889,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   // private_environment_config - computed: false, optional: true, required: false
-  private _privateEnvironmentConfig = new ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this as any, "private_environment_config", true);
+  private _privateEnvironmentConfig = new ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this, "private_environment_config", true);
   public get privateEnvironmentConfig() {
     return this._privateEnvironmentConfig;
   }
@@ -893,7 +905,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig = new ComposerEnvironmentConfigSoftwareConfigOutputReference(this as any, "software_config", true);
+  private _softwareConfig = new ComposerEnvironmentConfigSoftwareConfigOutputReference(this, "software_config", true);
   public get softwareConfig() {
     return this._softwareConfig;
   }
@@ -923,8 +935,8 @@ export interface ComposerEnvironmentTimeouts {
   readonly update?: string;
 }
 
-export function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironmentTimeoutsOutputReference | ComposerEnvironmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function composerEnvironmentTimeoutsToTerraform(struct?: ComposerEnvironmentTimeoutsOutputReference | ComposerEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -943,7 +955,7 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1079,12 +1091,11 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1141,7 +1152,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // config - computed: false, optional: true, required: false
-  private _config = new ComposerEnvironmentConfigAOutputReference(this as any, "config", true);
+  private _config = new ComposerEnvironmentConfigAOutputReference(this, "config", true);
   public get config() {
     return this._config;
   }
@@ -1157,7 +1168,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComposerEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComposerEnvironmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1178,7 +1189,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

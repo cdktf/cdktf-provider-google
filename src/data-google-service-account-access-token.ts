@@ -75,7 +75,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   // delegates - computed: false, optional: true, required: false
   private _delegates?: string[]; 
   public get delegates() {
-    return this.getListAttribute('delegates');
+    return cdktf.Fn.tolist(this.getListAttribute('delegates'));
   }
   public set delegates(value: string[]) {
     this._delegates = value;
@@ -112,7 +112,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   // scopes - computed: false, optional: false, required: true
   private _scopes?: string[]; 
   public get scopes() {
-    return this.getListAttribute('scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('scopes'));
   }
   public set scopes(value: string[]) {
     this._scopes = value;

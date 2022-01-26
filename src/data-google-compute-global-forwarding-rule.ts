@@ -37,7 +37,7 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends cdktf.
   // filter_labels - computed: true, optional: false, required: false
   public get filterLabels() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('filter_labels') as any;
+    return this.interpolationForAttribute('filter_labels');
   }
 
   // filter_match_criteria - computed: true, optional: false, required: false
@@ -117,7 +117,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -128,7 +128,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
 
   // metadata_filters - computed: true, optional: false, required: false
   public metadataFilters(index: string) {
-    return new DataGoogleComputeGlobalForwardingRuleMetadataFilters(this, 'metadata_filters', index);
+    return new DataGoogleComputeGlobalForwardingRuleMetadataFilters(this, 'metadata_filters', index, false);
   }
 
   // name - computed: false, optional: false, required: true

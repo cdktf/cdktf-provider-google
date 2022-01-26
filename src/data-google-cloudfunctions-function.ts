@@ -30,7 +30,7 @@ export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy extends c
 
   // retry - computed: true, optional: false, required: false
   public get retry() {
-    return this.getBooleanAttribute('retry') as any;
+    return this.getBooleanAttribute('retry');
   }
 }
 export class DataGoogleCloudfunctionsFunctionEventTrigger extends cdktf.ComplexComputedList {
@@ -43,7 +43,7 @@ export class DataGoogleCloudfunctionsFunctionEventTrigger extends cdktf.ComplexC
   // failure_policy - computed: true, optional: false, required: false
   public get failurePolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('failure_policy') as any;
+    return this.interpolationForAttribute('failure_policy');
   }
 
   // resource - computed: true, optional: false, required: false
@@ -111,7 +111,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // build_environment_variables - computed: true, optional: false, required: false
-  public buildEnvironmentVariables(key: string): string {
+  public buildEnvironmentVariables(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'build_environment_variables').lookup(key);
   }
 
@@ -126,13 +126,13 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // environment_variables - computed: true, optional: false, required: false
-  public environmentVariables(key: string): string {
+  public environmentVariables(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'environment_variables').lookup(key);
   }
 
   // event_trigger - computed: true, optional: false, required: false
   public eventTrigger(index: string) {
-    return new DataGoogleCloudfunctionsFunctionEventTrigger(this, 'event_trigger', index);
+    return new DataGoogleCloudfunctionsFunctionEventTrigger(this, 'event_trigger', index, false);
   }
 
   // https_trigger_url - computed: true, optional: false, required: false
@@ -151,7 +151,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -227,7 +227,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
 
   // source_repository - computed: true, optional: false, required: false
   public sourceRepository(index: string) {
-    return new DataGoogleCloudfunctionsFunctionSourceRepository(this, 'source_repository', index);
+    return new DataGoogleCloudfunctionsFunctionSourceRepository(this, 'source_repository', index, false);
   }
 
   // timeout - computed: true, optional: false, required: false
@@ -237,7 +237,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
 
   // trigger_http - computed: true, optional: false, required: false
   public get triggerHttp() {
-    return this.getBooleanAttribute('trigger_http') as any;
+    return this.getBooleanAttribute('trigger_http');
   }
 
   // vpc_connector - computed: true, optional: false, required: false

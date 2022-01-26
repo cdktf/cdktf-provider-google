@@ -44,7 +44,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_consent_store#labels HealthcareConsentStore#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The name of this ConsentStore, for example:
 "consent1"
@@ -74,8 +74,8 @@ export interface HealthcareConsentStoreTimeouts {
   readonly update?: string;
 }
 
-export function healthcareConsentStoreTimeoutsToTerraform(struct?: HealthcareConsentStoreTimeoutsOutputReference | HealthcareConsentStoreTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function healthcareConsentStoreTimeoutsToTerraform(struct?: HealthcareConsentStoreTimeoutsOutputReference | HealthcareConsentStoreTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class HealthcareConsentStoreTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -256,7 +256,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   // enable_consent_create_on_update - computed: false, optional: true, required: false
   private _enableConsentCreateOnUpdate?: boolean | cdktf.IResolvable; 
   public get enableConsentCreateOnUpdate() {
-    return this.getBooleanAttribute('enable_consent_create_on_update') as any;
+    return this.getBooleanAttribute('enable_consent_create_on_update');
   }
   public set enableConsentCreateOnUpdate(value: boolean | cdktf.IResolvable) {
     this._enableConsentCreateOnUpdate = value;
@@ -275,12 +275,11 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -305,7 +304,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HealthcareConsentStoreTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareConsentStoreTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -329,7 +328,7 @@ export class HealthcareConsentStore extends cdktf.TerraformResource {
       dataset: cdktf.stringToTerraform(this._dataset),
       default_consent_ttl: cdktf.stringToTerraform(this._defaultConsentTtl),
       enable_consent_create_on_update: cdktf.booleanToTerraform(this._enableConsentCreateOnUpdate),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       timeouts: healthcareConsentStoreTimeoutsToTerraform(this._timeouts.internalValue),
     };

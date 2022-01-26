@@ -107,7 +107,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   // open - computed: true, optional: true, required: false
   private _open?: boolean | cdktf.IResolvable; 
   public get open() {
-    return this.getBooleanAttribute('open') as any;
+    return this.getBooleanAttribute('open');
   }
   public set open(value: boolean | cdktf.IResolvable) {
     this._open = value;
@@ -122,7 +122,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
 
   // project_ids - computed: true, optional: false, required: false
   public get projectIds() {
-    return this.getListAttribute('project_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('project_ids'));
   }
 
   // =========

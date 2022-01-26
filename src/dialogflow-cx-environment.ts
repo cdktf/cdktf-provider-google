@@ -37,7 +37,7 @@ Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_environment#version_configs DialogflowCxEnvironment#version_configs}
   */
-  readonly versionConfigs: DialogflowCxEnvironmentVersionConfigs[];
+  readonly versionConfigs: DialogflowCxEnvironmentVersionConfigs[] | cdktf.IResolvable;
 }
 export interface DialogflowCxEnvironmentTimeouts {
   /**
@@ -54,8 +54,8 @@ export interface DialogflowCxEnvironmentTimeouts {
   readonly update?: string;
 }
 
-export function dialogflowCxEnvironmentTimeoutsToTerraform(struct?: DialogflowCxEnvironmentTimeoutsOutputReference | DialogflowCxEnvironmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dialogflowCxEnvironmentTimeoutsToTerraform(struct?: DialogflowCxEnvironmentTimeoutsOutputReference | DialogflowCxEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class DialogflowCxEnvironmentTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -168,8 +168,8 @@ export interface DialogflowCxEnvironmentVersionConfigs {
   readonly version: string;
 }
 
-export function dialogflowCxEnvironmentVersionConfigsToTerraform(struct?: DialogflowCxEnvironmentVersionConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dialogflowCxEnvironmentVersionConfigsToTerraform(struct?: DialogflowCxEnvironmentVersionConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -283,7 +283,7 @@ export class DialogflowCxEnvironment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DialogflowCxEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DialogflowCxEnvironmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -299,12 +299,12 @@ export class DialogflowCxEnvironment extends cdktf.TerraformResource {
   }
 
   // version_configs - computed: false, optional: false, required: true
-  private _versionConfigs?: DialogflowCxEnvironmentVersionConfigs[]; 
+  private _versionConfigs?: DialogflowCxEnvironmentVersionConfigs[] | cdktf.IResolvable; 
   public get versionConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('version_configs') as any;
+    return this.interpolationForAttribute('version_configs');
   }
-  public set versionConfigs(value: DialogflowCxEnvironmentVersionConfigs[]) {
+  public set versionConfigs(value: DialogflowCxEnvironmentVersionConfigs[] | cdktf.IResolvable) {
     this._versionConfigs = value;
   }
   // Temporarily expose input value. Use with caution.

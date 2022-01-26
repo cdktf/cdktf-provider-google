@@ -114,7 +114,7 @@ export interface ContainerNodePoolAutoscaling {
 }
 
 export function containerNodePoolAutoscalingToTerraform(struct?: ContainerNodePoolAutoscalingOutputReference | ContainerNodePoolAutoscaling): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -205,7 +205,7 @@ export interface ContainerNodePoolManagement {
 }
 
 export function containerNodePoolManagementToTerraform(struct?: ContainerNodePoolManagementOutputReference | ContainerNodePoolManagement): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -223,7 +223,7 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -257,7 +257,7 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   // auto_repair - computed: false, optional: true, required: false
   private _autoRepair?: boolean | cdktf.IResolvable; 
   public get autoRepair() {
-    return this.getBooleanAttribute('auto_repair') as any;
+    return this.getBooleanAttribute('auto_repair');
   }
   public set autoRepair(value: boolean | cdktf.IResolvable) {
     this._autoRepair = value;
@@ -273,7 +273,7 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   // auto_upgrade - computed: false, optional: true, required: false
   private _autoUpgrade?: boolean | cdktf.IResolvable; 
   public get autoUpgrade() {
-    return this.getBooleanAttribute('auto_upgrade') as any;
+    return this.getBooleanAttribute('auto_upgrade');
   }
   public set autoUpgrade(value: boolean | cdktf.IResolvable) {
     this._autoUpgrade = value;
@@ -301,8 +301,8 @@ export interface ContainerNodePoolNodeConfigGuestAccelerator {
   readonly type?: string;
 }
 
-export function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: ContainerNodePoolNodeConfigGuestAccelerator): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: ContainerNodePoolNodeConfigGuestAccelerator | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -328,8 +328,8 @@ export interface ContainerNodePoolNodeConfigTaint {
   readonly value?: string;
 }
 
-export function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolNodeConfigTaint): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNodePoolNodeConfigTaint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -356,7 +356,7 @@ export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
 }
 
 export function containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct?: ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference | ContainerNodePoolNodeConfigShieldedInstanceConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -374,7 +374,7 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -408,7 +408,7 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   // enable_integrity_monitoring - computed: false, optional: true, required: false
   private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
   public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
@@ -424,7 +424,7 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   // enable_secure_boot - computed: false, optional: true, required: false
   private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
   public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
@@ -453,7 +453,7 @@ export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
 }
 
 export function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference | ContainerNodePoolNodeConfigWorkloadMetadataConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -471,7 +471,7 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -552,7 +552,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#guest_accelerator ContainerNodePool#guest_accelerator}
   */
-  readonly guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[];
+  readonly guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable;
   /**
   * The image type to use for this node. Note that for a given image type, the latest version of it will be used.
   * 
@@ -564,7 +564,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#labels ContainerNodePool#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The number of local SSD disks to be attached to the node.
   * 
@@ -582,7 +582,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#metadata ContainerNodePool#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform.
   * 
@@ -618,7 +618,7 @@ export interface ContainerNodePoolNodeConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#taint ContainerNodePool#taint}
   */
-  readonly taint?: ContainerNodePoolNodeConfigTaint[];
+  readonly taint?: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable;
   /**
   * shielded_instance_config block
   * 
@@ -634,7 +634,7 @@ export interface ContainerNodePoolNodeConfig {
 }
 
 export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoolNodeConfigOutputReference | ContainerNodePoolNodeConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -643,10 +643,10 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     guest_accelerator: cdktf.listMapper(containerNodePoolNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
     image_type: cdktf.stringToTerraform(struct!.imageType),
-    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
     machine_type: cdktf.stringToTerraform(struct!.machineType),
-    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
@@ -666,7 +666,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -814,12 +814,12 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // guest_accelerator - computed: true, optional: true, required: false
-  private _guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[]; 
+  private _guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable; 
   public get guestAccelerator() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_accelerator') as any;
+    return this.interpolationForAttribute('guest_accelerator');
   }
-  public set guestAccelerator(value: ContainerNodePoolNodeConfigGuestAccelerator[]) {
+  public set guestAccelerator(value: ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable) {
     this._guestAccelerator = value;
   }
   public resetGuestAccelerator() {
@@ -847,12 +847,11 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -896,12 +895,11 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -931,7 +929,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // oauth_scopes - computed: true, optional: true, required: false
   private _oauthScopes?: string[]; 
   public get oauthScopes() {
-    return this.getListAttribute('oauth_scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('oauth_scopes'));
   }
   public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
@@ -947,7 +945,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // preemptible - computed: false, optional: true, required: false
   private _preemptible?: boolean | cdktf.IResolvable; 
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible') as any;
+    return this.getBooleanAttribute('preemptible');
   }
   public set preemptible(value: boolean | cdktf.IResolvable) {
     this._preemptible = value;
@@ -993,12 +991,12 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // taint - computed: true, optional: true, required: false
-  private _taint?: ContainerNodePoolNodeConfigTaint[]; 
+  private _taint?: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable; 
   public get taint() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('taint') as any;
+    return this.interpolationForAttribute('taint');
   }
-  public set taint(value: ContainerNodePoolNodeConfigTaint[]) {
+  public set taint(value: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable) {
     this._taint = value;
   }
   public resetTaint() {
@@ -1010,7 +1008,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -1026,7 +1024,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // workload_metadata_config - computed: false, optional: true, required: false
-  private _workloadMetadataConfig = new ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(this as any, "workload_metadata_config", true);
+  private _workloadMetadataConfig = new ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(this, "workload_metadata_config", true);
   public get workloadMetadataConfig() {
     return this._workloadMetadataConfig;
   }
@@ -1056,8 +1054,8 @@ export interface ContainerNodePoolTimeouts {
   readonly update?: string;
 }
 
-export function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolTimeoutsOutputReference | ContainerNodePoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolTimeoutsOutputReference | ContainerNodePoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1076,7 +1074,7 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1177,7 +1175,7 @@ export interface ContainerNodePoolUpgradeSettings {
 }
 
 export function containerNodePoolUpgradeSettingsToTerraform(struct?: ContainerNodePoolUpgradeSettingsOutputReference | ContainerNodePoolUpgradeSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1195,7 +1193,7 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1428,7 +1426,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   // node_locations - computed: true, optional: true, required: false
   private _nodeLocations?: string[]; 
   public get nodeLocations() {
-    return this.getListAttribute('node_locations');
+    return cdktf.Fn.tolist(this.getListAttribute('node_locations'));
   }
   public set nodeLocations(value: string[]) {
     this._nodeLocations = value;
@@ -1479,7 +1477,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // autoscaling - computed: false, optional: true, required: false
-  private _autoscaling = new ContainerNodePoolAutoscalingOutputReference(this as any, "autoscaling", true);
+  private _autoscaling = new ContainerNodePoolAutoscalingOutputReference(this, "autoscaling", true);
   public get autoscaling() {
     return this._autoscaling;
   }
@@ -1495,7 +1493,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // management - computed: false, optional: true, required: false
-  private _management = new ContainerNodePoolManagementOutputReference(this as any, "management", true);
+  private _management = new ContainerNodePoolManagementOutputReference(this, "management", true);
   public get management() {
     return this._management;
   }
@@ -1511,7 +1509,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // node_config - computed: false, optional: true, required: false
-  private _nodeConfig = new ContainerNodePoolNodeConfigOutputReference(this as any, "node_config", true);
+  private _nodeConfig = new ContainerNodePoolNodeConfigOutputReference(this, "node_config", true);
   public get nodeConfig() {
     return this._nodeConfig;
   }
@@ -1527,7 +1525,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerNodePoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerNodePoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1543,7 +1541,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings = new ContainerNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
+  private _upgradeSettings = new ContainerNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings", true);
   public get upgradeSettings() {
     return this._upgradeSettings;
   }

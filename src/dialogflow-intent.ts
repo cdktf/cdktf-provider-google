@@ -125,8 +125,8 @@ export interface DialogflowIntentTimeouts {
   readonly update?: string;
 }
 
-export function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeoutsOutputReference | DialogflowIntentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTimeoutsOutputReference | DialogflowIntentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -145,7 +145,7 @@ export class DialogflowIntentTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -345,7 +345,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
 
   // followup_intent_info - computed: true, optional: false, required: false
   public followupIntentInfo(index: string) {
-    return new DialogflowIntentFollowupIntentInfo(this, 'followup_intent_info', index);
+    return new DialogflowIntentFollowupIntentInfo(this, 'followup_intent_info', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -372,7 +372,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   // is_fallback - computed: true, optional: true, required: false
   private _isFallback?: boolean | cdktf.IResolvable; 
   public get isFallback() {
-    return this.getBooleanAttribute('is_fallback') as any;
+    return this.getBooleanAttribute('is_fallback');
   }
   public set isFallback(value: boolean | cdktf.IResolvable) {
     this._isFallback = value;
@@ -388,7 +388,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   // ml_disabled - computed: true, optional: true, required: false
   private _mlDisabled?: boolean | cdktf.IResolvable; 
   public get mlDisabled() {
-    return this.getBooleanAttribute('ml_disabled') as any;
+    return this.getBooleanAttribute('ml_disabled');
   }
   public set mlDisabled(value: boolean | cdktf.IResolvable) {
     this._mlDisabled = value;
@@ -457,7 +457,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   // reset_contexts - computed: true, optional: true, required: false
   private _resetContexts?: boolean | cdktf.IResolvable; 
   public get resetContexts() {
-    return this.getBooleanAttribute('reset_contexts') as any;
+    return this.getBooleanAttribute('reset_contexts');
   }
   public set resetContexts(value: boolean | cdktf.IResolvable) {
     this._resetContexts = value;
@@ -492,7 +492,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DialogflowIntentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DialogflowIntentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

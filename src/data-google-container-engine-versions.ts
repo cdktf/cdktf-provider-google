@@ -115,7 +115,7 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   }
 
   // release_channel_default_version - computed: true, optional: false, required: false
-  public releaseChannelDefaultVersion(key: string): string {
+  public releaseChannelDefaultVersion(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'release_channel_default_version').lookup(key);
   }
 

@@ -84,7 +84,7 @@ utilization.
 }
 
 export function computeAutoscalerAutoscalingPolicyCpuUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference | ComputeAutoscalerAutoscalingPolicyCpuUtilization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -174,7 +174,7 @@ be a positive float value. If not defined, the default is 0.8.
 }
 
 export function computeAutoscalerAutoscalingPolicyLoadBalancingUtilizationToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference | ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -191,7 +191,7 @@ export class ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputRef
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -262,8 +262,8 @@ Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "D
   readonly type?: string;
 }
 
-export function computeAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyMetric): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeAutoscalerAutoscalingPolicyMetricToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyMetric | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -292,7 +292,7 @@ For example, specify 80 for 80%.
 }
 
 export function computeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference | ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -310,7 +310,7 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -390,7 +390,7 @@ to include directives regarding slower scale down, as described above.
 }
 
 export function computeAutoscalerAutoscalingPolicyScaleInControlToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference | ComputeAutoscalerAutoscalingPolicyScaleInControl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -408,7 +408,7 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -456,7 +456,7 @@ export class ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference ext
   }
 
   // max_scaled_in_replicas - computed: false, optional: true, required: false
-  private _maxScaledInReplicas = new ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this as any, "max_scaled_in_replicas", true);
+  private _maxScaledInReplicas = new ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this, "max_scaled_in_replicas", true);
   public get maxScaledInReplicas() {
     return this._maxScaledInReplicas;
   }
@@ -514,8 +514,8 @@ export interface ComputeAutoscalerAutoscalingPolicyScalingSchedules {
   readonly timeZone?: string;
 }
 
-export function computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScalingSchedules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeAutoscalerAutoscalingPolicyScalingSchedulesToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyScalingSchedules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -587,7 +587,7 @@ allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler#metric ComputeAutoscaler#metric}
   */
-  readonly metric?: ComputeAutoscalerAutoscalingPolicyMetric[];
+  readonly metric?: ComputeAutoscalerAutoscalingPolicyMetric[] | cdktf.IResolvable;
   /**
   * scale_in_control block
   * 
@@ -599,11 +599,11 @@ allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_autoscaler#scaling_schedules ComputeAutoscaler#scaling_schedules}
   */
-  readonly scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[];
+  readonly scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[] | cdktf.IResolvable;
 }
 
 export function computeAutoscalerAutoscalingPolicyToTerraform(struct?: ComputeAutoscalerAutoscalingPolicyOutputReference | ComputeAutoscalerAutoscalingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -628,7 +628,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -760,7 +760,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   }
 
   // cpu_utilization - computed: false, optional: true, required: false
-  private _cpuUtilization = new ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this as any, "cpu_utilization", true);
+  private _cpuUtilization = new ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this, "cpu_utilization", true);
   public get cpuUtilization() {
     return this._cpuUtilization;
   }
@@ -776,7 +776,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   }
 
   // load_balancing_utilization - computed: false, optional: true, required: false
-  private _loadBalancingUtilization = new ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this as any, "load_balancing_utilization", true);
+  private _loadBalancingUtilization = new ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this, "load_balancing_utilization", true);
   public get loadBalancingUtilization() {
     return this._loadBalancingUtilization;
   }
@@ -792,12 +792,12 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   }
 
   // metric - computed: false, optional: true, required: false
-  private _metric?: ComputeAutoscalerAutoscalingPolicyMetric[]; 
+  private _metric?: ComputeAutoscalerAutoscalingPolicyMetric[] | cdktf.IResolvable; 
   public get metric() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metric') as any;
+    return this.interpolationForAttribute('metric');
   }
-  public set metric(value: ComputeAutoscalerAutoscalingPolicyMetric[]) {
+  public set metric(value: ComputeAutoscalerAutoscalingPolicyMetric[] | cdktf.IResolvable) {
     this._metric = value;
   }
   public resetMetric() {
@@ -809,7 +809,7 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   }
 
   // scale_in_control - computed: false, optional: true, required: false
-  private _scaleInControl = new ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference(this as any, "scale_in_control", true);
+  private _scaleInControl = new ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference(this, "scale_in_control", true);
   public get scaleInControl() {
     return this._scaleInControl;
   }
@@ -825,12 +825,12 @@ export class ComputeAutoscalerAutoscalingPolicyOutputReference extends cdktf.Com
   }
 
   // scaling_schedules - computed: false, optional: true, required: false
-  private _scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[]; 
+  private _scalingSchedules?: ComputeAutoscalerAutoscalingPolicyScalingSchedules[] | cdktf.IResolvable; 
   public get scalingSchedules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scaling_schedules') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('scaling_schedules')));
   }
-  public set scalingSchedules(value: ComputeAutoscalerAutoscalingPolicyScalingSchedules[]) {
+  public set scalingSchedules(value: ComputeAutoscalerAutoscalingPolicyScalingSchedules[] | cdktf.IResolvable) {
     this._scalingSchedules = value;
   }
   public resetScalingSchedules() {
@@ -856,8 +856,8 @@ export interface ComputeAutoscalerTimeouts {
   readonly update?: string;
 }
 
-export function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeoutsOutputReference | ComputeAutoscalerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeAutoscalerTimeoutsToTerraform(struct?: ComputeAutoscalerTimeoutsOutputReference | ComputeAutoscalerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -876,7 +876,7 @@ export class ComputeAutoscalerTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1097,7 +1097,7 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // autoscaling_policy - computed: false, optional: false, required: true
-  private _autoscalingPolicy = new ComputeAutoscalerAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
+  private _autoscalingPolicy = new ComputeAutoscalerAutoscalingPolicyOutputReference(this, "autoscaling_policy", true);
   public get autoscalingPolicy() {
     return this._autoscalingPolicy;
   }
@@ -1110,7 +1110,7 @@ export class ComputeAutoscaler extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeAutoscalerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeAutoscalerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

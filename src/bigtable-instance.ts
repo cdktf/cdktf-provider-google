@@ -30,7 +30,7 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#labels BigtableInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
   * 
@@ -48,7 +48,7 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#cluster BigtableInstance#cluster}
   */
-  readonly cluster?: BigtableInstanceCluster[];
+  readonly cluster?: BigtableInstanceCluster[] | cdktf.IResolvable;
 }
 export interface BigtableInstanceCluster {
   /**
@@ -83,8 +83,8 @@ export interface BigtableInstanceCluster {
   readonly zone?: string;
 }
 
-export function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -146,7 +146,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection') as any;
+    return this.getBooleanAttribute('deletion_protection');
   }
   public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
@@ -197,12 +197,11 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -243,12 +242,12 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // cluster - computed: false, optional: true, required: false
-  private _cluster?: BigtableInstanceCluster[]; 
+  private _cluster?: BigtableInstanceCluster[] | cdktf.IResolvable; 
   public get cluster() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster') as any;
+    return this.interpolationForAttribute('cluster');
   }
-  public set cluster(value: BigtableInstanceCluster[]) {
+  public set cluster(value: BigtableInstanceCluster[] | cdktf.IResolvable) {
     this._cluster = value;
   }
   public resetCluster() {
@@ -268,7 +267,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       display_name: cdktf.stringToTerraform(this._displayName),
       instance_type: cdktf.stringToTerraform(this._instanceType),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       cluster: cdktf.listMapper(bigtableInstanceClusterToTerraform)(this._cluster),

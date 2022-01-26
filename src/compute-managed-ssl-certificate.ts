@@ -69,7 +69,7 @@ there can be up to 100 domains in this list.
 }
 
 export function computeManagedSslCertificateManagedToTerraform(struct?: ComputeManagedSslCertificateManagedOutputReference | ComputeManagedSslCertificateManaged): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class ComputeManagedSslCertificateManagedOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -135,8 +135,8 @@ export interface ComputeManagedSslCertificateTimeouts {
   readonly delete?: string;
 }
 
-export function computeManagedSslCertificateTimeoutsToTerraform(struct?: ComputeManagedSslCertificateTimeoutsOutputReference | ComputeManagedSslCertificateTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeManagedSslCertificateTimeoutsToTerraform(struct?: ComputeManagedSslCertificateTimeoutsOutputReference | ComputeManagedSslCertificateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -154,7 +154,7 @@ export class ComputeManagedSslCertificateTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -369,7 +369,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // managed - computed: false, optional: true, required: false
-  private _managed = new ComputeManagedSslCertificateManagedOutputReference(this as any, "managed", true);
+  private _managed = new ComputeManagedSslCertificateManagedOutputReference(this, "managed", true);
   public get managed() {
     return this._managed;
   }
@@ -385,7 +385,7 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeManagedSslCertificateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeManagedSslCertificateTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

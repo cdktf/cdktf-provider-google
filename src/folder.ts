@@ -45,8 +45,8 @@ export interface FolderTimeouts {
   readonly update?: string;
 }
 
-export function folderTimeoutsToTerraform(struct?: FolderTimeoutsOutputReference | FolderTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function folderTimeoutsToTerraform(struct?: FolderTimeoutsOutputReference | FolderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -66,7 +66,7 @@ export class FolderTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -267,7 +267,7 @@ export class Folder extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FolderTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FolderTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -46,7 +46,7 @@ export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.Complex
   // named_ports - computed: true, optional: false, required: false
   public get namedPorts() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('named_ports') as any;
+    return this.interpolationForAttribute('named_ports');
   }
 
   // status - computed: true, optional: false, required: false
@@ -104,7 +104,7 @@ export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSou
 
   // instances - computed: true, optional: false, required: false
   public instances(index: string) {
-    return new DataGoogleComputeRegionInstanceGroupInstances(this, 'instances', index);
+    return new DataGoogleComputeRegionInstanceGroupInstances(this, 'instances', index, false);
   }
 
   // name - computed: true, optional: true, required: false

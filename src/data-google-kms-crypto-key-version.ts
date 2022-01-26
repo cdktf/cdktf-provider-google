@@ -104,7 +104,7 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
 
   // public_key - computed: true, optional: false, required: false
   public publicKey(index: string) {
-    return new DataGoogleKmsCryptoKeyVersionPublicKey(this, 'public_key', index);
+    return new DataGoogleKmsCryptoKeyVersionPublicKey(this, 'public_key', index, false);
   }
 
   // state - computed: true, optional: false, required: false

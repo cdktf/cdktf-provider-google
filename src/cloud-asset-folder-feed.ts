@@ -102,7 +102,7 @@ This can be used e.g. in UIs which allow to enter the expression.
 }
 
 export function cloudAssetFolderFeedConditionToTerraform(struct?: CloudAssetFolderFeedConditionOutputReference | CloudAssetFolderFeedCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -122,7 +122,7 @@ export class CloudAssetFolderFeedConditionOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -236,7 +236,7 @@ export interface CloudAssetFolderFeedFeedOutputConfigPubsubDestination {
 }
 
 export function cloudAssetFolderFeedFeedOutputConfigPubsubDestinationToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference | CloudAssetFolderFeedFeedOutputConfigPubsubDestination): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -253,7 +253,7 @@ export class CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -301,7 +301,7 @@ export interface CloudAssetFolderFeedFeedOutputConfig {
 }
 
 export function cloudAssetFolderFeedFeedOutputConfigToTerraform(struct?: CloudAssetFolderFeedFeedOutputConfigOutputReference | CloudAssetFolderFeedFeedOutputConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -318,7 +318,7 @@ export class CloudAssetFolderFeedFeedOutputConfigOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -344,7 +344,7 @@ export class CloudAssetFolderFeedFeedOutputConfigOutputReference extends cdktf.C
   }
 
   // pubsub_destination - computed: false, optional: false, required: true
-  private _pubsubDestination = new CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference(this as any, "pubsub_destination", true);
+  private _pubsubDestination = new CloudAssetFolderFeedFeedOutputConfigPubsubDestinationOutputReference(this, "pubsub_destination", true);
   public get pubsubDestination() {
     return this._pubsubDestination;
   }
@@ -371,8 +371,8 @@ export interface CloudAssetFolderFeedTimeouts {
   readonly update?: string;
 }
 
-export function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTimeoutsOutputReference | CloudAssetFolderFeedTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudAssetFolderFeedTimeoutsToTerraform(struct?: CloudAssetFolderFeedTimeoutsOutputReference | CloudAssetFolderFeedTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -391,7 +391,7 @@ export class CloudAssetFolderFeedTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -627,7 +627,7 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new CloudAssetFolderFeedConditionOutputReference(this as any, "condition", true);
+  private _condition = new CloudAssetFolderFeedConditionOutputReference(this, "condition", true);
   public get condition() {
     return this._condition;
   }
@@ -643,7 +643,7 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // feed_output_config - computed: false, optional: false, required: true
-  private _feedOutputConfig = new CloudAssetFolderFeedFeedOutputConfigOutputReference(this as any, "feed_output_config", true);
+  private _feedOutputConfig = new CloudAssetFolderFeedFeedOutputConfigOutputReference(this, "feed_output_config", true);
   public get feedOutputConfig() {
     return this._feedOutputConfig;
   }
@@ -656,7 +656,7 @@ export class CloudAssetFolderFeed extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudAssetFolderFeedTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudAssetFolderFeedTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

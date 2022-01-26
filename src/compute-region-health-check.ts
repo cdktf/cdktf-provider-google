@@ -165,7 +165,7 @@ If not specified, gRPC health check follows behavior specified in 'port' and
 }
 
 export function computeRegionHealthCheckGrpcHealthCheckToTerraform(struct?: ComputeRegionHealthCheckGrpcHealthCheckOutputReference | ComputeRegionHealthCheckGrpcHealthCheck): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -185,7 +185,7 @@ export class ComputeRegionHealthCheckGrpcHealthCheckOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -359,7 +359,7 @@ can only be ASCII.
 }
 
 export function computeRegionHealthCheckHttp2HealthCheckToTerraform(struct?: ComputeRegionHealthCheckHttp2HealthCheckOutputReference | ComputeRegionHealthCheckHttp2HealthCheck): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -382,7 +382,7 @@ export class ComputeRegionHealthCheckHttp2HealthCheckOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -622,7 +622,7 @@ can only be ASCII.
 }
 
 export function computeRegionHealthCheckHttpHealthCheckToTerraform(struct?: ComputeRegionHealthCheckHttpHealthCheckOutputReference | ComputeRegionHealthCheckHttpHealthCheck): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -645,7 +645,7 @@ export class ComputeRegionHealthCheckHttpHealthCheckOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -885,7 +885,7 @@ can only be ASCII.
 }
 
 export function computeRegionHealthCheckHttpsHealthCheckToTerraform(struct?: ComputeRegionHealthCheckHttpsHealthCheckOutputReference | ComputeRegionHealthCheckHttpsHealthCheck): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -908,7 +908,7 @@ export class ComputeRegionHealthCheckHttpsHealthCheckOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1092,7 +1092,7 @@ which means no health check logging will be done.
 }
 
 export function computeRegionHealthCheckLogConfigToTerraform(struct?: ComputeRegionHealthCheckLogConfigOutputReference | ComputeRegionHealthCheckLogConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1109,7 +1109,7 @@ export class ComputeRegionHealthCheckLogConfigOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1137,7 +1137,7 @@ export class ComputeRegionHealthCheckLogConfigOutputReference extends cdktf.Comp
   // enable - computed: false, optional: true, required: false
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
   public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
@@ -1211,7 +1211,7 @@ can only be ASCII.
 }
 
 export function computeRegionHealthCheckSslHealthCheckToTerraform(struct?: ComputeRegionHealthCheckSslHealthCheckOutputReference | ComputeRegionHealthCheckSslHealthCheck): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1233,7 +1233,7 @@ export class ComputeRegionHealthCheckSslHealthCheckOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1445,7 +1445,7 @@ can only be ASCII.
 }
 
 export function computeRegionHealthCheckTcpHealthCheckToTerraform(struct?: ComputeRegionHealthCheckTcpHealthCheckOutputReference | ComputeRegionHealthCheckTcpHealthCheck): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1467,7 +1467,7 @@ export class ComputeRegionHealthCheckTcpHealthCheckOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1633,8 +1633,8 @@ export interface ComputeRegionHealthCheckTimeouts {
   readonly update?: string;
 }
 
-export function computeRegionHealthCheckTimeoutsToTerraform(struct?: ComputeRegionHealthCheckTimeoutsOutputReference | ComputeRegionHealthCheckTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRegionHealthCheckTimeoutsToTerraform(struct?: ComputeRegionHealthCheckTimeoutsOutputReference | ComputeRegionHealthCheckTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1653,7 +1653,7 @@ export class ComputeRegionHealthCheckTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1939,7 +1939,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // grpc_health_check - computed: false, optional: true, required: false
-  private _grpcHealthCheck = new ComputeRegionHealthCheckGrpcHealthCheckOutputReference(this as any, "grpc_health_check", true);
+  private _grpcHealthCheck = new ComputeRegionHealthCheckGrpcHealthCheckOutputReference(this, "grpc_health_check", true);
   public get grpcHealthCheck() {
     return this._grpcHealthCheck;
   }
@@ -1955,7 +1955,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // http2_health_check - computed: false, optional: true, required: false
-  private _http2HealthCheck = new ComputeRegionHealthCheckHttp2HealthCheckOutputReference(this as any, "http2_health_check", true);
+  private _http2HealthCheck = new ComputeRegionHealthCheckHttp2HealthCheckOutputReference(this, "http2_health_check", true);
   public get http2HealthCheck() {
     return this._http2HealthCheck;
   }
@@ -1971,7 +1971,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // http_health_check - computed: false, optional: true, required: false
-  private _httpHealthCheck = new ComputeRegionHealthCheckHttpHealthCheckOutputReference(this as any, "http_health_check", true);
+  private _httpHealthCheck = new ComputeRegionHealthCheckHttpHealthCheckOutputReference(this, "http_health_check", true);
   public get httpHealthCheck() {
     return this._httpHealthCheck;
   }
@@ -1987,7 +1987,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // https_health_check - computed: false, optional: true, required: false
-  private _httpsHealthCheck = new ComputeRegionHealthCheckHttpsHealthCheckOutputReference(this as any, "https_health_check", true);
+  private _httpsHealthCheck = new ComputeRegionHealthCheckHttpsHealthCheckOutputReference(this, "https_health_check", true);
   public get httpsHealthCheck() {
     return this._httpsHealthCheck;
   }
@@ -2003,7 +2003,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeRegionHealthCheckLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeRegionHealthCheckLogConfigOutputReference(this, "log_config", true);
   public get logConfig() {
     return this._logConfig;
   }
@@ -2019,7 +2019,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // ssl_health_check - computed: false, optional: true, required: false
-  private _sslHealthCheck = new ComputeRegionHealthCheckSslHealthCheckOutputReference(this as any, "ssl_health_check", true);
+  private _sslHealthCheck = new ComputeRegionHealthCheckSslHealthCheckOutputReference(this, "ssl_health_check", true);
   public get sslHealthCheck() {
     return this._sslHealthCheck;
   }
@@ -2035,7 +2035,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // tcp_health_check - computed: false, optional: true, required: false
-  private _tcpHealthCheck = new ComputeRegionHealthCheckTcpHealthCheckOutputReference(this as any, "tcp_health_check", true);
+  private _tcpHealthCheck = new ComputeRegionHealthCheckTcpHealthCheckOutputReference(this, "tcp_health_check", true);
   public get tcpHealthCheck() {
     return this._tcpHealthCheck;
   }
@@ -2051,7 +2051,7 @@ export class ComputeRegionHealthCheck extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRegionHealthCheckTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRegionHealthCheckTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

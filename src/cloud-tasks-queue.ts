@@ -82,7 +82,7 @@ By default, the task is sent to the version which is the default version when th
 }
 
 export function cloudTasksQueueAppEngineRoutingOverrideToTerraform(struct?: CloudTasksQueueAppEngineRoutingOverrideOutputReference | CloudTasksQueueAppEngineRoutingOverride): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -101,7 +101,7 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -136,6 +136,11 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
       this._service = value.service;
       this._version = value.version;
     }
+  }
+
+  // host - computed: true, optional: false, required: false
+  public get host() {
+    return this.getStringAttribute('host');
   }
 
   // instance - computed: false, optional: true, required: false
@@ -207,7 +212,7 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
 }
 
 export function cloudTasksQueueRateLimitsToTerraform(struct?: CloudTasksQueueRateLimitsOutputReference | CloudTasksQueueRateLimits): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -225,7 +230,7 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -254,6 +259,11 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
       this._maxConcurrentDispatches = value.maxConcurrentDispatches;
       this._maxDispatchesPerSecond = value.maxDispatchesPerSecond;
     }
+  }
+
+  // max_burst_size - computed: true, optional: false, required: false
+  public get maxBurstSize() {
+    return this.getNumberAttribute('max_burst_size');
   }
 
   // max_concurrent_dispatches - computed: true, optional: true, required: false
@@ -345,7 +355,7 @@ specifies that the task should be retried.
 }
 
 export function cloudTasksQueueRetryConfigToTerraform(struct?: CloudTasksQueueRetryConfigOutputReference | CloudTasksQueueRetryConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -366,7 +376,7 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -507,7 +517,7 @@ default and means that no operations are logged.
 }
 
 export function cloudTasksQueueStackdriverLoggingConfigToTerraform(struct?: CloudTasksQueueStackdriverLoggingConfigOutputReference | CloudTasksQueueStackdriverLoggingConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -524,7 +534,7 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -577,8 +587,8 @@ export interface CloudTasksQueueTimeouts {
   readonly update?: string;
 }
 
-export function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeoutsOutputReference | CloudTasksQueueTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudTasksQueueTimeoutsToTerraform(struct?: CloudTasksQueueTimeoutsOutputReference | CloudTasksQueueTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -597,7 +607,7 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -780,7 +790,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // app_engine_routing_override - computed: false, optional: true, required: false
-  private _appEngineRoutingOverride = new CloudTasksQueueAppEngineRoutingOverrideOutputReference(this as any, "app_engine_routing_override", true);
+  private _appEngineRoutingOverride = new CloudTasksQueueAppEngineRoutingOverrideOutputReference(this, "app_engine_routing_override", true);
   public get appEngineRoutingOverride() {
     return this._appEngineRoutingOverride;
   }
@@ -796,7 +806,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // rate_limits - computed: false, optional: true, required: false
-  private _rateLimits = new CloudTasksQueueRateLimitsOutputReference(this as any, "rate_limits", true);
+  private _rateLimits = new CloudTasksQueueRateLimitsOutputReference(this, "rate_limits", true);
   public get rateLimits() {
     return this._rateLimits;
   }
@@ -812,7 +822,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // retry_config - computed: false, optional: true, required: false
-  private _retryConfig = new CloudTasksQueueRetryConfigOutputReference(this as any, "retry_config", true);
+  private _retryConfig = new CloudTasksQueueRetryConfigOutputReference(this, "retry_config", true);
   public get retryConfig() {
     return this._retryConfig;
   }
@@ -828,7 +838,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // stackdriver_logging_config - computed: false, optional: true, required: false
-  private _stackdriverLoggingConfig = new CloudTasksQueueStackdriverLoggingConfigOutputReference(this as any, "stackdriver_logging_config", true);
+  private _stackdriverLoggingConfig = new CloudTasksQueueStackdriverLoggingConfigOutputReference(this, "stackdriver_logging_config", true);
   public get stackdriverLoggingConfig() {
     return this._stackdriverLoggingConfig;
   }
@@ -844,7 +854,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudTasksQueueTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudTasksQueueTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -111,7 +111,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 }
 
 export function dataprocAutoscalingPolicyBasicAlgorithmYarnConfigToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference | DataprocAutoscalingPolicyBasicAlgorithmYarnConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -271,7 +271,7 @@ Bounds: [2m, 1d]. Default: 2m.
 }
 
 export function dataprocAutoscalingPolicyBasicAlgorithmToTerraform(struct?: DataprocAutoscalingPolicyBasicAlgorithmOutputReference | DataprocAutoscalingPolicyBasicAlgorithm): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -289,7 +289,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -337,7 +337,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
   }
 
   // yarn_config - computed: false, optional: false, required: true
-  private _yarnConfig = new DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference(this as any, "yarn_config", true);
+  private _yarnConfig = new DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference(this, "yarn_config", true);
   public get yarnConfig() {
     return this._yarnConfig;
   }
@@ -386,7 +386,7 @@ only on primary workers, the cluster will use primary workers only and no second
 }
 
 export function dataprocAutoscalingPolicySecondaryWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference | DataprocAutoscalingPolicySecondaryWorkerConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -405,7 +405,7 @@ export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -505,8 +505,8 @@ export interface DataprocAutoscalingPolicyTimeouts {
   readonly update?: string;
 }
 
-export function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscalingPolicyTimeoutsOutputReference | DataprocAutoscalingPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataprocAutoscalingPolicyTimeoutsToTerraform(struct?: DataprocAutoscalingPolicyTimeoutsOutputReference | DataprocAutoscalingPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -525,7 +525,7 @@ export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -645,7 +645,7 @@ only on primary workers, the cluster will use primary workers only and no second
 }
 
 export function dataprocAutoscalingPolicyWorkerConfigToTerraform(struct?: DataprocAutoscalingPolicyWorkerConfigOutputReference | DataprocAutoscalingPolicyWorkerConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -664,7 +664,7 @@ export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -848,7 +848,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // basic_algorithm - computed: false, optional: true, required: false
-  private _basicAlgorithm = new DataprocAutoscalingPolicyBasicAlgorithmOutputReference(this as any, "basic_algorithm", true);
+  private _basicAlgorithm = new DataprocAutoscalingPolicyBasicAlgorithmOutputReference(this, "basic_algorithm", true);
   public get basicAlgorithm() {
     return this._basicAlgorithm;
   }
@@ -864,7 +864,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // secondary_worker_config - computed: false, optional: true, required: false
-  private _secondaryWorkerConfig = new DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference(this as any, "secondary_worker_config", true);
+  private _secondaryWorkerConfig = new DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference(this, "secondary_worker_config", true);
   public get secondaryWorkerConfig() {
     return this._secondaryWorkerConfig;
   }
@@ -880,7 +880,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataprocAutoscalingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataprocAutoscalingPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -896,7 +896,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig = new DataprocAutoscalingPolicyWorkerConfigOutputReference(this as any, "worker_config", true);
+  private _workerConfig = new DataprocAutoscalingPolicyWorkerConfigOutputReference(this, "worker_config", true);
   public get workerConfig() {
     return this._workerConfig;
   }

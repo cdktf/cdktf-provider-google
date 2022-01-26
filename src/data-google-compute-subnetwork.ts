@@ -122,7 +122,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
   // private_ip_google_access - computed: true, optional: false, required: false
   public get privateIpGoogleAccess() {
-    return this.getBooleanAttribute('private_ip_google_access') as any;
+    return this.getBooleanAttribute('private_ip_google_access');
   }
 
   // project - computed: true, optional: true, required: false
@@ -159,7 +159,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
 
   // secondary_ip_range - computed: true, optional: false, required: false
   public secondaryIpRange(index: string) {
-    return new DataGoogleComputeSubnetworkSecondaryIpRange(this, 'secondary_ip_range', index);
+    return new DataGoogleComputeSubnetworkSecondaryIpRange(this, 'secondary_ip_range', index, false);
   }
 
   // self_link - computed: true, optional: true, required: false

@@ -70,7 +70,7 @@ export interface StorageBucketObjectConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#metadata StorageBucketObject#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
   * 
@@ -124,7 +124,7 @@ export interface StorageBucketObjectCustomerEncryption {
 }
 
 export function storageBucketObjectCustomerEncryptionToTerraform(struct?: StorageBucketObjectCustomerEncryptionOutputReference | StorageBucketObjectCustomerEncryption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -142,7 +142,7 @@ export class StorageBucketObjectCustomerEncryptionOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -217,8 +217,8 @@ export interface StorageBucketObjectTimeouts {
   readonly update?: string;
 }
 
-export function storageBucketObjectTimeoutsToTerraform(struct?: StorageBucketObjectTimeoutsOutputReference | StorageBucketObjectTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageBucketObjectTimeoutsToTerraform(struct?: StorageBucketObjectTimeoutsOutputReference | StorageBucketObjectTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -237,7 +237,7 @@ export class StorageBucketObjectTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -511,7 +511,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   // event_based_hold - computed: false, optional: true, required: false
   private _eventBasedHold?: boolean | cdktf.IResolvable; 
   public get eventBasedHold() {
-    return this.getBooleanAttribute('event_based_hold') as any;
+    return this.getBooleanAttribute('event_based_hold');
   }
   public set eventBasedHold(value: boolean | cdktf.IResolvable) {
     this._eventBasedHold = value;
@@ -556,12 +556,11 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -630,7 +629,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   // temporary_hold - computed: false, optional: true, required: false
   private _temporaryHold?: boolean | cdktf.IResolvable; 
   public get temporaryHold() {
-    return this.getBooleanAttribute('temporary_hold') as any;
+    return this.getBooleanAttribute('temporary_hold');
   }
   public set temporaryHold(value: boolean | cdktf.IResolvable) {
     this._temporaryHold = value;
@@ -644,7 +643,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // customer_encryption - computed: false, optional: true, required: false
-  private _customerEncryption = new StorageBucketObjectCustomerEncryptionOutputReference(this as any, "customer_encryption", true);
+  private _customerEncryption = new StorageBucketObjectCustomerEncryptionOutputReference(this, "customer_encryption", true);
   public get customerEncryption() {
     return this._customerEncryption;
   }
@@ -660,7 +659,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageBucketObjectTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageBucketObjectTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -691,7 +690,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       detect_md5hash: cdktf.stringToTerraform(this._detectMd5Hash),
       event_based_hold: cdktf.booleanToTerraform(this._eventBasedHold),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       source: cdktf.stringToTerraform(this._source),
       storage_class: cdktf.stringToTerraform(this._storageClass),

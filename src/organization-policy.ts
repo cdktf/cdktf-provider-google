@@ -58,7 +58,7 @@ export interface OrganizationPolicyBooleanPolicy {
 }
 
 export function organizationPolicyBooleanPolicyToTerraform(struct?: OrganizationPolicyBooleanPolicyOutputReference | OrganizationPolicyBooleanPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -75,7 +75,7 @@ export class OrganizationPolicyBooleanPolicyOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -103,7 +103,7 @@ export class OrganizationPolicyBooleanPolicyOutputReference extends cdktf.Comple
   // enforced - computed: false, optional: false, required: true
   private _enforced?: boolean | cdktf.IResolvable; 
   public get enforced() {
-    return this.getBooleanAttribute('enforced') as any;
+    return this.getBooleanAttribute('enforced');
   }
   public set enforced(value: boolean | cdktf.IResolvable) {
     this._enforced = value;
@@ -129,7 +129,7 @@ export interface OrganizationPolicyListPolicyAllow {
 }
 
 export function organizationPolicyListPolicyAllowToTerraform(struct?: OrganizationPolicyListPolicyAllowOutputReference | OrganizationPolicyListPolicyAllow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -147,7 +147,7 @@ export class OrganizationPolicyListPolicyAllowOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -181,7 +181,7 @@ export class OrganizationPolicyListPolicyAllowOutputReference extends cdktf.Comp
   // all - computed: false, optional: true, required: false
   private _all?: boolean | cdktf.IResolvable; 
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
   public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
@@ -197,7 +197,7 @@ export class OrganizationPolicyListPolicyAllowOutputReference extends cdktf.Comp
   // values - computed: false, optional: true, required: false
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -226,7 +226,7 @@ export interface OrganizationPolicyListPolicyDeny {
 }
 
 export function organizationPolicyListPolicyDenyToTerraform(struct?: OrganizationPolicyListPolicyDenyOutputReference | OrganizationPolicyListPolicyDeny): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -244,7 +244,7 @@ export class OrganizationPolicyListPolicyDenyOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -278,7 +278,7 @@ export class OrganizationPolicyListPolicyDenyOutputReference extends cdktf.Compl
   // all - computed: false, optional: true, required: false
   private _all?: boolean | cdktf.IResolvable; 
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
   public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
@@ -294,7 +294,7 @@ export class OrganizationPolicyListPolicyDenyOutputReference extends cdktf.Compl
   // values - computed: false, optional: true, required: false
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -335,7 +335,7 @@ export interface OrganizationPolicyListPolicy {
 }
 
 export function organizationPolicyListPolicyToTerraform(struct?: OrganizationPolicyListPolicyOutputReference | OrganizationPolicyListPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -355,7 +355,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -401,7 +401,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   // inherit_from_parent - computed: false, optional: true, required: false
   private _inheritFromParent?: boolean | cdktf.IResolvable; 
   public get inheritFromParent() {
-    return this.getBooleanAttribute('inherit_from_parent') as any;
+    return this.getBooleanAttribute('inherit_from_parent');
   }
   public set inheritFromParent(value: boolean | cdktf.IResolvable) {
     this._inheritFromParent = value;
@@ -431,7 +431,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   }
 
   // allow - computed: false, optional: true, required: false
-  private _allow = new OrganizationPolicyListPolicyAllowOutputReference(this as any, "allow", true);
+  private _allow = new OrganizationPolicyListPolicyAllowOutputReference(this, "allow", true);
   public get allow() {
     return this._allow;
   }
@@ -447,7 +447,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   }
 
   // deny - computed: false, optional: true, required: false
-  private _deny = new OrganizationPolicyListPolicyDenyOutputReference(this as any, "deny", true);
+  private _deny = new OrganizationPolicyListPolicyDenyOutputReference(this, "deny", true);
   public get deny() {
     return this._deny;
   }
@@ -472,7 +472,7 @@ export interface OrganizationPolicyRestorePolicy {
 }
 
 export function organizationPolicyRestorePolicyToTerraform(struct?: OrganizationPolicyRestorePolicyOutputReference | OrganizationPolicyRestorePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -489,7 +489,7 @@ export class OrganizationPolicyRestorePolicyOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -517,7 +517,7 @@ export class OrganizationPolicyRestorePolicyOutputReference extends cdktf.Comple
   // default - computed: false, optional: false, required: true
   private _default?: boolean | cdktf.IResolvable; 
   public get default() {
-    return this.getBooleanAttribute('default') as any;
+    return this.getBooleanAttribute('default');
   }
   public set default(value: boolean | cdktf.IResolvable) {
     this._default = value;
@@ -546,8 +546,8 @@ export interface OrganizationPolicyTimeouts {
   readonly update?: string;
 }
 
-export function organizationPolicyTimeoutsToTerraform(struct?: OrganizationPolicyTimeoutsOutputReference | OrganizationPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function organizationPolicyTimeoutsToTerraform(struct?: OrganizationPolicyTimeoutsOutputReference | OrganizationPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -567,7 +567,7 @@ export class OrganizationPolicyTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -778,7 +778,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // boolean_policy - computed: false, optional: true, required: false
-  private _booleanPolicy = new OrganizationPolicyBooleanPolicyOutputReference(this as any, "boolean_policy", true);
+  private _booleanPolicy = new OrganizationPolicyBooleanPolicyOutputReference(this, "boolean_policy", true);
   public get booleanPolicy() {
     return this._booleanPolicy;
   }
@@ -794,7 +794,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // list_policy - computed: false, optional: true, required: false
-  private _listPolicy = new OrganizationPolicyListPolicyOutputReference(this as any, "list_policy", true);
+  private _listPolicy = new OrganizationPolicyListPolicyOutputReference(this, "list_policy", true);
   public get listPolicy() {
     return this._listPolicy;
   }
@@ -810,7 +810,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // restore_policy - computed: false, optional: true, required: false
-  private _restorePolicy = new OrganizationPolicyRestorePolicyOutputReference(this as any, "restore_policy", true);
+  private _restorePolicy = new OrganizationPolicyRestorePolicyOutputReference(this, "restore_policy", true);
   public get restorePolicy() {
     return this._restorePolicy;
   }
@@ -826,7 +826,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new OrganizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new OrganizationPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -78,16 +78,16 @@ export interface OsConfigPatchDeploymentInstanceFilterGroupLabels {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment#labels OsConfigPatchDeployment#labels}
   */
-  readonly labels: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels: { [key: string]: string };
 }
 
-export function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterGroupLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
   }
 }
 
@@ -124,11 +124,11 @@ VMs when targeting configs, for example prefix="prod-".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment#group_labels OsConfigPatchDeployment#group_labels}
   */
-  readonly groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[];
+  readonly groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable;
 }
 
 export function osConfigPatchDeploymentInstanceFilterToTerraform(struct?: OsConfigPatchDeploymentInstanceFilterOutputReference | OsConfigPatchDeploymentInstanceFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -149,7 +149,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -201,7 +201,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   // all - computed: false, optional: true, required: false
   private _all?: boolean | cdktf.IResolvable; 
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
   public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
@@ -263,12 +263,12 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
 
   // group_labels - computed: false, optional: true, required: false
-  private _groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[]; 
+  private _groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable; 
   public get groupLabels() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_labels') as any;
+    return this.interpolationForAttribute('group_labels');
   }
-  public set groupLabels(value: OsConfigPatchDeploymentInstanceFilterGroupLabels[]) {
+  public set groupLabels(value: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable) {
     this._groupLabels = value;
   }
   public resetGroupLabels() {
@@ -290,7 +290,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 }
 
 export function osConfigPatchDeploymentOneTimeScheduleToTerraform(struct?: OsConfigPatchDeploymentOneTimeScheduleOutputReference | OsConfigPatchDeploymentOneTimeSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -307,7 +307,7 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -369,7 +369,7 @@ any other patch configuration fields.
 }
 
 export function osConfigPatchDeploymentPatchConfigAptToTerraform(struct?: OsConfigPatchDeploymentPatchConfigAptOutputReference | OsConfigPatchDeploymentPatchConfigApt): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -388,7 +388,7 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -483,7 +483,7 @@ export interface OsConfigPatchDeploymentPatchConfigGoo {
 }
 
 export function osConfigPatchDeploymentPatchConfigGooToTerraform(struct?: OsConfigPatchDeploymentPatchConfigGooOutputReference | OsConfigPatchDeploymentPatchConfigGoo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -500,7 +500,7 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -528,7 +528,7 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -560,7 +560,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGc
 }
 
 export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -579,7 +579,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -684,7 +684,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
 }
 
 export function osConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -704,7 +704,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -750,8 +750,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   // allowed_success_codes - computed: false, optional: true, required: false
   private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allowed_success_codes') as any;
+    return this.getNumberListAttribute('allowed_success_codes');
   }
   public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
@@ -797,7 +796,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -834,7 +833,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig
 }
 
 export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -853,7 +852,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -958,7 +957,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
 }
 
 export function osConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -978,7 +977,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1024,8 +1023,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   // allowed_success_codes - computed: false, optional: true, required: false
   private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allowed_success_codes') as any;
+    return this.getNumberListAttribute('allowed_success_codes');
   }
   public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
@@ -1071,7 +1069,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -1102,7 +1100,7 @@ export interface OsConfigPatchDeploymentPatchConfigPostStep {
 }
 
 export function osConfigPatchDeploymentPatchConfigPostStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPostStepOutputReference | OsConfigPatchDeploymentPatchConfigPostStep): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1120,7 +1118,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1152,7 +1150,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   }
 
   // linux_exec_step_config - computed: false, optional: true, required: false
-  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(this as any, "linux_exec_step_config", true);
+  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(this, "linux_exec_step_config", true);
   public get linuxExecStepConfig() {
     return this._linuxExecStepConfig;
   }
@@ -1168,7 +1166,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   }
 
   // windows_exec_step_config - computed: false, optional: true, required: false
-  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(this as any, "windows_exec_step_config", true);
+  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(this, "windows_exec_step_config", true);
   public get windowsExecStepConfig() {
     return this._windowsExecStepConfig;
   }
@@ -1205,7 +1203,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcs
 }
 
 export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1224,7 +1222,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1329,7 +1327,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
 }
 
 export function osConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1349,7 +1347,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1395,8 +1393,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   // allowed_success_codes - computed: false, optional: true, required: false
   private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allowed_success_codes') as any;
+    return this.getNumberListAttribute('allowed_success_codes');
   }
   public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
@@ -1442,7 +1439,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -1479,7 +1476,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigG
 }
 
 export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1498,7 +1495,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1603,7 +1600,7 @@ be executed directly, which will likely only succeed for scripts with shebang li
 }
 
 export function osConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference | OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1623,7 +1620,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1669,8 +1666,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   // allowed_success_codes - computed: false, optional: true, required: false
   private _allowedSuccessCodes?: number[]; 
   public get allowedSuccessCodes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allowed_success_codes') as any;
+    return this.getNumberListAttribute('allowed_success_codes');
   }
   public set allowedSuccessCodes(value: number[]) {
     this._allowedSuccessCodes = value;
@@ -1716,7 +1712,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(this as any, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -1747,7 +1743,7 @@ export interface OsConfigPatchDeploymentPatchConfigPreStep {
 }
 
 export function osConfigPatchDeploymentPatchConfigPreStepToTerraform(struct?: OsConfigPatchDeploymentPatchConfigPreStepOutputReference | OsConfigPatchDeploymentPatchConfigPreStep): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1765,7 +1761,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1797,7 +1793,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   }
 
   // linux_exec_step_config - computed: false, optional: true, required: false
-  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(this as any, "linux_exec_step_config", true);
+  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(this, "linux_exec_step_config", true);
   public get linuxExecStepConfig() {
     return this._linuxExecStepConfig;
   }
@@ -1813,7 +1809,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   }
 
   // windows_exec_step_config - computed: false, optional: true, required: false
-  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(this as any, "windows_exec_step_config", true);
+  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(this, "windows_exec_step_config", true);
   public get windowsExecStepConfig() {
     return this._windowsExecStepConfig;
   }
@@ -1851,7 +1847,7 @@ This field must not be used with other patch configurations.
 }
 
 export function osConfigPatchDeploymentPatchConfigWindowsUpdateToTerraform(struct?: OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference | OsConfigPatchDeploymentPatchConfigWindowsUpdate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1870,7 +1866,7 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1985,7 +1981,7 @@ any other patch configuration fields.
 }
 
 export function osConfigPatchDeploymentPatchConfigYumToTerraform(struct?: OsConfigPatchDeploymentPatchConfigYumOutputReference | OsConfigPatchDeploymentPatchConfigYum): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2005,7 +2001,7 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2083,7 +2079,7 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   // minimal - computed: false, optional: true, required: false
   private _minimal?: boolean | cdktf.IResolvable; 
   public get minimal() {
-    return this.getBooleanAttribute('minimal') as any;
+    return this.getBooleanAttribute('minimal');
   }
   public set minimal(value: boolean | cdktf.IResolvable) {
     this._minimal = value;
@@ -2099,7 +2095,7 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   // security - computed: false, optional: true, required: false
   private _security?: boolean | cdktf.IResolvable; 
   public get security() {
-    return this.getBooleanAttribute('security') as any;
+    return this.getBooleanAttribute('security');
   }
   public set security(value: boolean | cdktf.IResolvable) {
     this._security = value;
@@ -2153,7 +2149,7 @@ This field must not be used with any other patch configuration fields.
 }
 
 export function osConfigPatchDeploymentPatchConfigZypperToTerraform(struct?: OsConfigPatchDeploymentPatchConfigZypperOutputReference | OsConfigPatchDeploymentPatchConfigZypper): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2175,7 +2171,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2297,7 +2293,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   // with_optional - computed: false, optional: true, required: false
   private _withOptional?: boolean | cdktf.IResolvable; 
   public get withOptional() {
-    return this.getBooleanAttribute('with_optional') as any;
+    return this.getBooleanAttribute('with_optional');
   }
   public set withOptional(value: boolean | cdktf.IResolvable) {
     this._withOptional = value;
@@ -2313,7 +2309,7 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   // with_update - computed: false, optional: true, required: false
   private _withUpdate?: boolean | cdktf.IResolvable; 
   public get withUpdate() {
-    return this.getBooleanAttribute('with_update') as any;
+    return this.getBooleanAttribute('with_update');
   }
   public set withUpdate(value: boolean | cdktf.IResolvable) {
     this._withUpdate = value;
@@ -2378,7 +2374,7 @@ export interface OsConfigPatchDeploymentPatchConfig {
 }
 
 export function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigPatchDeploymentPatchConfigOutputReference | OsConfigPatchDeploymentPatchConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2402,7 +2398,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2486,7 +2482,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // apt - computed: false, optional: true, required: false
-  private _apt = new OsConfigPatchDeploymentPatchConfigAptOutputReference(this as any, "apt", true);
+  private _apt = new OsConfigPatchDeploymentPatchConfigAptOutputReference(this, "apt", true);
   public get apt() {
     return this._apt;
   }
@@ -2502,7 +2498,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // goo - computed: false, optional: true, required: false
-  private _goo = new OsConfigPatchDeploymentPatchConfigGooOutputReference(this as any, "goo", true);
+  private _goo = new OsConfigPatchDeploymentPatchConfigGooOutputReference(this, "goo", true);
   public get goo() {
     return this._goo;
   }
@@ -2518,7 +2514,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // post_step - computed: false, optional: true, required: false
-  private _postStep = new OsConfigPatchDeploymentPatchConfigPostStepOutputReference(this as any, "post_step", true);
+  private _postStep = new OsConfigPatchDeploymentPatchConfigPostStepOutputReference(this, "post_step", true);
   public get postStep() {
     return this._postStep;
   }
@@ -2534,7 +2530,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // pre_step - computed: false, optional: true, required: false
-  private _preStep = new OsConfigPatchDeploymentPatchConfigPreStepOutputReference(this as any, "pre_step", true);
+  private _preStep = new OsConfigPatchDeploymentPatchConfigPreStepOutputReference(this, "pre_step", true);
   public get preStep() {
     return this._preStep;
   }
@@ -2550,7 +2546,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // windows_update - computed: false, optional: true, required: false
-  private _windowsUpdate = new OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(this as any, "windows_update", true);
+  private _windowsUpdate = new OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(this, "windows_update", true);
   public get windowsUpdate() {
     return this._windowsUpdate;
   }
@@ -2566,7 +2562,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // yum - computed: false, optional: true, required: false
-  private _yum = new OsConfigPatchDeploymentPatchConfigYumOutputReference(this as any, "yum", true);
+  private _yum = new OsConfigPatchDeploymentPatchConfigYumOutputReference(this, "yum", true);
   public get yum() {
     return this._yum;
   }
@@ -2582,7 +2578,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // zypper - computed: false, optional: true, required: false
-  private _zypper = new OsConfigPatchDeploymentPatchConfigZypperOutputReference(this as any, "zypper", true);
+  private _zypper = new OsConfigPatchDeploymentPatchConfigZypperOutputReference(this, "zypper", true);
   public get zypper() {
     return this._zypper;
   }
@@ -2613,7 +2609,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
 }
 
 export function osConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2631,7 +2627,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2706,7 +2702,7 @@ will not run in February, April, June, etc.
 }
 
 export function osConfigPatchDeploymentRecurringScheduleMonthlyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference | OsConfigPatchDeploymentRecurringScheduleMonthly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2724,7 +2720,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2772,7 +2768,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   }
 
   // week_day_of_month - computed: false, optional: true, required: false
-  private _weekDayOfMonth = new OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(this as any, "week_day_of_month", true);
+  private _weekDayOfMonth = new OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(this, "week_day_of_month", true);
   public get weekDayOfMonth() {
     return this._weekDayOfMonth;
   }
@@ -2816,7 +2812,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 }
 
 export function osConfigPatchDeploymentRecurringScheduleTimeOfDayToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeOfDay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2836,7 +2832,7 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2959,7 +2955,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
 }
 
 export function osConfigPatchDeploymentRecurringScheduleTimeZoneToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference | OsConfigPatchDeploymentRecurringScheduleTimeZone): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2977,7 +2973,7 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3047,7 +3043,7 @@ export interface OsConfigPatchDeploymentRecurringScheduleWeekly {
 }
 
 export function osConfigPatchDeploymentRecurringScheduleWeeklyToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference | OsConfigPatchDeploymentRecurringScheduleWeekly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3064,7 +3060,7 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3144,7 +3140,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 }
 
 export function osConfigPatchDeploymentRecurringScheduleToTerraform(struct?: OsConfigPatchDeploymentRecurringScheduleOutputReference | OsConfigPatchDeploymentRecurringSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3166,7 +3162,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3237,6 +3233,16 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
     return this._endTime;
   }
 
+  // last_execute_time - computed: true, optional: false, required: false
+  public get lastExecuteTime() {
+    return this.getStringAttribute('last_execute_time');
+  }
+
+  // next_execute_time - computed: true, optional: false, required: false
+  public get nextExecuteTime() {
+    return this.getStringAttribute('next_execute_time');
+  }
+
   // start_time - computed: false, optional: true, required: false
   private _startTime?: string; 
   public get startTime() {
@@ -3254,7 +3260,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly = new OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(this as any, "monthly", true);
+  private _monthly = new OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(this, "monthly", true);
   public get monthly() {
     return this._monthly;
   }
@@ -3270,7 +3276,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // time_of_day - computed: false, optional: false, required: true
-  private _timeOfDay = new OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(this as any, "time_of_day", true);
+  private _timeOfDay = new OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(this, "time_of_day", true);
   public get timeOfDay() {
     return this._timeOfDay;
   }
@@ -3283,7 +3289,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // time_zone - computed: false, optional: false, required: true
-  private _timeZone = new OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(this as any, "time_zone", true);
+  private _timeZone = new OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(this, "time_zone", true);
   public get timeZone() {
     return this._timeZone;
   }
@@ -3296,7 +3302,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // weekly - computed: false, optional: true, required: false
-  private _weekly = new OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(this as any, "weekly", true);
+  private _weekly = new OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(this, "weekly", true);
   public get weekly() {
     return this._weekly;
   }
@@ -3327,7 +3333,7 @@ export interface OsConfigPatchDeploymentRolloutDisruptionBudget {
 }
 
 export function osConfigPatchDeploymentRolloutDisruptionBudgetToTerraform(struct?: OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference | OsConfigPatchDeploymentRolloutDisruptionBudget): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3345,7 +3351,7 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3424,7 +3430,7 @@ export interface OsConfigPatchDeploymentRollout {
 }
 
 export function osConfigPatchDeploymentRolloutToTerraform(struct?: OsConfigPatchDeploymentRolloutOutputReference | OsConfigPatchDeploymentRollout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3442,7 +3448,7 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3487,7 +3493,7 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   }
 
   // disruption_budget - computed: false, optional: false, required: true
-  private _disruptionBudget = new OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(this as any, "disruption_budget", true);
+  private _disruptionBudget = new OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(this, "disruption_budget", true);
   public get disruptionBudget() {
     return this._disruptionBudget;
   }
@@ -3510,8 +3516,8 @@ export interface OsConfigPatchDeploymentTimeouts {
   readonly delete?: string;
 }
 
-export function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatchDeploymentTimeoutsOutputReference | OsConfigPatchDeploymentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatchDeploymentTimeoutsOutputReference | OsConfigPatchDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3529,7 +3535,7 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3728,7 +3734,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // instance_filter - computed: false, optional: false, required: true
-  private _instanceFilter = new OsConfigPatchDeploymentInstanceFilterOutputReference(this as any, "instance_filter", true);
+  private _instanceFilter = new OsConfigPatchDeploymentInstanceFilterOutputReference(this, "instance_filter", true);
   public get instanceFilter() {
     return this._instanceFilter;
   }
@@ -3741,7 +3747,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // one_time_schedule - computed: false, optional: true, required: false
-  private _oneTimeSchedule = new OsConfigPatchDeploymentOneTimeScheduleOutputReference(this as any, "one_time_schedule", true);
+  private _oneTimeSchedule = new OsConfigPatchDeploymentOneTimeScheduleOutputReference(this, "one_time_schedule", true);
   public get oneTimeSchedule() {
     return this._oneTimeSchedule;
   }
@@ -3757,7 +3763,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // patch_config - computed: false, optional: true, required: false
-  private _patchConfig = new OsConfigPatchDeploymentPatchConfigOutputReference(this as any, "patch_config", true);
+  private _patchConfig = new OsConfigPatchDeploymentPatchConfigOutputReference(this, "patch_config", true);
   public get patchConfig() {
     return this._patchConfig;
   }
@@ -3773,7 +3779,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // recurring_schedule - computed: false, optional: true, required: false
-  private _recurringSchedule = new OsConfigPatchDeploymentRecurringScheduleOutputReference(this as any, "recurring_schedule", true);
+  private _recurringSchedule = new OsConfigPatchDeploymentRecurringScheduleOutputReference(this, "recurring_schedule", true);
   public get recurringSchedule() {
     return this._recurringSchedule;
   }
@@ -3789,7 +3795,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // rollout - computed: false, optional: true, required: false
-  private _rollout = new OsConfigPatchDeploymentRolloutOutputReference(this as any, "rollout", true);
+  private _rollout = new OsConfigPatchDeploymentRolloutOutputReference(this, "rollout", true);
   public get rollout() {
     return this._rollout;
   }
@@ -3805,7 +3811,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new OsConfigPatchDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new OsConfigPatchDeploymentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

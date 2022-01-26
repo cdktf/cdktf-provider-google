@@ -65,7 +65,7 @@ export interface DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath {
 }
 
 export function dataLossPreventionStoredInfoTypeDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputReference | DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputRef
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -131,7 +131,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 }
 
 export function dataLossPreventionStoredInfoTypeDictionaryWordListToTerraform(struct?: DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference | DataLossPreventionStoredInfoTypeDictionaryWordList): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,7 +148,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -202,7 +202,7 @@ export interface DataLossPreventionStoredInfoTypeDictionary {
 }
 
 export function dataLossPreventionStoredInfoTypeDictionaryToTerraform(struct?: DataLossPreventionStoredInfoTypeDictionaryOutputReference | DataLossPreventionStoredInfoTypeDictionary): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -220,7 +220,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -252,7 +252,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   }
 
   // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath = new DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
+  private _cloudStoragePath = new DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path", true);
   public get cloudStoragePath() {
     return this._cloudStoragePath;
   }
@@ -268,7 +268,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList = new DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference(this as any, "word_list", true);
+  private _wordList = new DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference(this, "word_list", true);
   public get wordList() {
     return this._wordList;
   }
@@ -293,7 +293,7 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFi
 }
 
 export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutputReference | DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -310,7 +310,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldF
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -370,7 +370,7 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFi
 }
 
 export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutputReference | DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -389,7 +389,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldT
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -481,7 +481,7 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFi
 }
 
 export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutputReference | DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -499,7 +499,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -531,7 +531,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   }
 
   // field - computed: false, optional: false, required: true
-  private _field = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutputReference(this as any, "field", true);
+  private _field = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutputReference(this, "field", true);
   public get field() {
     return this._field;
   }
@@ -544,7 +544,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   }
 
   // table - computed: false, optional: false, required: true
-  private _table = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutputReference(this as any, "table", true);
+  private _table = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutputReference(this, "table", true);
   public get table() {
     return this._table;
   }
@@ -566,7 +566,7 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStora
 }
 
 export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutputReference | DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -583,7 +583,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFi
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -631,7 +631,7 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath
 }
 
 export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutputReference | DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -648,7 +648,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -708,7 +708,7 @@ export interface DataLossPreventionStoredInfoTypeLargeCustomDictionary {
 }
 
 export function dataLossPreventionStoredInfoTypeLargeCustomDictionaryToTerraform(struct?: DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReference | DataLossPreventionStoredInfoTypeLargeCustomDictionary): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -727,7 +727,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -765,7 +765,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   // big_query_field - computed: false, optional: true, required: false
-  private _bigQueryField = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutputReference(this as any, "big_query_field", true);
+  private _bigQueryField = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutputReference(this, "big_query_field", true);
   public get bigQueryField() {
     return this._bigQueryField;
   }
@@ -781,7 +781,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   // cloud_storage_file_set - computed: false, optional: true, required: false
-  private _cloudStorageFileSet = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutputReference(this as any, "cloud_storage_file_set", true);
+  private _cloudStorageFileSet = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutputReference(this, "cloud_storage_file_set", true);
   public get cloudStorageFileSet() {
     return this._cloudStorageFileSet;
   }
@@ -797,7 +797,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   // output_path - computed: false, optional: false, required: true
-  private _outputPath = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutputReference(this as any, "output_path", true);
+  private _outputPath = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutputReference(this, "output_path", true);
   public get outputPath() {
     return this._outputPath;
   }
@@ -826,7 +826,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 }
 
 export function dataLossPreventionStoredInfoTypeRegexToTerraform(struct?: DataLossPreventionStoredInfoTypeRegexOutputReference | DataLossPreventionStoredInfoTypeRegex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -844,7 +844,7 @@ export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -878,8 +878,7 @@ export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.
   // group_indexes - computed: false, optional: true, required: false
   private _groupIndexes?: number[]; 
   public get groupIndexes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_indexes') as any;
+    return this.getNumberListAttribute('group_indexes');
   }
   public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
@@ -920,8 +919,8 @@ export interface DataLossPreventionStoredInfoTypeTimeouts {
   readonly update?: string;
 }
 
-export function dataLossPreventionStoredInfoTypeTimeoutsToTerraform(struct?: DataLossPreventionStoredInfoTypeTimeoutsOutputReference | DataLossPreventionStoredInfoTypeTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionStoredInfoTypeTimeoutsToTerraform(struct?: DataLossPreventionStoredInfoTypeTimeoutsOutputReference | DataLossPreventionStoredInfoTypeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -940,7 +939,7 @@ export class DataLossPreventionStoredInfoTypeTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1127,7 +1126,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // dictionary - computed: false, optional: true, required: false
-  private _dictionary = new DataLossPreventionStoredInfoTypeDictionaryOutputReference(this as any, "dictionary", true);
+  private _dictionary = new DataLossPreventionStoredInfoTypeDictionaryOutputReference(this, "dictionary", true);
   public get dictionary() {
     return this._dictionary;
   }
@@ -1143,7 +1142,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // large_custom_dictionary - computed: false, optional: true, required: false
-  private _largeCustomDictionary = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReference(this as any, "large_custom_dictionary", true);
+  private _largeCustomDictionary = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReference(this, "large_custom_dictionary", true);
   public get largeCustomDictionary() {
     return this._largeCustomDictionary;
   }
@@ -1159,7 +1158,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // regex - computed: false, optional: true, required: false
-  private _regex = new DataLossPreventionStoredInfoTypeRegexOutputReference(this as any, "regex", true);
+  private _regex = new DataLossPreventionStoredInfoTypeRegexOutputReference(this, "regex", true);
   public get regex() {
     return this._regex;
   }
@@ -1175,7 +1174,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataLossPreventionStoredInfoTypeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataLossPreventionStoredInfoTypeTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

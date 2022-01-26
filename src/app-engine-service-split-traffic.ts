@@ -42,7 +42,7 @@ export interface AppEngineServiceSplitTrafficSplit {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_service_split_traffic#allocations AppEngineServiceSplitTraffic#allocations}
   */
-  readonly allocations: { [key: string]: string } | cdktf.IResolvable;
+  readonly allocations: { [key: string]: string };
   /**
   * Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed. Possible values: ["UNSPECIFIED", "COOKIE", "IP", "RANDOM"]
   * 
@@ -52,12 +52,12 @@ export interface AppEngineServiceSplitTrafficSplit {
 }
 
 export function appEngineServiceSplitTrafficSplitToTerraform(struct?: AppEngineServiceSplitTrafficSplitOutputReference | AppEngineServiceSplitTrafficSplit): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allocations: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.allocations),
+    allocations: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.allocations),
     shard_by: cdktf.stringToTerraform(struct!.shardBy),
   }
 }
@@ -70,7 +70,7 @@ export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -102,12 +102,11 @@ export class AppEngineServiceSplitTrafficSplitOutputReference extends cdktf.Comp
   }
 
   // allocations - computed: false, optional: false, required: true
-  private _allocations?: { [key: string]: string } | cdktf.IResolvable; 
+  private _allocations?: { [key: string]: string }; 
   public get allocations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allocations') as any;
+    return this.getStringMapAttribute('allocations');
   }
-  public set allocations(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set allocations(value: { [key: string]: string }) {
     this._allocations = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -146,8 +145,8 @@ export interface AppEngineServiceSplitTrafficTimeouts {
   readonly update?: string;
 }
 
-export function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServiceSplitTrafficTimeoutsOutputReference | AppEngineServiceSplitTrafficTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appEngineServiceSplitTrafficTimeoutsToTerraform(struct?: AppEngineServiceSplitTrafficTimeoutsOutputReference | AppEngineServiceSplitTrafficTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -166,7 +165,7 @@ export class AppEngineServiceSplitTrafficTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -303,7 +302,7 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   // migrate_traffic - computed: false, optional: true, required: false
   private _migrateTraffic?: boolean | cdktf.IResolvable; 
   public get migrateTraffic() {
-    return this.getBooleanAttribute('migrate_traffic') as any;
+    return this.getBooleanAttribute('migrate_traffic');
   }
   public set migrateTraffic(value: boolean | cdktf.IResolvable) {
     this._migrateTraffic = value;
@@ -346,7 +345,7 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
 
   // split - computed: false, optional: false, required: true
-  private _split = new AppEngineServiceSplitTrafficSplitOutputReference(this as any, "split", true);
+  private _split = new AppEngineServiceSplitTrafficSplitOutputReference(this, "split", true);
   public get split() {
     return this._split;
   }
@@ -359,7 +358,7 @@ export class AppEngineServiceSplitTraffic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineServiceSplitTrafficTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineServiceSplitTrafficTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

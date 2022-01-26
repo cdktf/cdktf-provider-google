@@ -89,8 +89,8 @@ export interface ComputeFirewallPolicyRuleMatchLayer4Configs {
   readonly ports?: string[];
 }
 
-export function computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform(struct?: ComputeFirewallPolicyRuleMatchLayer4Configs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform(struct?: ComputeFirewallPolicyRuleMatchLayer4Configs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,11 +118,11 @@ export interface ComputeFirewallPolicyRuleMatch {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_rule#layer4_configs ComputeFirewallPolicyRule#layer4_configs}
   */
-  readonly layer4Configs: ComputeFirewallPolicyRuleMatchLayer4Configs[];
+  readonly layer4Configs: ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable;
 }
 
 export function computeFirewallPolicyRuleMatchToTerraform(struct?: ComputeFirewallPolicyRuleMatchOutputReference | ComputeFirewallPolicyRuleMatch): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -141,7 +141,7 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -211,12 +211,12 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   // layer4_configs - computed: false, optional: false, required: true
-  private _layer4Configs?: ComputeFirewallPolicyRuleMatchLayer4Configs[]; 
+  private _layer4Configs?: ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable; 
   public get layer4Configs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('layer4_configs') as any;
+    return this.interpolationForAttribute('layer4_configs');
   }
-  public set layer4Configs(value: ComputeFirewallPolicyRuleMatchLayer4Configs[]) {
+  public set layer4Configs(value: ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable) {
     this._layer4Configs = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -239,8 +239,8 @@ export interface ComputeFirewallPolicyRuleTimeouts {
   readonly update?: string;
 }
 
-export function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFirewallPolicyRuleTimeoutsOutputReference | ComputeFirewallPolicyRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFirewallPolicyRuleTimeoutsOutputReference | ComputeFirewallPolicyRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -259,7 +259,7 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -439,7 +439,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -455,7 +455,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   // enable_logging - computed: false, optional: true, required: false
   private _enableLogging?: boolean | cdktf.IResolvable; 
   public get enableLogging() {
-    return this.getBooleanAttribute('enable_logging') as any;
+    return this.getBooleanAttribute('enable_logging');
   }
   public set enableLogging(value: boolean | cdktf.IResolvable) {
     this._enableLogging = value;
@@ -542,7 +542,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // match - computed: false, optional: false, required: true
-  private _match = new ComputeFirewallPolicyRuleMatchOutputReference(this as any, "match", true);
+  private _match = new ComputeFirewallPolicyRuleMatchOutputReference(this, "match", true);
   public get match() {
     return this._match;
   }
@@ -555,7 +555,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeFirewallPolicyRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeFirewallPolicyRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

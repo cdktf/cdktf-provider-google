@@ -60,7 +60,7 @@ export interface StorageTransferJobScheduleScheduleEndDate {
 }
 
 export function storageTransferJobScheduleScheduleEndDateToTerraform(struct?: StorageTransferJobScheduleScheduleEndDateOutputReference | StorageTransferJobScheduleScheduleEndDate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -79,7 +79,7 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -177,7 +177,7 @@ export interface StorageTransferJobScheduleScheduleStartDate {
 }
 
 export function storageTransferJobScheduleScheduleStartDateToTerraform(struct?: StorageTransferJobScheduleScheduleStartDateOutputReference | StorageTransferJobScheduleScheduleStartDate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -196,7 +196,7 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -300,7 +300,7 @@ export interface StorageTransferJobScheduleStartTimeOfDay {
 }
 
 export function storageTransferJobScheduleStartTimeOfDayToTerraform(struct?: StorageTransferJobScheduleStartTimeOfDayOutputReference | StorageTransferJobScheduleStartTimeOfDay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -320,7 +320,7 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -437,7 +437,7 @@ export interface StorageTransferJobSchedule {
 }
 
 export function storageTransferJobScheduleToTerraform(struct?: StorageTransferJobScheduleOutputReference | StorageTransferJobSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -456,7 +456,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -494,7 +494,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   // schedule_end_date - computed: false, optional: true, required: false
-  private _scheduleEndDate = new StorageTransferJobScheduleScheduleEndDateOutputReference(this as any, "schedule_end_date", true);
+  private _scheduleEndDate = new StorageTransferJobScheduleScheduleEndDateOutputReference(this, "schedule_end_date", true);
   public get scheduleEndDate() {
     return this._scheduleEndDate;
   }
@@ -510,7 +510,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   // schedule_start_date - computed: false, optional: false, required: true
-  private _scheduleStartDate = new StorageTransferJobScheduleScheduleStartDateOutputReference(this as any, "schedule_start_date", true);
+  private _scheduleStartDate = new StorageTransferJobScheduleScheduleStartDateOutputReference(this, "schedule_start_date", true);
   public get scheduleStartDate() {
     return this._scheduleStartDate;
   }
@@ -523,7 +523,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   // start_time_of_day - computed: false, optional: true, required: false
-  private _startTimeOfDay = new StorageTransferJobScheduleStartTimeOfDayOutputReference(this as any, "start_time_of_day", true);
+  private _startTimeOfDay = new StorageTransferJobScheduleStartTimeOfDayOutputReference(this, "start_time_of_day", true);
   public get startTimeOfDay() {
     return this._startTimeOfDay;
   }
@@ -554,7 +554,7 @@ export interface StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
 }
 
 export function storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference | StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -572,7 +572,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -645,7 +645,7 @@ export interface StorageTransferJobTransferSpecAwsS3DataSource {
 }
 
 export function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceOutputReference | StorageTransferJobTransferSpecAwsS3DataSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -663,7 +663,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -708,7 +708,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   }
 
   // aws_access_key - computed: false, optional: false, required: true
-  private _awsAccessKey = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this as any, "aws_access_key", true);
+  private _awsAccessKey = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this, "aws_access_key", true);
   public get awsAccessKey() {
     return this._awsAccessKey;
   }
@@ -730,7 +730,7 @@ export interface StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCr
 }
 
 export function storageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference | StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -747,7 +747,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -813,7 +813,7 @@ export interface StorageTransferJobTransferSpecAzureBlobStorageDataSource {
 }
 
 export function storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraform(struct?: StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference | StorageTransferJobTransferSpecAzureBlobStorageDataSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -833,7 +833,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -919,7 +919,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   }
 
   // azure_credentials - computed: false, optional: false, required: true
-  private _azureCredentials = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference(this as any, "azure_credentials", true);
+  private _azureCredentials = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference(this, "azure_credentials", true);
   public get azureCredentials() {
     return this._azureCredentials;
   }
@@ -947,7 +947,7 @@ export interface StorageTransferJobTransferSpecGcsDataSink {
 }
 
 export function storageTransferJobTransferSpecGcsDataSinkToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSinkOutputReference | StorageTransferJobTransferSpecGcsDataSink): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -965,7 +965,7 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1041,7 +1041,7 @@ export interface StorageTransferJobTransferSpecGcsDataSource {
 }
 
 export function storageTransferJobTransferSpecGcsDataSourceToTerraform(struct?: StorageTransferJobTransferSpecGcsDataSourceOutputReference | StorageTransferJobTransferSpecGcsDataSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1059,7 +1059,7 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1129,7 +1129,7 @@ export interface StorageTransferJobTransferSpecHttpDataSource {
 }
 
 export function storageTransferJobTransferSpecHttpDataSourceToTerraform(struct?: StorageTransferJobTransferSpecHttpDataSourceOutputReference | StorageTransferJobTransferSpecHttpDataSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1146,7 +1146,7 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1212,7 +1212,7 @@ export interface StorageTransferJobTransferSpecObjectConditions {
 }
 
 export function storageTransferJobTransferSpecObjectConditionsToTerraform(struct?: StorageTransferJobTransferSpecObjectConditionsOutputReference | StorageTransferJobTransferSpecObjectConditions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1232,7 +1232,7 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1361,7 +1361,7 @@ export interface StorageTransferJobTransferSpecTransferOptions {
 }
 
 export function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: StorageTransferJobTransferSpecTransferOptionsOutputReference | StorageTransferJobTransferSpecTransferOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1380,7 +1380,7 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1420,7 +1420,7 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   // delete_objects_from_source_after_transfer - computed: false, optional: true, required: false
   private _deleteObjectsFromSourceAfterTransfer?: boolean | cdktf.IResolvable; 
   public get deleteObjectsFromSourceAfterTransfer() {
-    return this.getBooleanAttribute('delete_objects_from_source_after_transfer') as any;
+    return this.getBooleanAttribute('delete_objects_from_source_after_transfer');
   }
   public set deleteObjectsFromSourceAfterTransfer(value: boolean | cdktf.IResolvable) {
     this._deleteObjectsFromSourceAfterTransfer = value;
@@ -1436,7 +1436,7 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   // delete_objects_unique_in_sink - computed: false, optional: true, required: false
   private _deleteObjectsUniqueInSink?: boolean | cdktf.IResolvable; 
   public get deleteObjectsUniqueInSink() {
-    return this.getBooleanAttribute('delete_objects_unique_in_sink') as any;
+    return this.getBooleanAttribute('delete_objects_unique_in_sink');
   }
   public set deleteObjectsUniqueInSink(value: boolean | cdktf.IResolvable) {
     this._deleteObjectsUniqueInSink = value;
@@ -1452,7 +1452,7 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   // overwrite_objects_already_existing_in_sink - computed: false, optional: true, required: false
   private _overwriteObjectsAlreadyExistingInSink?: boolean | cdktf.IResolvable; 
   public get overwriteObjectsAlreadyExistingInSink() {
-    return this.getBooleanAttribute('overwrite_objects_already_existing_in_sink') as any;
+    return this.getBooleanAttribute('overwrite_objects_already_existing_in_sink');
   }
   public set overwriteObjectsAlreadyExistingInSink(value: boolean | cdktf.IResolvable) {
     this._overwriteObjectsAlreadyExistingInSink = value;
@@ -1511,7 +1511,7 @@ export interface StorageTransferJobTransferSpec {
 }
 
 export function storageTransferJobTransferSpecToTerraform(struct?: StorageTransferJobTransferSpecOutputReference | StorageTransferJobTransferSpec): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1534,7 +1534,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1596,7 +1596,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // aws_s3_data_source - computed: false, optional: true, required: false
-  private _awsS3DataSource = new StorageTransferJobTransferSpecAwsS3DataSourceOutputReference(this as any, "aws_s3_data_source", true);
+  private _awsS3DataSource = new StorageTransferJobTransferSpecAwsS3DataSourceOutputReference(this, "aws_s3_data_source", true);
   public get awsS3DataSource() {
     return this._awsS3DataSource;
   }
@@ -1612,7 +1612,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // azure_blob_storage_data_source - computed: false, optional: true, required: false
-  private _azureBlobStorageDataSource = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference(this as any, "azure_blob_storage_data_source", true);
+  private _azureBlobStorageDataSource = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference(this, "azure_blob_storage_data_source", true);
   public get azureBlobStorageDataSource() {
     return this._azureBlobStorageDataSource;
   }
@@ -1628,7 +1628,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // gcs_data_sink - computed: false, optional: true, required: false
-  private _gcsDataSink = new StorageTransferJobTransferSpecGcsDataSinkOutputReference(this as any, "gcs_data_sink", true);
+  private _gcsDataSink = new StorageTransferJobTransferSpecGcsDataSinkOutputReference(this, "gcs_data_sink", true);
   public get gcsDataSink() {
     return this._gcsDataSink;
   }
@@ -1644,7 +1644,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // gcs_data_source - computed: false, optional: true, required: false
-  private _gcsDataSource = new StorageTransferJobTransferSpecGcsDataSourceOutputReference(this as any, "gcs_data_source", true);
+  private _gcsDataSource = new StorageTransferJobTransferSpecGcsDataSourceOutputReference(this, "gcs_data_source", true);
   public get gcsDataSource() {
     return this._gcsDataSource;
   }
@@ -1660,7 +1660,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // http_data_source - computed: false, optional: true, required: false
-  private _httpDataSource = new StorageTransferJobTransferSpecHttpDataSourceOutputReference(this as any, "http_data_source", true);
+  private _httpDataSource = new StorageTransferJobTransferSpecHttpDataSourceOutputReference(this, "http_data_source", true);
   public get httpDataSource() {
     return this._httpDataSource;
   }
@@ -1676,7 +1676,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // object_conditions - computed: false, optional: true, required: false
-  private _objectConditions = new StorageTransferJobTransferSpecObjectConditionsOutputReference(this as any, "object_conditions", true);
+  private _objectConditions = new StorageTransferJobTransferSpecObjectConditionsOutputReference(this, "object_conditions", true);
   public get objectConditions() {
     return this._objectConditions;
   }
@@ -1692,7 +1692,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // transfer_options - computed: false, optional: true, required: false
-  private _transferOptions = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this as any, "transfer_options", true);
+  private _transferOptions = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this, "transfer_options", true);
   public get transferOptions() {
     return this._transferOptions;
   }
@@ -1822,7 +1822,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule = new StorageTransferJobScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new StorageTransferJobScheduleOutputReference(this, "schedule", true);
   public get schedule() {
     return this._schedule;
   }
@@ -1835,7 +1835,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
 
   // transfer_spec - computed: false, optional: false, required: true
-  private _transferSpec = new StorageTransferJobTransferSpecOutputReference(this as any, "transfer_spec", true);
+  private _transferSpec = new StorageTransferJobTransferSpecOutputReference(this, "transfer_spec", true);
   public get transferSpec() {
     return this._transferSpec;
   }

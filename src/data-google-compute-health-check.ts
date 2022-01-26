@@ -161,7 +161,7 @@ export class DataGoogleComputeHealthCheckLogConfig extends cdktf.ComplexComputed
 
   // enable - computed: true, optional: false, required: false
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
 }
 export class DataGoogleComputeHealthCheckSslHealthCheck extends cdktf.ComplexComputedList {
@@ -286,7 +286,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
   // grpc_health_check - computed: true, optional: false, required: false
   public grpcHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckGrpcHealthCheck(this, 'grpc_health_check', index);
+    return new DataGoogleComputeHealthCheckGrpcHealthCheck(this, 'grpc_health_check', index, false);
   }
 
   // healthy_threshold - computed: true, optional: false, required: false
@@ -296,17 +296,17 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
   // http2_health_check - computed: true, optional: false, required: false
   public http2HealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckHttp2HealthCheck(this, 'http2_health_check', index);
+    return new DataGoogleComputeHealthCheckHttp2HealthCheck(this, 'http2_health_check', index, false);
   }
 
   // http_health_check - computed: true, optional: false, required: false
   public httpHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckHttpHealthCheck(this, 'http_health_check', index);
+    return new DataGoogleComputeHealthCheckHttpHealthCheck(this, 'http_health_check', index, false);
   }
 
   // https_health_check - computed: true, optional: false, required: false
   public httpsHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckHttpsHealthCheck(this, 'https_health_check', index);
+    return new DataGoogleComputeHealthCheckHttpsHealthCheck(this, 'https_health_check', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -316,7 +316,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
   // log_config - computed: true, optional: false, required: false
   public logConfig(index: string) {
-    return new DataGoogleComputeHealthCheckLogConfig(this, 'log_config', index);
+    return new DataGoogleComputeHealthCheckLogConfig(this, 'log_config', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -355,12 +355,12 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
 
   // ssl_health_check - computed: true, optional: false, required: false
   public sslHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckSslHealthCheck(this, 'ssl_health_check', index);
+    return new DataGoogleComputeHealthCheckSslHealthCheck(this, 'ssl_health_check', index, false);
   }
 
   // tcp_health_check - computed: true, optional: false, required: false
   public tcpHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckTcpHealthCheck(this, 'tcp_health_check', index);
+    return new DataGoogleComputeHealthCheckTcpHealthCheck(this, 'tcp_health_check', index, false);
   }
 
   // timeout_sec - computed: true, optional: false, required: false

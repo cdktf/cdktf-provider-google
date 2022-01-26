@@ -70,12 +70,12 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
   // all_ports - computed: true, optional: false, required: false
   public get allPorts() {
-    return this.getBooleanAttribute('all_ports') as any;
+    return this.getBooleanAttribute('all_ports');
   }
 
   // allow_global_access - computed: true, optional: false, required: false
   public get allowGlobalAccess() {
-    return this.getBooleanAttribute('allow_global_access') as any;
+    return this.getBooleanAttribute('allow_global_access');
   }
 
   // backend_service - computed: true, optional: false, required: false
@@ -110,7 +110,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
   // is_mirroring_collector - computed: true, optional: false, required: false
   public get isMirroringCollector() {
-    return this.getBooleanAttribute('is_mirroring_collector') as any;
+    return this.getBooleanAttribute('is_mirroring_collector');
   }
 
   // label_fingerprint - computed: true, optional: false, required: false
@@ -119,7 +119,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -158,7 +158,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
   // ports - computed: true, optional: false, required: false
   public get ports() {
-    return this.getListAttribute('ports');
+    return cdktf.Fn.tolist(this.getListAttribute('ports'));
   }
 
   // project - computed: false, optional: true, required: false

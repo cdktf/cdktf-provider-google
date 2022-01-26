@@ -84,8 +84,8 @@ export interface ComputeNetworkTimeouts {
   readonly update?: string;
 }
 
-export function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeoutsOutputReference | ComputeNetworkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeNetworkTimeoutsToTerraform(struct?: ComputeNetworkTimeoutsOutputReference | ComputeNetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -104,7 +104,7 @@ export class ComputeNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   // auto_create_subnetworks - computed: false, optional: true, required: false
   private _autoCreateSubnetworks?: boolean | cdktf.IResolvable; 
   public get autoCreateSubnetworks() {
-    return this.getBooleanAttribute('auto_create_subnetworks') as any;
+    return this.getBooleanAttribute('auto_create_subnetworks');
   }
   public set autoCreateSubnetworks(value: boolean | cdktf.IResolvable) {
     this._autoCreateSubnetworks = value;
@@ -255,7 +255,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   // delete_default_routes_on_create - computed: false, optional: true, required: false
   private _deleteDefaultRoutesOnCreate?: boolean | cdktf.IResolvable; 
   public get deleteDefaultRoutesOnCreate() {
-    return this.getBooleanAttribute('delete_default_routes_on_create') as any;
+    return this.getBooleanAttribute('delete_default_routes_on_create');
   }
   public set deleteDefaultRoutesOnCreate(value: boolean | cdktf.IResolvable) {
     this._deleteDefaultRoutesOnCreate = value;
@@ -361,7 +361,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeNetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeNetworkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

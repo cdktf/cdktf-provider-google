@@ -101,7 +101,7 @@ than or equal to max-nodes. The default value is 0.
 }
 
 export function computeNodeGroupAutoscalingPolicyToTerraform(struct?: ComputeNodeGroupAutoscalingPolicyOutputReference | ComputeNodeGroupAutoscalingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -120,7 +120,7 @@ export class ComputeNodeGroupAutoscalingPolicyOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -215,7 +215,7 @@ export interface ComputeNodeGroupMaintenanceWindow {
 }
 
 export function computeNodeGroupMaintenanceWindowToTerraform(struct?: ComputeNodeGroupMaintenanceWindowOutputReference | ComputeNodeGroupMaintenanceWindow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -232,7 +232,7 @@ export class ComputeNodeGroupMaintenanceWindowOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -285,8 +285,8 @@ export interface ComputeNodeGroupTimeouts {
   readonly update?: string;
 }
 
-export function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeoutsOutputReference | ComputeNodeGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTimeoutsOutputReference | ComputeNodeGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -305,7 +305,7 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -581,7 +581,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // autoscaling_policy - computed: false, optional: true, required: false
-  private _autoscalingPolicy = new ComputeNodeGroupAutoscalingPolicyOutputReference(this as any, "autoscaling_policy", true);
+  private _autoscalingPolicy = new ComputeNodeGroupAutoscalingPolicyOutputReference(this, "autoscaling_policy", true);
   public get autoscalingPolicy() {
     return this._autoscalingPolicy;
   }
@@ -597,7 +597,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new ComputeNodeGroupMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new ComputeNodeGroupMaintenanceWindowOutputReference(this, "maintenance_window", true);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -613,7 +613,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeNodeGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeNodeGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

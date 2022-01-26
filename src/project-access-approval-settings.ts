@@ -32,7 +32,7 @@ resources of that resource. A maximum of 50 email addresses are allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings#enrolled_services ProjectAccessApprovalSettings#enrolled_services}
   */
-  readonly enrolledServices: ProjectAccessApprovalSettingsEnrolledServices[];
+  readonly enrolledServices: ProjectAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -65,8 +65,8 @@ export interface ProjectAccessApprovalSettingsEnrolledServices {
   readonly enrollmentLevel?: string;
 }
 
-export function projectAccessApprovalSettingsEnrolledServicesToTerraform(struct?: ProjectAccessApprovalSettingsEnrolledServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function projectAccessApprovalSettingsEnrolledServicesToTerraform(struct?: ProjectAccessApprovalSettingsEnrolledServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,8 +91,8 @@ export interface ProjectAccessApprovalSettingsTimeouts {
   readonly update?: string;
 }
 
-export function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccessApprovalSettingsTimeoutsOutputReference | ProjectAccessApprovalSettingsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function projectAccessApprovalSettingsTimeoutsToTerraform(struct?: ProjectAccessApprovalSettingsTimeoutsOutputReference | ProjectAccessApprovalSettingsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -111,7 +111,7 @@ export class ProjectAccessApprovalSettingsTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -242,7 +242,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
 
   // enrolled_ancestor - computed: true, optional: false, required: false
   public get enrolledAncestor() {
-    return this.getBooleanAttribute('enrolled_ancestor') as any;
+    return this.getBooleanAttribute('enrolled_ancestor');
   }
 
   // id - computed: true, optional: true, required: false
@@ -258,7 +258,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   // notification_emails - computed: true, optional: true, required: false
   private _notificationEmails?: string[]; 
   public get notificationEmails() {
-    return this.getListAttribute('notification_emails');
+    return cdktf.Fn.tolist(this.getListAttribute('notification_emails'));
   }
   public set notificationEmails(value: string[]) {
     this._notificationEmails = value;
@@ -301,12 +301,12 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // enrolled_services - computed: false, optional: false, required: true
-  private _enrolledServices?: ProjectAccessApprovalSettingsEnrolledServices[]; 
+  private _enrolledServices?: ProjectAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable; 
   public get enrolledServices() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('enrolled_services') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('enrolled_services')));
   }
-  public set enrolledServices(value: ProjectAccessApprovalSettingsEnrolledServices[]) {
+  public set enrolledServices(value: ProjectAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable) {
     this._enrolledServices = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -315,7 +315,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ProjectAccessApprovalSettingsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ProjectAccessApprovalSettingsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

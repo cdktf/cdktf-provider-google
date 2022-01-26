@@ -30,7 +30,7 @@ export interface ProjectConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#labels Project#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The display name of the project.
   * 
@@ -81,8 +81,8 @@ export interface ProjectTimeouts {
   readonly update?: string;
 }
 
-export function projectTimeoutsToTerraform(struct?: ProjectTimeoutsOutputReference | ProjectTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function projectTimeoutsToTerraform(struct?: ProjectTimeoutsOutputReference | ProjectTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class ProjectTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -260,7 +260,7 @@ export class Project extends cdktf.TerraformResource {
   // auto_create_network - computed: false, optional: true, required: false
   private _autoCreateNetwork?: boolean | cdktf.IResolvable; 
   public get autoCreateNetwork() {
-    return this.getBooleanAttribute('auto_create_network') as any;
+    return this.getBooleanAttribute('auto_create_network');
   }
   public set autoCreateNetwork(value: boolean | cdktf.IResolvable) {
     this._autoCreateNetwork = value;
@@ -311,12 +311,11 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -377,7 +376,7 @@ export class Project extends cdktf.TerraformResource {
   // skip_delete - computed: true, optional: true, required: false
   private _skipDelete?: boolean | cdktf.IResolvable; 
   public get skipDelete() {
-    return this.getBooleanAttribute('skip_delete') as any;
+    return this.getBooleanAttribute('skip_delete');
   }
   public set skipDelete(value: boolean | cdktf.IResolvable) {
     this._skipDelete = value;
@@ -391,7 +390,7 @@ export class Project extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ProjectTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ProjectTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -415,7 +414,7 @@ export class Project extends cdktf.TerraformResource {
       auto_create_network: cdktf.booleanToTerraform(this._autoCreateNetwork),
       billing_account: cdktf.stringToTerraform(this._billingAccount),
       folder_id: cdktf.stringToTerraform(this._folderId),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),
       project_id: cdktf.stringToTerraform(this._projectId),

@@ -85,27 +85,27 @@ export class DataGoogleComputeBackendServiceCdnPolicyCacheKeyPolicy extends cdkt
 
   // include_host - computed: true, optional: false, required: false
   public get includeHost() {
-    return this.getBooleanAttribute('include_host') as any;
+    return this.getBooleanAttribute('include_host');
   }
 
   // include_protocol - computed: true, optional: false, required: false
   public get includeProtocol() {
-    return this.getBooleanAttribute('include_protocol') as any;
+    return this.getBooleanAttribute('include_protocol');
   }
 
   // include_query_string - computed: true, optional: false, required: false
   public get includeQueryString() {
-    return this.getBooleanAttribute('include_query_string') as any;
+    return this.getBooleanAttribute('include_query_string');
   }
 
   // query_string_blacklist - computed: true, optional: false, required: false
   public get queryStringBlacklist() {
-    return this.getListAttribute('query_string_blacklist');
+    return cdktf.Fn.tolist(this.getListAttribute('query_string_blacklist'));
   }
 
   // query_string_whitelist - computed: true, optional: false, required: false
   public get queryStringWhitelist() {
-    return this.getListAttribute('query_string_whitelist');
+    return cdktf.Fn.tolist(this.getListAttribute('query_string_whitelist'));
   }
 }
 export class DataGoogleComputeBackendServiceCdnPolicyNegativeCachingPolicy extends cdktf.ComplexComputedList {
@@ -125,7 +125,7 @@ export class DataGoogleComputeBackendServiceCdnPolicy extends cdktf.ComplexCompu
   // cache_key_policy - computed: true, optional: false, required: false
   public get cacheKeyPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cache_key_policy') as any;
+    return this.interpolationForAttribute('cache_key_policy');
   }
 
   // cache_mode - computed: true, optional: false, required: false
@@ -150,13 +150,13 @@ export class DataGoogleComputeBackendServiceCdnPolicy extends cdktf.ComplexCompu
 
   // negative_caching - computed: true, optional: false, required: false
   public get negativeCaching() {
-    return this.getBooleanAttribute('negative_caching') as any;
+    return this.getBooleanAttribute('negative_caching');
   }
 
   // negative_caching_policy - computed: true, optional: false, required: false
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('negative_caching_policy') as any;
+    return this.interpolationForAttribute('negative_caching_policy');
   }
 
   // serve_while_stale - computed: true, optional: false, required: false
@@ -223,7 +223,7 @@ export class DataGoogleComputeBackendServiceConsistentHashHttpCookie extends cdk
   // ttl - computed: true, optional: false, required: false
   public get ttl() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ttl') as any;
+    return this.interpolationForAttribute('ttl');
   }
 }
 export class DataGoogleComputeBackendServiceConsistentHash extends cdktf.ComplexComputedList {
@@ -231,7 +231,7 @@ export class DataGoogleComputeBackendServiceConsistentHash extends cdktf.Complex
   // http_cookie - computed: true, optional: false, required: false
   public get httpCookie() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_cookie') as any;
+    return this.interpolationForAttribute('http_cookie');
   }
 
   // http_header_name - computed: true, optional: false, required: false
@@ -265,7 +265,7 @@ export class DataGoogleComputeBackendServiceLogConfig extends cdktf.ComplexCompu
 
   // enable - computed: true, optional: false, required: false
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
 
   // sample_rate - computed: true, optional: false, required: false
@@ -302,7 +302,7 @@ export class DataGoogleComputeBackendServiceOutlierDetection extends cdktf.Compl
   // base_ejection_time - computed: true, optional: false, required: false
   public get baseEjectionTime() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('base_ejection_time') as any;
+    return this.interpolationForAttribute('base_ejection_time');
   }
 
   // consecutive_errors - computed: true, optional: false, required: false
@@ -333,7 +333,7 @@ export class DataGoogleComputeBackendServiceOutlierDetection extends cdktf.Compl
   // interval - computed: true, optional: false, required: false
   public get interval() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('interval') as any;
+    return this.interpolationForAttribute('interval');
   }
 
   // max_ejection_percent - computed: true, optional: false, required: false
@@ -404,17 +404,17 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // backend - computed: true, optional: false, required: false
   public backend(index: string) {
-    return new DataGoogleComputeBackendServiceBackend(this, 'backend', index);
+    return new DataGoogleComputeBackendServiceBackend(this, 'backend', index, true);
   }
 
   // cdn_policy - computed: true, optional: false, required: false
   public cdnPolicy(index: string) {
-    return new DataGoogleComputeBackendServiceCdnPolicy(this, 'cdn_policy', index);
+    return new DataGoogleComputeBackendServiceCdnPolicy(this, 'cdn_policy', index, false);
   }
 
   // circuit_breakers - computed: true, optional: false, required: false
   public circuitBreakers(index: string) {
-    return new DataGoogleComputeBackendServiceCircuitBreakers(this, 'circuit_breakers', index);
+    return new DataGoogleComputeBackendServiceCircuitBreakers(this, 'circuit_breakers', index, false);
   }
 
   // connection_draining_timeout_sec - computed: true, optional: false, required: false
@@ -424,7 +424,7 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // consistent_hash - computed: true, optional: false, required: false
   public consistentHash(index: string) {
-    return new DataGoogleComputeBackendServiceConsistentHash(this, 'consistent_hash', index);
+    return new DataGoogleComputeBackendServiceConsistentHash(this, 'consistent_hash', index, false);
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -434,12 +434,12 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // custom_request_headers - computed: true, optional: false, required: false
   public get customRequestHeaders() {
-    return this.getListAttribute('custom_request_headers');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_request_headers'));
   }
 
   // custom_response_headers - computed: true, optional: false, required: false
   public get customResponseHeaders() {
-    return this.getListAttribute('custom_response_headers');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_response_headers'));
   }
 
   // description - computed: true, optional: false, required: false
@@ -449,7 +449,7 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // enable_cdn - computed: true, optional: false, required: false
   public get enableCdn() {
-    return this.getBooleanAttribute('enable_cdn') as any;
+    return this.getBooleanAttribute('enable_cdn');
   }
 
   // fingerprint - computed: true, optional: false, required: false
@@ -459,12 +459,12 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // health_checks - computed: true, optional: false, required: false
   public get healthChecks() {
-    return this.getListAttribute('health_checks');
+    return cdktf.Fn.tolist(this.getListAttribute('health_checks'));
   }
 
   // iap - computed: true, optional: false, required: false
   public iap(index: string) {
-    return new DataGoogleComputeBackendServiceIap(this, 'iap', index);
+    return new DataGoogleComputeBackendServiceIap(this, 'iap', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -484,7 +484,7 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // log_config - computed: true, optional: false, required: false
   public logConfig(index: string) {
-    return new DataGoogleComputeBackendServiceLogConfig(this, 'log_config', index);
+    return new DataGoogleComputeBackendServiceLogConfig(this, 'log_config', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -502,7 +502,7 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
 
   // outlier_detection - computed: true, optional: false, required: false
   public outlierDetection(index: string) {
-    return new DataGoogleComputeBackendServiceOutlierDetection(this, 'outlier_detection', index);
+    return new DataGoogleComputeBackendServiceOutlierDetection(this, 'outlier_detection', index, false);
   }
 
   // port_name - computed: true, optional: false, required: false

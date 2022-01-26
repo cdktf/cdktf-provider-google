@@ -35,7 +35,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#labels DataGoogleSpannerInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * A unique identifier for the instance, which cannot be changed after
 the instance is created. The name must be between 6 and 30 characters
@@ -148,7 +148,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // force_destroy - computed: false, optional: true, required: false
   private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy') as any;
+    return this.getBooleanAttribute('force_destroy');
   }
   public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
@@ -167,12 +167,11 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -258,7 +257,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
       config: cdktf.stringToTerraform(this._config),
       display_name: cdktf.stringToTerraform(this._displayName),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       num_nodes: cdktf.numberToTerraform(this._numNodes),
       processing_units: cdktf.numberToTerraform(this._processingUnits),

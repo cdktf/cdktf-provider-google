@@ -72,13 +72,13 @@ export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager#named_port ComputeInstanceGroupManager#named_port}
   */
-  readonly namedPort?: ComputeInstanceGroupManagerNamedPort[];
+  readonly namedPort?: ComputeInstanceGroupManagerNamedPort[] | cdktf.IResolvable;
   /**
   * stateful_disk block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager#stateful_disk ComputeInstanceGroupManager#stateful_disk}
   */
-  readonly statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[];
+  readonly statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -96,52 +96,52 @@ export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager#version ComputeInstanceGroupManager#version}
   */
-  readonly version: ComputeInstanceGroupManagerVersion[];
+  readonly version: ComputeInstanceGroupManagerVersion[] | cdktf.IResolvable;
 }
 export class ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs extends cdktf.ComplexComputedList {
 
   // all_effective - computed: true, optional: false, required: false
   public get allEffective() {
-    return this.getBooleanAttribute('all_effective') as any;
+    return this.getBooleanAttribute('all_effective');
   }
 }
 export class ComputeInstanceGroupManagerStatusStateful extends cdktf.ComplexComputedList {
 
   // has_stateful_config - computed: true, optional: false, required: false
   public get hasStatefulConfig() {
-    return this.getBooleanAttribute('has_stateful_config') as any;
+    return this.getBooleanAttribute('has_stateful_config');
   }
 
   // per_instance_configs - computed: true, optional: false, required: false
   public get perInstanceConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('per_instance_configs') as any;
+    return this.interpolationForAttribute('per_instance_configs');
   }
 }
 export class ComputeInstanceGroupManagerStatusVersionTarget extends cdktf.ComplexComputedList {
 
   // is_reached - computed: true, optional: false, required: false
   public get isReached() {
-    return this.getBooleanAttribute('is_reached') as any;
+    return this.getBooleanAttribute('is_reached');
   }
 }
 export class ComputeInstanceGroupManagerStatus extends cdktf.ComplexComputedList {
 
   // is_stable - computed: true, optional: false, required: false
   public get isStable() {
-    return this.getBooleanAttribute('is_stable') as any;
+    return this.getBooleanAttribute('is_stable');
   }
 
   // stateful - computed: true, optional: false, required: false
   public get stateful() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('stateful') as any;
+    return this.interpolationForAttribute('stateful');
   }
 
   // version_target - computed: true, optional: false, required: false
   public get versionTarget() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('version_target') as any;
+    return this.interpolationForAttribute('version_target');
   }
 }
 export interface ComputeInstanceGroupManagerAutoHealingPolicies {
@@ -160,7 +160,7 @@ export interface ComputeInstanceGroupManagerAutoHealingPolicies {
 }
 
 export function computeInstanceGroupManagerAutoHealingPoliciesToTerraform(struct?: ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference | ComputeInstanceGroupManagerAutoHealingPolicies): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -178,7 +178,7 @@ export class ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -250,8 +250,8 @@ export interface ComputeInstanceGroupManagerNamedPort {
   readonly port: number;
 }
 
-export function computeInstanceGroupManagerNamedPortToTerraform(struct?: ComputeInstanceGroupManagerNamedPort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceGroupManagerNamedPortToTerraform(struct?: ComputeInstanceGroupManagerNamedPort | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -276,8 +276,8 @@ export interface ComputeInstanceGroupManagerStatefulDisk {
   readonly deviceName: string;
 }
 
-export function computeInstanceGroupManagerStatefulDiskToTerraform(struct?: ComputeInstanceGroupManagerStatefulDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceGroupManagerStatefulDiskToTerraform(struct?: ComputeInstanceGroupManagerStatefulDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -302,8 +302,8 @@ export interface ComputeInstanceGroupManagerTimeouts {
   readonly update?: string;
 }
 
-export function computeInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeInstanceGroupManagerTimeoutsOutputReference | ComputeInstanceGroupManagerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceGroupManagerTimeoutsToTerraform(struct?: ComputeInstanceGroupManagerTimeoutsOutputReference | ComputeInstanceGroupManagerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -322,7 +322,7 @@ export class ComputeInstanceGroupManagerTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -459,7 +459,7 @@ export interface ComputeInstanceGroupManagerUpdatePolicy {
 }
 
 export function computeInstanceGroupManagerUpdatePolicyToTerraform(struct?: ComputeInstanceGroupManagerUpdatePolicyOutputReference | ComputeInstanceGroupManagerUpdatePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -483,7 +483,7 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -688,7 +688,7 @@ export interface ComputeInstanceGroupManagerVersionTargetSize {
 }
 
 export function computeInstanceGroupManagerVersionTargetSizeToTerraform(struct?: ComputeInstanceGroupManagerVersionTargetSizeOutputReference | ComputeInstanceGroupManagerVersionTargetSize): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -706,7 +706,7 @@ export class ComputeInstanceGroupManagerVersionTargetSizeOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -790,8 +790,8 @@ export interface ComputeInstanceGroupManagerVersion {
   readonly targetSize?: ComputeInstanceGroupManagerVersionTargetSize;
 }
 
-export function computeInstanceGroupManagerVersionToTerraform(struct?: ComputeInstanceGroupManagerVersion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceGroupManagerVersionToTerraform(struct?: ComputeInstanceGroupManagerVersion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -941,13 +941,13 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
 
   // status - computed: true, optional: false, required: false
   public status(index: string) {
-    return new ComputeInstanceGroupManagerStatus(this, 'status', index);
+    return new ComputeInstanceGroupManagerStatus(this, 'status', index, false);
   }
 
   // target_pools - computed: false, optional: true, required: false
   private _targetPools?: string[]; 
   public get targetPools() {
-    return this.getListAttribute('target_pools');
+    return cdktf.Fn.tolist(this.getListAttribute('target_pools'));
   }
   public set targetPools(value: string[]) {
     this._targetPools = value;
@@ -979,7 +979,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   // wait_for_instances - computed: false, optional: true, required: false
   private _waitForInstances?: boolean | cdktf.IResolvable; 
   public get waitForInstances() {
-    return this.getBooleanAttribute('wait_for_instances') as any;
+    return this.getBooleanAttribute('wait_for_instances');
   }
   public set waitForInstances(value: boolean | cdktf.IResolvable) {
     this._waitForInstances = value;
@@ -1025,7 +1025,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // auto_healing_policies - computed: false, optional: true, required: false
-  private _autoHealingPolicies = new ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(this as any, "auto_healing_policies", true);
+  private _autoHealingPolicies = new ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(this, "auto_healing_policies", true);
   public get autoHealingPolicies() {
     return this._autoHealingPolicies;
   }
@@ -1041,12 +1041,12 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // named_port - computed: false, optional: true, required: false
-  private _namedPort?: ComputeInstanceGroupManagerNamedPort[]; 
+  private _namedPort?: ComputeInstanceGroupManagerNamedPort[] | cdktf.IResolvable; 
   public get namedPort() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('named_port') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('named_port')));
   }
-  public set namedPort(value: ComputeInstanceGroupManagerNamedPort[]) {
+  public set namedPort(value: ComputeInstanceGroupManagerNamedPort[] | cdktf.IResolvable) {
     this._namedPort = value;
   }
   public resetNamedPort() {
@@ -1058,12 +1058,12 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // stateful_disk - computed: false, optional: true, required: false
-  private _statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[]; 
+  private _statefulDisk?: ComputeInstanceGroupManagerStatefulDisk[] | cdktf.IResolvable; 
   public get statefulDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('stateful_disk') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('stateful_disk')));
   }
-  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[]) {
+  public set statefulDisk(value: ComputeInstanceGroupManagerStatefulDisk[] | cdktf.IResolvable) {
     this._statefulDisk = value;
   }
   public resetStatefulDisk() {
@@ -1075,7 +1075,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeInstanceGroupManagerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInstanceGroupManagerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1091,7 +1091,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // update_policy - computed: false, optional: true, required: false
-  private _updatePolicy = new ComputeInstanceGroupManagerUpdatePolicyOutputReference(this as any, "update_policy", true);
+  private _updatePolicy = new ComputeInstanceGroupManagerUpdatePolicyOutputReference(this, "update_policy", true);
   public get updatePolicy() {
     return this._updatePolicy;
   }
@@ -1107,12 +1107,12 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // version - computed: false, optional: false, required: true
-  private _version?: ComputeInstanceGroupManagerVersion[]; 
+  private _version?: ComputeInstanceGroupManagerVersion[] | cdktf.IResolvable; 
   public get version() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('version') as any;
+    return this.interpolationForAttribute('version');
   }
-  public set version(value: ComputeInstanceGroupManagerVersion[]) {
+  public set version(value: ComputeInstanceGroupManagerVersion[] | cdktf.IResolvable) {
     this._version = value;
   }
   // Temporarily expose input value. Use with caution.

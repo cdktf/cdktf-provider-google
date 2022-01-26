@@ -60,7 +60,7 @@ associated with this transfer config finish.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config#params BigqueryDataTransferConfig#params}
   */
-  readonly params: { [key: string]: string } | cdktf.IResolvable;
+  readonly params: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config#project BigqueryDataTransferConfig#project}
   */
@@ -121,7 +121,7 @@ export interface BigqueryDataTransferConfigEmailPreferences {
 }
 
 export function bigqueryDataTransferConfigEmailPreferencesToTerraform(struct?: BigqueryDataTransferConfigEmailPreferencesOutputReference | BigqueryDataTransferConfigEmailPreferences): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -138,7 +138,7 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -166,7 +166,7 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
   // enable_failure_email - computed: false, optional: false, required: true
   private _enableFailureEmail?: boolean | cdktf.IResolvable; 
   public get enableFailureEmail() {
-    return this.getBooleanAttribute('enable_failure_email') as any;
+    return this.getBooleanAttribute('enable_failure_email');
   }
   public set enableFailureEmail(value: boolean | cdktf.IResolvable) {
     this._enableFailureEmail = value;
@@ -209,7 +209,7 @@ limited by this option.
 }
 
 export function bigqueryDataTransferConfigScheduleOptionsToTerraform(struct?: BigqueryDataTransferConfigScheduleOptionsOutputReference | BigqueryDataTransferConfigScheduleOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -228,7 +228,7 @@ export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -268,7 +268,7 @@ export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cd
   // disable_auto_scheduling - computed: false, optional: true, required: false
   private _disableAutoScheduling?: boolean | cdktf.IResolvable; 
   public get disableAutoScheduling() {
-    return this.getBooleanAttribute('disable_auto_scheduling') as any;
+    return this.getBooleanAttribute('disable_auto_scheduling');
   }
   public set disableAutoScheduling(value: boolean | cdktf.IResolvable) {
     this._disableAutoScheduling = value;
@@ -323,7 +323,7 @@ export interface BigqueryDataTransferConfigSensitiveParams {
 }
 
 export function bigqueryDataTransferConfigSensitiveParamsToTerraform(struct?: BigqueryDataTransferConfigSensitiveParamsOutputReference | BigqueryDataTransferConfigSensitiveParams): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -340,7 +340,7 @@ export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -393,8 +393,8 @@ export interface BigqueryDataTransferConfigTimeouts {
   readonly update?: string;
 }
 
-export function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTransferConfigTimeoutsOutputReference | BigqueryDataTransferConfigTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryDataTransferConfigTimeoutsOutputReference | BigqueryDataTransferConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -413,7 +413,7 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -600,7 +600,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -669,12 +669,11 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // params - computed: false, optional: false, required: true
-  private _params?: { [key: string]: string } | cdktf.IResolvable; 
+  private _params?: { [key: string]: string }; 
   public get params() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('params') as any;
+    return this.getStringMapAttribute('params');
   }
-  public set params(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set params(value: { [key: string]: string }) {
     this._params = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -731,7 +730,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // email_preferences - computed: false, optional: true, required: false
-  private _emailPreferences = new BigqueryDataTransferConfigEmailPreferencesOutputReference(this as any, "email_preferences", true);
+  private _emailPreferences = new BigqueryDataTransferConfigEmailPreferencesOutputReference(this, "email_preferences", true);
   public get emailPreferences() {
     return this._emailPreferences;
   }
@@ -747,7 +746,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // schedule_options - computed: false, optional: true, required: false
-  private _scheduleOptions = new BigqueryDataTransferConfigScheduleOptionsOutputReference(this as any, "schedule_options", true);
+  private _scheduleOptions = new BigqueryDataTransferConfigScheduleOptionsOutputReference(this, "schedule_options", true);
   public get scheduleOptions() {
     return this._scheduleOptions;
   }
@@ -763,7 +762,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // sensitive_params - computed: false, optional: true, required: false
-  private _sensitiveParams = new BigqueryDataTransferConfigSensitiveParamsOutputReference(this as any, "sensitive_params", true);
+  private _sensitiveParams = new BigqueryDataTransferConfigSensitiveParamsOutputReference(this, "sensitive_params", true);
   public get sensitiveParams() {
     return this._sensitiveParams;
   }
@@ -779,7 +778,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryDataTransferConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryDataTransferConfigTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -807,7 +806,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       location: cdktf.stringToTerraform(this._location),
       notification_pubsub_topic: cdktf.stringToTerraform(this._notificationPubsubTopic),
-      params: cdktf.hashMapper(cdktf.anyToTerraform)(this._params),
+      params: cdktf.hashMapper(cdktf.stringToTerraform)(this._params),
       project: cdktf.stringToTerraform(this._project),
       schedule: cdktf.stringToTerraform(this._schedule),
       service_account_name: cdktf.stringToTerraform(this._serviceAccountName),

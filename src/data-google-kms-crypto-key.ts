@@ -86,7 +86,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
   // import_only - computed: true, optional: false, required: false
   public get importOnly() {
-    return this.getBooleanAttribute('import_only') as any;
+    return this.getBooleanAttribute('import_only');
   }
 
   // key_ring - computed: false, optional: false, required: true
@@ -103,7 +103,7 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -137,12 +137,12 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
 
   // skip_initial_version_creation - computed: true, optional: false, required: false
   public get skipInitialVersionCreation() {
-    return this.getBooleanAttribute('skip_initial_version_creation') as any;
+    return this.getBooleanAttribute('skip_initial_version_creation');
   }
 
   // version_template - computed: true, optional: false, required: false
   public versionTemplate(index: string) {
-    return new DataGoogleKmsCryptoKeyVersionTemplate(this, 'version_template', index);
+    return new DataGoogleKmsCryptoKeyVersionTemplate(this, 'version_template', index, false);
   }
 
   // =========

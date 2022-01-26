@@ -24,7 +24,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel#labels DataGoogleMonitoringNotificationChannel#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel#project DataGoogleMonitoringNotificationChannel#project}
   */
@@ -40,7 +40,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_notification_channel#user_labels DataGoogleMonitoringNotificationChannel#user_labels}
   */
-  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly userLabels?: { [key: string]: string };
 }
 export class DataGoogleMonitoringNotificationChannelSensitiveLabels extends cdktf.ComplexComputedList {
 
@@ -126,7 +126,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
@@ -135,12 +135,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -174,7 +173,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
 
   // sensitive_labels - computed: true, optional: false, required: false
   public sensitiveLabels(index: string) {
-    return new DataGoogleMonitoringNotificationChannelSensitiveLabels(this, 'sensitive_labels', index);
+    return new DataGoogleMonitoringNotificationChannelSensitiveLabels(this, 'sensitive_labels', index, false);
   }
 
   // type - computed: false, optional: true, required: false
@@ -194,12 +193,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _userLabels?: { [key: string]: string }; 
   public get userLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_labels') as any;
+    return this.getStringMapAttribute('user_labels');
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set userLabels(value: { [key: string]: string }) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -222,10 +220,10 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
-      user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
+      user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
     };
   }
 }

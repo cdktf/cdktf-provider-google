@@ -58,7 +58,7 @@ export interface PubsubLiteSubscriptionDeliveryConfig {
 }
 
 export function pubsubLiteSubscriptionDeliveryConfigToTerraform(struct?: PubsubLiteSubscriptionDeliveryConfigOutputReference | PubsubLiteSubscriptionDeliveryConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -75,7 +75,7 @@ export class PubsubLiteSubscriptionDeliveryConfigOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -128,8 +128,8 @@ export interface PubsubLiteSubscriptionTimeouts {
   readonly update?: string;
 }
 
-export function pubsubLiteSubscriptionTimeoutsToTerraform(struct?: PubsubLiteSubscriptionTimeoutsOutputReference | PubsubLiteSubscriptionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function pubsubLiteSubscriptionTimeoutsToTerraform(struct?: PubsubLiteSubscriptionTimeoutsOutputReference | PubsubLiteSubscriptionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,7 +148,7 @@ export class PubsubLiteSubscriptionTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -359,7 +359,7 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
 
   // delivery_config - computed: false, optional: true, required: false
-  private _deliveryConfig = new PubsubLiteSubscriptionDeliveryConfigOutputReference(this as any, "delivery_config", true);
+  private _deliveryConfig = new PubsubLiteSubscriptionDeliveryConfigOutputReference(this, "delivery_config", true);
   public get deliveryConfig() {
     return this._deliveryConfig;
   }
@@ -375,7 +375,7 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PubsubLiteSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PubsubLiteSubscriptionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

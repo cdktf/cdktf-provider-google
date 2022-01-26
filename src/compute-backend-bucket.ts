@@ -78,8 +78,8 @@ can be specified as values, and you cannot specify a status code more than once.
   readonly ttl?: number;
 }
 
-export function computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -146,11 +146,11 @@ header. The actual headers served in responses will not be altered.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#negative_caching_policy ComputeBackendBucket#negative_caching_policy}
   */
-  readonly negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[];
+  readonly negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable;
 }
 
 export function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicyOutputReference | ComputeBackendBucketCdnPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -174,7 +174,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -308,7 +308,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   // negative_caching - computed: true, optional: true, required: false
   private _negativeCaching?: boolean | cdktf.IResolvable; 
   public get negativeCaching() {
-    return this.getBooleanAttribute('negative_caching') as any;
+    return this.getBooleanAttribute('negative_caching');
   }
   public set negativeCaching(value: boolean | cdktf.IResolvable) {
     this._negativeCaching = value;
@@ -354,12 +354,12 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   }
 
   // negative_caching_policy - computed: false, optional: true, required: false
-  private _negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[]; 
+  private _negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable; 
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('negative_caching_policy') as any;
+    return this.interpolationForAttribute('negative_caching_policy');
   }
-  public set negativeCachingPolicy(value: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[]) {
+  public set negativeCachingPolicy(value: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable) {
     this._negativeCachingPolicy = value;
   }
   public resetNegativeCachingPolicy() {
@@ -385,8 +385,8 @@ export interface ComputeBackendBucketTimeouts {
   readonly update?: string;
 }
 
-export function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTimeoutsOutputReference | ComputeBackendBucketTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeBackendBucketTimeoutsToTerraform(struct?: ComputeBackendBucketTimeoutsOutputReference | ComputeBackendBucketTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -405,7 +405,7 @@ export class ComputeBackendBucketTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -590,7 +590,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   // enable_cdn - computed: false, optional: true, required: false
   private _enableCdn?: boolean | cdktf.IResolvable; 
   public get enableCdn() {
-    return this.getBooleanAttribute('enable_cdn') as any;
+    return this.getBooleanAttribute('enable_cdn');
   }
   public set enableCdn(value: boolean | cdktf.IResolvable) {
     this._enableCdn = value;
@@ -643,7 +643,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy = new ComputeBackendBucketCdnPolicyOutputReference(this as any, "cdn_policy", true);
+  private _cdnPolicy = new ComputeBackendBucketCdnPolicyOutputReference(this, "cdn_policy", true);
   public get cdnPolicy() {
     return this._cdnPolicy;
   }
@@ -659,7 +659,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeBackendBucketTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeBackendBucketTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

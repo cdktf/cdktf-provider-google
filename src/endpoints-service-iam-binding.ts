@@ -42,7 +42,7 @@ export interface EndpointsServiceIamBindingCondition {
 }
 
 export function endpointsServiceIamBindingConditionToTerraform(struct?: EndpointsServiceIamBindingConditionOutputReference | EndpointsServiceIamBindingCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -61,7 +61,7 @@ export class EndpointsServiceIamBindingConditionOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -196,7 +196,7 @@ export class EndpointsServiceIamBinding extends cdktf.TerraformResource {
   // members - computed: false, optional: false, required: true
   private _members?: string[]; 
   public get members() {
-    return this.getListAttribute('members');
+    return cdktf.Fn.tolist(this.getListAttribute('members'));
   }
   public set members(value: string[]) {
     this._members = value;
@@ -233,7 +233,7 @@ export class EndpointsServiceIamBinding extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new EndpointsServiceIamBindingConditionOutputReference(this as any, "condition", true);
+  private _condition = new EndpointsServiceIamBindingConditionOutputReference(this, "condition", true);
   public get condition() {
     return this._condition;
   }

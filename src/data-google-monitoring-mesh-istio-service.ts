@@ -160,7 +160,7 @@ export class DataGoogleMonitoringMeshIstioService extends cdktf.TerraformDataSou
 
   // telemetry - computed: true, optional: false, required: false
   public telemetry(index: string) {
-    return new DataGoogleMonitoringMeshIstioServiceTelemetry(this, 'telemetry', index);
+    return new DataGoogleMonitoringMeshIstioServiceTelemetry(this, 'telemetry', index, false);
   }
 
   // =========

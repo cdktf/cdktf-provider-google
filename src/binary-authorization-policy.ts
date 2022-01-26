@@ -30,13 +30,13 @@ policy will be subject to the project admission policy. Possible values: ["ENABL
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_policy#admission_whitelist_patterns BinaryAuthorizationPolicy#admission_whitelist_patterns}
   */
-  readonly admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[];
+  readonly admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable;
   /**
   * cluster_admission_rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_policy#cluster_admission_rules BinaryAuthorizationPolicy#cluster_admission_rules}
   */
-  readonly clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[];
+  readonly clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable;
   /**
   * default_admission_rule block
   * 
@@ -62,8 +62,8 @@ part.
   readonly namePattern: string;
 }
 
-export function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(struct?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(struct?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,8 +105,8 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
   readonly requireAttestationsBy?: string[];
 }
 
-export function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct?: BinaryAuthorizationPolicyClusterAdmissionRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct?: BinaryAuthorizationPolicyClusterAdmissionRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,7 +148,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 }
 
 export function binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(struct?: BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference | BinaryAuthorizationPolicyDefaultAdmissionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -167,7 +167,7 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -233,7 +233,7 @@ export class BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference extend
   // require_attestations_by - computed: false, optional: true, required: false
   private _requireAttestationsBy?: string[]; 
   public get requireAttestationsBy() {
-    return this.getListAttribute('require_attestations_by');
+    return cdktf.Fn.tolist(this.getListAttribute('require_attestations_by'));
   }
   public set requireAttestationsBy(value: string[]) {
     this._requireAttestationsBy = value;
@@ -261,8 +261,8 @@ export interface BinaryAuthorizationPolicyTimeouts {
   readonly update?: string;
 }
 
-export function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuthorizationPolicyTimeoutsOutputReference | BinaryAuthorizationPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuthorizationPolicyTimeoutsOutputReference | BinaryAuthorizationPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -281,7 +281,7 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -466,12 +466,12 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // admission_whitelist_patterns - computed: false, optional: true, required: false
-  private _admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[]; 
+  private _admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable; 
   public get admissionWhitelistPatterns() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('admission_whitelist_patterns') as any;
+    return this.interpolationForAttribute('admission_whitelist_patterns');
   }
-  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[]) {
+  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable) {
     this._admissionWhitelistPatterns = value;
   }
   public resetAdmissionWhitelistPatterns() {
@@ -483,12 +483,12 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // cluster_admission_rules - computed: false, optional: true, required: false
-  private _clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[]; 
+  private _clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable; 
   public get clusterAdmissionRules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster_admission_rules') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('cluster_admission_rules')));
   }
-  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[]) {
+  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable) {
     this._clusterAdmissionRules = value;
   }
   public resetClusterAdmissionRules() {
@@ -500,7 +500,7 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // default_admission_rule - computed: false, optional: false, required: true
-  private _defaultAdmissionRule = new BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference(this as any, "default_admission_rule", true);
+  private _defaultAdmissionRule = new BinaryAuthorizationPolicyDefaultAdmissionRuleOutputReference(this, "default_admission_rule", true);
   public get defaultAdmissionRule() {
     return this._defaultAdmissionRule;
   }
@@ -513,7 +513,7 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BinaryAuthorizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BinaryAuthorizationPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

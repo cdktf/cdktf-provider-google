@@ -77,7 +77,7 @@ More info can be found in the API documentation
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor#labels MonitoringMetricDescriptor#labels}
   */
-  readonly labels?: MonitoringMetricDescriptorLabels[];
+  readonly labels?: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable;
   /**
   * metadata block
   * 
@@ -112,8 +112,8 @@ export interface MonitoringMetricDescriptorLabels {
   readonly valueType?: string;
 }
 
-export function monitoringMetricDescriptorLabelsToTerraform(struct?: MonitoringMetricDescriptorLabels): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringMetricDescriptorLabelsToTerraform(struct?: MonitoringMetricDescriptorLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -140,7 +140,7 @@ export interface MonitoringMetricDescriptorMetadata {
 }
 
 export function monitoringMetricDescriptorMetadataToTerraform(struct?: MonitoringMetricDescriptorMetadataOutputReference | MonitoringMetricDescriptorMetadata): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -158,7 +158,7 @@ export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -236,8 +236,8 @@ export interface MonitoringMetricDescriptorTimeouts {
   readonly update?: string;
 }
 
-export function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetricDescriptorTimeoutsOutputReference | MonitoringMetricDescriptorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringMetricDescriptorTimeoutsToTerraform(struct?: MonitoringMetricDescriptorTimeoutsOutputReference | MonitoringMetricDescriptorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -256,7 +256,7 @@ export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -520,12 +520,12 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: MonitoringMetricDescriptorLabels[]; 
+  private _labels?: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('labels')));
   }
-  public set labels(value: MonitoringMetricDescriptorLabels[]) {
+  public set labels(value: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -537,7 +537,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata = new MonitoringMetricDescriptorMetadataOutputReference(this as any, "metadata", true);
+  private _metadata = new MonitoringMetricDescriptorMetadataOutputReference(this, "metadata", true);
   public get metadata() {
     return this._metadata;
   }
@@ -553,7 +553,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringMetricDescriptorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringMetricDescriptorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

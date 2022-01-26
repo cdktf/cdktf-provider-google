@@ -40,7 +40,7 @@ character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_external_vpn_gateway#interface ComputeExternalVpnGateway#interface}
   */
-  readonly interface?: ComputeExternalVpnGatewayInterface[];
+  readonly interface?: ComputeExternalVpnGatewayInterface[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -70,8 +70,8 @@ it cannot be an IP address from Google Compute Engine.
   readonly ipAddress?: string;
 }
 
-export function computeExternalVpnGatewayInterfaceToTerraform(struct?: ComputeExternalVpnGatewayInterface): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeExternalVpnGatewayInterfaceToTerraform(struct?: ComputeExternalVpnGatewayInterface | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -92,8 +92,8 @@ export interface ComputeExternalVpnGatewayTimeouts {
   readonly delete?: string;
 }
 
-export function computeExternalVpnGatewayTimeoutsToTerraform(struct?: ComputeExternalVpnGatewayTimeoutsOutputReference | ComputeExternalVpnGatewayTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeExternalVpnGatewayTimeoutsToTerraform(struct?: ComputeExternalVpnGatewayTimeoutsOutputReference | ComputeExternalVpnGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -111,7 +111,7 @@ export class ComputeExternalVpnGatewayTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -291,12 +291,12 @@ export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
   }
 
   // interface - computed: false, optional: true, required: false
-  private _interface?: ComputeExternalVpnGatewayInterface[]; 
+  private _interface?: ComputeExternalVpnGatewayInterface[] | cdktf.IResolvable; 
   public get interface() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('interface') as any;
+    return this.interpolationForAttribute('interface');
   }
-  public set interface(value: ComputeExternalVpnGatewayInterface[]) {
+  public set interface(value: ComputeExternalVpnGatewayInterface[] | cdktf.IResolvable) {
     this._interface = value;
   }
   public resetInterface() {
@@ -308,7 +308,7 @@ export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeExternalVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeExternalVpnGatewayTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

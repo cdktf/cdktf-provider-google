@@ -79,7 +79,7 @@ export interface ComputePacketMirroringCollectorIlb {
 }
 
 export function computePacketMirroringCollectorIlbToTerraform(struct?: ComputePacketMirroringCollectorIlbOutputReference | ComputePacketMirroringCollectorIlb): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -96,7 +96,7 @@ export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -157,7 +157,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 }
 
 export function computePacketMirroringFilterToTerraform(struct?: ComputePacketMirroringFilterOutputReference | ComputePacketMirroringFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -176,7 +176,7 @@ export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -270,8 +270,8 @@ export interface ComputePacketMirroringMirroredResourcesInstances {
   readonly url: string;
 }
 
-export function computePacketMirroringMirroredResourcesInstancesToTerraform(struct?: ComputePacketMirroringMirroredResourcesInstances): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computePacketMirroringMirroredResourcesInstancesToTerraform(struct?: ComputePacketMirroringMirroredResourcesInstances | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -289,8 +289,8 @@ export interface ComputePacketMirroringMirroredResourcesSubnetworks {
   readonly url: string;
 }
 
-export function computePacketMirroringMirroredResourcesSubnetworksToTerraform(struct?: ComputePacketMirroringMirroredResourcesSubnetworks): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computePacketMirroringMirroredResourcesSubnetworksToTerraform(struct?: ComputePacketMirroringMirroredResourcesSubnetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -311,17 +311,17 @@ export interface ComputePacketMirroringMirroredResources {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring#instances ComputePacketMirroring#instances}
   */
-  readonly instances?: ComputePacketMirroringMirroredResourcesInstances[];
+  readonly instances?: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable;
   /**
   * subnetworks block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring#subnetworks ComputePacketMirroring#subnetworks}
   */
-  readonly subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[];
+  readonly subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable;
 }
 
 export function computePacketMirroringMirroredResourcesToTerraform(struct?: ComputePacketMirroringMirroredResourcesOutputReference | ComputePacketMirroringMirroredResources): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -340,7 +340,7 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -394,12 +394,12 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   }
 
   // instances - computed: false, optional: true, required: false
-  private _instances?: ComputePacketMirroringMirroredResourcesInstances[]; 
+  private _instances?: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable; 
   public get instances() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('instances') as any;
+    return this.interpolationForAttribute('instances');
   }
-  public set instances(value: ComputePacketMirroringMirroredResourcesInstances[]) {
+  public set instances(value: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable) {
     this._instances = value;
   }
   public resetInstances() {
@@ -411,12 +411,12 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   }
 
   // subnetworks - computed: false, optional: true, required: false
-  private _subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[]; 
+  private _subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable; 
   public get subnetworks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subnetworks') as any;
+    return this.interpolationForAttribute('subnetworks');
   }
-  public set subnetworks(value: ComputePacketMirroringMirroredResourcesSubnetworks[]) {
+  public set subnetworks(value: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable) {
     this._subnetworks = value;
   }
   public resetSubnetworks() {
@@ -437,7 +437,7 @@ export interface ComputePacketMirroringNetwork {
 }
 
 export function computePacketMirroringNetworkToTerraform(struct?: ComputePacketMirroringNetworkOutputReference | ComputePacketMirroringNetwork): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -454,7 +454,7 @@ export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -507,8 +507,8 @@ export interface ComputePacketMirroringTimeouts {
   readonly update?: string;
 }
 
-export function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacketMirroringTimeoutsOutputReference | ComputePacketMirroringTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacketMirroringTimeoutsOutputReference | ComputePacketMirroringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -527,7 +527,7 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -744,7 +744,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // collector_ilb - computed: false, optional: false, required: true
-  private _collectorIlb = new ComputePacketMirroringCollectorIlbOutputReference(this as any, "collector_ilb", true);
+  private _collectorIlb = new ComputePacketMirroringCollectorIlbOutputReference(this, "collector_ilb", true);
   public get collectorIlb() {
     return this._collectorIlb;
   }
@@ -757,7 +757,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new ComputePacketMirroringFilterOutputReference(this as any, "filter", true);
+  private _filter = new ComputePacketMirroringFilterOutputReference(this, "filter", true);
   public get filter() {
     return this._filter;
   }
@@ -773,7 +773,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // mirrored_resources - computed: false, optional: false, required: true
-  private _mirroredResources = new ComputePacketMirroringMirroredResourcesOutputReference(this as any, "mirrored_resources", true);
+  private _mirroredResources = new ComputePacketMirroringMirroredResourcesOutputReference(this, "mirrored_resources", true);
   public get mirroredResources() {
     return this._mirroredResources;
   }
@@ -786,7 +786,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: false, required: true
-  private _network = new ComputePacketMirroringNetworkOutputReference(this as any, "network", true);
+  private _network = new ComputePacketMirroringNetworkOutputReference(this, "network", true);
   public get network() {
     return this._network;
   }
@@ -799,7 +799,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputePacketMirroringTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputePacketMirroringTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

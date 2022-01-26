@@ -30,7 +30,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_dicom_store#labels HealthcareDicomStore#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The resource name for the DicomStore.
 
@@ -67,7 +67,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 }
 
 export function healthcareDicomStoreNotificationConfigToTerraform(struct?: HealthcareDicomStoreNotificationConfigOutputReference | HealthcareDicomStoreNotificationConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class HealthcareDicomStoreNotificationConfigOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -137,8 +137,8 @@ export interface HealthcareDicomStoreTimeouts {
   readonly update?: string;
 }
 
-export function healthcareDicomStoreTimeoutsToTerraform(struct?: HealthcareDicomStoreTimeoutsOutputReference | HealthcareDicomStoreTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function healthcareDicomStoreTimeoutsToTerraform(struct?: HealthcareDicomStoreTimeoutsOutputReference | HealthcareDicomStoreTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -157,7 +157,7 @@ export class HealthcareDicomStoreTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -305,12 +305,11 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -340,7 +339,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig = new HealthcareDicomStoreNotificationConfigOutputReference(this as any, "notification_config", true);
+  private _notificationConfig = new HealthcareDicomStoreNotificationConfigOutputReference(this, "notification_config", true);
   public get notificationConfig() {
     return this._notificationConfig;
   }
@@ -356,7 +355,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HealthcareDicomStoreTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareDicomStoreTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -378,7 +377,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset: cdktf.stringToTerraform(this._dataset),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       notification_config: healthcareDicomStoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
       timeouts: healthcareDicomStoreTimeoutsToTerraform(this._timeouts.internalValue),

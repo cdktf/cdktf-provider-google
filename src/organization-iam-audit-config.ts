@@ -24,7 +24,7 @@ export interface OrganizationIamAuditConfigConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/organization_iam_audit_config#audit_log_config OrganizationIamAuditConfig#audit_log_config}
   */
-  readonly auditLogConfig: OrganizationIamAuditConfigAuditLogConfig[];
+  readonly auditLogConfig: OrganizationIamAuditConfigAuditLogConfig[] | cdktf.IResolvable;
 }
 export interface OrganizationIamAuditConfigAuditLogConfig {
   /**
@@ -41,8 +41,8 @@ export interface OrganizationIamAuditConfigAuditLogConfig {
   readonly logType: string;
 }
 
-export function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function organizationIamAuditConfigAuditLogConfigToTerraform(struct?: OrganizationIamAuditConfigAuditLogConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,12 +131,12 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   }
 
   // audit_log_config - computed: false, optional: false, required: true
-  private _auditLogConfig?: OrganizationIamAuditConfigAuditLogConfig[]; 
+  private _auditLogConfig?: OrganizationIamAuditConfigAuditLogConfig[] | cdktf.IResolvable; 
   public get auditLogConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('audit_log_config') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('audit_log_config')));
   }
-  public set auditLogConfig(value: OrganizationIamAuditConfigAuditLogConfig[]) {
+  public set auditLogConfig(value: OrganizationIamAuditConfigAuditLogConfig[] | cdktf.IResolvable) {
     this._auditLogConfig = value;
   }
   // Temporarily expose input value. Use with caution.

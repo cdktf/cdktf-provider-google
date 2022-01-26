@@ -40,7 +40,7 @@ export interface AppEngineServiceNetworkSettingsNetworkSettings {
 }
 
 export function appEngineServiceNetworkSettingsNetworkSettingsToTerraform(struct?: AppEngineServiceNetworkSettingsNetworkSettingsOutputReference | AppEngineServiceNetworkSettingsNetworkSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -57,7 +57,7 @@ export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -113,8 +113,8 @@ export interface AppEngineServiceNetworkSettingsTimeouts {
   readonly update?: string;
 }
 
-export function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineServiceNetworkSettingsTimeoutsOutputReference | AppEngineServiceNetworkSettingsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appEngineServiceNetworkSettingsTimeoutsToTerraform(struct?: AppEngineServiceNetworkSettingsTimeoutsOutputReference | AppEngineServiceNetworkSettingsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -133,7 +133,7 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -296,7 +296,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // network_settings - computed: false, optional: false, required: true
-  private _networkSettings = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this as any, "network_settings", true);
+  private _networkSettings = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this, "network_settings", true);
   public get networkSettings() {
     return this._networkSettings;
   }
@@ -309,7 +309,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

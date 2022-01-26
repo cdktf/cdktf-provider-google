@@ -80,7 +80,7 @@ for information on how to write a filter.
 }
 
 export function sccNotificationConfigStreamingConfigToTerraform(struct?: SccNotificationConfigStreamingConfigOutputReference | SccNotificationConfigStreamingConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,7 +97,7 @@ export class SccNotificationConfigStreamingConfigOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -150,8 +150,8 @@ export interface SccNotificationConfigTimeouts {
   readonly update?: string;
 }
 
-export function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfigTimeoutsOutputReference | SccNotificationConfigTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sccNotificationConfigTimeoutsToTerraform(struct?: SccNotificationConfigTimeoutsOutputReference | SccNotificationConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -170,7 +170,7 @@ export class SccNotificationConfigTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -371,7 +371,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // streaming_config - computed: false, optional: false, required: true
-  private _streamingConfig = new SccNotificationConfigStreamingConfigOutputReference(this as any, "streaming_config", true);
+  private _streamingConfig = new SccNotificationConfigStreamingConfigOutputReference(this, "streaming_config", true);
   public get streamingConfig() {
     return this._streamingConfig;
   }
@@ -384,7 +384,7 @@ export class SccNotificationConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SccNotificationConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SccNotificationConfigTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

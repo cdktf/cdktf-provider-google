@@ -30,7 +30,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store#labels HealthcareHl7V2Store#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The resource name for the Hl7V2Store.
 
@@ -50,7 +50,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store#notification_configs HealthcareHl7V2Store#notification_configs}
   */
-  readonly notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[];
+  readonly notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable;
   /**
   * parser_config block
   * 
@@ -79,7 +79,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 }
 
 export function healthcareHl7V2StoreNotificationConfigToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigOutputReference | HealthcareHl7V2StoreNotificationConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -96,7 +96,7 @@ export class HealthcareHl7V2StoreNotificationConfigOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -166,8 +166,8 @@ If a notification cannot be published to Cloud Pub/Sub, errors will be logged to
   readonly pubsubTopic: string;
 }
 
-export function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: HealthcareHl7V2StoreNotificationConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -208,7 +208,7 @@ A base64-encoded string.
 }
 
 export function healthcareHl7V2StoreParserConfigToTerraform(struct?: HealthcareHl7V2StoreParserConfigOutputReference | HealthcareHl7V2StoreParserConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -228,7 +228,7 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -274,7 +274,7 @@ export class HealthcareHl7V2StoreParserConfigOutputReference extends cdktf.Compl
   // allow_null_header - computed: false, optional: true, required: false
   private _allowNullHeader?: boolean | cdktf.IResolvable; 
   public get allowNullHeader() {
-    return this.getBooleanAttribute('allow_null_header') as any;
+    return this.getBooleanAttribute('allow_null_header');
   }
   public set allowNullHeader(value: boolean | cdktf.IResolvable) {
     this._allowNullHeader = value;
@@ -350,8 +350,8 @@ export interface HealthcareHl7V2StoreTimeouts {
   readonly update?: string;
 }
 
-export function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeoutsOutputReference | HealthcareHl7V2StoreTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2StoreTimeoutsOutputReference | HealthcareHl7V2StoreTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -370,7 +370,7 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -520,12 +520,11 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -555,7 +554,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig = new HealthcareHl7V2StoreNotificationConfigOutputReference(this as any, "notification_config", true);
+  private _notificationConfig = new HealthcareHl7V2StoreNotificationConfigOutputReference(this, "notification_config", true);
   public get notificationConfig() {
     return this._notificationConfig;
   }
@@ -571,12 +570,12 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // notification_configs - computed: false, optional: true, required: false
-  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[]; 
+  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable; 
   public get notificationConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('notification_configs') as any;
+    return this.interpolationForAttribute('notification_configs');
   }
-  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[]) {
+  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable) {
     this._notificationConfigs = value;
   }
   public resetNotificationConfigs() {
@@ -588,7 +587,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // parser_config - computed: false, optional: true, required: false
-  private _parserConfig = new HealthcareHl7V2StoreParserConfigOutputReference(this as any, "parser_config", true);
+  private _parserConfig = new HealthcareHl7V2StoreParserConfigOutputReference(this, "parser_config", true);
   public get parserConfig() {
     return this._parserConfig;
   }
@@ -604,7 +603,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HealthcareHl7V2StoreTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareHl7V2StoreTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -626,7 +625,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset: cdktf.stringToTerraform(this._dataset),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       notification_config: healthcareHl7V2StoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
       notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs),

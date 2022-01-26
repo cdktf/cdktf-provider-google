@@ -160,7 +160,7 @@ export class DataGoogleMonitoringIstioCanonicalService extends cdktf.TerraformDa
 
   // telemetry - computed: true, optional: false, required: false
   public telemetry(index: string) {
-    return new DataGoogleMonitoringIstioCanonicalServiceTelemetry(this, 'telemetry', index);
+    return new DataGoogleMonitoringIstioCanonicalServiceTelemetry(this, 'telemetry', index, false);
   }
 
   // =========

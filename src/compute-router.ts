@@ -69,8 +69,8 @@ CIDR-formatted string.
   readonly range: string;
 }
 
-export function computeRouterBgpAdvertisedIpRangesToTerraform(struct?: ComputeRouterBgpAdvertisedIpRanges): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRouterBgpAdvertisedIpRangesToTerraform(struct?: ComputeRouterBgpAdvertisedIpRanges | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -113,11 +113,11 @@ will have the same local ASN.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
   */
-  readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[];
+  readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable;
 }
 
 export function computeRouterBgpToTerraform(struct?: ComputeRouterBgpOutputReference | ComputeRouterBgp): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -137,7 +137,7 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -226,12 +226,12 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
-  private _advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[]; 
+  private _advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable; 
   public get advertisedIpRanges() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('advertised_ip_ranges') as any;
+    return this.interpolationForAttribute('advertised_ip_ranges');
   }
-  public set advertisedIpRanges(value: ComputeRouterBgpAdvertisedIpRanges[]) {
+  public set advertisedIpRanges(value: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable) {
     this._advertisedIpRanges = value;
   }
   public resetAdvertisedIpRanges() {
@@ -257,8 +257,8 @@ export interface ComputeRouterTimeouts {
   readonly update?: string;
 }
 
-export function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeoutsOutputReference | ComputeRouterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeoutsOutputReference | ComputeRouterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -277,7 +277,7 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -498,7 +498,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // bgp - computed: false, optional: true, required: false
-  private _bgp = new ComputeRouterBgpOutputReference(this as any, "bgp", true);
+  private _bgp = new ComputeRouterBgpOutputReference(this, "bgp", true);
   public get bgp() {
     return this._bgp;
   }
@@ -514,7 +514,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRouterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRouterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

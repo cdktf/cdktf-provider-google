@@ -72,7 +72,7 @@ export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
 
   // custom_features - computed: true, optional: false, required: false
   public get customFeatures() {
-    return this.getListAttribute('custom_features');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_features'));
   }
 
   // description - computed: true, optional: false, required: false
@@ -82,7 +82,7 @@ export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
 
   // enabled_features - computed: true, optional: false, required: false
   public get enabledFeatures() {
-    return this.getListAttribute('enabled_features');
+    return cdktf.Fn.tolist(this.getListAttribute('enabled_features'));
   }
 
   // fingerprint - computed: true, optional: false, required: false

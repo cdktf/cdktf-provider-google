@@ -25,7 +25,7 @@ key-value pair.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment#labels GameServicesGameServerDeployment#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Location of the Deployment.
   * 
@@ -58,8 +58,8 @@ export interface GameServicesGameServerDeploymentTimeouts {
   readonly update?: string;
 }
 
-export function gameServicesGameServerDeploymentTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentTimeoutsOutputReference | GameServicesGameServerDeploymentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerDeploymentTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentTimeoutsOutputReference | GameServicesGameServerDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class GameServicesGameServerDeploymentTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -243,12 +243,11 @@ export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -297,7 +296,7 @@ export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GameServicesGameServerDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GameServicesGameServerDeploymentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -320,7 +319,7 @@ export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
     return {
       deployment_id: cdktf.stringToTerraform(this._deploymentId),
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       timeouts: gameServicesGameServerDeploymentTimeoutsToTerraform(this._timeouts.internalValue),

@@ -23,7 +23,7 @@ The repo name may contain slashes. eg, 'name/with/slash'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
   */
-  readonly pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[];
+  readonly pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -55,8 +55,8 @@ If unspecified, it defaults to the compute engine default service account.
   readonly topic: string;
 }
 
-export function sourcerepoRepositoryPubsubConfigsToTerraform(struct?: SourcerepoRepositoryPubsubConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sourcerepoRepositoryPubsubConfigsToTerraform(struct?: SourcerepoRepositoryPubsubConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,8 +82,8 @@ export interface SourcerepoRepositoryTimeouts {
   readonly update?: string;
 }
 
-export function sourcerepoRepositoryTimeoutsToTerraform(struct?: SourcerepoRepositoryTimeoutsOutputReference | SourcerepoRepositoryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sourcerepoRepositoryTimeoutsToTerraform(struct?: SourcerepoRepositoryTimeoutsOutputReference | SourcerepoRepositoryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class SourcerepoRepositoryTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -275,12 +275,12 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
   }
 
   // pubsub_configs - computed: false, optional: true, required: false
-  private _pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[]; 
+  private _pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[] | cdktf.IResolvable; 
   public get pubsubConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('pubsub_configs') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('pubsub_configs')));
   }
-  public set pubsubConfigs(value: SourcerepoRepositoryPubsubConfigs[]) {
+  public set pubsubConfigs(value: SourcerepoRepositoryPubsubConfigs[] | cdktf.IResolvable) {
     this._pubsubConfigs = value;
   }
   public resetPubsubConfigs() {
@@ -292,7 +292,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SourcerepoRepositoryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SourcerepoRepositoryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

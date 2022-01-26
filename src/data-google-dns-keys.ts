@@ -48,7 +48,7 @@ export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
   // digests - computed: true, optional: false, required: false
   public get digests() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('digests') as any;
+    return this.interpolationForAttribute('digests');
   }
 
   // ds_record - computed: true, optional: false, required: false
@@ -63,7 +63,7 @@ export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
 
   // is_active - computed: true, optional: false, required: false
   public get isActive() {
-    return this.getBooleanAttribute('is_active') as any;
+    return this.getBooleanAttribute('is_active');
   }
 
   // key_length - computed: true, optional: false, required: false
@@ -113,7 +113,7 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
   // digests - computed: true, optional: false, required: false
   public get digests() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('digests') as any;
+    return this.interpolationForAttribute('digests');
   }
 
   // id - computed: true, optional: false, required: false
@@ -123,7 +123,7 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
 
   // is_active - computed: true, optional: false, required: false
   public get isActive() {
-    return this.getBooleanAttribute('is_active') as any;
+    return this.getBooleanAttribute('is_active');
   }
 
   // key_length - computed: true, optional: false, required: false
@@ -189,7 +189,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
 
   // key_signing_keys - computed: true, optional: false, required: false
   public keySigningKeys(index: string) {
-    return new DataGoogleDnsKeysKeySigningKeys(this, 'key_signing_keys', index);
+    return new DataGoogleDnsKeysKeySigningKeys(this, 'key_signing_keys', index, false);
   }
 
   // managed_zone - computed: false, optional: false, required: true
@@ -223,7 +223,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
 
   // zone_signing_keys - computed: true, optional: false, required: false
   public zoneSigningKeys(index: string) {
-    return new DataGoogleDnsKeysZoneSigningKeys(this, 'zone_signing_keys', index);
+    return new DataGoogleDnsKeysZoneSigningKeys(this, 'zone_signing_keys', index, false);
   }
 
   // =========

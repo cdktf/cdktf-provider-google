@@ -28,7 +28,7 @@ export interface DatastoreIndexConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastore_index#properties DatastoreIndex#properties}
   */
-  readonly properties?: DatastoreIndexProperties[];
+  readonly properties?: DatastoreIndexProperties[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface DatastoreIndexProperties {
   readonly name: string;
 }
 
-export function datastoreIndexPropertiesToTerraform(struct?: DatastoreIndexProperties): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function datastoreIndexPropertiesToTerraform(struct?: DatastoreIndexProperties | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -73,8 +73,8 @@ export interface DatastoreIndexTimeouts {
   readonly delete?: string;
 }
 
-export function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeoutsOutputReference | DatastoreIndexTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function datastoreIndexTimeoutsToTerraform(struct?: DatastoreIndexTimeoutsOutputReference | DatastoreIndexTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -92,7 +92,7 @@ export class DatastoreIndexTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -255,12 +255,12 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: DatastoreIndexProperties[]; 
+  private _properties?: DatastoreIndexProperties[] | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('properties') as any;
+    return this.interpolationForAttribute('properties');
   }
-  public set properties(value: DatastoreIndexProperties[]) {
+  public set properties(value: DatastoreIndexProperties[] | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -272,7 +272,7 @@ export class DatastoreIndex extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DatastoreIndexTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DatastoreIndexTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

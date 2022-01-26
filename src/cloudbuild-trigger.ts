@@ -82,7 +82,7 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
   */
-  readonly substitutions?: { [key: string]: string } | cdktf.IResolvable;
+  readonly substitutions?: { [key: string]: string };
   /**
   * Tags for annotation of a BuildTrigger
   * 
@@ -126,6 +126,18 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   */
   readonly webhookConfig?: CloudbuildTriggerWebhookConfig;
 }
+export class CloudbuildTriggerBuildArtifactsObjectsTiming extends cdktf.ComplexComputedList {
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
 export interface CloudbuildTriggerBuildArtifactsObjects {
   /**
   * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
@@ -145,7 +157,7 @@ this location as a prefix.
 }
 
 export function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: CloudbuildTriggerBuildArtifactsObjectsOutputReference | CloudbuildTriggerBuildArtifactsObjects): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -163,7 +175,7 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -225,6 +237,11 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
   public get pathsInput() {
     return this._paths;
   }
+
+  // timing - computed: true, optional: false, required: false
+  public timing(index: string) {
+    return new CloudbuildTriggerBuildArtifactsObjectsTiming(this, 'timing', index, false);
+  }
 }
 export interface CloudbuildTriggerBuildArtifacts {
   /**
@@ -248,7 +265,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 }
 
 export function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTriggerBuildArtifactsOutputReference | CloudbuildTriggerBuildArtifacts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -266,7 +283,7 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -314,7 +331,7 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   }
 
   // objects - computed: false, optional: true, required: false
-  private _objects = new CloudbuildTriggerBuildArtifactsObjectsOutputReference(this as any, "objects", true);
+  private _objects = new CloudbuildTriggerBuildArtifactsObjectsOutputReference(this, "objects", true);
   public get objects() {
     return this._objects;
   }
@@ -350,8 +367,8 @@ build step or with certain reserved volume paths.
   readonly path?: string;
 }
 
-export function cloudbuildTriggerBuildOptionsVolumesToTerraform(struct?: CloudbuildTriggerBuildOptionsVolumes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudbuildTriggerBuildOptionsVolumesToTerraform(struct?: CloudbuildTriggerBuildOptionsVolumes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -450,11 +467,11 @@ This field is experimental.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#volumes CloudbuildTrigger#volumes}
   */
-  readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[];
+  readonly volumes?: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable;
 }
 
 export function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTriggerBuildOptionsOutputReference | CloudbuildTriggerBuildOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -482,7 +499,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -592,7 +609,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   // dynamic_substitutions - computed: false, optional: true, required: false
   private _dynamicSubstitutions?: boolean | cdktf.IResolvable; 
   public get dynamicSubstitutions() {
-    return this.getBooleanAttribute('dynamic_substitutions') as any;
+    return this.getBooleanAttribute('dynamic_substitutions');
   }
   public set dynamicSubstitutions(value: boolean | cdktf.IResolvable) {
     this._dynamicSubstitutions = value;
@@ -750,12 +767,12 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   }
 
   // volumes - computed: false, optional: true, required: false
-  private _volumes?: CloudbuildTriggerBuildOptionsVolumes[]; 
+  private _volumes?: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable; 
   public get volumes() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('volumes') as any;
+    return this.interpolationForAttribute('volumes');
   }
-  public set volumes(value: CloudbuildTriggerBuildOptionsVolumes[]) {
+  public set volumes(value: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable) {
     this._volumes = value;
   }
   public resetVolumes() {
@@ -781,17 +798,17 @@ There can be at most 100 secret values across all of a build's secrets.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#secret_env CloudbuildTrigger#secret_env}
   */
-  readonly secretEnv?: { [key: string]: string } | cdktf.IResolvable;
+  readonly secretEnv?: { [key: string]: string };
 }
 
-export function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTriggerBuildSecret): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTriggerBuildSecret | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
-    secret_env: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secretEnv),
+    secret_env: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secretEnv),
   }
 }
 
@@ -842,7 +859,7 @@ If omitted, the project ID requesting the build is assumed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
   */
-  readonly substitutions?: { [key: string]: string } | cdktf.IResolvable;
+  readonly substitutions?: { [key: string]: string };
   /**
   * Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
@@ -854,7 +871,7 @@ described at https://github.com/google/re2/wiki/Syntax
 }
 
 export function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: CloudbuildTriggerBuildSourceRepoSourceOutputReference | CloudbuildTriggerBuildSourceRepoSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -865,7 +882,7 @@ export function cloudbuildTriggerBuildSourceRepoSourceToTerraform(struct?: Cloud
     invert_regex: cdktf.booleanToTerraform(struct!.invertRegex),
     project_id: cdktf.stringToTerraform(struct!.projectId),
     repo_name: cdktf.stringToTerraform(struct!.repoName),
-    substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.substitutions),
+    substitutions: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.substitutions),
     tag_name: cdktf.stringToTerraform(struct!.tagName),
   }
 }
@@ -878,7 +895,7 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -996,7 +1013,7 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
   // invert_regex - computed: false, optional: true, required: false
   private _invertRegex?: boolean | cdktf.IResolvable; 
   public get invertRegex() {
-    return this.getBooleanAttribute('invert_regex') as any;
+    return this.getBooleanAttribute('invert_regex');
   }
   public set invertRegex(value: boolean | cdktf.IResolvable) {
     this._invertRegex = value;
@@ -1039,12 +1056,11 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
   }
 
   // substitutions - computed: false, optional: true, required: false
-  private _substitutions?: { [key: string]: string } | cdktf.IResolvable; 
+  private _substitutions?: { [key: string]: string }; 
   public get substitutions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('substitutions') as any;
+    return this.getStringMapAttribute('substitutions');
   }
-  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set substitutions(value: { [key: string]: string }) {
     this._substitutions = value;
   }
   public resetSubstitutions() {
@@ -1095,7 +1111,7 @@ This object must be a gzipped archive file (.tar.gz) containing source to build.
 }
 
 export function cloudbuildTriggerBuildSourceStorageSourceToTerraform(struct?: CloudbuildTriggerBuildSourceStorageSourceOutputReference | CloudbuildTriggerBuildSourceStorageSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1114,7 +1130,7 @@ export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1209,7 +1225,7 @@ export interface CloudbuildTriggerBuildSource {
 }
 
 export function cloudbuildTriggerBuildSourceToTerraform(struct?: CloudbuildTriggerBuildSourceOutputReference | CloudbuildTriggerBuildSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1227,7 +1243,7 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1259,7 +1275,7 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   }
 
   // repo_source - computed: false, optional: true, required: false
-  private _repoSource = new CloudbuildTriggerBuildSourceRepoSourceOutputReference(this as any, "repo_source", true);
+  private _repoSource = new CloudbuildTriggerBuildSourceRepoSourceOutputReference(this, "repo_source", true);
   public get repoSource() {
     return this._repoSource;
   }
@@ -1275,7 +1291,7 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   }
 
   // storage_source - computed: false, optional: true, required: false
-  private _storageSource = new CloudbuildTriggerBuildSourceStorageSourceOutputReference(this as any, "storage_source", true);
+  private _storageSource = new CloudbuildTriggerBuildSourceStorageSourceOutputReference(this, "storage_source", true);
   public get storageSource() {
     return this._storageSource;
   }
@@ -1311,8 +1327,8 @@ the same build step or with certain reserved volume paths.
   readonly path: string;
 }
 
-export function cloudbuildTriggerBuildStepVolumesToTerraform(struct?: CloudbuildTriggerBuildStepVolumes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudbuildTriggerBuildStepVolumesToTerraform(struct?: CloudbuildTriggerBuildStepVolumes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1437,11 +1453,11 @@ have completed successfully.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#volumes CloudbuildTrigger#volumes}
   */
-  readonly volumes?: CloudbuildTriggerBuildStepVolumes[];
+  readonly volumes?: CloudbuildTriggerBuildStepVolumes[] | cdktf.IResolvable;
 }
 
-export function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTriggerBuildStep): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTriggerBuildStep | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1491,7 +1507,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#substitutions CloudbuildTrigger#substitutions}
   */
-  readonly substitutions?: { [key: string]: string } | cdktf.IResolvable;
+  readonly substitutions?: { [key: string]: string };
   /**
   * Tags for annotation of a Build. These are not docker tags.
   * 
@@ -1525,7 +1541,7 @@ Default time is ten minutes (600s).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#secret CloudbuildTrigger#secret}
   */
-  readonly secret?: CloudbuildTriggerBuildSecret[];
+  readonly secret?: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable;
   /**
   * source block
   * 
@@ -1537,11 +1553,11 @@ Default time is ten minutes (600s).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#step CloudbuildTrigger#step}
   */
-  readonly step: CloudbuildTriggerBuildStep[];
+  readonly step: CloudbuildTriggerBuildStep[] | cdktf.IResolvable;
 }
 
 export function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuildOutputReference | CloudbuildTriggerBuild): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1549,7 +1565,7 @@ export function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuil
     images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
     logs_bucket: cdktf.stringToTerraform(struct!.logsBucket),
     queue_ttl: cdktf.stringToTerraform(struct!.queueTtl),
-    substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.substitutions),
+    substitutions: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.substitutions),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     timeout: cdktf.stringToTerraform(struct!.timeout),
     artifacts: cloudbuildTriggerBuildArtifactsToTerraform(struct!.artifacts),
@@ -1568,7 +1584,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1702,12 +1718,11 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // substitutions - computed: false, optional: true, required: false
-  private _substitutions?: { [key: string]: string } | cdktf.IResolvable; 
+  private _substitutions?: { [key: string]: string }; 
   public get substitutions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('substitutions') as any;
+    return this.getStringMapAttribute('substitutions');
   }
-  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set substitutions(value: { [key: string]: string }) {
     this._substitutions = value;
   }
   public resetSubstitutions() {
@@ -1751,7 +1766,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // artifacts - computed: false, optional: true, required: false
-  private _artifacts = new CloudbuildTriggerBuildArtifactsOutputReference(this as any, "artifacts", true);
+  private _artifacts = new CloudbuildTriggerBuildArtifactsOutputReference(this, "artifacts", true);
   public get artifacts() {
     return this._artifacts;
   }
@@ -1767,7 +1782,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // options - computed: false, optional: true, required: false
-  private _options = new CloudbuildTriggerBuildOptionsOutputReference(this as any, "options", true);
+  private _options = new CloudbuildTriggerBuildOptionsOutputReference(this, "options", true);
   public get options() {
     return this._options;
   }
@@ -1783,12 +1798,12 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: CloudbuildTriggerBuildSecret[]; 
+  private _secret?: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable; 
   public get secret() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret') as any;
+    return this.interpolationForAttribute('secret');
   }
-  public set secret(value: CloudbuildTriggerBuildSecret[]) {
+  public set secret(value: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable) {
     this._secret = value;
   }
   public resetSecret() {
@@ -1800,7 +1815,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new CloudbuildTriggerBuildSourceOutputReference(this as any, "source", true);
+  private _source = new CloudbuildTriggerBuildSourceOutputReference(this, "source", true);
   public get source() {
     return this._source;
   }
@@ -1816,12 +1831,12 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // step - computed: false, optional: false, required: true
-  private _step?: CloudbuildTriggerBuildStep[]; 
+  private _step?: CloudbuildTriggerBuildStep[] | cdktf.IResolvable; 
   public get step() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('step') as any;
+    return this.interpolationForAttribute('step');
   }
-  public set step(value: CloudbuildTriggerBuildStep[]) {
+  public set step(value: CloudbuildTriggerBuildStep[] | cdktf.IResolvable) {
     this._step = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1851,7 +1866,7 @@ export interface CloudbuildTriggerGithubPullRequest {
 }
 
 export function cloudbuildTriggerGithubPullRequestToTerraform(struct?: CloudbuildTriggerGithubPullRequestOutputReference | CloudbuildTriggerGithubPullRequest): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1870,7 +1885,7 @@ export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1939,7 +1954,7 @@ export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.Com
   // invert_regex - computed: false, optional: true, required: false
   private _invertRegex?: boolean | cdktf.IResolvable; 
   public get invertRegex() {
-    return this.getBooleanAttribute('invert_regex') as any;
+    return this.getBooleanAttribute('invert_regex');
   }
   public set invertRegex(value: boolean | cdktf.IResolvable) {
     this._invertRegex = value;
@@ -1974,7 +1989,7 @@ export interface CloudbuildTriggerGithubPush {
 }
 
 export function cloudbuildTriggerGithubPushToTerraform(struct?: CloudbuildTriggerGithubPushOutputReference | CloudbuildTriggerGithubPush): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1993,7 +2008,7 @@ export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2049,7 +2064,7 @@ export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObj
   // invert_regex - computed: false, optional: true, required: false
   private _invertRegex?: boolean | cdktf.IResolvable; 
   public get invertRegex() {
-    return this.getBooleanAttribute('invert_regex') as any;
+    return this.getBooleanAttribute('invert_regex');
   }
   public set invertRegex(value: boolean | cdktf.IResolvable) {
     this._invertRegex = value;
@@ -2108,7 +2123,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 }
 
 export function cloudbuildTriggerGithubToTerraform(struct?: CloudbuildTriggerGithubOutputReference | CloudbuildTriggerGithub): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2128,7 +2143,7 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2204,7 +2219,7 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   }
 
   // pull_request - computed: false, optional: true, required: false
-  private _pullRequest = new CloudbuildTriggerGithubPullRequestOutputReference(this as any, "pull_request", true);
+  private _pullRequest = new CloudbuildTriggerGithubPullRequestOutputReference(this, "pull_request", true);
   public get pullRequest() {
     return this._pullRequest;
   }
@@ -2220,7 +2235,7 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   }
 
   // push - computed: false, optional: true, required: false
-  private _push = new CloudbuildTriggerGithubPushOutputReference(this as any, "push", true);
+  private _push = new CloudbuildTriggerGithubPushOutputReference(this, "push", true);
   public get push() {
     return this._push;
   }
@@ -2251,7 +2266,7 @@ export interface CloudbuildTriggerPubsubConfig {
 }
 
 export function cloudbuildTriggerPubsubConfigToTerraform(struct?: CloudbuildTriggerPubsubConfigOutputReference | CloudbuildTriggerPubsubConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2269,7 +2284,7 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2316,6 +2331,16 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
     return this._serviceAccountEmail;
   }
 
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // subscription - computed: true, optional: false, required: false
+  public get subscription() {
+    return this.getStringAttribute('subscription');
+  }
+
   // topic - computed: false, optional: false, required: true
   private _topic?: string; 
   public get topic() {
@@ -2344,8 +2369,8 @@ export interface CloudbuildTriggerTimeouts {
   readonly update?: string;
 }
 
-export function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeoutsOutputReference | CloudbuildTriggerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerTimeoutsOutputReference | CloudbuildTriggerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2364,7 +2389,7 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2502,7 +2527,7 @@ This field is a regular expression.
 }
 
 export function cloudbuildTriggerTriggerTemplateToTerraform(struct?: CloudbuildTriggerTriggerTemplateOutputReference | CloudbuildTriggerTriggerTemplate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2525,7 +2550,7 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2637,7 +2662,7 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
   // invert_regex - computed: false, optional: true, required: false
   private _invertRegex?: boolean | cdktf.IResolvable; 
   public get invertRegex() {
-    return this.getBooleanAttribute('invert_regex') as any;
+    return this.getBooleanAttribute('invert_regex');
   }
   public set invertRegex(value: boolean | cdktf.IResolvable) {
     this._invertRegex = value;
@@ -2708,7 +2733,7 @@ export interface CloudbuildTriggerWebhookConfig {
 }
 
 export function cloudbuildTriggerWebhookConfigToTerraform(struct?: CloudbuildTriggerWebhookConfigOutputReference | CloudbuildTriggerWebhookConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2725,7 +2750,7 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2761,6 +2786,11 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
     return this._secret;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
   }
 }
 
@@ -2842,7 +2872,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -2957,12 +2987,11 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // substitutions - computed: false, optional: true, required: false
-  private _substitutions?: { [key: string]: string } | cdktf.IResolvable; 
+  private _substitutions?: { [key: string]: string }; 
   public get substitutions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('substitutions') as any;
+    return this.getStringMapAttribute('substitutions');
   }
-  public set substitutions(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set substitutions(value: { [key: string]: string }) {
     this._substitutions = value;
   }
   public resetSubstitutions() {
@@ -2995,7 +3024,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // build - computed: false, optional: true, required: false
-  private _build = new CloudbuildTriggerBuildOutputReference(this as any, "build", true);
+  private _build = new CloudbuildTriggerBuildOutputReference(this, "build", true);
   public get buildAttribute() {
     return this._build;
   }
@@ -3011,7 +3040,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // github - computed: false, optional: true, required: false
-  private _github = new CloudbuildTriggerGithubOutputReference(this as any, "github", true);
+  private _github = new CloudbuildTriggerGithubOutputReference(this, "github", true);
   public get github() {
     return this._github;
   }
@@ -3027,7 +3056,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // pubsub_config - computed: false, optional: true, required: false
-  private _pubsubConfig = new CloudbuildTriggerPubsubConfigOutputReference(this as any, "pubsub_config", true);
+  private _pubsubConfig = new CloudbuildTriggerPubsubConfigOutputReference(this, "pubsub_config", true);
   public get pubsubConfig() {
     return this._pubsubConfig;
   }
@@ -3043,7 +3072,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudbuildTriggerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudbuildTriggerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -3059,7 +3088,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // trigger_template - computed: false, optional: true, required: false
-  private _triggerTemplate = new CloudbuildTriggerTriggerTemplateOutputReference(this as any, "trigger_template", true);
+  private _triggerTemplate = new CloudbuildTriggerTriggerTemplateOutputReference(this, "trigger_template", true);
   public get triggerTemplate() {
     return this._triggerTemplate;
   }
@@ -3075,7 +3104,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // webhook_config - computed: false, optional: true, required: false
-  private _webhookConfig = new CloudbuildTriggerWebhookConfigOutputReference(this as any, "webhook_config", true);
+  private _webhookConfig = new CloudbuildTriggerWebhookConfigOutputReference(this, "webhook_config", true);
   public get webhookConfig() {
     return this._webhookConfig;
   }
@@ -3104,7 +3133,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
-      substitutions: cdktf.hashMapper(cdktf.anyToTerraform)(this._substitutions),
+      substitutions: cdktf.hashMapper(cdktf.stringToTerraform)(this._substitutions),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       build: cloudbuildTriggerBuildToTerraform(this._build.internalValue),
       github: cloudbuildTriggerGithubToTerraform(this._github.internalValue),

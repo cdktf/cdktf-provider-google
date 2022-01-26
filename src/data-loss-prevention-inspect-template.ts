@@ -53,7 +53,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -70,7 +70,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -119,7 +119,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -136,7 +136,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -190,7 +190,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -208,7 +208,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -240,7 +240,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
+  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path", true);
   public get cloudStoragePath() {
     return this._cloudStoragePath;
   }
@@ -256,7 +256,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this as any, "word_list", true);
+  private _wordList = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this, "word_list", true);
   public get wordList() {
     return this._wordList;
   }
@@ -282,7 +282,7 @@ listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying 
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -299,7 +299,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -354,7 +354,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -372,7 +372,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -406,8 +406,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   // group_indexes - computed: false, optional: true, required: false
   private _groupIndexes?: number[]; 
   public get groupIndexes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_indexes') as any;
+    return this.getNumberListAttribute('group_indexes');
   }
   public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
@@ -444,7 +443,7 @@ or 'projects/project-id/storedInfoTypes/432452342'.
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -461,7 +460,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -539,8 +538,8 @@ specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLI
   readonly storedType?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -564,8 +563,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -585,7 +584,7 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -602,7 +601,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -655,8 +654,8 @@ export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindings
   readonly infoType: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -684,11 +683,11 @@ export interface DataLossPreventionInspectTemplateInspectConfigLimits {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#max_findings_per_info_type DataLossPreventionInspectTemplate#max_findings_per_info_type}
   */
-  readonly maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[];
+  readonly maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigLimitsToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference | DataLossPreventionInspectTemplateInspectConfigLimits): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -707,7 +706,7 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -771,12 +770,12 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   }
 
   // max_findings_per_info_type - computed: false, optional: true, required: false
-  private _maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[]; 
+  private _maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable; 
   public get maxFindingsPerInfoType() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('max_findings_per_info_type') as any;
+    return this.interpolationForAttribute('max_findings_per_info_type');
   }
-  public set maxFindingsPerInfoType(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[]) {
+  public set maxFindingsPerInfoType(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable) {
     this._maxFindingsPerInfoType = value;
   }
   public resetMaxFindingsPerInfoType() {
@@ -797,8 +796,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -817,7 +816,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -834,7 +833,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -883,7 +882,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -900,7 +899,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -954,7 +953,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -972,7 +971,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1004,7 +1003,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this as any, "cloud_storage_path", true);
+  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path", true);
   public get cloudStoragePath() {
     return this._cloudStoragePath;
   }
@@ -1020,7 +1019,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this as any, "word_list", true);
+  private _wordList = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this, "word_list", true);
   public get wordList() {
     return this._wordList;
   }
@@ -1045,8 +1044,8 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   readonly name: string;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1061,11 +1060,11 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
   */
-  readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[];
+  readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1082,7 +1081,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1108,12 +1107,12 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // info_types - computed: false, optional: false, required: true
-  private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[]; 
+  private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable; 
   public get infoTypes() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('info_types') as any;
+    return this.interpolationForAttribute('info_types');
   }
-  public set infoTypes(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[]) {
+  public set infoTypes(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable) {
     this._infoTypes = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1138,7 +1137,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1156,7 +1155,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1190,8 +1189,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   // group_indexes - computed: false, optional: true, required: false
   private _groupIndexes?: number[]; 
   public get groupIndexes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_indexes') as any;
+    return this.getNumberListAttribute('group_indexes');
   }
   public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
@@ -1245,7 +1243,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1265,7 +1263,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1322,7 +1320,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // dictionary - computed: false, optional: true, required: false
-  private _dictionary = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this as any, "dictionary", true);
+  private _dictionary = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this, "dictionary", true);
   public get dictionary() {
     return this._dictionary;
   }
@@ -1338,7 +1336,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // exclude_info_types - computed: false, optional: true, required: false
-  private _excludeInfoTypes = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this as any, "exclude_info_types", true);
+  private _excludeInfoTypes = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this, "exclude_info_types", true);
   public get excludeInfoTypes() {
     return this._excludeInfoTypes;
   }
@@ -1354,7 +1352,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // regex - computed: false, optional: true, required: false
-  private _regex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this as any, "regex", true);
+  private _regex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this, "regex", true);
   public get regex() {
     return this._regex;
   }
@@ -1387,7 +1385,7 @@ the entire match is returned. No more than 3 may be included.
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1405,7 +1403,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1439,8 +1437,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   // group_indexes - computed: false, optional: true, required: false
   private _groupIndexes?: number[]; 
   public get groupIndexes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_indexes') as any;
+    return this.getNumberListAttribute('group_indexes');
   }
   public set groupIndexes(value: number[]) {
     this._groupIndexes = value;
@@ -1487,7 +1484,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1505,7 +1502,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1584,7 +1581,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1602,7 +1599,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1687,7 +1684,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1706,7 +1703,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1744,7 +1741,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   // hotword_regex - computed: false, optional: false, required: true
-  private _hotwordRegex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this as any, "hotword_regex", true);
+  private _hotwordRegex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this, "hotword_regex", true);
   public get hotwordRegex() {
     return this._hotwordRegex;
   }
@@ -1757,7 +1754,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   // likelihood_adjustment - computed: false, optional: false, required: true
-  private _likelihoodAdjustment = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this as any, "likelihood_adjustment", true);
+  private _likelihoodAdjustment = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this, "likelihood_adjustment", true);
   public get likelihoodAdjustment() {
     return this._likelihoodAdjustment;
   }
@@ -1770,7 +1767,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   // proximity - computed: false, optional: false, required: true
-  private _proximity = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this as any, "proximity", true);
+  private _proximity = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this, "proximity", true);
   public get proximity() {
     return this._proximity;
   }
@@ -1797,8 +1794,8 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRules {
   readonly hotwordRule?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1814,17 +1811,17 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSet {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
   */
-  readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes[];
+  readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes[] | cdktf.IResolvable;
   /**
   * rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#rules DataLossPreventionInspectTemplate#rules}
   */
-  readonly rules: DataLossPreventionInspectTemplateInspectConfigRuleSetRules[];
+  readonly rules: DataLossPreventionInspectTemplateInspectConfigRuleSetRules[] | cdktf.IResolvable;
 }
 
-export function dataLossPreventionInspectTemplateInspectConfigRuleSetToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1864,13 +1861,13 @@ export interface DataLossPreventionInspectTemplateInspectConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#custom_info_types DataLossPreventionInspectTemplate#custom_info_types}
   */
-  readonly customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[];
+  readonly customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[] | cdktf.IResolvable;
   /**
   * info_types block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
   */
-  readonly infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[];
+  readonly infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[] | cdktf.IResolvable;
   /**
   * limits block
   * 
@@ -1882,11 +1879,11 @@ export interface DataLossPreventionInspectTemplateInspectConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#rule_set DataLossPreventionInspectTemplate#rule_set}
   */
-  readonly ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[];
+  readonly ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[] | cdktf.IResolvable;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigOutputReference | DataLossPreventionInspectTemplateInspectConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1910,7 +1907,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1996,7 +1993,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   // exclude_info_types - computed: false, optional: true, required: false
   private _excludeInfoTypes?: boolean | cdktf.IResolvable; 
   public get excludeInfoTypes() {
-    return this.getBooleanAttribute('exclude_info_types') as any;
+    return this.getBooleanAttribute('exclude_info_types');
   }
   public set excludeInfoTypes(value: boolean | cdktf.IResolvable) {
     this._excludeInfoTypes = value;
@@ -2012,7 +2009,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   // include_quote - computed: false, optional: true, required: false
   private _includeQuote?: boolean | cdktf.IResolvable; 
   public get includeQuote() {
-    return this.getBooleanAttribute('include_quote') as any;
+    return this.getBooleanAttribute('include_quote');
   }
   public set includeQuote(value: boolean | cdktf.IResolvable) {
     this._includeQuote = value;
@@ -2042,12 +2039,12 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
 
   // custom_info_types - computed: false, optional: true, required: false
-  private _customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[]; 
+  private _customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[] | cdktf.IResolvable; 
   public get customInfoTypes() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_info_types') as any;
+    return this.interpolationForAttribute('custom_info_types');
   }
-  public set customInfoTypes(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[]) {
+  public set customInfoTypes(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[] | cdktf.IResolvable) {
     this._customInfoTypes = value;
   }
   public resetCustomInfoTypes() {
@@ -2059,12 +2056,12 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
 
   // info_types - computed: false, optional: true, required: false
-  private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[]; 
+  private _infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[] | cdktf.IResolvable; 
   public get infoTypes() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('info_types') as any;
+    return this.interpolationForAttribute('info_types');
   }
-  public set infoTypes(value: DataLossPreventionInspectTemplateInspectConfigInfoTypes[]) {
+  public set infoTypes(value: DataLossPreventionInspectTemplateInspectConfigInfoTypes[] | cdktf.IResolvable) {
     this._infoTypes = value;
   }
   public resetInfoTypes() {
@@ -2076,7 +2073,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits = new DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(this as any, "limits", true);
+  private _limits = new DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(this, "limits", true);
   public get limits() {
     return this._limits;
   }
@@ -2092,12 +2089,12 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
 
   // rule_set - computed: false, optional: true, required: false
-  private _ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[]; 
+  private _ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[] | cdktf.IResolvable; 
   public get ruleSet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule_set') as any;
+    return this.interpolationForAttribute('rule_set');
   }
-  public set ruleSet(value: DataLossPreventionInspectTemplateInspectConfigRuleSet[]) {
+  public set ruleSet(value: DataLossPreventionInspectTemplateInspectConfigRuleSet[] | cdktf.IResolvable) {
     this._ruleSet = value;
   }
   public resetRuleSet() {
@@ -2123,8 +2120,8 @@ export interface DataLossPreventionInspectTemplateTimeouts {
   readonly update?: string;
 }
 
-export function dataLossPreventionInspectTemplateTimeoutsToTerraform(struct?: DataLossPreventionInspectTemplateTimeoutsOutputReference | DataLossPreventionInspectTemplateTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataLossPreventionInspectTemplateTimeoutsToTerraform(struct?: DataLossPreventionInspectTemplateTimeoutsOutputReference | DataLossPreventionInspectTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2143,7 +2140,7 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2328,7 +2325,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
 
   // inspect_config - computed: false, optional: true, required: false
-  private _inspectConfig = new DataLossPreventionInspectTemplateInspectConfigOutputReference(this as any, "inspect_config", true);
+  private _inspectConfig = new DataLossPreventionInspectTemplateInspectConfigOutputReference(this, "inspect_config", true);
   public get inspectConfig() {
     return this._inspectConfig;
   }
@@ -2344,7 +2341,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataLossPreventionInspectTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataLossPreventionInspectTemplateTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

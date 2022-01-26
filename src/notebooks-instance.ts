@@ -86,7 +86,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#labels NotebooksInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * A reference to the zone where the machine resides.
   * 
@@ -105,7 +105,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#metadata NotebooksInstance#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * The name specified for the Notebook instance.
   * 
@@ -234,7 +234,7 @@ export interface NotebooksInstanceAcceleratorConfig {
 }
 
 export function notebooksInstanceAcceleratorConfigToTerraform(struct?: NotebooksInstanceAcceleratorConfigOutputReference | NotebooksInstanceAcceleratorConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -252,7 +252,7 @@ export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,7 +326,7 @@ For example: gcr.io/{project_id}/{imageName}
 }
 
 export function notebooksInstanceContainerImageToTerraform(struct?: NotebooksInstanceContainerImageOutputReference | NotebooksInstanceContainerImage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -344,7 +344,7 @@ export class NotebooksInstanceContainerImageOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -433,7 +433,7 @@ Enabled by default.
 }
 
 export function notebooksInstanceShieldedInstanceConfigToTerraform(struct?: NotebooksInstanceShieldedInstanceConfigOutputReference | NotebooksInstanceShieldedInstanceConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -452,7 +452,7 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -492,7 +492,7 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   // enable_integrity_monitoring - computed: false, optional: true, required: false
   private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
   public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
@@ -508,7 +508,7 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   // enable_secure_boot - computed: false, optional: true, required: false
   private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
   public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
@@ -524,7 +524,7 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   // enable_vtpm - computed: false, optional: true, required: false
   private _enableVtpm?: boolean | cdktf.IResolvable; 
   public get enableVtpm() {
-    return this.getBooleanAttribute('enable_vtpm') as any;
+    return this.getBooleanAttribute('enable_vtpm');
   }
   public set enableVtpm(value: boolean | cdktf.IResolvable) {
     this._enableVtpm = value;
@@ -552,8 +552,8 @@ export interface NotebooksInstanceTimeouts {
   readonly update?: string;
 }
 
-export function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceTimeoutsOutputReference | NotebooksInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function notebooksInstanceTimeoutsToTerraform(struct?: NotebooksInstanceTimeoutsOutputReference | NotebooksInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -572,7 +572,7 @@ export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -680,7 +680,7 @@ Format: projects/{project_id}
 }
 
 export function notebooksInstanceVmImageToTerraform(struct?: NotebooksInstanceVmImageOutputReference | NotebooksInstanceVmImage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -699,7 +699,7 @@ export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -971,7 +971,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // install_gpu_driver - computed: false, optional: true, required: false
   private _installGpuDriver?: boolean | cdktf.IResolvable; 
   public get installGpuDriver() {
-    return this.getBooleanAttribute('install_gpu_driver') as any;
+    return this.getBooleanAttribute('install_gpu_driver');
   }
   public set installGpuDriver(value: boolean | cdktf.IResolvable) {
     this._installGpuDriver = value;
@@ -1017,12 +1017,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1060,12 +1059,11 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -1108,7 +1106,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // no_proxy_access - computed: false, optional: true, required: false
   private _noProxyAccess?: boolean | cdktf.IResolvable; 
   public get noProxyAccess() {
-    return this.getBooleanAttribute('no_proxy_access') as any;
+    return this.getBooleanAttribute('no_proxy_access');
   }
   public set noProxyAccess(value: boolean | cdktf.IResolvable) {
     this._noProxyAccess = value;
@@ -1124,7 +1122,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // no_public_ip - computed: false, optional: true, required: false
   private _noPublicIp?: boolean | cdktf.IResolvable; 
   public get noPublicIp() {
-    return this.getBooleanAttribute('no_public_ip') as any;
+    return this.getBooleanAttribute('no_public_ip');
   }
   public set noPublicIp(value: boolean | cdktf.IResolvable) {
     this._noPublicIp = value;
@@ -1140,7 +1138,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // no_remove_data_disk - computed: false, optional: true, required: false
   private _noRemoveDataDisk?: boolean | cdktf.IResolvable; 
   public get noRemoveDataDisk() {
-    return this.getBooleanAttribute('no_remove_data_disk') as any;
+    return this.getBooleanAttribute('no_remove_data_disk');
   }
   public set noRemoveDataDisk(value: boolean | cdktf.IResolvable) {
     this._noRemoveDataDisk = value;
@@ -1276,7 +1274,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // accelerator_config - computed: false, optional: true, required: false
-  private _acceleratorConfig = new NotebooksInstanceAcceleratorConfigOutputReference(this as any, "accelerator_config", true);
+  private _acceleratorConfig = new NotebooksInstanceAcceleratorConfigOutputReference(this, "accelerator_config", true);
   public get acceleratorConfig() {
     return this._acceleratorConfig;
   }
@@ -1292,7 +1290,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // container_image - computed: false, optional: true, required: false
-  private _containerImage = new NotebooksInstanceContainerImageOutputReference(this as any, "container_image", true);
+  private _containerImage = new NotebooksInstanceContainerImageOutputReference(this, "container_image", true);
   public get containerImage() {
     return this._containerImage;
   }
@@ -1308,7 +1306,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new NotebooksInstanceShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new NotebooksInstanceShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -1324,7 +1322,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NotebooksInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NotebooksInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1340,7 +1338,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // vm_image - computed: false, optional: true, required: false
-  private _vmImage = new NotebooksInstanceVmImageOutputReference(this as any, "vm_image", true);
+  private _vmImage = new NotebooksInstanceVmImageOutputReference(this, "vm_image", true);
   public get vmImage() {
     return this._vmImage;
   }
@@ -1371,10 +1369,10 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       install_gpu_driver: cdktf.booleanToTerraform(this._installGpuDriver),
       instance_owners: cdktf.listMapper(cdktf.stringToTerraform)(this._instanceOwners),
       kms_key: cdktf.stringToTerraform(this._kmsKey),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       machine_type: cdktf.stringToTerraform(this._machineType),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       no_proxy_access: cdktf.booleanToTerraform(this._noProxyAccess),

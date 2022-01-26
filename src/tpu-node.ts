@@ -38,7 +38,7 @@ is peered with another network that is using that CIDR block.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tpu_node#labels TpuNode#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The immutable name of the TPU.
   * 
@@ -114,7 +114,7 @@ export interface TpuNodeSchedulingConfig {
 }
 
 export function tpuNodeSchedulingConfigToTerraform(struct?: TpuNodeSchedulingConfigOutputReference | TpuNodeSchedulingConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,7 +131,7 @@ export class TpuNodeSchedulingConfigOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -159,7 +159,7 @@ export class TpuNodeSchedulingConfigOutputReference extends cdktf.ComplexObject 
   // preemptible - computed: false, optional: false, required: true
   private _preemptible?: boolean | cdktf.IResolvable; 
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible') as any;
+    return this.getBooleanAttribute('preemptible');
   }
   public set preemptible(value: boolean | cdktf.IResolvable) {
     this._preemptible = value;
@@ -184,8 +184,8 @@ export interface TpuNodeTimeouts {
   readonly update?: string;
 }
 
-export function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeoutsOutputReference | TpuNodeTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function tpuNodeTimeoutsToTerraform(struct?: TpuNodeTimeoutsOutputReference | TpuNodeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -204,7 +204,7 @@ export class TpuNodeTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -391,12 +391,11 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -438,7 +437,7 @@ export class TpuNode extends cdktf.TerraformResource {
 
   // network_endpoints - computed: true, optional: false, required: false
   public networkEndpoints(index: string) {
-    return new TpuNodeNetworkEndpoints(this, 'network_endpoints', index);
+    return new TpuNodeNetworkEndpoints(this, 'network_endpoints', index, false);
   }
 
   // project - computed: true, optional: true, required: false
@@ -478,7 +477,7 @@ export class TpuNode extends cdktf.TerraformResource {
   // use_service_networking - computed: false, optional: true, required: false
   private _useServiceNetworking?: boolean | cdktf.IResolvable; 
   public get useServiceNetworking() {
-    return this.getBooleanAttribute('use_service_networking') as any;
+    return this.getBooleanAttribute('use_service_networking');
   }
   public set useServiceNetworking(value: boolean | cdktf.IResolvable) {
     this._useServiceNetworking = value;
@@ -508,7 +507,7 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // scheduling_config - computed: false, optional: true, required: false
-  private _schedulingConfig = new TpuNodeSchedulingConfigOutputReference(this as any, "scheduling_config", true);
+  private _schedulingConfig = new TpuNodeSchedulingConfigOutputReference(this, "scheduling_config", true);
   public get schedulingConfig() {
     return this._schedulingConfig;
   }
@@ -524,7 +523,7 @@ export class TpuNode extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TpuNodeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TpuNodeTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -548,7 +547,7 @@ export class TpuNode extends cdktf.TerraformResource {
       accelerator_type: cdktf.stringToTerraform(this._acceleratorType),
       cidr_block: cdktf.stringToTerraform(this._cidrBlock),
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),

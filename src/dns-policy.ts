@@ -50,7 +50,7 @@ Defaults to no logging if not set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#networks DnsPolicy#networks}
   */
-  readonly networks?: DnsPolicyNetworks[];
+  readonly networks?: DnsPolicyNetworks[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -75,8 +75,8 @@ to the Internet. When set to 'private', Cloud DNS will always send queries throu
   readonly ipv4Address: string;
 }
 
-export function dnsPolicyAlternativeNameServerConfigTargetNameServersToTerraform(struct?: DnsPolicyAlternativeNameServerConfigTargetNameServers): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsPolicyAlternativeNameServerConfigTargetNameServersToTerraform(struct?: DnsPolicyAlternativeNameServerConfigTargetNameServers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -92,11 +92,11 @@ export interface DnsPolicyAlternativeNameServerConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#target_name_servers DnsPolicy#target_name_servers}
   */
-  readonly targetNameServers: DnsPolicyAlternativeNameServerConfigTargetNameServers[];
+  readonly targetNameServers: DnsPolicyAlternativeNameServerConfigTargetNameServers[] | cdktf.IResolvable;
 }
 
 export function dnsPolicyAlternativeNameServerConfigToTerraform(struct?: DnsPolicyAlternativeNameServerConfigOutputReference | DnsPolicyAlternativeNameServerConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -113,7 +113,7 @@ export class DnsPolicyAlternativeNameServerConfigOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -139,12 +139,12 @@ export class DnsPolicyAlternativeNameServerConfigOutputReference extends cdktf.C
   }
 
   // target_name_servers - computed: false, optional: false, required: true
-  private _targetNameServers?: DnsPolicyAlternativeNameServerConfigTargetNameServers[]; 
+  private _targetNameServers?: DnsPolicyAlternativeNameServerConfigTargetNameServers[] | cdktf.IResolvable; 
   public get targetNameServers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('target_name_servers') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('target_name_servers')));
   }
-  public set targetNameServers(value: DnsPolicyAlternativeNameServerConfigTargetNameServers[]) {
+  public set targetNameServers(value: DnsPolicyAlternativeNameServerConfigTargetNameServers[] | cdktf.IResolvable) {
     this._targetNameServers = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -163,8 +163,8 @@ This should be formatted like 'projects/{project}/global/networks/{network}' or
   readonly networkUrl: string;
 }
 
-export function dnsPolicyNetworksToTerraform(struct?: DnsPolicyNetworks): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsPolicyNetworksToTerraform(struct?: DnsPolicyNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -188,8 +188,8 @@ export interface DnsPolicyTimeouts {
   readonly update?: string;
 }
 
-export function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeoutsOutputReference | DnsPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsPolicyTimeoutsToTerraform(struct?: DnsPolicyTimeoutsOutputReference | DnsPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -208,7 +208,7 @@ export class DnsPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -359,7 +359,7 @@ export class DnsPolicy extends cdktf.TerraformResource {
   // enable_inbound_forwarding - computed: false, optional: true, required: false
   private _enableInboundForwarding?: boolean | cdktf.IResolvable; 
   public get enableInboundForwarding() {
-    return this.getBooleanAttribute('enable_inbound_forwarding') as any;
+    return this.getBooleanAttribute('enable_inbound_forwarding');
   }
   public set enableInboundForwarding(value: boolean | cdktf.IResolvable) {
     this._enableInboundForwarding = value;
@@ -375,7 +375,7 @@ export class DnsPolicy extends cdktf.TerraformResource {
   // enable_logging - computed: false, optional: true, required: false
   private _enableLogging?: boolean | cdktf.IResolvable; 
   public get enableLogging() {
-    return this.getBooleanAttribute('enable_logging') as any;
+    return this.getBooleanAttribute('enable_logging');
   }
   public set enableLogging(value: boolean | cdktf.IResolvable) {
     this._enableLogging = value;
@@ -423,7 +423,7 @@ export class DnsPolicy extends cdktf.TerraformResource {
   }
 
   // alternative_name_server_config - computed: false, optional: true, required: false
-  private _alternativeNameServerConfig = new DnsPolicyAlternativeNameServerConfigOutputReference(this as any, "alternative_name_server_config", true);
+  private _alternativeNameServerConfig = new DnsPolicyAlternativeNameServerConfigOutputReference(this, "alternative_name_server_config", true);
   public get alternativeNameServerConfig() {
     return this._alternativeNameServerConfig;
   }
@@ -439,12 +439,12 @@ export class DnsPolicy extends cdktf.TerraformResource {
   }
 
   // networks - computed: false, optional: true, required: false
-  private _networks?: DnsPolicyNetworks[]; 
+  private _networks?: DnsPolicyNetworks[] | cdktf.IResolvable; 
   public get networks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('networks') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('networks')));
   }
-  public set networks(value: DnsPolicyNetworks[]) {
+  public set networks(value: DnsPolicyNetworks[] | cdktf.IResolvable) {
     this._networks = value;
   }
   public resetNetworks() {
@@ -456,7 +456,7 @@ export class DnsPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DnsPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DnsPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

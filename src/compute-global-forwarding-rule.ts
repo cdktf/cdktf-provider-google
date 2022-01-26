@@ -36,7 +36,7 @@ export interface ComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Specifies the forwarding rule type.
 
@@ -100,7 +100,7 @@ For more information about forwarding rules, refer to [Forwarding rule concepts]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
   */
-  readonly metadataFilters?: ComputeGlobalForwardingRuleMetadataFilters[];
+  readonly metadataFilters?: ComputeGlobalForwardingRuleMetadataFilters[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -127,8 +127,8 @@ value can have a maximum length of 1024 characters.
   readonly value: string;
 }
 
-export function computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform(struct?: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform(struct?: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -155,11 +155,11 @@ Supported values are:
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule#filter_labels ComputeGlobalForwardingRule#filter_labels}
   */
-  readonly filterLabels: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels[];
+  readonly filterLabels: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels[] | cdktf.IResolvable;
 }
 
-export function computeGlobalForwardingRuleMetadataFiltersToTerraform(struct?: ComputeGlobalForwardingRuleMetadataFilters): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeGlobalForwardingRuleMetadataFiltersToTerraform(struct?: ComputeGlobalForwardingRuleMetadataFilters | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -184,8 +184,8 @@ export interface ComputeGlobalForwardingRuleTimeouts {
   readonly update?: string;
 }
 
-export function computeGlobalForwardingRuleTimeoutsToTerraform(struct?: ComputeGlobalForwardingRuleTimeoutsOutputReference | ComputeGlobalForwardingRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeGlobalForwardingRuleTimeoutsToTerraform(struct?: ComputeGlobalForwardingRuleTimeoutsOutputReference | ComputeGlobalForwardingRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -204,7 +204,7 @@ export class ComputeGlobalForwardingRuleTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -416,12 +416,11 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -528,12 +527,12 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
   }
 
   // metadata_filters - computed: false, optional: true, required: false
-  private _metadataFilters?: ComputeGlobalForwardingRuleMetadataFilters[]; 
+  private _metadataFilters?: ComputeGlobalForwardingRuleMetadataFilters[] | cdktf.IResolvable; 
   public get metadataFilters() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata_filters') as any;
+    return this.interpolationForAttribute('metadata_filters');
   }
-  public set metadataFilters(value: ComputeGlobalForwardingRuleMetadataFilters[]) {
+  public set metadataFilters(value: ComputeGlobalForwardingRuleMetadataFilters[] | cdktf.IResolvable) {
     this._metadataFilters = value;
   }
   public resetMetadataFilters() {
@@ -545,7 +544,7 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeGlobalForwardingRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeGlobalForwardingRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -570,7 +569,7 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
       ip_version: cdktf.stringToTerraform(this._ipVersion),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),

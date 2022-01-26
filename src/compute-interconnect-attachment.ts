@@ -184,8 +184,8 @@ export interface ComputeInterconnectAttachmentTimeouts {
   readonly update?: string;
 }
 
-export function computeInterconnectAttachmentTimeoutsToTerraform(struct?: ComputeInterconnectAttachmentTimeoutsOutputReference | ComputeInterconnectAttachmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInterconnectAttachmentTimeoutsToTerraform(struct?: ComputeInterconnectAttachmentTimeoutsOutputReference | ComputeInterconnectAttachmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -204,7 +204,7 @@ export class ComputeInterconnectAttachmentTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -347,7 +347,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   // admin_enabled - computed: false, optional: true, required: false
   private _adminEnabled?: boolean | cdktf.IResolvable; 
   public get adminEnabled() {
-    return this.getBooleanAttribute('admin_enabled') as any;
+    return this.getBooleanAttribute('admin_enabled');
   }
   public set adminEnabled(value: boolean | cdktf.IResolvable) {
     this._adminEnabled = value;
@@ -538,7 +538,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
 
   // private_interconnect_info - computed: true, optional: false, required: false
   public privateInterconnectInfo(index: string) {
-    return new ComputeInterconnectAttachmentPrivateInterconnectInfo(this, 'private_interconnect_info', index);
+    return new ComputeInterconnectAttachmentPrivateInterconnectInfo(this, 'private_interconnect_info', index, false);
   }
 
   // project - computed: true, optional: true, required: false
@@ -629,7 +629,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeInterconnectAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInterconnectAttachmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

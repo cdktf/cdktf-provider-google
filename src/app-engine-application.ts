@@ -79,7 +79,7 @@ export interface AppEngineApplicationFeatureSettings {
 }
 
 export function appEngineApplicationFeatureSettingsToTerraform(struct?: AppEngineApplicationFeatureSettingsOutputReference | AppEngineApplicationFeatureSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -96,7 +96,7 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -124,7 +124,7 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
   // split_health_checks - computed: false, optional: false, required: true
   private _splitHealthChecks?: boolean | cdktf.IResolvable; 
   public get splitHealthChecks() {
-    return this.getBooleanAttribute('split_health_checks') as any;
+    return this.getBooleanAttribute('split_health_checks');
   }
   public set splitHealthChecks(value: boolean | cdktf.IResolvable) {
     this._splitHealthChecks = value;
@@ -156,7 +156,7 @@ export interface AppEngineApplicationIap {
 }
 
 export function appEngineApplicationIapToTerraform(struct?: AppEngineApplicationIapOutputReference | AppEngineApplicationIap): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -175,7 +175,7 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -215,7 +215,7 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -253,6 +253,11 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   public get oauth2ClientSecretInput() {
     return this._oauth2ClientSecret;
   }
+
+  // oauth2_client_secret_sha256 - computed: true, optional: false, required: false
+  public get oauth2ClientSecretSha256() {
+    return this.getStringAttribute('oauth2_client_secret_sha256');
+  }
 }
 export interface AppEngineApplicationTimeouts {
   /**
@@ -265,8 +270,8 @@ export interface AppEngineApplicationTimeouts {
   readonly update?: string;
 }
 
-export function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeoutsOutputReference | AppEngineApplicationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplicationTimeoutsOutputReference | AppEngineApplicationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -284,7 +289,7 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -508,11 +513,11 @@ export class AppEngineApplication extends cdktf.TerraformResource {
 
   // url_dispatch_rule - computed: true, optional: false, required: false
   public urlDispatchRule(index: string) {
-    return new AppEngineApplicationUrlDispatchRule(this, 'url_dispatch_rule', index);
+    return new AppEngineApplicationUrlDispatchRule(this, 'url_dispatch_rule', index, false);
   }
 
   // feature_settings - computed: false, optional: true, required: false
-  private _featureSettings = new AppEngineApplicationFeatureSettingsOutputReference(this as any, "feature_settings", true);
+  private _featureSettings = new AppEngineApplicationFeatureSettingsOutputReference(this, "feature_settings", true);
   public get featureSettings() {
     return this._featureSettings;
   }
@@ -528,7 +533,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap = new AppEngineApplicationIapOutputReference(this as any, "iap", true);
+  private _iap = new AppEngineApplicationIapOutputReference(this, "iap", true);
   public get iap() {
     return this._iap;
   }
@@ -544,7 +549,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineApplicationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineApplicationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

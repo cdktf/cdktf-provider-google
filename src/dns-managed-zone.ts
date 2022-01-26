@@ -28,7 +28,7 @@ export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#labels DnsManagedZone#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * User assigned name for this resource.
 Must be unique within the project.
@@ -110,8 +110,8 @@ to sign all other types of resource record sets. Possible values: ["keySigning",
   readonly kind?: string;
 }
 
-export function dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform(struct?: DnsManagedZoneDnssecConfigDefaultKeySpecs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform(struct?: DnsManagedZoneDnssecConfigDefaultKeySpecs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,11 +148,11 @@ non_existence can only be updated when the state is 'off'. Possible values: ["ns
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#default_key_specs DnsManagedZone#default_key_specs}
   */
-  readonly defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[];
+  readonly defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable;
 }
 
 export function dnsManagedZoneDnssecConfigToTerraform(struct?: DnsManagedZoneDnssecConfigOutputReference | DnsManagedZoneDnssecConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -172,7 +172,7 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -264,12 +264,12 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
 
   // default_key_specs - computed: false, optional: true, required: false
-  private _defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[]; 
+  private _defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable; 
   public get defaultKeySpecs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('default_key_specs') as any;
+    return this.interpolationForAttribute('default_key_specs');
   }
-  public set defaultKeySpecs(value: DnsManagedZoneDnssecConfigDefaultKeySpecs[]) {
+  public set defaultKeySpecs(value: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable) {
     this._defaultKeySpecs = value;
   }
   public resetDefaultKeySpecs() {
@@ -297,8 +297,8 @@ to the Internet. When set to 'private', Cloud DNS will always send queries throu
   readonly ipv4Address: string;
 }
 
-export function dnsManagedZoneForwardingConfigTargetNameServersToTerraform(struct?: DnsManagedZoneForwardingConfigTargetNameServers): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsManagedZoneForwardingConfigTargetNameServersToTerraform(struct?: DnsManagedZoneForwardingConfigTargetNameServers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -314,11 +314,11 @@ export interface DnsManagedZoneForwardingConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#target_name_servers DnsManagedZone#target_name_servers}
   */
-  readonly targetNameServers: DnsManagedZoneForwardingConfigTargetNameServers[];
+  readonly targetNameServers: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable;
 }
 
 export function dnsManagedZoneForwardingConfigToTerraform(struct?: DnsManagedZoneForwardingConfigOutputReference | DnsManagedZoneForwardingConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -335,7 +335,7 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -361,12 +361,12 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   }
 
   // target_name_servers - computed: false, optional: false, required: true
-  private _targetNameServers?: DnsManagedZoneForwardingConfigTargetNameServers[]; 
+  private _targetNameServers?: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable; 
   public get targetNameServers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('target_name_servers') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('target_name_servers')));
   }
-  public set targetNameServers(value: DnsManagedZoneForwardingConfigTargetNameServers[]) {
+  public set targetNameServers(value: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable) {
     this._targetNameServers = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -386,7 +386,7 @@ This should be formatted like 'projects/{project}/global/networks/{network}' or
 }
 
 export function dnsManagedZonePeeringConfigTargetNetworkToTerraform(struct?: DnsManagedZonePeeringConfigTargetNetworkOutputReference | DnsManagedZonePeeringConfigTargetNetwork): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -403,7 +403,7 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -451,7 +451,7 @@ export interface DnsManagedZonePeeringConfig {
 }
 
 export function dnsManagedZonePeeringConfigToTerraform(struct?: DnsManagedZonePeeringConfigOutputReference | DnsManagedZonePeeringConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -468,7 +468,7 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -494,7 +494,7 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
   }
 
   // target_network - computed: false, optional: false, required: true
-  private _targetNetwork = new DnsManagedZonePeeringConfigTargetNetworkOutputReference(this as any, "target_network", true);
+  private _targetNetwork = new DnsManagedZonePeeringConfigTargetNetworkOutputReference(this, "target_network", true);
   public get targetNetwork() {
     return this._targetNetwork;
   }
@@ -517,8 +517,8 @@ This should be formatted like 'projects/{project}/global/networks/{network}' or
   readonly networkUrl: string;
 }
 
-export function dnsManagedZonePrivateVisibilityConfigNetworksToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigNetworks): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsManagedZonePrivateVisibilityConfigNetworksToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -533,11 +533,11 @@ export interface DnsManagedZonePrivateVisibilityConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#networks DnsManagedZone#networks}
   */
-  readonly networks: DnsManagedZonePrivateVisibilityConfigNetworks[];
+  readonly networks: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable;
 }
 
 export function dnsManagedZonePrivateVisibilityConfigToTerraform(struct?: DnsManagedZonePrivateVisibilityConfigOutputReference | DnsManagedZonePrivateVisibilityConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -554,7 +554,7 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -580,12 +580,12 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   }
 
   // networks - computed: false, optional: false, required: true
-  private _networks?: DnsManagedZonePrivateVisibilityConfigNetworks[]; 
+  private _networks?: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable; 
   public get networks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('networks') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('networks')));
   }
-  public set networks(value: DnsManagedZonePrivateVisibilityConfigNetworks[]) {
+  public set networks(value: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable) {
     this._networks = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -608,8 +608,8 @@ export interface DnsManagedZoneTimeouts {
   readonly update?: string;
 }
 
-export function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeoutsOutputReference | DnsManagedZoneTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeoutsOutputReference | DnsManagedZoneTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -628,7 +628,7 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -796,7 +796,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   // force_destroy - computed: false, optional: true, required: false
   private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy') as any;
+    return this.getBooleanAttribute('force_destroy');
   }
   public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
@@ -815,12 +815,11 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -882,7 +881,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // dnssec_config - computed: false, optional: true, required: false
-  private _dnssecConfig = new DnsManagedZoneDnssecConfigOutputReference(this as any, "dnssec_config", true);
+  private _dnssecConfig = new DnsManagedZoneDnssecConfigOutputReference(this, "dnssec_config", true);
   public get dnssecConfig() {
     return this._dnssecConfig;
   }
@@ -898,7 +897,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // forwarding_config - computed: false, optional: true, required: false
-  private _forwardingConfig = new DnsManagedZoneForwardingConfigOutputReference(this as any, "forwarding_config", true);
+  private _forwardingConfig = new DnsManagedZoneForwardingConfigOutputReference(this, "forwarding_config", true);
   public get forwardingConfig() {
     return this._forwardingConfig;
   }
@@ -914,7 +913,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // peering_config - computed: false, optional: true, required: false
-  private _peeringConfig = new DnsManagedZonePeeringConfigOutputReference(this as any, "peering_config", true);
+  private _peeringConfig = new DnsManagedZonePeeringConfigOutputReference(this, "peering_config", true);
   public get peeringConfig() {
     return this._peeringConfig;
   }
@@ -930,7 +929,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // private_visibility_config - computed: false, optional: true, required: false
-  private _privateVisibilityConfig = new DnsManagedZonePrivateVisibilityConfigOutputReference(this as any, "private_visibility_config", true);
+  private _privateVisibilityConfig = new DnsManagedZonePrivateVisibilityConfigOutputReference(this, "private_visibility_config", true);
   public get privateVisibilityConfig() {
     return this._privateVisibilityConfig;
   }
@@ -946,7 +945,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DnsManagedZoneTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DnsManagedZoneTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -970,7 +969,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       dns_name: cdktf.stringToTerraform(this._dnsName),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       visibility: cdktf.stringToTerraform(this._visibility),

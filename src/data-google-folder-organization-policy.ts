@@ -24,31 +24,31 @@ export class DataGoogleFolderOrganizationPolicyBooleanPolicy extends cdktf.Compl
 
   // enforced - computed: true, optional: false, required: false
   public get enforced() {
-    return this.getBooleanAttribute('enforced') as any;
+    return this.getBooleanAttribute('enforced');
   }
 }
 export class DataGoogleFolderOrganizationPolicyListPolicyAllow extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
 
   // values - computed: true, optional: false, required: false
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
 }
 export class DataGoogleFolderOrganizationPolicyListPolicyDeny extends cdktf.ComplexComputedList {
 
   // all - computed: true, optional: false, required: false
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
 
   // values - computed: true, optional: false, required: false
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
 }
 export class DataGoogleFolderOrganizationPolicyListPolicy extends cdktf.ComplexComputedList {
@@ -56,18 +56,18 @@ export class DataGoogleFolderOrganizationPolicyListPolicy extends cdktf.ComplexC
   // allow - computed: true, optional: false, required: false
   public get allow() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allow') as any;
+    return this.interpolationForAttribute('allow');
   }
 
   // deny - computed: true, optional: false, required: false
   public get deny() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('deny') as any;
+    return this.interpolationForAttribute('deny');
   }
 
   // inherit_from_parent - computed: true, optional: false, required: false
   public get inheritFromParent() {
-    return this.getBooleanAttribute('inherit_from_parent') as any;
+    return this.getBooleanAttribute('inherit_from_parent');
   }
 
   // suggested_value - computed: true, optional: false, required: false
@@ -79,7 +79,7 @@ export class DataGoogleFolderOrganizationPolicyRestorePolicy extends cdktf.Compl
 
   // default - computed: true, optional: false, required: false
   public get default() {
-    return this.getBooleanAttribute('default') as any;
+    return this.getBooleanAttribute('default');
   }
 }
 
@@ -125,7 +125,7 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
 
   // boolean_policy - computed: true, optional: false, required: false
   public booleanPolicy(index: string) {
-    return new DataGoogleFolderOrganizationPolicyBooleanPolicy(this, 'boolean_policy', index);
+    return new DataGoogleFolderOrganizationPolicyBooleanPolicy(this, 'boolean_policy', index, false);
   }
 
   // constraint - computed: false, optional: false, required: true
@@ -166,12 +166,12 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
 
   // list_policy - computed: true, optional: false, required: false
   public listPolicy(index: string) {
-    return new DataGoogleFolderOrganizationPolicyListPolicy(this, 'list_policy', index);
+    return new DataGoogleFolderOrganizationPolicyListPolicy(this, 'list_policy', index, false);
   }
 
   // restore_policy - computed: true, optional: false, required: false
   public restorePolicy(index: string) {
-    return new DataGoogleFolderOrganizationPolicyRestorePolicy(this, 'restore_policy', index);
+    return new DataGoogleFolderOrganizationPolicyRestorePolicy(this, 'restore_policy', index, false);
   }
 
   // update_time - computed: true, optional: false, required: false

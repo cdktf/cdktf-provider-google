@@ -31,7 +31,7 @@ applied by default to all realms and clusters. For example,
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#game_server_config_overrides GameServicesGameServerDeploymentRollout#game_server_config_overrides}
   */
-  readonly gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[];
+  readonly gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -49,7 +49,7 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
 }
 
 export function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference | GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -66,7 +66,7 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -122,8 +122,8 @@ export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverride
   readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector;
 }
 
-export function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,8 +148,8 @@ export interface GameServicesGameServerDeploymentRolloutTimeouts {
   readonly update?: string;
 }
 
-export function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeoutsOutputReference | GameServicesGameServerDeploymentRolloutTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struct?: GameServicesGameServerDeploymentRolloutTimeoutsOutputReference | GameServicesGameServerDeploymentRolloutTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -168,7 +168,7 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -350,12 +350,12 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // game_server_config_overrides - computed: false, optional: true, required: false
-  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[]; 
+  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable; 
   public get gameServerConfigOverrides() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('game_server_config_overrides') as any;
+    return this.interpolationForAttribute('game_server_config_overrides');
   }
-  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[]) {
+  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable) {
     this._gameServerConfigOverrides = value;
   }
   public resetGameServerConfigOverrides() {
@@ -367,7 +367,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

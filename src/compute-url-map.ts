@@ -58,19 +58,19 @@ except the last character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#host_rule ComputeUrlMap#host_rule}
   */
-  readonly hostRule?: ComputeUrlMapHostRule[];
+  readonly hostRule?: ComputeUrlMapHostRule[] | cdktf.IResolvable;
   /**
   * path_matcher block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#path_matcher ComputeUrlMap#path_matcher}
   */
-  readonly pathMatcher?: ComputeUrlMapPathMatcher[];
+  readonly pathMatcher?: ComputeUrlMapPathMatcher[] | cdktf.IResolvable;
   /**
   * test block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#test ComputeUrlMap#test}
   */
-  readonly test?: ComputeUrlMapTest[];
+  readonly test?: ComputeUrlMapTest[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -135,7 +135,7 @@ This translates to the Access-Control-Max-Age header.
 }
 
 export function computeUrlMapDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference | ComputeUrlMapDefaultRouteActionCorsPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +159,7 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -229,7 +229,7 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   // allow_credentials - computed: false, optional: true, required: false
   private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
-    return this.getBooleanAttribute('allow_credentials') as any;
+    return this.getBooleanAttribute('allow_credentials');
   }
   public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
@@ -309,7 +309,7 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -372,7 +372,7 @@ The value must be between 0.0 and 100.0 inclusive.
 }
 
 export function computeUrlMapDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -390,7 +390,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -471,7 +471,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 }
 
 export function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -489,7 +489,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -569,7 +569,7 @@ The value must be between 0.0 and 100.0 inclusive.
 }
 
 export function computeUrlMapDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -587,7 +587,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -635,7 +635,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -666,7 +666,7 @@ export interface ComputeUrlMapDefaultRouteActionFaultInjectionPolicy {
 }
 
 export function computeUrlMapDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapDefaultRouteActionFaultInjectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -684,7 +684,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -716,7 +716,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  private _abort = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
   public get abort() {
     return this._abort;
   }
@@ -732,7 +732,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
   public get delay() {
     return this._delay;
   }
@@ -757,7 +757,7 @@ export interface ComputeUrlMapDefaultRouteActionRequestMirrorPolicy {
 }
 
 export function computeUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapDefaultRouteActionRequestMirrorPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -774,7 +774,7 @@ export class ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -830,7 +830,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 }
 
 export function computeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -848,7 +848,7 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -948,7 +948,7 @@ export interface ComputeUrlMapDefaultRouteActionRetryPolicy {
 }
 
 export function computeUrlMapDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference | ComputeUrlMapDefaultRouteActionRetryPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -967,7 +967,7 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1037,7 +1037,7 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -1070,7 +1070,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 }
 
 export function computeUrlMapDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapDefaultRouteActionTimeoutOutputReference | ComputeUrlMapDefaultRouteActionTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1088,7 +1088,7 @@ export class ComputeUrlMapDefaultRouteActionTimeoutOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1173,7 +1173,7 @@ The value must be between 1 and 1024 characters.
 }
 
 export function computeUrlMapDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference | ComputeUrlMapDefaultRouteActionUrlRewrite): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1191,7 +1191,7 @@ export class ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1276,8 +1276,8 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1310,8 +1310,8 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1342,17 +1342,17 @@ response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1372,7 +1372,7 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1448,12 +1448,12 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -1465,12 +1465,12 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -1511,8 +1511,8 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction;
 }
 
-export function computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapDefaultRouteActionWeightedBackendServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1565,11 +1565,11 @@ export interface ComputeUrlMapDefaultRouteAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
   */
-  readonly weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[];
+  readonly weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapDefaultRouteActionToTerraform(struct?: ComputeUrlMapDefaultRouteActionOutputReference | ComputeUrlMapDefaultRouteAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1592,7 +1592,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1654,7 +1654,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -1670,7 +1670,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -1686,7 +1686,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -1702,7 +1702,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -1718,7 +1718,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapDefaultRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapDefaultRouteActionTimeoutOutputReference(this, "timeout", true);
   public get timeout() {
     return this._timeout;
   }
@@ -1734,7 +1734,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -1750,12 +1750,12 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[]; 
+  private _weightedBackendServices?: ComputeUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weighted_backend_services') as any;
+    return this.interpolationForAttribute('weighted_backend_services');
   }
-  public set weightedBackendServices(value: ComputeUrlMapDefaultRouteActionWeightedBackendServices[]) {
+  public set weightedBackendServices(value: ComputeUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -1833,7 +1833,7 @@ retained. The default is set to false.
 }
 
 export function computeUrlMapDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapDefaultUrlRedirectOutputReference | ComputeUrlMapDefaultUrlRedirect): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1855,7 +1855,7 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1929,7 +1929,7 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   // https_redirect - computed: false, optional: true, required: false
   private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
-    return this.getBooleanAttribute('https_redirect') as any;
+    return this.getBooleanAttribute('https_redirect');
   }
   public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
@@ -1993,7 +1993,7 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   // strip_query - computed: false, optional: false, required: true
   private _stripQuery?: boolean | cdktf.IResolvable; 
   public get stripQuery() {
-    return this.getBooleanAttribute('strip_query') as any;
+    return this.getBooleanAttribute('strip_query');
   }
   public set stripQuery(value: boolean | cdktf.IResolvable) {
     this._stripQuery = value;
@@ -2026,8 +2026,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2061,8 +2061,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2093,17 +2093,17 @@ prior to sending the response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapHeaderActionToTerraform(struct?: ComputeUrlMapHeaderActionOutputReference | ComputeUrlMapHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2123,7 +2123,7 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2199,12 +2199,12 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -2216,12 +2216,12 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -2257,8 +2257,8 @@ hostRule matches the URL's host portion.
   readonly pathMatcher: string;
 }
 
-export function computeUrlMapHostRuleToTerraform(struct?: ComputeUrlMapHostRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapHostRuleToTerraform(struct?: ComputeUrlMapHostRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2326,7 +2326,7 @@ This translates to the Access-Control-Max-Age header.
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2350,7 +2350,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2420,7 +2420,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   // allow_credentials - computed: false, optional: true, required: false
   private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
-    return this.getBooleanAttribute('allow_credentials') as any;
+    return this.getBooleanAttribute('allow_credentials');
   }
   public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
@@ -2500,7 +2500,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -2563,7 +2563,7 @@ The value must be between 0.0 and 100.0 inclusive.
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2581,7 +2581,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2662,7 +2662,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2680,7 +2680,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2760,7 +2760,7 @@ The value must be between 0.0 and 100.0 inclusive.
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2778,7 +2778,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2826,7 +2826,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -2857,7 +2857,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy 
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2875,7 +2875,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2907,7 +2907,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  private _abort = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
   public get abort() {
     return this._abort;
   }
@@ -2923,7 +2923,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
   public get delay() {
     return this._delay;
   }
@@ -2948,7 +2948,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy {
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2965,7 +2965,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3021,7 +3021,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3039,7 +3039,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3139,7 +3139,7 @@ export interface ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy {
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3158,7 +3158,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3228,7 +3228,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -3261,7 +3261,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3279,7 +3279,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3364,7 +3364,7 @@ The value must be between 1 and 1024 characters.
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3382,7 +3382,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3467,8 +3467,8 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3501,8 +3501,8 @@ If true, headerValue is set for the header, discarding any values that were set 
   readonly replace?: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3533,17 +3533,17 @@ response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3563,7 +3563,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3639,12 +3639,12 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -3656,12 +3656,12 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -3702,8 +3702,8 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction;
 }
 
-export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3756,11 +3756,11 @@ export interface ComputeUrlMapPathMatcherDefaultRouteAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
   */
-  readonly weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[];
+  readonly weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherDefaultRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherDefaultRouteActionOutputReference | ComputeUrlMapPathMatcherDefaultRouteAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3783,7 +3783,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3845,7 +3845,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -3861,7 +3861,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -3877,7 +3877,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -3893,7 +3893,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -3909,7 +3909,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(this, "timeout", true);
   public get timeout() {
     return this._timeout;
   }
@@ -3925,7 +3925,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -3941,12 +3941,12 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[]; 
+  private _weightedBackendServices?: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weighted_backend_services') as any;
+    return this.interpolationForAttribute('weighted_backend_services');
   }
-  public set weightedBackendServices(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[]) {
+  public set weightedBackendServices(value: ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -4024,7 +4024,7 @@ retained.
 }
 
 export function computeUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference | ComputeUrlMapPathMatcherDefaultUrlRedirect): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4046,7 +4046,7 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4120,7 +4120,7 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   // https_redirect - computed: false, optional: true, required: false
   private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
-    return this.getBooleanAttribute('https_redirect') as any;
+    return this.getBooleanAttribute('https_redirect');
   }
   public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
@@ -4184,7 +4184,7 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   // strip_query - computed: false, optional: false, required: true
   private _stripQuery?: boolean | cdktf.IResolvable; 
   public get stripQuery() {
-    return this.getBooleanAttribute('strip_query') as any;
+    return this.getBooleanAttribute('strip_query');
   }
   public set stripQuery(value: boolean | cdktf.IResolvable) {
     this._stripQuery = value;
@@ -4217,8 +4217,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4252,8 +4252,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4284,17 +4284,17 @@ prior to sending the response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherHeaderActionOutputReference | ComputeUrlMapPathMatcherHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4314,7 +4314,7 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4390,12 +4390,12 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -4407,12 +4407,12 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -4481,7 +4481,7 @@ translates to the content for the Access-Control-Max-Age header.
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4505,7 +4505,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4575,7 +4575,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   // allow_credentials - computed: false, optional: true, required: false
   private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
-    return this.getBooleanAttribute('allow_credentials') as any;
+    return this.getBooleanAttribute('allow_credentials');
   }
   public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
@@ -4655,7 +4655,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   // disabled - computed: false, optional: false, required: true
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -4716,7 +4716,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4734,7 +4734,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbor
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4810,7 +4810,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4828,7 +4828,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4906,7 +4906,7 @@ be introduced as part of fault injection. The value must be between 0.0 and
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4924,7 +4924,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4969,7 +4969,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   }
 
   // fixed_delay - computed: false, optional: false, required: true
-  private _fixedDelay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -4997,7 +4997,7 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5015,7 +5015,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5047,7 +5047,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  private _abort = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
   public get abort() {
     return this._abort;
   }
@@ -5063,7 +5063,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
   public get delay() {
     return this._delay;
   }
@@ -5088,7 +5088,7 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy 
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5105,7 +5105,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutpu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5162,7 +5162,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5180,7 +5180,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5283,7 +5283,7 @@ the gRPC status code in the response header is set to unavailable
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5302,7 +5302,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5372,7 +5372,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -5406,7 +5406,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5424,7 +5424,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5504,7 +5504,7 @@ be between 1 and 1024 characters.
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5522,7 +5522,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5608,8 +5608,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5643,8 +5643,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5675,17 +5675,17 @@ prior to sending the response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5705,7 +5705,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5781,12 +5781,12 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -5798,12 +5798,12 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -5842,8 +5842,8 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction;
 }
 
-export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5896,11 +5896,11 @@ export interface ComputeUrlMapPathMatcherPathRuleRouteAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
   */
-  readonly weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[];
+  readonly weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference | ComputeUrlMapPathMatcherPathRuleRouteAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5923,7 +5923,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5985,7 +5985,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -6001,7 +6001,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -6017,7 +6017,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -6033,7 +6033,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -6049,7 +6049,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this, "timeout", true);
   public get timeout() {
     return this._timeout;
   }
@@ -6065,7 +6065,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -6081,12 +6081,12 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[]; 
+  private _weightedBackendServices?: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weighted_backend_services') as any;
+    return this.interpolationForAttribute('weighted_backend_services');
   }
-  public set weightedBackendServices(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[]) {
+  public set weightedBackendServices(value: ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -6167,7 +6167,7 @@ portion of the original URL is retained.
 }
 
 export function computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference | ComputeUrlMapPathMatcherPathRuleUrlRedirect): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6189,7 +6189,7 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -6263,7 +6263,7 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   // https_redirect - computed: false, optional: true, required: false
   private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
-    return this.getBooleanAttribute('https_redirect') as any;
+    return this.getBooleanAttribute('https_redirect');
   }
   public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
@@ -6327,7 +6327,7 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   // strip_query - computed: false, optional: false, required: true
   private _stripQuery?: boolean | cdktf.IResolvable; 
   public get stripQuery() {
-    return this.getBooleanAttribute('strip_query') as any;
+    return this.getBooleanAttribute('strip_query');
   }
   public set stripQuery(value: boolean | cdktf.IResolvable) {
     this._stripQuery = value;
@@ -6367,8 +6367,8 @@ allowed here.
   readonly urlRedirect?: ComputeUrlMapPathMatcherPathRuleUrlRedirect;
 }
 
-export function computeUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeUrlMapPathMatcherPathRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeUrlMapPathMatcherPathRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6403,8 +6403,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6438,8 +6438,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6470,17 +6470,17 @@ prior to sending the response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference | ComputeUrlMapPathMatcherRouteRulesHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6500,7 +6500,7 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -6576,12 +6576,12 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -6593,12 +6593,12 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -6625,7 +6625,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeM
 }
 
 export function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference | ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6643,7 +6643,7 @@ export class ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -6768,8 +6768,8 @@ must be set.
   readonly rangeMatch?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch;
 }
 
-export function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6802,8 +6802,8 @@ length of 1024 characters.
   readonly value: string;
 }
 
-export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6830,11 +6830,11 @@ the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#filter_labels ComputeUrlMap#filter_labels}
   */
-  readonly filterLabels: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[];
+  readonly filterLabels: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[] | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6879,8 +6879,8 @@ exactMatch and regexMatch must be set.
   readonly regexMatch?: string;
 }
 
-export function computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -6934,23 +6934,23 @@ fullPathMatch or regexMatch must be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#header_matches ComputeUrlMap#header_matches}
   */
-  readonly headerMatches?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches[];
+  readonly headerMatches?: ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches[] | cdktf.IResolvable;
   /**
   * metadata_filters block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#metadata_filters ComputeUrlMap#metadata_filters}
   */
-  readonly metadataFilters?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters[];
+  readonly metadataFilters?: ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters[] | cdktf.IResolvable;
   /**
   * query_parameter_matches block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#query_parameter_matches ComputeUrlMap#query_parameter_matches}
   */
-  readonly queryParameterMatches?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[];
+  readonly queryParameterMatches?: ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[] | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesMatchRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7024,7 +7024,7 @@ translates to the content for the Access-Control-Max-Age header.
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7048,7 +7048,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7118,7 +7118,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   // allow_credentials - computed: false, optional: true, required: false
   private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
-    return this.getBooleanAttribute('allow_credentials') as any;
+    return this.getBooleanAttribute('allow_credentials');
   }
   public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
@@ -7198,7 +7198,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -7262,7 +7262,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7280,7 +7280,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7362,7 +7362,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7380,7 +7380,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7458,7 +7458,7 @@ be introduced as part of fault injection. The value must be between 0.0 and
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7476,7 +7476,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7524,7 +7524,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this as any, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -7555,7 +7555,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPoli
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7573,7 +7573,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7605,7 +7605,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this as any, "abort", true);
+  private _abort = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
   public get abort() {
     return this._abort;
   }
@@ -7621,7 +7621,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this as any, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
   public get delay() {
     return this._delay;
   }
@@ -7646,7 +7646,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolic
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7663,7 +7663,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOut
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7720,7 +7720,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7738,7 +7738,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeo
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7841,7 +7841,7 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7860,7 +7860,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -7927,7 +7927,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this as any, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -7961,7 +7961,7 @@ inclusive.
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -7979,7 +7979,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -8059,7 +8059,7 @@ be between 1 and 1024 characters.
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8077,7 +8077,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -8163,8 +8163,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8198,8 +8198,8 @@ were set for that header.
   readonly replace: boolean | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8230,17 +8230,17 @@ prior to sending the response back to the client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#request_headers_to_add ComputeUrlMap#request_headers_to_add}
   */
-  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[];
+  readonly requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#response_headers_to_add ComputeUrlMap#response_headers_to_add}
   */
-  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[];
+  readonly responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8260,7 +8260,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -8336,12 +8336,12 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]; 
+  private _requestHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
   public get requestHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add') as any;
+    return this.interpolationForAttribute('request_headers_to_add');
   }
-  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[]) {
+  public set requestHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
     this._requestHeadersToAdd = value;
   }
   public resetRequestHeadersToAdd() {
@@ -8353,12 +8353,12 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]; 
+  private _responseHeadersToAdd?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
   public get responseHeadersToAdd() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add') as any;
+    return this.interpolationForAttribute('response_headers_to_add');
   }
-  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[]) {
+  public set responseHeadersToAdd(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
     this._responseHeadersToAdd = value;
   }
   public resetResponseHeadersToAdd() {
@@ -8397,8 +8397,8 @@ The value must be between 0 and 1000
   readonly headerAction?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction;
 }
 
-export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8451,11 +8451,11 @@ export interface ComputeUrlMapPathMatcherRouteRulesRouteAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#weighted_backend_services ComputeUrlMap#weighted_backend_services}
   */
-  readonly weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[];
+  readonly weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable;
 }
 
 export function computeUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference | ComputeUrlMapPathMatcherRouteRulesRouteAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8478,7 +8478,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -8540,7 +8540,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this as any, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -8556,7 +8556,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this as any, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -8572,7 +8572,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this as any, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -8588,7 +8588,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this as any, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -8604,7 +8604,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this, "timeout", true);
   public get timeout() {
     return this._timeout;
   }
@@ -8620,7 +8620,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this as any, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -8636,12 +8636,12 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[]; 
+  private _weightedBackendServices?: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable; 
   public get weightedBackendServices() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weighted_backend_services') as any;
+    return this.interpolationForAttribute('weighted_backend_services');
   }
-  public set weightedBackendServices(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[]) {
+  public set weightedBackendServices(value: ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
     this._weightedBackendServices = value;
   }
   public resetWeightedBackendServices() {
@@ -8711,7 +8711,7 @@ original URL is retained. Defaults to false.
 }
 
 export function computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct?: ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference | ComputeUrlMapPathMatcherRouteRulesUrlRedirect): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -8733,7 +8733,7 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -8807,7 +8807,7 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   // https_redirect - computed: false, optional: true, required: false
   private _httpsRedirect?: boolean | cdktf.IResolvable; 
   public get httpsRedirect() {
-    return this.getBooleanAttribute('https_redirect') as any;
+    return this.getBooleanAttribute('https_redirect');
   }
   public set httpsRedirect(value: boolean | cdktf.IResolvable) {
     this._httpsRedirect = value;
@@ -8871,7 +8871,7 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   // strip_query - computed: false, optional: true, required: false
   private _stripQuery?: boolean | cdktf.IResolvable; 
   public get stripQuery() {
-    return this.getBooleanAttribute('strip_query') as any;
+    return this.getBooleanAttribute('strip_query');
   }
   public set stripQuery(value: boolean | cdktf.IResolvable) {
     this._stripQuery = value;
@@ -8928,7 +8928,7 @@ service or routeAction.weightedBackendService must be set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#match_rules ComputeUrlMap#match_rules}
   */
-  readonly matchRules?: ComputeUrlMapPathMatcherRouteRulesMatchRules[];
+  readonly matchRules?: ComputeUrlMapPathMatcherRouteRulesMatchRules[] | cdktf.IResolvable;
   /**
   * route_action block
   * 
@@ -8943,8 +8943,8 @@ service or routeAction.weightedBackendService must be set.
   readonly urlRedirect?: ComputeUrlMapPathMatcherRouteRulesUrlRedirect;
 }
 
-export function computeUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeUrlMapPathMatcherRouteRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -9001,17 +9001,17 @@ the resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#path_rule ComputeUrlMap#path_rule}
   */
-  readonly pathRule?: ComputeUrlMapPathMatcherPathRule[];
+  readonly pathRule?: ComputeUrlMapPathMatcherPathRule[] | cdktf.IResolvable;
   /**
   * route_rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_url_map#route_rules ComputeUrlMap#route_rules}
   */
-  readonly routeRules?: ComputeUrlMapPathMatcherRouteRules[];
+  readonly routeRules?: ComputeUrlMapPathMatcherRouteRules[] | cdktf.IResolvable;
 }
 
-export function computeUrlMapPathMatcherToTerraform(struct?: ComputeUrlMapPathMatcher): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapPathMatcherToTerraform(struct?: ComputeUrlMapPathMatcher | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -9054,8 +9054,8 @@ export interface ComputeUrlMapTest {
   readonly service: string;
 }
 
-export function computeUrlMapTestToTerraform(struct?: ComputeUrlMapTest): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapTestToTerraform(struct?: ComputeUrlMapTest | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -9082,8 +9082,8 @@ export interface ComputeUrlMapTimeouts {
   readonly update?: string;
 }
 
-export function computeUrlMapTimeoutsToTerraform(struct?: ComputeUrlMapTimeoutsOutputReference | ComputeUrlMapTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeUrlMapTimeoutsToTerraform(struct?: ComputeUrlMapTimeoutsOutputReference | ComputeUrlMapTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -9102,7 +9102,7 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -9324,7 +9324,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // default_route_action - computed: false, optional: true, required: false
-  private _defaultRouteAction = new ComputeUrlMapDefaultRouteActionOutputReference(this as any, "default_route_action", true);
+  private _defaultRouteAction = new ComputeUrlMapDefaultRouteActionOutputReference(this, "default_route_action", true);
   public get defaultRouteAction() {
     return this._defaultRouteAction;
   }
@@ -9340,7 +9340,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // default_url_redirect - computed: false, optional: true, required: false
-  private _defaultUrlRedirect = new ComputeUrlMapDefaultUrlRedirectOutputReference(this as any, "default_url_redirect", true);
+  private _defaultUrlRedirect = new ComputeUrlMapDefaultUrlRedirectOutputReference(this, "default_url_redirect", true);
   public get defaultUrlRedirect() {
     return this._defaultUrlRedirect;
   }
@@ -9356,7 +9356,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // header_action - computed: false, optional: true, required: false
-  private _headerAction = new ComputeUrlMapHeaderActionOutputReference(this as any, "header_action", true);
+  private _headerAction = new ComputeUrlMapHeaderActionOutputReference(this, "header_action", true);
   public get headerAction() {
     return this._headerAction;
   }
@@ -9372,12 +9372,12 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // host_rule - computed: false, optional: true, required: false
-  private _hostRule?: ComputeUrlMapHostRule[]; 
+  private _hostRule?: ComputeUrlMapHostRule[] | cdktf.IResolvable; 
   public get hostRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('host_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('host_rule')));
   }
-  public set hostRule(value: ComputeUrlMapHostRule[]) {
+  public set hostRule(value: ComputeUrlMapHostRule[] | cdktf.IResolvable) {
     this._hostRule = value;
   }
   public resetHostRule() {
@@ -9389,12 +9389,12 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // path_matcher - computed: false, optional: true, required: false
-  private _pathMatcher?: ComputeUrlMapPathMatcher[]; 
+  private _pathMatcher?: ComputeUrlMapPathMatcher[] | cdktf.IResolvable; 
   public get pathMatcher() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('path_matcher') as any;
+    return this.interpolationForAttribute('path_matcher');
   }
-  public set pathMatcher(value: ComputeUrlMapPathMatcher[]) {
+  public set pathMatcher(value: ComputeUrlMapPathMatcher[] | cdktf.IResolvable) {
     this._pathMatcher = value;
   }
   public resetPathMatcher() {
@@ -9406,12 +9406,12 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // test - computed: false, optional: true, required: false
-  private _test?: ComputeUrlMapTest[]; 
+  private _test?: ComputeUrlMapTest[] | cdktf.IResolvable; 
   public get test() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('test') as any;
+    return this.interpolationForAttribute('test');
   }
-  public set test(value: ComputeUrlMapTest[]) {
+  public set test(value: ComputeUrlMapTest[] | cdktf.IResolvable) {
     this._test = value;
   }
   public resetTest() {
@@ -9423,7 +9423,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeUrlMapTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeUrlMapTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

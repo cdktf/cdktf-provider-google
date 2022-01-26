@@ -28,7 +28,7 @@ export interface DialogflowFulfillmentConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment#features DialogflowFulfillment#features}
   */
-  readonly features?: DialogflowFulfillmentFeatures[];
+  readonly features?: DialogflowFulfillmentFeatures[] | cdktf.IResolvable;
   /**
   * generic_web_service block
   * 
@@ -52,8 +52,8 @@ export interface DialogflowFulfillmentFeatures {
   readonly type: string;
 }
 
-export function dialogflowFulfillmentFeaturesToTerraform(struct?: DialogflowFulfillmentFeatures): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dialogflowFulfillmentFeaturesToTerraform(struct?: DialogflowFulfillmentFeatures | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export interface DialogflowFulfillmentGenericWebService {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment#request_headers DialogflowFulfillment#request_headers}
   */
-  readonly requestHeaders?: { [key: string]: string } | cdktf.IResolvable;
+  readonly requestHeaders?: { [key: string]: string };
   /**
   * The fulfillment URI for receiving POST requests. It must use https protocol.
   * 
@@ -90,13 +90,13 @@ export interface DialogflowFulfillmentGenericWebService {
 }
 
 export function dialogflowFulfillmentGenericWebServiceToTerraform(struct?: DialogflowFulfillmentGenericWebServiceOutputReference | DialogflowFulfillmentGenericWebService): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    request_headers: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.requestHeaders),
+    request_headers: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.requestHeaders),
     uri: cdktf.stringToTerraform(struct!.uri),
     username: cdktf.stringToTerraform(struct!.username),
   }
@@ -110,7 +110,7 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -170,12 +170,11 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   }
 
   // request_headers - computed: false, optional: true, required: false
-  private _requestHeaders?: { [key: string]: string } | cdktf.IResolvable; 
+  private _requestHeaders?: { [key: string]: string }; 
   public get requestHeaders() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers') as any;
+    return this.getStringMapAttribute('request_headers');
   }
-  public set requestHeaders(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set requestHeaders(value: { [key: string]: string }) {
     this._requestHeaders = value;
   }
   public resetRequestHeaders() {
@@ -230,8 +229,8 @@ export interface DialogflowFulfillmentTimeouts {
   readonly update?: string;
 }
 
-export function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulfillmentTimeoutsOutputReference | DialogflowFulfillmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulfillmentTimeoutsOutputReference | DialogflowFulfillmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -250,7 +249,7 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -396,7 +395,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -436,12 +435,12 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // features - computed: false, optional: true, required: false
-  private _features?: DialogflowFulfillmentFeatures[]; 
+  private _features?: DialogflowFulfillmentFeatures[] | cdktf.IResolvable; 
   public get features() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('features') as any;
+    return this.interpolationForAttribute('features');
   }
-  public set features(value: DialogflowFulfillmentFeatures[]) {
+  public set features(value: DialogflowFulfillmentFeatures[] | cdktf.IResolvable) {
     this._features = value;
   }
   public resetFeatures() {
@@ -453,7 +452,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // generic_web_service - computed: false, optional: true, required: false
-  private _genericWebService = new DialogflowFulfillmentGenericWebServiceOutputReference(this as any, "generic_web_service", true);
+  private _genericWebService = new DialogflowFulfillmentGenericWebServiceOutputReference(this, "generic_web_service", true);
   public get genericWebService() {
     return this._genericWebService;
   }
@@ -469,7 +468,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DialogflowFulfillmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DialogflowFulfillmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

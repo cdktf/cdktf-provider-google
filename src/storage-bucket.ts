@@ -28,7 +28,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#labels StorageBucket#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The Google Cloud Storage location
   * 
@@ -70,7 +70,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#cors StorageBucket#cors}
   */
-  readonly cors?: StorageBucketCors[];
+  readonly cors?: StorageBucketCors[] | cdktf.IResolvable;
   /**
   * encryption block
   * 
@@ -82,7 +82,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
   */
-  readonly lifecycleRule?: StorageBucketLifecycleRule[];
+  readonly lifecycleRule?: StorageBucketLifecycleRule[] | cdktf.IResolvable;
   /**
   * logging block
   * 
@@ -135,8 +135,8 @@ export interface StorageBucketCors {
   readonly responseHeader?: string[];
 }
 
-export function storageBucketCorsToTerraform(struct?: StorageBucketCors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageBucketCorsToTerraform(struct?: StorageBucketCors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -158,7 +158,7 @@ export interface StorageBucketEncryption {
 }
 
 export function storageBucketEncryptionToTerraform(struct?: StorageBucketEncryptionOutputReference | StorageBucketEncryption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -175,7 +175,7 @@ export class StorageBucketEncryptionOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -228,8 +228,8 @@ export interface StorageBucketLifecycleRuleAction {
   readonly type: string;
 }
 
-export function storageBucketLifecycleRuleActionToTerraform(struct?: StorageBucketLifecycleRuleActionOutputReference | StorageBucketLifecycleRuleAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageBucketLifecycleRuleActionToTerraform(struct?: StorageBucketLifecycleRuleActionOutputReference | StorageBucketLifecycleRuleAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -247,7 +247,7 @@ export class StorageBucketLifecycleRuleActionOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -365,8 +365,8 @@ export interface StorageBucketLifecycleRuleCondition {
   readonly withState?: string;
 }
 
-export function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLifecycleRuleConditionOutputReference | StorageBucketLifecycleRuleCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageBucketLifecycleRuleConditionOutputReference | StorageBucketLifecycleRuleCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -391,7 +391,7 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -623,8 +623,8 @@ export interface StorageBucketLifecycleRule {
   readonly condition: StorageBucketLifecycleRuleCondition;
 }
 
-export function storageBucketLifecycleRuleToTerraform(struct?: StorageBucketLifecycleRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageBucketLifecycleRuleToTerraform(struct?: StorageBucketLifecycleRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -650,7 +650,7 @@ export interface StorageBucketLogging {
 }
 
 export function storageBucketLoggingToTerraform(struct?: StorageBucketLoggingOutputReference | StorageBucketLogging): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -668,7 +668,7 @@ export class StorageBucketLoggingOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -744,7 +744,7 @@ export interface StorageBucketRetentionPolicy {
 }
 
 export function storageBucketRetentionPolicyToTerraform(struct?: StorageBucketRetentionPolicyOutputReference | StorageBucketRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -762,7 +762,7 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -796,7 +796,7 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
   // is_locked - computed: false, optional: true, required: false
   private _isLocked?: boolean | cdktf.IResolvable; 
   public get isLocked() {
-    return this.getBooleanAttribute('is_locked') as any;
+    return this.getBooleanAttribute('is_locked');
   }
   public set isLocked(value: boolean | cdktf.IResolvable) {
     this._isLocked = value;
@@ -832,7 +832,7 @@ export interface StorageBucketVersioning {
 }
 
 export function storageBucketVersioningToTerraform(struct?: StorageBucketVersioningOutputReference | StorageBucketVersioning): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -849,7 +849,7 @@ export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -877,7 +877,7 @@ export class StorageBucketVersioningOutputReference extends cdktf.ComplexObject 
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -903,7 +903,7 @@ export interface StorageBucketWebsite {
 }
 
 export function storageBucketWebsiteToTerraform(struct?: StorageBucketWebsiteOutputReference | StorageBucketWebsite): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -921,7 +921,7 @@ export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1043,7 +1043,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // bucket_policy_only - computed: true, optional: true, required: false
   private _bucketPolicyOnly?: boolean | cdktf.IResolvable; 
   public get bucketPolicyOnly() {
-    return this.getBooleanAttribute('bucket_policy_only') as any;
+    return this.getBooleanAttribute('bucket_policy_only');
   }
   public set bucketPolicyOnly(value: boolean | cdktf.IResolvable) {
     this._bucketPolicyOnly = value;
@@ -1059,7 +1059,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // default_event_based_hold - computed: false, optional: true, required: false
   private _defaultEventBasedHold?: boolean | cdktf.IResolvable; 
   public get defaultEventBasedHold() {
-    return this.getBooleanAttribute('default_event_based_hold') as any;
+    return this.getBooleanAttribute('default_event_based_hold');
   }
   public set defaultEventBasedHold(value: boolean | cdktf.IResolvable) {
     this._defaultEventBasedHold = value;
@@ -1075,7 +1075,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // force_destroy - computed: false, optional: true, required: false
   private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy') as any;
+    return this.getBooleanAttribute('force_destroy');
   }
   public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
@@ -1094,12 +1094,11 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1158,7 +1157,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // requester_pays - computed: false, optional: true, required: false
   private _requesterPays?: boolean | cdktf.IResolvable; 
   public get requesterPays() {
-    return this.getBooleanAttribute('requester_pays') as any;
+    return this.getBooleanAttribute('requester_pays');
   }
   public set requesterPays(value: boolean | cdktf.IResolvable) {
     this._requesterPays = value;
@@ -1195,7 +1194,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // uniform_bucket_level_access - computed: true, optional: true, required: false
   private _uniformBucketLevelAccess?: boolean | cdktf.IResolvable; 
   public get uniformBucketLevelAccess() {
-    return this.getBooleanAttribute('uniform_bucket_level_access') as any;
+    return this.getBooleanAttribute('uniform_bucket_level_access');
   }
   public set uniformBucketLevelAccess(value: boolean | cdktf.IResolvable) {
     this._uniformBucketLevelAccess = value;
@@ -1214,12 +1213,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: StorageBucketCors[]; 
+  private _cors?: StorageBucketCors[] | cdktf.IResolvable; 
   public get cors() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors') as any;
+    return this.interpolationForAttribute('cors');
   }
-  public set cors(value: StorageBucketCors[]) {
+  public set cors(value: StorageBucketCors[] | cdktf.IResolvable) {
     this._cors = value;
   }
   public resetCors() {
@@ -1231,7 +1230,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption = new StorageBucketEncryptionOutputReference(this as any, "encryption", true);
+  private _encryption = new StorageBucketEncryptionOutputReference(this, "encryption", true);
   public get encryption() {
     return this._encryption;
   }
@@ -1247,12 +1246,12 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // lifecycle_rule - computed: false, optional: true, required: false
-  private _lifecycleRule?: StorageBucketLifecycleRule[]; 
+  private _lifecycleRule?: StorageBucketLifecycleRule[] | cdktf.IResolvable; 
   public get lifecycleRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('lifecycle_rule') as any;
+    return this.interpolationForAttribute('lifecycle_rule');
   }
-  public set lifecycleRule(value: StorageBucketLifecycleRule[]) {
+  public set lifecycleRule(value: StorageBucketLifecycleRule[] | cdktf.IResolvable) {
     this._lifecycleRule = value;
   }
   public resetLifecycleRule() {
@@ -1264,7 +1263,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // logging - computed: false, optional: true, required: false
-  private _logging = new StorageBucketLoggingOutputReference(this as any, "logging", true);
+  private _logging = new StorageBucketLoggingOutputReference(this, "logging", true);
   public get logging() {
     return this._logging;
   }
@@ -1280,7 +1279,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy = new StorageBucketRetentionPolicyOutputReference(this as any, "retention_policy", true);
+  private _retentionPolicy = new StorageBucketRetentionPolicyOutputReference(this, "retention_policy", true);
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
@@ -1296,7 +1295,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // versioning - computed: false, optional: true, required: false
-  private _versioning = new StorageBucketVersioningOutputReference(this as any, "versioning", true);
+  private _versioning = new StorageBucketVersioningOutputReference(this, "versioning", true);
   public get versioning() {
     return this._versioning;
   }
@@ -1312,7 +1311,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // website - computed: false, optional: true, required: false
-  private _website = new StorageBucketWebsiteOutputReference(this as any, "website", true);
+  private _website = new StorageBucketWebsiteOutputReference(this, "website", true);
   public get website() {
     return this._website;
   }
@@ -1336,7 +1335,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       bucket_policy_only: cdktf.booleanToTerraform(this._bucketPolicyOnly),
       default_event_based_hold: cdktf.booleanToTerraform(this._defaultEventBasedHold),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
