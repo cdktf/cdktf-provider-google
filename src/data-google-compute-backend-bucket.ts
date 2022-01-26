@@ -60,13 +60,13 @@ export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComput
 
   // negative_caching - computed: true, optional: false, required: false
   public get negativeCaching() {
-    return this.getBooleanAttribute('negative_caching') as any;
+    return this.getBooleanAttribute('negative_caching');
   }
 
   // negative_caching_policy - computed: true, optional: false, required: false
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('negative_caching_policy') as any;
+    return this.interpolationForAttribute('negative_caching_policy');
   }
 
   // serve_while_stale - computed: true, optional: false, required: false
@@ -127,7 +127,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
 
   // cdn_policy - computed: true, optional: false, required: false
   public cdnPolicy(index: string) {
-    return new DataGoogleComputeBackendBucketCdnPolicy(this, 'cdn_policy', index);
+    return new DataGoogleComputeBackendBucketCdnPolicy(this, 'cdn_policy', index, false);
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -147,7 +147,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
 
   // enable_cdn - computed: true, optional: false, required: false
   public get enableCdn() {
-    return this.getBooleanAttribute('enable_cdn') as any;
+    return this.getBooleanAttribute('enable_cdn');
   }
 
   // id - computed: true, optional: true, required: false

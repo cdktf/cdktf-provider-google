@@ -76,7 +76,7 @@ export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
 
   // image_versions - computed: true, optional: false, required: false
   public imageVersions(index: string) {
-    return new DataGoogleComposerImageVersionsImageVersions(this, 'image_versions', index);
+    return new DataGoogleComposerImageVersionsImageVersions(this, 'image_versions', index, false);
   }
 
   // project - computed: true, optional: true, required: false

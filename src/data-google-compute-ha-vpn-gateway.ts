@@ -156,7 +156,7 @@ export class DataGoogleComputeHaVpnGateway extends cdktf.TerraformDataSource {
 
   // vpn_interfaces - computed: true, optional: false, required: false
   public vpnInterfaces(index: string) {
-    return new DataGoogleComputeHaVpnGatewayVpnInterfaces(this, 'vpn_interfaces', index);
+    return new DataGoogleComputeHaVpnGatewayVpnInterfaces(this, 'vpn_interfaces', index, false);
   }
 
   // =========

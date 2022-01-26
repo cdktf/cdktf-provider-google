@@ -97,8 +97,8 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
   readonly osType: string;
 }
 
-export function accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -147,11 +147,11 @@ to be true. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level_condition#os_constraints AccessContextManagerAccessLevelCondition#os_constraints}
   */
-  readonly osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[];
+  readonly osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerAccessLevelConditionDevicePolicyToTerraform(struct?: AccessContextManagerAccessLevelConditionDevicePolicyOutputReference | AccessContextManagerAccessLevelConditionDevicePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,7 +173,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -263,7 +263,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   // require_admin_approval - computed: false, optional: true, required: false
   private _requireAdminApproval?: boolean | cdktf.IResolvable; 
   public get requireAdminApproval() {
-    return this.getBooleanAttribute('require_admin_approval') as any;
+    return this.getBooleanAttribute('require_admin_approval');
   }
   public set requireAdminApproval(value: boolean | cdktf.IResolvable) {
     this._requireAdminApproval = value;
@@ -279,7 +279,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   // require_corp_owned - computed: false, optional: true, required: false
   private _requireCorpOwned?: boolean | cdktf.IResolvable; 
   public get requireCorpOwned() {
-    return this.getBooleanAttribute('require_corp_owned') as any;
+    return this.getBooleanAttribute('require_corp_owned');
   }
   public set requireCorpOwned(value: boolean | cdktf.IResolvable) {
     this._requireCorpOwned = value;
@@ -295,7 +295,7 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   // require_screen_lock - computed: false, optional: true, required: false
   private _requireScreenLock?: boolean | cdktf.IResolvable; 
   public get requireScreenLock() {
-    return this.getBooleanAttribute('require_screen_lock') as any;
+    return this.getBooleanAttribute('require_screen_lock');
   }
   public set requireScreenLock(value: boolean | cdktf.IResolvable) {
     this._requireScreenLock = value;
@@ -309,12 +309,12 @@ export class AccessContextManagerAccessLevelConditionDevicePolicyOutputReference
   }
 
   // os_constraints - computed: false, optional: true, required: false
-  private _osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[]; 
+  private _osConstraints?: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[] | cdktf.IResolvable; 
   public get osConstraints() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('os_constraints') as any;
+    return this.interpolationForAttribute('os_constraints');
   }
-  public set osConstraints(value: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[]) {
+  public set osConstraints(value: AccessContextManagerAccessLevelConditionDevicePolicyOsConstraints[] | cdktf.IResolvable) {
     this._osConstraints = value;
   }
   public resetOsConstraints() {
@@ -336,8 +336,8 @@ export interface AccessContextManagerAccessLevelConditionTimeouts {
   readonly delete?: string;
 }
 
-export function accessContextManagerAccessLevelConditionTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelConditionTimeoutsOutputReference | AccessContextManagerAccessLevelConditionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerAccessLevelConditionTimeoutsToTerraform(struct?: AccessContextManagerAccessLevelConditionTimeoutsOutputReference | AccessContextManagerAccessLevelConditionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -355,7 +355,7 @@ export class AccessContextManagerAccessLevelConditionTimeoutsOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -518,7 +518,7 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   // negate - computed: false, optional: true, required: false
   private _negate?: boolean | cdktf.IResolvable; 
   public get negate() {
-    return this.getBooleanAttribute('negate') as any;
+    return this.getBooleanAttribute('negate');
   }
   public set negate(value: boolean | cdktf.IResolvable) {
     this._negate = value;
@@ -564,7 +564,7 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
 
   // device_policy - computed: false, optional: true, required: false
-  private _devicePolicy = new AccessContextManagerAccessLevelConditionDevicePolicyOutputReference(this as any, "device_policy", true);
+  private _devicePolicy = new AccessContextManagerAccessLevelConditionDevicePolicyOutputReference(this, "device_policy", true);
   public get devicePolicy() {
     return this._devicePolicy;
   }
@@ -580,7 +580,7 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AccessContextManagerAccessLevelConditionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AccessContextManagerAccessLevelConditionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

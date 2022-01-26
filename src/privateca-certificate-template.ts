@@ -18,7 +18,7 @@ export interface PrivatecaCertificateTemplateConfig extends cdktf.TerraformMetaA
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_template#labels PrivatecaCertificateTemplate#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   * 
@@ -90,7 +90,7 @@ export interface PrivatecaCertificateTemplateIdentityConstraintsCelExpression {
 }
 
 export function privatecaCertificateTemplateIdentityConstraintsCelExpressionToTerraform(struct?: PrivatecaCertificateTemplateIdentityConstraintsCelExpressionOutputReference | PrivatecaCertificateTemplateIdentityConstraintsCelExpression): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,7 +110,7 @@ export class PrivatecaCertificateTemplateIdentityConstraintsCelExpressionOutputR
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export interface PrivatecaCertificateTemplateIdentityConstraints {
 }
 
 export function privatecaCertificateTemplateIdentityConstraintsToTerraform(struct?: PrivatecaCertificateTemplateIdentityConstraintsOutputReference | PrivatecaCertificateTemplateIdentityConstraints): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -258,7 +258,7 @@ export class PrivatecaCertificateTemplateIdentityConstraintsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -298,7 +298,7 @@ export class PrivatecaCertificateTemplateIdentityConstraintsOutputReference exte
   // allow_subject_alt_names_passthrough - computed: false, optional: false, required: true
   private _allowSubjectAltNamesPassthrough?: boolean | cdktf.IResolvable; 
   public get allowSubjectAltNamesPassthrough() {
-    return this.getBooleanAttribute('allow_subject_alt_names_passthrough') as any;
+    return this.getBooleanAttribute('allow_subject_alt_names_passthrough');
   }
   public set allowSubjectAltNamesPassthrough(value: boolean | cdktf.IResolvable) {
     this._allowSubjectAltNamesPassthrough = value;
@@ -311,7 +311,7 @@ export class PrivatecaCertificateTemplateIdentityConstraintsOutputReference exte
   // allow_subject_passthrough - computed: false, optional: false, required: true
   private _allowSubjectPassthrough?: boolean | cdktf.IResolvable; 
   public get allowSubjectPassthrough() {
-    return this.getBooleanAttribute('allow_subject_passthrough') as any;
+    return this.getBooleanAttribute('allow_subject_passthrough');
   }
   public set allowSubjectPassthrough(value: boolean | cdktf.IResolvable) {
     this._allowSubjectPassthrough = value;
@@ -322,7 +322,7 @@ export class PrivatecaCertificateTemplateIdentityConstraintsOutputReference exte
   }
 
   // cel_expression - computed: false, optional: true, required: false
-  private _celExpression = new PrivatecaCertificateTemplateIdentityConstraintsCelExpressionOutputReference(this as any, "cel_expression", true);
+  private _celExpression = new PrivatecaCertificateTemplateIdentityConstraintsCelExpressionOutputReference(this, "cel_expression", true);
   public get celExpression() {
     return this._celExpression;
   }
@@ -346,8 +346,8 @@ export interface PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExte
   readonly objectIdPath: number[];
 }
 
-export function privatecaCertificateTemplatePassthroughExtensionsAdditionalExtensionsToTerraform(struct?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privatecaCertificateTemplatePassthroughExtensionsAdditionalExtensionsToTerraform(struct?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -368,11 +368,11 @@ export interface PrivatecaCertificateTemplatePassthroughExtensions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_template#additional_extensions PrivatecaCertificateTemplate#additional_extensions}
   */
-  readonly additionalExtensions?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[];
+  readonly additionalExtensions?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[] | cdktf.IResolvable;
 }
 
 export function privatecaCertificateTemplatePassthroughExtensionsToTerraform(struct?: PrivatecaCertificateTemplatePassthroughExtensionsOutputReference | PrivatecaCertificateTemplatePassthroughExtensions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -390,7 +390,7 @@ export class PrivatecaCertificateTemplatePassthroughExtensionsOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -438,12 +438,12 @@ export class PrivatecaCertificateTemplatePassthroughExtensionsOutputReference ex
   }
 
   // additional_extensions - computed: false, optional: true, required: false
-  private _additionalExtensions?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[]; 
+  private _additionalExtensions?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[] | cdktf.IResolvable; 
   public get additionalExtensions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_extensions') as any;
+    return this.interpolationForAttribute('additional_extensions');
   }
-  public set additionalExtensions(value: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[]) {
+  public set additionalExtensions(value: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[] | cdktf.IResolvable) {
     this._additionalExtensions = value;
   }
   public resetAdditionalExtensions() {
@@ -464,7 +464,7 @@ export interface PrivatecaCertificateTemplatePredefinedValuesAdditionalExtension
 }
 
 export function privatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObjectIdToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObjectIdOutputReference | PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObjectId): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -481,7 +481,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -509,8 +509,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObj
   // object_id_path - computed: false, optional: false, required: true
   private _objectIdPath?: number[]; 
   public get objectIdPath() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('object_id_path') as any;
+    return this.getNumberListAttribute('object_id_path');
   }
   public set objectIdPath(value: number[]) {
     this._objectIdPath = value;
@@ -541,8 +540,8 @@ export interface PrivatecaCertificateTemplatePredefinedValuesAdditionalExtension
   readonly objectId: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObjectId;
 }
 
-export function privatecaCertificateTemplatePredefinedValuesAdditionalExtensionsToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privatecaCertificateTemplatePredefinedValuesAdditionalExtensionsToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -569,7 +568,7 @@ export interface PrivatecaCertificateTemplatePredefinedValuesCaOptions {
 }
 
 export function privatecaCertificateTemplatePredefinedValuesCaOptionsToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesCaOptionsOutputReference | PrivatecaCertificateTemplatePredefinedValuesCaOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -587,7 +586,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesCaOptionsOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -621,7 +620,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesCaOptionsOutputReferenc
   // is_ca - computed: false, optional: true, required: false
   private _isCa?: boolean | cdktf.IResolvable; 
   public get isCa() {
-    return this.getBooleanAttribute('is_ca') as any;
+    return this.getBooleanAttribute('is_ca');
   }
   public set isCa(value: boolean | cdktf.IResolvable) {
     this._isCa = value;
@@ -708,7 +707,7 @@ export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsag
 }
 
 export function privatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOutputReference | PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -733,7 +732,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -809,7 +808,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // cert_sign - computed: false, optional: true, required: false
   private _certSign?: boolean | cdktf.IResolvable; 
   public get certSign() {
-    return this.getBooleanAttribute('cert_sign') as any;
+    return this.getBooleanAttribute('cert_sign');
   }
   public set certSign(value: boolean | cdktf.IResolvable) {
     this._certSign = value;
@@ -825,7 +824,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // content_commitment - computed: false, optional: true, required: false
   private _contentCommitment?: boolean | cdktf.IResolvable; 
   public get contentCommitment() {
-    return this.getBooleanAttribute('content_commitment') as any;
+    return this.getBooleanAttribute('content_commitment');
   }
   public set contentCommitment(value: boolean | cdktf.IResolvable) {
     this._contentCommitment = value;
@@ -841,7 +840,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // crl_sign - computed: false, optional: true, required: false
   private _crlSign?: boolean | cdktf.IResolvable; 
   public get crlSign() {
-    return this.getBooleanAttribute('crl_sign') as any;
+    return this.getBooleanAttribute('crl_sign');
   }
   public set crlSign(value: boolean | cdktf.IResolvable) {
     this._crlSign = value;
@@ -857,7 +856,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // data_encipherment - computed: false, optional: true, required: false
   private _dataEncipherment?: boolean | cdktf.IResolvable; 
   public get dataEncipherment() {
-    return this.getBooleanAttribute('data_encipherment') as any;
+    return this.getBooleanAttribute('data_encipherment');
   }
   public set dataEncipherment(value: boolean | cdktf.IResolvable) {
     this._dataEncipherment = value;
@@ -873,7 +872,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // decipher_only - computed: false, optional: true, required: false
   private _decipherOnly?: boolean | cdktf.IResolvable; 
   public get decipherOnly() {
-    return this.getBooleanAttribute('decipher_only') as any;
+    return this.getBooleanAttribute('decipher_only');
   }
   public set decipherOnly(value: boolean | cdktf.IResolvable) {
     this._decipherOnly = value;
@@ -889,7 +888,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // digital_signature - computed: false, optional: true, required: false
   private _digitalSignature?: boolean | cdktf.IResolvable; 
   public get digitalSignature() {
-    return this.getBooleanAttribute('digital_signature') as any;
+    return this.getBooleanAttribute('digital_signature');
   }
   public set digitalSignature(value: boolean | cdktf.IResolvable) {
     this._digitalSignature = value;
@@ -905,7 +904,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // encipher_only - computed: false, optional: true, required: false
   private _encipherOnly?: boolean | cdktf.IResolvable; 
   public get encipherOnly() {
-    return this.getBooleanAttribute('encipher_only') as any;
+    return this.getBooleanAttribute('encipher_only');
   }
   public set encipherOnly(value: boolean | cdktf.IResolvable) {
     this._encipherOnly = value;
@@ -921,7 +920,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // key_agreement - computed: false, optional: true, required: false
   private _keyAgreement?: boolean | cdktf.IResolvable; 
   public get keyAgreement() {
-    return this.getBooleanAttribute('key_agreement') as any;
+    return this.getBooleanAttribute('key_agreement');
   }
   public set keyAgreement(value: boolean | cdktf.IResolvable) {
     this._keyAgreement = value;
@@ -937,7 +936,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
   // key_encipherment - computed: false, optional: true, required: false
   private _keyEncipherment?: boolean | cdktf.IResolvable; 
   public get keyEncipherment() {
-    return this.getBooleanAttribute('key_encipherment') as any;
+    return this.getBooleanAttribute('key_encipherment');
   }
   public set keyEncipherment(value: boolean | cdktf.IResolvable) {
     this._keyEncipherment = value;
@@ -990,7 +989,7 @@ export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKey
 }
 
 export function privatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageOutputReference | PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1012,7 +1011,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1070,7 +1069,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   // client_auth - computed: false, optional: true, required: false
   private _clientAuth?: boolean | cdktf.IResolvable; 
   public get clientAuth() {
-    return this.getBooleanAttribute('client_auth') as any;
+    return this.getBooleanAttribute('client_auth');
   }
   public set clientAuth(value: boolean | cdktf.IResolvable) {
     this._clientAuth = value;
@@ -1086,7 +1085,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   // code_signing - computed: false, optional: true, required: false
   private _codeSigning?: boolean | cdktf.IResolvable; 
   public get codeSigning() {
-    return this.getBooleanAttribute('code_signing') as any;
+    return this.getBooleanAttribute('code_signing');
   }
   public set codeSigning(value: boolean | cdktf.IResolvable) {
     this._codeSigning = value;
@@ -1102,7 +1101,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   // email_protection - computed: false, optional: true, required: false
   private _emailProtection?: boolean | cdktf.IResolvable; 
   public get emailProtection() {
-    return this.getBooleanAttribute('email_protection') as any;
+    return this.getBooleanAttribute('email_protection');
   }
   public set emailProtection(value: boolean | cdktf.IResolvable) {
     this._emailProtection = value;
@@ -1118,7 +1117,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   // ocsp_signing - computed: false, optional: true, required: false
   private _ocspSigning?: boolean | cdktf.IResolvable; 
   public get ocspSigning() {
-    return this.getBooleanAttribute('ocsp_signing') as any;
+    return this.getBooleanAttribute('ocsp_signing');
   }
   public set ocspSigning(value: boolean | cdktf.IResolvable) {
     this._ocspSigning = value;
@@ -1134,7 +1133,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   // server_auth - computed: false, optional: true, required: false
   private _serverAuth?: boolean | cdktf.IResolvable; 
   public get serverAuth() {
-    return this.getBooleanAttribute('server_auth') as any;
+    return this.getBooleanAttribute('server_auth');
   }
   public set serverAuth(value: boolean | cdktf.IResolvable) {
     this._serverAuth = value;
@@ -1150,7 +1149,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
   // time_stamping - computed: false, optional: true, required: false
   private _timeStamping?: boolean | cdktf.IResolvable; 
   public get timeStamping() {
-    return this.getBooleanAttribute('time_stamping') as any;
+    return this.getBooleanAttribute('time_stamping');
   }
   public set timeStamping(value: boolean | cdktf.IResolvable) {
     this._timeStamping = value;
@@ -1172,8 +1171,8 @@ export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExte
   readonly objectIdPath: number[];
 }
 
-export function privatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsagesToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsagesToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1200,11 +1199,11 @@ export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsage {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_template#unknown_extended_key_usages PrivatecaCertificateTemplate#unknown_extended_key_usages}
   */
-  readonly unknownExtendedKeyUsages?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[];
+  readonly unknownExtendedKeyUsages?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[] | cdktf.IResolvable;
 }
 
 export function privatecaCertificateTemplatePredefinedValuesKeyUsageToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference | PrivatecaCertificateTemplatePredefinedValuesKeyUsage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1223,7 +1222,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1261,7 +1260,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference
   }
 
   // base_key_usage - computed: false, optional: true, required: false
-  private _baseKeyUsage = new PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOutputReference(this as any, "base_key_usage", true);
+  private _baseKeyUsage = new PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOutputReference(this, "base_key_usage", true);
   public get baseKeyUsage() {
     return this._baseKeyUsage;
   }
@@ -1277,7 +1276,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference
   }
 
   // extended_key_usage - computed: false, optional: true, required: false
-  private _extendedKeyUsage = new PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageOutputReference(this as any, "extended_key_usage", true);
+  private _extendedKeyUsage = new PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsageOutputReference(this, "extended_key_usage", true);
   public get extendedKeyUsage() {
     return this._extendedKeyUsage;
   }
@@ -1293,12 +1292,12 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference
   }
 
   // unknown_extended_key_usages - computed: false, optional: true, required: false
-  private _unknownExtendedKeyUsages?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[]; 
+  private _unknownExtendedKeyUsages?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[] | cdktf.IResolvable; 
   public get unknownExtendedKeyUsages() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('unknown_extended_key_usages') as any;
+    return this.interpolationForAttribute('unknown_extended_key_usages');
   }
-  public set unknownExtendedKeyUsages(value: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[]) {
+  public set unknownExtendedKeyUsages(value: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[] | cdktf.IResolvable) {
     this._unknownExtendedKeyUsages = value;
   }
   public resetUnknownExtendedKeyUsages() {
@@ -1318,8 +1317,8 @@ export interface PrivatecaCertificateTemplatePredefinedValuesPolicyIds {
   readonly objectIdPath: number[];
 }
 
-export function privatecaCertificateTemplatePredefinedValuesPolicyIdsToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privatecaCertificateTemplatePredefinedValuesPolicyIdsToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1340,7 +1339,7 @@ export interface PrivatecaCertificateTemplatePredefinedValues {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_template#additional_extensions PrivatecaCertificateTemplate#additional_extensions}
   */
-  readonly additionalExtensions?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[];
+  readonly additionalExtensions?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[] | cdktf.IResolvable;
   /**
   * ca_options block
   * 
@@ -1358,11 +1357,11 @@ export interface PrivatecaCertificateTemplatePredefinedValues {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_template#policy_ids PrivatecaCertificateTemplate#policy_ids}
   */
-  readonly policyIds?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[];
+  readonly policyIds?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[] | cdktf.IResolvable;
 }
 
 export function privatecaCertificateTemplatePredefinedValuesToTerraform(struct?: PrivatecaCertificateTemplatePredefinedValuesOutputReference | PrivatecaCertificateTemplatePredefinedValues): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1383,7 +1382,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1449,12 +1448,12 @@ export class PrivatecaCertificateTemplatePredefinedValuesOutputReference extends
   }
 
   // additional_extensions - computed: false, optional: true, required: false
-  private _additionalExtensions?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[]; 
+  private _additionalExtensions?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[] | cdktf.IResolvable; 
   public get additionalExtensions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_extensions') as any;
+    return this.interpolationForAttribute('additional_extensions');
   }
-  public set additionalExtensions(value: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[]) {
+  public set additionalExtensions(value: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[] | cdktf.IResolvable) {
     this._additionalExtensions = value;
   }
   public resetAdditionalExtensions() {
@@ -1466,7 +1465,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesOutputReference extends
   }
 
   // ca_options - computed: false, optional: true, required: false
-  private _caOptions = new PrivatecaCertificateTemplatePredefinedValuesCaOptionsOutputReference(this as any, "ca_options", true);
+  private _caOptions = new PrivatecaCertificateTemplatePredefinedValuesCaOptionsOutputReference(this, "ca_options", true);
   public get caOptions() {
     return this._caOptions;
   }
@@ -1482,7 +1481,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesOutputReference extends
   }
 
   // key_usage - computed: false, optional: true, required: false
-  private _keyUsage = new PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference(this as any, "key_usage", true);
+  private _keyUsage = new PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference(this, "key_usage", true);
   public get keyUsage() {
     return this._keyUsage;
   }
@@ -1498,12 +1497,12 @@ export class PrivatecaCertificateTemplatePredefinedValuesOutputReference extends
   }
 
   // policy_ids - computed: false, optional: true, required: false
-  private _policyIds?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[]; 
+  private _policyIds?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[] | cdktf.IResolvable; 
   public get policyIds() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('policy_ids') as any;
+    return this.interpolationForAttribute('policy_ids');
   }
-  public set policyIds(value: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[]) {
+  public set policyIds(value: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[] | cdktf.IResolvable) {
     this._policyIds = value;
   }
   public resetPolicyIds() {
@@ -1529,8 +1528,8 @@ export interface PrivatecaCertificateTemplateTimeouts {
   readonly update?: string;
 }
 
-export function privatecaCertificateTemplateTimeoutsToTerraform(struct?: PrivatecaCertificateTemplateTimeoutsOutputReference | PrivatecaCertificateTemplateTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privatecaCertificateTemplateTimeoutsToTerraform(struct?: PrivatecaCertificateTemplateTimeoutsOutputReference | PrivatecaCertificateTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1549,7 +1548,7 @@ export class PrivatecaCertificateTemplateTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1709,12 +1708,11 @@ export class PrivatecaCertificateTemplate extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -1773,7 +1771,7 @@ export class PrivatecaCertificateTemplate extends cdktf.TerraformResource {
   }
 
   // identity_constraints - computed: false, optional: true, required: false
-  private _identityConstraints = new PrivatecaCertificateTemplateIdentityConstraintsOutputReference(this as any, "identity_constraints", true);
+  private _identityConstraints = new PrivatecaCertificateTemplateIdentityConstraintsOutputReference(this, "identity_constraints", true);
   public get identityConstraints() {
     return this._identityConstraints;
   }
@@ -1789,7 +1787,7 @@ export class PrivatecaCertificateTemplate extends cdktf.TerraformResource {
   }
 
   // passthrough_extensions - computed: false, optional: true, required: false
-  private _passthroughExtensions = new PrivatecaCertificateTemplatePassthroughExtensionsOutputReference(this as any, "passthrough_extensions", true);
+  private _passthroughExtensions = new PrivatecaCertificateTemplatePassthroughExtensionsOutputReference(this, "passthrough_extensions", true);
   public get passthroughExtensions() {
     return this._passthroughExtensions;
   }
@@ -1805,7 +1803,7 @@ export class PrivatecaCertificateTemplate extends cdktf.TerraformResource {
   }
 
   // predefined_values - computed: false, optional: true, required: false
-  private _predefinedValues = new PrivatecaCertificateTemplatePredefinedValuesOutputReference(this as any, "predefined_values", true);
+  private _predefinedValues = new PrivatecaCertificateTemplatePredefinedValuesOutputReference(this, "predefined_values", true);
   public get predefinedValues() {
     return this._predefinedValues;
   }
@@ -1821,7 +1819,7 @@ export class PrivatecaCertificateTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivatecaCertificateTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivatecaCertificateTemplateTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1843,7 +1841,7 @@ export class PrivatecaCertificateTemplate extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

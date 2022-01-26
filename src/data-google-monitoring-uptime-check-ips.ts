@@ -71,7 +71,7 @@ export class DataGoogleMonitoringUptimeCheckIps extends cdktf.TerraformDataSourc
 
   // uptime_check_ips - computed: true, optional: false, required: false
   public uptimeCheckIps(index: string) {
-    return new DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps(this, 'uptime_check_ips', index);
+    return new DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps(this, 'uptime_check_ips', index, false);
   }
 
   // =========

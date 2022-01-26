@@ -18,7 +18,7 @@ export interface ComputeSnapshotConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot#labels ComputeSnapshot#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -96,7 +96,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 }
 
 export function computeSnapshotSnapshotEncryptionKeyToTerraform(struct?: ComputeSnapshotSnapshotEncryptionKeyOutputReference | ComputeSnapshotSnapshotEncryptionKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -115,7 +115,7 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -199,6 +199,11 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
   public get rawKeyInput() {
     return this._rawKey;
   }
+
+  // sha256 - computed: true, optional: false, required: false
+  public get sha256() {
+    return this.getStringAttribute('sha256');
+  }
 }
 export interface ComputeSnapshotSourceDiskEncryptionKey {
   /**
@@ -218,7 +223,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
 }
 
 export function computeSnapshotSourceDiskEncryptionKeyToTerraform(struct?: ComputeSnapshotSourceDiskEncryptionKeyOutputReference | ComputeSnapshotSourceDiskEncryptionKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -236,7 +241,7 @@ export class ComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -314,8 +319,8 @@ export interface ComputeSnapshotTimeouts {
   readonly update?: string;
 }
 
-export function computeSnapshotTimeoutsToTerraform(struct?: ComputeSnapshotTimeoutsOutputReference | ComputeSnapshotTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeSnapshotTimeoutsToTerraform(struct?: ComputeSnapshotTimeoutsOutputReference | ComputeSnapshotTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -334,7 +339,7 @@ export class ComputeSnapshotTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -505,12 +510,11 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -621,7 +625,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // snapshot_encryption_key - computed: false, optional: true, required: false
-  private _snapshotEncryptionKey = new ComputeSnapshotSnapshotEncryptionKeyOutputReference(this as any, "snapshot_encryption_key", true);
+  private _snapshotEncryptionKey = new ComputeSnapshotSnapshotEncryptionKeyOutputReference(this, "snapshot_encryption_key", true);
   public get snapshotEncryptionKey() {
     return this._snapshotEncryptionKey;
   }
@@ -637,7 +641,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // source_disk_encryption_key - computed: false, optional: true, required: false
-  private _sourceDiskEncryptionKey = new ComputeSnapshotSourceDiskEncryptionKeyOutputReference(this as any, "source_disk_encryption_key", true);
+  private _sourceDiskEncryptionKey = new ComputeSnapshotSourceDiskEncryptionKeyOutputReference(this, "source_disk_encryption_key", true);
   public get sourceDiskEncryptionKey() {
     return this._sourceDiskEncryptionKey;
   }
@@ -653,7 +657,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeSnapshotTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeSnapshotTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -675,7 +679,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       source_disk: cdktf.stringToTerraform(this._sourceDisk),

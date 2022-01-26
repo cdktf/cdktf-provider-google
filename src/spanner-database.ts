@@ -61,7 +61,7 @@ in the same location as the Spanner Database.
 }
 
 export function spannerDatabaseEncryptionConfigToTerraform(struct?: SpannerDatabaseEncryptionConfigOutputReference | SpannerDatabaseEncryptionConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -131,8 +131,8 @@ export interface SpannerDatabaseTimeouts {
   readonly update?: string;
 }
 
-export function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeoutsOutputReference | SpannerDatabaseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function spannerDatabaseTimeoutsToTerraform(struct?: SpannerDatabaseTimeoutsOutputReference | SpannerDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -151,7 +151,7 @@ export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -301,7 +301,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection') as any;
+    return this.getBooleanAttribute('deletion_protection');
   }
   public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
@@ -367,7 +367,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig = new SpannerDatabaseEncryptionConfigOutputReference(this as any, "encryption_config", true);
+  private _encryptionConfig = new SpannerDatabaseEncryptionConfigOutputReference(this, "encryption_config", true);
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
@@ -383,7 +383,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SpannerDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpannerDatabaseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

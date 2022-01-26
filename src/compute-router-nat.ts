@@ -117,7 +117,7 @@ Defaults to 30s if not set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#subnetwork ComputeRouterNat#subnetwork}
   */
-  readonly subnetwork?: ComputeRouterNatSubnetwork[];
+  readonly subnetwork?: ComputeRouterNatSubnetwork[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -141,7 +141,7 @@ export interface ComputeRouterNatLogConfig {
 }
 
 export function computeRouterNatLogConfigToTerraform(struct?: ComputeRouterNatLogConfigOutputReference | ComputeRouterNatLogConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +159,7 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -193,7 +193,7 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   // enable - computed: false, optional: false, required: true
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
   public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
@@ -243,8 +243,8 @@ should have NAT enabled. Supported values include:
   readonly sourceIpRangesToNat: string[];
 }
 
-export function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatSubnetwork): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatSubnetwork | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -270,8 +270,8 @@ export interface ComputeRouterNatTimeouts {
   readonly update?: string;
 }
 
-export function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeoutsOutputReference | ComputeRouterNatTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRouterNatTimeoutsToTerraform(struct?: ComputeRouterNatTimeoutsOutputReference | ComputeRouterNatTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -290,7 +290,7 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -434,7 +434,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // drain_nat_ips - computed: false, optional: true, required: false
   private _drainNatIps?: string[]; 
   public get drainNatIps() {
-    return this.getListAttribute('drain_nat_ips');
+    return cdktf.Fn.tolist(this.getListAttribute('drain_nat_ips'));
   }
   public set drainNatIps(value: string[]) {
     this._drainNatIps = value;
@@ -450,7 +450,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // enable_endpoint_independent_mapping - computed: false, optional: true, required: false
   private _enableEndpointIndependentMapping?: boolean | cdktf.IResolvable; 
   public get enableEndpointIndependentMapping() {
-    return this.getBooleanAttribute('enable_endpoint_independent_mapping') as any;
+    return this.getBooleanAttribute('enable_endpoint_independent_mapping');
   }
   public set enableEndpointIndependentMapping(value: boolean | cdktf.IResolvable) {
     this._enableEndpointIndependentMapping = value;
@@ -529,7 +529,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // nat_ips - computed: false, optional: true, required: false
   private _natIps?: string[]; 
   public get natIps() {
-    return this.getListAttribute('nat_ips');
+    return cdktf.Fn.tolist(this.getListAttribute('nat_ips'));
   }
   public set natIps(value: string[]) {
     this._natIps = value;
@@ -649,7 +649,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeRouterNatLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeRouterNatLogConfigOutputReference(this, "log_config", true);
   public get logConfig() {
     return this._logConfig;
   }
@@ -665,12 +665,12 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // subnetwork - computed: false, optional: true, required: false
-  private _subnetwork?: ComputeRouterNatSubnetwork[]; 
+  private _subnetwork?: ComputeRouterNatSubnetwork[] | cdktf.IResolvable; 
   public get subnetwork() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subnetwork') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('subnetwork')));
   }
-  public set subnetwork(value: ComputeRouterNatSubnetwork[]) {
+  public set subnetwork(value: ComputeRouterNatSubnetwork[] | cdktf.IResolvable) {
     this._subnetwork = value;
   }
   public resetSubnetwork() {
@@ -682,7 +682,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRouterNatTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRouterNatTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

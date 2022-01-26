@@ -36,7 +36,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel#labels MonitoringNotificationChannel#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel#project MonitoringNotificationChannel#project}
   */
@@ -52,7 +52,7 @@ the sensitive_labels block, but cannot be configured in both places.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel#user_labels MonitoringNotificationChannel#user_labels}
   */
-  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly userLabels?: { [key: string]: string };
   /**
   * sensitive_labels block
   * 
@@ -88,7 +88,7 @@ export interface MonitoringNotificationChannelSensitiveLabels {
 }
 
 export function monitoringNotificationChannelSensitiveLabelsToTerraform(struct?: MonitoringNotificationChannelSensitiveLabelsOutputReference | MonitoringNotificationChannelSensitiveLabels): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -107,7 +107,7 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -207,8 +207,8 @@ export interface MonitoringNotificationChannelTimeouts {
   readonly update?: string;
 }
 
-export function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeoutsOutputReference | MonitoringNotificationChannelTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringNotificationChannelTimeoutsToTerraform(struct?: MonitoringNotificationChannelTimeoutsOutputReference | MonitoringNotificationChannelTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -227,7 +227,7 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -395,7 +395,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -414,12 +414,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -465,12 +464,11 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // user_labels - computed: false, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _userLabels?: { [key: string]: string }; 
   public get userLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_labels') as any;
+    return this.getStringMapAttribute('user_labels');
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set userLabels(value: { [key: string]: string }) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -487,7 +485,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // sensitive_labels - computed: false, optional: true, required: false
-  private _sensitiveLabels = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this as any, "sensitive_labels", true);
+  private _sensitiveLabels = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this, "sensitive_labels", true);
   public get sensitiveLabels() {
     return this._sensitiveLabels;
   }
@@ -503,7 +501,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringNotificationChannelTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringNotificationChannelTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -527,10 +525,10 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
-      user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._userLabels),
+      user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
       sensitive_labels: monitoringNotificationChannelSensitiveLabelsToTerraform(this._sensitiveLabels.internalValue),
       timeouts: monitoringNotificationChannelTimeoutsToTerraform(this._timeouts.internalValue),
     };

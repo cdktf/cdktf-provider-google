@@ -131,13 +131,25 @@ export class DataCatalogEntryBigqueryTableSpec extends cdktf.ComplexComputedList
   // table_spec - computed: true, optional: false, required: false
   public get tableSpec() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('table_spec') as any;
+    return this.interpolationForAttribute('table_spec');
   }
 
   // view_spec - computed: true, optional: false, required: false
   public get viewSpec() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('view_spec') as any;
+    return this.interpolationForAttribute('view_spec');
+  }
+}
+export class DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs extends cdktf.ComplexComputedList {
+
+  // file_path - computed: true, optional: false, required: false
+  public get filePath() {
+    return this.getStringAttribute('file_path');
+  }
+
+  // size_bytes - computed: true, optional: false, required: false
+  public get sizeBytes() {
+    return this.getNumberAttribute('size_bytes');
   }
 }
 export interface DataCatalogEntryGcsFilesetSpec {
@@ -161,7 +173,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 }
 
 export function dataCatalogEntryGcsFilesetSpecToTerraform(struct?: DataCatalogEntryGcsFilesetSpecOutputReference | DataCatalogEntryGcsFilesetSpec): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -178,7 +190,7 @@ export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -215,6 +227,11 @@ export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.Complex
   public get filePatternsInput() {
     return this._filePatterns;
   }
+
+  // sample_gcs_file_specs - computed: true, optional: false, required: false
+  public sampleGcsFileSpecs(index: string) {
+    return new DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs(this, 'sample_gcs_file_specs', index, false);
+  }
 }
 export interface DataCatalogEntryTimeouts {
   /**
@@ -231,8 +248,8 @@ export interface DataCatalogEntryTimeouts {
   readonly update?: string;
 }
 
-export function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeoutsOutputReference | DataCatalogEntryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataCatalogEntryTimeoutsToTerraform(struct?: DataCatalogEntryTimeoutsOutputReference | DataCatalogEntryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -251,7 +268,7 @@ export class DataCatalogEntryTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -388,12 +405,12 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
 
   // bigquery_date_sharded_spec - computed: true, optional: false, required: false
   public bigqueryDateShardedSpec(index: string) {
-    return new DataCatalogEntryBigqueryDateShardedSpec(this, 'bigquery_date_sharded_spec', index);
+    return new DataCatalogEntryBigqueryDateShardedSpec(this, 'bigquery_date_sharded_spec', index, false);
   }
 
   // bigquery_table_spec - computed: true, optional: false, required: false
   public bigqueryTableSpec(index: string) {
-    return new DataCatalogEntryBigqueryTableSpec(this, 'bigquery_table_spec', index);
+    return new DataCatalogEntryBigqueryTableSpec(this, 'bigquery_table_spec', index, false);
   }
 
   // description - computed: false, optional: true, required: false
@@ -550,7 +567,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // gcs_fileset_spec - computed: false, optional: true, required: false
-  private _gcsFilesetSpec = new DataCatalogEntryGcsFilesetSpecOutputReference(this as any, "gcs_fileset_spec", true);
+  private _gcsFilesetSpec = new DataCatalogEntryGcsFilesetSpecOutputReference(this, "gcs_fileset_spec", true);
   public get gcsFilesetSpec() {
     return this._gcsFilesetSpec;
   }
@@ -566,7 +583,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataCatalogEntryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataCatalogEntryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

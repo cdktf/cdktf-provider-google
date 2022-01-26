@@ -121,7 +121,7 @@ export class BillingSubaccount extends cdktf.TerraformResource {
 
   // open - computed: true, optional: false, required: false
   public get open() {
-    return this.getBooleanAttribute('open') as any;
+    return this.getBooleanAttribute('open');
   }
 
   // =========

@@ -25,7 +25,7 @@ export interface MemcacheInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#labels MemcacheInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
@@ -115,16 +115,16 @@ export interface MemcacheInstanceMemcacheParameters {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#params MemcacheInstance#params}
   */
-  readonly params?: { [key: string]: string } | cdktf.IResolvable;
+  readonly params?: { [key: string]: string };
 }
 
 export function memcacheInstanceMemcacheParametersToTerraform(struct?: MemcacheInstanceMemcacheParametersOutputReference | MemcacheInstanceMemcacheParameters): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    params: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.params),
+    params: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.params),
   }
 }
 
@@ -136,7 +136,7 @@ export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -161,13 +161,17 @@ export class MemcacheInstanceMemcacheParametersOutputReference extends cdktf.Com
     }
   }
 
-  // params - computed: false, optional: true, required: false
-  private _params?: { [key: string]: string } | cdktf.IResolvable; 
-  public get params() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('params') as any;
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
   }
-  public set params(value: { [key: string]: string } | cdktf.IResolvable) {
+
+  // params - computed: false, optional: true, required: false
+  private _params?: { [key: string]: string }; 
+  public get params() {
+    return this.getStringMapAttribute('params');
+  }
+  public set params(value: { [key: string]: string }) {
     this._params = value;
   }
   public resetParams() {
@@ -194,7 +198,7 @@ export interface MemcacheInstanceNodeConfig {
 }
 
 export function memcacheInstanceNodeConfigToTerraform(struct?: MemcacheInstanceNodeConfigOutputReference | MemcacheInstanceNodeConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -212,7 +216,7 @@ export class MemcacheInstanceNodeConfigOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -284,8 +288,8 @@ export interface MemcacheInstanceTimeouts {
   readonly update?: string;
 }
 
-export function memcacheInstanceTimeoutsToTerraform(struct?: MemcacheInstanceTimeoutsOutputReference | MemcacheInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function memcacheInstanceTimeoutsToTerraform(struct?: MemcacheInstanceTimeoutsOutputReference | MemcacheInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -304,7 +308,7 @@ export class MemcacheInstanceTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -488,12 +492,11 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -511,7 +514,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
 
   // memcache_nodes - computed: true, optional: false, required: false
   public memcacheNodes(index: string) {
-    return new MemcacheInstanceMemcacheNodes(this, 'memcache_nodes', index);
+    return new MemcacheInstanceMemcacheNodes(this, 'memcache_nodes', index, false);
   }
 
   // memcache_version - computed: false, optional: true, required: false
@@ -591,7 +594,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   // zones - computed: true, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -605,7 +608,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   }
 
   // memcache_parameters - computed: false, optional: true, required: false
-  private _memcacheParameters = new MemcacheInstanceMemcacheParametersOutputReference(this as any, "memcache_parameters", true);
+  private _memcacheParameters = new MemcacheInstanceMemcacheParametersOutputReference(this, "memcache_parameters", true);
   public get memcacheParameters() {
     return this._memcacheParameters;
   }
@@ -621,7 +624,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   }
 
   // node_config - computed: false, optional: false, required: true
-  private _nodeConfig = new MemcacheInstanceNodeConfigOutputReference(this as any, "node_config", true);
+  private _nodeConfig = new MemcacheInstanceNodeConfigOutputReference(this, "node_config", true);
   public get nodeConfig() {
     return this._nodeConfig;
   }
@@ -634,7 +637,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MemcacheInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MemcacheInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -657,7 +660,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
     return {
       authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
       display_name: cdktf.stringToTerraform(this._displayName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       memcache_version: cdktf.stringToTerraform(this._memcacheVersion),
       name: cdktf.stringToTerraform(this._name),
       node_count: cdktf.numberToTerraform(this._nodeCount),

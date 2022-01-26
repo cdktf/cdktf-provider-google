@@ -60,7 +60,7 @@ export interface FolderOrganizationPolicyBooleanPolicy {
 }
 
 export function folderOrganizationPolicyBooleanPolicyToTerraform(struct?: FolderOrganizationPolicyBooleanPolicyOutputReference | FolderOrganizationPolicyBooleanPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -77,7 +77,7 @@ export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -105,7 +105,7 @@ export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.
   // enforced - computed: false, optional: false, required: true
   private _enforced?: boolean | cdktf.IResolvable; 
   public get enforced() {
-    return this.getBooleanAttribute('enforced') as any;
+    return this.getBooleanAttribute('enforced');
   }
   public set enforced(value: boolean | cdktf.IResolvable) {
     this._enforced = value;
@@ -131,7 +131,7 @@ export interface FolderOrganizationPolicyListPolicyAllow {
 }
 
 export function folderOrganizationPolicyListPolicyAllowToTerraform(struct?: FolderOrganizationPolicyListPolicyAllowOutputReference | FolderOrganizationPolicyListPolicyAllow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -149,7 +149,7 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -183,7 +183,7 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
   // all - computed: false, optional: true, required: false
   private _all?: boolean | cdktf.IResolvable; 
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
   public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
@@ -199,7 +199,7 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
   // values - computed: false, optional: true, required: false
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -228,7 +228,7 @@ export interface FolderOrganizationPolicyListPolicyDeny {
 }
 
 export function folderOrganizationPolicyListPolicyDenyToTerraform(struct?: FolderOrganizationPolicyListPolicyDenyOutputReference | FolderOrganizationPolicyListPolicyDeny): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -246,7 +246,7 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -280,7 +280,7 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
   // all - computed: false, optional: true, required: false
   private _all?: boolean | cdktf.IResolvable; 
   public get all() {
-    return this.getBooleanAttribute('all') as any;
+    return this.getBooleanAttribute('all');
   }
   public set all(value: boolean | cdktf.IResolvable) {
     this._all = value;
@@ -296,7 +296,7 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
   // values - computed: false, optional: true, required: false
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -337,7 +337,7 @@ export interface FolderOrganizationPolicyListPolicy {
 }
 
 export function folderOrganizationPolicyListPolicyToTerraform(struct?: FolderOrganizationPolicyListPolicyOutputReference | FolderOrganizationPolicyListPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -357,7 +357,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -403,7 +403,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   // inherit_from_parent - computed: false, optional: true, required: false
   private _inheritFromParent?: boolean | cdktf.IResolvable; 
   public get inheritFromParent() {
-    return this.getBooleanAttribute('inherit_from_parent') as any;
+    return this.getBooleanAttribute('inherit_from_parent');
   }
   public set inheritFromParent(value: boolean | cdktf.IResolvable) {
     this._inheritFromParent = value;
@@ -433,7 +433,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   }
 
   // allow - computed: false, optional: true, required: false
-  private _allow = new FolderOrganizationPolicyListPolicyAllowOutputReference(this as any, "allow", true);
+  private _allow = new FolderOrganizationPolicyListPolicyAllowOutputReference(this, "allow", true);
   public get allow() {
     return this._allow;
   }
@@ -449,7 +449,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   }
 
   // deny - computed: false, optional: true, required: false
-  private _deny = new FolderOrganizationPolicyListPolicyDenyOutputReference(this as any, "deny", true);
+  private _deny = new FolderOrganizationPolicyListPolicyDenyOutputReference(this, "deny", true);
   public get deny() {
     return this._deny;
   }
@@ -474,7 +474,7 @@ export interface FolderOrganizationPolicyRestorePolicy {
 }
 
 export function folderOrganizationPolicyRestorePolicyToTerraform(struct?: FolderOrganizationPolicyRestorePolicyOutputReference | FolderOrganizationPolicyRestorePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -491,7 +491,7 @@ export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -519,7 +519,7 @@ export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.
   // default - computed: false, optional: false, required: true
   private _default?: boolean | cdktf.IResolvable; 
   public get default() {
-    return this.getBooleanAttribute('default') as any;
+    return this.getBooleanAttribute('default');
   }
   public set default(value: boolean | cdktf.IResolvable) {
     this._default = value;
@@ -548,8 +548,8 @@ export interface FolderOrganizationPolicyTimeouts {
   readonly update?: string;
 }
 
-export function folderOrganizationPolicyTimeoutsToTerraform(struct?: FolderOrganizationPolicyTimeoutsOutputReference | FolderOrganizationPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function folderOrganizationPolicyTimeoutsToTerraform(struct?: FolderOrganizationPolicyTimeoutsOutputReference | FolderOrganizationPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -569,7 +569,7 @@ export class FolderOrganizationPolicyTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -780,7 +780,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // boolean_policy - computed: false, optional: true, required: false
-  private _booleanPolicy = new FolderOrganizationPolicyBooleanPolicyOutputReference(this as any, "boolean_policy", true);
+  private _booleanPolicy = new FolderOrganizationPolicyBooleanPolicyOutputReference(this, "boolean_policy", true);
   public get booleanPolicy() {
     return this._booleanPolicy;
   }
@@ -796,7 +796,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // list_policy - computed: false, optional: true, required: false
-  private _listPolicy = new FolderOrganizationPolicyListPolicyOutputReference(this as any, "list_policy", true);
+  private _listPolicy = new FolderOrganizationPolicyListPolicyOutputReference(this, "list_policy", true);
   public get listPolicy() {
     return this._listPolicy;
   }
@@ -812,7 +812,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // restore_policy - computed: false, optional: true, required: false
-  private _restorePolicy = new FolderOrganizationPolicyRestorePolicyOutputReference(this as any, "restore_policy", true);
+  private _restorePolicy = new FolderOrganizationPolicyRestorePolicyOutputReference(this, "restore_policy", true);
   public get restorePolicy() {
     return this._restorePolicy;
   }
@@ -828,7 +828,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FolderOrganizationPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FolderOrganizationPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

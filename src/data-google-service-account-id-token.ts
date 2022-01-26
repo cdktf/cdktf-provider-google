@@ -70,7 +70,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   // delegates - computed: false, optional: true, required: false
   private _delegates?: string[]; 
   public get delegates() {
-    return this.getListAttribute('delegates');
+    return cdktf.Fn.tolist(this.getListAttribute('delegates'));
   }
   public set delegates(value: string[]) {
     this._delegates = value;
@@ -96,7 +96,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
   // include_email - computed: false, optional: true, required: false
   private _includeEmail?: boolean | cdktf.IResolvable; 
   public get includeEmail() {
-    return this.getBooleanAttribute('include_email') as any;
+    return this.getBooleanAttribute('include_email');
   }
   public set includeEmail(value: boolean | cdktf.IResolvable) {
     this._includeEmail = value;

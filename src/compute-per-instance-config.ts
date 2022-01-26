@@ -86,8 +86,8 @@ deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER
   readonly source: string;
 }
 
-export function computePerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputePerInstanceConfigPreservedStateDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computePerInstanceConfigPreservedStateDiskToTerraform(struct?: ComputePerInstanceConfigPreservedStateDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,22 +105,22 @@ export interface ComputePerInstanceConfigPreservedState {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#metadata ComputePerInstanceConfig#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * disk block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#disk ComputePerInstanceConfig#disk}
   */
-  readonly disk?: ComputePerInstanceConfigPreservedStateDisk[];
+  readonly disk?: ComputePerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable;
 }
 
 export function computePerInstanceConfigPreservedStateToTerraform(struct?: ComputePerInstanceConfigPreservedStateOutputReference | ComputePerInstanceConfigPreservedState): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     disk: cdktf.listMapper(computePerInstanceConfigPreservedStateDiskToTerraform)(struct!.disk),
   }
 }
@@ -133,7 +133,7 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -165,12 +165,11 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -182,12 +181,12 @@ export class ComputePerInstanceConfigPreservedStateOutputReference extends cdktf
   }
 
   // disk - computed: false, optional: true, required: false
-  private _disk?: ComputePerInstanceConfigPreservedStateDisk[]; 
+  private _disk?: ComputePerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable; 
   public get disk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('disk') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('disk')));
   }
-  public set disk(value: ComputePerInstanceConfigPreservedStateDisk[]) {
+  public set disk(value: ComputePerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable) {
     this._disk = value;
   }
   public resetDisk() {
@@ -213,8 +212,8 @@ export interface ComputePerInstanceConfigTimeouts {
   readonly update?: string;
 }
 
-export function computePerInstanceConfigTimeoutsToTerraform(struct?: ComputePerInstanceConfigTimeoutsOutputReference | ComputePerInstanceConfigTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computePerInstanceConfigTimeoutsToTerraform(struct?: ComputePerInstanceConfigTimeoutsOutputReference | ComputePerInstanceConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -233,7 +232,7 @@ export class ComputePerInstanceConfigTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -448,7 +447,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   // remove_instance_state_on_destroy - computed: false, optional: true, required: false
   private _removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable; 
   public get removeInstanceStateOnDestroy() {
-    return this.getBooleanAttribute('remove_instance_state_on_destroy') as any;
+    return this.getBooleanAttribute('remove_instance_state_on_destroy');
   }
   public set removeInstanceStateOnDestroy(value: boolean | cdktf.IResolvable) {
     this._removeInstanceStateOnDestroy = value;
@@ -478,7 +477,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // preserved_state - computed: false, optional: true, required: false
-  private _preservedState = new ComputePerInstanceConfigPreservedStateOutputReference(this as any, "preserved_state", true);
+  private _preservedState = new ComputePerInstanceConfigPreservedStateOutputReference(this, "preserved_state", true);
   public get preservedState() {
     return this._preservedState;
   }
@@ -494,7 +493,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputePerInstanceConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputePerInstanceConfigTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

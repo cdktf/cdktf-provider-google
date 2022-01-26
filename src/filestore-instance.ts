@@ -18,7 +18,7 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#labels FilestoreInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The resource name of the instance.
   * 
@@ -52,7 +52,7 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#networks FilestoreInstance#networks}
   */
-  readonly networks: FilestoreInstanceNetworks[];
+  readonly networks: FilestoreInstanceNetworks[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -77,7 +77,7 @@ for the standard tier, or 2560 GiB for the premium tier.
 }
 
 export function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanceFileSharesOutputReference | FilestoreInstanceFileShares): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -176,8 +176,8 @@ addresses reserved for this instance.
   readonly reservedIpRange?: string;
 }
 
-export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceNetworks): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -203,8 +203,8 @@ export interface FilestoreInstanceTimeouts {
   readonly update?: string;
 }
 
-export function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceTimeoutsOutputReference | FilestoreInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceTimeoutsOutputReference | FilestoreInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -223,7 +223,7 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -388,12 +388,11 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -460,7 +459,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // file_shares - computed: false, optional: false, required: true
-  private _fileShares = new FilestoreInstanceFileSharesOutputReference(this as any, "file_shares", true);
+  private _fileShares = new FilestoreInstanceFileSharesOutputReference(this, "file_shares", true);
   public get fileShares() {
     return this._fileShares;
   }
@@ -473,12 +472,12 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // networks - computed: false, optional: false, required: true
-  private _networks?: FilestoreInstanceNetworks[]; 
+  private _networks?: FilestoreInstanceNetworks[] | cdktf.IResolvable; 
   public get networks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('networks') as any;
+    return this.interpolationForAttribute('networks');
   }
-  public set networks(value: FilestoreInstanceNetworks[]) {
+  public set networks(value: FilestoreInstanceNetworks[] | cdktf.IResolvable) {
     this._networks = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -487,7 +486,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FilestoreInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FilestoreInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -509,7 +508,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       tier: cdktf.stringToTerraform(this._tier),

@@ -49,7 +49,7 @@ https://cloud.google.com/apis/design/resource_names.
 }
 
 export function monitoringCustomServiceTelemetryToTerraform(struct?: MonitoringCustomServiceTelemetryOutputReference | MonitoringCustomServiceTelemetry): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -66,7 +66,7 @@ export class MonitoringCustomServiceTelemetryOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -122,8 +122,8 @@ export interface MonitoringCustomServiceTimeouts {
   readonly update?: string;
 }
 
-export function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomServiceTimeoutsOutputReference | MonitoringCustomServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitoringCustomServiceTimeoutsToTerraform(struct?: MonitoringCustomServiceTimeoutsOutputReference | MonitoringCustomServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -142,7 +142,7 @@ export class MonitoringCustomServiceTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -330,7 +330,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   }
 
   // telemetry - computed: false, optional: true, required: false
-  private _telemetry = new MonitoringCustomServiceTelemetryOutputReference(this as any, "telemetry", true);
+  private _telemetry = new MonitoringCustomServiceTelemetryOutputReference(this, "telemetry", true);
   public get telemetry() {
     return this._telemetry;
   }
@@ -346,7 +346,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringCustomServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitoringCustomServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

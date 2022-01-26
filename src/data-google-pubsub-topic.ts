@@ -89,13 +89,13 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // message_storage_policy - computed: true, optional: false, required: false
   public messageStoragePolicy(index: string) {
-    return new DataGooglePubsubTopicMessageStoragePolicy(this, 'message_storage_policy', index);
+    return new DataGooglePubsubTopicMessageStoragePolicy(this, 'message_storage_policy', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -129,7 +129,7 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
 
   // schema_settings - computed: true, optional: false, required: false
   public schemaSettings(index: string) {
-    return new DataGooglePubsubTopicSchemaSettings(this, 'schema_settings', index);
+    return new DataGooglePubsubTopicSchemaSettings(this, 'schema_settings', index, false);
   }
 
   // =========

@@ -78,7 +78,7 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
   // role_entity - computed: true, optional: true, required: false
   private _roleEntity?: string[]; 
   public get roleEntity() {
-    return this.getListAttribute('role_entity');
+    return cdktf.Fn.tolist(this.getListAttribute('role_entity'));
   }
   public set roleEntity(value: string[]) {
     this._roleEntity = value;

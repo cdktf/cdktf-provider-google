@@ -48,7 +48,7 @@ export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group#named_port ComputeInstanceGroup#named_port}
   */
-  readonly namedPort?: ComputeInstanceGroupNamedPort[];
+  readonly namedPort?: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -71,8 +71,8 @@ export interface ComputeInstanceGroupNamedPort {
   readonly port: number;
 }
 
-export function computeInstanceGroupNamedPortToTerraform(struct?: ComputeInstanceGroupNamedPort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceGroupNamedPortToTerraform(struct?: ComputeInstanceGroupNamedPort | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,8 +97,8 @@ export interface ComputeInstanceGroupTimeouts {
   readonly update?: string;
 }
 
-export function computeInstanceGroupTimeoutsToTerraform(struct?: ComputeInstanceGroupTimeoutsOutputReference | ComputeInstanceGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeInstanceGroupTimeoutsToTerraform(struct?: ComputeInstanceGroupTimeoutsOutputReference | ComputeInstanceGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -117,7 +117,7 @@ export class ComputeInstanceGroupTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -273,7 +273,7 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   // instances - computed: true, optional: true, required: false
   private _instances?: string[]; 
   public get instances() {
-    return this.getListAttribute('instances');
+    return cdktf.Fn.tolist(this.getListAttribute('instances'));
   }
   public set instances(value: string[]) {
     this._instances = value;
@@ -358,12 +358,12 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   }
 
   // named_port - computed: false, optional: true, required: false
-  private _namedPort?: ComputeInstanceGroupNamedPort[]; 
+  private _namedPort?: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable; 
   public get namedPort() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('named_port') as any;
+    return this.interpolationForAttribute('named_port');
   }
-  public set namedPort(value: ComputeInstanceGroupNamedPort[]) {
+  public set namedPort(value: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable) {
     this._namedPort = value;
   }
   public resetNamedPort() {
@@ -375,7 +375,7 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeInstanceGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeInstanceGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

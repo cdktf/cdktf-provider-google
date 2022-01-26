@@ -108,7 +108,7 @@ If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
   */
-  readonly advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[];
+  readonly advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -132,8 +132,8 @@ CIDR-formatted string.
   readonly range: string;
 }
 
-export function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeRouterPeerAdvertisedIpRanges): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeRouterPeerAdvertisedIpRanges | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -158,8 +158,8 @@ export interface ComputeRouterPeerTimeouts {
   readonly update?: string;
 }
 
-export function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeoutsOutputReference | ComputeRouterPeerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerTimeoutsOutputReference | ComputeRouterPeerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -178,7 +178,7 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -367,7 +367,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   // enable - computed: false, optional: true, required: false
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
   public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
@@ -504,12 +504,12 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
-  private _advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[]; 
+  private _advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable; 
   public get advertisedIpRanges() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('advertised_ip_ranges') as any;
+    return this.interpolationForAttribute('advertised_ip_ranges');
   }
-  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[]) {
+  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable) {
     this._advertisedIpRanges = value;
   }
   public resetAdvertisedIpRanges() {
@@ -521,7 +521,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRouterPeerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeRouterPeerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

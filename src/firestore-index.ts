@@ -34,7 +34,7 @@ export interface FirestoreIndexConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_index#fields FirestoreIndex#fields}
   */
-  readonly fields: FirestoreIndexFields[];
+  readonly fields: FirestoreIndexFields[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -65,8 +65,8 @@ Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCEN
   readonly order?: string;
 }
 
-export function firestoreIndexFieldsToTerraform(struct?: FirestoreIndexFields): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firestoreIndexFieldsToTerraform(struct?: FirestoreIndexFields | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,8 +88,8 @@ export interface FirestoreIndexTimeouts {
   readonly delete?: string;
 }
 
-export function firestoreIndexTimeoutsToTerraform(struct?: FirestoreIndexTimeoutsOutputReference | FirestoreIndexTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firestoreIndexTimeoutsToTerraform(struct?: FirestoreIndexTimeoutsOutputReference | FirestoreIndexTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -107,7 +107,7 @@ export class FirestoreIndexTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -287,12 +287,12 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // fields - computed: false, optional: false, required: true
-  private _fields?: FirestoreIndexFields[]; 
+  private _fields?: FirestoreIndexFields[] | cdktf.IResolvable; 
   public get fields() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('fields') as any;
+    return this.interpolationForAttribute('fields');
   }
-  public set fields(value: FirestoreIndexFields[]) {
+  public set fields(value: FirestoreIndexFields[] | cdktf.IResolvable) {
     this._fields = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -301,7 +301,7 @@ export class FirestoreIndex extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FirestoreIndexTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FirestoreIndexTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

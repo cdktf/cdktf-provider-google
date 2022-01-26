@@ -74,7 +74,7 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false

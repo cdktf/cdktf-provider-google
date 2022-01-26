@@ -30,7 +30,7 @@ export class DataGoogleContainerClusterAddonsConfigCloudrunConfig extends cdktf.
 
   // disabled - computed: true, optional: false, required: false
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
 
   // load_balancer_type - computed: true, optional: false, required: false
@@ -42,21 +42,21 @@ export class DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling exte
 
   // disabled - computed: true, optional: false, required: false
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
 }
 export class DataGoogleContainerClusterAddonsConfigHttpLoadBalancing extends cdktf.ComplexComputedList {
 
   // disabled - computed: true, optional: false, required: false
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
 }
 export class DataGoogleContainerClusterAddonsConfigNetworkPolicyConfig extends cdktf.ComplexComputedList {
 
   // disabled - computed: true, optional: false, required: false
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
 }
 export class DataGoogleContainerClusterAddonsConfig extends cdktf.ComplexComputedList {
@@ -64,25 +64,25 @@ export class DataGoogleContainerClusterAddonsConfig extends cdktf.ComplexCompute
   // cloudrun_config - computed: true, optional: false, required: false
   public get cloudrunConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cloudrun_config') as any;
+    return this.interpolationForAttribute('cloudrun_config');
   }
 
   // horizontal_pod_autoscaling - computed: true, optional: false, required: false
   public get horizontalPodAutoscaling() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('horizontal_pod_autoscaling') as any;
+    return this.interpolationForAttribute('horizontal_pod_autoscaling');
   }
 
   // http_load_balancing - computed: true, optional: false, required: false
   public get httpLoadBalancing() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_load_balancing') as any;
+    return this.interpolationForAttribute('http_load_balancing');
   }
 
   // network_policy_config - computed: true, optional: false, required: false
   public get networkPolicyConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_policy_config') as any;
+    return this.interpolationForAttribute('network_policy_config');
   }
 }
 export class DataGoogleContainerClusterAuthenticatorGroupsConfig extends cdktf.ComplexComputedList {
@@ -126,18 +126,18 @@ export class DataGoogleContainerClusterClusterAutoscaling extends cdktf.ComplexC
   // auto_provisioning_defaults - computed: true, optional: false, required: false
   public get autoProvisioningDefaults() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('auto_provisioning_defaults') as any;
+    return this.interpolationForAttribute('auto_provisioning_defaults');
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // resource_limits - computed: true, optional: false, required: false
   public get resourceLimits() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_limits') as any;
+    return this.interpolationForAttribute('resource_limits');
   }
 }
 export class DataGoogleContainerClusterDatabaseEncryption extends cdktf.ComplexComputedList {
@@ -156,7 +156,7 @@ export class DataGoogleContainerClusterDefaultSnatStatus extends cdktf.ComplexCo
 
   // disabled - computed: true, optional: false, required: false
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
 }
 export class DataGoogleContainerClusterIpAllocationPolicy extends cdktf.ComplexComputedList {
@@ -239,26 +239,26 @@ export class DataGoogleContainerClusterMaintenancePolicy extends cdktf.ComplexCo
   // daily_maintenance_window - computed: true, optional: false, required: false
   public get dailyMaintenanceWindow() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('daily_maintenance_window') as any;
+    return this.interpolationForAttribute('daily_maintenance_window');
   }
 
   // maintenance_exclusion - computed: true, optional: false, required: false
   public get maintenanceExclusion() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('maintenance_exclusion') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('maintenance_exclusion')));
   }
 
   // recurring_window - computed: true, optional: false, required: false
   public get recurringWindow() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('recurring_window') as any;
+    return this.interpolationForAttribute('recurring_window');
   }
 }
 export class DataGoogleContainerClusterMasterAuthClientCertificateConfig extends cdktf.ComplexComputedList {
 
   // issue_client_certificate - computed: true, optional: false, required: false
   public get issueClientCertificate() {
-    return this.getBooleanAttribute('issue_client_certificate') as any;
+    return this.getBooleanAttribute('issue_client_certificate');
   }
 }
 export class DataGoogleContainerClusterMasterAuth extends cdktf.ComplexComputedList {
@@ -271,7 +271,7 @@ export class DataGoogleContainerClusterMasterAuth extends cdktf.ComplexComputedL
   // client_certificate_config - computed: true, optional: false, required: false
   public get clientCertificateConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('client_certificate_config') as any;
+    return this.interpolationForAttribute('client_certificate_config');
   }
 
   // client_key - computed: true, optional: false, required: false
@@ -311,7 +311,7 @@ export class DataGoogleContainerClusterMasterAuthorizedNetworksConfig extends cd
   // cidr_blocks - computed: true, optional: false, required: false
   public get cidrBlocks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cidr_blocks') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('cidr_blocks')));
   }
 }
 export class DataGoogleContainerClusterMonitoringConfig extends cdktf.ComplexComputedList {
@@ -325,7 +325,7 @@ export class DataGoogleContainerClusterNetworkPolicy extends cdktf.ComplexComput
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // provider - computed: true, optional: false, required: false
@@ -354,12 +354,12 @@ export class DataGoogleContainerClusterNodeConfigShieldedInstanceConfig extends 
 
   // enable_integrity_monitoring - computed: true, optional: false, required: false
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
 
   // enable_secure_boot - computed: true, optional: false, required: false
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
 }
 export class DataGoogleContainerClusterNodeConfigTaint extends cdktf.ComplexComputedList {
@@ -406,7 +406,7 @@ export class DataGoogleContainerClusterNodeConfig extends cdktf.ComplexComputedL
   // guest_accelerator - computed: true, optional: false, required: false
   public get guestAccelerator() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_accelerator') as any;
+    return this.interpolationForAttribute('guest_accelerator');
   }
 
   // image_type - computed: true, optional: false, required: false
@@ -416,8 +416,7 @@ export class DataGoogleContainerClusterNodeConfig extends cdktf.ComplexComputedL
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
@@ -432,8 +431,7 @@ export class DataGoogleContainerClusterNodeConfig extends cdktf.ComplexComputedL
 
   // metadata - computed: true, optional: false, required: false
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
 
   // min_cpu_platform - computed: true, optional: false, required: false
@@ -443,12 +441,12 @@ export class DataGoogleContainerClusterNodeConfig extends cdktf.ComplexComputedL
 
   // oauth_scopes - computed: true, optional: false, required: false
   public get oauthScopes() {
-    return this.getListAttribute('oauth_scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('oauth_scopes'));
   }
 
   // preemptible - computed: true, optional: false, required: false
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible') as any;
+    return this.getBooleanAttribute('preemptible');
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -459,7 +457,7 @@ export class DataGoogleContainerClusterNodeConfig extends cdktf.ComplexComputedL
   // shielded_instance_config - computed: true, optional: false, required: false
   public get shieldedInstanceConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('shielded_instance_config') as any;
+    return this.interpolationForAttribute('shielded_instance_config');
   }
 
   // tags - computed: true, optional: false, required: false
@@ -470,13 +468,13 @@ export class DataGoogleContainerClusterNodeConfig extends cdktf.ComplexComputedL
   // taint - computed: true, optional: false, required: false
   public get taint() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('taint') as any;
+    return this.interpolationForAttribute('taint');
   }
 
   // workload_metadata_config - computed: true, optional: false, required: false
   public get workloadMetadataConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('workload_metadata_config') as any;
+    return this.interpolationForAttribute('workload_metadata_config');
   }
 }
 export class DataGoogleContainerClusterNodePoolAutoscaling extends cdktf.ComplexComputedList {
@@ -495,12 +493,12 @@ export class DataGoogleContainerClusterNodePoolManagement extends cdktf.ComplexC
 
   // auto_repair - computed: true, optional: false, required: false
   public get autoRepair() {
-    return this.getBooleanAttribute('auto_repair') as any;
+    return this.getBooleanAttribute('auto_repair');
   }
 
   // auto_upgrade - computed: true, optional: false, required: false
   public get autoUpgrade() {
-    return this.getBooleanAttribute('auto_upgrade') as any;
+    return this.getBooleanAttribute('auto_upgrade');
   }
 }
 export class DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator extends cdktf.ComplexComputedList {
@@ -524,12 +522,12 @@ export class DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig 
 
   // enable_integrity_monitoring - computed: true, optional: false, required: false
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
 
   // enable_secure_boot - computed: true, optional: false, required: false
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
 }
 export class DataGoogleContainerClusterNodePoolNodeConfigTaint extends cdktf.ComplexComputedList {
@@ -576,7 +574,7 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends cdktf.ComplexC
   // guest_accelerator - computed: true, optional: false, required: false
   public get guestAccelerator() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_accelerator') as any;
+    return this.interpolationForAttribute('guest_accelerator');
   }
 
   // image_type - computed: true, optional: false, required: false
@@ -586,8 +584,7 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends cdktf.ComplexC
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
@@ -602,8 +599,7 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends cdktf.ComplexC
 
   // metadata - computed: true, optional: false, required: false
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
 
   // min_cpu_platform - computed: true, optional: false, required: false
@@ -613,12 +609,12 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends cdktf.ComplexC
 
   // oauth_scopes - computed: true, optional: false, required: false
   public get oauthScopes() {
-    return this.getListAttribute('oauth_scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('oauth_scopes'));
   }
 
   // preemptible - computed: true, optional: false, required: false
   public get preemptible() {
-    return this.getBooleanAttribute('preemptible') as any;
+    return this.getBooleanAttribute('preemptible');
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -629,7 +625,7 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends cdktf.ComplexC
   // shielded_instance_config - computed: true, optional: false, required: false
   public get shieldedInstanceConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('shielded_instance_config') as any;
+    return this.interpolationForAttribute('shielded_instance_config');
   }
 
   // tags - computed: true, optional: false, required: false
@@ -640,13 +636,13 @@ export class DataGoogleContainerClusterNodePoolNodeConfig extends cdktf.ComplexC
   // taint - computed: true, optional: false, required: false
   public get taint() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('taint') as any;
+    return this.interpolationForAttribute('taint');
   }
 
   // workload_metadata_config - computed: true, optional: false, required: false
   public get workloadMetadataConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('workload_metadata_config') as any;
+    return this.interpolationForAttribute('workload_metadata_config');
   }
 }
 export class DataGoogleContainerClusterNodePoolUpgradeSettings extends cdktf.ComplexComputedList {
@@ -666,7 +662,7 @@ export class DataGoogleContainerClusterNodePool extends cdktf.ComplexComputedLis
   // autoscaling - computed: true, optional: false, required: false
   public get autoscaling() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('autoscaling') as any;
+    return this.interpolationForAttribute('autoscaling');
   }
 
   // initial_node_count - computed: true, optional: false, required: false
@@ -682,7 +678,7 @@ export class DataGoogleContainerClusterNodePool extends cdktf.ComplexComputedLis
   // management - computed: true, optional: false, required: false
   public get management() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('management') as any;
+    return this.interpolationForAttribute('management');
   }
 
   // max_pods_per_node - computed: true, optional: false, required: false
@@ -703,7 +699,7 @@ export class DataGoogleContainerClusterNodePool extends cdktf.ComplexComputedLis
   // node_config - computed: true, optional: false, required: false
   public get nodeConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_config') as any;
+    return this.interpolationForAttribute('node_config');
   }
 
   // node_count - computed: true, optional: false, required: false
@@ -713,13 +709,13 @@ export class DataGoogleContainerClusterNodePool extends cdktf.ComplexComputedLis
 
   // node_locations - computed: true, optional: false, required: false
   public get nodeLocations() {
-    return this.getListAttribute('node_locations');
+    return cdktf.Fn.tolist(this.getListAttribute('node_locations'));
   }
 
   // upgrade_settings - computed: true, optional: false, required: false
   public get upgradeSettings() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('upgrade_settings') as any;
+    return this.interpolationForAttribute('upgrade_settings');
   }
 
   // version - computed: true, optional: false, required: false
@@ -731,32 +727,32 @@ export class DataGoogleContainerClusterPodSecurityPolicyConfig extends cdktf.Com
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataGoogleContainerClusterPrivateClusterConfig extends cdktf.ComplexComputedList {
 
   // enable_private_endpoint - computed: true, optional: false, required: false
   public get enablePrivateEndpoint() {
-    return this.getBooleanAttribute('enable_private_endpoint') as any;
+    return this.getBooleanAttribute('enable_private_endpoint');
   }
 
   // enable_private_nodes - computed: true, optional: false, required: false
   public get enablePrivateNodes() {
-    return this.getBooleanAttribute('enable_private_nodes') as any;
+    return this.getBooleanAttribute('enable_private_nodes');
   }
 
   // master_global_access_config - computed: true, optional: false, required: false
   public get masterGlobalAccessConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('master_global_access_config') as any;
+    return this.interpolationForAttribute('master_global_access_config');
   }
 
   // master_ipv4_cidr_block - computed: true, optional: false, required: false
@@ -798,24 +794,24 @@ export class DataGoogleContainerClusterResourceUsageExportConfig extends cdktf.C
   // bigquery_destination - computed: true, optional: false, required: false
   public get bigqueryDestination() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('bigquery_destination') as any;
+    return this.interpolationForAttribute('bigquery_destination');
   }
 
   // enable_network_egress_metering - computed: true, optional: false, required: false
   public get enableNetworkEgressMetering() {
-    return this.getBooleanAttribute('enable_network_egress_metering') as any;
+    return this.getBooleanAttribute('enable_network_egress_metering');
   }
 
   // enable_resource_consumption_metering - computed: true, optional: false, required: false
   public get enableResourceConsumptionMetering() {
-    return this.getBooleanAttribute('enable_resource_consumption_metering') as any;
+    return this.getBooleanAttribute('enable_resource_consumption_metering');
   }
 }
 export class DataGoogleContainerClusterVerticalPodAutoscaling extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataGoogleContainerClusterWorkloadIdentityConfig extends cdktf.ComplexComputedList {
@@ -874,17 +870,17 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // addons_config - computed: true, optional: false, required: false
   public addonsConfig(index: string) {
-    return new DataGoogleContainerClusterAddonsConfig(this, 'addons_config', index);
+    return new DataGoogleContainerClusterAddonsConfig(this, 'addons_config', index, false);
   }
 
   // authenticator_groups_config - computed: true, optional: false, required: false
   public authenticatorGroupsConfig(index: string) {
-    return new DataGoogleContainerClusterAuthenticatorGroupsConfig(this, 'authenticator_groups_config', index);
+    return new DataGoogleContainerClusterAuthenticatorGroupsConfig(this, 'authenticator_groups_config', index, false);
   }
 
   // cluster_autoscaling - computed: true, optional: false, required: false
   public clusterAutoscaling(index: string) {
-    return new DataGoogleContainerClusterClusterAutoscaling(this, 'cluster_autoscaling', index);
+    return new DataGoogleContainerClusterClusterAutoscaling(this, 'cluster_autoscaling', index, false);
   }
 
   // cluster_ipv4_cidr - computed: true, optional: false, required: false
@@ -894,7 +890,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // database_encryption - computed: true, optional: false, required: false
   public databaseEncryption(index: string) {
-    return new DataGoogleContainerClusterDatabaseEncryption(this, 'database_encryption', index);
+    return new DataGoogleContainerClusterDatabaseEncryption(this, 'database_encryption', index, false);
   }
 
   // datapath_provider - computed: true, optional: false, required: false
@@ -909,7 +905,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // default_snat_status - computed: true, optional: false, required: false
   public defaultSnatStatus(index: string) {
-    return new DataGoogleContainerClusterDefaultSnatStatus(this, 'default_snat_status', index);
+    return new DataGoogleContainerClusterDefaultSnatStatus(this, 'default_snat_status', index, false);
   }
 
   // description - computed: true, optional: false, required: false
@@ -919,37 +915,37 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // enable_autopilot - computed: true, optional: false, required: false
   public get enableAutopilot() {
-    return this.getBooleanAttribute('enable_autopilot') as any;
+    return this.getBooleanAttribute('enable_autopilot');
   }
 
   // enable_binary_authorization - computed: true, optional: false, required: false
   public get enableBinaryAuthorization() {
-    return this.getBooleanAttribute('enable_binary_authorization') as any;
+    return this.getBooleanAttribute('enable_binary_authorization');
   }
 
   // enable_intranode_visibility - computed: true, optional: false, required: false
   public get enableIntranodeVisibility() {
-    return this.getBooleanAttribute('enable_intranode_visibility') as any;
+    return this.getBooleanAttribute('enable_intranode_visibility');
   }
 
   // enable_kubernetes_alpha - computed: true, optional: false, required: false
   public get enableKubernetesAlpha() {
-    return this.getBooleanAttribute('enable_kubernetes_alpha') as any;
+    return this.getBooleanAttribute('enable_kubernetes_alpha');
   }
 
   // enable_legacy_abac - computed: true, optional: false, required: false
   public get enableLegacyAbac() {
-    return this.getBooleanAttribute('enable_legacy_abac') as any;
+    return this.getBooleanAttribute('enable_legacy_abac');
   }
 
   // enable_shielded_nodes - computed: true, optional: false, required: false
   public get enableShieldedNodes() {
-    return this.getBooleanAttribute('enable_shielded_nodes') as any;
+    return this.getBooleanAttribute('enable_shielded_nodes');
   }
 
   // enable_tpu - computed: true, optional: false, required: false
   public get enableTpu() {
-    return this.getBooleanAttribute('enable_tpu') as any;
+    return this.getBooleanAttribute('enable_tpu');
   }
 
   // endpoint - computed: true, optional: false, required: false
@@ -974,7 +970,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // ip_allocation_policy - computed: true, optional: false, required: false
   public ipAllocationPolicy(index: string) {
-    return new DataGoogleContainerClusterIpAllocationPolicy(this, 'ip_allocation_policy', index);
+    return new DataGoogleContainerClusterIpAllocationPolicy(this, 'ip_allocation_policy', index, false);
   }
 
   // label_fingerprint - computed: true, optional: false, required: false
@@ -1000,7 +996,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // logging_config - computed: true, optional: false, required: false
   public loggingConfig(index: string) {
-    return new DataGoogleContainerClusterLoggingConfig(this, 'logging_config', index);
+    return new DataGoogleContainerClusterLoggingConfig(this, 'logging_config', index, false);
   }
 
   // logging_service - computed: true, optional: false, required: false
@@ -1010,17 +1006,17 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // maintenance_policy - computed: true, optional: false, required: false
   public maintenancePolicy(index: string) {
-    return new DataGoogleContainerClusterMaintenancePolicy(this, 'maintenance_policy', index);
+    return new DataGoogleContainerClusterMaintenancePolicy(this, 'maintenance_policy', index, false);
   }
 
   // master_auth - computed: true, optional: false, required: false
   public masterAuth(index: string) {
-    return new DataGoogleContainerClusterMasterAuth(this, 'master_auth', index);
+    return new DataGoogleContainerClusterMasterAuth(this, 'master_auth', index, false);
   }
 
   // master_authorized_networks_config - computed: true, optional: false, required: false
   public masterAuthorizedNetworksConfig(index: string) {
-    return new DataGoogleContainerClusterMasterAuthorizedNetworksConfig(this, 'master_authorized_networks_config', index);
+    return new DataGoogleContainerClusterMasterAuthorizedNetworksConfig(this, 'master_authorized_networks_config', index, false);
   }
 
   // master_version - computed: true, optional: false, required: false
@@ -1035,7 +1031,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // monitoring_config - computed: true, optional: false, required: false
   public monitoringConfig(index: string) {
-    return new DataGoogleContainerClusterMonitoringConfig(this, 'monitoring_config', index);
+    return new DataGoogleContainerClusterMonitoringConfig(this, 'monitoring_config', index, false);
   }
 
   // monitoring_service - computed: true, optional: false, required: false
@@ -1063,7 +1059,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // network_policy - computed: true, optional: false, required: false
   public networkPolicy(index: string) {
-    return new DataGoogleContainerClusterNetworkPolicy(this, 'network_policy', index);
+    return new DataGoogleContainerClusterNetworkPolicy(this, 'network_policy', index, false);
   }
 
   // networking_mode - computed: true, optional: false, required: false
@@ -1073,17 +1069,17 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // node_config - computed: true, optional: false, required: false
   public nodeConfig(index: string) {
-    return new DataGoogleContainerClusterNodeConfig(this, 'node_config', index);
+    return new DataGoogleContainerClusterNodeConfig(this, 'node_config', index, false);
   }
 
   // node_locations - computed: true, optional: false, required: false
   public get nodeLocations() {
-    return this.getListAttribute('node_locations');
+    return cdktf.Fn.tolist(this.getListAttribute('node_locations'));
   }
 
   // node_pool - computed: true, optional: false, required: false
   public nodePool(index: string) {
-    return new DataGoogleContainerClusterNodePool(this, 'node_pool', index);
+    return new DataGoogleContainerClusterNodePool(this, 'node_pool', index, false);
   }
 
   // node_version - computed: true, optional: false, required: false
@@ -1098,12 +1094,12 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // pod_security_policy_config - computed: true, optional: false, required: false
   public podSecurityPolicyConfig(index: string) {
-    return new DataGoogleContainerClusterPodSecurityPolicyConfig(this, 'pod_security_policy_config', index);
+    return new DataGoogleContainerClusterPodSecurityPolicyConfig(this, 'pod_security_policy_config', index, false);
   }
 
   // private_cluster_config - computed: true, optional: false, required: false
   public privateClusterConfig(index: string) {
-    return new DataGoogleContainerClusterPrivateClusterConfig(this, 'private_cluster_config', index);
+    return new DataGoogleContainerClusterPrivateClusterConfig(this, 'private_cluster_config', index, false);
   }
 
   // private_ipv6_google_access - computed: true, optional: false, required: false
@@ -1129,22 +1125,22 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // release_channel - computed: true, optional: false, required: false
   public releaseChannel(index: string) {
-    return new DataGoogleContainerClusterReleaseChannel(this, 'release_channel', index);
+    return new DataGoogleContainerClusterReleaseChannel(this, 'release_channel', index, false);
   }
 
   // remove_default_node_pool - computed: true, optional: false, required: false
   public get removeDefaultNodePool() {
-    return this.getBooleanAttribute('remove_default_node_pool') as any;
+    return this.getBooleanAttribute('remove_default_node_pool');
   }
 
   // resource_labels - computed: true, optional: false, required: false
-  public resourceLabels(key: string): string {
+  public resourceLabels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'resource_labels').lookup(key);
   }
 
   // resource_usage_export_config - computed: true, optional: false, required: false
   public resourceUsageExportConfig(index: string) {
-    return new DataGoogleContainerClusterResourceUsageExportConfig(this, 'resource_usage_export_config', index);
+    return new DataGoogleContainerClusterResourceUsageExportConfig(this, 'resource_usage_export_config', index, false);
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -1169,12 +1165,12 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   // vertical_pod_autoscaling - computed: true, optional: false, required: false
   public verticalPodAutoscaling(index: string) {
-    return new DataGoogleContainerClusterVerticalPodAutoscaling(this, 'vertical_pod_autoscaling', index);
+    return new DataGoogleContainerClusterVerticalPodAutoscaling(this, 'vertical_pod_autoscaling', index, false);
   }
 
   // workload_identity_config - computed: true, optional: false, required: false
   public workloadIdentityConfig(index: string) {
-    return new DataGoogleContainerClusterWorkloadIdentityConfig(this, 'workload_identity_config', index);
+    return new DataGoogleContainerClusterWorkloadIdentityConfig(this, 'workload_identity_config', index, false);
   }
 
   // =========

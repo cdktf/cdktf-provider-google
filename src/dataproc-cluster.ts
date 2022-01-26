@@ -18,7 +18,7 @@ export interface DataprocClusterConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#labels DataprocCluster#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The name of the cluster, unique within the project and zone.
   * 
@@ -60,7 +60,7 @@ export interface DataprocClusterClusterConfigAutoscalingConfig {
 }
 
 export function dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct?: DataprocClusterClusterConfigAutoscalingConfigOutputReference | DataprocClusterClusterConfigAutoscalingConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -77,7 +77,7 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -125,7 +125,7 @@ export interface DataprocClusterClusterConfigEncryptionConfig {
 }
 
 export function dataprocClusterClusterConfigEncryptionConfigToTerraform(struct?: DataprocClusterClusterConfigEncryptionConfigOutputReference | DataprocClusterClusterConfigEncryptionConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -142,7 +142,7 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -202,7 +202,7 @@ export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceCon
 }
 
 export function dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference | DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -221,7 +221,7 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -261,7 +261,7 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   // enable_integrity_monitoring - computed: false, optional: true, required: false
   private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
   public get enableIntegrityMonitoring() {
-    return this.getBooleanAttribute('enable_integrity_monitoring') as any;
+    return this.getBooleanAttribute('enable_integrity_monitoring');
   }
   public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
     this._enableIntegrityMonitoring = value;
@@ -277,7 +277,7 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   // enable_secure_boot - computed: false, optional: true, required: false
   private _enableSecureBoot?: boolean | cdktf.IResolvable; 
   public get enableSecureBoot() {
-    return this.getBooleanAttribute('enable_secure_boot') as any;
+    return this.getBooleanAttribute('enable_secure_boot');
   }
   public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
     this._enableSecureBoot = value;
@@ -293,7 +293,7 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   // enable_vtpm - computed: false, optional: true, required: false
   private _enableVtpm?: boolean | cdktf.IResolvable; 
   public get enableVtpm() {
-    return this.getBooleanAttribute('enable_vtpm') as any;
+    return this.getBooleanAttribute('enable_vtpm');
   }
   public set enableVtpm(value: boolean | cdktf.IResolvable) {
     this._enableVtpm = value;
@@ -318,7 +318,7 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#metadata DataprocCluster#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * The name or self_link of the Google Compute Engine network to the cluster will be part of. Conflicts with subnetwork. If neither is specified, this defaults to the "default" network.
   * 
@@ -364,13 +364,13 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
 }
 
 export function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigOutputReference | DataprocClusterClusterConfigGceClusterConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     internal_ip_only: cdktf.booleanToTerraform(struct!.internalIpOnly),
-    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     network: cdktf.stringToTerraform(struct!.network),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceAccountScopes),
@@ -389,7 +389,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -465,7 +465,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   // internal_ip_only - computed: false, optional: true, required: false
   private _internalIpOnly?: boolean | cdktf.IResolvable; 
   public get internalIpOnly() {
-    return this.getBooleanAttribute('internal_ip_only') as any;
+    return this.getBooleanAttribute('internal_ip_only');
   }
   public set internalIpOnly(value: boolean | cdktf.IResolvable) {
     this._internalIpOnly = value;
@@ -479,12 +479,11 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -530,7 +529,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   // service_account_scopes - computed: true, optional: true, required: false
   private _serviceAccountScopes?: string[]; 
   public get serviceAccountScopes() {
-    return this.getListAttribute('service_account_scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('service_account_scopes'));
   }
   public set serviceAccountScopes(value: string[]) {
     this._serviceAccountScopes = value;
@@ -562,7 +561,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   // tags - computed: false, optional: true, required: false
   private _tags?: string[]; 
   public get tags() {
-    return this.getListAttribute('tags');
+    return cdktf.Fn.tolist(this.getListAttribute('tags'));
   }
   public set tags(value: string[]) {
     this._tags = value;
@@ -592,7 +591,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this as any, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -622,8 +621,8 @@ export interface DataprocClusterClusterConfigInitializationAction {
   readonly timeoutSec?: number;
 }
 
-export function dataprocClusterClusterConfigInitializationActionToTerraform(struct?: DataprocClusterClusterConfigInitializationAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataprocClusterClusterConfigInitializationActionToTerraform(struct?: DataprocClusterClusterConfigInitializationAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -648,8 +647,8 @@ export interface DataprocClusterClusterConfigMasterConfigAccelerators {
   readonly acceleratorType: string;
 }
 
-export function dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigMasterConfigAccelerators): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigMasterConfigAccelerators | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -681,7 +680,7 @@ export interface DataprocClusterClusterConfigMasterConfigDiskConfig {
 }
 
 export function dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference | DataprocClusterClusterConfigMasterConfigDiskConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -700,7 +699,7 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -815,7 +814,7 @@ export interface DataprocClusterClusterConfigMasterConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerators DataprocCluster#accelerators}
   */
-  readonly accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[];
+  readonly accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[] | cdktf.IResolvable;
   /**
   * disk_config block
   * 
@@ -825,7 +824,7 @@ export interface DataprocClusterClusterConfigMasterConfig {
 }
 
 export function dataprocClusterClusterConfigMasterConfigToTerraform(struct?: DataprocClusterClusterConfigMasterConfigOutputReference | DataprocClusterClusterConfigMasterConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -847,7 +846,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -918,6 +917,11 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
     return this._imageUri;
   }
 
+  // instance_names - computed: true, optional: false, required: false
+  public get instanceNames() {
+    return this.getListAttribute('instance_names');
+  }
+
   // machine_type - computed: true, optional: true, required: false
   private _machineType?: string; 
   public get machineType() {
@@ -967,12 +971,12 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[]; 
+  private _accelerators?: DataprocClusterClusterConfigMasterConfigAccelerators[] | cdktf.IResolvable; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('accelerators') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('accelerators')));
   }
-  public set accelerators(value: DataprocClusterClusterConfigMasterConfigAccelerators[]) {
+  public set accelerators(value: DataprocClusterClusterConfigMasterConfigAccelerators[] | cdktf.IResolvable) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -984,7 +988,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(this, "disk_config", true);
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -1021,7 +1025,7 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
 }
 
 export function dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference | DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1040,7 +1044,7 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1141,7 +1145,7 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfig {
 }
 
 export function dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference | DataprocClusterClusterConfigPreemptibleWorkerConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1159,7 +1163,7 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1190,6 +1194,11 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
     }
   }
 
+  // instance_names - computed: true, optional: false, required: false
+  public get instanceNames() {
+    return this.getListAttribute('instance_names');
+  }
+
   // num_instances - computed: true, optional: true, required: false
   private _numInstances?: number; 
   public get numInstances() {
@@ -1207,7 +1216,7 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(this, "disk_config", true);
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -1319,7 +1328,7 @@ by Dataproc
 }
 
 export function dataprocClusterClusterConfigSecurityConfigKerberosConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference | DataprocClusterClusterConfigSecurityConfigKerberosConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1350,7 +1359,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1526,7 +1535,7 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   // enable_kerberos - computed: false, optional: true, required: false
   private _enableKerberos?: boolean | cdktf.IResolvable; 
   public get enableKerberos() {
-    return this.getBooleanAttribute('enable_kerberos') as any;
+    return this.getBooleanAttribute('enable_kerberos');
   }
   public set enableKerberos(value: boolean | cdktf.IResolvable) {
     this._enableKerberos = value;
@@ -1703,7 +1712,7 @@ export interface DataprocClusterClusterConfigSecurityConfig {
 }
 
 export function dataprocClusterClusterConfigSecurityConfigToTerraform(struct?: DataprocClusterClusterConfigSecurityConfigOutputReference | DataprocClusterClusterConfigSecurityConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1720,7 +1729,7 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1746,7 +1755,7 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
   }
 
   // kerberos_config - computed: false, optional: false, required: true
-  private _kerberosConfig = new DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(this as any, "kerberos_config", true);
+  private _kerberosConfig = new DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(this, "kerberos_config", true);
   public get kerberosConfig() {
     return this._kerberosConfig;
   }
@@ -1776,18 +1785,18 @@ export interface DataprocClusterClusterConfigSoftwareConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#override_properties DataprocCluster#override_properties}
   */
-  readonly overrideProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly overrideProperties?: { [key: string]: string };
 }
 
 export function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: DataprocClusterClusterConfigSoftwareConfigOutputReference | DataprocClusterClusterConfigSoftwareConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     image_version: cdktf.stringToTerraform(struct!.imageVersion),
     optional_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.optionalComponents),
-    override_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.overrideProperties),
+    override_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.overrideProperties),
   }
 }
 
@@ -1799,7 +1808,7 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1855,7 +1864,7 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   // optional_components - computed: false, optional: true, required: false
   private _optionalComponents?: string[]; 
   public get optionalComponents() {
-    return this.getListAttribute('optional_components');
+    return cdktf.Fn.tolist(this.getListAttribute('optional_components'));
   }
   public set optionalComponents(value: string[]) {
     this._optionalComponents = value;
@@ -1869,12 +1878,11 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   }
 
   // override_properties - computed: false, optional: true, required: false
-  private _overrideProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _overrideProperties?: { [key: string]: string }; 
   public get overrideProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('override_properties') as any;
+    return this.getStringMapAttribute('override_properties');
   }
-  public set overrideProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set overrideProperties(value: { [key: string]: string }) {
     this._overrideProperties = value;
   }
   public resetOverrideProperties() {
@@ -1883,6 +1891,11 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get overridePropertiesInput() {
     return this._overrideProperties;
+  }
+
+  // properties - computed: true, optional: false, required: false
+  public properties(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'properties').lookup(key);
   }
 }
 export interface DataprocClusterClusterConfigWorkerConfigAccelerators {
@@ -1900,8 +1913,8 @@ export interface DataprocClusterClusterConfigWorkerConfigAccelerators {
   readonly acceleratorType: string;
 }
 
-export function dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigAccelerators): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigAccelerators | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1933,7 +1946,7 @@ export interface DataprocClusterClusterConfigWorkerConfigDiskConfig {
 }
 
 export function dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference | DataprocClusterClusterConfigWorkerConfigDiskConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1952,7 +1965,7 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2067,7 +2080,7 @@ export interface DataprocClusterClusterConfigWorkerConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#accelerators DataprocCluster#accelerators}
   */
-  readonly accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[];
+  readonly accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[] | cdktf.IResolvable;
   /**
   * disk_config block
   * 
@@ -2077,7 +2090,7 @@ export interface DataprocClusterClusterConfigWorkerConfig {
 }
 
 export function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: DataprocClusterClusterConfigWorkerConfigOutputReference | DataprocClusterClusterConfigWorkerConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2099,7 +2112,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2170,6 +2183,11 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
     return this._imageUri;
   }
 
+  // instance_names - computed: true, optional: false, required: false
+  public get instanceNames() {
+    return this.getListAttribute('instance_names');
+  }
+
   // machine_type - computed: true, optional: true, required: false
   private _machineType?: string; 
   public get machineType() {
@@ -2219,12 +2237,12 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
 
   // accelerators - computed: false, optional: true, required: false
-  private _accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[]; 
+  private _accelerators?: DataprocClusterClusterConfigWorkerConfigAccelerators[] | cdktf.IResolvable; 
   public get accelerators() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('accelerators') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('accelerators')));
   }
-  public set accelerators(value: DataprocClusterClusterConfigWorkerConfigAccelerators[]) {
+  public set accelerators(value: DataprocClusterClusterConfigWorkerConfigAccelerators[] | cdktf.IResolvable) {
     this._accelerators = value;
   }
   public resetAccelerators() {
@@ -2236,7 +2254,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(this as any, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(this, "disk_config", true);
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -2287,7 +2305,7 @@ export interface DataprocClusterClusterConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#initialization_action DataprocCluster#initialization_action}
   */
-  readonly initializationAction?: DataprocClusterClusterConfigInitializationAction[];
+  readonly initializationAction?: DataprocClusterClusterConfigInitializationAction[] | cdktf.IResolvable;
   /**
   * master_config block
   * 
@@ -2321,7 +2339,7 @@ export interface DataprocClusterClusterConfig {
 }
 
 export function dataprocClusterClusterConfigToTerraform(struct?: DataprocClusterClusterConfigOutputReference | DataprocClusterClusterConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2348,7 +2366,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2433,6 +2451,11 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
     }
   }
 
+  // bucket - computed: true, optional: false, required: false
+  public get bucket() {
+    return this.getStringAttribute('bucket');
+  }
+
   // staging_bucket - computed: false, optional: true, required: false
   private _stagingBucket?: string; 
   public get stagingBucket() {
@@ -2466,7 +2489,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // autoscaling_config - computed: false, optional: true, required: false
-  private _autoscalingConfig = new DataprocClusterClusterConfigAutoscalingConfigOutputReference(this as any, "autoscaling_config", true);
+  private _autoscalingConfig = new DataprocClusterClusterConfigAutoscalingConfigOutputReference(this, "autoscaling_config", true);
   public get autoscalingConfig() {
     return this._autoscalingConfig;
   }
@@ -2482,7 +2505,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig = new DataprocClusterClusterConfigEncryptionConfigOutputReference(this as any, "encryption_config", true);
+  private _encryptionConfig = new DataprocClusterClusterConfigEncryptionConfigOutputReference(this, "encryption_config", true);
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
@@ -2498,7 +2521,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // gce_cluster_config - computed: false, optional: true, required: false
-  private _gceClusterConfig = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this as any, "gce_cluster_config", true);
+  private _gceClusterConfig = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this, "gce_cluster_config", true);
   public get gceClusterConfig() {
     return this._gceClusterConfig;
   }
@@ -2514,12 +2537,12 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // initialization_action - computed: false, optional: true, required: false
-  private _initializationAction?: DataprocClusterClusterConfigInitializationAction[]; 
+  private _initializationAction?: DataprocClusterClusterConfigInitializationAction[] | cdktf.IResolvable; 
   public get initializationAction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('initialization_action') as any;
+    return this.interpolationForAttribute('initialization_action');
   }
-  public set initializationAction(value: DataprocClusterClusterConfigInitializationAction[]) {
+  public set initializationAction(value: DataprocClusterClusterConfigInitializationAction[] | cdktf.IResolvable) {
     this._initializationAction = value;
   }
   public resetInitializationAction() {
@@ -2531,7 +2554,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // master_config - computed: false, optional: true, required: false
-  private _masterConfig = new DataprocClusterClusterConfigMasterConfigOutputReference(this as any, "master_config", true);
+  private _masterConfig = new DataprocClusterClusterConfigMasterConfigOutputReference(this, "master_config", true);
   public get masterConfig() {
     return this._masterConfig;
   }
@@ -2547,7 +2570,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // preemptible_worker_config - computed: false, optional: true, required: false
-  private _preemptibleWorkerConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(this as any, "preemptible_worker_config", true);
+  private _preemptibleWorkerConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(this, "preemptible_worker_config", true);
   public get preemptibleWorkerConfig() {
     return this._preemptibleWorkerConfig;
   }
@@ -2563,7 +2586,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // security_config - computed: false, optional: true, required: false
-  private _securityConfig = new DataprocClusterClusterConfigSecurityConfigOutputReference(this as any, "security_config", true);
+  private _securityConfig = new DataprocClusterClusterConfigSecurityConfigOutputReference(this, "security_config", true);
   public get securityConfig() {
     return this._securityConfig;
   }
@@ -2579,7 +2602,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig = new DataprocClusterClusterConfigSoftwareConfigOutputReference(this as any, "software_config", true);
+  private _softwareConfig = new DataprocClusterClusterConfigSoftwareConfigOutputReference(this, "software_config", true);
   public get softwareConfig() {
     return this._softwareConfig;
   }
@@ -2595,7 +2618,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig = new DataprocClusterClusterConfigWorkerConfigOutputReference(this as any, "worker_config", true);
+  private _workerConfig = new DataprocClusterClusterConfigWorkerConfigOutputReference(this, "worker_config", true);
   public get workerConfig() {
     return this._workerConfig;
   }
@@ -2625,8 +2648,8 @@ export interface DataprocClusterTimeouts {
   readonly update?: string;
 }
 
-export function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeoutsOutputReference | DataprocClusterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataprocClusterTimeoutsToTerraform(struct?: DataprocClusterTimeoutsOutputReference | DataprocClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2645,7 +2668,7 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2798,12 +2821,11 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // labels - computed: true, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -2860,7 +2882,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // cluster_config - computed: false, optional: true, required: false
-  private _clusterConfig = new DataprocClusterClusterConfigOutputReference(this as any, "cluster_config", true);
+  private _clusterConfig = new DataprocClusterClusterConfigOutputReference(this, "cluster_config", true);
   public get clusterConfig() {
     return this._clusterConfig;
   }
@@ -2876,7 +2898,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataprocClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataprocClusterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2898,7 +2920,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       graceful_decommission_timeout: cdktf.stringToTerraform(this._gracefulDecommissionTimeout),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

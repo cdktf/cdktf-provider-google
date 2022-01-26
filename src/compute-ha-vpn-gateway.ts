@@ -52,7 +52,7 @@ character, which cannot be a dash.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway#vpn_interfaces ComputeHaVpnGateway#vpn_interfaces}
   */
-  readonly vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[];
+  readonly vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable;
 }
 export interface ComputeHaVpnGatewayTimeouts {
   /**
@@ -65,8 +65,8 @@ export interface ComputeHaVpnGatewayTimeouts {
   readonly delete?: string;
 }
 
-export function computeHaVpnGatewayTimeoutsToTerraform(struct?: ComputeHaVpnGatewayTimeoutsOutputReference | ComputeHaVpnGatewayTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeHaVpnGatewayTimeoutsToTerraform(struct?: ComputeHaVpnGatewayTimeoutsOutputReference | ComputeHaVpnGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class ComputeHaVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -168,8 +168,8 @@ Not currently available publicly.
   readonly interconnectAttachment?: string;
 }
 
-export function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVpnGatewayVpnInterfaces): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVpnGatewayVpnInterfaces | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -310,7 +310,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeHaVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeHaVpnGatewayTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -326,12 +326,12 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
   }
 
   // vpn_interfaces - computed: false, optional: true, required: false
-  private _vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[]; 
+  private _vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable; 
   public get vpnInterfaces() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('vpn_interfaces') as any;
+    return this.interpolationForAttribute('vpn_interfaces');
   }
-  public set vpnInterfaces(value: ComputeHaVpnGatewayVpnInterfaces[]) {
+  public set vpnInterfaces(value: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable) {
     this._vpnInterfaces = value;
   }
   public resetVpnInterfaces() {

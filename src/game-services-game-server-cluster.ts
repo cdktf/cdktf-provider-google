@@ -25,7 +25,7 @@ key-value pair.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#labels GameServicesGameServerCluster#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Location of the Cluster.
   * 
@@ -74,7 +74,7 @@ GKE cluster.
 }
 
 export function gameServicesGameServerClusterConnectionInfoGkeClusterReferenceToTerraform(struct?: GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference | GameServicesGameServerClusterConnectionInfoGkeClusterReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutpu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -147,7 +147,7 @@ during creation.
 }
 
 export function gameServicesGameServerClusterConnectionInfoToTerraform(struct?: GameServicesGameServerClusterConnectionInfoOutputReference | GameServicesGameServerClusterConnectionInfo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -165,7 +165,7 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -210,7 +210,7 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
   }
 
   // gke_cluster_reference - computed: false, optional: false, required: true
-  private _gkeClusterReference = new GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference(this as any, "gke_cluster_reference", true);
+  private _gkeClusterReference = new GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference(this, "gke_cluster_reference", true);
   public get gkeClusterReference() {
     return this._gkeClusterReference;
   }
@@ -237,8 +237,8 @@ export interface GameServicesGameServerClusterTimeouts {
   readonly update?: string;
 }
 
-export function gameServicesGameServerClusterTimeoutsToTerraform(struct?: GameServicesGameServerClusterTimeoutsOutputReference | GameServicesGameServerClusterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerClusterTimeoutsToTerraform(struct?: GameServicesGameServerClusterTimeoutsOutputReference | GameServicesGameServerClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -257,7 +257,7 @@ export class GameServicesGameServerClusterTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -424,12 +424,11 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -491,7 +490,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   }
 
   // connection_info - computed: false, optional: false, required: true
-  private _connectionInfo = new GameServicesGameServerClusterConnectionInfoOutputReference(this as any, "connection_info", true);
+  private _connectionInfo = new GameServicesGameServerClusterConnectionInfoOutputReference(this, "connection_info", true);
   public get connectionInfo() {
     return this._connectionInfo;
   }
@@ -504,7 +503,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GameServicesGameServerClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GameServicesGameServerClusterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -527,7 +526,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
     return {
       cluster_id: cdktf.stringToTerraform(this._clusterId),
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       realm_id: cdktf.stringToTerraform(this._realmId),

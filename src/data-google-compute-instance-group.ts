@@ -91,7 +91,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
 
   // instances - computed: true, optional: false, required: false
   public get instances() {
-    return this.getListAttribute('instances');
+    return cdktf.Fn.tolist(this.getListAttribute('instances'));
   }
 
   // name - computed: false, optional: true, required: false
@@ -112,7 +112,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
 
   // named_port - computed: true, optional: false, required: false
   public namedPort(index: string) {
-    return new DataGoogleComputeInstanceGroupNamedPort(this, 'named_port', index);
+    return new DataGoogleComputeInstanceGroupNamedPort(this, 'named_port', index, false);
   }
 
   // network - computed: true, optional: false, required: false

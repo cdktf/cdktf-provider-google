@@ -12,13 +12,13 @@ export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#audit_config DataGoogleIamPolicy#audit_config}
   */
-  readonly auditConfig?: DataGoogleIamPolicyAuditConfig[];
+  readonly auditConfig?: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable;
   /**
   * binding block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#binding DataGoogleIamPolicy#binding}
   */
-  readonly binding?: DataGoogleIamPolicyBinding[];
+  readonly binding?: DataGoogleIamPolicyBinding[] | cdktf.IResolvable;
 }
 export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
   /**
@@ -31,8 +31,8 @@ export interface DataGoogleIamPolicyAuditConfigAuditLogConfigs {
   readonly logType: string;
 }
 
-export function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataGoogleIamPolicyAuditConfigAuditLogConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?: DataGoogleIamPolicyAuditConfigAuditLogConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -52,11 +52,11 @@ export interface DataGoogleIamPolicyAuditConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
   */
-  readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[];
+  readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[] | cdktf.IResolvable;
 }
 
-export function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyAuditConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIamPolicyAuditConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export interface DataGoogleIamPolicyBindingCondition {
 }
 
 export function dataGoogleIamPolicyBindingConditionToTerraform(struct?: DataGoogleIamPolicyBindingConditionOutputReference | DataGoogleIamPolicyBindingCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -101,7 +101,7 @@ export class DataGoogleIamPolicyBindingConditionOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -197,8 +197,8 @@ export interface DataGoogleIamPolicyBinding {
   readonly condition?: DataGoogleIamPolicyBindingCondition;
 }
 
-export function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBinding): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPolicyBinding | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -261,12 +261,12 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
 
   // audit_config - computed: false, optional: true, required: false
-  private _auditConfig?: DataGoogleIamPolicyAuditConfig[]; 
+  private _auditConfig?: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable; 
   public get auditConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('audit_config') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('audit_config')));
   }
-  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[]) {
+  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable) {
     this._auditConfig = value;
   }
   public resetAuditConfig() {
@@ -278,12 +278,12 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
 
   // binding - computed: false, optional: true, required: false
-  private _binding?: DataGoogleIamPolicyBinding[]; 
+  private _binding?: DataGoogleIamPolicyBinding[] | cdktf.IResolvable; 
   public get binding() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('binding') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('binding')));
   }
-  public set binding(value: DataGoogleIamPolicyBinding[]) {
+  public set binding(value: DataGoogleIamPolicyBinding[] | cdktf.IResolvable) {
     this._binding = value;
   }
   public resetBinding() {

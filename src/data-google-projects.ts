@@ -21,8 +21,7 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
 
   // lifecycle_state - computed: true, optional: false, required: false
@@ -42,8 +41,7 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
 
   // parent - computed: true, optional: false, required: false
   public get parent() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parent') as any;
+    return this.getStringMapAttribute('parent');
   }
 
   // project_id - computed: true, optional: false, required: false
@@ -111,7 +109,7 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
 
   // projects - computed: true, optional: false, required: false
   public projects(index: string) {
-    return new DataGoogleProjectsProjects(this, 'projects', index);
+    return new DataGoogleProjectsProjects(this, 'projects', index, false);
   }
 
   // =========

@@ -12,7 +12,7 @@ export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger#labels EventarcTrigger#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   * 
@@ -48,7 +48,7 @@ export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger#matching_criteria EventarcTrigger#matching_criteria}
   */
-  readonly matchingCriteria: EventarcTriggerMatchingCriteria[];
+  readonly matchingCriteria: EventarcTriggerMatchingCriteria[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -84,7 +84,7 @@ export interface EventarcTriggerDestinationCloudRunService {
 }
 
 export function eventarcTriggerDestinationCloudRunServiceToTerraform(struct?: EventarcTriggerDestinationCloudRunServiceOutputReference | EventarcTriggerDestinationCloudRunService): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -103,7 +103,7 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -201,7 +201,7 @@ export interface EventarcTriggerDestination {
 }
 
 export function eventarcTriggerDestinationToTerraform(struct?: EventarcTriggerDestinationOutputReference | EventarcTriggerDestination): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -219,7 +219,7 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -267,7 +267,7 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   }
 
   // cloud_run_service - computed: false, optional: true, required: false
-  private _cloudRunService = new EventarcTriggerDestinationCloudRunServiceOutputReference(this as any, "cloud_run_service", true);
+  private _cloudRunService = new EventarcTriggerDestinationCloudRunServiceOutputReference(this, "cloud_run_service", true);
   public get cloudRunService() {
     return this._cloudRunService;
   }
@@ -297,8 +297,8 @@ export interface EventarcTriggerMatchingCriteria {
   readonly value: string;
 }
 
-export function eventarcTriggerMatchingCriteriaToTerraform(struct?: EventarcTriggerMatchingCriteria): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventarcTriggerMatchingCriteriaToTerraform(struct?: EventarcTriggerMatchingCriteria | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -323,8 +323,8 @@ export interface EventarcTriggerTimeouts {
   readonly update?: string;
 }
 
-export function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeoutsOutputReference | EventarcTriggerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventarcTriggerTimeoutsToTerraform(struct?: EventarcTriggerTimeoutsOutputReference | EventarcTriggerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -343,7 +343,7 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -438,7 +438,7 @@ export interface EventarcTriggerTransportPubsub {
 }
 
 export function eventarcTriggerTransportPubsubToTerraform(struct?: EventarcTriggerTransportPubsubOutputReference | EventarcTriggerTransportPubsub): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -455,7 +455,7 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -478,6 +478,11 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
       this.isEmptyObject = Object.keys(value).length === 0;
       this._topic = value.topic;
     }
+  }
+
+  // subscription - computed: true, optional: false, required: false
+  public get subscription() {
+    return this.getStringAttribute('subscription');
   }
 
   // topic - computed: false, optional: true, required: false
@@ -506,7 +511,7 @@ export interface EventarcTriggerTransport {
 }
 
 export function eventarcTriggerTransportToTerraform(struct?: EventarcTriggerTransportOutputReference | EventarcTriggerTransport): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -523,7 +528,7 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -549,7 +554,7 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
   }
 
   // pubsub - computed: false, optional: true, required: false
-  private _pubsub = new EventarcTriggerTransportPubsubOutputReference(this as any, "pubsub", true);
+  private _pubsub = new EventarcTriggerTransportPubsubOutputReference(this, "pubsub", true);
   public get pubsub() {
     return this._pubsub;
   }
@@ -628,12 +633,11 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -713,7 +717,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new EventarcTriggerDestinationOutputReference(this as any, "destination", true);
+  private _destination = new EventarcTriggerDestinationOutputReference(this, "destination", true);
   public get destination() {
     return this._destination;
   }
@@ -726,12 +730,12 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // matching_criteria - computed: false, optional: false, required: true
-  private _matchingCriteria?: EventarcTriggerMatchingCriteria[]; 
+  private _matchingCriteria?: EventarcTriggerMatchingCriteria[] | cdktf.IResolvable; 
   public get matchingCriteria() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('matching_criteria') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('matching_criteria')));
   }
-  public set matchingCriteria(value: EventarcTriggerMatchingCriteria[]) {
+  public set matchingCriteria(value: EventarcTriggerMatchingCriteria[] | cdktf.IResolvable) {
     this._matchingCriteria = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -740,7 +744,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventarcTriggerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventarcTriggerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -756,7 +760,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // transport - computed: false, optional: true, required: false
-  private _transport = new EventarcTriggerTransportOutputReference(this as any, "transport", true);
+  private _transport = new EventarcTriggerTransportOutputReference(this, "transport", true);
   public get transport() {
     return this._transport;
   }
@@ -777,7 +781,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

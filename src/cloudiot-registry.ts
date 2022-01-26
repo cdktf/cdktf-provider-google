@@ -12,7 +12,7 @@ export interface CloudiotRegistryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#http_config CloudiotRegistry#http_config}
   */
-  readonly httpConfig?: { [key: string]: string } | cdktf.IResolvable;
+  readonly httpConfig?: { [key: string]: string };
   /**
   * The default logging verbosity for activity from devices in this
 registry. Specifies which events should be written to logs. For
@@ -28,7 +28,7 @@ will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#mqtt_config CloudiotRegistry#mqtt_config}
   */
-  readonly mqttConfig?: { [key: string]: string } | cdktf.IResolvable;
+  readonly mqttConfig?: { [key: string]: string };
   /**
   * A unique name for the resource, required by device registry.
   * 
@@ -51,19 +51,19 @@ If it is not provided, the provider region is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#state_notification_config CloudiotRegistry#state_notification_config}
   */
-  readonly stateNotificationConfig?: { [key: string]: string } | cdktf.IResolvable;
+  readonly stateNotificationConfig?: { [key: string]: string };
   /**
   * credentials block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#credentials CloudiotRegistry#credentials}
   */
-  readonly credentials?: CloudiotRegistryCredentials[];
+  readonly credentials?: CloudiotRegistryCredentials[] | cdktf.IResolvable;
   /**
   * event_notification_configs block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#event_notification_configs CloudiotRegistry#event_notification_configs}
   */
-  readonly eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[];
+  readonly eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -77,16 +77,16 @@ export interface CloudiotRegistryCredentials {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#public_key_certificate CloudiotRegistry#public_key_certificate}
   */
-  readonly publicKeyCertificate: { [key: string]: string } | cdktf.IResolvable;
+  readonly publicKeyCertificate: { [key: string]: string };
 }
 
-export function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredentials): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistryCredentials | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    public_key_certificate: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.publicKeyCertificate),
+    public_key_certificate: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.publicKeyCertificate),
   }
 }
 
@@ -109,8 +109,8 @@ item.
   readonly subfolderMatches?: string;
 }
 
-export function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: CloudiotRegistryEventNotificationConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: CloudiotRegistryEventNotificationConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -135,8 +135,8 @@ export interface CloudiotRegistryTimeouts {
   readonly update?: string;
 }
 
-export function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeoutsOutputReference | CloudiotRegistryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTimeoutsOutputReference | CloudiotRegistryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -155,7 +155,7 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -290,12 +290,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   // ==========
 
   // http_config - computed: true, optional: true, required: false
-  private _httpConfig?: { [key: string]: string } | cdktf.IResolvable; 
+  private _httpConfig?: { [key: string]: string }; 
   public get httpConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_config') as any;
+    return this.getStringMapAttribute('http_config');
   }
-  public set httpConfig(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set httpConfig(value: { [key: string]: string }) {
     this._httpConfig = value;
   }
   public resetHttpConfig() {
@@ -328,12 +327,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // mqtt_config - computed: true, optional: true, required: false
-  private _mqttConfig?: { [key: string]: string } | cdktf.IResolvable; 
+  private _mqttConfig?: { [key: string]: string }; 
   public get mqttConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('mqtt_config') as any;
+    return this.getStringMapAttribute('mqtt_config');
   }
-  public set mqttConfig(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set mqttConfig(value: { [key: string]: string }) {
     this._mqttConfig = value;
   }
   public resetMqttConfig() {
@@ -390,12 +388,11 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // state_notification_config - computed: false, optional: true, required: false
-  private _stateNotificationConfig?: { [key: string]: string } | cdktf.IResolvable; 
+  private _stateNotificationConfig?: { [key: string]: string }; 
   public get stateNotificationConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('state_notification_config') as any;
+    return this.getStringMapAttribute('state_notification_config');
   }
-  public set stateNotificationConfig(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set stateNotificationConfig(value: { [key: string]: string }) {
     this._stateNotificationConfig = value;
   }
   public resetStateNotificationConfig() {
@@ -407,12 +404,12 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: CloudiotRegistryCredentials[]; 
+  private _credentials?: CloudiotRegistryCredentials[] | cdktf.IResolvable; 
   public get credentials() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('credentials') as any;
+    return this.interpolationForAttribute('credentials');
   }
-  public set credentials(value: CloudiotRegistryCredentials[]) {
+  public set credentials(value: CloudiotRegistryCredentials[] | cdktf.IResolvable) {
     this._credentials = value;
   }
   public resetCredentials() {
@@ -424,12 +421,12 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // event_notification_configs - computed: false, optional: true, required: false
-  private _eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[]; 
+  private _eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable; 
   public get eventNotificationConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('event_notification_configs') as any;
+    return this.interpolationForAttribute('event_notification_configs');
   }
-  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[]) {
+  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable) {
     this._eventNotificationConfigs = value;
   }
   public resetEventNotificationConfigs() {
@@ -441,7 +438,7 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudiotRegistryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudiotRegistryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -462,13 +459,13 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      http_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._httpConfig),
+      http_config: cdktf.hashMapper(cdktf.stringToTerraform)(this._httpConfig),
       log_level: cdktf.stringToTerraform(this._logLevel),
-      mqtt_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._mqttConfig),
+      mqtt_config: cdktf.hashMapper(cdktf.stringToTerraform)(this._mqttConfig),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      state_notification_config: cdktf.hashMapper(cdktf.anyToTerraform)(this._stateNotificationConfig),
+      state_notification_config: cdktf.hashMapper(cdktf.stringToTerraform)(this._stateNotificationConfig),
       credentials: cdktf.listMapper(cloudiotRegistryCredentialsToTerraform)(this._credentials),
       event_notification_configs: cdktf.listMapper(cloudiotRegistryEventNotificationConfigsToTerraform)(this._eventNotificationConfigs),
       timeouts: cloudiotRegistryTimeoutsToTerraform(this._timeouts.internalValue),

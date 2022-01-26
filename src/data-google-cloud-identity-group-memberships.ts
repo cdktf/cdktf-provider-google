@@ -53,13 +53,13 @@ export class DataGoogleCloudIdentityGroupMembershipsMemberships extends cdktf.Co
   // preferred_member_key - computed: true, optional: false, required: false
   public get preferredMemberKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('preferred_member_key') as any;
+    return this.interpolationForAttribute('preferred_member_key');
   }
 
   // roles - computed: true, optional: false, required: false
   public get roles() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('roles') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('roles')));
   }
 
   // type - computed: true, optional: false, required: false
@@ -132,7 +132,7 @@ export class DataGoogleCloudIdentityGroupMemberships extends cdktf.TerraformData
 
   // memberships - computed: true, optional: false, required: false
   public memberships(index: string) {
-    return new DataGoogleCloudIdentityGroupMembershipsMemberships(this, 'memberships', index);
+    return new DataGoogleCloudIdentityGroupMembershipsMemberships(this, 'memberships', index, false);
   }
 
   // =========

@@ -24,7 +24,7 @@ export class DataGoogleIamTestablePermissionsPermissions extends cdktf.ComplexCo
 
   // api_disabled - computed: true, optional: false, required: false
   public get apiDisabled() {
-    return this.getBooleanAttribute('api_disabled') as any;
+    return this.getBooleanAttribute('api_disabled');
   }
 
   // custom_support_level - computed: true, optional: false, required: false
@@ -125,7 +125,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
 
   // permissions - computed: true, optional: false, required: false
   public permissions(index: string) {
-    return new DataGoogleIamTestablePermissionsPermissions(this, 'permissions', index);
+    return new DataGoogleIamTestablePermissionsPermissions(this, 'permissions', index, false);
   }
 
   // stages - computed: false, optional: true, required: false

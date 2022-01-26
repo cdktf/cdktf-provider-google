@@ -31,7 +31,7 @@ key-value pair.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Location of the Deployment.
   * 
@@ -47,13 +47,13 @@ key-value pair.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#fleet_configs GameServicesGameServerConfig#fleet_configs}
   */
-  readonly fleetConfigs: GameServicesGameServerConfigFleetConfigs[];
+  readonly fleetConfigs: GameServicesGameServerConfigFleetConfigs[] | cdktf.IResolvable;
   /**
   * scaling_configs block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#scaling_configs GameServicesGameServerConfig#scaling_configs}
   */
-  readonly scalingConfigs?: GameServicesGameServerConfigScalingConfigs[];
+  readonly scalingConfigs?: GameServicesGameServerConfigScalingConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -84,8 +84,8 @@ The format of the spec can be found :
   readonly name?: string;
 }
 
-export function gameServicesGameServerConfigFleetConfigsToTerraform(struct?: GameServicesGameServerConfigFleetConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerConfigFleetConfigsToTerraform(struct?: GameServicesGameServerConfigFleetConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,8 +131,8 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
   readonly startTime?: string;
 }
 
-export function gameServicesGameServerConfigScalingConfigsSchedulesToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSchedules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerConfigScalingConfigsSchedulesToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSchedules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -150,16 +150,16 @@ export interface GameServicesGameServerConfigScalingConfigsSelectors {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
 }
 
-export function gameServicesGameServerConfigScalingConfigsSelectorsToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSelectors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerConfigScalingConfigsSelectorsToTerraform(struct?: GameServicesGameServerConfigScalingConfigsSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.labels),
+    labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
   }
 }
 
@@ -183,17 +183,17 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#schedules GameServicesGameServerConfig#schedules}
   */
-  readonly schedules?: GameServicesGameServerConfigScalingConfigsSchedules[];
+  readonly schedules?: GameServicesGameServerConfigScalingConfigsSchedules[] | cdktf.IResolvable;
   /**
   * selectors block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_config#selectors GameServicesGameServerConfig#selectors}
   */
-  readonly selectors?: GameServicesGameServerConfigScalingConfigsSelectors[];
+  readonly selectors?: GameServicesGameServerConfigScalingConfigsSelectors[] | cdktf.IResolvable;
 }
 
-export function gameServicesGameServerConfigScalingConfigsToTerraform(struct?: GameServicesGameServerConfigScalingConfigs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerConfigScalingConfigsToTerraform(struct?: GameServicesGameServerConfigScalingConfigs | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -216,8 +216,8 @@ export interface GameServicesGameServerConfigTimeouts {
   readonly delete?: string;
 }
 
-export function gameServicesGameServerConfigTimeoutsToTerraform(struct?: GameServicesGameServerConfigTimeoutsOutputReference | GameServicesGameServerConfigTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gameServicesGameServerConfigTimeoutsToTerraform(struct?: GameServicesGameServerConfigTimeoutsOutputReference | GameServicesGameServerConfigTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -235,7 +235,7 @@ export class GameServicesGameServerConfigTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -394,12 +394,11 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -448,12 +447,12 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
   }
 
   // fleet_configs - computed: false, optional: false, required: true
-  private _fleetConfigs?: GameServicesGameServerConfigFleetConfigs[]; 
+  private _fleetConfigs?: GameServicesGameServerConfigFleetConfigs[] | cdktf.IResolvable; 
   public get fleetConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('fleet_configs') as any;
+    return this.interpolationForAttribute('fleet_configs');
   }
-  public set fleetConfigs(value: GameServicesGameServerConfigFleetConfigs[]) {
+  public set fleetConfigs(value: GameServicesGameServerConfigFleetConfigs[] | cdktf.IResolvable) {
     this._fleetConfigs = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -462,12 +461,12 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
   }
 
   // scaling_configs - computed: false, optional: true, required: false
-  private _scalingConfigs?: GameServicesGameServerConfigScalingConfigs[]; 
+  private _scalingConfigs?: GameServicesGameServerConfigScalingConfigs[] | cdktf.IResolvable; 
   public get scalingConfigs() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scaling_configs') as any;
+    return this.interpolationForAttribute('scaling_configs');
   }
-  public set scalingConfigs(value: GameServicesGameServerConfigScalingConfigs[]) {
+  public set scalingConfigs(value: GameServicesGameServerConfigScalingConfigs[] | cdktf.IResolvable) {
     this._scalingConfigs = value;
   }
   public resetScalingConfigs() {
@@ -479,7 +478,7 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GameServicesGameServerConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GameServicesGameServerConfigTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -503,7 +502,7 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
       config_id: cdktf.stringToTerraform(this._configId),
       deployment_id: cdktf.stringToTerraform(this._deploymentId),
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       fleet_configs: cdktf.listMapper(gameServicesGameServerConfigFleetConfigsToTerraform)(this._fleetConfigs),

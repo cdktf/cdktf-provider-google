@@ -30,7 +30,7 @@ export class DataGoogleSecretManagerSecretReplicationUserManagedReplicas extends
   // customer_managed_encryption - computed: true, optional: false, required: false
   public get customerManagedEncryption() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('customer_managed_encryption') as any;
+    return this.interpolationForAttribute('customer_managed_encryption');
   }
 
   // location - computed: true, optional: false, required: false
@@ -43,20 +43,20 @@ export class DataGoogleSecretManagerSecretReplicationUserManaged extends cdktf.C
   // replicas - computed: true, optional: false, required: false
   public get replicas() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('replicas') as any;
+    return this.interpolationForAttribute('replicas');
   }
 }
 export class DataGoogleSecretManagerSecretReplication extends cdktf.ComplexComputedList {
 
   // automatic - computed: true, optional: false, required: false
   public get automatic() {
-    return this.getBooleanAttribute('automatic') as any;
+    return this.getBooleanAttribute('automatic');
   }
 
   // user_managed - computed: true, optional: false, required: false
   public get userManaged() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_managed') as any;
+    return this.interpolationForAttribute('user_managed');
   }
 }
 export class DataGoogleSecretManagerSecretRotation extends cdktf.ComplexComputedList {
@@ -135,7 +135,7 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -162,12 +162,12 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
 
   // replication - computed: true, optional: false, required: false
   public replication(index: string) {
-    return new DataGoogleSecretManagerSecretReplication(this, 'replication', index);
+    return new DataGoogleSecretManagerSecretReplication(this, 'replication', index, false);
   }
 
   // rotation - computed: true, optional: false, required: false
   public rotation(index: string) {
-    return new DataGoogleSecretManagerSecretRotation(this, 'rotation', index);
+    return new DataGoogleSecretManagerSecretRotation(this, 'rotation', index, false);
   }
 
   // secret_id - computed: false, optional: false, required: true
@@ -185,7 +185,7 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
 
   // topics - computed: true, optional: false, required: false
   public topics(index: string) {
-    return new DataGoogleSecretManagerSecretTopics(this, 'topics', index);
+    return new DataGoogleSecretManagerSecretTopics(this, 'topics', index, false);
   }
 
   // ttl - computed: true, optional: false, required: false

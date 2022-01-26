@@ -48,7 +48,7 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#max_version BigtableGcPolicy#max_version}
   */
-  readonly maxVersion?: BigtableGcPolicyMaxVersion[];
+  readonly maxVersion?: BigtableGcPolicyMaxVersion[] | cdktf.IResolvable;
 }
 export interface BigtableGcPolicyMaxAge {
   /**
@@ -66,7 +66,7 @@ export interface BigtableGcPolicyMaxAge {
 }
 
 export function bigtableGcPolicyMaxAgeToTerraform(struct?: BigtableGcPolicyMaxAgeOutputReference | BigtableGcPolicyMaxAge): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class BigtableGcPolicyMaxAgeOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -156,8 +156,8 @@ export interface BigtableGcPolicyMaxVersion {
   readonly number: number;
 }
 
-export function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigtableGcPolicyMaxVersionToTerraform(struct?: BigtableGcPolicyMaxVersion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -289,7 +289,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
 
   // max_age - computed: false, optional: true, required: false
-  private _maxAge = new BigtableGcPolicyMaxAgeOutputReference(this as any, "max_age", true);
+  private _maxAge = new BigtableGcPolicyMaxAgeOutputReference(this, "max_age", true);
   public get maxAge() {
     return this._maxAge;
   }
@@ -305,12 +305,12 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   }
 
   // max_version - computed: false, optional: true, required: false
-  private _maxVersion?: BigtableGcPolicyMaxVersion[]; 
+  private _maxVersion?: BigtableGcPolicyMaxVersion[] | cdktf.IResolvable; 
   public get maxVersion() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('max_version') as any;
+    return this.interpolationForAttribute('max_version');
   }
-  public set maxVersion(value: BigtableGcPolicyMaxVersion[]) {
+  public set maxVersion(value: BigtableGcPolicyMaxVersion[] | cdktf.IResolvable) {
     this._maxVersion = value;
   }
   public resetMaxVersion() {

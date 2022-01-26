@@ -35,7 +35,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#labels SpannerInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * A unique identifier for the instance, which cannot be changed after
 the instance is created. The name must be between 6 and 30 characters
@@ -87,8 +87,8 @@ export interface SpannerInstanceTimeouts {
   readonly update?: string;
 }
 
-export function spannerInstanceTimeoutsToTerraform(struct?: SpannerInstanceTimeoutsOutputReference | SpannerInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function spannerInstanceTimeoutsToTerraform(struct?: SpannerInstanceTimeoutsOutputReference | SpannerInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -107,7 +107,7 @@ export class SpannerInstanceTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -269,7 +269,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   // force_destroy - computed: false, optional: true, required: false
   private _forceDestroy?: boolean | cdktf.IResolvable; 
   public get forceDestroy() {
-    return this.getBooleanAttribute('force_destroy') as any;
+    return this.getBooleanAttribute('force_destroy');
   }
   public set forceDestroy(value: boolean | cdktf.IResolvable) {
     this._forceDestroy = value;
@@ -288,12 +288,11 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -374,7 +373,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SpannerInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpannerInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -398,7 +397,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
       config: cdktf.stringToTerraform(this._config),
       display_name: cdktf.stringToTerraform(this._displayName),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       num_nodes: cdktf.numberToTerraform(this._numNodes),
       processing_units: cdktf.numberToTerraform(this._processingUnits),

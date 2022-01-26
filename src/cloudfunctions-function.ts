@@ -18,7 +18,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#build_environment_variables CloudfunctionsFunction#build_environment_variables}
   */
-  readonly buildEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly buildEnvironmentVariables?: { [key: string]: string };
   /**
   * Description of the function.
   * 
@@ -36,7 +36,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#environment_variables CloudfunctionsFunction#environment_variables}
   */
-  readonly environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly environmentVariables?: { [key: string]: string };
   /**
   * URL which triggers function execution. Returned only if trigger_http is used.
   * 
@@ -54,7 +54,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#labels CloudfunctionsFunction#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The limit on the maximum number of function instances that may coexist at a given time.
   * 
@@ -156,7 +156,7 @@ export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
 }
 
 export function cloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference | CloudfunctionsFunctionEventTriggerFailurePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,7 +173,7 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -201,7 +201,7 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
   // retry - computed: false, optional: false, required: true
   private _retry?: boolean | cdktf.IResolvable; 
   public get retry() {
-    return this.getBooleanAttribute('retry') as any;
+    return this.getBooleanAttribute('retry');
   }
   public set retry(value: boolean | cdktf.IResolvable) {
     this._retry = value;
@@ -233,7 +233,7 @@ export interface CloudfunctionsFunctionEventTrigger {
 }
 
 export function cloudfunctionsFunctionEventTriggerToTerraform(struct?: CloudfunctionsFunctionEventTriggerOutputReference | CloudfunctionsFunctionEventTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -252,7 +252,7 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -316,7 +316,7 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
   }
 
   // failure_policy - computed: false, optional: true, required: false
-  private _failurePolicy = new CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(this as any, "failure_policy", true);
+  private _failurePolicy = new CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(this, "failure_policy", true);
   public get failurePolicy() {
     return this._failurePolicy;
   }
@@ -341,7 +341,7 @@ export interface CloudfunctionsFunctionSourceRepository {
 }
 
 export function cloudfunctionsFunctionSourceRepositoryToTerraform(struct?: CloudfunctionsFunctionSourceRepositoryOutputReference | CloudfunctionsFunctionSourceRepository): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -358,7 +358,7 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -381,6 +381,11 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
       this.isEmptyObject = Object.keys(value).length === 0;
       this._url = value.url;
     }
+  }
+
+  // deployed_url - computed: true, optional: false, required: false
+  public get deployedUrl() {
+    return this.getStringAttribute('deployed_url');
   }
 
   // url - computed: false, optional: false, required: true
@@ -415,8 +420,8 @@ export interface CloudfunctionsFunctionTimeouts {
   readonly update?: string;
 }
 
-export function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFunctionTimeoutsOutputReference | CloudfunctionsFunctionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cloudfunctionsFunctionTimeoutsToTerraform(struct?: CloudfunctionsFunctionTimeoutsOutputReference | CloudfunctionsFunctionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -436,7 +441,7 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -622,12 +627,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // build_environment_variables - computed: false, optional: true, required: false
-  private _buildEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable; 
+  private _buildEnvironmentVariables?: { [key: string]: string }; 
   public get buildEnvironmentVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('build_environment_variables') as any;
+    return this.getStringMapAttribute('build_environment_variables');
   }
-  public set buildEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set buildEnvironmentVariables(value: { [key: string]: string }) {
     this._buildEnvironmentVariables = value;
   }
   public resetBuildEnvironmentVariables() {
@@ -671,12 +675,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // environment_variables - computed: false, optional: true, required: false
-  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable; 
+  private _environmentVariables?: { [key: string]: string }; 
   public get environmentVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('environment_variables') as any;
+    return this.getStringMapAttribute('environment_variables');
   }
-  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set environmentVariables(value: { [key: string]: string }) {
     this._environmentVariables = value;
   }
   public resetEnvironmentVariables() {
@@ -725,12 +728,11 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -882,7 +884,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // trigger_http - computed: false, optional: true, required: false
   private _triggerHttp?: boolean | cdktf.IResolvable; 
   public get triggerHttp() {
-    return this.getBooleanAttribute('trigger_http') as any;
+    return this.getBooleanAttribute('trigger_http');
   }
   public set triggerHttp(value: boolean | cdktf.IResolvable) {
     this._triggerHttp = value;
@@ -928,7 +930,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // event_trigger - computed: false, optional: true, required: false
-  private _eventTrigger = new CloudfunctionsFunctionEventTriggerOutputReference(this as any, "event_trigger", true);
+  private _eventTrigger = new CloudfunctionsFunctionEventTriggerOutputReference(this, "event_trigger", true);
   public get eventTrigger() {
     return this._eventTrigger;
   }
@@ -944,7 +946,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // source_repository - computed: false, optional: true, required: false
-  private _sourceRepository = new CloudfunctionsFunctionSourceRepositoryOutputReference(this as any, "source_repository", true);
+  private _sourceRepository = new CloudfunctionsFunctionSourceRepositoryOutputReference(this, "source_repository", true);
   public get sourceRepository() {
     return this._sourceRepository;
   }
@@ -960,7 +962,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudfunctionsFunctionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CloudfunctionsFunctionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -982,13 +984,13 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       available_memory_mb: cdktf.numberToTerraform(this._availableMemoryMb),
-      build_environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._buildEnvironmentVariables),
+      build_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._buildEnvironmentVariables),
       description: cdktf.stringToTerraform(this._description),
       entry_point: cdktf.stringToTerraform(this._entryPoint),
-      environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._environmentVariables),
+      environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       https_trigger_url: cdktf.stringToTerraform(this._httpsTriggerUrl),
       ingress_settings: cdktf.stringToTerraform(this._ingressSettings),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       max_instances: cdktf.numberToTerraform(this._maxInstances),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

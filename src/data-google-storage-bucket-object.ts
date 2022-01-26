@@ -126,7 +126,7 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
 
   // customer_encryption - computed: true, optional: false, required: false
   public customerEncryption(index: string) {
-    return new DataGoogleStorageBucketObjectCustomerEncryption(this, 'customer_encryption', index);
+    return new DataGoogleStorageBucketObjectCustomerEncryption(this, 'customer_encryption', index, false);
   }
 
   // detect_md5hash - computed: true, optional: false, required: false
@@ -136,7 +136,7 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
 
   // event_based_hold - computed: true, optional: false, required: false
   public get eventBasedHold() {
-    return this.getBooleanAttribute('event_based_hold') as any;
+    return this.getBooleanAttribute('event_based_hold');
   }
 
   // id - computed: true, optional: true, required: false
@@ -160,7 +160,7 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string {
+  public metadata(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'metadata').lookup(key);
   }
 
@@ -202,7 +202,7 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
 
   // temporary_hold - computed: true, optional: false, required: false
   public get temporaryHold() {
-    return this.getBooleanAttribute('temporary_hold') as any;
+    return this.getBooleanAttribute('temporary_hold');
   }
 
   // =========

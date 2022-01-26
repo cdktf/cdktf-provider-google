@@ -62,7 +62,7 @@ to true or if other fields are updated while preview is true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment#labels DeploymentManagerDeployment#labels}
   */
-  readonly labels?: DeploymentManagerDeploymentLabels[];
+  readonly labels?: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable;
   /**
   * target block
   * 
@@ -91,8 +91,8 @@ export interface DeploymentManagerDeploymentLabels {
   readonly value?: string;
 }
 
-export function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManagerDeploymentLabels): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function deploymentManagerDeploymentLabelsToTerraform(struct?: DeploymentManagerDeploymentLabels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export interface DeploymentManagerDeploymentTargetConfig {
 }
 
 export function deploymentManagerDeploymentTargetConfigToTerraform(struct?: DeploymentManagerDeploymentTargetConfigOutputReference | DeploymentManagerDeploymentTargetConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -129,7 +129,7 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -183,8 +183,8 @@ configuration.
   readonly name?: string;
 }
 
-export function deploymentManagerDeploymentTargetImportsToTerraform(struct?: DeploymentManagerDeploymentTargetImports): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function deploymentManagerDeploymentTargetImportsToTerraform(struct?: DeploymentManagerDeploymentTargetImports | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -206,11 +206,11 @@ export interface DeploymentManagerDeploymentTarget {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment#imports DeploymentManagerDeployment#imports}
   */
-  readonly imports?: DeploymentManagerDeploymentTargetImports[];
+  readonly imports?: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable;
 }
 
 export function deploymentManagerDeploymentTargetToTerraform(struct?: DeploymentManagerDeploymentTargetOutputReference | DeploymentManagerDeploymentTarget): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -228,7 +228,7 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -260,7 +260,7 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   }
 
   // config - computed: false, optional: false, required: true
-  private _config = new DeploymentManagerDeploymentTargetConfigOutputReference(this as any, "config", true);
+  private _config = new DeploymentManagerDeploymentTargetConfigOutputReference(this, "config", true);
   public get config() {
     return this._config;
   }
@@ -273,12 +273,12 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   }
 
   // imports - computed: false, optional: true, required: false
-  private _imports?: DeploymentManagerDeploymentTargetImports[]; 
+  private _imports?: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable; 
   public get imports() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('imports') as any;
+    return this.interpolationForAttribute('imports');
   }
-  public set imports(value: DeploymentManagerDeploymentTargetImports[]) {
+  public set imports(value: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable) {
     this._imports = value;
   }
   public resetImports() {
@@ -304,8 +304,8 @@ export interface DeploymentManagerDeploymentTimeouts {
   readonly update?: string;
 }
 
-export function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeoutsOutputReference | DeploymentManagerDeploymentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function deploymentManagerDeploymentTimeoutsToTerraform(struct?: DeploymentManagerDeploymentTimeoutsOutputReference | DeploymentManagerDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -324,7 +324,7 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -536,7 +536,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   // preview - computed: false, optional: true, required: false
   private _preview?: boolean | cdktf.IResolvable; 
   public get preview() {
-    return this.getBooleanAttribute('preview') as any;
+    return this.getBooleanAttribute('preview');
   }
   public set preview(value: boolean | cdktf.IResolvable) {
     this._preview = value;
@@ -571,12 +571,12 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: DeploymentManagerDeploymentLabels[]; 
+  private _labels?: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable; 
   public get labels() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('labels')));
   }
-  public set labels(value: DeploymentManagerDeploymentLabels[]) {
+  public set labels(value: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable) {
     this._labels = value;
   }
   public resetLabels() {
@@ -588,7 +588,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // target - computed: false, optional: false, required: true
-  private _target = new DeploymentManagerDeploymentTargetOutputReference(this as any, "target", true);
+  private _target = new DeploymentManagerDeploymentTargetOutputReference(this, "target", true);
   public get target() {
     return this._target;
   }
@@ -601,7 +601,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DeploymentManagerDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DeploymentManagerDeploymentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

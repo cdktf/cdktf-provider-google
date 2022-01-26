@@ -28,7 +28,7 @@ A reference to a Topic resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#labels NetworkServicesEdgeCacheOrigin#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The maximum number of attempts to cache fill from this origin. Another attempt is made when a cache fill fails with one of the retryConditions.
 
@@ -147,7 +147,7 @@ Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
 }
 
 export function networkServicesEdgeCacheOriginTimeoutToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutOutputReference | NetworkServicesEdgeCacheOriginTimeout): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -166,7 +166,7 @@ export class NetworkServicesEdgeCacheOriginTimeoutOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -266,8 +266,8 @@ export interface NetworkServicesEdgeCacheOriginTimeouts {
   readonly update?: string;
 }
 
-export function networkServicesEdgeCacheOriginTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutsOutputReference | NetworkServicesEdgeCacheOriginTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkServicesEdgeCacheOriginTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheOriginTimeoutsOutputReference | NetworkServicesEdgeCacheOriginTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -286,7 +286,7 @@ export class NetworkServicesEdgeCacheOriginTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -460,12 +460,11 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -583,7 +582,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new NetworkServicesEdgeCacheOriginTimeoutOutputReference(this as any, "timeout", true);
+  private _timeout = new NetworkServicesEdgeCacheOriginTimeoutOutputReference(this, "timeout", true);
   public get timeout() {
     return this._timeout;
   }
@@ -599,7 +598,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkServicesEdgeCacheOriginTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkServicesEdgeCacheOriginTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -622,7 +621,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       failover_origin: cdktf.stringToTerraform(this._failoverOrigin),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       max_attempts: cdktf.numberToTerraform(this._maxAttempts),
       name: cdktf.stringToTerraform(this._name),
       origin_address: cdktf.stringToTerraform(this._originAddress),

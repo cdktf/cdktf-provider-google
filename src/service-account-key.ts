@@ -12,7 +12,7 @@ export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account_key#keepers ServiceAccountKey#keepers}
   */
-  readonly keepers?: { [key: string]: string } | cdktf.IResolvable;
+  readonly keepers?: { [key: string]: string };
   /**
   * The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048".
   * 
@@ -91,12 +91,11 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
   }
 
   // keepers - computed: false, optional: true, required: false
-  private _keepers?: { [key: string]: string } | cdktf.IResolvable; 
+  private _keepers?: { [key: string]: string }; 
   public get keepers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('keepers') as any;
+    return this.getStringMapAttribute('keepers');
   }
-  public set keepers(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set keepers(value: { [key: string]: string }) {
     this._keepers = value;
   }
   public resetKeepers() {
@@ -215,7 +214,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      keepers: cdktf.hashMapper(cdktf.anyToTerraform)(this._keepers),
+      keepers: cdktf.hashMapper(cdktf.stringToTerraform)(this._keepers),
       key_algorithm: cdktf.stringToTerraform(this._keyAlgorithm),
       private_key_type: cdktf.stringToTerraform(this._privateKeyType),
       public_key_data: cdktf.stringToTerraform(this._publicKeyData),

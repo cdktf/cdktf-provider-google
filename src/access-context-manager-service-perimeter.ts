@@ -109,7 +109,7 @@ be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY"
 }
 
 export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOutputReference | AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -127,7 +127,7 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOut
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -208,8 +208,8 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -233,11 +233,11 @@ field set to '*' will allow all methods AND permissions for all services.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#method_selectors AccessContextManagerServicePerimeter#method_selectors}
   */
-  readonly methodSelectors?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors[];
+  readonly methodSelectors?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors[] | cdktf.IResolvable;
 }
 
-export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -263,11 +263,11 @@ the perimeter.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#operations AccessContextManagerServicePerimeter#operations}
   */
-  readonly operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[];
+  readonly operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutputReference | AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -285,7 +285,7 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -333,12 +333,12 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[]; 
+  private _operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable; 
   public get operations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations') as any;
+    return this.interpolationForAttribute('operations');
   }
-  public set operations(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[]) {
+  public set operations(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable) {
     this._operations = value;
   }
   public resetOperations() {
@@ -364,8 +364,8 @@ export interface AccessContextManagerServicePerimeterSpecEgressPolicies {
   readonly egressTo?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo;
 }
 
-export function accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPolicies): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecEgressPolicies | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -402,8 +402,8 @@ of allowing all Google Cloud resources only is not supported.
   readonly resource?: string;
 }
 
-export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -435,11 +435,11 @@ allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#sources AccessContextManagerServicePerimeter#sources}
   */
-  readonly sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[];
+  readonly sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromOutputReference | AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -458,7 +458,7 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -528,12 +528,12 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[]; 
+  private _sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable; 
   public get sources() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sources') as any;
+    return this.interpolationForAttribute('sources');
   }
-  public set sources(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[]) {
+  public set sources(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable) {
     this._sources = value;
   }
   public resetSources() {
@@ -562,8 +562,8 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -587,11 +587,11 @@ field set to '*' will allow all methods AND permissions for all services.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#method_selectors AccessContextManagerServicePerimeter#method_selectors}
   */
-  readonly methodSelectors?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors[];
+  readonly methodSelectors?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors[] | cdktf.IResolvable;
 }
 
-export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -620,11 +620,11 @@ also matches the 'operations' field.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#operations AccessContextManagerServicePerimeter#operations}
   */
-  readonly operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[];
+  readonly operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOutputReference | AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -642,7 +642,7 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -690,12 +690,12 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[]; 
+  private _operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable; 
   public get operations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations') as any;
+    return this.interpolationForAttribute('operations');
   }
-  public set operations(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[]) {
+  public set operations(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable) {
     this._operations = value;
   }
   public resetOperations() {
@@ -721,8 +721,8 @@ export interface AccessContextManagerServicePerimeterSpecIngressPolicies {
   readonly ingressTo?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo;
 }
 
-export function accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPolicies): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterSpecIngressPolicies | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -750,7 +750,7 @@ list of APIs specified in 'allowedServices'.
 }
 
 export function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference | AccessContextManagerServicePerimeterSpecVpcAccessibleServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -768,7 +768,7 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -818,7 +818,7 @@ export class AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutput
   // enable_restriction - computed: false, optional: true, required: false
   private _enableRestriction?: boolean | cdktf.IResolvable; 
   public get enableRestriction() {
-    return this.getBooleanAttribute('enable_restriction') as any;
+    return this.getBooleanAttribute('enable_restriction');
   }
   public set enableRestriction(value: boolean | cdktf.IResolvable) {
     this._enableRestriction = value;
@@ -870,13 +870,13 @@ restrictions.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#egress_policies AccessContextManagerServicePerimeter#egress_policies}
   */
-  readonly egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[];
+  readonly egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable;
   /**
   * ingress_policies block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#ingress_policies AccessContextManagerServicePerimeter#ingress_policies}
   */
-  readonly ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[];
+  readonly ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable;
   /**
   * vpc_accessible_services block
   * 
@@ -886,7 +886,7 @@ restrictions.
 }
 
 export function accessContextManagerServicePerimeterSpecToTerraform(struct?: AccessContextManagerServicePerimeterSpecOutputReference | AccessContextManagerServicePerimeterSpec): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -908,7 +908,7 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1012,12 +1012,12 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
 
   // egress_policies - computed: false, optional: true, required: false
-  private _egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[]; 
+  private _egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable; 
   public get egressPolicies() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('egress_policies') as any;
+    return this.interpolationForAttribute('egress_policies');
   }
-  public set egressPolicies(value: AccessContextManagerServicePerimeterSpecEgressPolicies[]) {
+  public set egressPolicies(value: AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable) {
     this._egressPolicies = value;
   }
   public resetEgressPolicies() {
@@ -1029,12 +1029,12 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
 
   // ingress_policies - computed: false, optional: true, required: false
-  private _ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[]; 
+  private _ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable; 
   public get ingressPolicies() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_policies') as any;
+    return this.interpolationForAttribute('ingress_policies');
   }
-  public set ingressPolicies(value: AccessContextManagerServicePerimeterSpecIngressPolicies[]) {
+  public set ingressPolicies(value: AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable) {
     this._ingressPolicies = value;
   }
   public resetIngressPolicies() {
@@ -1046,7 +1046,7 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
 
   // vpc_accessible_services - computed: false, optional: true, required: false
-  private _vpcAccessibleServices = new AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference(this as any, "vpc_accessible_services", true);
+  private _vpcAccessibleServices = new AccessContextManagerServicePerimeterSpecVpcAccessibleServicesOutputReference(this, "vpc_accessible_services", true);
   public get vpcAccessibleServices() {
     return this._vpcAccessibleServices;
   }
@@ -1081,7 +1081,7 @@ be allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY"
 }
 
 export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromOutputReference | AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1099,7 +1099,7 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1180,8 +1180,8 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1205,11 +1205,11 @@ field set to '*' will allow all methods AND permissions for all services.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#method_selectors AccessContextManagerServicePerimeter#method_selectors}
   */
-  readonly methodSelectors?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors[];
+  readonly methodSelectors?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors[] | cdktf.IResolvable;
 }
 
-export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1235,11 +1235,11 @@ the perimeter.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#operations AccessContextManagerServicePerimeter#operations}
   */
-  readonly operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[];
+  readonly operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOutputReference | AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1257,7 +1257,7 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1305,12 +1305,12 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[]; 
+  private _operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable; 
   public get operations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations') as any;
+    return this.interpolationForAttribute('operations');
   }
-  public set operations(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[]) {
+  public set operations(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable) {
     this._operations = value;
   }
   public resetOperations() {
@@ -1336,8 +1336,8 @@ export interface AccessContextManagerServicePerimeterStatusEgressPolicies {
   readonly egressTo?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo;
 }
 
-export function accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPolicies): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusEgressPolicies | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1374,8 +1374,8 @@ of allowing all Google Cloud resources only is not supported.
   readonly resource?: string;
 }
 
-export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1407,11 +1407,11 @@ allowed access. Possible values: ["IDENTITY_TYPE_UNSPECIFIED", "ANY_IDENTITY", "
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#sources AccessContextManagerServicePerimeter#sources}
   */
-  readonly sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[];
+  readonly sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromOutputReference | AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1430,7 +1430,7 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1500,12 +1500,12 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[]; 
+  private _sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable; 
   public get sources() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sources') as any;
+    return this.interpolationForAttribute('sources');
   }
-  public set sources(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[]) {
+  public set sources(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable) {
     this._sources = value;
   }
   public resetSources() {
@@ -1534,8 +1534,8 @@ corresponding 'serviceName' in 'ApiOperation'.
   readonly permission?: string;
 }
 
-export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1559,11 +1559,11 @@ field set to '*' will allow all methods AND permissions for all services.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#method_selectors AccessContextManagerServicePerimeter#method_selectors}
   */
-  readonly methodSelectors?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors[];
+  readonly methodSelectors?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors[] | cdktf.IResolvable;
 }
 
-export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1592,11 +1592,11 @@ also matches the 'operations' field.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#operations AccessContextManagerServicePerimeter#operations}
   */
-  readonly operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[];
+  readonly operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable;
 }
 
 export function accessContextManagerServicePerimeterStatusIngressPoliciesIngressToToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOutputReference | AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1614,7 +1614,7 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1662,12 +1662,12 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[]; 
+  private _operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable; 
   public get operations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations') as any;
+    return this.interpolationForAttribute('operations');
   }
-  public set operations(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[]) {
+  public set operations(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable) {
     this._operations = value;
   }
   public resetOperations() {
@@ -1693,8 +1693,8 @@ export interface AccessContextManagerServicePerimeterStatusIngressPolicies {
   readonly ingressTo?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo;
 }
 
-export function accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPolicies): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform(struct?: AccessContextManagerServicePerimeterStatusIngressPolicies | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1722,7 +1722,7 @@ list of APIs specified in 'allowedServices'.
 }
 
 export function accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform(struct?: AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference | AccessContextManagerServicePerimeterStatusVpcAccessibleServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1740,7 +1740,7 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1774,7 +1774,7 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
   // allowed_services - computed: false, optional: true, required: false
   private _allowedServices?: string[]; 
   public get allowedServices() {
-    return this.getListAttribute('allowed_services');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_services'));
   }
   public set allowedServices(value: string[]) {
     this._allowedServices = value;
@@ -1790,7 +1790,7 @@ export class AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutp
   // enable_restriction - computed: false, optional: true, required: false
   private _enableRestriction?: boolean | cdktf.IResolvable; 
   public get enableRestriction() {
-    return this.getBooleanAttribute('enable_restriction') as any;
+    return this.getBooleanAttribute('enable_restriction');
   }
   public set enableRestriction(value: boolean | cdktf.IResolvable) {
     this._enableRestriction = value;
@@ -1842,13 +1842,13 @@ restrictions.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#egress_policies AccessContextManagerServicePerimeter#egress_policies}
   */
-  readonly egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[];
+  readonly egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable;
   /**
   * ingress_policies block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#ingress_policies AccessContextManagerServicePerimeter#ingress_policies}
   */
-  readonly ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[];
+  readonly ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable;
   /**
   * vpc_accessible_services block
   * 
@@ -1858,7 +1858,7 @@ restrictions.
 }
 
 export function accessContextManagerServicePerimeterStatusToTerraform(struct?: AccessContextManagerServicePerimeterStatusOutputReference | AccessContextManagerServicePerimeterStatus): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1880,7 +1880,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1970,7 +1970,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   // restricted_services - computed: false, optional: true, required: false
   private _restrictedServices?: string[]; 
   public get restrictedServices() {
-    return this.getListAttribute('restricted_services');
+    return cdktf.Fn.tolist(this.getListAttribute('restricted_services'));
   }
   public set restrictedServices(value: string[]) {
     this._restrictedServices = value;
@@ -1984,12 +1984,12 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
 
   // egress_policies - computed: false, optional: true, required: false
-  private _egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[]; 
+  private _egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable; 
   public get egressPolicies() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('egress_policies') as any;
+    return this.interpolationForAttribute('egress_policies');
   }
-  public set egressPolicies(value: AccessContextManagerServicePerimeterStatusEgressPolicies[]) {
+  public set egressPolicies(value: AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable) {
     this._egressPolicies = value;
   }
   public resetEgressPolicies() {
@@ -2001,12 +2001,12 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
 
   // ingress_policies - computed: false, optional: true, required: false
-  private _ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[]; 
+  private _ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable; 
   public get ingressPolicies() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_policies') as any;
+    return this.interpolationForAttribute('ingress_policies');
   }
-  public set ingressPolicies(value: AccessContextManagerServicePerimeterStatusIngressPolicies[]) {
+  public set ingressPolicies(value: AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable) {
     this._ingressPolicies = value;
   }
   public resetIngressPolicies() {
@@ -2018,7 +2018,7 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
 
   // vpc_accessible_services - computed: false, optional: true, required: false
-  private _vpcAccessibleServices = new AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference(this as any, "vpc_accessible_services", true);
+  private _vpcAccessibleServices = new AccessContextManagerServicePerimeterStatusVpcAccessibleServicesOutputReference(this, "vpc_accessible_services", true);
   public get vpcAccessibleServices() {
     return this._vpcAccessibleServices;
   }
@@ -2048,8 +2048,8 @@ export interface AccessContextManagerServicePerimeterTimeouts {
   readonly update?: string;
 }
 
-export function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?: AccessContextManagerServicePerimeterTimeoutsOutputReference | AccessContextManagerServicePerimeterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?: AccessContextManagerServicePerimeterTimeoutsOutputReference | AccessContextManagerServicePerimeterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2068,7 +2068,7 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2290,7 +2290,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   // use_explicit_dry_run_spec - computed: false, optional: true, required: false
   private _useExplicitDryRunSpec?: boolean | cdktf.IResolvable; 
   public get useExplicitDryRunSpec() {
-    return this.getBooleanAttribute('use_explicit_dry_run_spec') as any;
+    return this.getBooleanAttribute('use_explicit_dry_run_spec');
   }
   public set useExplicitDryRunSpec(value: boolean | cdktf.IResolvable) {
     this._useExplicitDryRunSpec = value;
@@ -2304,7 +2304,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // spec - computed: false, optional: true, required: false
-  private _spec = new AccessContextManagerServicePerimeterSpecOutputReference(this as any, "spec", true);
+  private _spec = new AccessContextManagerServicePerimeterSpecOutputReference(this, "spec", true);
   public get spec() {
     return this._spec;
   }
@@ -2320,7 +2320,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // status - computed: false, optional: true, required: false
-  private _status = new AccessContextManagerServicePerimeterStatusOutputReference(this as any, "status", true);
+  private _status = new AccessContextManagerServicePerimeterStatusOutputReference(this, "status", true);
   public get status() {
     return this._status;
   }
@@ -2336,7 +2336,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AccessContextManagerServicePerimeterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AccessContextManagerServicePerimeterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

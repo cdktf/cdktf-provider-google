@@ -49,7 +49,7 @@ will be used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#labels RedisInstance#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -83,7 +83,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#redis_configs RedisInstance#redis_configs}
   */
-  readonly redisConfigs?: { [key: string]: string } | cdktf.IResolvable;
+  readonly redisConfigs?: { [key: string]: string };
   /**
   * The version of Redis software. If not provided, latest supported
 version will be used. Please check the API documentation linked 
@@ -174,8 +174,8 @@ export interface RedisInstanceTimeouts {
   readonly update?: string;
 }
 
-export function redisInstanceTimeoutsToTerraform(struct?: RedisInstanceTimeoutsOutputReference | RedisInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function redisInstanceTimeoutsToTerraform(struct?: RedisInstanceTimeoutsOutputReference | RedisInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +194,7 @@ export class RedisInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -354,7 +354,7 @@ export class RedisInstance extends cdktf.TerraformResource {
   // auth_enabled - computed: false, optional: true, required: false
   private _authEnabled?: boolean | cdktf.IResolvable; 
   public get authEnabled() {
-    return this.getBooleanAttribute('auth_enabled') as any;
+    return this.getBooleanAttribute('auth_enabled');
   }
   public set authEnabled(value: boolean | cdktf.IResolvable) {
     this._authEnabled = value;
@@ -441,12 +441,11 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -526,12 +525,11 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // redis_configs - computed: false, optional: true, required: false
-  private _redisConfigs?: { [key: string]: string } | cdktf.IResolvable; 
+  private _redisConfigs?: { [key: string]: string }; 
   public get redisConfigs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('redis_configs') as any;
+    return this.getStringMapAttribute('redis_configs');
   }
-  public set redisConfigs(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set redisConfigs(value: { [key: string]: string }) {
     this._redisConfigs = value;
   }
   public resetRedisConfigs() {
@@ -592,7 +590,7 @@ export class RedisInstance extends cdktf.TerraformResource {
 
   // server_ca_certs - computed: true, optional: false, required: false
   public serverCaCerts(index: string) {
-    return new RedisInstanceServerCaCerts(this, 'server_ca_certs', index);
+    return new RedisInstanceServerCaCerts(this, 'server_ca_certs', index, false);
   }
 
   // tier - computed: false, optional: true, required: false
@@ -628,7 +626,7 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RedisInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RedisInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -654,12 +652,12 @@ export class RedisInstance extends cdktf.TerraformResource {
       authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
       connect_mode: cdktf.stringToTerraform(this._connectMode),
       display_name: cdktf.stringToTerraform(this._displayName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location_id: cdktf.stringToTerraform(this._locationId),
       memory_size_gb: cdktf.numberToTerraform(this._memorySizeGb),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      redis_configs: cdktf.hashMapper(cdktf.anyToTerraform)(this._redisConfigs),
+      redis_configs: cdktf.hashMapper(cdktf.stringToTerraform)(this._redisConfigs),
       redis_version: cdktf.stringToTerraform(this._redisVersion),
       region: cdktf.stringToTerraform(this._region),
       reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),

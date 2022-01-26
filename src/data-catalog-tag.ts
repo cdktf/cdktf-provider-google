@@ -37,7 +37,7 @@ This field cannot be modified after creation.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag#fields DataCatalogTag#fields}
   */
-  readonly fields: DataCatalogTagFields[];
+  readonly fields: DataCatalogTagFields[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -82,8 +82,8 @@ export interface DataCatalogTagFields {
   readonly timestampValue?: string;
 }
 
-export function dataCatalogTagFieldsToTerraform(struct?: DataCatalogTagFields): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataCatalogTagFieldsToTerraform(struct?: DataCatalogTagFields | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,8 +112,8 @@ export interface DataCatalogTagTimeouts {
   readonly update?: string;
 }
 
-export function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeoutsOutputReference | DataCatalogTagTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataCatalogTagTimeoutsToTerraform(struct?: DataCatalogTagTimeoutsOutputReference | DataCatalogTagTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class DataCatalogTagTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -322,12 +322,12 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
 
   // fields - computed: false, optional: false, required: true
-  private _fields?: DataCatalogTagFields[]; 
+  private _fields?: DataCatalogTagFields[] | cdktf.IResolvable; 
   public get fields() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('fields') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('fields')));
   }
-  public set fields(value: DataCatalogTagFields[]) {
+  public set fields(value: DataCatalogTagFields[] | cdktf.IResolvable) {
     this._fields = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -336,7 +336,7 @@ export class DataCatalogTag extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataCatalogTagTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataCatalogTagTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

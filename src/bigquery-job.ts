@@ -24,7 +24,7 @@ export interface BigqueryJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#labels BigqueryJob#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The geographic location of the job. The default value is US.
   * 
@@ -105,13 +105,13 @@ export class BigqueryJobStatus extends cdktf.ComplexComputedList {
   // error_result - computed: true, optional: false, required: false
   public get errorResult() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('error_result') as any;
+    return this.interpolationForAttribute('error_result');
   }
 
   // errors - computed: true, optional: false, required: false
   public get errors() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('errors') as any;
+    return this.interpolationForAttribute('errors');
   }
 
   // state - computed: true, optional: false, required: false
@@ -130,7 +130,7 @@ The BigQuery Service Account associated with your project requires access to thi
 }
 
 export function bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobCopyDestinationEncryptionConfigurationOutputReference | BigqueryJobCopyDestinationEncryptionConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -147,7 +147,7 @@ export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -184,6 +184,11 @@ export class BigqueryJobCopyDestinationEncryptionConfigurationOutputReference ex
   public get kmsKeyNameInput() {
     return this._kmsKeyName;
   }
+
+  // kms_key_version - computed: true, optional: false, required: false
+  public get kmsKeyVersion() {
+    return this.getStringAttribute('kms_key_version');
+  }
 }
 export interface BigqueryJobCopyDestinationTable {
   /**
@@ -208,7 +213,7 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 }
 
 export function bigqueryJobCopyDestinationTableToTerraform(struct?: BigqueryJobCopyDestinationTableOutputReference | BigqueryJobCopyDestinationTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -227,7 +232,7 @@ export class BigqueryJobCopyDestinationTableOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -331,8 +336,8 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
   readonly tableId: string;
 }
 
-export function bigqueryJobCopySourceTablesToTerraform(struct?: BigqueryJobCopySourceTables): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryJobCopySourceTablesToTerraform(struct?: BigqueryJobCopySourceTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -381,11 +386,11 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#source_tables BigqueryJob#source_tables}
   */
-  readonly sourceTables: BigqueryJobCopySourceTables[];
+  readonly sourceTables: BigqueryJobCopySourceTables[] | cdktf.IResolvable;
 }
 
 export function bigqueryJobCopyToTerraform(struct?: BigqueryJobCopyOutputReference | BigqueryJobCopy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -406,7 +411,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -488,7 +493,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   }
 
   // destination_encryption_configuration - computed: false, optional: true, required: false
-  private _destinationEncryptionConfiguration = new BigqueryJobCopyDestinationEncryptionConfigurationOutputReference(this as any, "destination_encryption_configuration", true);
+  private _destinationEncryptionConfiguration = new BigqueryJobCopyDestinationEncryptionConfigurationOutputReference(this, "destination_encryption_configuration", true);
   public get destinationEncryptionConfiguration() {
     return this._destinationEncryptionConfiguration;
   }
@@ -504,7 +509,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   }
 
   // destination_table - computed: false, optional: true, required: false
-  private _destinationTable = new BigqueryJobCopyDestinationTableOutputReference(this as any, "destination_table", true);
+  private _destinationTable = new BigqueryJobCopyDestinationTableOutputReference(this, "destination_table", true);
   public get destinationTable() {
     return this._destinationTable;
   }
@@ -520,12 +525,12 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   }
 
   // source_tables - computed: false, optional: false, required: true
-  private _sourceTables?: BigqueryJobCopySourceTables[]; 
+  private _sourceTables?: BigqueryJobCopySourceTables[] | cdktf.IResolvable; 
   public get sourceTables() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source_tables') as any;
+    return this.interpolationForAttribute('source_tables');
   }
-  public set sourceTables(value: BigqueryJobCopySourceTables[]) {
+  public set sourceTables(value: BigqueryJobCopySourceTables[] | cdktf.IResolvable) {
     this._sourceTables = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -555,7 +560,7 @@ export interface BigqueryJobExtractSourceModel {
 }
 
 export function bigqueryJobExtractSourceModelToTerraform(struct?: BigqueryJobExtractSourceModelOutputReference | BigqueryJobExtractSourceModel): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -574,7 +579,7 @@ export class BigqueryJobExtractSourceModelOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -673,7 +678,7 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 }
 
 export function bigqueryJobExtractSourceTableToTerraform(struct?: BigqueryJobExtractSourceTableOutputReference | BigqueryJobExtractSourceTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -692,7 +697,7 @@ export class BigqueryJobExtractSourceTableOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -830,7 +835,7 @@ Default is ','
 }
 
 export function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtractOutputReference | BigqueryJobExtract): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -854,7 +859,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -985,7 +990,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   // print_header - computed: false, optional: true, required: false
   private _printHeader?: boolean | cdktf.IResolvable; 
   public get printHeader() {
-    return this.getBooleanAttribute('print_header') as any;
+    return this.getBooleanAttribute('print_header');
   }
   public set printHeader(value: boolean | cdktf.IResolvable) {
     this._printHeader = value;
@@ -1001,7 +1006,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   // use_avro_logical_types - computed: false, optional: true, required: false
   private _useAvroLogicalTypes?: boolean | cdktf.IResolvable; 
   public get useAvroLogicalTypes() {
-    return this.getBooleanAttribute('use_avro_logical_types') as any;
+    return this.getBooleanAttribute('use_avro_logical_types');
   }
   public set useAvroLogicalTypes(value: boolean | cdktf.IResolvable) {
     this._useAvroLogicalTypes = value;
@@ -1015,7 +1020,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   }
 
   // source_model - computed: false, optional: true, required: false
-  private _sourceModel = new BigqueryJobExtractSourceModelOutputReference(this as any, "source_model", true);
+  private _sourceModel = new BigqueryJobExtractSourceModelOutputReference(this, "source_model", true);
   public get sourceModel() {
     return this._sourceModel;
   }
@@ -1031,7 +1036,7 @@ export class BigqueryJobExtractOutputReference extends cdktf.ComplexObject {
   }
 
   // source_table - computed: false, optional: true, required: false
-  private _sourceTable = new BigqueryJobExtractSourceTableOutputReference(this as any, "source_table", true);
+  private _sourceTable = new BigqueryJobExtractSourceTableOutputReference(this, "source_table", true);
   public get sourceTable() {
     return this._sourceTable;
   }
@@ -1057,7 +1062,7 @@ The BigQuery Service Account associated with your project requires access to thi
 }
 
 export function bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobLoadDestinationEncryptionConfigurationOutputReference | BigqueryJobLoadDestinationEncryptionConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1074,7 +1079,7 @@ export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1111,6 +1116,11 @@ export class BigqueryJobLoadDestinationEncryptionConfigurationOutputReference ex
   public get kmsKeyNameInput() {
     return this._kmsKeyName;
   }
+
+  // kms_key_version - computed: true, optional: false, required: false
+  public get kmsKeyVersion() {
+    return this.getStringAttribute('kms_key_version');
+  }
 }
 export interface BigqueryJobLoadDestinationTable {
   /**
@@ -1135,7 +1145,7 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 }
 
 export function bigqueryJobLoadDestinationTableToTerraform(struct?: BigqueryJobLoadDestinationTableOutputReference | BigqueryJobLoadDestinationTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1154,7 +1164,7 @@ export class BigqueryJobLoadDestinationTableOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1261,7 +1271,7 @@ but in OnePlatform the field will be treated as unset.
 }
 
 export function bigqueryJobLoadTimePartitioningToTerraform(struct?: BigqueryJobLoadTimePartitioningOutputReference | BigqueryJobLoadTimePartitioning): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1280,7 +1290,7 @@ export class BigqueryJobLoadTimePartitioningOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1531,7 +1541,7 @@ Creation, truncation and append actions occur as one atomic update upon job comp
 }
 
 export function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoadOutputReference | BigqueryJobLoad): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1566,7 +1576,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1702,7 +1712,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   // allow_jagged_rows - computed: false, optional: true, required: false
   private _allowJaggedRows?: boolean | cdktf.IResolvable; 
   public get allowJaggedRows() {
-    return this.getBooleanAttribute('allow_jagged_rows') as any;
+    return this.getBooleanAttribute('allow_jagged_rows');
   }
   public set allowJaggedRows(value: boolean | cdktf.IResolvable) {
     this._allowJaggedRows = value;
@@ -1718,7 +1728,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   // allow_quoted_newlines - computed: false, optional: true, required: false
   private _allowQuotedNewlines?: boolean | cdktf.IResolvable; 
   public get allowQuotedNewlines() {
-    return this.getBooleanAttribute('allow_quoted_newlines') as any;
+    return this.getBooleanAttribute('allow_quoted_newlines');
   }
   public set allowQuotedNewlines(value: boolean | cdktf.IResolvable) {
     this._allowQuotedNewlines = value;
@@ -1734,7 +1744,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   // autodetect - computed: false, optional: true, required: false
   private _autodetect?: boolean | cdktf.IResolvable; 
   public get autodetect() {
-    return this.getBooleanAttribute('autodetect') as any;
+    return this.getBooleanAttribute('autodetect');
   }
   public set autodetect(value: boolean | cdktf.IResolvable) {
     this._autodetect = value;
@@ -1798,7 +1808,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   // ignore_unknown_values - computed: false, optional: true, required: false
   private _ignoreUnknownValues?: boolean | cdktf.IResolvable; 
   public get ignoreUnknownValues() {
-    return this.getBooleanAttribute('ignore_unknown_values') as any;
+    return this.getBooleanAttribute('ignore_unknown_values');
   }
   public set ignoreUnknownValues(value: boolean | cdktf.IResolvable) {
     this._ignoreUnknownValues = value;
@@ -1953,7 +1963,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   }
 
   // destination_encryption_configuration - computed: false, optional: true, required: false
-  private _destinationEncryptionConfiguration = new BigqueryJobLoadDestinationEncryptionConfigurationOutputReference(this as any, "destination_encryption_configuration", true);
+  private _destinationEncryptionConfiguration = new BigqueryJobLoadDestinationEncryptionConfigurationOutputReference(this, "destination_encryption_configuration", true);
   public get destinationEncryptionConfiguration() {
     return this._destinationEncryptionConfiguration;
   }
@@ -1969,7 +1979,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   }
 
   // destination_table - computed: false, optional: false, required: true
-  private _destinationTable = new BigqueryJobLoadDestinationTableOutputReference(this as any, "destination_table", true);
+  private _destinationTable = new BigqueryJobLoadDestinationTableOutputReference(this, "destination_table", true);
   public get destinationTable() {
     return this._destinationTable;
   }
@@ -1982,7 +1992,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   }
 
   // time_partitioning - computed: false, optional: true, required: false
-  private _timePartitioning = new BigqueryJobLoadTimePartitioningOutputReference(this as any, "time_partitioning", true);
+  private _timePartitioning = new BigqueryJobLoadTimePartitioningOutputReference(this, "time_partitioning", true);
   public get timePartitioning() {
     return this._timePartitioning;
   }
@@ -2014,7 +2024,7 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}' if not.
 }
 
 export function bigqueryJobQueryDefaultDatasetToTerraform(struct?: BigqueryJobQueryDefaultDatasetOutputReference | BigqueryJobQueryDefaultDataset): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2032,7 +2042,7 @@ export class BigqueryJobQueryDefaultDatasetOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2103,7 +2113,7 @@ The BigQuery Service Account associated with your project requires access to thi
 }
 
 export function bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(struct?: BigqueryJobQueryDestinationEncryptionConfigurationOutputReference | BigqueryJobQueryDestinationEncryptionConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2120,7 +2130,7 @@ export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2157,6 +2167,11 @@ export class BigqueryJobQueryDestinationEncryptionConfigurationOutputReference e
   public get kmsKeyNameInput() {
     return this._kmsKeyName;
   }
+
+  // kms_key_version - computed: true, optional: false, required: false
+  public get kmsKeyVersion() {
+    return this.getStringAttribute('kms_key_version');
+  }
 }
 export interface BigqueryJobQueryDestinationTable {
   /**
@@ -2181,7 +2196,7 @@ or of the form 'projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 }
 
 export function bigqueryJobQueryDestinationTableToTerraform(struct?: BigqueryJobQueryDestinationTableOutputReference | BigqueryJobQueryDestinationTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2200,7 +2215,7 @@ export class BigqueryJobQueryDestinationTableOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2305,7 +2320,7 @@ used to populate the schema and query results of the script job. Possible values
 }
 
 export function bigqueryJobQueryScriptOptionsToTerraform(struct?: BigqueryJobQueryScriptOptionsOutputReference | BigqueryJobQueryScriptOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2324,7 +2339,7 @@ export class BigqueryJobQueryScriptOptionsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2425,8 +2440,8 @@ Providing a inline code resource is equivalent to providing a URI for a file con
   readonly resourceUri?: string;
 }
 
-export function bigqueryJobQueryUserDefinedFunctionResourcesToTerraform(struct?: BigqueryJobQueryUserDefinedFunctionResources): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryJobQueryUserDefinedFunctionResourcesToTerraform(struct?: BigqueryJobQueryUserDefinedFunctionResources | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2562,11 +2577,11 @@ Creation, truncation and append actions occur as one atomic update upon job comp
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#user_defined_function_resources BigqueryJob#user_defined_function_resources}
   */
-  readonly userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[];
+  readonly userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable;
 }
 
 export function bigqueryJobQueryToTerraform(struct?: BigqueryJobQueryOutputReference | BigqueryJobQuery): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2599,7 +2614,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2723,7 +2738,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   // allow_large_results - computed: false, optional: true, required: false
   private _allowLargeResults?: boolean | cdktf.IResolvable; 
   public get allowLargeResults() {
-    return this.getBooleanAttribute('allow_large_results') as any;
+    return this.getBooleanAttribute('allow_large_results');
   }
   public set allowLargeResults(value: boolean | cdktf.IResolvable) {
     this._allowLargeResults = value;
@@ -2755,7 +2770,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   // flatten_results - computed: false, optional: true, required: false
   private _flattenResults?: boolean | cdktf.IResolvable; 
   public get flattenResults() {
-    return this.getBooleanAttribute('flatten_results') as any;
+    return this.getBooleanAttribute('flatten_results');
   }
   public set flattenResults(value: boolean | cdktf.IResolvable) {
     this._flattenResults = value;
@@ -2864,7 +2879,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   // use_legacy_sql - computed: false, optional: true, required: false
   private _useLegacySql?: boolean | cdktf.IResolvable; 
   public get useLegacySql() {
-    return this.getBooleanAttribute('use_legacy_sql') as any;
+    return this.getBooleanAttribute('use_legacy_sql');
   }
   public set useLegacySql(value: boolean | cdktf.IResolvable) {
     this._useLegacySql = value;
@@ -2880,7 +2895,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   // use_query_cache - computed: false, optional: true, required: false
   private _useQueryCache?: boolean | cdktf.IResolvable; 
   public get useQueryCache() {
-    return this.getBooleanAttribute('use_query_cache') as any;
+    return this.getBooleanAttribute('use_query_cache');
   }
   public set useQueryCache(value: boolean | cdktf.IResolvable) {
     this._useQueryCache = value;
@@ -2910,7 +2925,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   // default_dataset - computed: false, optional: true, required: false
-  private _defaultDataset = new BigqueryJobQueryDefaultDatasetOutputReference(this as any, "default_dataset", true);
+  private _defaultDataset = new BigqueryJobQueryDefaultDatasetOutputReference(this, "default_dataset", true);
   public get defaultDataset() {
     return this._defaultDataset;
   }
@@ -2926,7 +2941,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   // destination_encryption_configuration - computed: false, optional: true, required: false
-  private _destinationEncryptionConfiguration = new BigqueryJobQueryDestinationEncryptionConfigurationOutputReference(this as any, "destination_encryption_configuration", true);
+  private _destinationEncryptionConfiguration = new BigqueryJobQueryDestinationEncryptionConfigurationOutputReference(this, "destination_encryption_configuration", true);
   public get destinationEncryptionConfiguration() {
     return this._destinationEncryptionConfiguration;
   }
@@ -2942,7 +2957,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   // destination_table - computed: false, optional: true, required: false
-  private _destinationTable = new BigqueryJobQueryDestinationTableOutputReference(this as any, "destination_table", true);
+  private _destinationTable = new BigqueryJobQueryDestinationTableOutputReference(this, "destination_table", true);
   public get destinationTable() {
     return this._destinationTable;
   }
@@ -2958,7 +2973,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   // script_options - computed: false, optional: true, required: false
-  private _scriptOptions = new BigqueryJobQueryScriptOptionsOutputReference(this as any, "script_options", true);
+  private _scriptOptions = new BigqueryJobQueryScriptOptionsOutputReference(this, "script_options", true);
   public get scriptOptions() {
     return this._scriptOptions;
   }
@@ -2974,12 +2989,12 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   // user_defined_function_resources - computed: false, optional: true, required: false
-  private _userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[]; 
+  private _userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable; 
   public get userDefinedFunctionResources() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_defined_function_resources') as any;
+    return this.interpolationForAttribute('user_defined_function_resources');
   }
-  public set userDefinedFunctionResources(value: BigqueryJobQueryUserDefinedFunctionResources[]) {
+  public set userDefinedFunctionResources(value: BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable) {
     this._userDefinedFunctionResources = value;
   }
   public resetUserDefinedFunctionResources() {
@@ -3001,8 +3016,8 @@ export interface BigqueryJobTimeouts {
   readonly delete?: string;
 }
 
-export function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeoutsOutputReference | BigqueryJobTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeoutsOutputReference | BigqueryJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3020,7 +3035,7 @@ export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3172,12 +3187,11 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -3222,7 +3236,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
 
   // status - computed: true, optional: false, required: false
   public status(index: string) {
-    return new BigqueryJobStatus(this, 'status', index);
+    return new BigqueryJobStatus(this, 'status', index, false);
   }
 
   // user_email - computed: true, optional: false, required: false
@@ -3231,7 +3245,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // copy - computed: false, optional: true, required: false
-  private _copy = new BigqueryJobCopyOutputReference(this as any, "copy", true);
+  private _copy = new BigqueryJobCopyOutputReference(this, "copy", true);
   public get copy() {
     return this._copy;
   }
@@ -3247,7 +3261,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // extract - computed: false, optional: true, required: false
-  private _extract = new BigqueryJobExtractOutputReference(this as any, "extract", true);
+  private _extract = new BigqueryJobExtractOutputReference(this, "extract", true);
   public get extract() {
     return this._extract;
   }
@@ -3263,7 +3277,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // load - computed: false, optional: true, required: false
-  private _load = new BigqueryJobLoadOutputReference(this as any, "load", true);
+  private _load = new BigqueryJobLoadOutputReference(this, "load", true);
   public get load() {
     return this._load;
   }
@@ -3279,7 +3293,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // query - computed: false, optional: true, required: false
-  private _query = new BigqueryJobQueryOutputReference(this as any, "query", true);
+  private _query = new BigqueryJobQueryOutputReference(this, "query", true);
   public get query() {
     return this._query;
   }
@@ -3295,7 +3309,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryJobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryJobTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -3318,7 +3332,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
     return {
       job_id: cdktf.stringToTerraform(this._jobId),
       job_timeout_ms: cdktf.stringToTerraform(this._jobTimeoutMs),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       copy: bigqueryJobCopyToTerraform(this._copy.internalValue),

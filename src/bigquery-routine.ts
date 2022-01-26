@@ -80,7 +80,7 @@ the schema as returned by the API.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#arguments BigqueryRoutine#arguments}
   */
-  readonly arguments?: BigqueryRoutineArguments[];
+  readonly arguments?: BigqueryRoutineArguments[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -121,8 +121,8 @@ the schema as returned by the API.
   readonly name?: string;
 }
 
-export function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArguments): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArguments | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -149,8 +149,8 @@ export interface BigqueryRoutineTimeouts {
   readonly update?: string;
 }
 
-export function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeoutsOutputReference | BigqueryRoutineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeoutsOutputReference | BigqueryRoutineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -169,7 +169,7 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -472,12 +472,12 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
 
   // arguments - computed: false, optional: true, required: false
-  private _arguments?: BigqueryRoutineArguments[]; 
+  private _arguments?: BigqueryRoutineArguments[] | cdktf.IResolvable; 
   public get arguments() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('arguments') as any;
+    return this.interpolationForAttribute('arguments');
   }
-  public set arguments(value: BigqueryRoutineArguments[]) {
+  public set arguments(value: BigqueryRoutineArguments[] | cdktf.IResolvable) {
     this._arguments = value;
   }
   public resetArguments() {
@@ -489,7 +489,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryRoutineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryRoutineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

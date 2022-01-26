@@ -75,7 +75,7 @@ organize and group your datasets
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#labels BigqueryDataset#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
@@ -102,7 +102,7 @@ Changing this forces a new resource to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#access BigqueryDataset#access}
   */
-  readonly access?: BigqueryDatasetAccess[];
+  readonly access?: BigqueryDatasetAccess[] | cdktf.IResolvable;
   /**
   * default_encryption_configuration block
   * 
@@ -140,7 +140,7 @@ is 1,024 characters.
 }
 
 export function bigqueryDatasetAccessViewToTerraform(struct?: BigqueryDatasetAccessViewOutputReference | BigqueryDatasetAccessView): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +159,7 @@ export class BigqueryDatasetAccessViewOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -292,8 +292,8 @@ fred@example.com
   readonly view?: BigqueryDatasetAccessView;
 }
 
-export function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -319,7 +319,7 @@ access to this encryption key.
 }
 
 export function bigqueryDatasetDefaultEncryptionConfigurationToTerraform(struct?: BigqueryDatasetDefaultEncryptionConfigurationOutputReference | BigqueryDatasetDefaultEncryptionConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -336,7 +336,7 @@ export class BigqueryDatasetDefaultEncryptionConfigurationOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -389,8 +389,8 @@ export interface BigqueryDatasetTimeouts {
   readonly update?: string;
 }
 
-export function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeoutsOutputReference | BigqueryDatasetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeoutsOutputReference | BigqueryDatasetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -409,7 +409,7 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -598,7 +598,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   // delete_contents_on_destroy - computed: false, optional: true, required: false
   private _deleteContentsOnDestroy?: boolean | cdktf.IResolvable; 
   public get deleteContentsOnDestroy() {
-    return this.getBooleanAttribute('delete_contents_on_destroy') as any;
+    return this.getBooleanAttribute('delete_contents_on_destroy');
   }
   public set deleteContentsOnDestroy(value: boolean | cdktf.IResolvable) {
     this._deleteContentsOnDestroy = value;
@@ -654,12 +654,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -713,12 +712,12 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // access - computed: false, optional: true, required: false
-  private _access?: BigqueryDatasetAccess[]; 
+  private _access?: BigqueryDatasetAccess[] | cdktf.IResolvable; 
   public get access() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('access') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('access')));
   }
-  public set access(value: BigqueryDatasetAccess[]) {
+  public set access(value: BigqueryDatasetAccess[] | cdktf.IResolvable) {
     this._access = value;
   }
   public resetAccess() {
@@ -730,7 +729,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // default_encryption_configuration - computed: false, optional: true, required: false
-  private _defaultEncryptionConfiguration = new BigqueryDatasetDefaultEncryptionConfigurationOutputReference(this as any, "default_encryption_configuration", true);
+  private _defaultEncryptionConfiguration = new BigqueryDatasetDefaultEncryptionConfigurationOutputReference(this, "default_encryption_configuration", true);
   public get defaultEncryptionConfiguration() {
     return this._defaultEncryptionConfiguration;
   }
@@ -746,7 +745,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryDatasetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigqueryDatasetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -773,7 +772,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       delete_contents_on_destroy: cdktf.booleanToTerraform(this._deleteContentsOnDestroy),
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       access: cdktf.listMapper(bigqueryDatasetAccessToTerraform)(this._access),

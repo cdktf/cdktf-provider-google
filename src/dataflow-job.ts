@@ -36,7 +36,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job#labels DataflowJob#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The machine type to use for the job.
   * 
@@ -72,7 +72,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job#parameters DataflowJob#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * The project in which the resource belongs.
   * 
@@ -114,7 +114,7 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job#transform_name_mapping DataflowJob#transform_name_mapping}
   */
-  readonly transformNameMapping?: { [key: string]: string } | cdktf.IResolvable;
+  readonly transformNameMapping?: { [key: string]: string };
   /**
   * The zone in which the created job should run. If it is not provided, the provider zone is used.
   * 
@@ -135,8 +135,8 @@ export interface DataflowJobTimeouts {
   readonly update?: string;
 }
 
-export function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeoutsOutputReference | DataflowJobTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataflowJobTimeoutsToTerraform(struct?: DataflowJobTimeoutsOutputReference | DataflowJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -153,7 +153,7 @@ export class DataflowJobTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -256,7 +256,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   // additional_experiments - computed: false, optional: true, required: false
   private _additionalExperiments?: string[]; 
   public get additionalExperiments() {
-    return this.getListAttribute('additional_experiments');
+    return cdktf.Fn.tolist(this.getListAttribute('additional_experiments'));
   }
   public set additionalExperiments(value: string[]) {
     this._additionalExperiments = value;
@@ -272,7 +272,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   // enable_streaming_engine - computed: false, optional: true, required: false
   private _enableStreamingEngine?: boolean | cdktf.IResolvable; 
   public get enableStreamingEngine() {
-    return this.getBooleanAttribute('enable_streaming_engine') as any;
+    return this.getBooleanAttribute('enable_streaming_engine');
   }
   public set enableStreamingEngine(value: boolean | cdktf.IResolvable) {
     this._enableStreamingEngine = value;
@@ -328,12 +328,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -422,12 +421,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -534,12 +532,11 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // transform_name_mapping - computed: false, optional: true, required: false
-  private _transformNameMapping?: { [key: string]: string } | cdktf.IResolvable; 
+  private _transformNameMapping?: { [key: string]: string }; 
   public get transformNameMapping() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('transform_name_mapping') as any;
+    return this.getStringMapAttribute('transform_name_mapping');
   }
-  public set transformNameMapping(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set transformNameMapping(value: { [key: string]: string }) {
     this._transformNameMapping = value;
   }
   public resetTransformNameMapping() {
@@ -572,7 +569,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataflowJobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataflowJobTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -597,20 +594,20 @@ export class DataflowJob extends cdktf.TerraformResource {
       enable_streaming_engine: cdktf.booleanToTerraform(this._enableStreamingEngine),
       ip_configuration: cdktf.stringToTerraform(this._ipConfiguration),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       machine_type: cdktf.stringToTerraform(this._machineType),
       max_workers: cdktf.numberToTerraform(this._maxWorkers),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       on_delete: cdktf.stringToTerraform(this._onDelete),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       service_account_email: cdktf.stringToTerraform(this._serviceAccountEmail),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       temp_gcs_location: cdktf.stringToTerraform(this._tempGcsLocation),
       template_gcs_path: cdktf.stringToTerraform(this._templateGcsPath),
-      transform_name_mapping: cdktf.hashMapper(cdktf.anyToTerraform)(this._transformNameMapping),
+      transform_name_mapping: cdktf.hashMapper(cdktf.stringToTerraform)(this._transformNameMapping),
       zone: cdktf.stringToTerraform(this._zone),
       timeouts: dataflowJobTimeoutsToTerraform(this._timeouts.internalValue),
     };

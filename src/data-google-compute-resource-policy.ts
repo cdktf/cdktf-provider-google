@@ -81,13 +81,13 @@ export class DataGoogleComputeResourcePolicyInstanceSchedulePolicy extends cdktf
   // vm_start_schedule - computed: true, optional: false, required: false
   public get vmStartSchedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('vm_start_schedule') as any;
+    return this.interpolationForAttribute('vm_start_schedule');
   }
 
   // vm_stop_schedule - computed: true, optional: false, required: false
   public get vmStopSchedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('vm_stop_schedule') as any;
+    return this.interpolationForAttribute('vm_stop_schedule');
   }
 }
 export class DataGoogleComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy extends cdktf.ComplexComputedList {
@@ -143,7 +143,7 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicyScheduleWeekly
   // day_of_weeks - computed: true, optional: false, required: false
   public get dayOfWeeks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('day_of_weeks') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('day_of_weeks')));
   }
 }
 export class DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule extends cdktf.ComplexComputedList {
@@ -151,37 +151,36 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicySchedule exten
   // daily_schedule - computed: true, optional: false, required: false
   public get dailySchedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('daily_schedule') as any;
+    return this.interpolationForAttribute('daily_schedule');
   }
 
   // hourly_schedule - computed: true, optional: false, required: false
   public get hourlySchedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('hourly_schedule') as any;
+    return this.interpolationForAttribute('hourly_schedule');
   }
 
   // weekly_schedule - computed: true, optional: false, required: false
   public get weeklySchedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weekly_schedule') as any;
+    return this.interpolationForAttribute('weekly_schedule');
   }
 }
 export class DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProperties extends cdktf.ComplexComputedList {
 
   // guest_flush - computed: true, optional: false, required: false
   public get guestFlush() {
-    return this.getBooleanAttribute('guest_flush') as any;
+    return this.getBooleanAttribute('guest_flush');
   }
 
   // labels - computed: true, optional: false, required: false
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
 
   // storage_locations - computed: true, optional: false, required: false
   public get storageLocations() {
-    return this.getListAttribute('storage_locations');
+    return cdktf.Fn.tolist(this.getListAttribute('storage_locations'));
   }
 }
 export class DataGoogleComputeResourcePolicySnapshotSchedulePolicy extends cdktf.ComplexComputedList {
@@ -189,19 +188,19 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicy extends cdktf
   // retention_policy - computed: true, optional: false, required: false
   public get retentionPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('retention_policy') as any;
+    return this.interpolationForAttribute('retention_policy');
   }
 
   // schedule - computed: true, optional: false, required: false
   public get schedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schedule') as any;
+    return this.interpolationForAttribute('schedule');
   }
 
   // snapshot_properties - computed: true, optional: false, required: false
   public get snapshotProperties() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('snapshot_properties') as any;
+    return this.interpolationForAttribute('snapshot_properties');
   }
 }
 
@@ -253,7 +252,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
   // group_placement_policy - computed: true, optional: false, required: false
   public groupPlacementPolicy(index: string) {
-    return new DataGoogleComputeResourcePolicyGroupPlacementPolicy(this, 'group_placement_policy', index);
+    return new DataGoogleComputeResourcePolicyGroupPlacementPolicy(this, 'group_placement_policy', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -263,7 +262,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
   // instance_schedule_policy - computed: true, optional: false, required: false
   public instanceSchedulePolicy(index: string) {
-    return new DataGoogleComputeResourcePolicyInstanceSchedulePolicy(this, 'instance_schedule_policy', index);
+    return new DataGoogleComputeResourcePolicyInstanceSchedulePolicy(this, 'instance_schedule_policy', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -318,7 +317,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
   // snapshot_schedule_policy - computed: true, optional: false, required: false
   public snapshotSchedulePolicy(index: string) {
-    return new DataGoogleComputeResourcePolicySnapshotSchedulePolicy(this, 'snapshot_schedule_policy', index);
+    return new DataGoogleComputeResourcePolicySnapshotSchedulePolicy(this, 'snapshot_schedule_policy', index, false);
   }
 
   // =========

@@ -22,7 +22,7 @@ The expected format is 'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic#labels PubsubTopic#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Name of the topic.
   * 
@@ -67,7 +67,7 @@ and is not a valid configuration.
 }
 
 export function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicMessageStoragePolicyOutputReference | PubsubTopicMessageStoragePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -141,7 +141,7 @@ if the schema has been deleted.
 }
 
 export function pubsubTopicSchemaSettingsToTerraform(struct?: PubsubTopicSchemaSettingsOutputReference | PubsubTopicSchemaSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +159,7 @@ export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -234,8 +234,8 @@ export interface PubsubTopicTimeouts {
   readonly update?: string;
 }
 
-export function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeoutsOutputReference | PubsubTopicTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function pubsubTopicTimeoutsToTerraform(struct?: PubsubTopicTimeoutsOutputReference | PubsubTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -254,7 +254,7 @@ export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -407,12 +407,11 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -453,7 +452,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // message_storage_policy - computed: false, optional: true, required: false
-  private _messageStoragePolicy = new PubsubTopicMessageStoragePolicyOutputReference(this as any, "message_storage_policy", true);
+  private _messageStoragePolicy = new PubsubTopicMessageStoragePolicyOutputReference(this, "message_storage_policy", true);
   public get messageStoragePolicy() {
     return this._messageStoragePolicy;
   }
@@ -469,7 +468,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // schema_settings - computed: false, optional: true, required: false
-  private _schemaSettings = new PubsubTopicSchemaSettingsOutputReference(this as any, "schema_settings", true);
+  private _schemaSettings = new PubsubTopicSchemaSettingsOutputReference(this, "schema_settings", true);
   public get schemaSettings() {
     return this._schemaSettings;
   }
@@ -485,7 +484,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PubsubTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PubsubTopicTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -507,7 +506,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       message_storage_policy: pubsubTopicMessageStoragePolicyToTerraform(this._messageStoragePolicy.internalValue),

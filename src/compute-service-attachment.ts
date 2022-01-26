@@ -74,7 +74,7 @@ this service attachment.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#consumer_accept_lists ComputeServiceAttachment#consumer_accept_lists}
   */
-  readonly consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[];
+  readonly consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -110,8 +110,8 @@ create.
   readonly projectIdOrNum: string;
 }
 
-export function computeServiceAttachmentConsumerAcceptListsToTerraform(struct?: ComputeServiceAttachmentConsumerAcceptLists): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeServiceAttachmentConsumerAcceptListsToTerraform(struct?: ComputeServiceAttachmentConsumerAcceptLists | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -136,8 +136,8 @@ export interface ComputeServiceAttachmentTimeouts {
   readonly update?: string;
 }
 
-export function computeServiceAttachmentTimeoutsToTerraform(struct?: ComputeServiceAttachmentTimeoutsOutputReference | ComputeServiceAttachmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeServiceAttachmentTimeoutsToTerraform(struct?: ComputeServiceAttachmentTimeoutsOutputReference | ComputeServiceAttachmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -156,7 +156,7 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -293,7 +293,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
 
   // connected_endpoints - computed: true, optional: false, required: false
   public connectedEndpoints(index: string) {
-    return new ComputeServiceAttachmentConnectedEndpoints(this, 'connected_endpoints', index);
+    return new ComputeServiceAttachmentConnectedEndpoints(this, 'connected_endpoints', index, false);
   }
 
   // connection_preference - computed: false, optional: false, required: true
@@ -344,7 +344,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   // enable_proxy_protocol - computed: false, optional: false, required: true
   private _enableProxyProtocol?: boolean | cdktf.IResolvable; 
   public get enableProxyProtocol() {
-    return this.getBooleanAttribute('enable_proxy_protocol') as any;
+    return this.getBooleanAttribute('enable_proxy_protocol');
   }
   public set enableProxyProtocol(value: boolean | cdktf.IResolvable) {
     this._enableProxyProtocol = value;
@@ -441,12 +441,12 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
 
   // consumer_accept_lists - computed: false, optional: true, required: false
-  private _consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[]; 
+  private _consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable; 
   public get consumerAcceptLists() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('consumer_accept_lists') as any;
+    return this.interpolationForAttribute('consumer_accept_lists');
   }
-  public set consumerAcceptLists(value: ComputeServiceAttachmentConsumerAcceptLists[]) {
+  public set consumerAcceptLists(value: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable) {
     this._consumerAcceptLists = value;
   }
   public resetConsumerAcceptLists() {
@@ -458,7 +458,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeServiceAttachmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeServiceAttachmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

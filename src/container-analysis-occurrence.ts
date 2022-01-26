@@ -77,8 +77,8 @@ unambiguously computed to derive the payload.
   readonly signature?: string;
 }
 
-export function containerAnalysisOccurrenceAttestationSignaturesToTerraform(struct?: ContainerAnalysisOccurrenceAttestationSignatures): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerAnalysisOccurrenceAttestationSignaturesToTerraform(struct?: ContainerAnalysisOccurrenceAttestationSignatures | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -101,11 +101,11 @@ more signatures. A base64-encoded string.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_analysis_occurrence#signatures ContainerAnalysisOccurrence#signatures}
   */
-  readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[];
+  readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[] | cdktf.IResolvable;
 }
 
 export function containerAnalysisOccurrenceAttestationToTerraform(struct?: ContainerAnalysisOccurrenceAttestationOutputReference | ContainerAnalysisOccurrenceAttestation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -123,7 +123,7 @@ export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -168,12 +168,12 @@ export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf
   }
 
   // signatures - computed: false, optional: false, required: true
-  private _signatures?: ContainerAnalysisOccurrenceAttestationSignatures[]; 
+  private _signatures?: ContainerAnalysisOccurrenceAttestationSignatures[] | cdktf.IResolvable; 
   public get signatures() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('signatures') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('signatures')));
   }
-  public set signatures(value: ContainerAnalysisOccurrenceAttestationSignatures[]) {
+  public set signatures(value: ContainerAnalysisOccurrenceAttestationSignatures[] | cdktf.IResolvable) {
     this._signatures = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -196,8 +196,8 @@ export interface ContainerAnalysisOccurrenceTimeouts {
   readonly update?: string;
 }
 
-export function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalysisOccurrenceTimeoutsOutputReference | ContainerAnalysisOccurrenceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerAnalysisOccurrenceTimeoutsToTerraform(struct?: ContainerAnalysisOccurrenceTimeoutsOutputReference | ContainerAnalysisOccurrenceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -216,7 +216,7 @@ export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -430,7 +430,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // attestation - computed: false, optional: false, required: true
-  private _attestation = new ContainerAnalysisOccurrenceAttestationOutputReference(this as any, "attestation", true);
+  private _attestation = new ContainerAnalysisOccurrenceAttestationOutputReference(this, "attestation", true);
   public get attestation() {
     return this._attestation;
   }
@@ -443,7 +443,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerAnalysisOccurrenceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerAnalysisOccurrenceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

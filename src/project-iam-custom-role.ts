@@ -91,7 +91,7 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
 
   // deleted - computed: true, optional: false, required: false
   public get deleted() {
-    return this.getBooleanAttribute('deleted') as any;
+    return this.getBooleanAttribute('deleted');
   }
 
   // description - computed: false, optional: true, required: false
@@ -123,7 +123,7 @@ export class ProjectIamCustomRole extends cdktf.TerraformResource {
   // permissions - computed: false, optional: false, required: true
   private _permissions?: string[]; 
   public get permissions() {
-    return this.getListAttribute('permissions');
+    return cdktf.Fn.tolist(this.getListAttribute('permissions'));
   }
   public set permissions(value: string[]) {
     this._permissions = value;

@@ -42,7 +42,7 @@ export interface BillingAccountIamMemberCondition {
 }
 
 export function billingAccountIamMemberConditionToTerraform(struct?: BillingAccountIamMemberConditionOutputReference | BillingAccountIamMemberCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -61,7 +61,7 @@ export class BillingAccountIamMemberConditionOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -233,7 +233,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new BillingAccountIamMemberConditionOutputReference(this as any, "condition", true);
+  private _condition = new BillingAccountIamMemberConditionOutputReference(this, "condition", true);
   public get condition() {
     return this._condition;
   }

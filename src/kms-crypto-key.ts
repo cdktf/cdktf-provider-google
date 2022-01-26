@@ -32,7 +32,7 @@ Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key#labels KmsCryptoKey#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The resource name for the CryptoKey.
   * 
@@ -91,8 +91,8 @@ export interface KmsCryptoKeyTimeouts {
   readonly update?: string;
 }
 
-export function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeoutsOutputReference | KmsCryptoKeyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kmsCryptoKeyTimeoutsToTerraform(struct?: KmsCryptoKeyTimeoutsOutputReference | KmsCryptoKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -111,7 +111,7 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -213,7 +213,7 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
 }
 
 export function kmsCryptoKeyVersionTemplateToTerraform(struct?: KmsCryptoKeyVersionTemplateOutputReference | KmsCryptoKeyVersionTemplate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -231,7 +231,7 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -364,7 +364,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // import_only - computed: true, optional: true, required: false
   private _importOnly?: boolean | cdktf.IResolvable; 
   public get importOnly() {
-    return this.getBooleanAttribute('import_only') as any;
+    return this.getBooleanAttribute('import_only');
   }
   public set importOnly(value: boolean | cdktf.IResolvable) {
     this._importOnly = value;
@@ -391,12 +391,11 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -460,7 +459,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // skip_initial_version_creation - computed: false, optional: true, required: false
   private _skipInitialVersionCreation?: boolean | cdktf.IResolvable; 
   public get skipInitialVersionCreation() {
-    return this.getBooleanAttribute('skip_initial_version_creation') as any;
+    return this.getBooleanAttribute('skip_initial_version_creation');
   }
   public set skipInitialVersionCreation(value: boolean | cdktf.IResolvable) {
     this._skipInitialVersionCreation = value;
@@ -474,7 +473,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KmsCryptoKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KmsCryptoKeyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -490,7 +489,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // version_template - computed: false, optional: true, required: false
-  private _versionTemplate = new KmsCryptoKeyVersionTemplateOutputReference(this as any, "version_template", true);
+  private _versionTemplate = new KmsCryptoKeyVersionTemplateOutputReference(this, "version_template", true);
   public get versionTemplate() {
     return this._versionTemplate;
   }
@@ -514,7 +513,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       destroy_scheduled_duration: cdktf.stringToTerraform(this._destroyScheduledDuration),
       import_only: cdktf.booleanToTerraform(this._importOnly),
       key_ring: cdktf.stringToTerraform(this._keyRing),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       purpose: cdktf.stringToTerraform(this._purpose),
       rotation_period: cdktf.stringToTerraform(this._rotationPeriod),

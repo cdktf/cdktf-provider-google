@@ -91,7 +91,7 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
 
   // certs - computed: true, optional: false, required: false
   public certs(index: string) {
-    return new DataGoogleSqlCaCertsCerts(this, 'certs', index);
+    return new DataGoogleSqlCaCertsCerts(this, 'certs', index, false);
   }
 
   // id - computed: true, optional: true, required: false

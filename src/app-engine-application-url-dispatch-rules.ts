@@ -16,7 +16,7 @@ export interface AppEngineApplicationUrlDispatchRulesConfig extends cdktf.Terraf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#dispatch_rules AppEngineApplicationUrlDispatchRules#dispatch_rules}
   */
-  readonly dispatchRules: AppEngineApplicationUrlDispatchRulesDispatchRules[];
+  readonly dispatchRules: AppEngineApplicationUrlDispatchRulesDispatchRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -48,8 +48,8 @@ The sum of the lengths of the domain and path may not exceed 100 characters.
   readonly service: string;
 }
 
-export function appEngineApplicationUrlDispatchRulesDispatchRulesToTerraform(struct?: AppEngineApplicationUrlDispatchRulesDispatchRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appEngineApplicationUrlDispatchRulesDispatchRulesToTerraform(struct?: AppEngineApplicationUrlDispatchRulesDispatchRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -75,8 +75,8 @@ export interface AppEngineApplicationUrlDispatchRulesTimeouts {
   readonly update?: string;
 }
 
-export function appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(struct?: AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference | AppEngineApplicationUrlDispatchRulesTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(struct?: AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference | AppEngineApplicationUrlDispatchRulesTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,12 +244,12 @@ export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResourc
   }
 
   // dispatch_rules - computed: false, optional: false, required: true
-  private _dispatchRules?: AppEngineApplicationUrlDispatchRulesDispatchRules[]; 
+  private _dispatchRules?: AppEngineApplicationUrlDispatchRulesDispatchRules[] | cdktf.IResolvable; 
   public get dispatchRules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dispatch_rules') as any;
+    return this.interpolationForAttribute('dispatch_rules');
   }
-  public set dispatchRules(value: AppEngineApplicationUrlDispatchRulesDispatchRules[]) {
+  public set dispatchRules(value: AppEngineApplicationUrlDispatchRulesDispatchRules[] | cdktf.IResolvable) {
     this._dispatchRules = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -258,7 +258,7 @@ export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

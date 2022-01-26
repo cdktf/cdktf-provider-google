@@ -100,7 +100,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
   // auth_enabled - computed: true, optional: false, required: false
   public get authEnabled() {
-    return this.getBooleanAttribute('auth_enabled') as any;
+    return this.getBooleanAttribute('auth_enabled');
   }
 
   // auth_string - computed: true, optional: false, required: false
@@ -144,7 +144,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string {
+  public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
@@ -198,7 +198,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   }
 
   // redis_configs - computed: true, optional: false, required: false
-  public redisConfigs(key: string): string {
+  public redisConfigs(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'redis_configs').lookup(key);
   }
 
@@ -230,7 +230,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
 
   // server_ca_certs - computed: true, optional: false, required: false
   public serverCaCerts(index: string) {
-    return new DataGoogleRedisInstanceServerCaCerts(this, 'server_ca_certs', index);
+    return new DataGoogleRedisInstanceServerCaCerts(this, 'server_ca_certs', index, false);
   }
 
   // tier - computed: true, optional: false, required: false

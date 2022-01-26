@@ -73,7 +73,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 }
 
 export function bigtableAppProfileSingleClusterRoutingToTerraform(struct?: BigtableAppProfileSingleClusterRoutingOutputReference | BigtableAppProfileSingleClusterRouting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -125,7 +125,7 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
   // allow_transactional_writes - computed: false, optional: true, required: false
   private _allowTransactionalWrites?: boolean | cdktf.IResolvable; 
   public get allowTransactionalWrites() {
-    return this.getBooleanAttribute('allow_transactional_writes') as any;
+    return this.getBooleanAttribute('allow_transactional_writes');
   }
   public set allowTransactionalWrites(value: boolean | cdktf.IResolvable) {
     this._allowTransactionalWrites = value;
@@ -166,8 +166,8 @@ export interface BigtableAppProfileTimeouts {
   readonly update?: string;
 }
 
-export function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeoutsOutputReference | BigtableAppProfileTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bigtableAppProfileTimeoutsToTerraform(struct?: BigtableAppProfileTimeoutsOutputReference | BigtableAppProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -186,7 +186,7 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -355,7 +355,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   // ignore_warnings - computed: false, optional: true, required: false
   private _ignoreWarnings?: boolean | cdktf.IResolvable; 
   public get ignoreWarnings() {
-    return this.getBooleanAttribute('ignore_warnings') as any;
+    return this.getBooleanAttribute('ignore_warnings');
   }
   public set ignoreWarnings(value: boolean | cdktf.IResolvable) {
     this._ignoreWarnings = value;
@@ -387,7 +387,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   // multi_cluster_routing_use_any - computed: false, optional: true, required: false
   private _multiClusterRoutingUseAny?: boolean | cdktf.IResolvable; 
   public get multiClusterRoutingUseAny() {
-    return this.getBooleanAttribute('multi_cluster_routing_use_any') as any;
+    return this.getBooleanAttribute('multi_cluster_routing_use_any');
   }
   public set multiClusterRoutingUseAny(value: boolean | cdktf.IResolvable) {
     this._multiClusterRoutingUseAny = value;
@@ -422,7 +422,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // single_cluster_routing - computed: false, optional: true, required: false
-  private _singleClusterRouting = new BigtableAppProfileSingleClusterRoutingOutputReference(this as any, "single_cluster_routing", true);
+  private _singleClusterRouting = new BigtableAppProfileSingleClusterRoutingOutputReference(this, "single_cluster_routing", true);
   public get singleClusterRouting() {
     return this._singleClusterRouting;
   }
@@ -438,7 +438,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigtableAppProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BigtableAppProfileTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

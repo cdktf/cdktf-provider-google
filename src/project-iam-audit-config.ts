@@ -22,7 +22,7 @@ export interface ProjectIamAuditConfigConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_audit_config#audit_log_config ProjectIamAuditConfig#audit_log_config}
   */
-  readonly auditLogConfig: ProjectIamAuditConfigAuditLogConfig[];
+  readonly auditLogConfig: ProjectIamAuditConfigAuditLogConfig[] | cdktf.IResolvable;
 }
 export interface ProjectIamAuditConfigAuditLogConfig {
   /**
@@ -39,8 +39,8 @@ export interface ProjectIamAuditConfigAuditLogConfig {
   readonly logType: string;
 }
 
-export function projectIamAuditConfigAuditLogConfigToTerraform(struct?: ProjectIamAuditConfigAuditLogConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function projectIamAuditConfigAuditLogConfigToTerraform(struct?: ProjectIamAuditConfigAuditLogConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,12 +132,12 @@ export class ProjectIamAuditConfig extends cdktf.TerraformResource {
   }
 
   // audit_log_config - computed: false, optional: false, required: true
-  private _auditLogConfig?: ProjectIamAuditConfigAuditLogConfig[]; 
+  private _auditLogConfig?: ProjectIamAuditConfigAuditLogConfig[] | cdktf.IResolvable; 
   public get auditLogConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('audit_log_config') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('audit_log_config')));
   }
-  public set auditLogConfig(value: ProjectIamAuditConfigAuditLogConfig[]) {
+  public set auditLogConfig(value: ProjectIamAuditConfigAuditLogConfig[] | cdktf.IResolvable) {
     this._auditLogConfig = value;
   }
   // Temporarily expose input value. Use with caution.

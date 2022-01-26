@@ -31,7 +31,7 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
   // realms_selector - computed: true, optional: false, required: false
   public get realmsSelector() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('realms_selector') as any;
+    return this.interpolationForAttribute('realms_selector');
   }
 }
 
@@ -94,7 +94,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
 
   // game_server_config_overrides - computed: true, optional: false, required: false
   public gameServerConfigOverrides(index: string) {
-    return new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides(this, 'game_server_config_overrides', index);
+    return new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides(this, 'game_server_config_overrides', index, false);
   }
 
   // id - computed: true, optional: true, required: false

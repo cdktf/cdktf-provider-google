@@ -79,7 +79,7 @@ For example: gcr.io/{project_id}/{imageName}
 }
 
 export function notebooksEnvironmentContainerImageToTerraform(struct?: NotebooksEnvironmentContainerImageOutputReference | NotebooksEnvironmentContainerImage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,7 +97,7 @@ export class NotebooksEnvironmentContainerImageOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -172,8 +172,8 @@ export interface NotebooksEnvironmentTimeouts {
   readonly update?: string;
 }
 
-export function notebooksEnvironmentTimeoutsToTerraform(struct?: NotebooksEnvironmentTimeoutsOutputReference | NotebooksEnvironmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function notebooksEnvironmentTimeoutsToTerraform(struct?: NotebooksEnvironmentTimeoutsOutputReference | NotebooksEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -192,7 +192,7 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -300,7 +300,7 @@ Format: projects/{project_id}
 }
 
 export function notebooksEnvironmentVmImageToTerraform(struct?: NotebooksEnvironmentVmImageOutputReference | NotebooksEnvironmentVmImage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -319,7 +319,7 @@ export class NotebooksEnvironmentVmImageOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -550,7 +550,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
 
   // container_image - computed: false, optional: true, required: false
-  private _containerImage = new NotebooksEnvironmentContainerImageOutputReference(this as any, "container_image", true);
+  private _containerImage = new NotebooksEnvironmentContainerImageOutputReference(this, "container_image", true);
   public get containerImage() {
     return this._containerImage;
   }
@@ -566,7 +566,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NotebooksEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NotebooksEnvironmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -582,7 +582,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
   }
 
   // vm_image - computed: false, optional: true, required: false
-  private _vmImage = new NotebooksEnvironmentVmImageOutputReference(this as any, "vm_image", true);
+  private _vmImage = new NotebooksEnvironmentVmImageOutputReference(this, "vm_image", true);
   public get vmImage() {
     return this._vmImage;
   }

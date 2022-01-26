@@ -54,7 +54,7 @@ export interface LoggingBillingAccountSinkConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_billing_account_sink#exclusions LoggingBillingAccountSink#exclusions}
   */
-  readonly exclusions?: LoggingBillingAccountSinkExclusions[];
+  readonly exclusions?: LoggingBillingAccountSinkExclusions[] | cdktf.IResolvable;
 }
 export interface LoggingBillingAccountSinkBigqueryOptions {
   /**
@@ -66,7 +66,7 @@ export interface LoggingBillingAccountSinkBigqueryOptions {
 }
 
 export function loggingBillingAccountSinkBigqueryOptionsToTerraform(struct?: LoggingBillingAccountSinkBigqueryOptionsOutputReference | LoggingBillingAccountSinkBigqueryOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -83,7 +83,7 @@ export class LoggingBillingAccountSinkBigqueryOptionsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -111,7 +111,7 @@ export class LoggingBillingAccountSinkBigqueryOptionsOutputReference extends cdk
   // use_partitioned_tables - computed: false, optional: false, required: true
   private _usePartitionedTables?: boolean | cdktf.IResolvable; 
   public get usePartitionedTables() {
-    return this.getBooleanAttribute('use_partitioned_tables') as any;
+    return this.getBooleanAttribute('use_partitioned_tables');
   }
   public set usePartitionedTables(value: boolean | cdktf.IResolvable) {
     this._usePartitionedTables = value;
@@ -148,8 +148,8 @@ export interface LoggingBillingAccountSinkExclusions {
   readonly name: string;
 }
 
-export function loggingBillingAccountSinkExclusionsToTerraform(struct?: LoggingBillingAccountSinkExclusions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function loggingBillingAccountSinkExclusionsToTerraform(struct?: LoggingBillingAccountSinkExclusions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -253,7 +253,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -306,7 +306,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
 
   // bigquery_options - computed: false, optional: true, required: false
-  private _bigqueryOptions = new LoggingBillingAccountSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
+  private _bigqueryOptions = new LoggingBillingAccountSinkBigqueryOptionsOutputReference(this, "bigquery_options", true);
   public get bigqueryOptions() {
     return this._bigqueryOptions;
   }
@@ -322,12 +322,12 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
   }
 
   // exclusions - computed: false, optional: true, required: false
-  private _exclusions?: LoggingBillingAccountSinkExclusions[]; 
+  private _exclusions?: LoggingBillingAccountSinkExclusions[] | cdktf.IResolvable; 
   public get exclusions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exclusions') as any;
+    return this.interpolationForAttribute('exclusions');
   }
-  public set exclusions(value: LoggingBillingAccountSinkExclusions[]) {
+  public set exclusions(value: LoggingBillingAccountSinkExclusions[] | cdktf.IResolvable) {
     this._exclusions = value;
   }
   public resetExclusions() {

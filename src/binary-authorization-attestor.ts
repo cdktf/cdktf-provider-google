@@ -58,7 +58,7 @@ public key).
 }
 
 export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference | BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -76,7 +76,7 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -179,8 +179,8 @@ See the documentation on publicKey cases below for details.
   readonly pkixPublicKey?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey;
 }
 
-export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -209,11 +209,11 @@ and that links to this Note.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor#public_keys BinaryAuthorizationAttestor#public_keys}
   */
-  readonly publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[];
+  readonly publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable;
 }
 
 export function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(struct?: BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference | BinaryAuthorizationAttestorAttestationAuthorityNote): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -231,7 +231,7 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -262,6 +262,11 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
     }
   }
 
+  // delegation_service_account_email - computed: true, optional: false, required: false
+  public get delegationServiceAccountEmail() {
+    return this.getStringAttribute('delegation_service_account_email');
+  }
+
   // note_reference - computed: false, optional: false, required: true
   private _noteReference?: string; 
   public get noteReference() {
@@ -276,12 +281,12 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   }
 
   // public_keys - computed: false, optional: true, required: false
-  private _publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[]; 
+  private _publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable; 
   public get publicKeys() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('public_keys') as any;
+    return this.interpolationForAttribute('public_keys');
   }
-  public set publicKeys(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[]) {
+  public set publicKeys(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable) {
     this._publicKeys = value;
   }
   public resetPublicKeys() {
@@ -307,8 +312,8 @@ export interface BinaryAuthorizationAttestorTimeouts {
   readonly update?: string;
 }
 
-export function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthorizationAttestorTimeoutsOutputReference | BinaryAuthorizationAttestorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAuthorizationAttestorTimeoutsOutputReference | BinaryAuthorizationAttestorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -327,7 +332,7 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -507,7 +512,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   }
 
   // attestation_authority_note - computed: false, optional: false, required: true
-  private _attestationAuthorityNote = new BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference(this as any, "attestation_authority_note", true);
+  private _attestationAuthorityNote = new BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference(this, "attestation_authority_note", true);
   public get attestationAuthorityNote() {
     return this._attestationAuthorityNote;
   }
@@ -520,7 +525,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BinaryAuthorizationAttestorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BinaryAuthorizationAttestorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

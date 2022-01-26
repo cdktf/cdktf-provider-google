@@ -140,8 +140,8 @@ export interface ComputeVpnTunnelTimeouts {
   readonly delete?: string;
 }
 
-export function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTimeoutsOutputReference | ComputeVpnTunnelTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeVpnTunnelTimeoutsToTerraform(struct?: ComputeVpnTunnelTimeoutsOutputReference | ComputeVpnTunnelTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +159,7 @@ export class ComputeVpnTunnelTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -328,7 +328,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
   // local_traffic_selector - computed: true, optional: true, required: false
   private _localTrafficSelector?: string[]; 
   public get localTrafficSelector() {
-    return this.getListAttribute('local_traffic_selector');
+    return cdktf.Fn.tolist(this.getListAttribute('local_traffic_selector'));
   }
   public set localTrafficSelector(value: string[]) {
     this._localTrafficSelector = value;
@@ -453,7 +453,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
   // remote_traffic_selector - computed: true, optional: true, required: false
   private _remoteTrafficSelector?: string[]; 
   public get remoteTrafficSelector() {
-    return this.getListAttribute('remote_traffic_selector');
+    return cdktf.Fn.tolist(this.getListAttribute('remote_traffic_selector'));
   }
   public set remoteTrafficSelector(value: string[]) {
     this._remoteTrafficSelector = value;
@@ -559,7 +559,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeVpnTunnelTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeVpnTunnelTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

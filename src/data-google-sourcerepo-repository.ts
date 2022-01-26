@@ -113,7 +113,7 @@ export class DataGoogleSourcerepoRepository extends cdktf.TerraformDataSource {
 
   // pubsub_configs - computed: true, optional: false, required: false
   public pubsubConfigs(index: string) {
-    return new DataGoogleSourcerepoRepositoryPubsubConfigs(this, 'pubsub_configs', index);
+    return new DataGoogleSourcerepoRepositoryPubsubConfigs(this, 'pubsub_configs', index, true);
   }
 
   // size - computed: true, optional: false, required: false

@@ -19,7 +19,7 @@ Maximum of 512 characters.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test#labels NetworkManagementConnectivityTest#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Unique name for the connectivity test.
   * 
@@ -107,7 +107,7 @@ project.
 }
 
 export function networkManagementConnectivityTestDestinationToTerraform(struct?: NetworkManagementConnectivityTestDestinationOutputReference | NetworkManagementConnectivityTestDestination): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -128,7 +128,7 @@ export class NetworkManagementConnectivityTestDestinationOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -309,7 +309,7 @@ The following are two cases where you must provide the project ID:
 }
 
 export function networkManagementConnectivityTestSourceToTerraform(struct?: NetworkManagementConnectivityTestSourceOutputReference | NetworkManagementConnectivityTestSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -331,7 +331,7 @@ export class NetworkManagementConnectivityTestSourceOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -497,8 +497,8 @@ export interface NetworkManagementConnectivityTestTimeouts {
   readonly update?: string;
 }
 
-export function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkManagementConnectivityTestTimeoutsOutputReference | NetworkManagementConnectivityTestTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkManagementConnectivityTestTimeoutsToTerraform(struct?: NetworkManagementConnectivityTestTimeoutsOutputReference | NetworkManagementConnectivityTestTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -517,7 +517,7 @@ export class NetworkManagementConnectivityTestTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -672,12 +672,11 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -750,7 +749,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new NetworkManagementConnectivityTestDestinationOutputReference(this as any, "destination", true);
+  private _destination = new NetworkManagementConnectivityTestDestinationOutputReference(this, "destination", true);
   public get destination() {
     return this._destination;
   }
@@ -763,7 +762,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source = new NetworkManagementConnectivityTestSourceOutputReference(this as any, "source", true);
+  private _source = new NetworkManagementConnectivityTestSourceOutputReference(this, "source", true);
   public get source() {
     return this._source;
   }
@@ -776,7 +775,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkManagementConnectivityTestTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkManagementConnectivityTestTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -798,7 +797,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       protocol: cdktf.stringToTerraform(this._protocol),

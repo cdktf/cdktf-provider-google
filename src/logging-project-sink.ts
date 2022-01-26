@@ -60,7 +60,7 @@ export interface LoggingProjectSinkConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_sink#exclusions LoggingProjectSink#exclusions}
   */
-  readonly exclusions?: LoggingProjectSinkExclusions[];
+  readonly exclusions?: LoggingProjectSinkExclusions[] | cdktf.IResolvable;
 }
 export interface LoggingProjectSinkBigqueryOptions {
   /**
@@ -72,7 +72,7 @@ export interface LoggingProjectSinkBigqueryOptions {
 }
 
 export function loggingProjectSinkBigqueryOptionsToTerraform(struct?: LoggingProjectSinkBigqueryOptionsOutputReference | LoggingProjectSinkBigqueryOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,7 +89,7 @@ export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -117,7 +117,7 @@ export class LoggingProjectSinkBigqueryOptionsOutputReference extends cdktf.Comp
   // use_partitioned_tables - computed: false, optional: false, required: true
   private _usePartitionedTables?: boolean | cdktf.IResolvable; 
   public get usePartitionedTables() {
-    return this.getBooleanAttribute('use_partitioned_tables') as any;
+    return this.getBooleanAttribute('use_partitioned_tables');
   }
   public set usePartitionedTables(value: boolean | cdktf.IResolvable) {
     this._usePartitionedTables = value;
@@ -154,8 +154,8 @@ export interface LoggingProjectSinkExclusions {
   readonly name: string;
 }
 
-export function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectSinkExclusions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function loggingProjectSinkExclusionsToTerraform(struct?: LoggingProjectSinkExclusions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -247,7 +247,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   // disabled - computed: false, optional: true, required: false
   private _disabled?: boolean | cdktf.IResolvable; 
   public get disabled() {
-    return this.getBooleanAttribute('disabled') as any;
+    return this.getBooleanAttribute('disabled');
   }
   public set disabled(value: boolean | cdktf.IResolvable) {
     this._disabled = value;
@@ -313,7 +313,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   // unique_writer_identity - computed: false, optional: true, required: false
   private _uniqueWriterIdentity?: boolean | cdktf.IResolvable; 
   public get uniqueWriterIdentity() {
-    return this.getBooleanAttribute('unique_writer_identity') as any;
+    return this.getBooleanAttribute('unique_writer_identity');
   }
   public set uniqueWriterIdentity(value: boolean | cdktf.IResolvable) {
     this._uniqueWriterIdentity = value;
@@ -332,7 +332,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
 
   // bigquery_options - computed: false, optional: true, required: false
-  private _bigqueryOptions = new LoggingProjectSinkBigqueryOptionsOutputReference(this as any, "bigquery_options", true);
+  private _bigqueryOptions = new LoggingProjectSinkBigqueryOptionsOutputReference(this, "bigquery_options", true);
   public get bigqueryOptions() {
     return this._bigqueryOptions;
   }
@@ -348,12 +348,12 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
   }
 
   // exclusions - computed: false, optional: true, required: false
-  private _exclusions?: LoggingProjectSinkExclusions[]; 
+  private _exclusions?: LoggingProjectSinkExclusions[] | cdktf.IResolvable; 
   public get exclusions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exclusions') as any;
+    return this.interpolationForAttribute('exclusions');
   }
-  public set exclusions(value: LoggingProjectSinkExclusions[]) {
+  public set exclusions(value: LoggingProjectSinkExclusions[] | cdktf.IResolvable) {
     this._exclusions = value;
   }
   public resetExclusions() {

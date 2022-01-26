@@ -54,7 +54,7 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#labels ComputeForwardingRule#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Specifies the forwarding rule type.
 
@@ -165,8 +165,8 @@ export interface ComputeForwardingRuleTimeouts {
   readonly update?: string;
 }
 
-export function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRuleTimeoutsOutputReference | ComputeForwardingRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForwardingRuleTimeoutsOutputReference | ComputeForwardingRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -185,7 +185,7 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -332,7 +332,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // all_ports - computed: false, optional: true, required: false
   private _allPorts?: boolean | cdktf.IResolvable; 
   public get allPorts() {
-    return this.getBooleanAttribute('all_ports') as any;
+    return this.getBooleanAttribute('all_ports');
   }
   public set allPorts(value: boolean | cdktf.IResolvable) {
     this._allPorts = value;
@@ -348,7 +348,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // allow_global_access - computed: false, optional: true, required: false
   private _allowGlobalAccess?: boolean | cdktf.IResolvable; 
   public get allowGlobalAccess() {
-    return this.getBooleanAttribute('allow_global_access') as any;
+    return this.getBooleanAttribute('allow_global_access');
   }
   public set allowGlobalAccess(value: boolean | cdktf.IResolvable) {
     this._allowGlobalAccess = value;
@@ -438,7 +438,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // is_mirroring_collector - computed: false, optional: true, required: false
   private _isMirroringCollector?: boolean | cdktf.IResolvable; 
   public get isMirroringCollector() {
-    return this.getBooleanAttribute('is_mirroring_collector') as any;
+    return this.getBooleanAttribute('is_mirroring_collector');
   }
   public set isMirroringCollector(value: boolean | cdktf.IResolvable) {
     this._isMirroringCollector = value;
@@ -457,12 +457,11 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -553,7 +552,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   // ports - computed: false, optional: true, required: false
   private _ports?: string[]; 
   public get ports() {
-    return this.getListAttribute('ports');
+    return cdktf.Fn.tolist(this.getListAttribute('ports'));
   }
   public set ports(value: string[]) {
     this._ports = value;
@@ -657,7 +656,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeForwardingRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeForwardingRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -685,7 +684,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
       is_mirroring_collector: cdktf.booleanToTerraform(this._isMirroringCollector),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),

@@ -18,7 +18,7 @@ export interface WorkflowsWorkflowConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/workflows_workflow#labels WorkflowsWorkflow#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Name of the Workflow.
   * 
@@ -76,8 +76,8 @@ export interface WorkflowsWorkflowTimeouts {
   readonly update?: string;
 }
 
-export function workflowsWorkflowTimeoutsToTerraform(struct?: WorkflowsWorkflowTimeoutsOutputReference | WorkflowsWorkflowTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function workflowsWorkflowTimeoutsToTerraform(struct?: WorkflowsWorkflowTimeoutsOutputReference | WorkflowsWorkflowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -96,7 +96,7 @@ export class WorkflowsWorkflowTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -256,12 +256,11 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -384,7 +383,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new WorkflowsWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new WorkflowsWorkflowTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -406,7 +405,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       name_prefix: cdktf.stringToTerraform(this._namePrefix),
       project: cdktf.stringToTerraform(this._project),

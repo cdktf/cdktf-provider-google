@@ -18,7 +18,7 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
@@ -36,7 +36,7 @@ and all following characters must be a dash, underscore, letter or digit.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#public_key NetworkServicesEdgeCacheKeyset#public_key}
   */
-  readonly publicKey: NetworkServicesEdgeCacheKeysetPublicKey[];
+  readonly publicKey: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -62,8 +62,8 @@ Representations or encodings of the public key other than this will be rejected 
   readonly value: string;
 }
 
-export function networkServicesEdgeCacheKeysetPublicKeyToTerraform(struct?: NetworkServicesEdgeCacheKeysetPublicKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkServicesEdgeCacheKeysetPublicKeyToTerraform(struct?: NetworkServicesEdgeCacheKeysetPublicKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,8 +88,8 @@ export interface NetworkServicesEdgeCacheKeysetTimeouts {
   readonly update?: string;
 }
 
-export function networkServicesEdgeCacheKeysetTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheKeysetTimeoutsOutputReference | NetworkServicesEdgeCacheKeysetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkServicesEdgeCacheKeysetTimeoutsToTerraform(struct?: NetworkServicesEdgeCacheKeysetTimeoutsOutputReference | NetworkServicesEdgeCacheKeysetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -108,7 +108,7 @@ export class NetworkServicesEdgeCacheKeysetTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -260,12 +260,11 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -306,12 +305,12 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // public_key - computed: false, optional: false, required: true
-  private _publicKey?: NetworkServicesEdgeCacheKeysetPublicKey[]; 
+  private _publicKey?: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable; 
   public get publicKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('public_key') as any;
+    return this.interpolationForAttribute('public_key');
   }
-  public set publicKey(value: NetworkServicesEdgeCacheKeysetPublicKey[]) {
+  public set publicKey(value: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable) {
     this._publicKey = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -320,7 +319,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkServicesEdgeCacheKeysetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkServicesEdgeCacheKeysetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -342,7 +341,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       public_key: cdktf.listMapper(networkServicesEdgeCacheKeysetPublicKeyToTerraform)(this._publicKey),

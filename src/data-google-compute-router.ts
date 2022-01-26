@@ -62,7 +62,7 @@ export class DataGoogleComputeRouterBgp extends cdktf.ComplexComputedList {
   // advertised_ip_ranges - computed: true, optional: false, required: false
   public get advertisedIpRanges() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('advertised_ip_ranges') as any;
+    return this.interpolationForAttribute('advertised_ip_ranges');
   }
 
   // asn - computed: true, optional: false, required: false
@@ -115,7 +115,7 @@ export class DataGoogleComputeRouter extends cdktf.TerraformDataSource {
 
   // bgp - computed: true, optional: false, required: false
   public bgp(index: string) {
-    return new DataGoogleComputeRouterBgp(this, 'bgp', index);
+    return new DataGoogleComputeRouterBgp(this, 'bgp', index, false);
   }
 
   // creation_timestamp - computed: true, optional: false, required: false

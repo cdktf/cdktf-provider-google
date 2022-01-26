@@ -140,7 +140,7 @@ export interface SqlDatabaseInstanceClone {
 }
 
 export function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstanceCloneOutputReference | SqlDatabaseInstanceClone): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -158,7 +158,7 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -288,7 +288,7 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
 }
 
 export function sqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: SqlDatabaseInstanceReplicaConfigurationOutputReference | SqlDatabaseInstanceReplicaConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -315,7 +315,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -483,7 +483,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   // failover_target - computed: false, optional: true, required: false
   private _failoverTarget?: boolean | cdktf.IResolvable; 
   public get failoverTarget() {
-    return this.getBooleanAttribute('failover_target') as any;
+    return this.getBooleanAttribute('failover_target');
   }
   public set failoverTarget(value: boolean | cdktf.IResolvable) {
     this._failoverTarget = value;
@@ -563,7 +563,7 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   // verify_server_certificate - computed: false, optional: true, required: false
   private _verifyServerCertificate?: boolean | cdktf.IResolvable; 
   public get verifyServerCertificate() {
-    return this.getBooleanAttribute('verify_server_certificate') as any;
+    return this.getBooleanAttribute('verify_server_certificate');
   }
   public set verifyServerCertificate(value: boolean | cdktf.IResolvable) {
     this._verifyServerCertificate = value;
@@ -598,7 +598,7 @@ export interface SqlDatabaseInstanceRestoreBackupContext {
 }
 
 export function sqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: SqlDatabaseInstanceRestoreBackupContextOutputReference | SqlDatabaseInstanceRestoreBackupContext): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -617,7 +617,7 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -715,7 +715,7 @@ export interface SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSe
 }
 
 export function sqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference | SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -733,7 +733,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -839,7 +839,7 @@ export interface SqlDatabaseInstanceSettingsBackupConfiguration {
 }
 
 export function sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsBackupConfigurationOutputReference | SqlDatabaseInstanceSettingsBackupConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -862,7 +862,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -926,7 +926,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   // binary_log_enabled - computed: false, optional: true, required: false
   private _binaryLogEnabled?: boolean | cdktf.IResolvable; 
   public get binaryLogEnabled() {
-    return this.getBooleanAttribute('binary_log_enabled') as any;
+    return this.getBooleanAttribute('binary_log_enabled');
   }
   public set binaryLogEnabled(value: boolean | cdktf.IResolvable) {
     this._binaryLogEnabled = value;
@@ -942,7 +942,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -974,7 +974,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   // point_in_time_recovery_enabled - computed: false, optional: true, required: false
   private _pointInTimeRecoveryEnabled?: boolean | cdktf.IResolvable; 
   public get pointInTimeRecoveryEnabled() {
-    return this.getBooleanAttribute('point_in_time_recovery_enabled') as any;
+    return this.getBooleanAttribute('point_in_time_recovery_enabled');
   }
   public set pointInTimeRecoveryEnabled(value: boolean | cdktf.IResolvable) {
     this._pointInTimeRecoveryEnabled = value;
@@ -1020,7 +1020,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
 
   // backup_retention_settings - computed: false, optional: true, required: false
-  private _backupRetentionSettings = new SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this as any, "backup_retention_settings", true);
+  private _backupRetentionSettings = new SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this, "backup_retention_settings", true);
   public get backupRetentionSettings() {
     return this._backupRetentionSettings;
   }
@@ -1050,8 +1050,8 @@ export interface SqlDatabaseInstanceSettingsDatabaseFlags {
   readonly value: string;
 }
 
-export function sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: SqlDatabaseInstanceSettingsDatabaseFlags): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: SqlDatabaseInstanceSettingsDatabaseFlags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1089,7 +1089,7 @@ export interface SqlDatabaseInstanceSettingsInsightsConfig {
 }
 
 export function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: SqlDatabaseInstanceSettingsInsightsConfigOutputReference | SqlDatabaseInstanceSettingsInsightsConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1109,7 +1109,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1155,7 +1155,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   // query_insights_enabled - computed: false, optional: true, required: false
   private _queryInsightsEnabled?: boolean | cdktf.IResolvable; 
   public get queryInsightsEnabled() {
-    return this.getBooleanAttribute('query_insights_enabled') as any;
+    return this.getBooleanAttribute('query_insights_enabled');
   }
   public set queryInsightsEnabled(value: boolean | cdktf.IResolvable) {
     this._queryInsightsEnabled = value;
@@ -1187,7 +1187,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   // record_application_tags - computed: false, optional: true, required: false
   private _recordApplicationTags?: boolean | cdktf.IResolvable; 
   public get recordApplicationTags() {
-    return this.getBooleanAttribute('record_application_tags') as any;
+    return this.getBooleanAttribute('record_application_tags');
   }
   public set recordApplicationTags(value: boolean | cdktf.IResolvable) {
     this._recordApplicationTags = value;
@@ -1203,7 +1203,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   // record_client_address - computed: false, optional: true, required: false
   private _recordClientAddress?: boolean | cdktf.IResolvable; 
   public get recordClientAddress() {
-    return this.getBooleanAttribute('record_client_address') as any;
+    return this.getBooleanAttribute('record_client_address');
   }
   public set recordClientAddress(value: boolean | cdktf.IResolvable) {
     this._recordClientAddress = value;
@@ -1231,8 +1231,8 @@ export interface SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
   readonly value: string;
 }
 
-export function sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1265,11 +1265,11 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#authorized_networks SqlDatabaseInstance#authorized_networks}
   */
-  readonly authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[];
+  readonly authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[] | cdktf.IResolvable;
 }
 
 export function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: SqlDatabaseInstanceSettingsIpConfigurationOutputReference | SqlDatabaseInstanceSettingsIpConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1289,7 +1289,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1335,7 +1335,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   // ipv4_enabled - computed: false, optional: true, required: false
   private _ipv4Enabled?: boolean | cdktf.IResolvable; 
   public get ipv4Enabled() {
-    return this.getBooleanAttribute('ipv4_enabled') as any;
+    return this.getBooleanAttribute('ipv4_enabled');
   }
   public set ipv4Enabled(value: boolean | cdktf.IResolvable) {
     this._ipv4Enabled = value;
@@ -1367,7 +1367,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   // require_ssl - computed: false, optional: true, required: false
   private _requireSsl?: boolean | cdktf.IResolvable; 
   public get requireSsl() {
-    return this.getBooleanAttribute('require_ssl') as any;
+    return this.getBooleanAttribute('require_ssl');
   }
   public set requireSsl(value: boolean | cdktf.IResolvable) {
     this._requireSsl = value;
@@ -1381,12 +1381,12 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   }
 
   // authorized_networks - computed: false, optional: true, required: false
-  private _authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[]; 
+  private _authorizedNetworks?: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[] | cdktf.IResolvable; 
   public get authorizedNetworks() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('authorized_networks') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('authorized_networks')));
   }
-  public set authorizedNetworks(value: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[]) {
+  public set authorizedNetworks(value: SqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks[] | cdktf.IResolvable) {
     this._authorizedNetworks = value;
   }
   public resetAuthorizedNetworks() {
@@ -1413,7 +1413,7 @@ export interface SqlDatabaseInstanceSettingsLocationPreference {
 }
 
 export function sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct?: SqlDatabaseInstanceSettingsLocationPreferenceOutputReference | SqlDatabaseInstanceSettingsLocationPreference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1431,7 +1431,7 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1516,7 +1516,7 @@ export interface SqlDatabaseInstanceSettingsMaintenanceWindow {
 }
 
 export function sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct?: SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference | SqlDatabaseInstanceSettingsMaintenanceWindow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1535,7 +1535,7 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1701,7 +1701,7 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#user_labels SqlDatabaseInstance#user_labels}
   */
-  readonly userLabels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly userLabels?: { [key: string]: string };
   /**
   * backup_configuration block
   * 
@@ -1713,7 +1713,7 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#database_flags SqlDatabaseInstance#database_flags}
   */
-  readonly databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[];
+  readonly databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[] | cdktf.IResolvable;
   /**
   * insights_config block
   * 
@@ -1741,7 +1741,7 @@ settings.backup_configuration.binary_log_enabled are both set to true.
 }
 
 export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInstanceSettingsOutputReference | SqlDatabaseInstanceSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1758,7 +1758,7 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
     pricing_plan: cdktf.stringToTerraform(struct!.pricingPlan),
     replication_type: cdktf.stringToTerraform(struct!.replicationType),
     tier: cdktf.stringToTerraform(struct!.tier),
-    user_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.userLabels),
+    user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.userLabels),
     backup_configuration: sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct!.backupConfiguration),
     database_flags: cdktf.listMapper(sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform)(struct!.databaseFlags),
     insights_config: sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct!.insightsConfig),
@@ -1776,7 +1776,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1976,7 +1976,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // crash_safe_replication - computed: true, optional: true, required: false
   private _crashSafeReplication?: boolean | cdktf.IResolvable; 
   public get crashSafeReplication() {
-    return this.getBooleanAttribute('crash_safe_replication') as any;
+    return this.getBooleanAttribute('crash_safe_replication');
   }
   public set crashSafeReplication(value: boolean | cdktf.IResolvable) {
     this._crashSafeReplication = value;
@@ -1992,7 +1992,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // disk_autoresize - computed: false, optional: true, required: false
   private _diskAutoresize?: boolean | cdktf.IResolvable; 
   public get diskAutoresize() {
-    return this.getBooleanAttribute('disk_autoresize') as any;
+    return this.getBooleanAttribute('disk_autoresize');
   }
   public set diskAutoresize(value: boolean | cdktf.IResolvable) {
     this._diskAutoresize = value;
@@ -2099,12 +2099,11 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // user_labels - computed: true, optional: true, required: false
-  private _userLabels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _userLabels?: { [key: string]: string }; 
   public get userLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_labels') as any;
+    return this.getStringMapAttribute('user_labels');
   }
-  public set userLabels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set userLabels(value: { [key: string]: string }) {
     this._userLabels = value;
   }
   public resetUserLabels() {
@@ -2115,8 +2114,13 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     return this._userLabels;
   }
 
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getNumberAttribute('version');
+  }
+
   // backup_configuration - computed: false, optional: true, required: false
-  private _backupConfiguration = new SqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this as any, "backup_configuration", true);
+  private _backupConfiguration = new SqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this, "backup_configuration", true);
   public get backupConfiguration() {
     return this._backupConfiguration;
   }
@@ -2132,12 +2136,12 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // database_flags - computed: false, optional: true, required: false
-  private _databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[]; 
+  private _databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[] | cdktf.IResolvable; 
   public get databaseFlags() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('database_flags') as any;
+    return this.interpolationForAttribute('database_flags');
   }
-  public set databaseFlags(value: SqlDatabaseInstanceSettingsDatabaseFlags[]) {
+  public set databaseFlags(value: SqlDatabaseInstanceSettingsDatabaseFlags[] | cdktf.IResolvable) {
     this._databaseFlags = value;
   }
   public resetDatabaseFlags() {
@@ -2149,7 +2153,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // insights_config - computed: false, optional: true, required: false
-  private _insightsConfig = new SqlDatabaseInstanceSettingsInsightsConfigOutputReference(this as any, "insights_config", true);
+  private _insightsConfig = new SqlDatabaseInstanceSettingsInsightsConfigOutputReference(this, "insights_config", true);
   public get insightsConfig() {
     return this._insightsConfig;
   }
@@ -2165,7 +2169,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration = new SqlDatabaseInstanceSettingsIpConfigurationOutputReference(this as any, "ip_configuration", true);
+  private _ipConfiguration = new SqlDatabaseInstanceSettingsIpConfigurationOutputReference(this, "ip_configuration", true);
   public get ipConfiguration() {
     return this._ipConfiguration;
   }
@@ -2181,7 +2185,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // location_preference - computed: false, optional: true, required: false
-  private _locationPreference = new SqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this as any, "location_preference", true);
+  private _locationPreference = new SqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this, "location_preference", true);
   public get locationPreference() {
     return this._locationPreference;
   }
@@ -2197,7 +2201,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this, "maintenance_window", true);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -2227,8 +2231,8 @@ export interface SqlDatabaseInstanceTimeouts {
   readonly update?: string;
 }
 
-export function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInstanceTimeoutsOutputReference | SqlDatabaseInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlDatabaseInstanceTimeoutsToTerraform(struct?: SqlDatabaseInstanceTimeoutsOutputReference | SqlDatabaseInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2247,7 +2251,7 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2407,7 +2411,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // deletion_protection - computed: false, optional: true, required: false
   private _deletionProtection?: boolean | cdktf.IResolvable; 
   public get deletionProtection() {
-    return this.getBooleanAttribute('deletion_protection') as any;
+    return this.getBooleanAttribute('deletion_protection');
   }
   public set deletionProtection(value: boolean | cdktf.IResolvable) {
     this._deletionProtection = value;
@@ -2432,7 +2436,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
 
   // ip_address - computed: true, optional: false, required: false
   public ipAddress(index: string) {
-    return new SqlDatabaseInstanceIpAddress(this, 'ip_address', index);
+    return new SqlDatabaseInstanceIpAddress(this, 'ip_address', index, false);
   }
 
   // master_instance_name - computed: true, optional: true, required: false
@@ -2532,7 +2536,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
 
   // server_ca_cert - computed: true, optional: false, required: false
   public serverCaCert(index: string) {
-    return new SqlDatabaseInstanceServerCaCert(this, 'server_ca_cert', index);
+    return new SqlDatabaseInstanceServerCaCert(this, 'server_ca_cert', index, false);
   }
 
   // service_account_email_address - computed: true, optional: false, required: false
@@ -2541,7 +2545,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // clone - computed: false, optional: true, required: false
-  private _clone = new SqlDatabaseInstanceCloneOutputReference(this as any, "clone", true);
+  private _clone = new SqlDatabaseInstanceCloneOutputReference(this, "clone", true);
   public get clone() {
     return this._clone;
   }
@@ -2557,7 +2561,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // replica_configuration - computed: false, optional: true, required: false
-  private _replicaConfiguration = new SqlDatabaseInstanceReplicaConfigurationOutputReference(this as any, "replica_configuration", true);
+  private _replicaConfiguration = new SqlDatabaseInstanceReplicaConfigurationOutputReference(this, "replica_configuration", true);
   public get replicaConfiguration() {
     return this._replicaConfiguration;
   }
@@ -2573,7 +2577,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // restore_backup_context - computed: false, optional: true, required: false
-  private _restoreBackupContext = new SqlDatabaseInstanceRestoreBackupContextOutputReference(this as any, "restore_backup_context", true);
+  private _restoreBackupContext = new SqlDatabaseInstanceRestoreBackupContextOutputReference(this, "restore_backup_context", true);
   public get restoreBackupContext() {
     return this._restoreBackupContext;
   }
@@ -2589,7 +2593,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // settings - computed: false, optional: true, required: false
-  private _settings = new SqlDatabaseInstanceSettingsOutputReference(this as any, "settings", true);
+  private _settings = new SqlDatabaseInstanceSettingsOutputReference(this, "settings", true);
   public get settings() {
     return this._settings;
   }
@@ -2605,7 +2609,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlDatabaseInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlDatabaseInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -30,7 +30,7 @@ An object containing a list of "key": value pairs. Example:
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret#labels SecretManagerSecret#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret#project SecretManagerSecret#project}
   */
@@ -71,7 +71,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret#topics SecretManagerSecret#topics}
   */
-  readonly topics?: SecretManagerSecretTopics[];
+  readonly topics?: SecretManagerSecretTopics[] | cdktf.IResolvable;
 }
 export interface SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption {
   /**
@@ -83,7 +83,7 @@ export interface SecretManagerSecretReplicationUserManagedReplicasCustomerManage
 }
 
 export function secretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference | SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -100,7 +100,7 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -153,8 +153,8 @@ export interface SecretManagerSecretReplicationUserManagedReplicas {
   readonly customerManagedEncryption?: SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption;
 }
 
-export function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function secretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: SecretManagerSecretReplicationUserManagedReplicas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -170,11 +170,11 @@ export interface SecretManagerSecretReplicationUserManaged {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/secret_manager_secret#replicas SecretManagerSecret#replicas}
   */
-  readonly replicas: SecretManagerSecretReplicationUserManagedReplicas[];
+  readonly replicas: SecretManagerSecretReplicationUserManagedReplicas[] | cdktf.IResolvable;
 }
 
 export function secretManagerSecretReplicationUserManagedToTerraform(struct?: SecretManagerSecretReplicationUserManagedOutputReference | SecretManagerSecretReplicationUserManaged): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -191,7 +191,7 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -217,12 +217,12 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
   }
 
   // replicas - computed: false, optional: false, required: true
-  private _replicas?: SecretManagerSecretReplicationUserManagedReplicas[]; 
+  private _replicas?: SecretManagerSecretReplicationUserManagedReplicas[] | cdktf.IResolvable; 
   public get replicas() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('replicas') as any;
+    return this.interpolationForAttribute('replicas');
   }
-  public set replicas(value: SecretManagerSecretReplicationUserManagedReplicas[]) {
+  public set replicas(value: SecretManagerSecretReplicationUserManagedReplicas[] | cdktf.IResolvable) {
     this._replicas = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -246,7 +246,7 @@ export interface SecretManagerSecretReplication {
 }
 
 export function secretManagerSecretReplicationToTerraform(struct?: SecretManagerSecretReplicationOutputReference | SecretManagerSecretReplication): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -264,7 +264,7 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -298,7 +298,7 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   // automatic - computed: false, optional: true, required: false
   private _automatic?: boolean | cdktf.IResolvable; 
   public get automatic() {
-    return this.getBooleanAttribute('automatic') as any;
+    return this.getBooleanAttribute('automatic');
   }
   public set automatic(value: boolean | cdktf.IResolvable) {
     this._automatic = value;
@@ -312,7 +312,7 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   }
 
   // user_managed - computed: false, optional: true, required: false
-  private _userManaged = new SecretManagerSecretReplicationUserManagedOutputReference(this as any, "user_managed", true);
+  private _userManaged = new SecretManagerSecretReplicationUserManagedOutputReference(this, "user_managed", true);
   public get userManaged() {
     return this._userManaged;
   }
@@ -345,7 +345,7 @@ If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time'
 }
 
 export function secretManagerSecretRotationToTerraform(struct?: SecretManagerSecretRotationOutputReference | SecretManagerSecretRotation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -363,7 +363,7 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -441,8 +441,8 @@ export interface SecretManagerSecretTimeouts {
   readonly update?: string;
 }
 
-export function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTimeoutsOutputReference | SecretManagerSecretTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function secretManagerSecretTimeoutsToTerraform(struct?: SecretManagerSecretTimeoutsOutputReference | SecretManagerSecretTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -461,7 +461,7 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -556,8 +556,8 @@ For publication to succeed, the Secret Manager Service Agent service account mus
   readonly name: string;
 }
 
-export function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecretTopics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function secretManagerSecretTopicsToTerraform(struct?: SecretManagerSecretTopics | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -641,12 +641,11 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -708,7 +707,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // replication - computed: false, optional: false, required: true
-  private _replication = new SecretManagerSecretReplicationOutputReference(this as any, "replication", true);
+  private _replication = new SecretManagerSecretReplicationOutputReference(this, "replication", true);
   public get replication() {
     return this._replication;
   }
@@ -721,7 +720,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // rotation - computed: false, optional: true, required: false
-  private _rotation = new SecretManagerSecretRotationOutputReference(this as any, "rotation", true);
+  private _rotation = new SecretManagerSecretRotationOutputReference(this, "rotation", true);
   public get rotation() {
     return this._rotation;
   }
@@ -737,7 +736,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SecretManagerSecretTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecretManagerSecretTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -753,12 +752,12 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // topics - computed: false, optional: true, required: false
-  private _topics?: SecretManagerSecretTopics[]; 
+  private _topics?: SecretManagerSecretTopics[] | cdktf.IResolvable; 
   public get topics() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('topics') as any;
+    return this.interpolationForAttribute('topics');
   }
-  public set topics(value: SecretManagerSecretTopics[]) {
+  public set topics(value: SecretManagerSecretTopics[] | cdktf.IResolvable) {
     this._topics = value;
   }
   public resetTopics() {
@@ -776,7 +775,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       expire_time: cdktf.stringToTerraform(this._expireTime),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       secret_id: cdktf.stringToTerraform(this._secretId),
       ttl: cdktf.stringToTerraform(this._ttl),

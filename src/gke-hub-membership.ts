@@ -12,7 +12,7 @@ export interface GkeHubMembershipConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/gke_hub_membership#labels GkeHubMembership#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * The client-provided identifier of the membership.
   * 
@@ -53,7 +53,7 @@ with length <2000 characters. For example: 'https://container.googleapis.com/v1/
 }
 
 export function gkeHubMembershipAuthorityToTerraform(struct?: GkeHubMembershipAuthorityOutputReference | GkeHubMembershipAuthority): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -70,7 +70,7 @@ export class GkeHubMembershipAuthorityOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -122,7 +122,7 @@ this can be '"//container.googleapis.com/${google_container_cluster.my-cluster.i
 }
 
 export function gkeHubMembershipEndpointGkeClusterToTerraform(struct?: GkeHubMembershipEndpointGkeClusterOutputReference | GkeHubMembershipEndpointGkeCluster): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -139,7 +139,7 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -187,7 +187,7 @@ export interface GkeHubMembershipEndpoint {
 }
 
 export function gkeHubMembershipEndpointToTerraform(struct?: GkeHubMembershipEndpointOutputReference | GkeHubMembershipEndpoint): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -204,7 +204,7 @@ export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -230,7 +230,7 @@ export class GkeHubMembershipEndpointOutputReference extends cdktf.ComplexObject
   }
 
   // gke_cluster - computed: false, optional: true, required: false
-  private _gkeCluster = new GkeHubMembershipEndpointGkeClusterOutputReference(this as any, "gke_cluster", true);
+  private _gkeCluster = new GkeHubMembershipEndpointGkeClusterOutputReference(this, "gke_cluster", true);
   public get gkeCluster() {
     return this._gkeCluster;
   }
@@ -260,8 +260,8 @@ export interface GkeHubMembershipTimeouts {
   readonly update?: string;
 }
 
-export function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTimeoutsOutputReference | GkeHubMembershipTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTimeoutsOutputReference | GkeHubMembershipTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -280,7 +280,7 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -416,12 +416,11 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -467,7 +466,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // authority - computed: false, optional: true, required: false
-  private _authority = new GkeHubMembershipAuthorityOutputReference(this as any, "authority", true);
+  private _authority = new GkeHubMembershipAuthorityOutputReference(this, "authority", true);
   public get authority() {
     return this._authority;
   }
@@ -483,7 +482,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // endpoint - computed: false, optional: true, required: false
-  private _endpoint = new GkeHubMembershipEndpointOutputReference(this as any, "endpoint", true);
+  private _endpoint = new GkeHubMembershipEndpointOutputReference(this, "endpoint", true);
   public get endpoint() {
     return this._endpoint;
   }
@@ -499,7 +498,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GkeHubMembershipTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new GkeHubMembershipTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -520,7 +519,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       membership_id: cdktf.stringToTerraform(this._membershipId),
       project: cdktf.stringToTerraform(this._project),
       authority: gkeHubMembershipAuthorityToTerraform(this._authority.internalValue),

@@ -70,7 +70,7 @@ export interface PubsubLiteTopicPartitionConfigCapacity {
 }
 
 export function pubsubLiteTopicPartitionConfigCapacityToTerraform(struct?: PubsubLiteTopicPartitionConfigCapacityOutputReference | PubsubLiteTopicPartitionConfigCapacity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -161,7 +161,7 @@ export interface PubsubLiteTopicPartitionConfig {
 }
 
 export function pubsubLiteTopicPartitionConfigToTerraform(struct?: PubsubLiteTopicPartitionConfigOutputReference | PubsubLiteTopicPartitionConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -179,7 +179,7 @@ export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -224,7 +224,7 @@ export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.Complex
   }
 
   // capacity - computed: false, optional: true, required: false
-  private _capacity = new PubsubLiteTopicPartitionConfigCapacityOutputReference(this as any, "capacity", true);
+  private _capacity = new PubsubLiteTopicPartitionConfigCapacityOutputReference(this, "capacity", true);
   public get capacity() {
     return this._capacity;
   }
@@ -249,7 +249,7 @@ export interface PubsubLiteTopicReservationConfig {
 }
 
 export function pubsubLiteTopicReservationConfigToTerraform(struct?: PubsubLiteTopicReservationConfigOutputReference | PubsubLiteTopicReservationConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -266,7 +266,7 @@ export class PubsubLiteTopicReservationConfigOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,7 +326,7 @@ long as the bytes retained for each partition is below perPartitionBytes.
 }
 
 export function pubsubLiteTopicRetentionConfigToTerraform(struct?: PubsubLiteTopicRetentionConfigOutputReference | PubsubLiteTopicRetentionConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -344,7 +344,7 @@ export class PubsubLiteTopicRetentionConfigOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -419,8 +419,8 @@ export interface PubsubLiteTopicTimeouts {
   readonly update?: string;
 }
 
-export function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeoutsOutputReference | PubsubLiteTopicTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function pubsubLiteTopicTimeoutsToTerraform(struct?: PubsubLiteTopicTimeoutsOutputReference | PubsubLiteTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -439,7 +439,7 @@ export class PubsubLiteTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -638,7 +638,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // partition_config - computed: false, optional: true, required: false
-  private _partitionConfig = new PubsubLiteTopicPartitionConfigOutputReference(this as any, "partition_config", true);
+  private _partitionConfig = new PubsubLiteTopicPartitionConfigOutputReference(this, "partition_config", true);
   public get partitionConfig() {
     return this._partitionConfig;
   }
@@ -654,7 +654,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // reservation_config - computed: false, optional: true, required: false
-  private _reservationConfig = new PubsubLiteTopicReservationConfigOutputReference(this as any, "reservation_config", true);
+  private _reservationConfig = new PubsubLiteTopicReservationConfigOutputReference(this, "reservation_config", true);
   public get reservationConfig() {
     return this._reservationConfig;
   }
@@ -670,7 +670,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // retention_config - computed: false, optional: true, required: false
-  private _retentionConfig = new PubsubLiteTopicRetentionConfigOutputReference(this as any, "retention_config", true);
+  private _retentionConfig = new PubsubLiteTopicRetentionConfigOutputReference(this, "retention_config", true);
   public get retentionConfig() {
     return this._retentionConfig;
   }
@@ -686,7 +686,7 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PubsubLiteTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PubsubLiteTopicTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

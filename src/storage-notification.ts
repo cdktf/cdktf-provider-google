@@ -18,7 +18,7 @@ export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_notification#custom_attributes StorageNotification#custom_attributes}
   */
-  readonly customAttributes?: { [key: string]: string } | cdktf.IResolvable;
+  readonly customAttributes?: { [key: string]: string };
   /**
   * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE"
   * 
@@ -103,12 +103,11 @@ export class StorageNotification extends cdktf.TerraformResource {
   }
 
   // custom_attributes - computed: false, optional: true, required: false
-  private _customAttributes?: { [key: string]: string } | cdktf.IResolvable; 
+  private _customAttributes?: { [key: string]: string }; 
   public get customAttributes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_attributes') as any;
+    return this.getStringMapAttribute('custom_attributes');
   }
-  public set customAttributes(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set customAttributes(value: { [key: string]: string }) {
     this._customAttributes = value;
   }
   public resetCustomAttributes() {
@@ -122,7 +121,7 @@ export class StorageNotification extends cdktf.TerraformResource {
   // event_types - computed: false, optional: true, required: false
   private _eventTypes?: string[]; 
   public get eventTypes() {
-    return this.getListAttribute('event_types');
+    return cdktf.Fn.tolist(this.getListAttribute('event_types'));
   }
   public set eventTypes(value: string[]) {
     this._eventTypes = value;
@@ -199,7 +198,7 @@ export class StorageNotification extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket: cdktf.stringToTerraform(this._bucket),
-      custom_attributes: cdktf.hashMapper(cdktf.anyToTerraform)(this._customAttributes),
+      custom_attributes: cdktf.hashMapper(cdktf.stringToTerraform)(this._customAttributes),
       event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._eventTypes),
       object_name_prefix: cdktf.stringToTerraform(this._objectNamePrefix),
       payload_format: cdktf.stringToTerraform(this._payloadFormat),

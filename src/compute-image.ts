@@ -35,7 +35,7 @@ RFC1035.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image#labels ComputeImage#labels}
   */
-  readonly labels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly labels?: { [key: string]: string };
   /**
   * Any applicable license URI.
   * 
@@ -97,7 +97,7 @@ In order to create an image, you must provide the full or partial URL of one of 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image#guest_os_features ComputeImage#guest_os_features}
   */
-  readonly guestOsFeatures?: ComputeImageGuestOsFeatures[];
+  readonly guestOsFeatures?: ComputeImageGuestOsFeatures[] | cdktf.IResolvable;
   /**
   * raw_disk block
   * 
@@ -120,8 +120,8 @@ export interface ComputeImageGuestOsFeatures {
   readonly type: string;
 }
 
-export function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGuestOsFeatures): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGuestOsFeatures | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -158,7 +158,7 @@ but not both.
 }
 
 export function computeImageRawDiskToTerraform(struct?: ComputeImageRawDiskOutputReference | ComputeImageRawDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -177,7 +177,7 @@ export class ComputeImageRawDiskOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -274,8 +274,8 @@ export interface ComputeImageTimeouts {
   readonly update?: string;
 }
 
-export function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeoutsOutputReference | ComputeImageTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeoutsOutputReference | ComputeImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -294,7 +294,7 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -500,12 +500,11 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _labels?: { [key: string]: string }; 
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('labels') as any;
+    return this.getStringMapAttribute('labels');
   }
-  public set labels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set labels(value: { [key: string]: string }) {
     this._labels = value;
   }
   public resetLabels() {
@@ -615,12 +614,12 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // guest_os_features - computed: false, optional: true, required: false
-  private _guestOsFeatures?: ComputeImageGuestOsFeatures[]; 
+  private _guestOsFeatures?: ComputeImageGuestOsFeatures[] | cdktf.IResolvable; 
   public get guestOsFeatures() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_os_features') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('guest_os_features')));
   }
-  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[]) {
+  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[] | cdktf.IResolvable) {
     this._guestOsFeatures = value;
   }
   public resetGuestOsFeatures() {
@@ -632,7 +631,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // raw_disk - computed: false, optional: true, required: false
-  private _rawDisk = new ComputeImageRawDiskOutputReference(this as any, "raw_disk", true);
+  private _rawDisk = new ComputeImageRawDiskOutputReference(this, "raw_disk", true);
   public get rawDisk() {
     return this._rawDisk;
   }
@@ -648,7 +647,7 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeImageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeImageTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -672,7 +671,7 @@ export class ComputeImage extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
       family: cdktf.stringToTerraform(this._family),
-      labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._labels),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       licenses: cdktf.listMapper(cdktf.stringToTerraform)(this._licenses),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

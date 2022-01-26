@@ -163,7 +163,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#backend ComputeBackendService#backend}
   */
-  readonly backend?: ComputeBackendServiceBackend[];
+  readonly backend?: ComputeBackendServiceBackend[] | cdktf.IResolvable;
   /**
   * cdn_policy block
   * 
@@ -332,8 +332,8 @@ CPU utilization target for the group. Valid range is [0.0, 1.0].
   readonly maxUtilization?: number;
 }
 
-export function computeBackendServiceBackendToTerraform(struct?: ComputeBackendServiceBackend): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeBackendServiceBackendToTerraform(struct?: ComputeBackendServiceBackend | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -402,7 +402,7 @@ delimiters.
 }
 
 export function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference | ComputeBackendServiceCdnPolicyCacheKeyPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -423,7 +423,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -475,7 +475,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   // include_host - computed: false, optional: true, required: false
   private _includeHost?: boolean | cdktf.IResolvable; 
   public get includeHost() {
-    return this.getBooleanAttribute('include_host') as any;
+    return this.getBooleanAttribute('include_host');
   }
   public set includeHost(value: boolean | cdktf.IResolvable) {
     this._includeHost = value;
@@ -491,7 +491,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   // include_protocol - computed: false, optional: true, required: false
   private _includeProtocol?: boolean | cdktf.IResolvable; 
   public get includeProtocol() {
-    return this.getBooleanAttribute('include_protocol') as any;
+    return this.getBooleanAttribute('include_protocol');
   }
   public set includeProtocol(value: boolean | cdktf.IResolvable) {
     this._includeProtocol = value;
@@ -507,7 +507,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   // include_query_string - computed: false, optional: true, required: false
   private _includeQueryString?: boolean | cdktf.IResolvable; 
   public get includeQueryString() {
-    return this.getBooleanAttribute('include_query_string') as any;
+    return this.getBooleanAttribute('include_query_string');
   }
   public set includeQueryString(value: boolean | cdktf.IResolvable) {
     this._includeQueryString = value;
@@ -523,7 +523,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   // query_string_blacklist - computed: false, optional: true, required: false
   private _queryStringBlacklist?: string[]; 
   public get queryStringBlacklist() {
-    return this.getListAttribute('query_string_blacklist');
+    return cdktf.Fn.tolist(this.getListAttribute('query_string_blacklist'));
   }
   public set queryStringBlacklist(value: string[]) {
     this._queryStringBlacklist = value;
@@ -539,7 +539,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   // query_string_whitelist - computed: false, optional: true, required: false
   private _queryStringWhitelist?: string[]; 
   public get queryStringWhitelist() {
-    return this.getListAttribute('query_string_whitelist');
+    return cdktf.Fn.tolist(this.getListAttribute('query_string_whitelist'));
   }
   public set queryStringWhitelist(value: string[]) {
     this._queryStringWhitelist = value;
@@ -569,8 +569,8 @@ can be specified as values, and you cannot specify a status code more than once.
   readonly ttl?: number;
 }
 
-export function computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -645,11 +645,11 @@ responses will not be altered.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#negative_caching_policy ComputeBackendService#negative_caching_policy}
   */
-  readonly negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[];
+  readonly negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable;
 }
 
 export function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBackendServiceCdnPolicyOutputReference | ComputeBackendServiceCdnPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -674,7 +674,7 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -814,7 +814,7 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   // negative_caching - computed: true, optional: true, required: false
   private _negativeCaching?: boolean | cdktf.IResolvable; 
   public get negativeCaching() {
-    return this.getBooleanAttribute('negative_caching') as any;
+    return this.getBooleanAttribute('negative_caching');
   }
   public set negativeCaching(value: boolean | cdktf.IResolvable) {
     this._negativeCaching = value;
@@ -860,7 +860,7 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
 
   // cache_key_policy - computed: false, optional: true, required: false
-  private _cacheKeyPolicy = new ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this as any, "cache_key_policy", true);
+  private _cacheKeyPolicy = new ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this, "cache_key_policy", true);
   public get cacheKeyPolicy() {
     return this._cacheKeyPolicy;
   }
@@ -876,12 +876,12 @@ export class ComputeBackendServiceCdnPolicyOutputReference extends cdktf.Complex
   }
 
   // negative_caching_policy - computed: false, optional: true, required: false
-  private _negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[]; 
+  private _negativeCachingPolicy?: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable; 
   public get negativeCachingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('negative_caching_policy') as any;
+    return this.interpolationForAttribute('negative_caching_policy');
   }
-  public set negativeCachingPolicy(value: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[]) {
+  public set negativeCachingPolicy(value: ComputeBackendServiceCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable) {
     this._negativeCachingPolicy = value;
   }
   public resetNegativeCachingPolicy() {
@@ -933,7 +933,7 @@ Defaults to 3.
 }
 
 export function computeBackendServiceCircuitBreakersToTerraform(struct?: ComputeBackendServiceCircuitBreakersOutputReference | ComputeBackendServiceCircuitBreakers): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -954,7 +954,7 @@ export class ComputeBackendServiceCircuitBreakersOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1103,7 +1103,7 @@ Must be from 0 to 315,576,000,000 inclusive.
 }
 
 export function computeBackendServiceConsistentHashHttpCookieTtlToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference | ComputeBackendServiceConsistentHashHttpCookieTtl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1121,7 +1121,7 @@ export class ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1203,7 +1203,7 @@ export interface ComputeBackendServiceConsistentHashHttpCookie {
 }
 
 export function computeBackendServiceConsistentHashHttpCookieToTerraform(struct?: ComputeBackendServiceConsistentHashHttpCookieOutputReference | ComputeBackendServiceConsistentHashHttpCookie): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1222,7 +1222,7 @@ export class ComputeBackendServiceConsistentHashHttpCookieOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1292,7 +1292,7 @@ export class ComputeBackendServiceConsistentHashHttpCookieOutputReference extend
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl = new ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference(this as any, "ttl", true);
+  private _ttl = new ComputeBackendServiceConsistentHashHttpCookieTtlOutputReference(this, "ttl", true);
   public get ttl() {
     return this._ttl;
   }
@@ -1335,7 +1335,7 @@ Defaults to 1024.
 }
 
 export function computeBackendServiceConsistentHashToTerraform(struct?: ComputeBackendServiceConsistentHashOutputReference | ComputeBackendServiceConsistentHash): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1354,7 +1354,7 @@ export class ComputeBackendServiceConsistentHashOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1424,7 +1424,7 @@ export class ComputeBackendServiceConsistentHashOutputReference extends cdktf.Co
   }
 
   // http_cookie - computed: false, optional: true, required: false
-  private _httpCookie = new ComputeBackendServiceConsistentHashHttpCookieOutputReference(this as any, "http_cookie", true);
+  private _httpCookie = new ComputeBackendServiceConsistentHashHttpCookieOutputReference(this, "http_cookie", true);
   public get httpCookie() {
     return this._httpCookie;
   }
@@ -1455,7 +1455,7 @@ export interface ComputeBackendServiceIap {
 }
 
 export function computeBackendServiceIapToTerraform(struct?: ComputeBackendServiceIapOutputReference | ComputeBackendServiceIap): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1473,7 +1473,7 @@ export class ComputeBackendServiceIapOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1529,6 +1529,11 @@ export class ComputeBackendServiceIapOutputReference extends cdktf.ComplexObject
   public get oauth2ClientSecretInput() {
     return this._oauth2ClientSecret;
   }
+
+  // oauth2_client_secret_sha256 - computed: true, optional: false, required: false
+  public get oauth2ClientSecretSha256() {
+    return this.getStringAttribute('oauth2_client_secret_sha256');
+  }
 }
 export interface ComputeBackendServiceLogConfig {
   /**
@@ -1549,7 +1554,7 @@ The default value is 1.0.
 }
 
 export function computeBackendServiceLogConfigToTerraform(struct?: ComputeBackendServiceLogConfigOutputReference | ComputeBackendServiceLogConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1567,7 +1572,7 @@ export class ComputeBackendServiceLogConfigOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1601,7 +1606,7 @@ export class ComputeBackendServiceLogConfigOutputReference extends cdktf.Complex
   // enable - computed: false, optional: true, required: false
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
   public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
@@ -1649,7 +1654,7 @@ inclusive.
 }
 
 export function computeBackendServiceOutlierDetectionBaseEjectionTimeToTerraform(struct?: ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference | ComputeBackendServiceOutlierDetectionBaseEjectionTime): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1667,7 +1672,7 @@ export class ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1746,7 +1751,7 @@ inclusive.
 }
 
 export function computeBackendServiceOutlierDetectionIntervalToTerraform(struct?: ComputeBackendServiceOutlierDetectionIntervalOutputReference | ComputeBackendServiceOutlierDetectionInterval): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1764,7 +1769,7 @@ export class ComputeBackendServiceOutlierDetectionIntervalOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1917,7 +1922,7 @@ runtime value should be 1900. Defaults to 1900.
 }
 
 export function computeBackendServiceOutlierDetectionToTerraform(struct?: ComputeBackendServiceOutlierDetectionOutputReference | ComputeBackendServiceOutlierDetection): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1944,7 +1949,7 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2174,7 +2179,7 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
 
   // base_ejection_time - computed: false, optional: true, required: false
-  private _baseEjectionTime = new ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this as any, "base_ejection_time", true);
+  private _baseEjectionTime = new ComputeBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this, "base_ejection_time", true);
   public get baseEjectionTime() {
     return this._baseEjectionTime;
   }
@@ -2190,7 +2195,7 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
   }
 
   // interval - computed: false, optional: true, required: false
-  private _interval = new ComputeBackendServiceOutlierDetectionIntervalOutputReference(this as any, "interval", true);
+  private _interval = new ComputeBackendServiceOutlierDetectionIntervalOutputReference(this, "interval", true);
   public get interval() {
     return this._interval;
   }
@@ -2220,8 +2225,8 @@ export interface ComputeBackendServiceTimeouts {
   readonly update?: string;
 }
 
-export function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendServiceTimeoutsOutputReference | ComputeBackendServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function computeBackendServiceTimeoutsToTerraform(struct?: ComputeBackendServiceTimeoutsOutputReference | ComputeBackendServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2240,7 +2245,7 @@ export class ComputeBackendServiceTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2428,7 +2433,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // custom_request_headers - computed: false, optional: true, required: false
   private _customRequestHeaders?: string[]; 
   public get customRequestHeaders() {
-    return this.getListAttribute('custom_request_headers');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_request_headers'));
   }
   public set customRequestHeaders(value: string[]) {
     this._customRequestHeaders = value;
@@ -2444,7 +2449,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // custom_response_headers - computed: false, optional: true, required: false
   private _customResponseHeaders?: string[]; 
   public get customResponseHeaders() {
-    return this.getListAttribute('custom_response_headers');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_response_headers'));
   }
   public set customResponseHeaders(value: string[]) {
     this._customResponseHeaders = value;
@@ -2476,7 +2481,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // enable_cdn - computed: false, optional: true, required: false
   private _enableCdn?: boolean | cdktf.IResolvable; 
   public get enableCdn() {
-    return this.getBooleanAttribute('enable_cdn') as any;
+    return this.getBooleanAttribute('enable_cdn');
   }
   public set enableCdn(value: boolean | cdktf.IResolvable) {
     this._enableCdn = value;
@@ -2497,7 +2502,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // health_checks - computed: false, optional: true, required: false
   private _healthChecks?: string[]; 
   public get healthChecks() {
-    return this.getListAttribute('health_checks');
+    return cdktf.Fn.tolist(this.getListAttribute('health_checks'));
   }
   public set healthChecks(value: string[]) {
     this._healthChecks = value;
@@ -2662,12 +2667,12 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // backend - computed: false, optional: true, required: false
-  private _backend?: ComputeBackendServiceBackend[]; 
+  private _backend?: ComputeBackendServiceBackend[] | cdktf.IResolvable; 
   public get backend() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('backend')));
   }
-  public set backend(value: ComputeBackendServiceBackend[]) {
+  public set backend(value: ComputeBackendServiceBackend[] | cdktf.IResolvable) {
     this._backend = value;
   }
   public resetBackend() {
@@ -2679,7 +2684,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy = new ComputeBackendServiceCdnPolicyOutputReference(this as any, "cdn_policy", true);
+  private _cdnPolicy = new ComputeBackendServiceCdnPolicyOutputReference(this, "cdn_policy", true);
   public get cdnPolicy() {
     return this._cdnPolicy;
   }
@@ -2695,7 +2700,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
-  private _circuitBreakers = new ComputeBackendServiceCircuitBreakersOutputReference(this as any, "circuit_breakers", true);
+  private _circuitBreakers = new ComputeBackendServiceCircuitBreakersOutputReference(this, "circuit_breakers", true);
   public get circuitBreakers() {
     return this._circuitBreakers;
   }
@@ -2711,7 +2716,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // consistent_hash - computed: false, optional: true, required: false
-  private _consistentHash = new ComputeBackendServiceConsistentHashOutputReference(this as any, "consistent_hash", true);
+  private _consistentHash = new ComputeBackendServiceConsistentHashOutputReference(this, "consistent_hash", true);
   public get consistentHash() {
     return this._consistentHash;
   }
@@ -2727,7 +2732,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap = new ComputeBackendServiceIapOutputReference(this as any, "iap", true);
+  private _iap = new ComputeBackendServiceIapOutputReference(this, "iap", true);
   public get iap() {
     return this._iap;
   }
@@ -2743,7 +2748,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeBackendServiceLogConfigOutputReference(this as any, "log_config", true);
+  private _logConfig = new ComputeBackendServiceLogConfigOutputReference(this, "log_config", true);
   public get logConfig() {
     return this._logConfig;
   }
@@ -2759,7 +2764,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // outlier_detection - computed: false, optional: true, required: false
-  private _outlierDetection = new ComputeBackendServiceOutlierDetectionOutputReference(this as any, "outlier_detection", true);
+  private _outlierDetection = new ComputeBackendServiceOutlierDetectionOutputReference(this, "outlier_detection", true);
   public get outlierDetection() {
     return this._outlierDetection;
   }
@@ -2775,7 +2780,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeBackendServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ComputeBackendServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
