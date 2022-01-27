@@ -865,9 +865,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 constructs@^10.0.0, constructs@^10.0.25:
-  version "10.0.44"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.44.tgz#eabcdd19f47a995295fc42e1b6a99142ac95db5c"
-  integrity sha512-DNcxbAEtJHCUTwDijBlRDfMBAQUdfM+9Yprx3lJcYpOL9+DfuORB9fK9nKCQ3igmN/kv+I1hVg2Lqe+aVl/W5A==
+  version "10.0.45"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.45.tgz#77b30eed476825f2330a3c48cac3e66435709e30"
+  integrity sha512-QZkRmlLh7lx/pn5yj1nc7EwWrfZ99bl+fiNY8J1UtKwGb4iq/oZx9dmnsmjSlUW1iU2mZ5/5VmFHjF0z9YvvNQ==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -1420,9 +1420,9 @@ find-up@^4.1.0:
     path-exists "^4.0.0"
 
 flatted@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.4.tgz#28d9969ea90661b5134259f312ab6aa7929ac5e2"
-  integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
+  integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
 
 foreach@^2.0.5:
   version "2.0.5"
