@@ -2199,9 +2199,9 @@ jsii-rosetta@^1.54.0:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.482:
-  version "0.1.496"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.496.tgz#322bdf19b678a020bb721f472281db185849cc1c"
-  integrity sha512-IZkAByl31vr1Zss3mq2tvBmmXsT1XZev5+ypxo+fL9mdwKnQ3Z54RBLHsOlyBvU4q+lyRii9VWVylpdf0vgDaQ==
+  version "0.1.497"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.497.tgz#a7c9d2e6ca4ee176950945b1d804ecc008b418e6"
+  integrity sha512-CWRdTmBGQeI7aYr3WQ1aOGVemoVfwaUvggB01VdC6Z0AJ+CHlzU4qVqvJzLJnu/mU9KGeO42QTBxYWSmSJ1bKA==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.54.0"
@@ -2461,9 +2461,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 lru-cache@^7.3.1, lru-cache@^7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.1.tgz#afe07e885ef0cd5bf99f62f4fa7545d48746d779"
-  integrity sha512-NCD7/WRlFmADccuHjsRUYqdluYBr//n/O0fesCb/n52FoGcgKh8o4Dpm7YIbZwVcDs8rPBQbCZLmWWsp6m+xGQ==
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.2.tgz#92f7b5afe82759f51b216a96fae3bc1828df9712"
+  integrity sha512-Xs3+hFPDSKQmL05Gs6NhvAADol1u9TmLoNoE03ZjszX6a5iYIO3rPUM4jIjoBUJeTaWEBMozjjmV70gvdRfIdw==
 
 make-dir@^3.0.0:
   version "3.1.0"
