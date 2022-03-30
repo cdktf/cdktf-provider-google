@@ -55,10 +55,9 @@ export class AppEngineServiceNetworkSettingsNetworkSettingsOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineServiceNetworkSettingsNetworkSettings | undefined {
@@ -131,10 +130,9 @@ export class AppEngineServiceNetworkSettingsTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineServiceNetworkSettingsTimeouts | undefined {
@@ -227,7 +225,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_app_engine_service_network_settings";
+  public static readonly tfResourceType = "google_app_engine_service_network_settings";
 
   // ===========
   // INITIALIZER
@@ -244,7 +242,9 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_service_network_settings',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -296,7 +296,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // network_settings - computed: false, optional: false, required: true
-  private _networkSettings = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this, "network_settings", true);
+  private _networkSettings = new AppEngineServiceNetworkSettingsNetworkSettingsOutputReference(this, "network_settings");
   public get networkSettings() {
     return this._networkSettings;
   }
@@ -309,7 +309,7 @@ export class AppEngineServiceNetworkSettings extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppEngineServiceNetworkSettingsTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

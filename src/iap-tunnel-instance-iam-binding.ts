@@ -67,10 +67,9 @@ export class IapTunnelInstanceIamBindingConditionOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IapTunnelInstanceIamBindingCondition | undefined {
@@ -157,7 +156,7 @@ export class IapTunnelInstanceIamBinding extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_iap_tunnel_instance_iam_binding";
+  public static readonly tfResourceType = "google_iap_tunnel_instance_iam_binding";
 
   // ===========
   // INITIALIZER
@@ -174,7 +173,9 @@ export class IapTunnelInstanceIamBinding extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_iap_tunnel_instance_iam_binding',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -275,7 +276,7 @@ export class IapTunnelInstanceIamBinding extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new IapTunnelInstanceIamBindingConditionOutputReference(this, "condition", true);
+  private _condition = new IapTunnelInstanceIamBindingConditionOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }

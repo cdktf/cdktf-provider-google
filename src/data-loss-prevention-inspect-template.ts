@@ -68,10 +68,9 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined {
@@ -134,10 +133,9 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList | undefined {
@@ -206,10 +204,9 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary | undefined {
@@ -240,7 +237,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path", true);
+  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path");
   public get cloudStoragePath() {
     return this._cloudStoragePath;
   }
@@ -256,7 +253,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this, "word_list", true);
+  private _wordList = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this, "word_list");
   public get wordList() {
     return this._wordList;
   }
@@ -297,10 +294,9 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType | undefined {
@@ -370,10 +366,9 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex | undefined {
@@ -458,10 +453,9 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStored
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType | undefined {
@@ -599,10 +593,9 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined {
@@ -704,10 +697,9 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimits | undefined {
@@ -831,10 +823,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined {
@@ -897,10 +888,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined {
@@ -969,10 +959,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary | undefined {
@@ -1003,7 +992,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path", true);
+  private _cloudStoragePath = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path");
   public get cloudStoragePath() {
     return this._cloudStoragePath;
   }
@@ -1019,7 +1008,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this, "word_list", true);
+  private _wordList = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this, "word_list");
   public get wordList() {
     return this._wordList;
   }
@@ -1079,10 +1068,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined {
@@ -1153,10 +1141,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex | undefined {
@@ -1261,10 +1248,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule | undefined {
@@ -1320,7 +1306,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // dictionary - computed: false, optional: true, required: false
-  private _dictionary = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this, "dictionary", true);
+  private _dictionary = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this, "dictionary");
   public get dictionary() {
     return this._dictionary;
   }
@@ -1336,7 +1322,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // exclude_info_types - computed: false, optional: true, required: false
-  private _excludeInfoTypes = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this, "exclude_info_types", true);
+  private _excludeInfoTypes = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this, "exclude_info_types");
   public get excludeInfoTypes() {
     return this._excludeInfoTypes;
   }
@@ -1352,7 +1338,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   }
 
   // regex - computed: false, optional: true, required: false
-  private _regex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this, "regex", true);
+  private _regex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this, "regex");
   public get regex() {
     return this._regex;
   }
@@ -1401,10 +1387,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined {
@@ -1500,10 +1485,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined {
@@ -1597,10 +1581,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity | undefined {
@@ -1701,10 +1684,9 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule | undefined {
@@ -1741,7 +1723,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   // hotword_regex - computed: false, optional: false, required: true
-  private _hotwordRegex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this, "hotword_regex", true);
+  private _hotwordRegex = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this, "hotword_regex");
   public get hotwordRegex() {
     return this._hotwordRegex;
   }
@@ -1754,7 +1736,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   // likelihood_adjustment - computed: false, optional: false, required: true
-  private _likelihoodAdjustment = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this, "likelihood_adjustment", true);
+  private _likelihoodAdjustment = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this, "likelihood_adjustment");
   public get likelihoodAdjustment() {
     return this._likelihoodAdjustment;
   }
@@ -1767,7 +1749,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRu
   }
 
   // proximity - computed: false, optional: false, required: true
-  private _proximity = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this, "proximity", true);
+  private _proximity = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this, "proximity");
   public get proximity() {
     return this._proximity;
   }
@@ -1905,10 +1887,9 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateInspectConfig | undefined {
@@ -2073,7 +2054,7 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits = new DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(this, "limits", true);
+  private _limits = new DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(this, "limits");
   public get limits() {
     return this._limits;
   }
@@ -2138,10 +2119,9 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionInspectTemplateTimeouts | undefined {
@@ -2234,7 +2214,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_data_loss_prevention_inspect_template";
+  public static readonly tfResourceType = "google_data_loss_prevention_inspect_template";
 
   // ===========
   // INITIALIZER
@@ -2251,7 +2231,9 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_data_loss_prevention_inspect_template',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2325,7 +2307,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
 
   // inspect_config - computed: false, optional: true, required: false
-  private _inspectConfig = new DataLossPreventionInspectTemplateInspectConfigOutputReference(this, "inspect_config", true);
+  private _inspectConfig = new DataLossPreventionInspectTemplateInspectConfigOutputReference(this, "inspect_config");
   public get inspectConfig() {
     return this._inspectConfig;
   }
@@ -2341,7 +2323,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataLossPreventionInspectTemplateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataLossPreventionInspectTemplateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

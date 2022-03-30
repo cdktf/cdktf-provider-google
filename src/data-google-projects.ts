@@ -12,7 +12,45 @@ export interface DataGoogleProjectsConfig extends cdktf.TerraformMetaArguments {
   */
   readonly filter: string;
 }
-export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
+export interface DataGoogleProjectsProjects {
+}
+
+export function dataGoogleProjectsProjectsToTerraform(struct?: DataGoogleProjectsProjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleProjectsProjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleProjectsProjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleProjectsProjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -20,8 +58,8 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
   }
 
   // labels - computed: true, optional: false, required: false
-  public get labels() {
-    return this.getStringMapAttribute('labels');
+  public labels(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // lifecycle_state - computed: true, optional: false, required: false
@@ -40,13 +78,32 @@ export class DataGoogleProjectsProjects extends cdktf.ComplexComputedList {
   }
 
   // parent - computed: true, optional: false, required: false
-  public get parent() {
-    return this.getStringMapAttribute('parent');
+  public parent(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'parent').lookup(key);
   }
 
   // project_id - computed: true, optional: false, required: false
   public get projectId() {
     return this.getStringAttribute('project_id');
+  }
+}
+
+export class DataGoogleProjectsProjectsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleProjectsProjectsOutputReference {
+    return new DataGoogleProjectsProjectsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -58,7 +115,7 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_projects";
+  public static readonly tfResourceType = "google_projects";
 
   // ===========
   // INITIALIZER
@@ -75,7 +132,9 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_projects',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -108,8 +167,9 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
   }
 
   // projects - computed: true, optional: false, required: false
-  public projects(index: string) {
-    return new DataGoogleProjectsProjects(this, 'projects', index, false);
+  private _projects = new DataGoogleProjectsProjectsList(this, "projects", false);
+  public get projects() {
+    return this._projects;
   }
 
   // =========

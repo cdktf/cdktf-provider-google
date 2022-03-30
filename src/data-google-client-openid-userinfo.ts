@@ -17,7 +17,7 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_client_openid_userinfo";
+  public static readonly tfResourceType = "google_client_openid_userinfo";
 
   // ===========
   // INITIALIZER
@@ -34,7 +34,9 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_client_openid_userinfo',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

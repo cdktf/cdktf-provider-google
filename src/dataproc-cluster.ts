@@ -75,10 +75,9 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigAutoscalingConfig | undefined {
@@ -140,10 +139,9 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigEncryptionConfig | undefined {
@@ -219,10 +217,9 @@ export class DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig | undefined {
@@ -387,10 +384,9 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigGceClusterConfig | undefined {
@@ -591,7 +587,7 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -697,10 +693,9 @@ export class DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigMasterConfigDiskConfig | undefined {
@@ -844,10 +839,9 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigMasterConfig | undefined {
@@ -988,7 +982,7 @@ export class DataprocClusterClusterConfigMasterConfigOutputReference extends cdk
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(this, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigMasterConfigDiskConfigOutputReference(this, "disk_config");
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -1042,10 +1036,9 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig | undefined {
@@ -1161,10 +1154,9 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigPreemptibleWorkerConfig | undefined {
@@ -1216,7 +1208,7 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(this, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutputReference(this, "disk_config");
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -1357,10 +1349,9 @@ export class DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigSecurityConfigKerberosConfig | undefined {
@@ -1727,10 +1718,9 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigSecurityConfig | undefined {
@@ -1755,7 +1745,7 @@ export class DataprocClusterClusterConfigSecurityConfigOutputReference extends c
   }
 
   // kerberos_config - computed: false, optional: false, required: true
-  private _kerberosConfig = new DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(this, "kerberos_config", true);
+  private _kerberosConfig = new DataprocClusterClusterConfigSecurityConfigKerberosConfigOutputReference(this, "kerberos_config");
   public get kerberosConfig() {
     return this._kerberosConfig;
   }
@@ -1806,10 +1796,9 @@ export class DataprocClusterClusterConfigSoftwareConfigOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigSoftwareConfig | undefined {
@@ -1963,10 +1952,9 @@ export class DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigWorkerConfigDiskConfig | undefined {
@@ -2110,10 +2098,9 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfigWorkerConfig | undefined {
@@ -2254,7 +2241,7 @@ export class DataprocClusterClusterConfigWorkerConfigOutputReference extends cdk
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(this, "disk_config", true);
+  private _diskConfig = new DataprocClusterClusterConfigWorkerConfigDiskConfigOutputReference(this, "disk_config");
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -2364,10 +2351,9 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterClusterConfig | undefined {
@@ -2489,7 +2475,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // autoscaling_config - computed: false, optional: true, required: false
-  private _autoscalingConfig = new DataprocClusterClusterConfigAutoscalingConfigOutputReference(this, "autoscaling_config", true);
+  private _autoscalingConfig = new DataprocClusterClusterConfigAutoscalingConfigOutputReference(this, "autoscaling_config");
   public get autoscalingConfig() {
     return this._autoscalingConfig;
   }
@@ -2505,7 +2491,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig = new DataprocClusterClusterConfigEncryptionConfigOutputReference(this, "encryption_config", true);
+  private _encryptionConfig = new DataprocClusterClusterConfigEncryptionConfigOutputReference(this, "encryption_config");
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
@@ -2521,7 +2507,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // gce_cluster_config - computed: false, optional: true, required: false
-  private _gceClusterConfig = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this, "gce_cluster_config", true);
+  private _gceClusterConfig = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this, "gce_cluster_config");
   public get gceClusterConfig() {
     return this._gceClusterConfig;
   }
@@ -2554,7 +2540,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // master_config - computed: false, optional: true, required: false
-  private _masterConfig = new DataprocClusterClusterConfigMasterConfigOutputReference(this, "master_config", true);
+  private _masterConfig = new DataprocClusterClusterConfigMasterConfigOutputReference(this, "master_config");
   public get masterConfig() {
     return this._masterConfig;
   }
@@ -2570,7 +2556,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // preemptible_worker_config - computed: false, optional: true, required: false
-  private _preemptibleWorkerConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(this, "preemptible_worker_config", true);
+  private _preemptibleWorkerConfig = new DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference(this, "preemptible_worker_config");
   public get preemptibleWorkerConfig() {
     return this._preemptibleWorkerConfig;
   }
@@ -2586,7 +2572,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // security_config - computed: false, optional: true, required: false
-  private _securityConfig = new DataprocClusterClusterConfigSecurityConfigOutputReference(this, "security_config", true);
+  private _securityConfig = new DataprocClusterClusterConfigSecurityConfigOutputReference(this, "security_config");
   public get securityConfig() {
     return this._securityConfig;
   }
@@ -2602,7 +2588,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig = new DataprocClusterClusterConfigSoftwareConfigOutputReference(this, "software_config", true);
+  private _softwareConfig = new DataprocClusterClusterConfigSoftwareConfigOutputReference(this, "software_config");
   public get softwareConfig() {
     return this._softwareConfig;
   }
@@ -2618,7 +2604,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig = new DataprocClusterClusterConfigWorkerConfigOutputReference(this, "worker_config", true);
+  private _workerConfig = new DataprocClusterClusterConfigWorkerConfigOutputReference(this, "worker_config");
   public get workerConfig() {
     return this._workerConfig;
   }
@@ -2666,10 +2652,9 @@ export class DataprocClusterTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocClusterTimeouts | undefined {
@@ -2762,7 +2747,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dataproc_cluster";
+  public static readonly tfResourceType = "google_dataproc_cluster";
 
   // ===========
   // INITIALIZER
@@ -2779,7 +2764,9 @@ export class DataprocCluster extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2882,7 +2869,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // cluster_config - computed: false, optional: true, required: false
-  private _clusterConfig = new DataprocClusterClusterConfigOutputReference(this, "cluster_config", true);
+  private _clusterConfig = new DataprocClusterClusterConfigOutputReference(this, "cluster_config");
   public get clusterConfig() {
     return this._clusterConfig;
   }
@@ -2898,7 +2885,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataprocClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataprocClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

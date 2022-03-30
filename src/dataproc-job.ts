@@ -92,7 +92,45 @@ export interface DataprocJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: DataprocJobTimeouts;
 }
-export class DataprocJobStatus extends cdktf.ComplexComputedList {
+export interface DataprocJobStatus {
+}
+
+export function dataprocJobStatusToTerraform(struct?: DataprocJobStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataprocJobStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataprocJobStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocJobStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // details - computed: true, optional: false, required: false
   public get details() {
@@ -112,6 +150,25 @@ export class DataprocJobStatus extends cdktf.ComplexComputedList {
   // substate - computed: true, optional: false, required: false
   public get substate() {
     return this.getStringAttribute('substate');
+  }
+}
+
+export class DataprocJobStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataprocJobStatusOutputReference {
+    return new DataprocJobStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataprocJobHadoopConfigLoggingConfig {
@@ -139,10 +196,9 @@ export class DataprocJobHadoopConfigLoggingConfigOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobHadoopConfigLoggingConfig | undefined {
@@ -253,10 +309,9 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobHadoopConfig | undefined {
@@ -435,7 +490,7 @@ export class DataprocJobHadoopConfigOutputReference extends cdktf.ComplexObject 
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocJobHadoopConfigLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocJobHadoopConfigLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -510,10 +565,9 @@ export class DataprocJobHiveConfigOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobHiveConfig | undefined {
@@ -688,10 +742,9 @@ export class DataprocJobPigConfigLoggingConfigOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobPigConfigLoggingConfig | undefined {
@@ -795,10 +848,9 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobPigConfig | undefined {
@@ -955,7 +1007,7 @@ export class DataprocJobPigConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocJobPigConfigLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocJobPigConfigLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -995,10 +1047,9 @@ export class DataprocJobPlacementOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobPlacement | undefined {
@@ -1065,10 +1116,9 @@ export class DataprocJobPysparkConfigLoggingConfigOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobPysparkConfigLoggingConfig | undefined {
@@ -1179,10 +1229,9 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobPysparkConfig | undefined {
@@ -1358,7 +1407,7 @@ export class DataprocJobPysparkConfigOutputReference extends cdktf.ComplexObject
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocJobPysparkConfigLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocJobPysparkConfigLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -1398,10 +1447,9 @@ export class DataprocJobReferenceOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobReference | undefined {
@@ -1473,10 +1521,9 @@ export class DataprocJobSchedulingOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobScheduling | undefined {
@@ -1557,10 +1604,9 @@ export class DataprocJobSparkConfigLoggingConfigOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobSparkConfigLoggingConfig | undefined {
@@ -1671,10 +1717,9 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobSparkConfig | undefined {
@@ -1853,7 +1898,7 @@ export class DataprocJobSparkConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocJobSparkConfigLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocJobSparkConfigLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -1893,10 +1938,9 @@ export class DataprocJobSparksqlConfigLoggingConfigOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobSparksqlConfigLoggingConfig | undefined {
@@ -1993,10 +2037,9 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobSparksqlConfig | undefined {
@@ -2131,7 +2174,7 @@ export class DataprocJobSparksqlConfigOutputReference extends cdktf.ComplexObjec
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocJobSparksqlConfigLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocJobSparksqlConfigLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -2174,10 +2217,9 @@ export class DataprocJobTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocJobTimeouts | undefined {
@@ -2248,7 +2290,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dataproc_job";
+  public static readonly tfResourceType = "google_dataproc_job";
 
   // ===========
   // INITIALIZER
@@ -2265,7 +2307,9 @@ export class DataprocJob extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_job',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2372,12 +2416,13 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // status - computed: true, optional: false, required: false
-  public status(index: string) {
-    return new DataprocJobStatus(this, 'status', index, false);
+  private _status = new DataprocJobStatusList(this, "status", false);
+  public get status() {
+    return this._status;
   }
 
   // hadoop_config - computed: false, optional: true, required: false
-  private _hadoopConfig = new DataprocJobHadoopConfigOutputReference(this, "hadoop_config", true);
+  private _hadoopConfig = new DataprocJobHadoopConfigOutputReference(this, "hadoop_config");
   public get hadoopConfig() {
     return this._hadoopConfig;
   }
@@ -2393,7 +2438,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // hive_config - computed: false, optional: true, required: false
-  private _hiveConfig = new DataprocJobHiveConfigOutputReference(this, "hive_config", true);
+  private _hiveConfig = new DataprocJobHiveConfigOutputReference(this, "hive_config");
   public get hiveConfig() {
     return this._hiveConfig;
   }
@@ -2409,7 +2454,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // pig_config - computed: false, optional: true, required: false
-  private _pigConfig = new DataprocJobPigConfigOutputReference(this, "pig_config", true);
+  private _pigConfig = new DataprocJobPigConfigOutputReference(this, "pig_config");
   public get pigConfig() {
     return this._pigConfig;
   }
@@ -2425,7 +2470,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // placement - computed: false, optional: false, required: true
-  private _placement = new DataprocJobPlacementOutputReference(this, "placement", true);
+  private _placement = new DataprocJobPlacementOutputReference(this, "placement");
   public get placement() {
     return this._placement;
   }
@@ -2438,7 +2483,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // pyspark_config - computed: false, optional: true, required: false
-  private _pysparkConfig = new DataprocJobPysparkConfigOutputReference(this, "pyspark_config", true);
+  private _pysparkConfig = new DataprocJobPysparkConfigOutputReference(this, "pyspark_config");
   public get pysparkConfig() {
     return this._pysparkConfig;
   }
@@ -2454,7 +2499,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // reference - computed: false, optional: true, required: false
-  private _reference = new DataprocJobReferenceOutputReference(this, "reference", true);
+  private _reference = new DataprocJobReferenceOutputReference(this, "reference");
   public get reference() {
     return this._reference;
   }
@@ -2470,7 +2515,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // scheduling - computed: false, optional: true, required: false
-  private _scheduling = new DataprocJobSchedulingOutputReference(this, "scheduling", true);
+  private _scheduling = new DataprocJobSchedulingOutputReference(this, "scheduling");
   public get scheduling() {
     return this._scheduling;
   }
@@ -2486,7 +2531,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // spark_config - computed: false, optional: true, required: false
-  private _sparkConfig = new DataprocJobSparkConfigOutputReference(this, "spark_config", true);
+  private _sparkConfig = new DataprocJobSparkConfigOutputReference(this, "spark_config");
   public get sparkConfig() {
     return this._sparkConfig;
   }
@@ -2502,7 +2547,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // sparksql_config - computed: false, optional: true, required: false
-  private _sparksqlConfig = new DataprocJobSparksqlConfigOutputReference(this, "sparksql_config", true);
+  private _sparksqlConfig = new DataprocJobSparksqlConfigOutputReference(this, "sparksql_config");
   public get sparksqlConfig() {
     return this._sparksqlConfig;
   }
@@ -2518,7 +2563,7 @@ export class DataprocJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataprocJobTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataprocJobTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

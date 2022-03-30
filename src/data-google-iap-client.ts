@@ -31,7 +31,7 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_iap_client";
+  public static readonly tfResourceType = "google_iap_client";
 
   // ===========
   // INITIALIZER
@@ -48,7 +48,9 @@ export class DataGoogleIapClient extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_iap_client',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

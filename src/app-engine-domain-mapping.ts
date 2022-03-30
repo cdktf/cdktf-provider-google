@@ -37,7 +37,45 @@ By default, overrides are rejected. Default value: "STRICT" Possible values: ["S
   */
   readonly timeouts?: AppEngineDomainMappingTimeouts;
 }
-export class AppEngineDomainMappingResourceRecords extends cdktf.ComplexComputedList {
+export interface AppEngineDomainMappingResourceRecords {
+}
+
+export function appEngineDomainMappingResourceRecordsToTerraform(struct?: AppEngineDomainMappingResourceRecords): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppEngineDomainMappingResourceRecordsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppEngineDomainMappingResourceRecords | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineDomainMappingResourceRecords | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -52,6 +90,25 @@ export class AppEngineDomainMappingResourceRecords extends cdktf.ComplexComputed
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
+  }
+}
+
+export class AppEngineDomainMappingResourceRecordsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppEngineDomainMappingResourceRecordsOutputReference {
+    return new AppEngineDomainMappingResourceRecordsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface AppEngineDomainMappingSslSettings {
@@ -92,10 +149,9 @@ export class AppEngineDomainMappingSslSettingsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineDomainMappingSslSettings | undefined {
@@ -192,10 +248,9 @@ export class AppEngineDomainMappingTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineDomainMappingTimeouts | undefined {
@@ -288,7 +343,7 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_app_engine_domain_mapping";
+  public static readonly tfResourceType = "google_app_engine_domain_mapping";
 
   // ===========
   // INITIALIZER
@@ -305,7 +360,9 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_domain_mapping',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -379,12 +436,13 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
 
   // resource_records - computed: true, optional: false, required: false
-  public resourceRecords(index: string) {
-    return new AppEngineDomainMappingResourceRecords(this, 'resource_records', index, false);
+  private _resourceRecords = new AppEngineDomainMappingResourceRecordsList(this, "resource_records", false);
+  public get resourceRecords() {
+    return this._resourceRecords;
   }
 
   // ssl_settings - computed: false, optional: true, required: false
-  private _sslSettings = new AppEngineDomainMappingSslSettingsOutputReference(this, "ssl_settings", true);
+  private _sslSettings = new AppEngineDomainMappingSslSettingsOutputReference(this, "ssl_settings");
   public get sslSettings() {
     return this._sslSettings;
   }
@@ -400,7 +458,7 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineDomainMappingTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppEngineDomainMappingTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

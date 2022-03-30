@@ -74,10 +74,9 @@ export class VertexAiDatasetEncryptionSpecOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VertexAiDatasetEncryptionSpec | undefined {
@@ -150,10 +149,9 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VertexAiDatasetTimeouts | undefined {
@@ -246,7 +244,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_vertex_ai_dataset";
+  public static readonly tfResourceType = "google_vertex_ai_dataset";
 
   // ===========
   // INITIALIZER
@@ -263,7 +261,9 @@ export class VertexAiDataset extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_vertex_ai_dataset',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -378,7 +378,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // encryption_spec - computed: false, optional: true, required: false
-  private _encryptionSpec = new VertexAiDatasetEncryptionSpecOutputReference(this, "encryption_spec", true);
+  private _encryptionSpec = new VertexAiDatasetEncryptionSpecOutputReference(this, "encryption_spec");
   public get encryptionSpec() {
     return this._encryptionSpec;
   }
@@ -394,7 +394,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VertexAiDatasetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VertexAiDatasetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -170,10 +170,9 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DnsManagedZoneDnssecConfig | undefined {
@@ -333,10 +332,9 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DnsManagedZoneForwardingConfig | undefined {
@@ -401,10 +399,9 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DnsManagedZonePeeringConfigTargetNetwork | undefined {
@@ -466,10 +463,9 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DnsManagedZonePeeringConfig | undefined {
@@ -494,7 +490,7 @@ export class DnsManagedZonePeeringConfigOutputReference extends cdktf.ComplexObj
   }
 
   // target_network - computed: false, optional: false, required: true
-  private _targetNetwork = new DnsManagedZonePeeringConfigTargetNetworkOutputReference(this, "target_network", true);
+  private _targetNetwork = new DnsManagedZonePeeringConfigTargetNetworkOutputReference(this, "target_network");
   public get targetNetwork() {
     return this._targetNetwork;
   }
@@ -552,10 +548,9 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DnsManagedZonePrivateVisibilityConfig | undefined {
@@ -626,10 +621,9 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DnsManagedZoneTimeouts | undefined {
@@ -722,7 +716,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dns_managed_zone";
+  public static readonly tfResourceType = "google_dns_managed_zone";
 
   // ===========
   // INITIALIZER
@@ -739,7 +733,9 @@ export class DnsManagedZone extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dns_managed_zone',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -881,7 +877,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // dnssec_config - computed: false, optional: true, required: false
-  private _dnssecConfig = new DnsManagedZoneDnssecConfigOutputReference(this, "dnssec_config", true);
+  private _dnssecConfig = new DnsManagedZoneDnssecConfigOutputReference(this, "dnssec_config");
   public get dnssecConfig() {
     return this._dnssecConfig;
   }
@@ -897,7 +893,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // forwarding_config - computed: false, optional: true, required: false
-  private _forwardingConfig = new DnsManagedZoneForwardingConfigOutputReference(this, "forwarding_config", true);
+  private _forwardingConfig = new DnsManagedZoneForwardingConfigOutputReference(this, "forwarding_config");
   public get forwardingConfig() {
     return this._forwardingConfig;
   }
@@ -913,7 +909,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // peering_config - computed: false, optional: true, required: false
-  private _peeringConfig = new DnsManagedZonePeeringConfigOutputReference(this, "peering_config", true);
+  private _peeringConfig = new DnsManagedZonePeeringConfigOutputReference(this, "peering_config");
   public get peeringConfig() {
     return this._peeringConfig;
   }
@@ -929,7 +925,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // private_visibility_config - computed: false, optional: true, required: false
-  private _privateVisibilityConfig = new DnsManagedZonePrivateVisibilityConfigOutputReference(this, "private_visibility_config", true);
+  private _privateVisibilityConfig = new DnsManagedZonePrivateVisibilityConfigOutputReference(this, "private_visibility_config");
   public get privateVisibilityConfig() {
     return this._privateVisibilityConfig;
   }
@@ -945,7 +941,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DnsManagedZoneTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DnsManagedZoneTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

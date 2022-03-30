@@ -86,10 +86,9 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerAnalysisNoteAttestationAuthorityHint | undefined {
@@ -151,10 +150,9 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerAnalysisNoteAttestationAuthority | undefined {
@@ -179,7 +177,7 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
   }
 
   // hint - computed: false, optional: false, required: true
-  private _hint = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this, "hint", true);
+  private _hint = new ContainerAnalysisNoteAttestationAuthorityHintOutputReference(this, "hint");
   public get hint() {
     return this._hint;
   }
@@ -250,10 +248,9 @@ export class ContainerAnalysisNoteTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerAnalysisNoteTimeouts | undefined {
@@ -346,7 +343,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_container_analysis_note";
+  public static readonly tfResourceType = "google_container_analysis_note";
 
   // ===========
   // INITIALIZER
@@ -363,7 +360,9 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_container_analysis_note',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -499,7 +498,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // attestation_authority - computed: false, optional: false, required: true
-  private _attestationAuthority = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this, "attestation_authority", true);
+  private _attestationAuthority = new ContainerAnalysisNoteAttestationAuthorityOutputReference(this, "attestation_authority");
   public get attestationAuthority() {
     return this._attestationAuthority;
   }
@@ -529,7 +528,7 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerAnalysisNoteTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ContainerAnalysisNoteTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

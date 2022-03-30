@@ -20,7 +20,45 @@ export interface DataGoogleSqlDatabaseInstanceConfig extends cdktf.TerraformMeta
   */
   readonly project?: string;
 }
-export class DataGoogleSqlDatabaseInstanceClone extends cdktf.ComplexComputedList {
+export interface DataGoogleSqlDatabaseInstanceClone {
+}
+
+export function dataGoogleSqlDatabaseInstanceCloneToTerraform(struct?: DataGoogleSqlDatabaseInstanceClone): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceClone | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceClone | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // point_in_time - computed: true, optional: false, required: false
   public get pointInTime() {
@@ -32,7 +70,64 @@ export class DataGoogleSqlDatabaseInstanceClone extends cdktf.ComplexComputedLis
     return this.getStringAttribute('source_instance_name');
   }
 }
-export class DataGoogleSqlDatabaseInstanceIpAddress extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceCloneList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceCloneOutputReference {
+    return new DataGoogleSqlDatabaseInstanceCloneOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceIpAddress {
+}
+
+export function dataGoogleSqlDatabaseInstanceIpAddressToTerraform(struct?: DataGoogleSqlDatabaseInstanceIpAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceIpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceIpAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceIpAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -49,7 +144,64 @@ export class DataGoogleSqlDatabaseInstanceIpAddress extends cdktf.ComplexCompute
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceIpAddressList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceIpAddressOutputReference {
+    return new DataGoogleSqlDatabaseInstanceIpAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceReplicaConfiguration {
+}
+
+export function dataGoogleSqlDatabaseInstanceReplicaConfigurationToTerraform(struct?: DataGoogleSqlDatabaseInstanceReplicaConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceReplicaConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceReplicaConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceReplicaConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ca_certificate - computed: true, optional: false, required: false
   public get caCertificate() {
@@ -106,7 +258,64 @@ export class DataGoogleSqlDatabaseInstanceReplicaConfiguration extends cdktf.Com
     return this.getBooleanAttribute('verify_server_certificate');
   }
 }
-export class DataGoogleSqlDatabaseInstanceRestoreBackupContext extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceReplicaConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceReplicaConfigurationOutputReference {
+    return new DataGoogleSqlDatabaseInstanceReplicaConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceRestoreBackupContext {
+}
+
+export function dataGoogleSqlDatabaseInstanceRestoreBackupContextToTerraform(struct?: DataGoogleSqlDatabaseInstanceRestoreBackupContext): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceRestoreBackupContextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceRestoreBackupContext | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceRestoreBackupContext | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // backup_run_id - computed: true, optional: false, required: false
   public get backupRunId() {
@@ -123,7 +332,64 @@ export class DataGoogleSqlDatabaseInstanceRestoreBackupContext extends cdktf.Com
     return this.getStringAttribute('project');
   }
 }
-export class DataGoogleSqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceRestoreBackupContextList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceRestoreBackupContextOutputReference {
+    return new DataGoogleSqlDatabaseInstanceRestoreBackupContextOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceServerCaCert {
+}
+
+export function dataGoogleSqlDatabaseInstanceServerCaCertToTerraform(struct?: DataGoogleSqlDatabaseInstanceServerCaCert): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceServerCaCertOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceServerCaCert | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceServerCaCert | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -150,7 +416,64 @@ export class DataGoogleSqlDatabaseInstanceServerCaCert extends cdktf.ComplexComp
     return this.getStringAttribute('sha1_fingerprint');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceServerCaCertList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceServerCaCertOutputReference {
+    return new DataGoogleSqlDatabaseInstanceServerCaCertOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // retained_backups - computed: true, optional: false, required: false
   public get retainedBackups() {
@@ -162,12 +485,69 @@ export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupReten
     return this.getStringAttribute('retention_unit');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // backup_retention_settings - computed: true, optional: false, required: false
+  private _backupRetentionSettings = new DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsList(this, "backup_retention_settings", false);
   public get backupRetentionSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backup_retention_settings');
+    return this._backupRetentionSettings;
   }
 
   // binary_log_enabled - computed: true, optional: false, required: false
@@ -200,7 +580,64 @@ export class DataGoogleSqlDatabaseInstanceSettingsBackupConfiguration extends cd
     return this.getNumberAttribute('transaction_log_retention_days');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -212,7 +649,64 @@ export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlags extends cdktf.Co
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfig extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsInsightsConfig {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsInsightsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsInsightsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsInsightsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // query_insights_enabled - computed: true, optional: false, required: false
   public get queryInsightsEnabled() {
@@ -234,7 +728,64 @@ export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfig extends cdktf.C
     return this.getBooleanAttribute('record_client_address');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsInsightsConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsInsightsConfigOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsInsightsConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworks | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // expiration_time - computed: true, optional: false, required: false
   public get expirationTime() {
@@ -251,12 +802,69 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetwo
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsIpConfiguration {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsIpConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsIpConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // authorized_networks - computed: true, optional: false, required: false
+  private _authorizedNetworks = new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList(this, "authorized_networks", true);
   public get authorizedNetworks() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('authorized_networks')));
+    return this._authorizedNetworks;
   }
 
   // ipv4_enabled - computed: true, optional: false, required: false
@@ -274,7 +882,64 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfiguration extends cdktf.
     return this.getBooleanAttribute('require_ssl');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsLocationPreference extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsLocationPreference {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsLocationPreference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsLocationPreference | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsLocationPreference | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // follow_gae_application - computed: true, optional: false, required: false
   public get followGaeApplication() {
@@ -286,7 +951,64 @@ export class DataGoogleSqlDatabaseInstanceSettingsLocationPreference extends cdk
     return this.getStringAttribute('zone');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // day - computed: true, optional: false, required: false
   public get day() {
@@ -303,7 +1025,64 @@ export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindow extends cdkt
     return this.getStringAttribute('update_track');
   }
 }
-export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputedList {
+
+export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstanceSettings {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // activation_policy - computed: true, optional: false, required: false
   public get activationPolicy() {
@@ -321,9 +1100,9 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
   }
 
   // backup_configuration - computed: true, optional: false, required: false
+  private _backupConfiguration = new DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationList(this, "backup_configuration", false);
   public get backupConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backup_configuration');
+    return this._backupConfiguration;
   }
 
   // collation - computed: true, optional: false, required: false
@@ -337,9 +1116,9 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
   }
 
   // database_flags - computed: true, optional: false, required: false
+  private _databaseFlags = new DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsList(this, "database_flags", false);
   public get databaseFlags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('database_flags');
+    return this._databaseFlags;
   }
 
   // disk_autoresize - computed: true, optional: false, required: false
@@ -363,27 +1142,27 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
   }
 
   // insights_config - computed: true, optional: false, required: false
+  private _insightsConfig = new DataGoogleSqlDatabaseInstanceSettingsInsightsConfigList(this, "insights_config", false);
   public get insightsConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('insights_config');
+    return this._insightsConfig;
   }
 
   // ip_configuration - computed: true, optional: false, required: false
+  private _ipConfiguration = new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationList(this, "ip_configuration", false);
   public get ipConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_configuration');
+    return this._ipConfiguration;
   }
 
   // location_preference - computed: true, optional: false, required: false
+  private _locationPreference = new DataGoogleSqlDatabaseInstanceSettingsLocationPreferenceList(this, "location_preference", false);
   public get locationPreference() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('location_preference');
+    return this._locationPreference;
   }
 
   // maintenance_window - computed: true, optional: false, required: false
+  private _maintenanceWindow = new DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowList(this, "maintenance_window", false);
   public get maintenanceWindow() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('maintenance_window');
+    return this._maintenanceWindow;
   }
 
   // pricing_plan - computed: true, optional: false, required: false
@@ -402,13 +1181,32 @@ export class DataGoogleSqlDatabaseInstanceSettings extends cdktf.ComplexComputed
   }
 
   // user_labels - computed: true, optional: false, required: false
-  public get userLabels() {
-    return this.getStringMapAttribute('user_labels');
+  public userLabels(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'user_labels').lookup(key);
   }
 
   // version - computed: true, optional: false, required: false
   public get version() {
     return this.getNumberAttribute('version');
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -420,7 +1218,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_sql_database_instance";
+  public static readonly tfResourceType = "google_sql_database_instance";
 
   // ===========
   // INITIALIZER
@@ -437,7 +1235,9 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -453,8 +1253,9 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // ==========
 
   // clone - computed: true, optional: false, required: false
-  public clone(index: string) {
-    return new DataGoogleSqlDatabaseInstanceClone(this, 'clone', index, false);
+  private _clone = new DataGoogleSqlDatabaseInstanceCloneList(this, "clone", false);
+  public get clone() {
+    return this._clone;
   }
 
   // connection_name - computed: true, optional: false, required: false
@@ -483,8 +1284,9 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   }
 
   // ip_address - computed: true, optional: false, required: false
-  public ipAddress(index: string) {
-    return new DataGoogleSqlDatabaseInstanceIpAddress(this, 'ip_address', index, false);
+  private _ipAddress = new DataGoogleSqlDatabaseInstanceIpAddressList(this, "ip_address", false);
+  public get ipAddress() {
+    return this._ipAddress;
   }
 
   // master_instance_name - computed: true, optional: false, required: false
@@ -537,13 +1339,15 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   }
 
   // replica_configuration - computed: true, optional: false, required: false
-  public replicaConfiguration(index: string) {
-    return new DataGoogleSqlDatabaseInstanceReplicaConfiguration(this, 'replica_configuration', index, false);
+  private _replicaConfiguration = new DataGoogleSqlDatabaseInstanceReplicaConfigurationList(this, "replica_configuration", false);
+  public get replicaConfiguration() {
+    return this._replicaConfiguration;
   }
 
   // restore_backup_context - computed: true, optional: false, required: false
-  public restoreBackupContext(index: string) {
-    return new DataGoogleSqlDatabaseInstanceRestoreBackupContext(this, 'restore_backup_context', index, false);
+  private _restoreBackupContext = new DataGoogleSqlDatabaseInstanceRestoreBackupContextList(this, "restore_backup_context", false);
+  public get restoreBackupContext() {
+    return this._restoreBackupContext;
   }
 
   // root_password - computed: true, optional: false, required: false
@@ -557,8 +1361,9 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   }
 
   // server_ca_cert - computed: true, optional: false, required: false
-  public serverCaCert(index: string) {
-    return new DataGoogleSqlDatabaseInstanceServerCaCert(this, 'server_ca_cert', index, false);
+  private _serverCaCert = new DataGoogleSqlDatabaseInstanceServerCaCertList(this, "server_ca_cert", false);
+  public get serverCaCert() {
+    return this._serverCaCert;
   }
 
   // service_account_email_address - computed: true, optional: false, required: false
@@ -567,8 +1372,9 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   }
 
   // settings - computed: true, optional: false, required: false
-  public settings(index: string) {
-    return new DataGoogleSqlDatabaseInstanceSettings(this, 'settings', index, false);
+  private _settings = new DataGoogleSqlDatabaseInstanceSettingsList(this, "settings", false);
+  public get settings() {
+    return this._settings;
   }
 
   // =========

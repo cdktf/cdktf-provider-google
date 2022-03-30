@@ -24,7 +24,45 @@ last character, which cannot be a dash.
   */
   readonly project?: string;
 }
-export class DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicy extends cdktf.ComplexComputedList {
+export interface DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicy {
+}
+
+export function dataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform(struct?: DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // code - computed: true, optional: false, required: false
   public get code() {
@@ -36,7 +74,64 @@ export class DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicy extend
     return this.getNumberAttribute('ttl');
   }
 }
-export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyOutputReference {
+    return new DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeBackendBucketCdnPolicy {
+}
+
+export function dataGoogleComputeBackendBucketCdnPolicyToTerraform(struct?: DataGoogleComputeBackendBucketCdnPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeBackendBucketCdnPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeBackendBucketCdnPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cache_mode - computed: true, optional: false, required: false
   public get cacheMode() {
@@ -64,9 +159,9 @@ export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComput
   }
 
   // negative_caching_policy - computed: true, optional: false, required: false
+  private _negativeCachingPolicy = new DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyList(this, "negative_caching_policy", false);
   public get negativeCachingPolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('negative_caching_policy');
+    return this._negativeCachingPolicy;
   }
 
   // serve_while_stale - computed: true, optional: false, required: false
@@ -80,6 +175,25 @@ export class DataGoogleComputeBackendBucketCdnPolicy extends cdktf.ComplexComput
   }
 }
 
+export class DataGoogleComputeBackendBucketCdnPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeBackendBucketCdnPolicyOutputReference {
+    return new DataGoogleComputeBackendBucketCdnPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket google_compute_backend_bucket}
 */
@@ -88,7 +202,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_backend_bucket";
+  public static readonly tfResourceType = "google_compute_backend_bucket";
 
   // ===========
   // INITIALIZER
@@ -105,7 +219,9 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -126,8 +242,9 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
   }
 
   // cdn_policy - computed: true, optional: false, required: false
-  public cdnPolicy(index: string) {
-    return new DataGoogleComputeBackendBucketCdnPolicy(this, 'cdn_policy', index, false);
+  private _cdnPolicy = new DataGoogleComputeBackendBucketCdnPolicyList(this, "cdn_policy", false);
+  public get cdnPolicy() {
+    return this._cdnPolicy;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false

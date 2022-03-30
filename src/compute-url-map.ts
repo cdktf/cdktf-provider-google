@@ -157,10 +157,9 @@ export class ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionCorsPolicy | undefined {
@@ -388,10 +387,9 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbort | undefined {
@@ -487,10 +485,9 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
@@ -585,10 +582,9 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelay | undefined {
@@ -635,7 +631,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputRefer
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay");
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -682,10 +678,9 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionFaultInjectionPolicy | undefined {
@@ -716,7 +711,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
+  private _abort = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort");
   public get abort() {
     return this._abort;
   }
@@ -732,7 +727,7 @@ export class ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference 
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
+  private _delay = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay");
   public get delay() {
     return this._delay;
   }
@@ -772,10 +767,9 @@ export class ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionRequestMirrorPolicy | undefined {
@@ -846,10 +840,9 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
@@ -965,10 +958,9 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionRetryPolicy | undefined {
@@ -1037,7 +1029,7 @@ export class ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference extends c
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout");
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -1086,10 +1078,9 @@ export class ComputeUrlMapDefaultRouteActionTimeoutOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionTimeout | undefined {
@@ -1189,10 +1180,9 @@ export class ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionUrlRewrite | undefined {
@@ -1370,10 +1360,9 @@ export class ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
@@ -1590,10 +1579,9 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultRouteAction | undefined {
@@ -1654,7 +1642,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapDefaultRouteActionCorsPolicyOutputReference(this, "cors_policy");
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -1670,7 +1658,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapDefaultRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy");
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -1686,7 +1674,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy");
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -1702,7 +1690,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -1718,7 +1706,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapDefaultRouteActionTimeoutOutputReference(this, "timeout", true);
+  private _timeout = new ComputeUrlMapDefaultRouteActionTimeoutOutputReference(this, "timeout");
   public get timeout() {
     return this._timeout;
   }
@@ -1734,7 +1722,7 @@ export class ComputeUrlMapDefaultRouteActionOutputReference extends cdktf.Comple
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapDefaultRouteActionUrlRewriteOutputReference(this, "url_rewrite");
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -1853,10 +1841,9 @@ export class ComputeUrlMapDefaultUrlRedirectOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapDefaultUrlRedirect | undefined {
@@ -2121,10 +2108,9 @@ export class ComputeUrlMapHeaderActionOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapHeaderAction | undefined {
@@ -2348,10 +2334,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicy | undefined {
@@ -2579,10 +2564,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort | undefined {
@@ -2678,10 +2662,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
@@ -2776,10 +2759,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay | undefined {
@@ -2826,7 +2808,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay");
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -2873,10 +2855,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicy | undefined {
@@ -2907,7 +2888,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
+  private _abort = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort");
   public get abort() {
     return this._abort;
   }
@@ -2923,7 +2904,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutpu
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay");
   public get delay() {
     return this._delay;
   }
@@ -2963,10 +2944,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicy | undefined {
@@ -3037,10 +3017,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
@@ -3156,10 +3135,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicy | undefined {
@@ -3228,7 +3206,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReferenc
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout");
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -3277,10 +3255,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionTimeout | undefined {
@@ -3380,10 +3357,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionUrlRewrite | undefined {
@@ -3561,10 +3537,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
@@ -3781,10 +3756,9 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultRouteAction | undefined {
@@ -3845,7 +3819,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionCorsPolicyOutputReference(this, "cors_policy");
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -3861,7 +3835,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy");
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -3877,7 +3851,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy");
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -3893,7 +3867,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -3909,7 +3883,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(this, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherDefaultRouteActionTimeoutOutputReference(this, "timeout");
   public get timeout() {
     return this._timeout;
   }
@@ -3925,7 +3899,7 @@ export class ComputeUrlMapPathMatcherDefaultRouteActionOutputReference extends c
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherDefaultRouteActionUrlRewriteOutputReference(this, "url_rewrite");
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -4044,10 +4018,9 @@ export class ComputeUrlMapPathMatcherDefaultUrlRedirectOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherDefaultUrlRedirect | undefined {
@@ -4312,10 +4285,9 @@ export class ComputeUrlMapPathMatcherHeaderActionOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherHeaderAction | undefined {
@@ -4503,10 +4475,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicy | undefined {
@@ -4732,10 +4703,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbor
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort | undefined {
@@ -4826,10 +4796,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
@@ -4922,10 +4891,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay | undefined {
@@ -4969,7 +4937,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDela
   }
 
   // fixed_delay - computed: false, optional: false, required: true
-  private _fixedDelay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay");
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -5013,10 +4981,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy | undefined {
@@ -5047,7 +5014,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
+  private _abort = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort");
   public get abort() {
     return this._abort;
   }
@@ -5063,7 +5030,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutp
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay");
   public get delay() {
     return this._delay;
   }
@@ -5103,10 +5070,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy | undefined {
@@ -5178,10 +5144,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout | undefined {
@@ -5300,10 +5265,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicy | undefined {
@@ -5372,7 +5336,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReferen
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout");
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -5422,10 +5386,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionTimeout | undefined {
@@ -5520,10 +5483,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewrite | undefined {
@@ -5703,10 +5665,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesH
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction | undefined {
@@ -5921,10 +5882,9 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleRouteAction | undefined {
@@ -5985,7 +5945,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutputReference(this, "cors_policy");
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -6001,7 +5961,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy");
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -6017,7 +5977,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy");
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -6033,7 +5993,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -6049,7 +6009,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherPathRuleRouteActionTimeoutOutputReference(this, "timeout");
   public get timeout() {
     return this._timeout;
   }
@@ -6065,7 +6025,7 @@ export class ComputeUrlMapPathMatcherPathRuleRouteActionOutputReference extends 
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputReference(this, "url_rewrite");
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -6187,10 +6147,9 @@ export class ComputeUrlMapPathMatcherPathRuleUrlRedirectOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherPathRuleUrlRedirect | undefined {
@@ -6498,10 +6457,9 @@ export class ComputeUrlMapPathMatcherRouteRulesHeaderActionOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesHeaderAction | undefined {
@@ -6641,10 +6599,9 @@ export class ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch | undefined {
@@ -7046,10 +7003,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicy | undefined {
@@ -7278,10 +7234,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort | undefined {
@@ -7378,10 +7333,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay | undefined {
@@ -7474,10 +7428,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay | undefined {
@@ -7524,7 +7477,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDe
   }
 
   // fixed_delay - computed: false, optional: true, required: false
-  private _fixedDelay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay", true);
+  private _fixedDelay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelayOutputReference(this, "fixed_delay");
   public get fixedDelay() {
     return this._fixedDelay;
   }
@@ -7571,10 +7524,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy | undefined {
@@ -7605,7 +7557,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   }
 
   // abort - computed: false, optional: true, required: false
-  private _abort = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort", true);
+  private _abort = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbortOutputReference(this, "abort");
   public get abort() {
     return this._abort;
   }
@@ -7621,7 +7573,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOu
   }
 
   // delay - computed: false, optional: true, required: false
-  private _delay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay", true);
+  private _delay = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayOutputReference(this, "delay");
   public get delay() {
     return this._delay;
   }
@@ -7661,10 +7613,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOut
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy | undefined {
@@ -7736,10 +7687,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeo
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout | undefined {
@@ -7858,10 +7808,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicy | undefined {
@@ -7927,7 +7876,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputRefer
   }
 
   // per_try_timeout - computed: false, optional: true, required: false
-  private _perTryTimeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout", true);
+  private _perTryTimeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout");
   public get perTryTimeout() {
     return this._perTryTimeout;
   }
@@ -7977,10 +7926,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionTimeout | undefined {
@@ -8075,10 +8023,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewrite | undefined {
@@ -8258,10 +8205,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendService
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction | undefined {
@@ -8476,10 +8422,9 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesRouteAction | undefined {
@@ -8540,7 +8485,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // cors_policy - computed: false, optional: true, required: false
-  private _corsPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this, "cors_policy", true);
+  private _corsPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyOutputReference(this, "cors_policy");
   public get corsPolicy() {
     return this._corsPolicy;
   }
@@ -8556,7 +8501,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // fault_injection_policy - computed: false, optional: true, required: false
-  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy", true);
+  private _faultInjectionPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyOutputReference(this, "fault_injection_policy");
   public get faultInjectionPolicy() {
     return this._faultInjectionPolicy;
   }
@@ -8572,7 +8517,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // request_mirror_policy - computed: false, optional: true, required: false
-  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy", true);
+  private _requestMirrorPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy");
   public get requestMirrorPolicy() {
     return this._requestMirrorPolicy;
   }
@@ -8588,7 +8533,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this, "retry_policy", true);
+  private _retryPolicy = new ComputeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -8604,7 +8549,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this, "timeout", true);
+  private _timeout = new ComputeUrlMapPathMatcherRouteRulesRouteActionTimeoutOutputReference(this, "timeout");
   public get timeout() {
     return this._timeout;
   }
@@ -8620,7 +8565,7 @@ export class ComputeUrlMapPathMatcherRouteRulesRouteActionOutputReference extend
   }
 
   // url_rewrite - computed: false, optional: true, required: false
-  private _urlRewrite = new ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this, "url_rewrite", true);
+  private _urlRewrite = new ComputeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutputReference(this, "url_rewrite");
   public get urlRewrite() {
     return this._urlRewrite;
   }
@@ -8731,10 +8676,9 @@ export class ComputeUrlMapPathMatcherRouteRulesUrlRedirectOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapPathMatcherRouteRulesUrlRedirect | undefined {
@@ -9100,10 +9044,9 @@ export class ComputeUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeUrlMapTimeouts | undefined {
@@ -9196,7 +9139,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_url_map";
+  public static readonly tfResourceType = "google_compute_url_map";
 
   // ===========
   // INITIALIZER
@@ -9213,7 +9156,9 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_url_map',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -9324,7 +9269,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // default_route_action - computed: false, optional: true, required: false
-  private _defaultRouteAction = new ComputeUrlMapDefaultRouteActionOutputReference(this, "default_route_action", true);
+  private _defaultRouteAction = new ComputeUrlMapDefaultRouteActionOutputReference(this, "default_route_action");
   public get defaultRouteAction() {
     return this._defaultRouteAction;
   }
@@ -9340,7 +9285,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // default_url_redirect - computed: false, optional: true, required: false
-  private _defaultUrlRedirect = new ComputeUrlMapDefaultUrlRedirectOutputReference(this, "default_url_redirect", true);
+  private _defaultUrlRedirect = new ComputeUrlMapDefaultUrlRedirectOutputReference(this, "default_url_redirect");
   public get defaultUrlRedirect() {
     return this._defaultUrlRedirect;
   }
@@ -9356,7 +9301,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // header_action - computed: false, optional: true, required: false
-  private _headerAction = new ComputeUrlMapHeaderActionOutputReference(this, "header_action", true);
+  private _headerAction = new ComputeUrlMapHeaderActionOutputReference(this, "header_action");
   public get headerAction() {
     return this._headerAction;
   }
@@ -9423,7 +9368,7 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeUrlMapTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeUrlMapTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

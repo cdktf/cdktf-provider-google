@@ -33,7 +33,7 @@ export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSour
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_instance_serial_port";
+  public static readonly tfResourceType = "google_compute_instance_serial_port";
 
   // ===========
   // INITIALIZER
@@ -50,7 +50,9 @@ export class DataGoogleComputeInstanceSerialPort extends cdktf.TerraformDataSour
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_serial_port',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

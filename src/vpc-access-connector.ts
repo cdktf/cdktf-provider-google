@@ -82,10 +82,9 @@ export class VpcAccessConnectorTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpcAccessConnectorTimeouts | undefined {
@@ -156,7 +155,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_vpc_access_connector";
+  public static readonly tfResourceType = "google_vpc_access_connector";
 
   // ===========
   // INITIALIZER
@@ -173,7 +172,9 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_vpc_access_connector',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -319,7 +320,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpcAccessConnectorTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VpcAccessConnectorTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -98,14 +98,109 @@ export interface ComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaAr
   */
   readonly version: ComputeInstanceGroupManagerVersion[] | cdktf.IResolvable;
 }
-export class ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs extends cdktf.ComplexComputedList {
+export interface ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs {
+}
+
+export function computeInstanceGroupManagerStatusStatefulPerInstanceConfigsToTerraform(struct?: ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // all_effective - computed: true, optional: false, required: false
   public get allEffective() {
     return this.getBooleanAttribute('all_effective');
   }
 }
-export class ComputeInstanceGroupManagerStatusStateful extends cdktf.ComplexComputedList {
+
+export class ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsOutputReference {
+    return new ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeInstanceGroupManagerStatusStateful {
+}
+
+export function computeInstanceGroupManagerStatusStatefulToTerraform(struct?: ComputeInstanceGroupManagerStatusStateful): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ComputeInstanceGroupManagerStatusStatefulOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeInstanceGroupManagerStatusStateful | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerStatusStateful | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // has_stateful_config - computed: true, optional: false, required: false
   public get hasStatefulConfig() {
@@ -113,19 +208,133 @@ export class ComputeInstanceGroupManagerStatusStateful extends cdktf.ComplexComp
   }
 
   // per_instance_configs - computed: true, optional: false, required: false
+  private _perInstanceConfigs = new ComputeInstanceGroupManagerStatusStatefulPerInstanceConfigsList(this, "per_instance_configs", false);
   public get perInstanceConfigs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('per_instance_configs');
+    return this._perInstanceConfigs;
   }
 }
-export class ComputeInstanceGroupManagerStatusVersionTarget extends cdktf.ComplexComputedList {
+
+export class ComputeInstanceGroupManagerStatusStatefulList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeInstanceGroupManagerStatusStatefulOutputReference {
+    return new ComputeInstanceGroupManagerStatusStatefulOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeInstanceGroupManagerStatusVersionTarget {
+}
+
+export function computeInstanceGroupManagerStatusVersionTargetToTerraform(struct?: ComputeInstanceGroupManagerStatusVersionTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ComputeInstanceGroupManagerStatusVersionTargetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeInstanceGroupManagerStatusVersionTarget | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerStatusVersionTarget | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // is_reached - computed: true, optional: false, required: false
   public get isReached() {
     return this.getBooleanAttribute('is_reached');
   }
 }
-export class ComputeInstanceGroupManagerStatus extends cdktf.ComplexComputedList {
+
+export class ComputeInstanceGroupManagerStatusVersionTargetList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeInstanceGroupManagerStatusVersionTargetOutputReference {
+    return new ComputeInstanceGroupManagerStatusVersionTargetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeInstanceGroupManagerStatus {
+}
+
+export function computeInstanceGroupManagerStatusToTerraform(struct?: ComputeInstanceGroupManagerStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ComputeInstanceGroupManagerStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeInstanceGroupManagerStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupManagerStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // is_stable - computed: true, optional: false, required: false
   public get isStable() {
@@ -133,15 +342,34 @@ export class ComputeInstanceGroupManagerStatus extends cdktf.ComplexComputedList
   }
 
   // stateful - computed: true, optional: false, required: false
+  private _stateful = new ComputeInstanceGroupManagerStatusStatefulList(this, "stateful", false);
   public get stateful() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('stateful');
+    return this._stateful;
   }
 
   // version_target - computed: true, optional: false, required: false
+  private _versionTarget = new ComputeInstanceGroupManagerStatusVersionTargetList(this, "version_target", false);
   public get versionTarget() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('version_target');
+    return this._versionTarget;
+  }
+}
+
+export class ComputeInstanceGroupManagerStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeInstanceGroupManagerStatusOutputReference {
+    return new ComputeInstanceGroupManagerStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ComputeInstanceGroupManagerAutoHealingPolicies {
@@ -176,10 +404,9 @@ export class ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceGroupManagerAutoHealingPolicies | undefined {
@@ -320,10 +547,9 @@ export class ComputeInstanceGroupManagerTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceGroupManagerTimeouts | undefined {
@@ -481,10 +707,9 @@ export class ComputeInstanceGroupManagerUpdatePolicyOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceGroupManagerUpdatePolicy | undefined {
@@ -704,10 +929,9 @@ export class ComputeInstanceGroupManagerVersionTargetSizeOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceGroupManagerVersionTargetSize | undefined {
@@ -811,7 +1035,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_instance_group_manager";
+  public static readonly tfResourceType = "google_compute_instance_group_manager";
 
   // ===========
   // INITIALIZER
@@ -828,7 +1052,9 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_group_manager',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -940,8 +1166,9 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // status - computed: true, optional: false, required: false
-  public status(index: string) {
-    return new ComputeInstanceGroupManagerStatus(this, 'status', index, false);
+  private _status = new ComputeInstanceGroupManagerStatusList(this, "status", false);
+  public get status() {
+    return this._status;
   }
 
   // target_pools - computed: false, optional: true, required: false
@@ -1025,7 +1252,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // auto_healing_policies - computed: false, optional: true, required: false
-  private _autoHealingPolicies = new ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(this, "auto_healing_policies", true);
+  private _autoHealingPolicies = new ComputeInstanceGroupManagerAutoHealingPoliciesOutputReference(this, "auto_healing_policies");
   public get autoHealingPolicies() {
     return this._autoHealingPolicies;
   }
@@ -1075,7 +1302,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeInstanceGroupManagerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeInstanceGroupManagerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1091,7 +1318,7 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
   }
 
   // update_policy - computed: false, optional: true, required: false
-  private _updatePolicy = new ComputeInstanceGroupManagerUpdatePolicyOutputReference(this, "update_policy", true);
+  private _updatePolicy = new ComputeInstanceGroupManagerUpdatePolicyOutputReference(this, "update_policy");
   public get updatePolicy() {
     return this._updatePolicy;
   }

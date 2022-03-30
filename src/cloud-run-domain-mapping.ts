@@ -42,7 +42,45 @@ export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArgument
   */
   readonly timeouts?: CloudRunDomainMappingTimeouts;
 }
-export class CloudRunDomainMappingStatusConditions extends cdktf.ComplexComputedList {
+export interface CloudRunDomainMappingStatusConditions {
+}
+
+export function cloudRunDomainMappingStatusConditionsToTerraform(struct?: CloudRunDomainMappingStatusConditions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudRunDomainMappingStatusConditionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunDomainMappingStatusConditions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunDomainMappingStatusConditions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // message - computed: true, optional: false, required: false
   public get message() {
@@ -64,7 +102,64 @@ export class CloudRunDomainMappingStatusConditions extends cdktf.ComplexComputed
     return this.getStringAttribute('type');
   }
 }
-export class CloudRunDomainMappingStatusResourceRecords extends cdktf.ComplexComputedList {
+
+export class CloudRunDomainMappingStatusConditionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunDomainMappingStatusConditionsOutputReference {
+    return new CloudRunDomainMappingStatusConditionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudRunDomainMappingStatusResourceRecords {
+}
+
+export function cloudRunDomainMappingStatusResourceRecordsToTerraform(struct?: CloudRunDomainMappingStatusResourceRecords): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudRunDomainMappingStatusResourceRecordsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunDomainMappingStatusResourceRecords | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunDomainMappingStatusResourceRecords | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -81,12 +176,69 @@ export class CloudRunDomainMappingStatusResourceRecords extends cdktf.ComplexCom
     return this.getStringAttribute('type');
   }
 }
-export class CloudRunDomainMappingStatus extends cdktf.ComplexComputedList {
+
+export class CloudRunDomainMappingStatusResourceRecordsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunDomainMappingStatusResourceRecordsOutputReference {
+    return new CloudRunDomainMappingStatusResourceRecordsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudRunDomainMappingStatus {
+}
+
+export function cloudRunDomainMappingStatusToTerraform(struct?: CloudRunDomainMappingStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudRunDomainMappingStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunDomainMappingStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunDomainMappingStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // conditions - computed: true, optional: false, required: false
+  private _conditions = new CloudRunDomainMappingStatusConditionsList(this, "conditions", false);
   public get conditions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('conditions');
+    return this._conditions;
   }
 
   // mapped_route_name - computed: true, optional: false, required: false
@@ -100,9 +252,28 @@ export class CloudRunDomainMappingStatus extends cdktf.ComplexComputedList {
   }
 
   // resource_records - computed: true, optional: false, required: false
+  private _resourceRecords = new CloudRunDomainMappingStatusResourceRecordsList(this, "resource_records", false);
   public get resourceRecords() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_records');
+    return this._resourceRecords;
+  }
+}
+
+export class CloudRunDomainMappingStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunDomainMappingStatusOutputReference {
+    return new CloudRunDomainMappingStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface CloudRunDomainMappingMetadata {
@@ -154,10 +325,9 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudRunDomainMappingMetadata | undefined {
@@ -301,10 +471,9 @@ export class CloudRunDomainMappingSpecOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudRunDomainMappingSpec | undefined {
@@ -413,10 +582,9 @@ export class CloudRunDomainMappingTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudRunDomainMappingTimeouts | undefined {
@@ -487,7 +655,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_run_domain_mapping";
+  public static readonly tfResourceType = "google_cloud_run_domain_mapping";
 
   // ===========
   // INITIALIZER
@@ -504,7 +672,9 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_run_domain_mapping',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -571,12 +741,13 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
 
   // status - computed: true, optional: false, required: false
-  public status(index: string) {
-    return new CloudRunDomainMappingStatus(this, 'status', index, false);
+  private _status = new CloudRunDomainMappingStatusList(this, "status", false);
+  public get status() {
+    return this._status;
   }
 
   // metadata - computed: false, optional: false, required: true
-  private _metadata = new CloudRunDomainMappingMetadataOutputReference(this, "metadata", true);
+  private _metadata = new CloudRunDomainMappingMetadataOutputReference(this, "metadata");
   public get metadata() {
     return this._metadata;
   }
@@ -589,7 +760,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
 
   // spec - computed: false, optional: false, required: true
-  private _spec = new CloudRunDomainMappingSpecOutputReference(this, "spec", true);
+  private _spec = new CloudRunDomainMappingSpecOutputReference(this, "spec");
   public get spec() {
     return this._spec;
   }
@@ -602,7 +773,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudRunDomainMappingTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudRunDomainMappingTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

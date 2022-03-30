@@ -250,10 +250,9 @@ export class NotebooksInstanceAcceleratorConfigOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotebooksInstanceAcceleratorConfig | undefined {
@@ -342,10 +341,9 @@ export class NotebooksInstanceContainerImageOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotebooksInstanceContainerImage | undefined {
@@ -450,10 +448,9 @@ export class NotebooksInstanceShieldedInstanceConfigOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotebooksInstanceShieldedInstanceConfig | undefined {
@@ -570,10 +567,9 @@ export class NotebooksInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotebooksInstanceTimeouts | undefined {
@@ -697,10 +693,9 @@ export class NotebooksInstanceVmImageOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotebooksInstanceVmImage | undefined {
@@ -790,7 +785,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_notebooks_instance";
+  public static readonly tfResourceType = "google_notebooks_instance";
 
   // ===========
   // INITIALIZER
@@ -807,7 +802,9 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_notebooks_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1274,7 +1271,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // accelerator_config - computed: false, optional: true, required: false
-  private _acceleratorConfig = new NotebooksInstanceAcceleratorConfigOutputReference(this, "accelerator_config", true);
+  private _acceleratorConfig = new NotebooksInstanceAcceleratorConfigOutputReference(this, "accelerator_config");
   public get acceleratorConfig() {
     return this._acceleratorConfig;
   }
@@ -1290,7 +1287,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // container_image - computed: false, optional: true, required: false
-  private _containerImage = new NotebooksInstanceContainerImageOutputReference(this, "container_image", true);
+  private _containerImage = new NotebooksInstanceContainerImageOutputReference(this, "container_image");
   public get containerImage() {
     return this._containerImage;
   }
@@ -1306,7 +1303,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new NotebooksInstanceShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new NotebooksInstanceShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -1322,7 +1319,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NotebooksInstanceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new NotebooksInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1338,7 +1335,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
   }
 
   // vm_image - computed: false, optional: true, required: false
-  private _vmImage = new NotebooksInstanceVmImageOutputReference(this, "vm_image", true);
+  private _vmImage = new NotebooksInstanceVmImageOutputReference(this, "vm_image");
   public get vmImage() {
     return this._vmImage;
   }

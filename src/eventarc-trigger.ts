@@ -101,10 +101,9 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventarcTriggerDestinationCloudRunService | undefined {
@@ -217,10 +216,9 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventarcTriggerDestination | undefined {
@@ -267,7 +265,7 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
   }
 
   // cloud_run_service - computed: false, optional: true, required: false
-  private _cloudRunService = new EventarcTriggerDestinationCloudRunServiceOutputReference(this, "cloud_run_service", true);
+  private _cloudRunService = new EventarcTriggerDestinationCloudRunServiceOutputReference(this, "cloud_run_service");
   public get cloudRunService() {
     return this._cloudRunService;
   }
@@ -341,10 +339,9 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventarcTriggerTimeouts | undefined {
@@ -453,10 +450,9 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventarcTriggerTransportPubsub | undefined {
@@ -526,10 +522,9 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventarcTriggerTransport | undefined {
@@ -554,7 +549,7 @@ export class EventarcTriggerTransportOutputReference extends cdktf.ComplexObject
   }
 
   // pubsub - computed: false, optional: true, required: false
-  private _pubsub = new EventarcTriggerTransportPubsubOutputReference(this, "pubsub", true);
+  private _pubsub = new EventarcTriggerTransportPubsubOutputReference(this, "pubsub");
   public get pubsub() {
     return this._pubsub;
   }
@@ -578,7 +573,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_eventarc_trigger";
+  public static readonly tfResourceType = "google_eventarc_trigger";
 
   // ===========
   // INITIALIZER
@@ -595,7 +590,9 @@ export class EventarcTrigger extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_eventarc_trigger',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -717,7 +714,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new EventarcTriggerDestinationOutputReference(this, "destination", true);
+  private _destination = new EventarcTriggerDestinationOutputReference(this, "destination");
   public get destination() {
     return this._destination;
   }
@@ -744,7 +741,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventarcTriggerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new EventarcTriggerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -760,7 +757,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   }
 
   // transport - computed: false, optional: true, required: false
-  private _transport = new EventarcTriggerTransportOutputReference(this, "transport", true);
+  private _transport = new EventarcTriggerTransportOutputReference(this, "transport");
   public get transport() {
     return this._transport;
   }

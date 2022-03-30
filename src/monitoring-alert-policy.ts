@@ -74,7 +74,45 @@ must begin with a letter.
   */
   readonly timeouts?: MonitoringAlertPolicyTimeouts;
 }
-export class MonitoringAlertPolicyCreationRecord extends cdktf.ComplexComputedList {
+export interface MonitoringAlertPolicyCreationRecord {
+}
+
+export function monitoringAlertPolicyCreationRecordToTerraform(struct?: MonitoringAlertPolicyCreationRecord): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class MonitoringAlertPolicyCreationRecordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyCreationRecord | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyCreationRecord | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // mutate_time - computed: true, optional: false, required: false
   public get mutateTime() {
@@ -84,6 +122,25 @@ export class MonitoringAlertPolicyCreationRecord extends cdktf.ComplexComputedLi
   // mutated_by - computed: true, optional: false, required: false
   public get mutatedBy() {
     return this.getStringAttribute('mutated_by');
+  }
+}
+
+export class MonitoringAlertPolicyCreationRecordList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringAlertPolicyCreationRecordOutputReference {
+    return new MonitoringAlertPolicyCreationRecordOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
@@ -231,10 +288,9 @@ export class MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsentTrigger | undefined {
@@ -357,10 +413,9 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsent | undefined {
@@ -449,7 +504,7 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference(this, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionAbsentTriggerOutputReference(this, "trigger");
   public get trigger() {
     return this._trigger;
   }
@@ -500,10 +555,9 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrig
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger | undefined {
@@ -618,10 +672,9 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage | undefined {
@@ -684,7 +737,7 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference(this, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerOutputReference(this, "trigger");
   public get trigger() {
     return this._trigger;
   }
@@ -953,10 +1006,9 @@ export class MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionThresholdTrigger | undefined {
@@ -1139,10 +1191,9 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyConditionsConditionThreshold | undefined {
@@ -1317,7 +1368,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference(this, "trigger", true);
+  private _trigger = new MonitoringAlertPolicyConditionsConditionThresholdTriggerOutputReference(this, "trigger");
   public get trigger() {
     return this._trigger;
   }
@@ -1412,10 +1463,9 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyDocumentation | undefined {
@@ -1510,10 +1560,9 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringAlertPolicyTimeouts | undefined {
@@ -1606,7 +1655,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_monitoring_alert_policy";
+  public static readonly tfResourceType = "google_monitoring_alert_policy";
 
   // ===========
   // INITIALIZER
@@ -1623,7 +1672,9 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_alert_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1659,8 +1710,9 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // creation_record - computed: true, optional: false, required: false
-  public creationRecord(index: string) {
-    return new MonitoringAlertPolicyCreationRecord(this, 'creation_record', index, false);
+  private _creationRecord = new MonitoringAlertPolicyCreationRecordList(this, "creation_record", false);
+  public get creationRecord() {
+    return this._creationRecord;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -1765,7 +1817,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // documentation - computed: false, optional: true, required: false
-  private _documentation = new MonitoringAlertPolicyDocumentationOutputReference(this, "documentation", true);
+  private _documentation = new MonitoringAlertPolicyDocumentationOutputReference(this, "documentation");
   public get documentation() {
     return this._documentation;
   }
@@ -1781,7 +1833,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringAlertPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitoringAlertPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

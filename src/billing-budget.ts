@@ -107,10 +107,9 @@ export class BillingBudgetAllUpdatesRuleOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BillingBudgetAllUpdatesRule | undefined {
@@ -262,10 +261,9 @@ export class BillingBudgetAmountSpecifiedAmountOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BillingBudgetAmountSpecifiedAmount | undefined {
@@ -384,10 +382,9 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BillingBudgetAmount | undefined {
@@ -434,7 +431,7 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
   }
 
   // specified_amount - computed: false, optional: true, required: false
-  private _specifiedAmount = new BillingBudgetAmountSpecifiedAmountOutputReference(this, "specified_amount", true);
+  private _specifiedAmount = new BillingBudgetAmountSpecifiedAmountOutputReference(this, "specified_amount");
   public get specifiedAmount() {
     return this._specifiedAmount;
   }
@@ -530,10 +527,9 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BillingBudgetBudgetFilter | undefined {
@@ -744,10 +740,9 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BillingBudgetTimeouts | undefined {
@@ -840,7 +835,7 @@ export class BillingBudget extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_billing_budget";
+  public static readonly tfResourceType = "google_billing_budget";
 
   // ===========
   // INITIALIZER
@@ -857,7 +852,9 @@ export class BillingBudget extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_billing_budget',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -917,7 +914,7 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // all_updates_rule - computed: false, optional: true, required: false
-  private _allUpdatesRule = new BillingBudgetAllUpdatesRuleOutputReference(this, "all_updates_rule", true);
+  private _allUpdatesRule = new BillingBudgetAllUpdatesRuleOutputReference(this, "all_updates_rule");
   public get allUpdatesRule() {
     return this._allUpdatesRule;
   }
@@ -933,7 +930,7 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // amount - computed: false, optional: false, required: true
-  private _amount = new BillingBudgetAmountOutputReference(this, "amount", true);
+  private _amount = new BillingBudgetAmountOutputReference(this, "amount");
   public get amount() {
     return this._amount;
   }
@@ -946,7 +943,7 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // budget_filter - computed: false, optional: true, required: false
-  private _budgetFilter = new BillingBudgetBudgetFilterOutputReference(this, "budget_filter", true);
+  private _budgetFilter = new BillingBudgetBudgetFilterOutputReference(this, "budget_filter");
   public get budgetFilter() {
     return this._budgetFilter;
   }
@@ -976,7 +973,7 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BillingBudgetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new BillingBudgetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

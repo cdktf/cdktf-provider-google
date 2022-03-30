@@ -98,10 +98,9 @@ export class SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEnc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined {
@@ -189,10 +188,9 @@ export class SecretManagerSecretReplicationUserManagedOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecretManagerSecretReplicationUserManaged | undefined {
@@ -262,10 +260,9 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecretManagerSecretReplication | undefined {
@@ -312,7 +309,7 @@ export class SecretManagerSecretReplicationOutputReference extends cdktf.Complex
   }
 
   // user_managed - computed: false, optional: true, required: false
-  private _userManaged = new SecretManagerSecretReplicationUserManagedOutputReference(this, "user_managed", true);
+  private _userManaged = new SecretManagerSecretReplicationUserManagedOutputReference(this, "user_managed");
   public get userManaged() {
     return this._userManaged;
   }
@@ -361,10 +358,9 @@ export class SecretManagerSecretRotationOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecretManagerSecretRotation | undefined {
@@ -459,10 +455,9 @@ export class SecretManagerSecretTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecretManagerSecretTimeouts | undefined {
@@ -575,7 +570,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_secret_manager_secret";
+  public static readonly tfResourceType = "google_secret_manager_secret";
 
   // ===========
   // INITIALIZER
@@ -592,7 +587,9 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_secret_manager_secret',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -707,7 +704,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // replication - computed: false, optional: false, required: true
-  private _replication = new SecretManagerSecretReplicationOutputReference(this, "replication", true);
+  private _replication = new SecretManagerSecretReplicationOutputReference(this, "replication");
   public get replication() {
     return this._replication;
   }
@@ -720,7 +717,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // rotation - computed: false, optional: true, required: false
-  private _rotation = new SecretManagerSecretRotationOutputReference(this, "rotation", true);
+  private _rotation = new SecretManagerSecretRotationOutputReference(this, "rotation");
   public get rotation() {
     return this._rotation;
   }
@@ -736,7 +733,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SecretManagerSecretTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SecretManagerSecretTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

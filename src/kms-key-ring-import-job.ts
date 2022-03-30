@@ -40,7 +40,45 @@ versionTemplate on the CryptoKey you attempt to import into. Possible values: ["
   */
   readonly timeouts?: KmsKeyRingImportJobTimeouts;
 }
-export class KmsKeyRingImportJobAttestation extends cdktf.ComplexComputedList {
+export interface KmsKeyRingImportJobAttestation {
+}
+
+export function kmsKeyRingImportJobAttestationToTerraform(struct?: KmsKeyRingImportJobAttestation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KmsKeyRingImportJobAttestationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KmsKeyRingImportJobAttestation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KmsKeyRingImportJobAttestation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // content - computed: true, optional: false, required: false
   public get content() {
@@ -52,11 +90,87 @@ export class KmsKeyRingImportJobAttestation extends cdktf.ComplexComputedList {
     return this.getStringAttribute('format');
   }
 }
-export class KmsKeyRingImportJobPublicKey extends cdktf.ComplexComputedList {
+
+export class KmsKeyRingImportJobAttestationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KmsKeyRingImportJobAttestationOutputReference {
+    return new KmsKeyRingImportJobAttestationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface KmsKeyRingImportJobPublicKey {
+}
+
+export function kmsKeyRingImportJobPublicKeyToTerraform(struct?: KmsKeyRingImportJobPublicKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KmsKeyRingImportJobPublicKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KmsKeyRingImportJobPublicKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KmsKeyRingImportJobPublicKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // pem - computed: true, optional: false, required: false
   public get pem() {
     return this.getStringAttribute('pem');
+  }
+}
+
+export class KmsKeyRingImportJobPublicKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KmsKeyRingImportJobPublicKeyOutputReference {
+    return new KmsKeyRingImportJobPublicKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KmsKeyRingImportJobTimeouts {
@@ -87,10 +201,9 @@ export class KmsKeyRingImportJobTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KmsKeyRingImportJobTimeouts | undefined {
@@ -161,7 +274,7 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_kms_key_ring_import_job";
+  public static readonly tfResourceType = "google_kms_key_ring_import_job";
 
   // ===========
   // INITIALIZER
@@ -178,7 +291,9 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_kms_key_ring_import_job',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -197,8 +312,9 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
   // ==========
 
   // attestation - computed: true, optional: false, required: false
-  public attestation(index: string) {
-    return new KmsKeyRingImportJobAttestation(this, 'attestation', index, false);
+  private _attestation = new KmsKeyRingImportJobAttestationList(this, "attestation", false);
+  public get attestation() {
+    return this._attestation;
   }
 
   // expire_time - computed: true, optional: false, required: false
@@ -269,8 +385,9 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
   }
 
   // public_key - computed: true, optional: false, required: false
-  public publicKey(index: string) {
-    return new KmsKeyRingImportJobPublicKey(this, 'public_key', index, false);
+  private _publicKey = new KmsKeyRingImportJobPublicKeyList(this, "public_key", false);
+  public get publicKey() {
+    return this._publicKey;
   }
 
   // state - computed: true, optional: false, required: false
@@ -279,7 +396,7 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KmsKeyRingImportJobTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KmsKeyRingImportJobTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

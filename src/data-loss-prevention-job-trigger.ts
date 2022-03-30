@@ -91,10 +91,9 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable | undefined {
@@ -211,10 +210,9 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig | undefined {
@@ -261,7 +259,7 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
   }
 
   // table - computed: false, optional: false, required: true
-  private _table = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference(this, "table", true);
+  private _table = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference(this, "table");
   public get table() {
     return this._table;
   }
@@ -298,10 +296,9 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsSaveFindings | undefined {
@@ -326,7 +323,7 @@ export class DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputRefe
   }
 
   // output_config - computed: false, optional: false, required: true
-  private _outputConfig = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference(this, "output_config", true);
+  private _outputConfig = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference(this, "output_config");
   public get outputConfig() {
     return this._outputConfig;
   }
@@ -396,10 +393,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsT
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference | undefined {
@@ -499,10 +495,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions | undefined {
@@ -527,7 +522,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsO
   }
 
   // table_reference - computed: false, optional: false, required: true
-  private _tableReference = new DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference(this, "table_reference", true);
+  private _tableReference = new DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference(this, "table_reference");
   public get tableReference() {
     return this._tableReference;
   }
@@ -582,10 +577,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet | undefined {
@@ -703,10 +697,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet | undefined {
@@ -753,7 +746,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   }
 
   // regex_file_set - computed: false, optional: true, required: false
-  private _regexFileSet = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference(this, "regex_file_set", true);
+  private _regexFileSet = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference(this, "regex_file_set");
   public get regexFileSet() {
     return this._regexFileSet;
   }
@@ -834,10 +827,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions | undefined {
@@ -972,7 +964,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
   }
 
   // file_set - computed: false, optional: false, required: true
-  private _fileSet = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference(this, "file_set", true);
+  private _fileSet = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference(this, "file_set");
   public get fileSet() {
     return this._fileSet;
   }
@@ -1009,10 +1001,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind | undefined {
@@ -1081,10 +1072,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId | undefined {
@@ -1175,10 +1165,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions | undefined {
@@ -1209,7 +1198,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   }
 
   // kind - computed: false, optional: false, required: true
-  private _kind = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference(this, "kind", true);
+  private _kind = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference(this, "kind");
   public get kind() {
     return this._kind;
   }
@@ -1222,7 +1211,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions
   }
 
   // partition_id - computed: false, optional: false, required: true
-  private _partitionId = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference(this, "partition_id", true);
+  private _partitionId = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference(this, "partition_id");
   public get partitionId() {
     return this._partitionId;
   }
@@ -1266,10 +1255,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTi
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField | undefined {
@@ -1354,10 +1342,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig | undefined {
@@ -1448,7 +1435,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOu
   }
 
   // timestamp_field - computed: false, optional: false, required: true
-  private _timestampField = new DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference(this, "timestamp_field", true);
+  private _timestampField = new DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference(this, "timestamp_field");
   public get timestampField() {
     return this._timestampField;
   }
@@ -1506,10 +1493,9 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJobStorageConfig | undefined {
@@ -1552,7 +1538,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   }
 
   // big_query_options - computed: false, optional: true, required: false
-  private _bigQueryOptions = new DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference(this, "big_query_options", true);
+  private _bigQueryOptions = new DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference(this, "big_query_options");
   public get bigQueryOptions() {
     return this._bigQueryOptions;
   }
@@ -1568,7 +1554,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   }
 
   // cloud_storage_options - computed: false, optional: true, required: false
-  private _cloudStorageOptions = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference(this, "cloud_storage_options", true);
+  private _cloudStorageOptions = new DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference(this, "cloud_storage_options");
   public get cloudStorageOptions() {
     return this._cloudStorageOptions;
   }
@@ -1584,7 +1570,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   }
 
   // datastore_options - computed: false, optional: true, required: false
-  private _datastoreOptions = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference(this, "datastore_options", true);
+  private _datastoreOptions = new DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference(this, "datastore_options");
   public get datastoreOptions() {
     return this._datastoreOptions;
   }
@@ -1600,7 +1586,7 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference 
   }
 
   // timespan_config - computed: false, optional: true, required: false
-  private _timespanConfig = new DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference(this, "timespan_config", true);
+  private _timespanConfig = new DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference(this, "timespan_config");
   public get timespanConfig() {
     return this._timespanConfig;
   }
@@ -1654,10 +1640,9 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerInspectJob | undefined {
@@ -1721,7 +1706,7 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
   }
 
   // storage_config - computed: false, optional: false, required: true
-  private _storageConfig = new DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference(this, "storage_config", true);
+  private _storageConfig = new DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference(this, "storage_config");
   public get storageConfig() {
     return this._storageConfig;
   }
@@ -1766,10 +1751,9 @@ export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerTimeouts | undefined {
@@ -1884,10 +1868,9 @@ export class DataLossPreventionJobTriggerTriggersScheduleOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionJobTriggerTriggersSchedule | undefined {
@@ -1955,7 +1938,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_data_loss_prevention_job_trigger";
+  public static readonly tfResourceType = "google_data_loss_prevention_job_trigger";
 
   // ===========
   // INITIALIZER
@@ -1972,7 +1955,9 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_data_loss_prevention_job_trigger',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2069,7 +2054,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // inspect_job - computed: false, optional: true, required: false
-  private _inspectJob = new DataLossPreventionJobTriggerInspectJobOutputReference(this, "inspect_job", true);
+  private _inspectJob = new DataLossPreventionJobTriggerInspectJobOutputReference(this, "inspect_job");
   public get inspectJob() {
     return this._inspectJob;
   }
@@ -2085,7 +2070,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataLossPreventionJobTriggerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataLossPreventionJobTriggerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

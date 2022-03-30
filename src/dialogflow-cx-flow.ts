@@ -96,10 +96,9 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextOutputRe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillmentMessagesText | undefined {
@@ -209,10 +208,9 @@ export class DialogflowCxFlowEventHandlersTriggerFulfillmentOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxFlowEventHandlersTriggerFulfillment | undefined {
@@ -405,10 +403,9 @@ export class DialogflowCxFlowNluSettingsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxFlowNluSettings | undefined {
@@ -525,10 +522,9 @@ export class DialogflowCxFlowTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxFlowTimeouts | undefined {
@@ -637,10 +633,9 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesText | undefined {
@@ -750,10 +745,9 @@ export class DialogflowCxFlowTransitionRoutesTriggerFulfillmentOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxFlowTransitionRoutesTriggerFulfillment | undefined {
@@ -920,7 +914,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dialogflow_cx_flow";
+  public static readonly tfResourceType = "google_dialogflow_cx_flow";
 
   // ===========
   // INITIALIZER
@@ -937,7 +931,9 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dialogflow_cx_flow',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1064,7 +1060,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
 
   // nlu_settings - computed: false, optional: true, required: false
-  private _nluSettings = new DialogflowCxFlowNluSettingsOutputReference(this, "nlu_settings", true);
+  private _nluSettings = new DialogflowCxFlowNluSettingsOutputReference(this, "nlu_settings");
   public get nluSettings() {
     return this._nluSettings;
   }
@@ -1080,7 +1076,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DialogflowCxFlowTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DialogflowCxFlowTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

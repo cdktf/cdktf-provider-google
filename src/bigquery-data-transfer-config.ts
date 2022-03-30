@@ -136,10 +136,9 @@ export class BigqueryDataTransferConfigEmailPreferencesOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryDataTransferConfigEmailPreferences | undefined {
@@ -226,10 +225,9 @@ export class BigqueryDataTransferConfigScheduleOptionsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryDataTransferConfigScheduleOptions | undefined {
@@ -338,10 +336,9 @@ export class BigqueryDataTransferConfigSensitiveParamsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryDataTransferConfigSensitiveParams | undefined {
@@ -411,10 +408,9 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryDataTransferConfigTimeouts | undefined {
@@ -507,7 +503,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_bigquery_data_transfer_config";
+  public static readonly tfResourceType = "google_bigquery_data_transfer_config";
 
   // ===========
   // INITIALIZER
@@ -524,7 +520,9 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_data_transfer_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -730,7 +728,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // email_preferences - computed: false, optional: true, required: false
-  private _emailPreferences = new BigqueryDataTransferConfigEmailPreferencesOutputReference(this, "email_preferences", true);
+  private _emailPreferences = new BigqueryDataTransferConfigEmailPreferencesOutputReference(this, "email_preferences");
   public get emailPreferences() {
     return this._emailPreferences;
   }
@@ -746,7 +744,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // schedule_options - computed: false, optional: true, required: false
-  private _scheduleOptions = new BigqueryDataTransferConfigScheduleOptionsOutputReference(this, "schedule_options", true);
+  private _scheduleOptions = new BigqueryDataTransferConfigScheduleOptionsOutputReference(this, "schedule_options");
   public get scheduleOptions() {
     return this._scheduleOptions;
   }
@@ -762,7 +760,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // sensitive_params - computed: false, optional: true, required: false
-  private _sensitiveParams = new BigqueryDataTransferConfigSensitiveParamsOutputReference(this, "sensitive_params", true);
+  private _sensitiveParams = new BigqueryDataTransferConfigSensitiveParamsOutputReference(this, "sensitive_params");
   public get sensitiveParams() {
     return this._sensitiveParams;
   }
@@ -778,7 +776,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryDataTransferConfigTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new BigqueryDataTransferConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

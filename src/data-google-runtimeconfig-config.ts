@@ -29,7 +29,7 @@ export class DataGoogleRuntimeconfigConfig extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_runtimeconfig_config";
+  public static readonly tfResourceType = "google_runtimeconfig_config";
 
   // ===========
   // INITIALIZER
@@ -46,7 +46,9 @@ export class DataGoogleRuntimeconfigConfig extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_runtimeconfig_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -16,7 +16,45 @@ export interface DataGoogleSqlCaCertsConfig extends cdktf.TerraformMetaArguments
   */
   readonly project?: string;
 }
-export class DataGoogleSqlCaCertsCerts extends cdktf.ComplexComputedList {
+export interface DataGoogleSqlCaCertsCerts {
+}
+
+export function dataGoogleSqlCaCertsCertsToTerraform(struct?: DataGoogleSqlCaCertsCerts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlCaCertsCertsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlCaCertsCerts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlCaCertsCerts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -44,6 +82,25 @@ export class DataGoogleSqlCaCertsCerts extends cdktf.ComplexComputedList {
   }
 }
 
+export class DataGoogleSqlCaCertsCertsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlCaCertsCertsOutputReference {
+    return new DataGoogleSqlCaCertsCertsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_ca_certs google_sql_ca_certs}
 */
@@ -52,7 +109,7 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_sql_ca_certs";
+  public static readonly tfResourceType = "google_sql_ca_certs";
 
   // ===========
   // INITIALIZER
@@ -69,7 +126,9 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_sql_ca_certs',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -90,8 +149,9 @@ export class DataGoogleSqlCaCerts extends cdktf.TerraformDataSource {
   }
 
   // certs - computed: true, optional: false, required: false
-  public certs(index: string) {
-    return new DataGoogleSqlCaCertsCerts(this, 'certs', index, false);
+  private _certs = new DataGoogleSqlCaCertsCertsList(this, "certs", false);
+  public get certs() {
+    return this._certs;
   }
 
   // id - computed: true, optional: true, required: false

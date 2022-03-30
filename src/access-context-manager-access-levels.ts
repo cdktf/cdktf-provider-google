@@ -118,10 +118,9 @@ export class AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePo
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelsAccessLevelsBasicConditionsDevicePolicy | undefined {
@@ -386,10 +385,9 @@ export class AccessContextManagerAccessLevelsAccessLevelsBasicOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelsAccessLevelsBasic | undefined {
@@ -495,10 +493,9 @@ export class AccessContextManagerAccessLevelsAccessLevelsCustomExprOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelsAccessLevelsCustomExpr | undefined {
@@ -626,10 +623,9 @@ export class AccessContextManagerAccessLevelsAccessLevelsCustomOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelsAccessLevelsCustom | undefined {
@@ -654,7 +650,7 @@ export class AccessContextManagerAccessLevelsAccessLevelsCustomOutputReference e
   }
 
   // expr - computed: false, optional: false, required: true
-  private _expr = new AccessContextManagerAccessLevelsAccessLevelsCustomExprOutputReference(this, "expr", true);
+  private _expr = new AccessContextManagerAccessLevelsAccessLevelsCustomExprOutputReference(this, "expr");
   public get expr() {
     return this._expr;
   }
@@ -748,10 +744,9 @@ export class AccessContextManagerAccessLevelsTimeoutsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelsTimeouts | undefined {
@@ -844,7 +839,7 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_access_context_manager_access_levels";
+  public static readonly tfResourceType = "google_access_context_manager_access_levels";
 
   // ===========
   // INITIALIZER
@@ -861,7 +856,9 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_access_context_manager_access_levels',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -913,7 +910,7 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AccessContextManagerAccessLevelsTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AccessContextManagerAccessLevelsTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

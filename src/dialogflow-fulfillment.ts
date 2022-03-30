@@ -108,10 +108,9 @@ export class DialogflowFulfillmentGenericWebServiceOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowFulfillmentGenericWebService | undefined {
@@ -247,10 +246,9 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowFulfillmentTimeouts | undefined {
@@ -343,7 +341,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dialogflow_fulfillment";
+  public static readonly tfResourceType = "google_dialogflow_fulfillment";
 
   // ===========
   // INITIALIZER
@@ -360,7 +358,9 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dialogflow_fulfillment',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -452,7 +452,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // generic_web_service - computed: false, optional: true, required: false
-  private _genericWebService = new DialogflowFulfillmentGenericWebServiceOutputReference(this, "generic_web_service", true);
+  private _genericWebService = new DialogflowFulfillmentGenericWebServiceOutputReference(this, "generic_web_service");
   public get genericWebService() {
     return this._genericWebService;
   }
@@ -468,7 +468,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DialogflowFulfillmentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DialogflowFulfillmentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

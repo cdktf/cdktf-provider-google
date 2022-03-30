@@ -25,7 +25,7 @@ export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_kms_key_ring_iam_policy";
+  public static readonly tfResourceType = "google_kms_key_ring_iam_policy";
 
   // ===========
   // INITIALIZER
@@ -42,7 +42,9 @@ export class KmsKeyRingIamPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_kms_key_ring_iam_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

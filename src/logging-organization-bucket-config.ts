@@ -47,7 +47,7 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_logging_organization_bucket_config";
+  public static readonly tfResourceType = "google_logging_organization_bucket_config";
 
   // ===========
   // INITIALIZER
@@ -64,7 +64,9 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_logging_organization_bucket_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -63,10 +63,9 @@ export class ComputeSecurityPolicyRuleMatchConfigOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSecurityPolicyRuleMatchConfig | undefined {
@@ -128,10 +127,9 @@ export class ComputeSecurityPolicyRuleMatchExprOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSecurityPolicyRuleMatchExpr | undefined {
@@ -207,10 +205,9 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSecurityPolicyRuleMatch | undefined {
@@ -263,7 +260,7 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   // config - computed: false, optional: true, required: false
-  private _config = new ComputeSecurityPolicyRuleMatchConfigOutputReference(this, "config", true);
+  private _config = new ComputeSecurityPolicyRuleMatchConfigOutputReference(this, "config");
   public get config() {
     return this._config;
   }
@@ -279,7 +276,7 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   // expr - computed: false, optional: true, required: false
-  private _expr = new ComputeSecurityPolicyRuleMatchExprOutputReference(this, "expr", true);
+  private _expr = new ComputeSecurityPolicyRuleMatchExprOutputReference(this, "expr");
   public get expr() {
     return this._expr;
   }
@@ -374,10 +371,9 @@ export class ComputeSecurityPolicyTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSecurityPolicyTimeouts | undefined {
@@ -470,7 +466,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_security_policy";
+  public static readonly tfResourceType = "google_compute_security_policy";
 
   // ===========
   // INITIALIZER
@@ -487,7 +483,9 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_security_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -583,7 +581,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeSecurityPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeSecurityPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

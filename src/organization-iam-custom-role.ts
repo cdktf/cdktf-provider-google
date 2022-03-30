@@ -53,7 +53,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_organization_iam_custom_role";
+  public static readonly tfResourceType = "google_organization_iam_custom_role";
 
   // ===========
   // INITIALIZER
@@ -70,7 +70,9 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_organization_iam_custom_role',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

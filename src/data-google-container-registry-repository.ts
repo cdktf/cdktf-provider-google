@@ -25,7 +25,7 @@ export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSo
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_container_registry_repository";
+  public static readonly tfResourceType = "google_container_registry_repository";
 
   // ===========
   // INITIALIZER
@@ -42,7 +42,9 @@ export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSo
     super(scope, id, {
       terraformResourceType: 'google_container_registry_repository',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

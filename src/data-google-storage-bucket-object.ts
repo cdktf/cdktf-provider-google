@@ -20,7 +20,45 @@ export interface DataGoogleStorageBucketObjectConfig extends cdktf.TerraformMeta
   */
   readonly name?: string;
 }
-export class DataGoogleStorageBucketObjectCustomerEncryption extends cdktf.ComplexComputedList {
+export interface DataGoogleStorageBucketObjectCustomerEncryption {
+}
+
+export function dataGoogleStorageBucketObjectCustomerEncryptionToTerraform(struct?: DataGoogleStorageBucketObjectCustomerEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketObjectCustomerEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketObjectCustomerEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketObjectCustomerEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // encryption_algorithm - computed: true, optional: false, required: false
   public get encryptionAlgorithm() {
@@ -33,6 +71,25 @@ export class DataGoogleStorageBucketObjectCustomerEncryption extends cdktf.Compl
   }
 }
 
+export class DataGoogleStorageBucketObjectCustomerEncryptionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketObjectCustomerEncryptionOutputReference {
+    return new DataGoogleStorageBucketObjectCustomerEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object google_storage_bucket_object}
 */
@@ -41,7 +98,7 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_storage_bucket_object";
+  public static readonly tfResourceType = "google_storage_bucket_object";
 
   // ===========
   // INITIALIZER
@@ -58,7 +115,9 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket_object',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -125,8 +184,9 @@ export class DataGoogleStorageBucketObject extends cdktf.TerraformDataSource {
   }
 
   // customer_encryption - computed: true, optional: false, required: false
-  public customerEncryption(index: string) {
-    return new DataGoogleStorageBucketObjectCustomerEncryption(this, 'customer_encryption', index, false);
+  private _customerEncryption = new DataGoogleStorageBucketObjectCustomerEncryptionList(this, "customer_encryption", false);
+  public get customerEncryption() {
+    return this._customerEncryption;
   }
 
   // detect_md5hash - computed: true, optional: false, required: false

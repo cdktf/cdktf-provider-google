@@ -130,10 +130,9 @@ export class DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocAutoscalingPolicyBasicAlgorithmYarnConfig | undefined {
@@ -287,10 +286,9 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocAutoscalingPolicyBasicAlgorithm | undefined {
@@ -337,7 +335,7 @@ export class DataprocAutoscalingPolicyBasicAlgorithmOutputReference extends cdkt
   }
 
   // yarn_config - computed: false, optional: false, required: true
-  private _yarnConfig = new DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference(this, "yarn_config", true);
+  private _yarnConfig = new DataprocAutoscalingPolicyBasicAlgorithmYarnConfigOutputReference(this, "yarn_config");
   public get yarnConfig() {
     return this._yarnConfig;
   }
@@ -403,10 +401,9 @@ export class DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocAutoscalingPolicySecondaryWorkerConfig | undefined {
@@ -523,10 +520,9 @@ export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocAutoscalingPolicyTimeouts | undefined {
@@ -662,10 +658,9 @@ export class DataprocAutoscalingPolicyWorkerConfigOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocAutoscalingPolicyWorkerConfig | undefined {
@@ -755,7 +750,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dataproc_autoscaling_policy";
+  public static readonly tfResourceType = "google_dataproc_autoscaling_policy";
 
   // ===========
   // INITIALIZER
@@ -772,7 +767,9 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_autoscaling_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -848,7 +845,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // basic_algorithm - computed: false, optional: true, required: false
-  private _basicAlgorithm = new DataprocAutoscalingPolicyBasicAlgorithmOutputReference(this, "basic_algorithm", true);
+  private _basicAlgorithm = new DataprocAutoscalingPolicyBasicAlgorithmOutputReference(this, "basic_algorithm");
   public get basicAlgorithm() {
     return this._basicAlgorithm;
   }
@@ -864,7 +861,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // secondary_worker_config - computed: false, optional: true, required: false
-  private _secondaryWorkerConfig = new DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference(this, "secondary_worker_config", true);
+  private _secondaryWorkerConfig = new DataprocAutoscalingPolicySecondaryWorkerConfigOutputReference(this, "secondary_worker_config");
   public get secondaryWorkerConfig() {
     return this._secondaryWorkerConfig;
   }
@@ -880,7 +877,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataprocAutoscalingPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataprocAutoscalingPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -896,7 +893,7 @@ export class DataprocAutoscalingPolicy extends cdktf.TerraformResource {
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig = new DataprocAutoscalingPolicyWorkerConfigOutputReference(this, "worker_config", true);
+  private _workerConfig = new DataprocAutoscalingPolicyWorkerConfigOutputReference(this, "worker_config");
   public get workerConfig() {
     return this._workerConfig;
   }

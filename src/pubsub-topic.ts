@@ -82,10 +82,9 @@ export class PubsubTopicMessageStoragePolicyOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubTopicMessageStoragePolicy | undefined {
@@ -157,10 +156,9 @@ export class PubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubTopicSchemaSettings | undefined {
@@ -252,10 +250,9 @@ export class PubsubTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubTopicTimeouts | undefined {
@@ -348,7 +345,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_pubsub_topic";
+  public static readonly tfResourceType = "google_pubsub_topic";
 
   // ===========
   // INITIALIZER
@@ -365,7 +362,9 @@ export class PubsubTopic extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -452,7 +451,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // message_storage_policy - computed: false, optional: true, required: false
-  private _messageStoragePolicy = new PubsubTopicMessageStoragePolicyOutputReference(this, "message_storage_policy", true);
+  private _messageStoragePolicy = new PubsubTopicMessageStoragePolicyOutputReference(this, "message_storage_policy");
   public get messageStoragePolicy() {
     return this._messageStoragePolicy;
   }
@@ -468,7 +467,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // schema_settings - computed: false, optional: true, required: false
-  private _schemaSettings = new PubsubTopicSchemaSettingsOutputReference(this, "schema_settings", true);
+  private _schemaSettings = new PubsubTopicSchemaSettingsOutputReference(this, "schema_settings");
   public get schemaSettings() {
     return this._schemaSettings;
   }
@@ -484,7 +483,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PubsubTopicTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PubsubTopicTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

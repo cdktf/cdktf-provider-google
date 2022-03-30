@@ -18,14 +18,109 @@ export interface DataGooglePubsubTopicConfig extends cdktf.TerraformMetaArgument
   */
   readonly project?: string;
 }
-export class DataGooglePubsubTopicMessageStoragePolicy extends cdktf.ComplexComputedList {
+export interface DataGooglePubsubTopicMessageStoragePolicy {
+}
+
+export function dataGooglePubsubTopicMessageStoragePolicyToTerraform(struct?: DataGooglePubsubTopicMessageStoragePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGooglePubsubTopicMessageStoragePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePubsubTopicMessageStoragePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePubsubTopicMessageStoragePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // allowed_persistence_regions - computed: true, optional: false, required: false
   public get allowedPersistenceRegions() {
     return this.getListAttribute('allowed_persistence_regions');
   }
 }
-export class DataGooglePubsubTopicSchemaSettings extends cdktf.ComplexComputedList {
+
+export class DataGooglePubsubTopicMessageStoragePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePubsubTopicMessageStoragePolicyOutputReference {
+    return new DataGooglePubsubTopicMessageStoragePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGooglePubsubTopicSchemaSettings {
+}
+
+export function dataGooglePubsubTopicSchemaSettingsToTerraform(struct?: DataGooglePubsubTopicSchemaSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGooglePubsubTopicSchemaSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePubsubTopicSchemaSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePubsubTopicSchemaSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // encoding - computed: true, optional: false, required: false
   public get encoding() {
@@ -38,6 +133,25 @@ export class DataGooglePubsubTopicSchemaSettings extends cdktf.ComplexComputedLi
   }
 }
 
+export class DataGooglePubsubTopicSchemaSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePubsubTopicSchemaSettingsOutputReference {
+    return new DataGooglePubsubTopicSchemaSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/pubsub_topic google_pubsub_topic}
 */
@@ -46,7 +160,7 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_pubsub_topic";
+  public static readonly tfResourceType = "google_pubsub_topic";
 
   // ===========
   // INITIALIZER
@@ -63,7 +177,9 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -94,8 +210,9 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   }
 
   // message_storage_policy - computed: true, optional: false, required: false
-  public messageStoragePolicy(index: string) {
-    return new DataGooglePubsubTopicMessageStoragePolicy(this, 'message_storage_policy', index, false);
+  private _messageStoragePolicy = new DataGooglePubsubTopicMessageStoragePolicyList(this, "message_storage_policy", false);
+  public get messageStoragePolicy() {
+    return this._messageStoragePolicy;
   }
 
   // name - computed: false, optional: false, required: true
@@ -128,8 +245,9 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   }
 
   // schema_settings - computed: true, optional: false, required: false
-  public schemaSettings(index: string) {
-    return new DataGooglePubsubTopicSchemaSettings(this, 'schema_settings', index, false);
+  private _schemaSettings = new DataGooglePubsubTopicSchemaSettingsList(this, "schema_settings", false);
+  public get schemaSettings() {
+    return this._schemaSettings;
   }
 
   // =========

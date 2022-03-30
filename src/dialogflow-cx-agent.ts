@@ -115,10 +115,9 @@ export class DialogflowCxAgentSpeechToTextSettingsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxAgentSpeechToTextSettings | undefined {
@@ -191,10 +190,9 @@ export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DialogflowCxAgentTimeouts | undefined {
@@ -287,7 +285,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dialogflow_cx_agent";
+  public static readonly tfResourceType = "google_dialogflow_cx_agent";
 
   // ===========
   // INITIALIZER
@@ -304,7 +302,9 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dialogflow_cx_agent',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -510,7 +510,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // speech_to_text_settings - computed: false, optional: true, required: false
-  private _speechToTextSettings = new DialogflowCxAgentSpeechToTextSettingsOutputReference(this, "speech_to_text_settings", true);
+  private _speechToTextSettings = new DialogflowCxAgentSpeechToTextSettingsOutputReference(this, "speech_to_text_settings");
   public get speechToTextSettings() {
     return this._speechToTextSettings;
   }
@@ -526,7 +526,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DialogflowCxAgentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DialogflowCxAgentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

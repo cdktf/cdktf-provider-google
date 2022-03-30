@@ -33,7 +33,7 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloudfunctions_function_iam_policy";
+  public static readonly tfResourceType = "google_cloudfunctions_function_iam_policy";
 
   // ===========
   // INITIALIZER
@@ -50,7 +50,9 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function_iam_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

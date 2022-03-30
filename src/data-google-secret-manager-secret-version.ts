@@ -29,7 +29,7 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_secret_manager_secret_version";
+  public static readonly tfResourceType = "google_secret_manager_secret_version";
 
   // ===========
   // INITIALIZER
@@ -46,7 +46,9 @@ export class DataGoogleSecretManagerSecretVersion extends cdktf.TerraformDataSou
     super(scope, id, {
       terraformResourceType: 'google_secret_manager_secret_version',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

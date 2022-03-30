@@ -14,14 +14,109 @@ export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends
   */
   readonly deploymentId: string;
 }
-export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector extends cdktf.ComplexComputedList {
+export interface DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector {
+}
+
+export function dataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorToTerraform(struct?: DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // realms - computed: true, optional: false, required: false
   public get realms() {
     return this.getListAttribute('realms');
   }
 }
-export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides extends cdktf.ComplexComputedList {
+
+export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference {
+    return new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides {
+}
+
+export function dataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform(struct?: DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // config_version - computed: true, optional: false, required: false
   public get configVersion() {
@@ -29,9 +124,28 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
   }
 
   // realms_selector - computed: true, optional: false, required: false
+  private _realmsSelector = new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorList(this, "realms_selector", false);
   public get realmsSelector() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('realms_selector');
+    return this._realmsSelector;
+  }
+}
+
+export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference {
+    return new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -43,7 +157,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_game_services_game_server_deployment_rollout";
+  public static readonly tfResourceType = "google_game_services_game_server_deployment_rollout";
 
   // ===========
   // INITIALIZER
@@ -60,7 +174,9 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
     super(scope, id, {
       terraformResourceType: 'google_game_services_game_server_deployment_rollout',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -93,8 +209,9 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
   }
 
   // game_server_config_overrides - computed: true, optional: false, required: false
-  public gameServerConfigOverrides(index: string) {
-    return new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides(this, 'game_server_config_overrides', index, false);
+  private _gameServerConfigOverrides = new DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesList(this, "game_server_config_overrides", false);
+  public get gameServerConfigOverrides() {
+    return this._gameServerConfigOverrides;
   }
 
   // id - computed: true, optional: true, required: false

@@ -139,10 +139,9 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeFirewallPolicyRuleMatch | undefined {
@@ -257,10 +256,9 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeFirewallPolicyRuleTimeouts | undefined {
@@ -353,7 +351,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_firewall_policy_rule";
+  public static readonly tfResourceType = "google_compute_firewall_policy_rule";
 
   // ===========
   // INITIALIZER
@@ -370,7 +368,9 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_firewall_policy_rule',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -542,7 +542,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // match - computed: false, optional: false, required: true
-  private _match = new ComputeFirewallPolicyRuleMatchOutputReference(this, "match", true);
+  private _match = new ComputeFirewallPolicyRuleMatchOutputReference(this, "match");
   public get match() {
     return this._match;
   }
@@ -555,7 +555,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeFirewallPolicyRuleTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeFirewallPolicyRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

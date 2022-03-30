@@ -26,14 +26,109 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformM
   */
   readonly region?: string;
 }
-export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy extends cdktf.ComplexComputedList {
+export interface DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy {
+}
+
+export function dataGoogleCloudfunctionsFunctionEventTriggerFailurePolicyToTerraform(struct?: DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // retry - computed: true, optional: false, required: false
   public get retry() {
     return this.getBooleanAttribute('retry');
   }
 }
-export class DataGoogleCloudfunctionsFunctionEventTrigger extends cdktf.ComplexComputedList {
+
+export class DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicyOutputReference {
+    return new DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudfunctionsFunctionEventTrigger {
+}
+
+export function dataGoogleCloudfunctionsFunctionEventTriggerToTerraform(struct?: DataGoogleCloudfunctionsFunctionEventTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionEventTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionEventTrigger | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionEventTrigger | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // event_type - computed: true, optional: false, required: false
   public get eventType() {
@@ -41,9 +136,9 @@ export class DataGoogleCloudfunctionsFunctionEventTrigger extends cdktf.ComplexC
   }
 
   // failure_policy - computed: true, optional: false, required: false
+  private _failurePolicy = new DataGoogleCloudfunctionsFunctionEventTriggerFailurePolicyList(this, "failure_policy", false);
   public get failurePolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('failure_policy');
+    return this._failurePolicy;
   }
 
   // resource - computed: true, optional: false, required: false
@@ -51,7 +146,64 @@ export class DataGoogleCloudfunctionsFunctionEventTrigger extends cdktf.ComplexC
     return this.getStringAttribute('resource');
   }
 }
-export class DataGoogleCloudfunctionsFunctionSourceRepository extends cdktf.ComplexComputedList {
+
+export class DataGoogleCloudfunctionsFunctionEventTriggerList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionEventTriggerOutputReference {
+    return new DataGoogleCloudfunctionsFunctionEventTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudfunctionsFunctionSourceRepository {
+}
+
+export function dataGoogleCloudfunctionsFunctionSourceRepositoryToTerraform(struct?: DataGoogleCloudfunctionsFunctionSourceRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionSourceRepository | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionSourceRepository | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // deployed_url - computed: true, optional: false, required: false
   public get deployedUrl() {
@@ -64,6 +216,25 @@ export class DataGoogleCloudfunctionsFunctionSourceRepository extends cdktf.Comp
   }
 }
 
+export class DataGoogleCloudfunctionsFunctionSourceRepositoryList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionSourceRepositoryOutputReference {
+    return new DataGoogleCloudfunctionsFunctionSourceRepositoryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function google_cloudfunctions_function}
 */
@@ -72,7 +243,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloudfunctions_function";
+  public static readonly tfResourceType = "google_cloudfunctions_function";
 
   // ===========
   // INITIALIZER
@@ -89,7 +260,9 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -131,8 +304,9 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // event_trigger - computed: true, optional: false, required: false
-  public eventTrigger(index: string) {
-    return new DataGoogleCloudfunctionsFunctionEventTrigger(this, 'event_trigger', index, false);
+  private _eventTrigger = new DataGoogleCloudfunctionsFunctionEventTriggerList(this, "event_trigger", false);
+  public get eventTrigger() {
+    return this._eventTrigger;
   }
 
   // https_trigger_url - computed: true, optional: false, required: false
@@ -226,8 +400,9 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // source_repository - computed: true, optional: false, required: false
-  public sourceRepository(index: string) {
-    return new DataGoogleCloudfunctionsFunctionSourceRepository(this, 'source_repository', index, false);
+  private _sourceRepository = new DataGoogleCloudfunctionsFunctionSourceRepositoryList(this, "source_repository", false);
+  public get sourceRepository() {
+    return this._sourceRepository;
   }
 
   // timeout - computed: true, optional: false, required: false

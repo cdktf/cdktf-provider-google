@@ -89,10 +89,9 @@ export class GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): GameServicesGameServerClusterConnectionInfoGkeClusterReference | undefined {
@@ -163,10 +162,9 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): GameServicesGameServerClusterConnectionInfo | undefined {
@@ -210,7 +208,7 @@ export class GameServicesGameServerClusterConnectionInfoOutputReference extends 
   }
 
   // gke_cluster_reference - computed: false, optional: false, required: true
-  private _gkeClusterReference = new GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference(this, "gke_cluster_reference", true);
+  private _gkeClusterReference = new GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference(this, "gke_cluster_reference");
   public get gkeClusterReference() {
     return this._gkeClusterReference;
   }
@@ -255,10 +253,9 @@ export class GameServicesGameServerClusterTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): GameServicesGameServerClusterTimeouts | undefined {
@@ -351,7 +348,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_game_services_game_server_cluster";
+  public static readonly tfResourceType = "google_game_services_game_server_cluster";
 
   // ===========
   // INITIALIZER
@@ -368,7 +365,9 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_game_services_game_server_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -490,7 +489,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   }
 
   // connection_info - computed: false, optional: false, required: true
-  private _connectionInfo = new GameServicesGameServerClusterConnectionInfoOutputReference(this, "connection_info", true);
+  private _connectionInfo = new GameServicesGameServerClusterConnectionInfoOutputReference(this, "connection_info");
   public get connectionInfo() {
     return this._connectionInfo;
   }
@@ -503,7 +502,7 @@ export class GameServicesGameServerCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GameServicesGameServerClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new GameServicesGameServerClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -54,7 +54,45 @@ export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments
   */
   readonly timeouts?: AppEngineApplicationTimeouts;
 }
-export class AppEngineApplicationUrlDispatchRule extends cdktf.ComplexComputedList {
+export interface AppEngineApplicationUrlDispatchRule {
+}
+
+export function appEngineApplicationUrlDispatchRuleToTerraform(struct?: AppEngineApplicationUrlDispatchRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppEngineApplicationUrlDispatchRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppEngineApplicationUrlDispatchRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineApplicationUrlDispatchRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // domain - computed: true, optional: false, required: false
   public get domain() {
@@ -69,6 +107,25 @@ export class AppEngineApplicationUrlDispatchRule extends cdktf.ComplexComputedLi
   // service - computed: true, optional: false, required: false
   public get service() {
     return this.getStringAttribute('service');
+  }
+}
+
+export class AppEngineApplicationUrlDispatchRuleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppEngineApplicationUrlDispatchRuleOutputReference {
+    return new AppEngineApplicationUrlDispatchRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface AppEngineApplicationFeatureSettings {
@@ -94,10 +151,9 @@ export class AppEngineApplicationFeatureSettingsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineApplicationFeatureSettings | undefined {
@@ -173,10 +229,9 @@ export class AppEngineApplicationIapOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineApplicationIap | undefined {
@@ -287,10 +342,9 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineApplicationTimeouts | undefined {
@@ -361,7 +415,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_app_engine_application";
+  public static readonly tfResourceType = "google_app_engine_application";
 
   // ===========
   // INITIALIZER
@@ -378,7 +432,9 @@ export class AppEngineApplication extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_application',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -512,12 +568,13 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // url_dispatch_rule - computed: true, optional: false, required: false
-  public urlDispatchRule(index: string) {
-    return new AppEngineApplicationUrlDispatchRule(this, 'url_dispatch_rule', index, false);
+  private _urlDispatchRule = new AppEngineApplicationUrlDispatchRuleList(this, "url_dispatch_rule", false);
+  public get urlDispatchRule() {
+    return this._urlDispatchRule;
   }
 
   // feature_settings - computed: false, optional: true, required: false
-  private _featureSettings = new AppEngineApplicationFeatureSettingsOutputReference(this, "feature_settings", true);
+  private _featureSettings = new AppEngineApplicationFeatureSettingsOutputReference(this, "feature_settings");
   public get featureSettings() {
     return this._featureSettings;
   }
@@ -533,7 +590,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap = new AppEngineApplicationIapOutputReference(this, "iap", true);
+  private _iap = new AppEngineApplicationIapOutputReference(this, "iap");
   public get iap() {
     return this._iap;
   }
@@ -549,7 +606,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineApplicationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppEngineApplicationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -33,7 +33,7 @@ export class DataGoogleServiceNetworkingPeeredDnsDomain extends cdktf.TerraformD
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_service_networking_peered_dns_domain";
+  public static readonly tfResourceType = "google_service_networking_peered_dns_domain";
 
   // ===========
   // INITIALIZER
@@ -50,7 +50,9 @@ export class DataGoogleServiceNetworkingPeeredDnsDomain extends cdktf.TerraformD
     super(scope, id, {
       terraformResourceType: 'google_service_networking_peered_dns_domain',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

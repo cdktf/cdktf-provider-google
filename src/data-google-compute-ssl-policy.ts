@@ -33,7 +33,7 @@ export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_ssl_policy";
+  public static readonly tfResourceType = "google_compute_ssl_policy";
 
   // ===========
   // INITIALIZER
@@ -50,7 +50,9 @@ export class DataGoogleComputeSslPolicy extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_ssl_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

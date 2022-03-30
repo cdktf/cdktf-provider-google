@@ -25,7 +25,7 @@ export class DataGoogleComputeGlobalAddress extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_global_address";
+  public static readonly tfResourceType = "google_compute_global_address";
 
   // ===========
   // INITIALIZER
@@ -42,7 +42,9 @@ export class DataGoogleComputeGlobalAddress extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_global_address',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

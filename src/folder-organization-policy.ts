@@ -75,10 +75,9 @@ export class FolderOrganizationPolicyBooleanPolicyOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FolderOrganizationPolicyBooleanPolicy | undefined {
@@ -147,10 +146,9 @@ export class FolderOrganizationPolicyListPolicyAllowOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FolderOrganizationPolicyListPolicyAllow | undefined {
@@ -244,10 +242,9 @@ export class FolderOrganizationPolicyListPolicyDenyOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FolderOrganizationPolicyListPolicyDeny | undefined {
@@ -355,10 +352,9 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FolderOrganizationPolicyListPolicy | undefined {
@@ -433,7 +429,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   }
 
   // allow - computed: false, optional: true, required: false
-  private _allow = new FolderOrganizationPolicyListPolicyAllowOutputReference(this, "allow", true);
+  private _allow = new FolderOrganizationPolicyListPolicyAllowOutputReference(this, "allow");
   public get allow() {
     return this._allow;
   }
@@ -449,7 +445,7 @@ export class FolderOrganizationPolicyListPolicyOutputReference extends cdktf.Com
   }
 
   // deny - computed: false, optional: true, required: false
-  private _deny = new FolderOrganizationPolicyListPolicyDenyOutputReference(this, "deny", true);
+  private _deny = new FolderOrganizationPolicyListPolicyDenyOutputReference(this, "deny");
   public get deny() {
     return this._deny;
   }
@@ -489,10 +485,9 @@ export class FolderOrganizationPolicyRestorePolicyOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FolderOrganizationPolicyRestorePolicy | undefined {
@@ -567,10 +562,9 @@ export class FolderOrganizationPolicyTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FolderOrganizationPolicyTimeouts | undefined {
@@ -685,7 +679,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_folder_organization_policy";
+  public static readonly tfResourceType = "google_folder_organization_policy";
 
   // ===========
   // INITIALIZER
@@ -702,7 +696,9 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_folder_organization_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -780,7 +776,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // boolean_policy - computed: false, optional: true, required: false
-  private _booleanPolicy = new FolderOrganizationPolicyBooleanPolicyOutputReference(this, "boolean_policy", true);
+  private _booleanPolicy = new FolderOrganizationPolicyBooleanPolicyOutputReference(this, "boolean_policy");
   public get booleanPolicy() {
     return this._booleanPolicy;
   }
@@ -796,7 +792,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // list_policy - computed: false, optional: true, required: false
-  private _listPolicy = new FolderOrganizationPolicyListPolicyOutputReference(this, "list_policy", true);
+  private _listPolicy = new FolderOrganizationPolicyListPolicyOutputReference(this, "list_policy");
   public get listPolicy() {
     return this._listPolicy;
   }
@@ -812,7 +808,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // restore_policy - computed: false, optional: true, required: false
-  private _restorePolicy = new FolderOrganizationPolicyRestorePolicyOutputReference(this, "restore_policy", true);
+  private _restorePolicy = new FolderOrganizationPolicyRestorePolicyOutputReference(this, "restore_policy");
   public get restorePolicy() {
     return this._restorePolicy;
   }
@@ -828,7 +824,7 @@ export class FolderOrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FolderOrganizationPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new FolderOrganizationPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

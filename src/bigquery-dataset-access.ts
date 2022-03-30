@@ -116,10 +116,9 @@ export class BigqueryDatasetAccessTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryDatasetAccessTimeouts | undefined {
@@ -222,10 +221,9 @@ export class BigqueryDatasetAccessViewAOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryDatasetAccessViewA | undefined {
@@ -309,7 +307,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_bigquery_dataset_access";
+  public static readonly tfResourceType = "google_bigquery_dataset_access";
 
   // ===========
   // INITIALIZER
@@ -326,7 +324,9 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_dataset_access',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -485,7 +485,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigqueryDatasetAccessTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new BigqueryDatasetAccessTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -501,7 +501,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
   }
 
   // view - computed: false, optional: true, required: false
-  private _view = new BigqueryDatasetAccessViewAOutputReference(this, "view", true);
+  private _view = new BigqueryDatasetAccessViewAOutputReference(this, "view");
   public get view() {
     return this._view;
   }

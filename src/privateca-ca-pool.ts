@@ -90,10 +90,9 @@ export class PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedIssuanceModes | undefined {
@@ -174,10 +173,9 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurveOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesEllipticCurve | undefined {
@@ -248,10 +246,9 @@ export class PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsaOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyAllowedKeyTypesRsa | undefined {
@@ -364,10 +361,9 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsObjectId | undefined {
@@ -473,10 +469,9 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptions | undefined {
@@ -619,10 +614,9 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage | undefined {
@@ -898,10 +892,9 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage | undefined {
@@ -1109,10 +1102,9 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage | undefined {
@@ -1149,7 +1141,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
   }
 
   // base_key_usage - computed: false, optional: false, required: true
-  private _baseKeyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference(this, "base_key_usage", true);
+  private _baseKeyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageOutputReference(this, "base_key_usage");
   public get baseKeyUsage() {
     return this._baseKeyUsage;
   }
@@ -1162,7 +1154,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
   }
 
   // extended_key_usage - computed: false, optional: false, required: true
-  private _extendedKeyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference(this, "extended_key_usage", true);
+  private _extendedKeyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageOutputReference(this, "extended_key_usage");
   public get extendedKeyUsage() {
     return this._extendedKeyUsage;
   }
@@ -1264,10 +1256,9 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValues | undefined {
@@ -1349,7 +1340,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   }
 
   // ca_options - computed: false, optional: false, required: true
-  private _caOptions = new PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference(this, "ca_options", true);
+  private _caOptions = new PrivatecaCaPoolIssuancePolicyBaselineValuesCaOptionsOutputReference(this, "ca_options");
   public get caOptions() {
     return this._caOptions;
   }
@@ -1362,7 +1353,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   }
 
   // key_usage - computed: false, optional: false, required: true
-  private _keyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference(this, "key_usage", true);
+  private _keyUsage = new PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference(this, "key_usage");
   public get keyUsage() {
     return this._keyUsage;
   }
@@ -1437,10 +1428,9 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpression | undefined {
@@ -1584,10 +1574,9 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicyIdentityConstraints | undefined {
@@ -1650,7 +1639,7 @@ export class PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference ext
   }
 
   // cel_expression - computed: false, optional: true, required: false
-  private _celExpression = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference(this, "cel_expression", true);
+  private _celExpression = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsCelExpressionOutputReference(this, "cel_expression");
   public get celExpression() {
     return this._celExpression;
   }
@@ -1719,10 +1708,9 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolIssuancePolicy | undefined {
@@ -1787,7 +1775,7 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   }
 
   // allowed_issuance_modes - computed: false, optional: true, required: false
-  private _allowedIssuanceModes = new PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference(this, "allowed_issuance_modes", true);
+  private _allowedIssuanceModes = new PrivatecaCaPoolIssuancePolicyAllowedIssuanceModesOutputReference(this, "allowed_issuance_modes");
   public get allowedIssuanceModes() {
     return this._allowedIssuanceModes;
   }
@@ -1820,7 +1808,7 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   }
 
   // baseline_values - computed: false, optional: true, required: false
-  private _baselineValues = new PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference(this, "baseline_values", true);
+  private _baselineValues = new PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference(this, "baseline_values");
   public get baselineValues() {
     return this._baselineValues;
   }
@@ -1836,7 +1824,7 @@ export class PrivatecaCaPoolIssuancePolicyOutputReference extends cdktf.ComplexO
   }
 
   // identity_constraints - computed: false, optional: true, required: false
-  private _identityConstraints = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference(this, "identity_constraints", true);
+  private _identityConstraints = new PrivatecaCaPoolIssuancePolicyIdentityConstraintsOutputReference(this, "identity_constraints");
   public get identityConstraints() {
     return this._identityConstraints;
   }
@@ -1888,10 +1876,9 @@ export class PrivatecaCaPoolPublishingOptionsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolPublishingOptions | undefined {
@@ -1980,10 +1967,9 @@ export class PrivatecaCaPoolTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCaPoolTimeouts | undefined {
@@ -2076,7 +2062,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_privateca_ca_pool";
+  public static readonly tfResourceType = "google_privateca_ca_pool";
 
   // ===========
   // INITIALIZER
@@ -2093,7 +2079,9 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_privateca_ca_pool',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2191,7 +2179,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
 
   // issuance_policy - computed: false, optional: true, required: false
-  private _issuancePolicy = new PrivatecaCaPoolIssuancePolicyOutputReference(this, "issuance_policy", true);
+  private _issuancePolicy = new PrivatecaCaPoolIssuancePolicyOutputReference(this, "issuance_policy");
   public get issuancePolicy() {
     return this._issuancePolicy;
   }
@@ -2207,7 +2195,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
 
   // publishing_options - computed: false, optional: true, required: false
-  private _publishingOptions = new PrivatecaCaPoolPublishingOptionsOutputReference(this, "publishing_options", true);
+  private _publishingOptions = new PrivatecaCaPoolPublishingOptionsOutputReference(this, "publishing_options");
   public get publishingOptions() {
     return this._publishingOptions;
   }
@@ -2223,7 +2211,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivatecaCaPoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PrivatecaCaPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

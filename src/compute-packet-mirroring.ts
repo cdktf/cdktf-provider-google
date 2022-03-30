@@ -94,10 +94,9 @@ export class ComputePacketMirroringCollectorIlbOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputePacketMirroringCollectorIlb | undefined {
@@ -174,10 +173,9 @@ export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputePacketMirroringFilter | undefined {
@@ -338,10 +336,9 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputePacketMirroringMirroredResources | undefined {
@@ -452,10 +449,9 @@ export class ComputePacketMirroringNetworkOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputePacketMirroringNetwork | undefined {
@@ -525,10 +521,9 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputePacketMirroringTimeouts | undefined {
@@ -621,7 +616,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_packet_mirroring";
+  public static readonly tfResourceType = "google_compute_packet_mirroring";
 
   // ===========
   // INITIALIZER
@@ -638,7 +633,9 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_packet_mirroring',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -744,7 +741,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // collector_ilb - computed: false, optional: false, required: true
-  private _collectorIlb = new ComputePacketMirroringCollectorIlbOutputReference(this, "collector_ilb", true);
+  private _collectorIlb = new ComputePacketMirroringCollectorIlbOutputReference(this, "collector_ilb");
   public get collectorIlb() {
     return this._collectorIlb;
   }
@@ -757,7 +754,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new ComputePacketMirroringFilterOutputReference(this, "filter", true);
+  private _filter = new ComputePacketMirroringFilterOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
@@ -773,7 +770,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // mirrored_resources - computed: false, optional: false, required: true
-  private _mirroredResources = new ComputePacketMirroringMirroredResourcesOutputReference(this, "mirrored_resources", true);
+  private _mirroredResources = new ComputePacketMirroringMirroredResourcesOutputReference(this, "mirrored_resources");
   public get mirroredResources() {
     return this._mirroredResources;
   }
@@ -786,7 +783,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: false, required: true
-  private _network = new ComputePacketMirroringNetworkOutputReference(this, "network", true);
+  private _network = new ComputePacketMirroringNetworkOutputReference(this, "network");
   public get network() {
     return this._network;
   }
@@ -799,7 +796,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputePacketMirroringTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputePacketMirroringTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

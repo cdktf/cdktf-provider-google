@@ -92,10 +92,9 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataCatalogTagTemplateFieldsTypeEnumType | undefined {
@@ -166,10 +165,9 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataCatalogTagTemplateFieldsType | undefined {
@@ -216,7 +214,7 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
   }
 
   // enum_type - computed: false, optional: true, required: false
-  private _enumType = new DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference(this, "enum_type", true);
+  private _enumType = new DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference(this, "enum_type");
   public get enumType() {
     return this._enumType;
   }
@@ -318,10 +316,9 @@ export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataCatalogTagTemplateTimeouts | undefined {
@@ -414,7 +411,7 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_data_catalog_tag_template";
+  public static readonly tfResourceType = "google_data_catalog_tag_template";
 
   // ===========
   // INITIALIZER
@@ -431,7 +428,9 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_tag_template',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -553,7 +552,7 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataCatalogTagTemplateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataCatalogTagTemplateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

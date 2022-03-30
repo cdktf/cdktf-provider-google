@@ -25,7 +25,7 @@ export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_healthcare_fhir_store_iam_policy";
+  public static readonly tfResourceType = "google_healthcare_fhir_store_iam_policy";
 
   // ===========
   // INITIALIZER
@@ -42,7 +42,9 @@ export class HealthcareFhirStoreIamPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_fhir_store_iam_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

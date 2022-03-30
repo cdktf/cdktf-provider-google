@@ -435,7 +435,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google";
+  public static readonly tfResourceType = "google";
 
   // ===========
   // INITIALIZER
@@ -453,6 +453,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
+        providerVersion: '3.90.1',
         providerVersionConstraint: '~> 3.0'
       },
       terraformProviderSource: 'google'

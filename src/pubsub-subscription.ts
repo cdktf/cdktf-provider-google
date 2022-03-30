@@ -176,10 +176,9 @@ export class PubsubSubscriptionDeadLetterPolicyOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubSubscriptionDeadLetterPolicy | undefined {
@@ -270,10 +269,9 @@ export class PubsubSubscriptionExpirationPolicyOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubSubscriptionExpirationPolicy | undefined {
@@ -350,10 +348,9 @@ export class PubsubSubscriptionPushConfigOidcTokenOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubSubscriptionPushConfigOidcToken | undefined {
@@ -475,10 +472,9 @@ export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubSubscriptionPushConfig | undefined {
@@ -544,7 +540,7 @@ export class PubsubSubscriptionPushConfigOutputReference extends cdktf.ComplexOb
   }
 
   // oidc_token - computed: false, optional: true, required: false
-  private _oidcToken = new PubsubSubscriptionPushConfigOidcTokenOutputReference(this, "oidc_token", true);
+  private _oidcToken = new PubsubSubscriptionPushConfigOidcTokenOutputReference(this, "oidc_token");
   public get oidcToken() {
     return this._oidcToken;
   }
@@ -593,10 +589,9 @@ export class PubsubSubscriptionRetryPolicyOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubSubscriptionRetryPolicy | undefined {
@@ -691,10 +686,9 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubSubscriptionTimeouts | undefined {
@@ -787,7 +781,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_pubsub_subscription";
+  public static readonly tfResourceType = "google_pubsub_subscription";
 
   // ===========
   // INITIALIZER
@@ -804,7 +798,9 @@ export class PubsubSubscription extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_subscription',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -980,7 +976,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // dead_letter_policy - computed: false, optional: true, required: false
-  private _deadLetterPolicy = new PubsubSubscriptionDeadLetterPolicyOutputReference(this, "dead_letter_policy", true);
+  private _deadLetterPolicy = new PubsubSubscriptionDeadLetterPolicyOutputReference(this, "dead_letter_policy");
   public get deadLetterPolicy() {
     return this._deadLetterPolicy;
   }
@@ -996,7 +992,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // expiration_policy - computed: false, optional: true, required: false
-  private _expirationPolicy = new PubsubSubscriptionExpirationPolicyOutputReference(this, "expiration_policy", true);
+  private _expirationPolicy = new PubsubSubscriptionExpirationPolicyOutputReference(this, "expiration_policy");
   public get expirationPolicy() {
     return this._expirationPolicy;
   }
@@ -1012,7 +1008,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // push_config - computed: false, optional: true, required: false
-  private _pushConfig = new PubsubSubscriptionPushConfigOutputReference(this, "push_config", true);
+  private _pushConfig = new PubsubSubscriptionPushConfigOutputReference(this, "push_config");
   public get pushConfig() {
     return this._pushConfig;
   }
@@ -1028,7 +1024,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new PubsubSubscriptionRetryPolicyOutputReference(this, "retry_policy", true);
+  private _retryPolicy = new PubsubSubscriptionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -1044,7 +1040,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PubsubSubscriptionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PubsubSubscriptionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

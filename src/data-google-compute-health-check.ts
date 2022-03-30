@@ -24,7 +24,45 @@ last character, which cannot be a dash.
   */
   readonly project?: string;
 }
-export class DataGoogleComputeHealthCheckGrpcHealthCheck extends cdktf.ComplexComputedList {
+export interface DataGoogleComputeHealthCheckGrpcHealthCheck {
+}
+
+export function dataGoogleComputeHealthCheckGrpcHealthCheckToTerraform(struct?: DataGoogleComputeHealthCheckGrpcHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckGrpcHealthCheck | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckGrpcHealthCheck | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // grpc_service_name - computed: true, optional: false, required: false
   public get grpcServiceName() {
@@ -46,7 +84,64 @@ export class DataGoogleComputeHealthCheckGrpcHealthCheck extends cdktf.ComplexCo
     return this.getStringAttribute('port_specification');
   }
 }
-export class DataGoogleComputeHealthCheckHttp2HealthCheck extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeHealthCheckGrpcHealthCheckList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckGrpcHealthCheckOutputReference {
+    return new DataGoogleComputeHealthCheckGrpcHealthCheckOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeHealthCheckHttp2HealthCheck {
+}
+
+export function dataGoogleComputeHealthCheckHttp2HealthCheckToTerraform(struct?: DataGoogleComputeHealthCheckHttp2HealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckHttp2HealthCheck | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckHttp2HealthCheck | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host - computed: true, optional: false, required: false
   public get host() {
@@ -83,7 +178,64 @@ export class DataGoogleComputeHealthCheckHttp2HealthCheck extends cdktf.ComplexC
     return this.getStringAttribute('response');
   }
 }
-export class DataGoogleComputeHealthCheckHttpHealthCheck extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeHealthCheckHttp2HealthCheckList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckHttp2HealthCheckOutputReference {
+    return new DataGoogleComputeHealthCheckHttp2HealthCheckOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeHealthCheckHttpHealthCheck {
+}
+
+export function dataGoogleComputeHealthCheckHttpHealthCheckToTerraform(struct?: DataGoogleComputeHealthCheckHttpHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckHttpHealthCheck | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckHttpHealthCheck | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host - computed: true, optional: false, required: false
   public get host() {
@@ -120,7 +272,64 @@ export class DataGoogleComputeHealthCheckHttpHealthCheck extends cdktf.ComplexCo
     return this.getStringAttribute('response');
   }
 }
-export class DataGoogleComputeHealthCheckHttpsHealthCheck extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeHealthCheckHttpHealthCheckList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckHttpHealthCheckOutputReference {
+    return new DataGoogleComputeHealthCheckHttpHealthCheckOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeHealthCheckHttpsHealthCheck {
+}
+
+export function dataGoogleComputeHealthCheckHttpsHealthCheckToTerraform(struct?: DataGoogleComputeHealthCheckHttpsHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckHttpsHealthCheck | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckHttpsHealthCheck | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host - computed: true, optional: false, required: false
   public get host() {
@@ -157,14 +366,128 @@ export class DataGoogleComputeHealthCheckHttpsHealthCheck extends cdktf.ComplexC
     return this.getStringAttribute('response');
   }
 }
-export class DataGoogleComputeHealthCheckLogConfig extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeHealthCheckHttpsHealthCheckList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckHttpsHealthCheckOutputReference {
+    return new DataGoogleComputeHealthCheckHttpsHealthCheckOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeHealthCheckLogConfig {
+}
+
+export function dataGoogleComputeHealthCheckLogConfigToTerraform(struct?: DataGoogleComputeHealthCheckLogConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckLogConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckLogConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enable - computed: true, optional: false, required: false
   public get enable() {
     return this.getBooleanAttribute('enable');
   }
 }
-export class DataGoogleComputeHealthCheckSslHealthCheck extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeHealthCheckLogConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckLogConfigOutputReference {
+    return new DataGoogleComputeHealthCheckLogConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeHealthCheckSslHealthCheck {
+}
+
+export function dataGoogleComputeHealthCheckSslHealthCheckToTerraform(struct?: DataGoogleComputeHealthCheckSslHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckSslHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckSslHealthCheck | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckSslHealthCheck | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // port - computed: true, optional: false, required: false
   public get port() {
@@ -196,7 +519,64 @@ export class DataGoogleComputeHealthCheckSslHealthCheck extends cdktf.ComplexCom
     return this.getStringAttribute('response');
   }
 }
-export class DataGoogleComputeHealthCheckTcpHealthCheck extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeHealthCheckSslHealthCheckList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckSslHealthCheckOutputReference {
+    return new DataGoogleComputeHealthCheckSslHealthCheckOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeHealthCheckTcpHealthCheck {
+}
+
+export function dataGoogleComputeHealthCheckTcpHealthCheckToTerraform(struct?: DataGoogleComputeHealthCheckTcpHealthCheck): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeHealthCheckTcpHealthCheck | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeHealthCheckTcpHealthCheck | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // port - computed: true, optional: false, required: false
   public get port() {
@@ -226,6 +606,25 @@ export class DataGoogleComputeHealthCheckTcpHealthCheck extends cdktf.ComplexCom
   // response - computed: true, optional: false, required: false
   public get response() {
     return this.getStringAttribute('response');
+  }
+}
+
+export class DataGoogleComputeHealthCheckTcpHealthCheckList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeHealthCheckTcpHealthCheckOutputReference {
+    return new DataGoogleComputeHealthCheckTcpHealthCheckOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -237,7 +636,7 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_health_check";
+  public static readonly tfResourceType = "google_compute_health_check";
 
   // ===========
   // INITIALIZER
@@ -254,7 +653,9 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_health_check',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -285,8 +686,9 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   }
 
   // grpc_health_check - computed: true, optional: false, required: false
-  public grpcHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckGrpcHealthCheck(this, 'grpc_health_check', index, false);
+  private _grpcHealthCheck = new DataGoogleComputeHealthCheckGrpcHealthCheckList(this, "grpc_health_check", false);
+  public get grpcHealthCheck() {
+    return this._grpcHealthCheck;
   }
 
   // healthy_threshold - computed: true, optional: false, required: false
@@ -295,18 +697,21 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   }
 
   // http2_health_check - computed: true, optional: false, required: false
-  public http2HealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckHttp2HealthCheck(this, 'http2_health_check', index, false);
+  private _http2HealthCheck = new DataGoogleComputeHealthCheckHttp2HealthCheckList(this, "http2_health_check", false);
+  public get http2HealthCheck() {
+    return this._http2HealthCheck;
   }
 
   // http_health_check - computed: true, optional: false, required: false
-  public httpHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckHttpHealthCheck(this, 'http_health_check', index, false);
+  private _httpHealthCheck = new DataGoogleComputeHealthCheckHttpHealthCheckList(this, "http_health_check", false);
+  public get httpHealthCheck() {
+    return this._httpHealthCheck;
   }
 
   // https_health_check - computed: true, optional: false, required: false
-  public httpsHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckHttpsHealthCheck(this, 'https_health_check', index, false);
+  private _httpsHealthCheck = new DataGoogleComputeHealthCheckHttpsHealthCheckList(this, "https_health_check", false);
+  public get httpsHealthCheck() {
+    return this._httpsHealthCheck;
   }
 
   // id - computed: true, optional: true, required: false
@@ -315,8 +720,9 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   }
 
   // log_config - computed: true, optional: false, required: false
-  public logConfig(index: string) {
-    return new DataGoogleComputeHealthCheckLogConfig(this, 'log_config', index, false);
+  private _logConfig = new DataGoogleComputeHealthCheckLogConfigList(this, "log_config", false);
+  public get logConfig() {
+    return this._logConfig;
   }
 
   // name - computed: false, optional: false, required: true
@@ -354,13 +760,15 @@ export class DataGoogleComputeHealthCheck extends cdktf.TerraformDataSource {
   }
 
   // ssl_health_check - computed: true, optional: false, required: false
-  public sslHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckSslHealthCheck(this, 'ssl_health_check', index, false);
+  private _sslHealthCheck = new DataGoogleComputeHealthCheckSslHealthCheckList(this, "ssl_health_check", false);
+  public get sslHealthCheck() {
+    return this._sslHealthCheck;
   }
 
   // tcp_health_check - computed: true, optional: false, required: false
-  public tcpHealthCheck(index: string) {
-    return new DataGoogleComputeHealthCheckTcpHealthCheck(this, 'tcp_health_check', index, false);
+  private _tcpHealthCheck = new DataGoogleComputeHealthCheckTcpHealthCheckList(this, "tcp_health_check", false);
+  public get tcpHealthCheck() {
+    return this._tcpHealthCheck;
   }
 
   // timeout_sec - computed: true, optional: false, required: false
