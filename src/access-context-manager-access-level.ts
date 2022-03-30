@@ -151,10 +151,9 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelBasicConditionsDevicePolicy | undefined {
@@ -419,10 +418,9 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelBasic | undefined {
@@ -528,10 +526,9 @@ export class AccessContextManagerAccessLevelCustomExprOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelCustomExpr | undefined {
@@ -659,10 +656,9 @@ export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelCustom | undefined {
@@ -687,7 +683,7 @@ export class AccessContextManagerAccessLevelCustomOutputReference extends cdktf.
   }
 
   // expr - computed: false, optional: false, required: true
-  private _expr = new AccessContextManagerAccessLevelCustomExprOutputReference(this, "expr", true);
+  private _expr = new AccessContextManagerAccessLevelCustomExprOutputReference(this, "expr");
   public get expr() {
     return this._expr;
   }
@@ -732,10 +728,9 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerAccessLevelTimeouts | undefined {
@@ -828,7 +823,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_access_context_manager_access_level";
+  public static readonly tfResourceType = "google_access_context_manager_access_level";
 
   // ===========
   // INITIALIZER
@@ -845,7 +840,9 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_access_context_manager_access_level',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -926,7 +923,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   }
 
   // basic - computed: false, optional: true, required: false
-  private _basic = new AccessContextManagerAccessLevelBasicOutputReference(this, "basic", true);
+  private _basic = new AccessContextManagerAccessLevelBasicOutputReference(this, "basic");
   public get basic() {
     return this._basic;
   }
@@ -942,7 +939,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   }
 
   // custom - computed: false, optional: true, required: false
-  private _custom = new AccessContextManagerAccessLevelCustomOutputReference(this, "custom", true);
+  private _custom = new AccessContextManagerAccessLevelCustomOutputReference(this, "custom");
   public get custom() {
     return this._custom;
   }
@@ -958,7 +955,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AccessContextManagerAccessLevelTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AccessContextManagerAccessLevelTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

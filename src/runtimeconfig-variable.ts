@@ -43,7 +43,7 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_runtimeconfig_variable";
+  public static readonly tfResourceType = "google_runtimeconfig_variable";
 
   // ===========
   // INITIALIZER
@@ -60,7 +60,9 @@ export class RuntimeconfigVariable extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_runtimeconfig_variable',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

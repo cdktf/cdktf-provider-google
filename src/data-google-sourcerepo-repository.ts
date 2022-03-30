@@ -19,7 +19,45 @@ The repo name may contain slashes. eg, 'name/with/slash'
   */
   readonly project?: string;
 }
-export class DataGoogleSourcerepoRepositoryPubsubConfigs extends cdktf.ComplexComputedList {
+export interface DataGoogleSourcerepoRepositoryPubsubConfigs {
+}
+
+export function dataGoogleSourcerepoRepositoryPubsubConfigsToTerraform(struct?: DataGoogleSourcerepoRepositoryPubsubConfigs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSourcerepoRepositoryPubsubConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSourcerepoRepositoryPubsubConfigs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSourcerepoRepositoryPubsubConfigs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // message_format - computed: true, optional: false, required: false
   public get messageFormat() {
@@ -37,6 +75,25 @@ export class DataGoogleSourcerepoRepositoryPubsubConfigs extends cdktf.ComplexCo
   }
 }
 
+export class DataGoogleSourcerepoRepositoryPubsubConfigsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSourcerepoRepositoryPubsubConfigsOutputReference {
+    return new DataGoogleSourcerepoRepositoryPubsubConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/sourcerepo_repository google_sourcerepo_repository}
 */
@@ -45,7 +102,7 @@ export class DataGoogleSourcerepoRepository extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_sourcerepo_repository";
+  public static readonly tfResourceType = "google_sourcerepo_repository";
 
   // ===========
   // INITIALIZER
@@ -62,7 +119,9 @@ export class DataGoogleSourcerepoRepository extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_sourcerepo_repository',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -112,8 +171,9 @@ export class DataGoogleSourcerepoRepository extends cdktf.TerraformDataSource {
   }
 
   // pubsub_configs - computed: true, optional: false, required: false
-  public pubsubConfigs(index: string) {
-    return new DataGoogleSourcerepoRepositoryPubsubConfigs(this, 'pubsub_configs', index, true);
+  private _pubsubConfigs = new DataGoogleSourcerepoRepositoryPubsubConfigsList(this, "pubsub_configs", true);
+  public get pubsubConfigs() {
+    return this._pubsubConfigs;
   }
 
   // size - computed: true, optional: false, required: false

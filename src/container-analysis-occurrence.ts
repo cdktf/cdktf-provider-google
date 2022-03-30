@@ -121,10 +121,9 @@ export class ContainerAnalysisOccurrenceAttestationOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerAnalysisOccurrenceAttestation | undefined {
@@ -214,10 +213,9 @@ export class ContainerAnalysisOccurrenceTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerAnalysisOccurrenceTimeouts | undefined {
@@ -310,7 +308,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_container_analysis_occurrence";
+  public static readonly tfResourceType = "google_container_analysis_occurrence";
 
   // ===========
   // INITIALIZER
@@ -327,7 +325,9 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_container_analysis_occurrence',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -430,7 +430,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // attestation - computed: false, optional: false, required: true
-  private _attestation = new ContainerAnalysisOccurrenceAttestationOutputReference(this, "attestation", true);
+  private _attestation = new ContainerAnalysisOccurrenceAttestationOutputReference(this, "attestation");
   public get attestation() {
     return this._attestation;
   }
@@ -443,7 +443,7 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerAnalysisOccurrenceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ContainerAnalysisOccurrenceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

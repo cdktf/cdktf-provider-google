@@ -56,10 +56,9 @@ export class AccessContextManagerServicePerimeterResourceTimeoutsOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AccessContextManagerServicePerimeterResourceTimeouts | undefined {
@@ -130,7 +129,7 @@ export class AccessContextManagerServicePerimeterResource extends cdktf.Terrafor
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_access_context_manager_service_perimeter_resource";
+  public static readonly tfResourceType = "google_access_context_manager_service_perimeter_resource";
 
   // ===========
   // INITIALIZER
@@ -147,7 +146,9 @@ export class AccessContextManagerServicePerimeterResource extends cdktf.Terrafor
     super(scope, id, {
       terraformResourceType: 'google_access_context_manager_service_perimeter_resource',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -195,7 +196,7 @@ export class AccessContextManagerServicePerimeterResource extends cdktf.Terrafor
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AccessContextManagerServicePerimeterResourceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AccessContextManagerServicePerimeterResourceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

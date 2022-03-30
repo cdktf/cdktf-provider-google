@@ -21,7 +21,7 @@ export class DataGoogleBigqueryDefaultServiceAccount extends cdktf.TerraformData
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_bigquery_default_service_account";
+  public static readonly tfResourceType = "google_bigquery_default_service_account";
 
   // ===========
   // INITIALIZER
@@ -38,7 +38,9 @@ export class DataGoogleBigqueryDefaultServiceAccount extends cdktf.TerraformData
     super(scope, id, {
       terraformResourceType: 'google_bigquery_default_service_account',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

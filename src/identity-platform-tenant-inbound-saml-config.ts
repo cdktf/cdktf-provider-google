@@ -121,10 +121,9 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IdentityPlatformTenantInboundSamlConfigIdpConfig | undefined {
@@ -222,11 +221,68 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference ext
     return this._idpCertificates;
   }
 }
-export class IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificates extends cdktf.ComplexComputedList {
+export interface IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificates {
+}
+
+export function identityPlatformTenantInboundSamlConfigSpConfigSpCertificatesToTerraform(struct?: IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificates | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificates | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // x509_certificate - computed: true, optional: false, required: false
   public get x509Certificate() {
     return this.getStringAttribute('x509_certificate');
+  }
+}
+
+export class IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificatesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificatesOutputReference {
+    return new IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificatesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface IdentityPlatformTenantInboundSamlConfigSpConfig {
@@ -261,10 +317,9 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IdentityPlatformTenantInboundSamlConfigSpConfig | undefined {
@@ -273,10 +328,6 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference exte
     if (this._callbackUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.callbackUri = this._callbackUri;
-    }
-    if (this._spEntityId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.spEntityId = this._spEntityId;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -308,8 +359,9 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference exte
   }
 
   // sp_certificates - computed: true, optional: false, required: false
-  public spCertificates(index: string) {
-    return new IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificates(this, 'sp_certificates', index, false);
+  private _spCertificates = new IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificatesList(this, "sp_certificates", false);
+  public get spCertificates() {
+    return this._spCertificates;
   }
 
   // sp_entity_id - computed: false, optional: false, required: true
@@ -358,10 +410,9 @@ export class IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IdentityPlatformTenantInboundSamlConfigTimeouts | undefined {
@@ -454,7 +505,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_identity_platform_tenant_inbound_saml_config";
+  public static readonly tfResourceType = "google_identity_platform_tenant_inbound_saml_config";
 
   // ===========
   // INITIALIZER
@@ -471,7 +522,9 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
     super(scope, id, {
       terraformResourceType: 'google_identity_platform_tenant_inbound_saml_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -569,7 +622,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
 
   // idp_config - computed: false, optional: false, required: true
-  private _idpConfig = new IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference(this, "idp_config", true);
+  private _idpConfig = new IdentityPlatformTenantInboundSamlConfigIdpConfigOutputReference(this, "idp_config");
   public get idpConfig() {
     return this._idpConfig;
   }
@@ -582,7 +635,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
 
   // sp_config - computed: false, optional: false, required: true
-  private _spConfig = new IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference(this, "sp_config", true);
+  private _spConfig = new IdentityPlatformTenantInboundSamlConfigSpConfigOutputReference(this, "sp_config");
   public get spConfig() {
     return this._spConfig;
   }
@@ -595,7 +648,7 @@ export class IdentityPlatformTenantInboundSamlConfig extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new IdentityPlatformTenantInboundSamlConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

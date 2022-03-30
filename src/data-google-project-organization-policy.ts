@@ -20,14 +20,109 @@ export interface DataGoogleProjectOrganizationPolicyConfig extends cdktf.Terrafo
   */
   readonly project: string;
 }
-export class DataGoogleProjectOrganizationPolicyBooleanPolicy extends cdktf.ComplexComputedList {
+export interface DataGoogleProjectOrganizationPolicyBooleanPolicy {
+}
+
+export function dataGoogleProjectOrganizationPolicyBooleanPolicyToTerraform(struct?: DataGoogleProjectOrganizationPolicyBooleanPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleProjectOrganizationPolicyBooleanPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleProjectOrganizationPolicyBooleanPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleProjectOrganizationPolicyBooleanPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enforced - computed: true, optional: false, required: false
   public get enforced() {
     return this.getBooleanAttribute('enforced');
   }
 }
-export class DataGoogleProjectOrganizationPolicyListPolicyAllow extends cdktf.ComplexComputedList {
+
+export class DataGoogleProjectOrganizationPolicyBooleanPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleProjectOrganizationPolicyBooleanPolicyOutputReference {
+    return new DataGoogleProjectOrganizationPolicyBooleanPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleProjectOrganizationPolicyListPolicyAllow {
+}
+
+export function dataGoogleProjectOrganizationPolicyListPolicyAllowToTerraform(struct?: DataGoogleProjectOrganizationPolicyListPolicyAllow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleProjectOrganizationPolicyListPolicyAllowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleProjectOrganizationPolicyListPolicyAllow | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleProjectOrganizationPolicyListPolicyAllow | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // all - computed: true, optional: false, required: false
   public get all() {
@@ -39,7 +134,64 @@ export class DataGoogleProjectOrganizationPolicyListPolicyAllow extends cdktf.Co
     return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
 }
-export class DataGoogleProjectOrganizationPolicyListPolicyDeny extends cdktf.ComplexComputedList {
+
+export class DataGoogleProjectOrganizationPolicyListPolicyAllowList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleProjectOrganizationPolicyListPolicyAllowOutputReference {
+    return new DataGoogleProjectOrganizationPolicyListPolicyAllowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleProjectOrganizationPolicyListPolicyDeny {
+}
+
+export function dataGoogleProjectOrganizationPolicyListPolicyDenyToTerraform(struct?: DataGoogleProjectOrganizationPolicyListPolicyDeny): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleProjectOrganizationPolicyListPolicyDenyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleProjectOrganizationPolicyListPolicyDeny | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleProjectOrganizationPolicyListPolicyDeny | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // all - computed: true, optional: false, required: false
   public get all() {
@@ -51,18 +203,75 @@ export class DataGoogleProjectOrganizationPolicyListPolicyDeny extends cdktf.Com
     return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
 }
-export class DataGoogleProjectOrganizationPolicyListPolicy extends cdktf.ComplexComputedList {
+
+export class DataGoogleProjectOrganizationPolicyListPolicyDenyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleProjectOrganizationPolicyListPolicyDenyOutputReference {
+    return new DataGoogleProjectOrganizationPolicyListPolicyDenyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleProjectOrganizationPolicyListPolicy {
+}
+
+export function dataGoogleProjectOrganizationPolicyListPolicyToTerraform(struct?: DataGoogleProjectOrganizationPolicyListPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleProjectOrganizationPolicyListPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleProjectOrganizationPolicyListPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleProjectOrganizationPolicyListPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // allow - computed: true, optional: false, required: false
+  private _allow = new DataGoogleProjectOrganizationPolicyListPolicyAllowList(this, "allow", false);
   public get allow() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allow');
+    return this._allow;
   }
 
   // deny - computed: true, optional: false, required: false
+  private _deny = new DataGoogleProjectOrganizationPolicyListPolicyDenyList(this, "deny", false);
   public get deny() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('deny');
+    return this._deny;
   }
 
   // inherit_from_parent - computed: true, optional: false, required: false
@@ -75,11 +284,87 @@ export class DataGoogleProjectOrganizationPolicyListPolicy extends cdktf.Complex
     return this.getStringAttribute('suggested_value');
   }
 }
-export class DataGoogleProjectOrganizationPolicyRestorePolicy extends cdktf.ComplexComputedList {
+
+export class DataGoogleProjectOrganizationPolicyListPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleProjectOrganizationPolicyListPolicyOutputReference {
+    return new DataGoogleProjectOrganizationPolicyListPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleProjectOrganizationPolicyRestorePolicy {
+}
+
+export function dataGoogleProjectOrganizationPolicyRestorePolicyToTerraform(struct?: DataGoogleProjectOrganizationPolicyRestorePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleProjectOrganizationPolicyRestorePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleProjectOrganizationPolicyRestorePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleProjectOrganizationPolicyRestorePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // default - computed: true, optional: false, required: false
   public get default() {
     return this.getBooleanAttribute('default');
+  }
+}
+
+export class DataGoogleProjectOrganizationPolicyRestorePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleProjectOrganizationPolicyRestorePolicyOutputReference {
+    return new DataGoogleProjectOrganizationPolicyRestorePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -91,7 +376,7 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_project_organization_policy";
+  public static readonly tfResourceType = "google_project_organization_policy";
 
   // ===========
   // INITIALIZER
@@ -108,7 +393,9 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
     super(scope, id, {
       terraformResourceType: 'google_project_organization_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -124,8 +411,9 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   // ==========
 
   // boolean_policy - computed: true, optional: false, required: false
-  public booleanPolicy(index: string) {
-    return new DataGoogleProjectOrganizationPolicyBooleanPolicy(this, 'boolean_policy', index, false);
+  private _booleanPolicy = new DataGoogleProjectOrganizationPolicyBooleanPolicyList(this, "boolean_policy", false);
+  public get booleanPolicy() {
+    return this._booleanPolicy;
   }
 
   // constraint - computed: false, optional: false, required: true
@@ -152,8 +440,9 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   }
 
   // list_policy - computed: true, optional: false, required: false
-  public listPolicy(index: string) {
-    return new DataGoogleProjectOrganizationPolicyListPolicy(this, 'list_policy', index, false);
+  private _listPolicy = new DataGoogleProjectOrganizationPolicyListPolicyList(this, "list_policy", false);
+  public get listPolicy() {
+    return this._listPolicy;
   }
 
   // project - computed: false, optional: false, required: true
@@ -170,8 +459,9 @@ export class DataGoogleProjectOrganizationPolicy extends cdktf.TerraformDataSour
   }
 
   // restore_policy - computed: true, optional: false, required: false
-  public restorePolicy(index: string) {
-    return new DataGoogleProjectOrganizationPolicyRestorePolicy(this, 'restore_policy', index, false);
+  private _restorePolicy = new DataGoogleProjectOrganizationPolicyRestorePolicyList(this, "restore_policy", false);
+  public get restorePolicy() {
+    return this._restorePolicy;
   }
 
   // update_time - computed: true, optional: false, required: false

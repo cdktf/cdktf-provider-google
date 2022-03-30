@@ -110,10 +110,9 @@ export class CloudIdentityGroupGroupKeyOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudIdentityGroupGroupKey | undefined {
@@ -205,10 +204,9 @@ export class CloudIdentityGroupTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudIdentityGroupTimeouts | undefined {
@@ -301,7 +299,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_identity_group";
+  public static readonly tfResourceType = "google_cloud_identity_group";
 
   // ===========
   // INITIALIZER
@@ -318,7 +316,9 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_identity_group',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -433,7 +433,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // group_key - computed: false, optional: false, required: true
-  private _groupKey = new CloudIdentityGroupGroupKeyOutputReference(this, "group_key", true);
+  private _groupKey = new CloudIdentityGroupGroupKeyOutputReference(this, "group_key");
   public get groupKey() {
     return this._groupKey;
   }
@@ -446,7 +446,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudIdentityGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudIdentityGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

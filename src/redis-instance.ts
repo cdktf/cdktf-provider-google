@@ -132,7 +132,45 @@ network.
   */
   readonly timeouts?: RedisInstanceTimeouts;
 }
-export class RedisInstanceServerCaCerts extends cdktf.ComplexComputedList {
+export interface RedisInstanceServerCaCerts {
+}
+
+export function redisInstanceServerCaCertsToTerraform(struct?: RedisInstanceServerCaCerts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class RedisInstanceServerCaCertsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RedisInstanceServerCaCerts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstanceServerCaCerts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -157,6 +195,25 @@ export class RedisInstanceServerCaCerts extends cdktf.ComplexComputedList {
   // sha1_fingerprint - computed: true, optional: false, required: false
   public get sha1Fingerprint() {
     return this.getStringAttribute('sha1_fingerprint');
+  }
+}
+
+export class RedisInstanceServerCaCertsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RedisInstanceServerCaCertsOutputReference {
+    return new RedisInstanceServerCaCertsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface RedisInstanceTimeouts {
@@ -192,10 +249,9 @@ export class RedisInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): RedisInstanceTimeouts | undefined {
@@ -288,7 +344,7 @@ export class RedisInstance extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_redis_instance";
+  public static readonly tfResourceType = "google_redis_instance";
 
   // ===========
   // INITIALIZER
@@ -305,7 +361,9 @@ export class RedisInstance extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -589,8 +647,9 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // server_ca_certs - computed: true, optional: false, required: false
-  public serverCaCerts(index: string) {
-    return new RedisInstanceServerCaCerts(this, 'server_ca_certs', index, false);
+  private _serverCaCerts = new RedisInstanceServerCaCertsList(this, "server_ca_certs", false);
+  public get serverCaCerts() {
+    return this._serverCaCerts;
   }
 
   // tier - computed: false, optional: true, required: false
@@ -626,7 +685,7 @@ export class RedisInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RedisInstanceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new RedisInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -90,7 +90,45 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
   */
   readonly timeouts?: DataCatalogEntryTimeouts;
 }
-export class DataCatalogEntryBigqueryDateShardedSpec extends cdktf.ComplexComputedList {
+export interface DataCatalogEntryBigqueryDateShardedSpec {
+}
+
+export function dataCatalogEntryBigqueryDateShardedSpecToTerraform(struct?: DataCatalogEntryBigqueryDateShardedSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataCatalogEntryBigqueryDateShardedSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogEntryBigqueryDateShardedSpec | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogEntryBigqueryDateShardedSpec | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dataset - computed: true, optional: false, required: false
   public get dataset() {
@@ -107,21 +145,192 @@ export class DataCatalogEntryBigqueryDateShardedSpec extends cdktf.ComplexComput
     return this.getStringAttribute('table_prefix');
   }
 }
-export class DataCatalogEntryBigqueryTableSpecTableSpec extends cdktf.ComplexComputedList {
+
+export class DataCatalogEntryBigqueryDateShardedSpecList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogEntryBigqueryDateShardedSpecOutputReference {
+    return new DataCatalogEntryBigqueryDateShardedSpecOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataCatalogEntryBigqueryTableSpecTableSpec {
+}
+
+export function dataCatalogEntryBigqueryTableSpecTableSpecToTerraform(struct?: DataCatalogEntryBigqueryTableSpecTableSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataCatalogEntryBigqueryTableSpecTableSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogEntryBigqueryTableSpecTableSpec | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogEntryBigqueryTableSpecTableSpec | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // grouped_entry - computed: true, optional: false, required: false
   public get groupedEntry() {
     return this.getStringAttribute('grouped_entry');
   }
 }
-export class DataCatalogEntryBigqueryTableSpecViewSpec extends cdktf.ComplexComputedList {
+
+export class DataCatalogEntryBigqueryTableSpecTableSpecList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogEntryBigqueryTableSpecTableSpecOutputReference {
+    return new DataCatalogEntryBigqueryTableSpecTableSpecOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataCatalogEntryBigqueryTableSpecViewSpec {
+}
+
+export function dataCatalogEntryBigqueryTableSpecViewSpecToTerraform(struct?: DataCatalogEntryBigqueryTableSpecViewSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataCatalogEntryBigqueryTableSpecViewSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogEntryBigqueryTableSpecViewSpec | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogEntryBigqueryTableSpecViewSpec | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // view_query - computed: true, optional: false, required: false
   public get viewQuery() {
     return this.getStringAttribute('view_query');
   }
 }
-export class DataCatalogEntryBigqueryTableSpec extends cdktf.ComplexComputedList {
+
+export class DataCatalogEntryBigqueryTableSpecViewSpecList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogEntryBigqueryTableSpecViewSpecOutputReference {
+    return new DataCatalogEntryBigqueryTableSpecViewSpecOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataCatalogEntryBigqueryTableSpec {
+}
+
+export function dataCatalogEntryBigqueryTableSpecToTerraform(struct?: DataCatalogEntryBigqueryTableSpec): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataCatalogEntryBigqueryTableSpecOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogEntryBigqueryTableSpec | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogEntryBigqueryTableSpec | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // table_source_type - computed: true, optional: false, required: false
   public get tableSourceType() {
@@ -129,18 +338,75 @@ export class DataCatalogEntryBigqueryTableSpec extends cdktf.ComplexComputedList
   }
 
   // table_spec - computed: true, optional: false, required: false
+  private _tableSpec = new DataCatalogEntryBigqueryTableSpecTableSpecList(this, "table_spec", false);
   public get tableSpec() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('table_spec');
+    return this._tableSpec;
   }
 
   // view_spec - computed: true, optional: false, required: false
+  private _viewSpec = new DataCatalogEntryBigqueryTableSpecViewSpecList(this, "view_spec", false);
   public get viewSpec() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('view_spec');
+    return this._viewSpec;
   }
 }
-export class DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs extends cdktf.ComplexComputedList {
+
+export class DataCatalogEntryBigqueryTableSpecList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogEntryBigqueryTableSpecOutputReference {
+    return new DataCatalogEntryBigqueryTableSpecOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs {
+}
+
+export function dataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsToTerraform(struct?: DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // file_path - computed: true, optional: false, required: false
   public get filePath() {
@@ -150,6 +416,25 @@ export class DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs extends cdktf.Comp
   // size_bytes - computed: true, optional: false, required: false
   public get sizeBytes() {
     return this.getNumberAttribute('size_bytes');
+  }
+}
+
+export class DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsOutputReference {
+    return new DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataCatalogEntryGcsFilesetSpec {
@@ -188,10 +473,9 @@ export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataCatalogEntryGcsFilesetSpec | undefined {
@@ -229,8 +513,9 @@ export class DataCatalogEntryGcsFilesetSpecOutputReference extends cdktf.Complex
   }
 
   // sample_gcs_file_specs - computed: true, optional: false, required: false
-  public sampleGcsFileSpecs(index: string) {
-    return new DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecs(this, 'sample_gcs_file_specs', index, false);
+  private _sampleGcsFileSpecs = new DataCatalogEntryGcsFilesetSpecSampleGcsFileSpecsList(this, "sample_gcs_file_specs", false);
+  public get sampleGcsFileSpecs() {
+    return this._sampleGcsFileSpecs;
   }
 }
 export interface DataCatalogEntryTimeouts {
@@ -266,10 +551,9 @@ export class DataCatalogEntryTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataCatalogEntryTimeouts | undefined {
@@ -362,7 +646,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_data_catalog_entry";
+  public static readonly tfResourceType = "google_data_catalog_entry";
 
   // ===========
   // INITIALIZER
@@ -379,7 +663,9 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_data_catalog_entry',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -404,13 +690,15 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   // ==========
 
   // bigquery_date_sharded_spec - computed: true, optional: false, required: false
-  public bigqueryDateShardedSpec(index: string) {
-    return new DataCatalogEntryBigqueryDateShardedSpec(this, 'bigquery_date_sharded_spec', index, false);
+  private _bigqueryDateShardedSpec = new DataCatalogEntryBigqueryDateShardedSpecList(this, "bigquery_date_sharded_spec", false);
+  public get bigqueryDateShardedSpec() {
+    return this._bigqueryDateShardedSpec;
   }
 
   // bigquery_table_spec - computed: true, optional: false, required: false
-  public bigqueryTableSpec(index: string) {
-    return new DataCatalogEntryBigqueryTableSpec(this, 'bigquery_table_spec', index, false);
+  private _bigqueryTableSpec = new DataCatalogEntryBigqueryTableSpecList(this, "bigquery_table_spec", false);
+  public get bigqueryTableSpec() {
+    return this._bigqueryTableSpec;
   }
 
   // description - computed: false, optional: true, required: false
@@ -567,7 +855,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // gcs_fileset_spec - computed: false, optional: true, required: false
-  private _gcsFilesetSpec = new DataCatalogEntryGcsFilesetSpecOutputReference(this, "gcs_fileset_spec", true);
+  private _gcsFilesetSpec = new DataCatalogEntryGcsFilesetSpecOutputReference(this, "gcs_fileset_spec");
   public get gcsFilesetSpec() {
     return this._gcsFilesetSpec;
   }
@@ -583,7 +871,7 @@ export class DataCatalogEntry extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataCatalogEntryTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataCatalogEntryTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

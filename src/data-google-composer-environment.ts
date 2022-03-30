@@ -26,7 +26,45 @@ export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMeta
   */
   readonly region?: string;
 }
-export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy extends cdktf.ComplexComputedList {
+export interface DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
+}
+
+export function dataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform(struct?: DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cluster_ipv4_cidr_block - computed: true, optional: false, required: false
   public get clusterIpv4CidrBlock() {
@@ -53,7 +91,64 @@ export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicy ext
     return this.getBooleanAttribute('use_ip_aliases');
   }
 }
-export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.ComplexComputedList {
+
+export class DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference {
+    return new DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComposerEnvironmentConfigNodeConfig {
+}
+
+export function dataGoogleComposerEnvironmentConfigNodeConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigNodeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigNodeConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigNodeConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // disk_size_gb - computed: true, optional: false, required: false
   public get diskSizeGb() {
@@ -61,9 +156,9 @@ export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.Complex
   }
 
   // ip_allocation_policy - computed: true, optional: false, required: false
+  private _ipAllocationPolicy = new DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyList(this, "ip_allocation_policy", false);
   public get ipAllocationPolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_allocation_policy');
+    return this._ipAllocationPolicy;
   }
 
   // machine_type - computed: true, optional: false, required: false
@@ -101,7 +196,64 @@ export class DataGoogleComposerEnvironmentConfigNodeConfig extends cdktf.Complex
     return this.getStringAttribute('zone');
   }
 }
-export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig extends cdktf.ComplexComputedList {
+
+export class DataGoogleComposerEnvironmentConfigNodeConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigNodeConfigOutputReference {
+    return new DataGoogleComposerEnvironmentConfigNodeConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig {
+}
+
+export function dataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cloud_sql_ipv4_cidr_block - computed: true, optional: false, required: false
   public get cloudSqlIpv4CidrBlock() {
@@ -123,16 +275,73 @@ export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfig extends
     return this.getStringAttribute('web_server_ipv4_cidr_block');
   }
 }
-export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.ComplexComputedList {
+
+export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference {
+    return new DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComposerEnvironmentConfigSoftwareConfig {
+}
+
+export function dataGoogleComposerEnvironmentConfigSoftwareConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigSoftwareConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigSoftwareConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigSoftwareConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigSoftwareConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // airflow_config_overrides - computed: true, optional: false, required: false
-  public get airflowConfigOverrides() {
-    return this.getStringMapAttribute('airflow_config_overrides');
+  public airflowConfigOverrides(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'airflow_config_overrides').lookup(key);
   }
 
   // env_variables - computed: true, optional: false, required: false
-  public get envVariables() {
-    return this.getStringMapAttribute('env_variables');
+  public envVariables(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'env_variables').lookup(key);
   }
 
   // image_version - computed: true, optional: false, required: false
@@ -141,8 +350,8 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
   }
 
   // pypi_packages - computed: true, optional: false, required: false
-  public get pypiPackages() {
-    return this.getStringMapAttribute('pypi_packages');
+  public pypiPackages(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'pypi_packages').lookup(key);
   }
 
   // python_version - computed: true, optional: false, required: false
@@ -155,7 +364,64 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfig extends cdktf.Com
     return this.getNumberAttribute('scheduler_count');
   }
 }
-export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedList {
+
+export class DataGoogleComposerEnvironmentConfigSoftwareConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigSoftwareConfigOutputReference {
+    return new DataGoogleComposerEnvironmentConfigSoftwareConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComposerEnvironmentConfigA {
+}
+
+export function dataGoogleComposerEnvironmentConfigAToTerraform(struct?: DataGoogleComposerEnvironmentConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // airflow_uri - computed: true, optional: false, required: false
   public get airflowUri() {
@@ -173,9 +439,9 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
   }
 
   // node_config - computed: true, optional: false, required: false
+  private _nodeConfig = new DataGoogleComposerEnvironmentConfigNodeConfigList(this, "node_config", false);
   public get nodeConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_config');
+    return this._nodeConfig;
   }
 
   // node_count - computed: true, optional: false, required: false
@@ -184,15 +450,34 @@ export class DataGoogleComposerEnvironmentConfigA extends cdktf.ComplexComputedL
   }
 
   // private_environment_config - computed: true, optional: false, required: false
+  private _privateEnvironmentConfig = new DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigList(this, "private_environment_config", false);
   public get privateEnvironmentConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('private_environment_config');
+    return this._privateEnvironmentConfig;
   }
 
   // software_config - computed: true, optional: false, required: false
+  private _softwareConfig = new DataGoogleComposerEnvironmentConfigSoftwareConfigList(this, "software_config", false);
   public get softwareConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('software_config');
+    return this._softwareConfig;
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigAList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigAOutputReference {
+    return new DataGoogleComposerEnvironmentConfigAOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -204,7 +489,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_composer_environment";
+  public static readonly tfResourceType = "google_composer_environment";
 
   // ===========
   // INITIALIZER
@@ -221,7 +506,9 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -238,8 +525,9 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   // ==========
 
   // config - computed: true, optional: false, required: false
-  public config(index: string) {
-    return new DataGoogleComposerEnvironmentConfigA(this, 'config', index, false);
+  private _config = new DataGoogleComposerEnvironmentConfigAList(this, "config", false);
+  public get config() {
+    return this._config;
   }
 
   // id - computed: true, optional: true, required: false

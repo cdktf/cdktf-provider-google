@@ -76,10 +76,9 @@ export class SpannerDatabaseEncryptionConfigOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpannerDatabaseEncryptionConfig | undefined {
@@ -149,10 +148,9 @@ export class SpannerDatabaseTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpannerDatabaseTimeouts | undefined {
@@ -245,7 +243,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_spanner_database";
+  public static readonly tfResourceType = "google_spanner_database";
 
   // ===========
   // INITIALIZER
@@ -262,7 +260,9 @@ export class SpannerDatabase extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_spanner_database',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -367,7 +367,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig = new SpannerDatabaseEncryptionConfigOutputReference(this, "encryption_config", true);
+  private _encryptionConfig = new SpannerDatabaseEncryptionConfigOutputReference(this, "encryption_config");
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
@@ -383,7 +383,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SpannerDatabaseTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SpannerDatabaseTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

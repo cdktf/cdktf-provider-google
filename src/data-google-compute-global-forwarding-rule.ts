@@ -20,7 +20,45 @@ export interface DataGoogleComputeGlobalForwardingRuleConfig extends cdktf.Terra
   */
   readonly project?: string;
 }
-export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels extends cdktf.ComplexComputedList {
+export interface DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels {
+}
+
+export function dataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform(struct?: DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -32,17 +70,93 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels ex
     return this.getStringAttribute('value');
   }
 }
-export class DataGoogleComputeGlobalForwardingRuleMetadataFilters extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference {
+    return new DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeGlobalForwardingRuleMetadataFilters {
+}
+
+export function dataGoogleComputeGlobalForwardingRuleMetadataFiltersToTerraform(struct?: DataGoogleComputeGlobalForwardingRuleMetadataFilters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeGlobalForwardingRuleMetadataFilters | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeGlobalForwardingRuleMetadataFilters | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // filter_labels - computed: true, optional: false, required: false
+  private _filterLabels = new DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList(this, "filter_labels", false);
   public get filterLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('filter_labels');
+    return this._filterLabels;
   }
 
   // filter_match_criteria - computed: true, optional: false, required: false
   public get filterMatchCriteria() {
     return this.getStringAttribute('filter_match_criteria');
+  }
+}
+
+export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeGlobalForwardingRuleMetadataFiltersOutputReference {
+    return new DataGoogleComputeGlobalForwardingRuleMetadataFiltersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -54,7 +168,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_global_forwarding_rule";
+  public static readonly tfResourceType = "google_compute_global_forwarding_rule";
 
   // ===========
   // INITIALIZER
@@ -71,7 +185,9 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
     super(scope, id, {
       terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -127,8 +243,9 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   }
 
   // metadata_filters - computed: true, optional: false, required: false
-  public metadataFilters(index: string) {
-    return new DataGoogleComputeGlobalForwardingRuleMetadataFilters(this, 'metadata_filters', index, false);
+  private _metadataFilters = new DataGoogleComputeGlobalForwardingRuleMetadataFiltersList(this, "metadata_filters", false);
+  public get metadataFilters() {
+    return this._metadataFilters;
   }
 
   // name - computed: false, optional: false, required: true

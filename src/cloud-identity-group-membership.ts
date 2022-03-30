@@ -79,10 +79,9 @@ export class CloudIdentityGroupMembershipPreferredMemberKeyOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudIdentityGroupMembershipPreferredMemberKey | undefined {
@@ -193,10 +192,9 @@ export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudIdentityGroupMembershipTimeouts | undefined {
@@ -289,7 +287,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_identity_group_membership";
+  public static readonly tfResourceType = "google_cloud_identity_group_membership";
 
   // ===========
   // INITIALIZER
@@ -306,7 +304,9 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_identity_group_membership',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -362,7 +362,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   }
 
   // preferred_member_key - computed: false, optional: true, required: false
-  private _preferredMemberKey = new CloudIdentityGroupMembershipPreferredMemberKeyOutputReference(this, "preferred_member_key", true);
+  private _preferredMemberKey = new CloudIdentityGroupMembershipPreferredMemberKeyOutputReference(this, "preferred_member_key");
   public get preferredMemberKey() {
     return this._preferredMemberKey;
   }
@@ -392,7 +392,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudIdentityGroupMembershipTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudIdentityGroupMembershipTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

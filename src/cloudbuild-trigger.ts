@@ -126,7 +126,45 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   */
   readonly webhookConfig?: CloudbuildTriggerWebhookConfig;
 }
-export class CloudbuildTriggerBuildArtifactsObjectsTiming extends cdktf.ComplexComputedList {
+export interface CloudbuildTriggerBuildArtifactsObjectsTiming {
+}
+
+export function cloudbuildTriggerBuildArtifactsObjectsTimingToTerraform(struct?: CloudbuildTriggerBuildArtifactsObjectsTiming): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsObjectsTimingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildArtifactsObjectsTiming | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildArtifactsObjectsTiming | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // end_time - computed: true, optional: false, required: false
   public get endTime() {
@@ -136,6 +174,25 @@ export class CloudbuildTriggerBuildArtifactsObjectsTiming extends cdktf.ComplexC
   // start_time - computed: true, optional: false, required: false
   public get startTime() {
     return this.getStringAttribute('start_time');
+  }
+}
+
+export class CloudbuildTriggerBuildArtifactsObjectsTimingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildArtifactsObjectsTimingOutputReference {
+    return new CloudbuildTriggerBuildArtifactsObjectsTimingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface CloudbuildTriggerBuildArtifactsObjects {
@@ -173,10 +230,9 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuildArtifactsObjects | undefined {
@@ -239,8 +295,9 @@ export class CloudbuildTriggerBuildArtifactsObjectsOutputReference extends cdktf
   }
 
   // timing - computed: true, optional: false, required: false
-  public timing(index: string) {
-    return new CloudbuildTriggerBuildArtifactsObjectsTiming(this, 'timing', index, false);
+  private _timing = new CloudbuildTriggerBuildArtifactsObjectsTimingList(this, "timing", false);
+  public get timing() {
+    return this._timing;
   }
 }
 export interface CloudbuildTriggerBuildArtifacts {
@@ -281,10 +338,9 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuildArtifacts | undefined {
@@ -331,7 +387,7 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   }
 
   // objects - computed: false, optional: true, required: false
-  private _objects = new CloudbuildTriggerBuildArtifactsObjectsOutputReference(this, "objects", true);
+  private _objects = new CloudbuildTriggerBuildArtifactsObjectsOutputReference(this, "objects");
   public get objects() {
     return this._objects;
   }
@@ -497,10 +553,9 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuildOptions | undefined {
@@ -893,10 +948,9 @@ export class CloudbuildTriggerBuildSourceRepoSourceOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuildSourceRepoSource | undefined {
@@ -1128,10 +1182,9 @@ export class CloudbuildTriggerBuildSourceStorageSourceOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuildSourceStorageSource | undefined {
@@ -1241,10 +1294,9 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuildSource | undefined {
@@ -1275,7 +1327,7 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   }
 
   // repo_source - computed: false, optional: true, required: false
-  private _repoSource = new CloudbuildTriggerBuildSourceRepoSourceOutputReference(this, "repo_source", true);
+  private _repoSource = new CloudbuildTriggerBuildSourceRepoSourceOutputReference(this, "repo_source");
   public get repoSource() {
     return this._repoSource;
   }
@@ -1291,7 +1343,7 @@ export class CloudbuildTriggerBuildSourceOutputReference extends cdktf.ComplexOb
   }
 
   // storage_source - computed: false, optional: true, required: false
-  private _storageSource = new CloudbuildTriggerBuildSourceStorageSourceOutputReference(this, "storage_source", true);
+  private _storageSource = new CloudbuildTriggerBuildSourceStorageSourceOutputReference(this, "storage_source");
   public get storageSource() {
     return this._storageSource;
   }
@@ -1582,10 +1634,9 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerBuild | undefined {
@@ -1766,7 +1817,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // artifacts - computed: false, optional: true, required: false
-  private _artifacts = new CloudbuildTriggerBuildArtifactsOutputReference(this, "artifacts", true);
+  private _artifacts = new CloudbuildTriggerBuildArtifactsOutputReference(this, "artifacts");
   public get artifacts() {
     return this._artifacts;
   }
@@ -1782,7 +1833,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // options - computed: false, optional: true, required: false
-  private _options = new CloudbuildTriggerBuildOptionsOutputReference(this, "options", true);
+  private _options = new CloudbuildTriggerBuildOptionsOutputReference(this, "options");
   public get options() {
     return this._options;
   }
@@ -1815,7 +1866,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new CloudbuildTriggerBuildSourceOutputReference(this, "source", true);
+  private _source = new CloudbuildTriggerBuildSourceOutputReference(this, "source");
   public get source() {
     return this._source;
   }
@@ -1883,10 +1934,9 @@ export class CloudbuildTriggerGithubPullRequestOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerGithubPullRequest | undefined {
@@ -2006,10 +2056,9 @@ export class CloudbuildTriggerGithubPushOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerGithubPush | undefined {
@@ -2141,10 +2190,9 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerGithub | undefined {
@@ -2219,7 +2267,7 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   }
 
   // pull_request - computed: false, optional: true, required: false
-  private _pullRequest = new CloudbuildTriggerGithubPullRequestOutputReference(this, "pull_request", true);
+  private _pullRequest = new CloudbuildTriggerGithubPullRequestOutputReference(this, "pull_request");
   public get pullRequest() {
     return this._pullRequest;
   }
@@ -2235,7 +2283,7 @@ export class CloudbuildTriggerGithubOutputReference extends cdktf.ComplexObject 
   }
 
   // push - computed: false, optional: true, required: false
-  private _push = new CloudbuildTriggerGithubPushOutputReference(this, "push", true);
+  private _push = new CloudbuildTriggerGithubPushOutputReference(this, "push");
   public get push() {
     return this._push;
   }
@@ -2282,10 +2330,9 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerPubsubConfig | undefined {
@@ -2387,10 +2434,9 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerTimeouts | undefined {
@@ -2548,10 +2594,9 @@ export class CloudbuildTriggerTriggerTemplateOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerTriggerTemplate | undefined {
@@ -2748,10 +2793,9 @@ export class CloudbuildTriggerWebhookConfigOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudbuildTriggerWebhookConfig | undefined {
@@ -2802,7 +2846,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloudbuild_trigger";
+  public static readonly tfResourceType = "google_cloudbuild_trigger";
 
   // ===========
   // INITIALIZER
@@ -2819,7 +2863,9 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3024,7 +3070,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // build - computed: false, optional: true, required: false
-  private _build = new CloudbuildTriggerBuildOutputReference(this, "build", true);
+  private _build = new CloudbuildTriggerBuildOutputReference(this, "build");
   public get buildAttribute() {
     return this._build;
   }
@@ -3040,7 +3086,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // github - computed: false, optional: true, required: false
-  private _github = new CloudbuildTriggerGithubOutputReference(this, "github", true);
+  private _github = new CloudbuildTriggerGithubOutputReference(this, "github");
   public get github() {
     return this._github;
   }
@@ -3056,7 +3102,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // pubsub_config - computed: false, optional: true, required: false
-  private _pubsubConfig = new CloudbuildTriggerPubsubConfigOutputReference(this, "pubsub_config", true);
+  private _pubsubConfig = new CloudbuildTriggerPubsubConfigOutputReference(this, "pubsub_config");
   public get pubsubConfig() {
     return this._pubsubConfig;
   }
@@ -3072,7 +3118,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudbuildTriggerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudbuildTriggerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -3088,7 +3134,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // trigger_template - computed: false, optional: true, required: false
-  private _triggerTemplate = new CloudbuildTriggerTriggerTemplateOutputReference(this, "trigger_template", true);
+  private _triggerTemplate = new CloudbuildTriggerTriggerTemplateOutputReference(this, "trigger_template");
   public get triggerTemplate() {
     return this._triggerTemplate;
   }
@@ -3104,7 +3150,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // webhook_config - computed: false, optional: true, required: false
-  private _webhookConfig = new CloudbuildTriggerWebhookConfigOutputReference(this, "webhook_config", true);
+  private _webhookConfig = new CloudbuildTriggerWebhookConfigOutputReference(this, "webhook_config");
   public get webhookConfig() {
     return this._webhookConfig;
   }

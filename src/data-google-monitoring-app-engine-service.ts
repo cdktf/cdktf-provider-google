@@ -20,11 +20,68 @@ monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae
   */
   readonly project?: string;
 }
-export class DataGoogleMonitoringAppEngineServiceTelemetry extends cdktf.ComplexComputedList {
+export interface DataGoogleMonitoringAppEngineServiceTelemetry {
+}
+
+export function dataGoogleMonitoringAppEngineServiceTelemetryToTerraform(struct?: DataGoogleMonitoringAppEngineServiceTelemetry): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleMonitoringAppEngineServiceTelemetryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleMonitoringAppEngineServiceTelemetry | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleMonitoringAppEngineServiceTelemetry | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // resource_name - computed: true, optional: false, required: false
   public get resourceName() {
     return this.getStringAttribute('resource_name');
+  }
+}
+
+export class DataGoogleMonitoringAppEngineServiceTelemetryList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleMonitoringAppEngineServiceTelemetryOutputReference {
+    return new DataGoogleMonitoringAppEngineServiceTelemetryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -36,7 +93,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_monitoring_app_engine_service";
+  public static readonly tfResourceType = "google_monitoring_app_engine_service";
 
   // ===========
   // INITIALIZER
@@ -53,7 +110,9 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
     super(scope, id, {
       terraformResourceType: 'google_monitoring_app_engine_service',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -118,8 +177,9 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   }
 
   // telemetry - computed: true, optional: false, required: false
-  public telemetry(index: string) {
-    return new DataGoogleMonitoringAppEngineServiceTelemetry(this, 'telemetry', index, false);
+  private _telemetry = new DataGoogleMonitoringAppEngineServiceTelemetryList(this, "telemetry", false);
+  public get telemetry() {
+    return this._telemetry;
   }
 
   // =========

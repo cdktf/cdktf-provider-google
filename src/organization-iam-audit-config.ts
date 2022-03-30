@@ -61,7 +61,7 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_organization_iam_audit_config";
+  public static readonly tfResourceType = "google_organization_iam_audit_config";
 
   // ===========
   // INITIALIZER
@@ -78,7 +78,9 @@ export class OrganizationIamAuditConfig extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_organization_iam_audit_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

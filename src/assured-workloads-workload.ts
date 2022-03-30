@@ -68,7 +68,45 @@ export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArgum
   */
   readonly timeouts?: AssuredWorkloadsWorkloadTimeouts;
 }
-export class AssuredWorkloadsWorkloadResources extends cdktf.ComplexComputedList {
+export interface AssuredWorkloadsWorkloadResources {
+}
+
+export function assuredWorkloadsWorkloadResourcesToTerraform(struct?: AssuredWorkloadsWorkloadResources): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AssuredWorkloadsWorkloadResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AssuredWorkloadsWorkloadResources | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadResources | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // resource_id - computed: true, optional: false, required: false
   public get resourceId() {
@@ -78,6 +116,25 @@ export class AssuredWorkloadsWorkloadResources extends cdktf.ComplexComputedList
   // resource_type - computed: true, optional: false, required: false
   public get resourceType() {
     return this.getStringAttribute('resource_type');
+  }
+}
+
+export class AssuredWorkloadsWorkloadResourcesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AssuredWorkloadsWorkloadResourcesOutputReference {
+    return new AssuredWorkloadsWorkloadResourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface AssuredWorkloadsWorkloadKmsSettings {
@@ -112,10 +169,9 @@ export class AssuredWorkloadsWorkloadKmsSettingsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AssuredWorkloadsWorkloadKmsSettings | undefined {
@@ -230,10 +286,9 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AssuredWorkloadsWorkloadTimeouts | undefined {
@@ -326,7 +381,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_assured_workloads_workload";
+  public static readonly tfResourceType = "google_assured_workloads_workload";
 
   // ===========
   // INITIALIZER
@@ -343,7 +398,9 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_assured_workloads_workload',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -479,12 +536,13 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // resources - computed: true, optional: false, required: false
-  public resources(index: string) {
-    return new AssuredWorkloadsWorkloadResources(this, 'resources', index, false);
+  private _resources = new AssuredWorkloadsWorkloadResourcesList(this, "resources", false);
+  public get resources() {
+    return this._resources;
   }
 
   // kms_settings - computed: false, optional: true, required: false
-  private _kmsSettings = new AssuredWorkloadsWorkloadKmsSettingsOutputReference(this, "kms_settings", true);
+  private _kmsSettings = new AssuredWorkloadsWorkloadKmsSettingsOutputReference(this, "kms_settings");
   public get kmsSettings() {
     return this._kmsSettings;
   }
@@ -517,7 +575,7 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AssuredWorkloadsWorkloadTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AssuredWorkloadsWorkloadTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

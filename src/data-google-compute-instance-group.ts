@@ -24,7 +24,45 @@ export interface DataGoogleComputeInstanceGroupConfig extends cdktf.TerraformMet
   */
   readonly zone?: string;
 }
-export class DataGoogleComputeInstanceGroupNamedPort extends cdktf.ComplexComputedList {
+export interface DataGoogleComputeInstanceGroupNamedPort {
+}
+
+export function dataGoogleComputeInstanceGroupNamedPortToTerraform(struct?: DataGoogleComputeInstanceGroupNamedPort): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeInstanceGroupNamedPortOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceGroupNamedPort | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceGroupNamedPort | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -37,6 +75,25 @@ export class DataGoogleComputeInstanceGroupNamedPort extends cdktf.ComplexComput
   }
 }
 
+export class DataGoogleComputeInstanceGroupNamedPortList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceGroupNamedPortOutputReference {
+    return new DataGoogleComputeInstanceGroupNamedPortOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_instance_group google_compute_instance_group}
 */
@@ -45,7 +102,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_instance_group";
+  public static readonly tfResourceType = "google_compute_instance_group";
 
   // ===========
   // INITIALIZER
@@ -62,7 +119,9 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_group',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -111,8 +170,9 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   }
 
   // named_port - computed: true, optional: false, required: false
-  public namedPort(index: string) {
-    return new DataGoogleComputeInstanceGroupNamedPort(this, 'named_port', index, false);
+  private _namedPort = new DataGoogleComputeInstanceGroupNamedPortList(this, "named_port", false);
+  public get namedPort() {
+    return this._namedPort;
   }
 
   // network - computed: true, optional: false, required: false

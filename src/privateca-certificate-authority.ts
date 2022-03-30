@@ -93,7 +93,45 @@ issue certificates. Default value: "SELF_SIGNED" Possible values: ["SELF_SIGNED"
   */
   readonly timeouts?: PrivatecaCertificateAuthorityTimeouts;
 }
-export class PrivatecaCertificateAuthorityAccessUrls extends cdktf.ComplexComputedList {
+export interface PrivatecaCertificateAuthorityAccessUrls {
+}
+
+export function privatecaCertificateAuthorityAccessUrlsToTerraform(struct?: PrivatecaCertificateAuthorityAccessUrls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class PrivatecaCertificateAuthorityAccessUrlsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrivatecaCertificateAuthorityAccessUrls | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCertificateAuthorityAccessUrls | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ca_certificate_access_url - computed: true, optional: false, required: false
   public get caCertificateAccessUrl() {
@@ -103,6 +141,25 @@ export class PrivatecaCertificateAuthorityAccessUrls extends cdktf.ComplexComput
   // crl_access_url - computed: true, optional: false, required: false
   public get crlAccessUrl() {
     return this.getStringAttribute('crl_access_url');
+  }
+}
+
+export class PrivatecaCertificateAuthorityAccessUrlsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivatecaCertificateAuthorityAccessUrlsOutputReference {
+    return new PrivatecaCertificateAuthorityAccessUrlsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface PrivatecaCertificateAuthorityConfigSubjectConfigSubject {
@@ -179,10 +236,9 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfigSubject | undefined {
@@ -416,10 +472,9 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName | undefined {
@@ -557,10 +612,9 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigSubjectConfig | undefined {
@@ -591,7 +645,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
   }
 
   // subject - computed: false, optional: false, required: true
-  private _subject = new PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputReference(this, "subject", true);
+  private _subject = new PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputReference(this, "subject");
   public get subject() {
     return this._subject;
   }
@@ -604,7 +658,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
   }
 
   // subject_alt_name - computed: false, optional: true, required: false
-  private _subjectAltName = new PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutputReference(this, "subject_alt_name", true);
+  private _subjectAltName = new PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutputReference(this, "subject_alt_name");
   public get subjectAltName() {
     return this._subjectAltName;
   }
@@ -644,10 +698,9 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId | undefined {
@@ -753,10 +806,9 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigCaOptions | undefined {
@@ -896,10 +948,9 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage | undefined {
@@ -1175,10 +1226,9 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsa
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage | undefined {
@@ -1386,10 +1436,9 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage | undefined {
@@ -1426,7 +1475,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
   }
 
   // base_key_usage - computed: false, optional: false, required: true
-  private _baseKeyUsage = new PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOutputReference(this, "base_key_usage", true);
+  private _baseKeyUsage = new PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOutputReference(this, "base_key_usage");
   public get baseKeyUsage() {
     return this._baseKeyUsage;
   }
@@ -1439,7 +1488,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
   }
 
   // extended_key_usage - computed: false, optional: false, required: true
-  private _extendedKeyUsage = new PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference(this, "extended_key_usage", true);
+  private _extendedKeyUsage = new PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageOutputReference(this, "extended_key_usage");
   public get extendedKeyUsage() {
     return this._extendedKeyUsage;
   }
@@ -1541,10 +1590,9 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigX509Config | undefined {
@@ -1626,7 +1674,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
   }
 
   // ca_options - computed: false, optional: false, required: true
-  private _caOptions = new PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReference(this, "ca_options", true);
+  private _caOptions = new PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReference(this, "ca_options");
   public get caOptions() {
     return this._caOptions;
   }
@@ -1639,7 +1687,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
   }
 
   // key_usage - computed: false, optional: false, required: true
-  private _keyUsage = new PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReference(this, "key_usage", true);
+  private _keyUsage = new PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReference(this, "key_usage");
   public get keyUsage() {
     return this._keyUsage;
   }
@@ -1700,10 +1748,9 @@ export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityConfigA | undefined {
@@ -1734,7 +1781,7 @@ export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.C
   }
 
   // subject_config - computed: false, optional: false, required: true
-  private _subjectConfig = new PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference(this, "subject_config", true);
+  private _subjectConfig = new PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference(this, "subject_config");
   public get subjectConfig() {
     return this._subjectConfig;
   }
@@ -1747,7 +1794,7 @@ export class PrivatecaCertificateAuthorityConfigAOutputReference extends cdktf.C
   }
 
   // x509_config - computed: false, optional: false, required: true
-  private _x509Config = new PrivatecaCertificateAuthorityConfigX509ConfigOutputReference(this, "x509_config", true);
+  private _x509Config = new PrivatecaCertificateAuthorityConfigX509ConfigOutputReference(this, "x509_config");
   public get x509Config() {
     return this._x509Config;
   }
@@ -1793,10 +1840,9 @@ export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityKeySpec | undefined {
@@ -1886,10 +1932,9 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivatecaCertificateAuthorityTimeouts | undefined {
@@ -1960,7 +2005,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_privateca_certificate_authority";
+  public static readonly tfResourceType = "google_privateca_certificate_authority";
 
   // ===========
   // INITIALIZER
@@ -1977,7 +2022,9 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2003,8 +2050,9 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   // ==========
 
   // access_urls - computed: true, optional: false, required: false
-  public accessUrls(index: string) {
-    return new PrivatecaCertificateAuthorityAccessUrls(this, 'access_urls', index, false);
+  private _accessUrls = new PrivatecaCertificateAuthorityAccessUrlsList(this, "access_urls", false);
+  public get accessUrls() {
+    return this._accessUrls;
   }
 
   // certificate_authority_id - computed: false, optional: false, required: true
@@ -2173,7 +2221,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   }
 
   // config - computed: false, optional: false, required: true
-  private _config = new PrivatecaCertificateAuthorityConfigAOutputReference(this, "config", true);
+  private _config = new PrivatecaCertificateAuthorityConfigAOutputReference(this, "config");
   public get config() {
     return this._config;
   }
@@ -2186,7 +2234,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   }
 
   // key_spec - computed: false, optional: false, required: true
-  private _keySpec = new PrivatecaCertificateAuthorityKeySpecOutputReference(this, "key_spec", true);
+  private _keySpec = new PrivatecaCertificateAuthorityKeySpecOutputReference(this, "key_spec");
   public get keySpec() {
     return this._keySpec;
   }
@@ -2199,7 +2247,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivatecaCertificateAuthorityTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PrivatecaCertificateAuthorityTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

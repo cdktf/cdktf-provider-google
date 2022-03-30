@@ -93,10 +93,9 @@ export class DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsHadoopJobLoggingConfig | undefined {
@@ -210,10 +209,9 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsHadoopJob | undefined {
@@ -392,7 +390,7 @@ export class DataprocWorkflowTemplateJobsHadoopJobOutputReference extends cdktf.
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsHadoopJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -432,10 +430,9 @@ export class DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsHiveJobQueryList | undefined {
@@ -532,10 +529,9 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsHiveJob | undefined {
@@ -670,7 +666,7 @@ export class DataprocWorkflowTemplateJobsHiveJobOutputReference extends cdktf.Co
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList = new DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference(this, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference(this, "query_list");
   public get queryList() {
     return this._queryList;
   }
@@ -710,10 +706,9 @@ export class DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPigJobLoggingConfig | undefined {
@@ -778,10 +773,9 @@ export class DataprocWorkflowTemplateJobsPigJobQueryListOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPigJobQueryList | undefined {
@@ -885,10 +879,9 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPigJob | undefined {
@@ -1029,7 +1022,7 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -1045,7 +1038,7 @@ export class DataprocWorkflowTemplateJobsPigJobOutputReference extends cdktf.Com
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList = new DataprocWorkflowTemplateJobsPigJobQueryListOutputReference(this, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsPigJobQueryListOutputReference(this, "query_list");
   public get queryList() {
     return this._queryList;
   }
@@ -1085,10 +1078,9 @@ export class DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPrestoJobLoggingConfig | undefined {
@@ -1153,10 +1145,9 @@ export class DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPrestoJobQueryList | undefined {
@@ -1260,10 +1251,9 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPrestoJob | undefined {
@@ -1404,7 +1394,7 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -1420,7 +1410,7 @@ export class DataprocWorkflowTemplateJobsPrestoJobOutputReference extends cdktf.
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList = new DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference(this, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference(this, "query_list");
   public get queryList() {
     return this._queryList;
   }
@@ -1460,10 +1450,9 @@ export class DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPysparkJobLoggingConfig | undefined {
@@ -1577,10 +1566,9 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsPysparkJob | undefined {
@@ -1756,7 +1744,7 @@ export class DataprocWorkflowTemplateJobsPysparkJobOutputReference extends cdktf
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsPysparkJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -1803,10 +1791,9 @@ export class DataprocWorkflowTemplateJobsSchedulingOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsScheduling | undefined {
@@ -1893,10 +1880,9 @@ export class DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkJobLoggingConfig | undefined {
@@ -2010,10 +1996,9 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkJob | undefined {
@@ -2192,7 +2177,7 @@ export class DataprocWorkflowTemplateJobsSparkJobOutputReference extends cdktf.C
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -2232,10 +2217,9 @@ export class DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkRJobLoggingConfig | undefined {
@@ -2335,10 +2319,9 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkRJob | undefined {
@@ -2470,7 +2453,7 @@ export class DataprocWorkflowTemplateJobsSparkRJobOutputReference extends cdktf.
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkRJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -2510,10 +2493,9 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig | undefined {
@@ -2578,10 +2560,9 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJobQueryList | undefined {
@@ -2678,10 +2659,9 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateJobsSparkSqlJob | undefined {
@@ -2800,7 +2780,7 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   }
 
   // logging_config - computed: false, optional: true, required: false
-  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference(this, "logging_config", true);
+  private _loggingConfig = new DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference(this, "logging_config");
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -2816,7 +2796,7 @@ export class DataprocWorkflowTemplateJobsSparkSqlJobOutputReference extends cdkt
   }
 
   // query_list - computed: false, optional: true, required: false
-  private _queryList = new DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference(this, "query_list", true);
+  private _queryList = new DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference(this, "query_list");
   public get queryList() {
     return this._queryList;
   }
@@ -2952,10 +2932,9 @@ export class DataprocWorkflowTemplateParametersValidationRegexOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateParametersValidationRegex | undefined {
@@ -3017,10 +2996,9 @@ export class DataprocWorkflowTemplateParametersValidationValuesOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateParametersValidationValues | undefined {
@@ -3089,10 +3067,9 @@ export class DataprocWorkflowTemplateParametersValidationOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateParametersValidation | undefined {
@@ -3123,7 +3100,7 @@ export class DataprocWorkflowTemplateParametersValidationOutputReference extends
   }
 
   // regex - computed: false, optional: true, required: false
-  private _regex = new DataprocWorkflowTemplateParametersValidationRegexOutputReference(this, "regex", true);
+  private _regex = new DataprocWorkflowTemplateParametersValidationRegexOutputReference(this, "regex");
   public get regex() {
     return this._regex;
   }
@@ -3139,7 +3116,7 @@ export class DataprocWorkflowTemplateParametersValidationOutputReference extends
   }
 
   // values - computed: false, optional: true, required: false
-  private _values = new DataprocWorkflowTemplateParametersValidationValuesOutputReference(this, "values", true);
+  private _values = new DataprocWorkflowTemplateParametersValidationValuesOutputReference(this, "values");
   public get values() {
     return this._values;
   }
@@ -3226,10 +3203,9 @@ export class DataprocWorkflowTemplatePlacementClusterSelectorOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementClusterSelector | undefined {
@@ -3313,10 +3289,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingCon
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig | undefined {
@@ -3381,10 +3356,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfig | undefined {
@@ -3449,10 +3423,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfig | undefined {
@@ -3522,10 +3495,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity | undefined {
@@ -3601,10 +3573,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity | undefined {
@@ -3783,10 +3754,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig | undefined {
@@ -4015,7 +3985,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
 
   // node_group_affinity - computed: false, optional: true, required: false
-  private _nodeGroupAffinity = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference(this, "node_group_affinity", true);
+  private _nodeGroupAffinity = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityOutputReference(this, "node_group_affinity");
   public get nodeGroupAffinity() {
     return this._nodeGroupAffinity;
   }
@@ -4031,7 +4001,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
-  private _reservationAffinity = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference(this, "reservation_affinity", true);
+  private _reservationAffinity = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityOutputReference(this, "reservation_affinity");
   public get reservationAffinity() {
     return this._reservationAffinity;
   }
@@ -4111,10 +4081,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfig | undefined {
@@ -4203,7 +4172,45 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfi
     return this.getStringAttribute('idle_start_time');
   }
 }
-export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig extends cdktf.ComplexComputedList {
+export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig {
+}
+
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // instance_group_manager_name - computed: true, optional: false, required: false
   public get instanceGroupManagerName() {
@@ -4213,6 +4220,25 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigMa
   // instance_template_name - computed: true, optional: false, required: false
   public get instanceTemplateName() {
     return this.getStringAttribute('instance_template_name');
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigOutputReference {
+    return new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators {
@@ -4280,10 +4306,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDi
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig | undefined {
@@ -4434,10 +4459,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfig | undefined {
@@ -4450,26 +4474,6 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
     if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
-    }
-    if (this._minCpuPlatform !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minCpuPlatform = this._minCpuPlatform;
-    }
-    if (this._numInstances !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.numInstances = this._numInstances;
-    }
-    if (this._preemptibility !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.preemptibility = this._preemptibility;
-    }
-    if (this._accelerators !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.accelerators = this._accelerators;
-    }
-    if (this._diskConfig?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -4540,8 +4544,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
 
   // managed_group_config - computed: true, optional: false, required: false
-  public managedGroupConfig(index: string) {
-    return new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfig(this, 'managed_group_config', index, false);
+  private _managedGroupConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigList(this, "managed_group_config", false);
+  public get managedGroupConfig() {
+    return this._managedGroupConfig;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
@@ -4610,7 +4615,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigOutputReference(this, "disk_config", true);
+  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigOutputReference(this, "disk_config");
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -4625,7 +4630,45 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOu
     return this._diskConfig.internalValue;
   }
 }
-export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig extends cdktf.ComplexComputedList {
+export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig {
+}
+
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // instance_group_manager_name - computed: true, optional: false, required: false
   public get instanceGroupManagerName() {
@@ -4635,6 +4678,25 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   // instance_template_name - computed: true, optional: false, required: false
   public get instanceTemplateName() {
     return this.getStringAttribute('instance_template_name');
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigOutputReference {
+    return new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators {
@@ -4702,10 +4764,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig | undefined {
@@ -4856,10 +4917,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig | undefined {
@@ -4872,26 +4932,6 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
     if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
-    }
-    if (this._minCpuPlatform !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minCpuPlatform = this._minCpuPlatform;
-    }
-    if (this._numInstances !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.numInstances = this._numInstances;
-    }
-    if (this._preemptibility !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.preemptibility = this._preemptibility;
-    }
-    if (this._accelerators !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.accelerators = this._accelerators;
-    }
-    if (this._diskConfig?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -4962,8 +5002,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
 
   // managed_group_config - computed: true, optional: false, required: false
-  public managedGroupConfig(index: string) {
-    return new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig(this, 'managed_group_config', index, false);
+  private _managedGroupConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigList(this, "managed_group_config", false);
+  public get managedGroupConfig() {
+    return this._managedGroupConfig;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
@@ -5032,7 +5073,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorke
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigOutputReference(this, "disk_config", true);
+  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigOutputReference(this, "disk_config");
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -5170,10 +5211,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig | undefined {
@@ -5546,10 +5586,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig | undefined {
@@ -5574,7 +5613,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfig
   }
 
   // kerberos_config - computed: false, optional: true, required: false
-  private _kerberosConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference(this, "kerberos_config", true);
+  private _kerberosConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigOutputReference(this, "kerberos_config");
   public get kerberosConfig() {
     return this._kerberosConfig;
   }
@@ -5628,10 +5667,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig | undefined {
@@ -5715,7 +5753,45 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfig
     return this._properties;
   }
 }
-export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig extends cdktf.ComplexComputedList {
+export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig {
+}
+
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // instance_group_manager_name - computed: true, optional: false, required: false
   public get instanceGroupManagerName() {
@@ -5725,6 +5801,25 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigMa
   // instance_template_name - computed: true, optional: false, required: false
   public get instanceTemplateName() {
     return this.getStringAttribute('instance_template_name');
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigOutputReference {
+    return new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators {
@@ -5792,10 +5887,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDi
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig | undefined {
@@ -5946,10 +6040,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfig | undefined {
@@ -5962,26 +6055,6 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
     if (this._machineType !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineType = this._machineType;
-    }
-    if (this._minCpuPlatform !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minCpuPlatform = this._minCpuPlatform;
-    }
-    if (this._numInstances !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.numInstances = this._numInstances;
-    }
-    if (this._preemptibility !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.preemptibility = this._preemptibility;
-    }
-    if (this._accelerators !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.accelerators = this._accelerators;
-    }
-    if (this._diskConfig?.internalValue !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskConfig = this._diskConfig?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -6052,8 +6125,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
 
   // managed_group_config - computed: true, optional: false, required: false
-  public managedGroupConfig(index: string) {
-    return new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig(this, 'managed_group_config', index, false);
+  private _managedGroupConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigList(this, "managed_group_config", false);
+  public get managedGroupConfig() {
+    return this._managedGroupConfig;
   }
 
   // min_cpu_platform - computed: true, optional: true, required: false
@@ -6122,7 +6196,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOu
   }
 
   // disk_config - computed: false, optional: true, required: false
-  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigOutputReference(this, "disk_config", true);
+  private _diskConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigOutputReference(this, "disk_config");
   public get diskConfig() {
     return this._diskConfig;
   }
@@ -6246,10 +6320,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfig | undefined {
@@ -6378,7 +6451,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // autoscaling_config - computed: false, optional: true, required: false
-  private _autoscalingConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigOutputReference(this, "autoscaling_config", true);
+  private _autoscalingConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigOutputReference(this, "autoscaling_config");
   public get autoscalingConfig() {
     return this._autoscalingConfig;
   }
@@ -6394,7 +6467,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // encryption_config - computed: false, optional: true, required: false
-  private _encryptionConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigOutputReference(this, "encryption_config", true);
+  private _encryptionConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigEncryptionConfigOutputReference(this, "encryption_config");
   public get encryptionConfig() {
     return this._encryptionConfig;
   }
@@ -6410,7 +6483,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // endpoint_config - computed: false, optional: true, required: false
-  private _endpointConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference(this, "endpoint_config", true);
+  private _endpointConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigEndpointConfigOutputReference(this, "endpoint_config");
   public get endpointConfig() {
     return this._endpointConfig;
   }
@@ -6426,7 +6499,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // gce_cluster_config - computed: false, optional: true, required: false
-  private _gceClusterConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference(this, "gce_cluster_config", true);
+  private _gceClusterConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference(this, "gce_cluster_config");
   public get gceClusterConfig() {
     return this._gceClusterConfig;
   }
@@ -6459,7 +6532,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // lifecycle_config - computed: false, optional: true, required: false
-  private _lifecycleConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigOutputReference(this, "lifecycle_config", true);
+  private _lifecycleConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigLifecycleConfigOutputReference(this, "lifecycle_config");
   public get lifecycleConfig() {
     return this._lifecycleConfig;
   }
@@ -6475,7 +6548,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // master_config - computed: false, optional: true, required: false
-  private _masterConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference(this, "master_config", true);
+  private _masterConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigOutputReference(this, "master_config");
   public get masterConfig() {
     return this._masterConfig;
   }
@@ -6491,7 +6564,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // secondary_worker_config - computed: false, optional: true, required: false
-  private _secondaryWorkerConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference(this, "secondary_worker_config", true);
+  private _secondaryWorkerConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigOutputReference(this, "secondary_worker_config");
   public get secondaryWorkerConfig() {
     return this._secondaryWorkerConfig;
   }
@@ -6507,7 +6580,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // security_config - computed: false, optional: true, required: false
-  private _securityConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigOutputReference(this, "security_config", true);
+  private _securityConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSecurityConfigOutputReference(this, "security_config");
   public get securityConfig() {
     return this._securityConfig;
   }
@@ -6523,7 +6596,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigOutputReference(this, "software_config", true);
+  private _softwareConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigSoftwareConfigOutputReference(this, "software_config");
   public get softwareConfig() {
     return this._softwareConfig;
   }
@@ -6539,7 +6612,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReferenc
   }
 
   // worker_config - computed: false, optional: true, required: false
-  private _workerConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference(this, "worker_config", true);
+  private _workerConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigOutputReference(this, "worker_config");
   public get workerConfig() {
     return this._workerConfig;
   }
@@ -6593,10 +6666,9 @@ export class DataprocWorkflowTemplatePlacementManagedClusterOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacementManagedCluster | undefined {
@@ -6662,7 +6734,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterOutputReference exte
   }
 
   // config - computed: false, optional: false, required: true
-  private _config = new DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference(this, "config", true);
+  private _config = new DataprocWorkflowTemplatePlacementManagedClusterConfigOutputReference(this, "config");
   public get config() {
     return this._config;
   }
@@ -6706,10 +6778,9 @@ export class DataprocWorkflowTemplatePlacementOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplatePlacement | undefined {
@@ -6740,7 +6811,7 @@ export class DataprocWorkflowTemplatePlacementOutputReference extends cdktf.Comp
   }
 
   // cluster_selector - computed: false, optional: true, required: false
-  private _clusterSelector = new DataprocWorkflowTemplatePlacementClusterSelectorOutputReference(this, "cluster_selector", true);
+  private _clusterSelector = new DataprocWorkflowTemplatePlacementClusterSelectorOutputReference(this, "cluster_selector");
   public get clusterSelector() {
     return this._clusterSelector;
   }
@@ -6756,7 +6827,7 @@ export class DataprocWorkflowTemplatePlacementOutputReference extends cdktf.Comp
   }
 
   // managed_cluster - computed: false, optional: true, required: false
-  private _managedCluster = new DataprocWorkflowTemplatePlacementManagedClusterOutputReference(this, "managed_cluster", true);
+  private _managedCluster = new DataprocWorkflowTemplatePlacementManagedClusterOutputReference(this, "managed_cluster");
   public get managedCluster() {
     return this._managedCluster;
   }
@@ -6799,10 +6870,9 @@ export class DataprocWorkflowTemplateTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataprocWorkflowTemplateTimeouts | undefined {
@@ -6873,7 +6943,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dataproc_workflow_template";
+  public static readonly tfResourceType = "google_dataproc_workflow_template";
 
   // ===========
   // INITIALIZER
@@ -6890,7 +6960,9 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dataproc_workflow_template',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -7050,7 +7122,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
 
   // placement - computed: false, optional: false, required: true
-  private _placement = new DataprocWorkflowTemplatePlacementOutputReference(this, "placement", true);
+  private _placement = new DataprocWorkflowTemplatePlacementOutputReference(this, "placement");
   public get placement() {
     return this._placement;
   }
@@ -7063,7 +7135,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataprocWorkflowTemplateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataprocWorkflowTemplateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

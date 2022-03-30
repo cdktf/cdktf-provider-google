@@ -174,10 +174,9 @@ export class ComputeHealthCheckGrpcHealthCheckOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckGrpcHealthCheck | undefined {
@@ -371,10 +370,9 @@ export class ComputeHealthCheckHttp2HealthCheckOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckHttp2HealthCheck | undefined {
@@ -634,10 +632,9 @@ export class ComputeHealthCheckHttpHealthCheckOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckHttpHealthCheck | undefined {
@@ -897,10 +894,9 @@ export class ComputeHealthCheckHttpsHealthCheckOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckHttpsHealthCheck | undefined {
@@ -1098,10 +1094,9 @@ export class ComputeHealthCheckLogConfigOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckLogConfig | undefined {
@@ -1222,10 +1217,9 @@ export class ComputeHealthCheckSslHealthCheckOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckSslHealthCheck | undefined {
@@ -1456,10 +1450,9 @@ export class ComputeHealthCheckTcpHealthCheckOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckTcpHealthCheck | undefined {
@@ -1642,10 +1635,9 @@ export class ComputeHealthCheckTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeHealthCheckTimeouts | undefined {
@@ -1738,7 +1730,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_health_check";
+  public static readonly tfResourceType = "google_compute_health_check";
 
   // ===========
   // INITIALIZER
@@ -1755,7 +1747,9 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_health_check',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1913,7 +1907,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // grpc_health_check - computed: false, optional: true, required: false
-  private _grpcHealthCheck = new ComputeHealthCheckGrpcHealthCheckOutputReference(this, "grpc_health_check", true);
+  private _grpcHealthCheck = new ComputeHealthCheckGrpcHealthCheckOutputReference(this, "grpc_health_check");
   public get grpcHealthCheck() {
     return this._grpcHealthCheck;
   }
@@ -1929,7 +1923,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // http2_health_check - computed: false, optional: true, required: false
-  private _http2HealthCheck = new ComputeHealthCheckHttp2HealthCheckOutputReference(this, "http2_health_check", true);
+  private _http2HealthCheck = new ComputeHealthCheckHttp2HealthCheckOutputReference(this, "http2_health_check");
   public get http2HealthCheck() {
     return this._http2HealthCheck;
   }
@@ -1945,7 +1939,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // http_health_check - computed: false, optional: true, required: false
-  private _httpHealthCheck = new ComputeHealthCheckHttpHealthCheckOutputReference(this, "http_health_check", true);
+  private _httpHealthCheck = new ComputeHealthCheckHttpHealthCheckOutputReference(this, "http_health_check");
   public get httpHealthCheck() {
     return this._httpHealthCheck;
   }
@@ -1961,7 +1955,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // https_health_check - computed: false, optional: true, required: false
-  private _httpsHealthCheck = new ComputeHealthCheckHttpsHealthCheckOutputReference(this, "https_health_check", true);
+  private _httpsHealthCheck = new ComputeHealthCheckHttpsHealthCheckOutputReference(this, "https_health_check");
   public get httpsHealthCheck() {
     return this._httpsHealthCheck;
   }
@@ -1977,7 +1971,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeHealthCheckLogConfigOutputReference(this, "log_config", true);
+  private _logConfig = new ComputeHealthCheckLogConfigOutputReference(this, "log_config");
   public get logConfig() {
     return this._logConfig;
   }
@@ -1993,7 +1987,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // ssl_health_check - computed: false, optional: true, required: false
-  private _sslHealthCheck = new ComputeHealthCheckSslHealthCheckOutputReference(this, "ssl_health_check", true);
+  private _sslHealthCheck = new ComputeHealthCheckSslHealthCheckOutputReference(this, "ssl_health_check");
   public get sslHealthCheck() {
     return this._sslHealthCheck;
   }
@@ -2009,7 +2003,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // tcp_health_check - computed: false, optional: true, required: false
-  private _tcpHealthCheck = new ComputeHealthCheckTcpHealthCheckOutputReference(this, "tcp_health_check", true);
+  private _tcpHealthCheck = new ComputeHealthCheckTcpHealthCheckOutputReference(this, "tcp_health_check");
   public get tcpHealthCheck() {
     return this._tcpHealthCheck;
   }
@@ -2025,7 +2019,7 @@ export class ComputeHealthCheck extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeHealthCheckTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeHealthCheckTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

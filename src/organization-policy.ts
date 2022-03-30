@@ -73,10 +73,9 @@ export class OrganizationPolicyBooleanPolicyOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrganizationPolicyBooleanPolicy | undefined {
@@ -145,10 +144,9 @@ export class OrganizationPolicyListPolicyAllowOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrganizationPolicyListPolicyAllow | undefined {
@@ -242,10 +240,9 @@ export class OrganizationPolicyListPolicyDenyOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrganizationPolicyListPolicyDeny | undefined {
@@ -353,10 +350,9 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrganizationPolicyListPolicy | undefined {
@@ -431,7 +427,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   }
 
   // allow - computed: false, optional: true, required: false
-  private _allow = new OrganizationPolicyListPolicyAllowOutputReference(this, "allow", true);
+  private _allow = new OrganizationPolicyListPolicyAllowOutputReference(this, "allow");
   public get allow() {
     return this._allow;
   }
@@ -447,7 +443,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
   }
 
   // deny - computed: false, optional: true, required: false
-  private _deny = new OrganizationPolicyListPolicyDenyOutputReference(this, "deny", true);
+  private _deny = new OrganizationPolicyListPolicyDenyOutputReference(this, "deny");
   public get deny() {
     return this._deny;
   }
@@ -487,10 +483,9 @@ export class OrganizationPolicyRestorePolicyOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrganizationPolicyRestorePolicy | undefined {
@@ -565,10 +560,9 @@ export class OrganizationPolicyTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrganizationPolicyTimeouts | undefined {
@@ -683,7 +677,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_organization_policy";
+  public static readonly tfResourceType = "google_organization_policy";
 
   // ===========
   // INITIALIZER
@@ -700,7 +694,9 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_organization_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -778,7 +774,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // boolean_policy - computed: false, optional: true, required: false
-  private _booleanPolicy = new OrganizationPolicyBooleanPolicyOutputReference(this, "boolean_policy", true);
+  private _booleanPolicy = new OrganizationPolicyBooleanPolicyOutputReference(this, "boolean_policy");
   public get booleanPolicy() {
     return this._booleanPolicy;
   }
@@ -794,7 +790,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // list_policy - computed: false, optional: true, required: false
-  private _listPolicy = new OrganizationPolicyListPolicyOutputReference(this, "list_policy", true);
+  private _listPolicy = new OrganizationPolicyListPolicyOutputReference(this, "list_policy");
   public get listPolicy() {
     return this._listPolicy;
   }
@@ -810,7 +806,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // restore_policy - computed: false, optional: true, required: false
-  private _restorePolicy = new OrganizationPolicyRestorePolicyOutputReference(this, "restore_policy", true);
+  private _restorePolicy = new OrganizationPolicyRestorePolicyOutputReference(this, "restore_policy");
   public get restorePolicy() {
     return this._restorePolicy;
   }
@@ -826,7 +822,7 @@ export class OrganizationPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new OrganizationPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new OrganizationPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

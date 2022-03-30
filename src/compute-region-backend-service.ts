@@ -440,10 +440,9 @@ export class ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceCdnPolicyCacheKeyPolicy | undefined {
@@ -683,10 +682,9 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceCdnPolicy | undefined {
@@ -871,7 +869,7 @@ export class ComputeRegionBackendServiceCdnPolicyOutputReference extends cdktf.C
   }
 
   // cache_key_policy - computed: false, optional: true, required: false
-  private _cacheKeyPolicy = new ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this, "cache_key_policy", true);
+  private _cacheKeyPolicy = new ComputeRegionBackendServiceCdnPolicyCacheKeyPolicyOutputReference(this, "cache_key_policy");
   public get cacheKeyPolicy() {
     return this._cacheKeyPolicy;
   }
@@ -963,10 +961,9 @@ export class ComputeRegionBackendServiceCircuitBreakersOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceCircuitBreakers | undefined {
@@ -1130,10 +1127,9 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookieTtl | undefined {
@@ -1231,10 +1227,9 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceConsistentHashHttpCookie | undefined {
@@ -1303,7 +1298,7 @@ export class ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference 
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl = new ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference(this, "ttl", true);
+  private _ttl = new ComputeRegionBackendServiceConsistentHashHttpCookieTtlOutputReference(this, "ttl");
   public get ttl() {
     return this._ttl;
   }
@@ -1363,10 +1358,9 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceConsistentHash | undefined {
@@ -1435,7 +1429,7 @@ export class ComputeRegionBackendServiceConsistentHashOutputReference extends cd
   }
 
   // http_cookie - computed: false, optional: true, required: false
-  private _httpCookie = new ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference(this, "http_cookie", true);
+  private _httpCookie = new ComputeRegionBackendServiceConsistentHashHttpCookieOutputReference(this, "http_cookie");
   public get httpCookie() {
     return this._httpCookie;
   }
@@ -1506,10 +1500,9 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceFailoverPolicy | undefined {
@@ -1625,10 +1618,9 @@ export class ComputeRegionBackendServiceIapOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceIap | undefined {
@@ -1724,10 +1716,9 @@ export class ComputeRegionBackendServiceLogConfigOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceLogConfig | undefined {
@@ -1824,10 +1815,9 @@ export class ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputRe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetectionBaseEjectionTime | undefined {
@@ -1921,10 +1911,9 @@ export class ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetectionInterval | undefined {
@@ -2101,10 +2090,9 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceOutlierDetection | undefined {
@@ -2333,7 +2321,7 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
 
   // base_ejection_time - computed: false, optional: true, required: false
-  private _baseEjectionTime = new ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this, "base_ejection_time", true);
+  private _baseEjectionTime = new ComputeRegionBackendServiceOutlierDetectionBaseEjectionTimeOutputReference(this, "base_ejection_time");
   public get baseEjectionTime() {
     return this._baseEjectionTime;
   }
@@ -2349,7 +2337,7 @@ export class ComputeRegionBackendServiceOutlierDetectionOutputReference extends 
   }
 
   // interval - computed: false, optional: true, required: false
-  private _interval = new ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference(this, "interval", true);
+  private _interval = new ComputeRegionBackendServiceOutlierDetectionIntervalOutputReference(this, "interval");
   public get interval() {
     return this._interval;
   }
@@ -2397,10 +2385,9 @@ export class ComputeRegionBackendServiceTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionBackendServiceTimeouts | undefined {
@@ -2493,7 +2480,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_region_backend_service";
+  public static readonly tfResourceType = "google_compute_region_backend_service";
 
   // ===========
   // INITIALIZER
@@ -2510,7 +2497,9 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_backend_service',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2822,7 +2811,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // cdn_policy - computed: false, optional: true, required: false
-  private _cdnPolicy = new ComputeRegionBackendServiceCdnPolicyOutputReference(this, "cdn_policy", true);
+  private _cdnPolicy = new ComputeRegionBackendServiceCdnPolicyOutputReference(this, "cdn_policy");
   public get cdnPolicy() {
     return this._cdnPolicy;
   }
@@ -2838,7 +2827,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // circuit_breakers - computed: false, optional: true, required: false
-  private _circuitBreakers = new ComputeRegionBackendServiceCircuitBreakersOutputReference(this, "circuit_breakers", true);
+  private _circuitBreakers = new ComputeRegionBackendServiceCircuitBreakersOutputReference(this, "circuit_breakers");
   public get circuitBreakers() {
     return this._circuitBreakers;
   }
@@ -2854,7 +2843,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // consistent_hash - computed: false, optional: true, required: false
-  private _consistentHash = new ComputeRegionBackendServiceConsistentHashOutputReference(this, "consistent_hash", true);
+  private _consistentHash = new ComputeRegionBackendServiceConsistentHashOutputReference(this, "consistent_hash");
   public get consistentHash() {
     return this._consistentHash;
   }
@@ -2870,7 +2859,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // failover_policy - computed: false, optional: true, required: false
-  private _failoverPolicy = new ComputeRegionBackendServiceFailoverPolicyOutputReference(this, "failover_policy", true);
+  private _failoverPolicy = new ComputeRegionBackendServiceFailoverPolicyOutputReference(this, "failover_policy");
   public get failoverPolicy() {
     return this._failoverPolicy;
   }
@@ -2886,7 +2875,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // iap - computed: false, optional: true, required: false
-  private _iap = new ComputeRegionBackendServiceIapOutputReference(this, "iap", true);
+  private _iap = new ComputeRegionBackendServiceIapOutputReference(this, "iap");
   public get iap() {
     return this._iap;
   }
@@ -2902,7 +2891,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeRegionBackendServiceLogConfigOutputReference(this, "log_config", true);
+  private _logConfig = new ComputeRegionBackendServiceLogConfigOutputReference(this, "log_config");
   public get logConfig() {
     return this._logConfig;
   }
@@ -2918,7 +2907,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // outlier_detection - computed: false, optional: true, required: false
-  private _outlierDetection = new ComputeRegionBackendServiceOutlierDetectionOutputReference(this, "outlier_detection", true);
+  private _outlierDetection = new ComputeRegionBackendServiceOutlierDetectionOutputReference(this, "outlier_detection");
   public get outlierDetection() {
     return this._outlierDetection;
   }
@@ -2934,7 +2923,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRegionBackendServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeRegionBackendServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

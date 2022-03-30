@@ -100,10 +100,9 @@ export class ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization | undefined {
@@ -189,10 +188,9 @@ export class ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOut
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization | undefined {
@@ -308,10 +306,9 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInRe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas | undefined {
@@ -406,10 +403,9 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicyScaleInControl | undefined {
@@ -456,7 +452,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReferen
   }
 
   // max_scaled_in_replicas - computed: false, optional: true, required: false
-  private _maxScaledInReplicas = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this, "max_scaled_in_replicas", true);
+  private _maxScaledInReplicas = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(this, "max_scaled_in_replicas");
   public get maxScaledInReplicas() {
     return this._maxScaledInReplicas;
   }
@@ -626,10 +622,9 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionAutoscalerAutoscalingPolicy | undefined {
@@ -760,7 +755,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
 
   // cpu_utilization - computed: false, optional: true, required: false
-  private _cpuUtilization = new ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this, "cpu_utilization", true);
+  private _cpuUtilization = new ComputeRegionAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(this, "cpu_utilization");
   public get cpuUtilization() {
     return this._cpuUtilization;
   }
@@ -776,7 +771,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
 
   // load_balancing_utilization - computed: false, optional: true, required: false
-  private _loadBalancingUtilization = new ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this, "load_balancing_utilization", true);
+  private _loadBalancingUtilization = new ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(this, "load_balancing_utilization");
   public get loadBalancingUtilization() {
     return this._loadBalancingUtilization;
   }
@@ -809,7 +804,7 @@ export class ComputeRegionAutoscalerAutoscalingPolicyOutputReference extends cdk
   }
 
   // scale_in_control - computed: false, optional: true, required: false
-  private _scaleInControl = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReference(this, "scale_in_control", true);
+  private _scaleInControl = new ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReference(this, "scale_in_control");
   public get scaleInControl() {
     return this._scaleInControl;
   }
@@ -874,10 +869,9 @@ export class ComputeRegionAutoscalerTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionAutoscalerTimeouts | undefined {
@@ -970,7 +964,7 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_region_autoscaler";
+  public static readonly tfResourceType = "google_compute_region_autoscaler";
 
   // ===========
   // INITIALIZER
@@ -987,7 +981,9 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_autoscaler',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1097,7 +1093,7 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
 
   // autoscaling_policy - computed: false, optional: false, required: true
-  private _autoscalingPolicy = new ComputeRegionAutoscalerAutoscalingPolicyOutputReference(this, "autoscaling_policy", true);
+  private _autoscalingPolicy = new ComputeRegionAutoscalerAutoscalingPolicyOutputReference(this, "autoscaling_policy");
   public get autoscalingPolicy() {
     return this._autoscalingPolicy;
   }
@@ -1110,7 +1106,7 @@ export class ComputeRegionAutoscaler extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRegionAutoscalerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeRegionAutoscalerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

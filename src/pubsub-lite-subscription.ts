@@ -73,10 +73,9 @@ export class PubsubLiteSubscriptionDeliveryConfigOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubLiteSubscriptionDeliveryConfig | undefined {
@@ -146,10 +145,9 @@ export class PubsubLiteSubscriptionTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PubsubLiteSubscriptionTimeouts | undefined {
@@ -242,7 +240,7 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_pubsub_lite_subscription";
+  public static readonly tfResourceType = "google_pubsub_lite_subscription";
 
   // ===========
   // INITIALIZER
@@ -259,7 +257,9 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_pubsub_lite_subscription',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -359,7 +359,7 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
 
   // delivery_config - computed: false, optional: true, required: false
-  private _deliveryConfig = new PubsubLiteSubscriptionDeliveryConfigOutputReference(this, "delivery_config", true);
+  private _deliveryConfig = new PubsubLiteSubscriptionDeliveryConfigOutputReference(this, "delivery_config");
   public get deliveryConfig() {
     return this._deliveryConfig;
   }
@@ -375,7 +375,7 @@ export class PubsubLiteSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PubsubLiteSubscriptionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PubsubLiteSubscriptionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -184,10 +184,9 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateAdvancedMachineFeatures | undefined {
@@ -274,10 +273,9 @@ export class ComputeInstanceTemplateConfidentialInstanceConfigOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateConfidentialInstanceConfig | undefined {
@@ -339,10 +337,9 @@ export class ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateDiskDiskEncryptionKey | undefined {
@@ -693,10 +690,9 @@ export class ComputeInstanceTemplateReservationAffinitySpecificReservationOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateReservationAffinitySpecificReservation | undefined {
@@ -784,10 +780,9 @@ export class ComputeInstanceTemplateReservationAffinityOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateReservationAffinity | undefined {
@@ -831,7 +826,7 @@ export class ComputeInstanceTemplateReservationAffinityOutputReference extends c
   }
 
   // specific_reservation - computed: false, optional: true, required: false
-  private _specificReservation = new ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference(this, "specific_reservation", true);
+  private _specificReservation = new ComputeInstanceTemplateReservationAffinitySpecificReservationOutputReference(this, "specific_reservation");
   public get specificReservation() {
     return this._specificReservation;
   }
@@ -926,10 +921,9 @@ export class ComputeInstanceTemplateSchedulingOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateScheduling | undefined {
@@ -1090,10 +1084,9 @@ export class ComputeInstanceTemplateServiceAccountOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateServiceAccount | undefined {
@@ -1191,10 +1184,9 @@ export class ComputeInstanceTemplateShieldedInstanceConfigOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateShieldedInstanceConfig | undefined {
@@ -1306,10 +1298,9 @@ export class ComputeInstanceTemplateTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeInstanceTemplateTimeouts | undefined {
@@ -1380,7 +1371,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_instance_template";
+  public static readonly tfResourceType = "google_compute_instance_template";
 
   // ===========
   // INITIALIZER
@@ -1397,7 +1388,9 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1676,7 +1669,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // advanced_machine_features - computed: false, optional: true, required: false
-  private _advancedMachineFeatures = new ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference(this, "advanced_machine_features", true);
+  private _advancedMachineFeatures = new ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference(this, "advanced_machine_features");
   public get advancedMachineFeatures() {
     return this._advancedMachineFeatures;
   }
@@ -1692,7 +1685,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // confidential_instance_config - computed: false, optional: true, required: false
-  private _confidentialInstanceConfig = new ComputeInstanceTemplateConfidentialInstanceConfigOutputReference(this, "confidential_instance_config", true);
+  private _confidentialInstanceConfig = new ComputeInstanceTemplateConfidentialInstanceConfigOutputReference(this, "confidential_instance_config");
   public get confidentialInstanceConfig() {
     return this._confidentialInstanceConfig;
   }
@@ -1756,7 +1749,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
-  private _reservationAffinity = new ComputeInstanceTemplateReservationAffinityOutputReference(this, "reservation_affinity", true);
+  private _reservationAffinity = new ComputeInstanceTemplateReservationAffinityOutputReference(this, "reservation_affinity");
   public get reservationAffinity() {
     return this._reservationAffinity;
   }
@@ -1772,7 +1765,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // scheduling - computed: false, optional: true, required: false
-  private _scheduling = new ComputeInstanceTemplateSchedulingOutputReference(this, "scheduling", true);
+  private _scheduling = new ComputeInstanceTemplateSchedulingOutputReference(this, "scheduling");
   public get scheduling() {
     return this._scheduling;
   }
@@ -1788,7 +1781,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // service_account - computed: false, optional: true, required: false
-  private _serviceAccount = new ComputeInstanceTemplateServiceAccountOutputReference(this, "service_account", true);
+  private _serviceAccount = new ComputeInstanceTemplateServiceAccountOutputReference(this, "service_account");
   public get serviceAccount() {
     return this._serviceAccount;
   }
@@ -1804,7 +1797,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new ComputeInstanceTemplateShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new ComputeInstanceTemplateShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -1820,7 +1813,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeInstanceTemplateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeInstanceTemplateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

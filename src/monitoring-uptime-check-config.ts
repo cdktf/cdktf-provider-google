@@ -130,10 +130,9 @@ export class MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigHttpCheckAuthInfo | undefined {
@@ -277,10 +276,9 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigHttpCheck | undefined {
@@ -503,7 +501,7 @@ export class MonitoringUptimeCheckConfigHttpCheckOutputReference extends cdktf.C
   }
 
   // auth_info - computed: false, optional: true, required: false
-  private _authInfo = new MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference(this, "auth_info", true);
+  private _authInfo = new MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference(this, "auth_info");
   public get authInfo() {
     return this._authInfo;
   }
@@ -550,10 +548,9 @@ export class MonitoringUptimeCheckConfigMonitoredResourceOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigMonitoredResource | undefined {
@@ -641,10 +638,9 @@ export class MonitoringUptimeCheckConfigResourceGroupOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigResourceGroup | undefined {
@@ -731,10 +727,9 @@ export class MonitoringUptimeCheckConfigTcpCheckOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigTcpCheck | undefined {
@@ -804,10 +799,9 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringUptimeCheckConfigTimeouts | undefined {
@@ -900,7 +894,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_monitoring_uptime_check_config";
+  public static readonly tfResourceType = "google_monitoring_uptime_check_config";
 
   // ===========
   // INITIALIZER
@@ -917,7 +911,9 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_uptime_check_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1048,7 +1044,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // http_check - computed: false, optional: true, required: false
-  private _httpCheck = new MonitoringUptimeCheckConfigHttpCheckOutputReference(this, "http_check", true);
+  private _httpCheck = new MonitoringUptimeCheckConfigHttpCheckOutputReference(this, "http_check");
   public get httpCheck() {
     return this._httpCheck;
   }
@@ -1064,7 +1060,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // monitored_resource - computed: false, optional: true, required: false
-  private _monitoredResource = new MonitoringUptimeCheckConfigMonitoredResourceOutputReference(this, "monitored_resource", true);
+  private _monitoredResource = new MonitoringUptimeCheckConfigMonitoredResourceOutputReference(this, "monitored_resource");
   public get monitoredResource() {
     return this._monitoredResource;
   }
@@ -1080,7 +1076,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // resource_group - computed: false, optional: true, required: false
-  private _resourceGroup = new MonitoringUptimeCheckConfigResourceGroupOutputReference(this, "resource_group", true);
+  private _resourceGroup = new MonitoringUptimeCheckConfigResourceGroupOutputReference(this, "resource_group");
   public get resourceGroup() {
     return this._resourceGroup;
   }
@@ -1096,7 +1092,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // tcp_check - computed: false, optional: true, required: false
-  private _tcpCheck = new MonitoringUptimeCheckConfigTcpCheckOutputReference(this, "tcp_check", true);
+  private _tcpCheck = new MonitoringUptimeCheckConfigTcpCheckOutputReference(this, "tcp_check");
   public get tcpCheck() {
     return this._tcpCheck;
   }
@@ -1112,7 +1108,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringUptimeCheckConfigTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitoringUptimeCheckConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -59,10 +59,9 @@ export class TagsTagKeyIamBindingConditionOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): TagsTagKeyIamBindingCondition | undefined {
@@ -149,7 +148,7 @@ export class TagsTagKeyIamBinding extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_tags_tag_key_iam_binding";
+  public static readonly tfResourceType = "google_tags_tag_key_iam_binding";
 
   // ===========
   // INITIALIZER
@@ -166,7 +165,9 @@ export class TagsTagKeyIamBinding extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_key_iam_binding',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -233,7 +234,7 @@ export class TagsTagKeyIamBinding extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new TagsTagKeyIamBindingConditionOutputReference(this, "condition", true);
+  private _condition = new TagsTagKeyIamBindingConditionOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }

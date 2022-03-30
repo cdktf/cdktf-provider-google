@@ -43,7 +43,7 @@ export class DataGoogleComputeNetworkEndpointGroup extends cdktf.TerraformDataSo
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_network_endpoint_group";
+  public static readonly tfResourceType = "google_compute_network_endpoint_group";
 
   // ===========
   // INITIALIZER
@@ -60,7 +60,9 @@ export class DataGoogleComputeNetworkEndpointGroup extends cdktf.TerraformDataSo
     super(scope, id, {
       terraformResourceType: 'google_compute_network_endpoint_group',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

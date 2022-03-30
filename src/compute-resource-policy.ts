@@ -103,10 +103,9 @@ export class ComputeResourcePolicyGroupPlacementPolicyOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicyGroupPlacementPolicy | undefined {
@@ -215,10 +214,9 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStartSchedule | undefined {
@@ -280,10 +278,9 @@ export class ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicyVmStopSchedule | undefined {
@@ -374,10 +371,9 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicyInstanceSchedulePolicy | undefined {
@@ -471,7 +467,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   }
 
   // vm_start_schedule - computed: false, optional: true, required: false
-  private _vmStartSchedule = new ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference(this, "vm_start_schedule", true);
+  private _vmStartSchedule = new ComputeResourcePolicyInstanceSchedulePolicyVmStartScheduleOutputReference(this, "vm_start_schedule");
   public get vmStartSchedule() {
     return this._vmStartSchedule;
   }
@@ -487,7 +483,7 @@ export class ComputeResourcePolicyInstanceSchedulePolicyOutputReference extends 
   }
 
   // vm_stop_schedule - computed: false, optional: true, required: false
-  private _vmStopSchedule = new ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference(this, "vm_stop_schedule", true);
+  private _vmStopSchedule = new ComputeResourcePolicyInstanceSchedulePolicyVmStopScheduleOutputReference(this, "vm_stop_schedule");
   public get vmStopSchedule() {
     return this._vmStopSchedule;
   }
@@ -535,10 +531,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicy | undefined {
@@ -631,10 +626,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOut
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleDailySchedule | undefined {
@@ -725,10 +719,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule | undefined {
@@ -836,10 +829,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule | undefined {
@@ -916,10 +908,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySchedule | undefined {
@@ -956,7 +947,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
   }
 
   // daily_schedule - computed: false, optional: true, required: false
-  private _dailySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference(this, "daily_schedule", true);
+  private _dailySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutputReference(this, "daily_schedule");
   public get dailySchedule() {
     return this._dailySchedule;
   }
@@ -972,7 +963,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
   }
 
   // hourly_schedule - computed: false, optional: true, required: false
-  private _hourlySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference(this, "hourly_schedule", true);
+  private _hourlySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutputReference(this, "hourly_schedule");
   public get hourlySchedule() {
     return this._hourlySchedule;
   }
@@ -988,7 +979,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
   }
 
   // weekly_schedule - computed: false, optional: true, required: false
-  private _weeklySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference(this, "weekly_schedule", true);
+  private _weeklySchedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutputReference(this, "weekly_schedule");
   public get weeklySchedule() {
     return this._weeklySchedule;
   }
@@ -1043,10 +1034,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined {
@@ -1169,10 +1159,9 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicy | undefined {
@@ -1209,7 +1198,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
   }
 
   // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy = new ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference(this, "retention_policy", true);
+  private _retentionPolicy = new ComputeResourcePolicySnapshotSchedulePolicyRetentionPolicyOutputReference(this, "retention_policy");
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
@@ -1225,7 +1214,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference(this, "schedule", true);
+  private _schedule = new ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
@@ -1238,7 +1227,7 @@ export class ComputeResourcePolicySnapshotSchedulePolicyOutputReference extends 
   }
 
   // snapshot_properties - computed: false, optional: true, required: false
-  private _snapshotProperties = new ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference(this, "snapshot_properties", true);
+  private _snapshotProperties = new ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutputReference(this, "snapshot_properties");
   public get snapshotProperties() {
     return this._snapshotProperties;
   }
@@ -1281,10 +1270,9 @@ export class ComputeResourcePolicyTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeResourcePolicyTimeouts | undefined {
@@ -1355,7 +1343,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_resource_policy";
+  public static readonly tfResourceType = "google_compute_resource_policy";
 
   // ===========
   // INITIALIZER
@@ -1372,7 +1360,9 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1465,7 +1455,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
 
   // group_placement_policy - computed: false, optional: true, required: false
-  private _groupPlacementPolicy = new ComputeResourcePolicyGroupPlacementPolicyOutputReference(this, "group_placement_policy", true);
+  private _groupPlacementPolicy = new ComputeResourcePolicyGroupPlacementPolicyOutputReference(this, "group_placement_policy");
   public get groupPlacementPolicy() {
     return this._groupPlacementPolicy;
   }
@@ -1481,7 +1471,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
 
   // instance_schedule_policy - computed: false, optional: true, required: false
-  private _instanceSchedulePolicy = new ComputeResourcePolicyInstanceSchedulePolicyOutputReference(this, "instance_schedule_policy", true);
+  private _instanceSchedulePolicy = new ComputeResourcePolicyInstanceSchedulePolicyOutputReference(this, "instance_schedule_policy");
   public get instanceSchedulePolicy() {
     return this._instanceSchedulePolicy;
   }
@@ -1497,7 +1487,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
 
   // snapshot_schedule_policy - computed: false, optional: true, required: false
-  private _snapshotSchedulePolicy = new ComputeResourcePolicySnapshotSchedulePolicyOutputReference(this, "snapshot_schedule_policy", true);
+  private _snapshotSchedulePolicy = new ComputeResourcePolicySnapshotSchedulePolicyOutputReference(this, "snapshot_schedule_policy");
   public get snapshotSchedulePolicy() {
     return this._snapshotSchedulePolicy;
   }
@@ -1513,7 +1503,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeResourcePolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeResourcePolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

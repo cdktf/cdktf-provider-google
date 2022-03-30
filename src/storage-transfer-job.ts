@@ -77,10 +77,9 @@ export class StorageTransferJobScheduleScheduleEndDateOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobScheduleScheduleEndDate | undefined {
@@ -194,10 +193,9 @@ export class StorageTransferJobScheduleScheduleStartDateOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobScheduleScheduleStartDate | undefined {
@@ -318,10 +316,9 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobScheduleStartTimeOfDay | undefined {
@@ -454,10 +451,9 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobSchedule | undefined {
@@ -494,7 +490,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   // schedule_end_date - computed: false, optional: true, required: false
-  private _scheduleEndDate = new StorageTransferJobScheduleScheduleEndDateOutputReference(this, "schedule_end_date", true);
+  private _scheduleEndDate = new StorageTransferJobScheduleScheduleEndDateOutputReference(this, "schedule_end_date");
   public get scheduleEndDate() {
     return this._scheduleEndDate;
   }
@@ -510,7 +506,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   // schedule_start_date - computed: false, optional: false, required: true
-  private _scheduleStartDate = new StorageTransferJobScheduleScheduleStartDateOutputReference(this, "schedule_start_date", true);
+  private _scheduleStartDate = new StorageTransferJobScheduleScheduleStartDateOutputReference(this, "schedule_start_date");
   public get scheduleStartDate() {
     return this._scheduleStartDate;
   }
@@ -523,7 +519,7 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   }
 
   // start_time_of_day - computed: false, optional: true, required: false
-  private _startTimeOfDay = new StorageTransferJobScheduleStartTimeOfDayOutputReference(this, "start_time_of_day", true);
+  private _startTimeOfDay = new StorageTransferJobScheduleStartTimeOfDayOutputReference(this, "start_time_of_day");
   public get startTimeOfDay() {
     return this._startTimeOfDay;
   }
@@ -570,10 +566,9 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey | undefined {
@@ -661,10 +656,9 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAwsS3DataSource | undefined {
@@ -708,7 +702,7 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
   }
 
   // aws_access_key - computed: false, optional: false, required: true
-  private _awsAccessKey = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this, "aws_access_key", true);
+  private _awsAccessKey = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this, "aws_access_key");
   public get awsAccessKey() {
     return this._awsAccessKey;
   }
@@ -745,10 +739,9 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCreden
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials | undefined {
@@ -831,10 +824,9 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecAzureBlobStorageDataSource | undefined {
@@ -919,7 +911,7 @@ export class StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputRefer
   }
 
   // azure_credentials - computed: false, optional: false, required: true
-  private _azureCredentials = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference(this, "azure_credentials", true);
+  private _azureCredentials = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsOutputReference(this, "azure_credentials");
   public get azureCredentials() {
     return this._azureCredentials;
   }
@@ -963,10 +955,9 @@ export class StorageTransferJobTransferSpecGcsDataSinkOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecGcsDataSink | undefined {
@@ -1057,10 +1048,9 @@ export class StorageTransferJobTransferSpecGcsDataSourceOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecGcsDataSource | undefined {
@@ -1144,10 +1134,9 @@ export class StorageTransferJobTransferSpecHttpDataSourceOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecHttpDataSource | undefined {
@@ -1230,10 +1219,9 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecObjectConditions | undefined {
@@ -1378,10 +1366,9 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpecTransferOptions | undefined {
@@ -1532,10 +1519,9 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageTransferJobTransferSpec | undefined {
@@ -1596,7 +1582,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // aws_s3_data_source - computed: false, optional: true, required: false
-  private _awsS3DataSource = new StorageTransferJobTransferSpecAwsS3DataSourceOutputReference(this, "aws_s3_data_source", true);
+  private _awsS3DataSource = new StorageTransferJobTransferSpecAwsS3DataSourceOutputReference(this, "aws_s3_data_source");
   public get awsS3DataSource() {
     return this._awsS3DataSource;
   }
@@ -1612,7 +1598,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // azure_blob_storage_data_source - computed: false, optional: true, required: false
-  private _azureBlobStorageDataSource = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference(this, "azure_blob_storage_data_source", true);
+  private _azureBlobStorageDataSource = new StorageTransferJobTransferSpecAzureBlobStorageDataSourceOutputReference(this, "azure_blob_storage_data_source");
   public get azureBlobStorageDataSource() {
     return this._azureBlobStorageDataSource;
   }
@@ -1628,7 +1614,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // gcs_data_sink - computed: false, optional: true, required: false
-  private _gcsDataSink = new StorageTransferJobTransferSpecGcsDataSinkOutputReference(this, "gcs_data_sink", true);
+  private _gcsDataSink = new StorageTransferJobTransferSpecGcsDataSinkOutputReference(this, "gcs_data_sink");
   public get gcsDataSink() {
     return this._gcsDataSink;
   }
@@ -1644,7 +1630,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // gcs_data_source - computed: false, optional: true, required: false
-  private _gcsDataSource = new StorageTransferJobTransferSpecGcsDataSourceOutputReference(this, "gcs_data_source", true);
+  private _gcsDataSource = new StorageTransferJobTransferSpecGcsDataSourceOutputReference(this, "gcs_data_source");
   public get gcsDataSource() {
     return this._gcsDataSource;
   }
@@ -1660,7 +1646,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // http_data_source - computed: false, optional: true, required: false
-  private _httpDataSource = new StorageTransferJobTransferSpecHttpDataSourceOutputReference(this, "http_data_source", true);
+  private _httpDataSource = new StorageTransferJobTransferSpecHttpDataSourceOutputReference(this, "http_data_source");
   public get httpDataSource() {
     return this._httpDataSource;
   }
@@ -1676,7 +1662,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // object_conditions - computed: false, optional: true, required: false
-  private _objectConditions = new StorageTransferJobTransferSpecObjectConditionsOutputReference(this, "object_conditions", true);
+  private _objectConditions = new StorageTransferJobTransferSpecObjectConditionsOutputReference(this, "object_conditions");
   public get objectConditions() {
     return this._objectConditions;
   }
@@ -1692,7 +1678,7 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   }
 
   // transfer_options - computed: false, optional: true, required: false
-  private _transferOptions = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this, "transfer_options", true);
+  private _transferOptions = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this, "transfer_options");
   public get transferOptions() {
     return this._transferOptions;
   }
@@ -1716,7 +1702,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_storage_transfer_job";
+  public static readonly tfResourceType = "google_storage_transfer_job";
 
   // ===========
   // INITIALIZER
@@ -1733,7 +1719,9 @@ export class StorageTransferJob extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_storage_transfer_job',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1822,7 +1810,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule = new StorageTransferJobScheduleOutputReference(this, "schedule", true);
+  private _schedule = new StorageTransferJobScheduleOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
@@ -1835,7 +1823,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
   }
 
   // transfer_spec - computed: false, optional: false, required: true
-  private _transferSpec = new StorageTransferJobTransferSpecOutputReference(this, "transfer_spec", true);
+  private _transferSpec = new StorageTransferJobTransferSpecOutputReference(this, "transfer_spec");
   public get transferSpec() {
     return this._transferSpec;
   }

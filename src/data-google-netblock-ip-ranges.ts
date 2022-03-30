@@ -21,7 +21,7 @@ export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_netblock_ip_ranges";
+  public static readonly tfResourceType = "google_netblock_ip_ranges";
 
   // ===========
   // INITIALIZER
@@ -38,7 +38,9 @@ export class DataGoogleNetblockIpRanges extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_netblock_ip_ranges',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

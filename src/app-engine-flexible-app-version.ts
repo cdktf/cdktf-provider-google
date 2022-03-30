@@ -235,10 +235,9 @@ export class AppEngineFlexibleAppVersionApiConfigOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionApiConfig | undefined {
@@ -395,10 +394,9 @@ export class AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization | undefined {
@@ -503,10 +501,9 @@ export class AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization | undefined {
@@ -658,10 +655,9 @@ export class AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization | undefined {
@@ -799,10 +795,9 @@ export class AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization | undefined {
@@ -970,10 +965,9 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionAutomaticScaling | undefined {
@@ -1192,7 +1186,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
 
   // cpu_utilization - computed: false, optional: false, required: true
-  private _cpuUtilization = new AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference(this, "cpu_utilization", true);
+  private _cpuUtilization = new AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference(this, "cpu_utilization");
   public get cpuUtilization() {
     return this._cpuUtilization;
   }
@@ -1205,7 +1199,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
 
   // disk_utilization - computed: false, optional: true, required: false
-  private _diskUtilization = new AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference(this, "disk_utilization", true);
+  private _diskUtilization = new AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference(this, "disk_utilization");
   public get diskUtilization() {
     return this._diskUtilization;
   }
@@ -1221,7 +1215,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
 
   // network_utilization - computed: false, optional: true, required: false
-  private _networkUtilization = new AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference(this, "network_utilization", true);
+  private _networkUtilization = new AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference(this, "network_utilization");
   public get networkUtilization() {
     return this._networkUtilization;
   }
@@ -1237,7 +1231,7 @@ export class AppEngineFlexibleAppVersionAutomaticScalingOutputReference extends 
   }
 
   // request_utilization - computed: false, optional: true, required: false
-  private _requestUtilization = new AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference(this, "request_utilization", true);
+  private _requestUtilization = new AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference(this, "request_utilization");
   public get requestUtilization() {
     return this._requestUtilization;
   }
@@ -1286,10 +1280,9 @@ export class AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentCloudBuildOptions | undefined {
@@ -1374,10 +1367,9 @@ export class AppEngineFlexibleAppVersionDeploymentContainerOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentContainer | undefined {
@@ -1477,10 +1469,9 @@ export class AppEngineFlexibleAppVersionDeploymentZipOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeploymentZip | undefined {
@@ -1585,10 +1576,9 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionDeployment | undefined {
@@ -1631,7 +1621,7 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   }
 
   // cloud_build_options - computed: false, optional: true, required: false
-  private _cloudBuildOptions = new AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference(this, "cloud_build_options", true);
+  private _cloudBuildOptions = new AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference(this, "cloud_build_options");
   public get cloudBuildOptions() {
     return this._cloudBuildOptions;
   }
@@ -1647,7 +1637,7 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   }
 
   // container - computed: false, optional: true, required: false
-  private _container = new AppEngineFlexibleAppVersionDeploymentContainerOutputReference(this, "container", true);
+  private _container = new AppEngineFlexibleAppVersionDeploymentContainerOutputReference(this, "container");
   public get container() {
     return this._container;
   }
@@ -1680,7 +1670,7 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   }
 
   // zip - computed: false, optional: true, required: false
-  private _zip = new AppEngineFlexibleAppVersionDeploymentZipOutputReference(this, "zip", true);
+  private _zip = new AppEngineFlexibleAppVersionDeploymentZipOutputReference(this, "zip");
   public get zip() {
     return this._zip;
   }
@@ -1749,10 +1739,9 @@ export class AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionEndpointsApiService | undefined {
@@ -1880,10 +1869,9 @@ export class AppEngineFlexibleAppVersionEntrypointOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionEntrypoint | undefined {
@@ -1945,10 +1933,9 @@ export class AppEngineFlexibleAppVersionHandlersScriptOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionHandlersScript | undefined {
@@ -2059,10 +2046,9 @@ export class AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionHandlersStaticFiles | undefined {
@@ -2363,10 +2349,9 @@ export class AppEngineFlexibleAppVersionLivenessCheckOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionLivenessCheck | undefined {
@@ -2563,10 +2548,9 @@ export class AppEngineFlexibleAppVersionManualScalingOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionManualScaling | undefined {
@@ -2661,10 +2645,9 @@ export class AppEngineFlexibleAppVersionNetworkOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionNetwork | undefined {
@@ -2857,10 +2840,9 @@ export class AppEngineFlexibleAppVersionReadinessCheckOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionReadinessCheck | undefined {
@@ -3108,10 +3090,9 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionResources | undefined {
@@ -3251,10 +3232,9 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionTimeouts | undefined {
@@ -3363,10 +3343,9 @@ export class AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineFlexibleAppVersionVpcAccessConnector | undefined {
@@ -3412,7 +3391,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_app_engine_flexible_app_version";
+  public static readonly tfResourceType = "google_app_engine_flexible_app_version";
 
   // ===========
   // INITIALIZER
@@ -3429,7 +3408,9 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_flexible_app_version',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3732,7 +3713,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // api_config - computed: false, optional: true, required: false
-  private _apiConfig = new AppEngineFlexibleAppVersionApiConfigOutputReference(this, "api_config", true);
+  private _apiConfig = new AppEngineFlexibleAppVersionApiConfigOutputReference(this, "api_config");
   public get apiConfig() {
     return this._apiConfig;
   }
@@ -3748,7 +3729,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // automatic_scaling - computed: false, optional: true, required: false
-  private _automaticScaling = new AppEngineFlexibleAppVersionAutomaticScalingOutputReference(this, "automatic_scaling", true);
+  private _automaticScaling = new AppEngineFlexibleAppVersionAutomaticScalingOutputReference(this, "automatic_scaling");
   public get automaticScaling() {
     return this._automaticScaling;
   }
@@ -3764,7 +3745,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // deployment - computed: false, optional: true, required: false
-  private _deployment = new AppEngineFlexibleAppVersionDeploymentOutputReference(this, "deployment", true);
+  private _deployment = new AppEngineFlexibleAppVersionDeploymentOutputReference(this, "deployment");
   public get deployment() {
     return this._deployment;
   }
@@ -3780,7 +3761,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // endpoints_api_service - computed: false, optional: true, required: false
-  private _endpointsApiService = new AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference(this, "endpoints_api_service", true);
+  private _endpointsApiService = new AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference(this, "endpoints_api_service");
   public get endpointsApiService() {
     return this._endpointsApiService;
   }
@@ -3796,7 +3777,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // entrypoint - computed: false, optional: true, required: false
-  private _entrypoint = new AppEngineFlexibleAppVersionEntrypointOutputReference(this, "entrypoint", true);
+  private _entrypoint = new AppEngineFlexibleAppVersionEntrypointOutputReference(this, "entrypoint");
   public get entrypoint() {
     return this._entrypoint;
   }
@@ -3829,7 +3810,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // liveness_check - computed: false, optional: false, required: true
-  private _livenessCheck = new AppEngineFlexibleAppVersionLivenessCheckOutputReference(this, "liveness_check", true);
+  private _livenessCheck = new AppEngineFlexibleAppVersionLivenessCheckOutputReference(this, "liveness_check");
   public get livenessCheck() {
     return this._livenessCheck;
   }
@@ -3842,7 +3823,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // manual_scaling - computed: false, optional: true, required: false
-  private _manualScaling = new AppEngineFlexibleAppVersionManualScalingOutputReference(this, "manual_scaling", true);
+  private _manualScaling = new AppEngineFlexibleAppVersionManualScalingOutputReference(this, "manual_scaling");
   public get manualScaling() {
     return this._manualScaling;
   }
@@ -3858,7 +3839,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network = new AppEngineFlexibleAppVersionNetworkOutputReference(this, "network", true);
+  private _network = new AppEngineFlexibleAppVersionNetworkOutputReference(this, "network");
   public get network() {
     return this._network;
   }
@@ -3874,7 +3855,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // readiness_check - computed: false, optional: false, required: true
-  private _readinessCheck = new AppEngineFlexibleAppVersionReadinessCheckOutputReference(this, "readiness_check", true);
+  private _readinessCheck = new AppEngineFlexibleAppVersionReadinessCheckOutputReference(this, "readiness_check");
   public get readinessCheck() {
     return this._readinessCheck;
   }
@@ -3887,7 +3868,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // resources - computed: false, optional: true, required: false
-  private _resources = new AppEngineFlexibleAppVersionResourcesOutputReference(this, "resources", true);
+  private _resources = new AppEngineFlexibleAppVersionResourcesOutputReference(this, "resources");
   public get resources() {
     return this._resources;
   }
@@ -3903,7 +3884,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineFlexibleAppVersionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppEngineFlexibleAppVersionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -3919,7 +3900,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // vpc_access_connector - computed: false, optional: true, required: false
-  private _vpcAccessConnector = new AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference(this, "vpc_access_connector", true);
+  private _vpcAccessConnector = new AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference(this, "vpc_access_connector");
   public get vpcAccessConnector() {
     return this._vpcAccessConnector;
   }

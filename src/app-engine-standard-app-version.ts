@@ -172,10 +172,9 @@ export class AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSetting
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettings | undefined {
@@ -345,10 +344,9 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionAutomaticScaling | undefined {
@@ -483,7 +481,7 @@ export class AppEngineStandardAppVersionAutomaticScalingOutputReference extends 
   }
 
   // standard_scheduler_settings - computed: false, optional: true, required: false
-  private _standardSchedulerSettings = new AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsOutputReference(this, "standard_scheduler_settings", true);
+  private _standardSchedulerSettings = new AppEngineStandardAppVersionAutomaticScalingStandardSchedulerSettingsOutputReference(this, "standard_scheduler_settings");
   public get standardSchedulerSettings() {
     return this._standardSchedulerSettings;
   }
@@ -531,10 +529,9 @@ export class AppEngineStandardAppVersionBasicScalingOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionBasicScaling | undefined {
@@ -656,10 +653,9 @@ export class AppEngineStandardAppVersionDeploymentZipOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionDeploymentZip | undefined {
@@ -750,10 +746,9 @@ export class AppEngineStandardAppVersionDeploymentOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionDeployment | undefined {
@@ -801,7 +796,7 @@ export class AppEngineStandardAppVersionDeploymentOutputReference extends cdktf.
   }
 
   // zip - computed: false, optional: true, required: false
-  private _zip = new AppEngineStandardAppVersionDeploymentZipOutputReference(this, "zip", true);
+  private _zip = new AppEngineStandardAppVersionDeploymentZipOutputReference(this, "zip");
   public get zip() {
     return this._zip;
   }
@@ -841,10 +836,9 @@ export class AppEngineStandardAppVersionEntrypointOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionEntrypoint | undefined {
@@ -906,10 +900,9 @@ export class AppEngineStandardAppVersionHandlersScriptOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionHandlersScript | undefined {
@@ -1018,10 +1011,9 @@ export class AppEngineStandardAppVersionHandlersStaticFilesOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionHandlersStaticFiles | undefined {
@@ -1309,10 +1301,9 @@ export class AppEngineStandardAppVersionManualScalingOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionManualScaling | undefined {
@@ -1382,10 +1373,9 @@ export class AppEngineStandardAppVersionTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionTimeouts | undefined {
@@ -1494,10 +1484,9 @@ export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppEngineStandardAppVersionVpcAccessConnector | undefined {
@@ -1543,7 +1532,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_app_engine_standard_app_version";
+  public static readonly tfResourceType = "google_app_engine_standard_app_version";
 
   // ===========
   // INITIALIZER
@@ -1560,7 +1549,9 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_app_engine_standard_app_version',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1774,7 +1765,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // automatic_scaling - computed: false, optional: true, required: false
-  private _automaticScaling = new AppEngineStandardAppVersionAutomaticScalingOutputReference(this, "automatic_scaling", true);
+  private _automaticScaling = new AppEngineStandardAppVersionAutomaticScalingOutputReference(this, "automatic_scaling");
   public get automaticScaling() {
     return this._automaticScaling;
   }
@@ -1790,7 +1781,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // basic_scaling - computed: false, optional: true, required: false
-  private _basicScaling = new AppEngineStandardAppVersionBasicScalingOutputReference(this, "basic_scaling", true);
+  private _basicScaling = new AppEngineStandardAppVersionBasicScalingOutputReference(this, "basic_scaling");
   public get basicScaling() {
     return this._basicScaling;
   }
@@ -1806,7 +1797,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // deployment - computed: false, optional: false, required: true
-  private _deployment = new AppEngineStandardAppVersionDeploymentOutputReference(this, "deployment", true);
+  private _deployment = new AppEngineStandardAppVersionDeploymentOutputReference(this, "deployment");
   public get deployment() {
     return this._deployment;
   }
@@ -1819,7 +1810,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // entrypoint - computed: false, optional: true, required: false
-  private _entrypoint = new AppEngineStandardAppVersionEntrypointOutputReference(this, "entrypoint", true);
+  private _entrypoint = new AppEngineStandardAppVersionEntrypointOutputReference(this, "entrypoint");
   public get entrypoint() {
     return this._entrypoint;
   }
@@ -1869,7 +1860,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // manual_scaling - computed: false, optional: true, required: false
-  private _manualScaling = new AppEngineStandardAppVersionManualScalingOutputReference(this, "manual_scaling", true);
+  private _manualScaling = new AppEngineStandardAppVersionManualScalingOutputReference(this, "manual_scaling");
   public get manualScaling() {
     return this._manualScaling;
   }
@@ -1885,7 +1876,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppEngineStandardAppVersionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppEngineStandardAppVersionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1901,7 +1892,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   }
 
   // vpc_access_connector - computed: false, optional: true, required: false
-  private _vpcAccessConnector = new AppEngineStandardAppVersionVpcAccessConnectorOutputReference(this, "vpc_access_connector", true);
+  private _vpcAccessConnector = new AppEngineStandardAppVersionVpcAccessConnectorOutputReference(this, "vpc_access_connector");
   public get vpcAccessConnector() {
     return this._vpcAccessConnector;
   }

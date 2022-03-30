@@ -93,10 +93,9 @@ export class IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IdentityPlatformTenantOauthIdpConfigTimeouts | undefined {
@@ -189,7 +188,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_identity_platform_tenant_oauth_idp_config";
+  public static readonly tfResourceType = "google_identity_platform_tenant_oauth_idp_config";
 
   // ===========
   // INITIALIZER
@@ -206,7 +205,9 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
     super(scope, id, {
       terraformResourceType: 'google_identity_platform_tenant_oauth_idp_config',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -347,7 +348,7 @@ export class IdentityPlatformTenantOauthIdpConfig extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new IdentityPlatformTenantOauthIdpConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

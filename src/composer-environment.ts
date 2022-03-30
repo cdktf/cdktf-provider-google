@@ -162,10 +162,9 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComposerEnvironmentConfigNodeConfig | undefined {
@@ -428,10 +427,9 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComposerEnvironmentConfigPrivateEnvironmentConfig | undefined {
@@ -597,10 +595,9 @@ export class ComposerEnvironmentConfigSoftwareConfigOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComposerEnvironmentConfigSoftwareConfig | undefined {
@@ -796,10 +793,9 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComposerEnvironmentConfigA | undefined {
@@ -873,7 +869,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   // node_config - computed: false, optional: true, required: false
-  private _nodeConfig = new ComposerEnvironmentConfigNodeConfigOutputReference(this, "node_config", true);
+  private _nodeConfig = new ComposerEnvironmentConfigNodeConfigOutputReference(this, "node_config");
   public get nodeConfig() {
     return this._nodeConfig;
   }
@@ -889,7 +885,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   // private_environment_config - computed: false, optional: true, required: false
-  private _privateEnvironmentConfig = new ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this, "private_environment_config", true);
+  private _privateEnvironmentConfig = new ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this, "private_environment_config");
   public get privateEnvironmentConfig() {
     return this._privateEnvironmentConfig;
   }
@@ -905,7 +901,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   }
 
   // software_config - computed: false, optional: true, required: false
-  private _softwareConfig = new ComposerEnvironmentConfigSoftwareConfigOutputReference(this, "software_config", true);
+  private _softwareConfig = new ComposerEnvironmentConfigSoftwareConfigOutputReference(this, "software_config");
   public get softwareConfig() {
     return this._softwareConfig;
   }
@@ -953,10 +949,9 @@ export class ComposerEnvironmentTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComposerEnvironmentTimeouts | undefined {
@@ -1049,7 +1044,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_composer_environment";
+  public static readonly tfResourceType = "google_composer_environment";
 
   // ===========
   // INITIALIZER
@@ -1066,7 +1061,9 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1152,7 +1149,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // config - computed: false, optional: true, required: false
-  private _config = new ComposerEnvironmentConfigAOutputReference(this, "config", true);
+  private _config = new ComposerEnvironmentConfigAOutputReference(this, "config");
   public get config() {
     return this._config;
   }
@@ -1168,7 +1165,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComposerEnvironmentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComposerEnvironmentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

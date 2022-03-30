@@ -147,10 +147,9 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentInstanceFilter | undefined {
@@ -305,10 +304,9 @@ export class OsConfigPatchDeploymentOneTimeScheduleOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentOneTimeSchedule | undefined {
@@ -386,10 +384,9 @@ export class OsConfigPatchDeploymentPatchConfigAptOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigApt | undefined {
@@ -498,10 +495,9 @@ export class OsConfigPatchDeploymentPatchConfigGooOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigGoo | undefined {
@@ -577,10 +573,9 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject | undefined {
@@ -702,10 +697,9 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfig | undefined {
@@ -796,7 +790,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutputReference(this, "gcs_object");
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -850,10 +844,9 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject | undefined {
@@ -975,10 +968,9 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfig | undefined {
@@ -1069,7 +1061,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutp
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutputReference(this, "gcs_object");
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -1116,10 +1108,9 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPostStep | undefined {
@@ -1150,7 +1141,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   }
 
   // linux_exec_step_config - computed: false, optional: true, required: false
-  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(this, "linux_exec_step_config", true);
+  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutputReference(this, "linux_exec_step_config");
   public get linuxExecStepConfig() {
     return this._linuxExecStepConfig;
   }
@@ -1166,7 +1157,7 @@ export class OsConfigPatchDeploymentPatchConfigPostStepOutputReference extends c
   }
 
   // windows_exec_step_config - computed: false, optional: true, required: false
-  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(this, "windows_exec_step_config", true);
+  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutputReference(this, "windows_exec_step_config");
   public get windowsExecStepConfig() {
     return this._windowsExecStepConfig;
   }
@@ -1220,10 +1211,9 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject | undefined {
@@ -1345,10 +1335,9 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfig | undefined {
@@ -1439,7 +1428,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputR
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutputReference(this, "gcs_object");
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -1493,10 +1482,9 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject | undefined {
@@ -1618,10 +1606,9 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfig | undefined {
@@ -1712,7 +1699,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutpu
   }
 
   // gcs_object - computed: false, optional: true, required: false
-  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(this, "gcs_object", true);
+  private _gcsObject = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutputReference(this, "gcs_object");
   public get gcsObject() {
     return this._gcsObject;
   }
@@ -1759,10 +1746,9 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigPreStep | undefined {
@@ -1793,7 +1779,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   }
 
   // linux_exec_step_config - computed: false, optional: true, required: false
-  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(this, "linux_exec_step_config", true);
+  private _linuxExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutputReference(this, "linux_exec_step_config");
   public get linuxExecStepConfig() {
     return this._linuxExecStepConfig;
   }
@@ -1809,7 +1795,7 @@ export class OsConfigPatchDeploymentPatchConfigPreStepOutputReference extends cd
   }
 
   // windows_exec_step_config - computed: false, optional: true, required: false
-  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(this, "windows_exec_step_config", true);
+  private _windowsExecStepConfig = new OsConfigPatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutputReference(this, "windows_exec_step_config");
   public get windowsExecStepConfig() {
     return this._windowsExecStepConfig;
   }
@@ -1864,10 +1850,9 @@ export class OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigWindowsUpdate | undefined {
@@ -1999,10 +1984,9 @@ export class OsConfigPatchDeploymentPatchConfigYumOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigYum | undefined {
@@ -2169,10 +2153,9 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfigZypper | undefined {
@@ -2396,10 +2379,9 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentPatchConfig | undefined {
@@ -2482,7 +2464,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // apt - computed: false, optional: true, required: false
-  private _apt = new OsConfigPatchDeploymentPatchConfigAptOutputReference(this, "apt", true);
+  private _apt = new OsConfigPatchDeploymentPatchConfigAptOutputReference(this, "apt");
   public get apt() {
     return this._apt;
   }
@@ -2498,7 +2480,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // goo - computed: false, optional: true, required: false
-  private _goo = new OsConfigPatchDeploymentPatchConfigGooOutputReference(this, "goo", true);
+  private _goo = new OsConfigPatchDeploymentPatchConfigGooOutputReference(this, "goo");
   public get goo() {
     return this._goo;
   }
@@ -2514,7 +2496,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // post_step - computed: false, optional: true, required: false
-  private _postStep = new OsConfigPatchDeploymentPatchConfigPostStepOutputReference(this, "post_step", true);
+  private _postStep = new OsConfigPatchDeploymentPatchConfigPostStepOutputReference(this, "post_step");
   public get postStep() {
     return this._postStep;
   }
@@ -2530,7 +2512,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // pre_step - computed: false, optional: true, required: false
-  private _preStep = new OsConfigPatchDeploymentPatchConfigPreStepOutputReference(this, "pre_step", true);
+  private _preStep = new OsConfigPatchDeploymentPatchConfigPreStepOutputReference(this, "pre_step");
   public get preStep() {
     return this._preStep;
   }
@@ -2546,7 +2528,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // windows_update - computed: false, optional: true, required: false
-  private _windowsUpdate = new OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(this, "windows_update", true);
+  private _windowsUpdate = new OsConfigPatchDeploymentPatchConfigWindowsUpdateOutputReference(this, "windows_update");
   public get windowsUpdate() {
     return this._windowsUpdate;
   }
@@ -2562,7 +2544,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // yum - computed: false, optional: true, required: false
-  private _yum = new OsConfigPatchDeploymentPatchConfigYumOutputReference(this, "yum", true);
+  private _yum = new OsConfigPatchDeploymentPatchConfigYumOutputReference(this, "yum");
   public get yum() {
     return this._yum;
   }
@@ -2578,7 +2560,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   }
 
   // zypper - computed: false, optional: true, required: false
-  private _zypper = new OsConfigPatchDeploymentPatchConfigZypperOutputReference(this, "zypper", true);
+  private _zypper = new OsConfigPatchDeploymentPatchConfigZypperOutputReference(this, "zypper");
   public get zypper() {
     return this._zypper;
   }
@@ -2625,10 +2607,9 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth | undefined {
@@ -2718,10 +2699,9 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleMonthly | undefined {
@@ -2768,7 +2748,7 @@ export class OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference exte
   }
 
   // week_day_of_month - computed: false, optional: true, required: false
-  private _weekDayOfMonth = new OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(this, "week_day_of_month", true);
+  private _weekDayOfMonth = new OsConfigPatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutputReference(this, "week_day_of_month");
   public get weekDayOfMonth() {
     return this._weekDayOfMonth;
   }
@@ -2830,10 +2810,9 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeOfDay | undefined {
@@ -2971,10 +2950,9 @@ export class OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleTimeZone | undefined {
@@ -3058,10 +3036,9 @@ export class OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringScheduleWeekly | undefined {
@@ -3160,10 +3137,9 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRecurringSchedule | undefined {
@@ -3260,7 +3236,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly = new OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(this, "monthly", true);
+  private _monthly = new OsConfigPatchDeploymentRecurringScheduleMonthlyOutputReference(this, "monthly");
   public get monthly() {
     return this._monthly;
   }
@@ -3276,7 +3252,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // time_of_day - computed: false, optional: false, required: true
-  private _timeOfDay = new OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(this, "time_of_day", true);
+  private _timeOfDay = new OsConfigPatchDeploymentRecurringScheduleTimeOfDayOutputReference(this, "time_of_day");
   public get timeOfDay() {
     return this._timeOfDay;
   }
@@ -3289,7 +3265,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // time_zone - computed: false, optional: false, required: true
-  private _timeZone = new OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(this, "time_zone", true);
+  private _timeZone = new OsConfigPatchDeploymentRecurringScheduleTimeZoneOutputReference(this, "time_zone");
   public get timeZone() {
     return this._timeZone;
   }
@@ -3302,7 +3278,7 @@ export class OsConfigPatchDeploymentRecurringScheduleOutputReference extends cdk
   }
 
   // weekly - computed: false, optional: true, required: false
-  private _weekly = new OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(this, "weekly", true);
+  private _weekly = new OsConfigPatchDeploymentRecurringScheduleWeeklyOutputReference(this, "weekly");
   public get weekly() {
     return this._weekly;
   }
@@ -3349,10 +3325,9 @@ export class OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRolloutDisruptionBudget | undefined {
@@ -3446,10 +3421,9 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentRollout | undefined {
@@ -3493,7 +3467,7 @@ export class OsConfigPatchDeploymentRolloutOutputReference extends cdktf.Complex
   }
 
   // disruption_budget - computed: false, optional: false, required: true
-  private _disruptionBudget = new OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(this, "disruption_budget", true);
+  private _disruptionBudget = new OsConfigPatchDeploymentRolloutDisruptionBudgetOutputReference(this, "disruption_budget");
   public get disruptionBudget() {
     return this._disruptionBudget;
   }
@@ -3533,10 +3507,9 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OsConfigPatchDeploymentTimeouts | undefined {
@@ -3607,7 +3580,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_os_config_patch_deployment";
+  public static readonly tfResourceType = "google_os_config_patch_deployment";
 
   // ===========
   // INITIALIZER
@@ -3624,7 +3597,9 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_os_config_patch_deployment',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3734,7 +3709,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // instance_filter - computed: false, optional: false, required: true
-  private _instanceFilter = new OsConfigPatchDeploymentInstanceFilterOutputReference(this, "instance_filter", true);
+  private _instanceFilter = new OsConfigPatchDeploymentInstanceFilterOutputReference(this, "instance_filter");
   public get instanceFilter() {
     return this._instanceFilter;
   }
@@ -3747,7 +3722,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // one_time_schedule - computed: false, optional: true, required: false
-  private _oneTimeSchedule = new OsConfigPatchDeploymentOneTimeScheduleOutputReference(this, "one_time_schedule", true);
+  private _oneTimeSchedule = new OsConfigPatchDeploymentOneTimeScheduleOutputReference(this, "one_time_schedule");
   public get oneTimeSchedule() {
     return this._oneTimeSchedule;
   }
@@ -3763,7 +3738,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // patch_config - computed: false, optional: true, required: false
-  private _patchConfig = new OsConfigPatchDeploymentPatchConfigOutputReference(this, "patch_config", true);
+  private _patchConfig = new OsConfigPatchDeploymentPatchConfigOutputReference(this, "patch_config");
   public get patchConfig() {
     return this._patchConfig;
   }
@@ -3779,7 +3754,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // recurring_schedule - computed: false, optional: true, required: false
-  private _recurringSchedule = new OsConfigPatchDeploymentRecurringScheduleOutputReference(this, "recurring_schedule", true);
+  private _recurringSchedule = new OsConfigPatchDeploymentRecurringScheduleOutputReference(this, "recurring_schedule");
   public get recurringSchedule() {
     return this._recurringSchedule;
   }
@@ -3795,7 +3770,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // rollout - computed: false, optional: true, required: false
-  private _rollout = new OsConfigPatchDeploymentRolloutOutputReference(this, "rollout", true);
+  private _rollout = new OsConfigPatchDeploymentRolloutOutputReference(this, "rollout");
   public get rollout() {
     return this._rollout;
   }
@@ -3811,7 +3786,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new OsConfigPatchDeploymentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new OsConfigPatchDeploymentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

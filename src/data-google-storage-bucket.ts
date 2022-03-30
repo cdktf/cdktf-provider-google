@@ -14,7 +14,45 @@ export interface DataGoogleStorageBucketConfig extends cdktf.TerraformMetaArgume
   */
   readonly name: string;
 }
-export class DataGoogleStorageBucketCors extends cdktf.ComplexComputedList {
+export interface DataGoogleStorageBucketCors {
+}
+
+export function dataGoogleStorageBucketCorsToTerraform(struct?: DataGoogleStorageBucketCors): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketCors | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketCors | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // max_age_seconds - computed: true, optional: false, required: false
   public get maxAgeSeconds() {
@@ -36,14 +74,128 @@ export class DataGoogleStorageBucketCors extends cdktf.ComplexComputedList {
     return this.getListAttribute('response_header');
   }
 }
-export class DataGoogleStorageBucketEncryption extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketCorsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketCorsOutputReference {
+    return new DataGoogleStorageBucketCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketEncryption {
+}
+
+export function dataGoogleStorageBucketEncryptionToTerraform(struct?: DataGoogleStorageBucketEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // default_kms_key_name - computed: true, optional: false, required: false
   public get defaultKmsKeyName() {
     return this.getStringAttribute('default_kms_key_name');
   }
 }
-export class DataGoogleStorageBucketLifecycleRuleAction extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketEncryptionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketEncryptionOutputReference {
+    return new DataGoogleStorageBucketEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketLifecycleRuleAction {
+}
+
+export function dataGoogleStorageBucketLifecycleRuleActionToTerraform(struct?: DataGoogleStorageBucketLifecycleRuleAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketLifecycleRuleActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketLifecycleRuleAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketLifecycleRuleAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // storage_class - computed: true, optional: false, required: false
   public get storageClass() {
@@ -55,7 +207,64 @@ export class DataGoogleStorageBucketLifecycleRuleAction extends cdktf.ComplexCom
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleStorageBucketLifecycleRuleCondition extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketLifecycleRuleActionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketLifecycleRuleActionOutputReference {
+    return new DataGoogleStorageBucketLifecycleRuleActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketLifecycleRuleCondition {
+}
+
+export function dataGoogleStorageBucketLifecycleRuleConditionToTerraform(struct?: DataGoogleStorageBucketLifecycleRuleCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketLifecycleRuleConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketLifecycleRuleCondition | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketLifecycleRuleCondition | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // age - computed: true, optional: false, required: false
   public get age() {
@@ -102,21 +311,135 @@ export class DataGoogleStorageBucketLifecycleRuleCondition extends cdktf.Complex
     return this.getStringAttribute('with_state');
   }
 }
-export class DataGoogleStorageBucketLifecycleRule extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketLifecycleRuleConditionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketLifecycleRuleConditionOutputReference {
+    return new DataGoogleStorageBucketLifecycleRuleConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketLifecycleRule {
+}
+
+export function dataGoogleStorageBucketLifecycleRuleToTerraform(struct?: DataGoogleStorageBucketLifecycleRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketLifecycleRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketLifecycleRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketLifecycleRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // action - computed: true, optional: false, required: false
+  private _action = new DataGoogleStorageBucketLifecycleRuleActionList(this, "action", true);
   public get action() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('action')));
+    return this._action;
   }
 
   // condition - computed: true, optional: false, required: false
+  private _condition = new DataGoogleStorageBucketLifecycleRuleConditionList(this, "condition", true);
   public get condition() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('condition')));
+    return this._condition;
   }
 }
-export class DataGoogleStorageBucketLogging extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketLifecycleRuleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketLifecycleRuleOutputReference {
+    return new DataGoogleStorageBucketLifecycleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketLogging {
+}
+
+export function dataGoogleStorageBucketLoggingToTerraform(struct?: DataGoogleStorageBucketLogging): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketLoggingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketLogging | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketLogging | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // log_bucket - computed: true, optional: false, required: false
   public get logBucket() {
@@ -128,7 +451,64 @@ export class DataGoogleStorageBucketLogging extends cdktf.ComplexComputedList {
     return this.getStringAttribute('log_object_prefix');
   }
 }
-export class DataGoogleStorageBucketRetentionPolicy extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketLoggingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketLoggingOutputReference {
+    return new DataGoogleStorageBucketLoggingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketRetentionPolicy {
+}
+
+export function dataGoogleStorageBucketRetentionPolicyToTerraform(struct?: DataGoogleStorageBucketRetentionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketRetentionPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // is_locked - computed: true, optional: false, required: false
   public get isLocked() {
@@ -140,14 +520,128 @@ export class DataGoogleStorageBucketRetentionPolicy extends cdktf.ComplexCompute
     return this.getNumberAttribute('retention_period');
   }
 }
-export class DataGoogleStorageBucketVersioning extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketRetentionPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketRetentionPolicyOutputReference {
+    return new DataGoogleStorageBucketRetentionPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketVersioning {
+}
+
+export function dataGoogleStorageBucketVersioningToTerraform(struct?: DataGoogleStorageBucketVersioning): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketVersioningOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketVersioning | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketVersioning | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataGoogleStorageBucketWebsite extends cdktf.ComplexComputedList {
+
+export class DataGoogleStorageBucketVersioningList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketVersioningOutputReference {
+    return new DataGoogleStorageBucketVersioningOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleStorageBucketWebsite {
+}
+
+export function dataGoogleStorageBucketWebsiteToTerraform(struct?: DataGoogleStorageBucketWebsite): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketWebsite | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketWebsite | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // main_page_suffix - computed: true, optional: false, required: false
   public get mainPageSuffix() {
@@ -160,6 +654,25 @@ export class DataGoogleStorageBucketWebsite extends cdktf.ComplexComputedList {
   }
 }
 
+export class DataGoogleStorageBucketWebsiteList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketWebsiteOutputReference {
+    return new DataGoogleStorageBucketWebsiteOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_bucket google_storage_bucket}
 */
@@ -168,7 +681,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_storage_bucket";
+  public static readonly tfResourceType = "google_storage_bucket";
 
   // ===========
   // INITIALIZER
@@ -185,7 +698,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -205,8 +720,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // cors - computed: true, optional: false, required: false
-  public cors(index: string) {
-    return new DataGoogleStorageBucketCors(this, 'cors', index, false);
+  private _cors = new DataGoogleStorageBucketCorsList(this, "cors", false);
+  public get cors() {
+    return this._cors;
   }
 
   // default_event_based_hold - computed: true, optional: false, required: false
@@ -215,8 +731,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // encryption - computed: true, optional: false, required: false
-  public encryption(index: string) {
-    return new DataGoogleStorageBucketEncryption(this, 'encryption', index, false);
+  private _encryption = new DataGoogleStorageBucketEncryptionList(this, "encryption", false);
+  public get encryption() {
+    return this._encryption;
   }
 
   // force_destroy - computed: true, optional: false, required: false
@@ -235,8 +752,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // lifecycle_rule - computed: true, optional: false, required: false
-  public lifecycleRule(index: string) {
-    return new DataGoogleStorageBucketLifecycleRule(this, 'lifecycle_rule', index, false);
+  private _lifecycleRule = new DataGoogleStorageBucketLifecycleRuleList(this, "lifecycle_rule", false);
+  public get lifecycleRule() {
+    return this._lifecycleRule;
   }
 
   // location - computed: true, optional: false, required: false
@@ -245,8 +763,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // logging - computed: true, optional: false, required: false
-  public logging(index: string) {
-    return new DataGoogleStorageBucketLogging(this, 'logging', index, false);
+  private _logging = new DataGoogleStorageBucketLoggingList(this, "logging", false);
+  public get logging() {
+    return this._logging;
   }
 
   // name - computed: false, optional: false, required: true
@@ -273,8 +792,9 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // retention_policy - computed: true, optional: false, required: false
-  public retentionPolicy(index: string) {
-    return new DataGoogleStorageBucketRetentionPolicy(this, 'retention_policy', index, false);
+  private _retentionPolicy = new DataGoogleStorageBucketRetentionPolicyList(this, "retention_policy", false);
+  public get retentionPolicy() {
+    return this._retentionPolicy;
   }
 
   // self_link - computed: true, optional: false, required: false
@@ -298,13 +818,15 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   }
 
   // versioning - computed: true, optional: false, required: false
-  public versioning(index: string) {
-    return new DataGoogleStorageBucketVersioning(this, 'versioning', index, false);
+  private _versioning = new DataGoogleStorageBucketVersioningList(this, "versioning", false);
+  public get versioning() {
+    return this._versioning;
   }
 
   // website - computed: true, optional: false, required: false
-  public website(index: string) {
-    return new DataGoogleStorageBucketWebsite(this, 'website', index, false);
+  private _website = new DataGoogleStorageBucketWebsiteList(this, "website", false);
+  public get website() {
+    return this._website;
   }
 
   // =========

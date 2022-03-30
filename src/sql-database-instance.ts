@@ -80,7 +80,45 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly timeouts?: SqlDatabaseInstanceTimeouts;
 }
-export class SqlDatabaseInstanceIpAddress extends cdktf.ComplexComputedList {
+export interface SqlDatabaseInstanceIpAddress {
+}
+
+export function sqlDatabaseInstanceIpAddressToTerraform(struct?: SqlDatabaseInstanceIpAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class SqlDatabaseInstanceIpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SqlDatabaseInstanceIpAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceIpAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -97,7 +135,64 @@ export class SqlDatabaseInstanceIpAddress extends cdktf.ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class SqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
+
+export class SqlDatabaseInstanceIpAddressList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SqlDatabaseInstanceIpAddressOutputReference {
+    return new SqlDatabaseInstanceIpAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SqlDatabaseInstanceServerCaCert {
+}
+
+export function sqlDatabaseInstanceServerCaCertToTerraform(struct?: SqlDatabaseInstanceServerCaCert): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class SqlDatabaseInstanceServerCaCertOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SqlDatabaseInstanceServerCaCert | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceServerCaCert | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // cert - computed: true, optional: false, required: false
   public get cert() {
@@ -122,6 +217,25 @@ export class SqlDatabaseInstanceServerCaCert extends cdktf.ComplexComputedList {
   // sha1_fingerprint - computed: true, optional: false, required: false
   public get sha1Fingerprint() {
     return this.getStringAttribute('sha1_fingerprint');
+  }
+}
+
+export class SqlDatabaseInstanceServerCaCertList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SqlDatabaseInstanceServerCaCertOutputReference {
+    return new SqlDatabaseInstanceServerCaCertOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface SqlDatabaseInstanceClone {
@@ -156,10 +270,9 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceClone | undefined {
@@ -313,10 +426,9 @@ export class SqlDatabaseInstanceReplicaConfigurationOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceReplicaConfiguration | undefined {
@@ -615,10 +727,9 @@ export class SqlDatabaseInstanceRestoreBackupContextOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceRestoreBackupContext | undefined {
@@ -731,10 +842,9 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettin
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings | undefined {
@@ -860,10 +970,9 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsBackupConfiguration | undefined {
@@ -1020,7 +1129,7 @@ export class SqlDatabaseInstanceSettingsBackupConfigurationOutputReference exten
   }
 
   // backup_retention_settings - computed: false, optional: true, required: false
-  private _backupRetentionSettings = new SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this, "backup_retention_settings", true);
+  private _backupRetentionSettings = new SqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsOutputReference(this, "backup_retention_settings");
   public get backupRetentionSettings() {
     return this._backupRetentionSettings;
   }
@@ -1107,10 +1216,9 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsInsightsConfig | undefined {
@@ -1287,10 +1395,9 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsIpConfiguration | undefined {
@@ -1429,10 +1536,9 @@ export class SqlDatabaseInstanceSettingsLocationPreferenceOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsLocationPreference | undefined {
@@ -1533,10 +1639,9 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettingsMaintenanceWindow | undefined {
@@ -1774,10 +1879,9 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceSettings | undefined {
@@ -2120,7 +2224,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // backup_configuration - computed: false, optional: true, required: false
-  private _backupConfiguration = new SqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this, "backup_configuration", true);
+  private _backupConfiguration = new SqlDatabaseInstanceSettingsBackupConfigurationOutputReference(this, "backup_configuration");
   public get backupConfiguration() {
     return this._backupConfiguration;
   }
@@ -2153,7 +2257,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // insights_config - computed: false, optional: true, required: false
-  private _insightsConfig = new SqlDatabaseInstanceSettingsInsightsConfigOutputReference(this, "insights_config", true);
+  private _insightsConfig = new SqlDatabaseInstanceSettingsInsightsConfigOutputReference(this, "insights_config");
   public get insightsConfig() {
     return this._insightsConfig;
   }
@@ -2169,7 +2273,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration = new SqlDatabaseInstanceSettingsIpConfigurationOutputReference(this, "ip_configuration", true);
+  private _ipConfiguration = new SqlDatabaseInstanceSettingsIpConfigurationOutputReference(this, "ip_configuration");
   public get ipConfiguration() {
     return this._ipConfiguration;
   }
@@ -2185,7 +2289,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // location_preference - computed: false, optional: true, required: false
-  private _locationPreference = new SqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this, "location_preference", true);
+  private _locationPreference = new SqlDatabaseInstanceSettingsLocationPreferenceOutputReference(this, "location_preference");
   public get locationPreference() {
     return this._locationPreference;
   }
@@ -2201,7 +2305,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this, "maintenance_window", true);
+  private _maintenanceWindow = new SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this, "maintenance_window");
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -2249,10 +2353,9 @@ export class SqlDatabaseInstanceTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SqlDatabaseInstanceTimeouts | undefined {
@@ -2345,7 +2448,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_sql_database_instance";
+  public static readonly tfResourceType = "google_sql_database_instance";
 
   // ===========
   // INITIALIZER
@@ -2362,7 +2465,9 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2435,8 +2540,9 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // ip_address - computed: true, optional: false, required: false
-  public ipAddress(index: string) {
-    return new SqlDatabaseInstanceIpAddress(this, 'ip_address', index, false);
+  private _ipAddress = new SqlDatabaseInstanceIpAddressList(this, "ip_address", false);
+  public get ipAddress() {
+    return this._ipAddress;
   }
 
   // master_instance_name - computed: true, optional: true, required: false
@@ -2535,8 +2641,9 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // server_ca_cert - computed: true, optional: false, required: false
-  public serverCaCert(index: string) {
-    return new SqlDatabaseInstanceServerCaCert(this, 'server_ca_cert', index, false);
+  private _serverCaCert = new SqlDatabaseInstanceServerCaCertList(this, "server_ca_cert", false);
+  public get serverCaCert() {
+    return this._serverCaCert;
   }
 
   // service_account_email_address - computed: true, optional: false, required: false
@@ -2545,7 +2652,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // clone - computed: false, optional: true, required: false
-  private _clone = new SqlDatabaseInstanceCloneOutputReference(this, "clone", true);
+  private _clone = new SqlDatabaseInstanceCloneOutputReference(this, "clone");
   public get clone() {
     return this._clone;
   }
@@ -2561,7 +2668,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // replica_configuration - computed: false, optional: true, required: false
-  private _replicaConfiguration = new SqlDatabaseInstanceReplicaConfigurationOutputReference(this, "replica_configuration", true);
+  private _replicaConfiguration = new SqlDatabaseInstanceReplicaConfigurationOutputReference(this, "replica_configuration");
   public get replicaConfiguration() {
     return this._replicaConfiguration;
   }
@@ -2577,7 +2684,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // restore_backup_context - computed: false, optional: true, required: false
-  private _restoreBackupContext = new SqlDatabaseInstanceRestoreBackupContextOutputReference(this, "restore_backup_context", true);
+  private _restoreBackupContext = new SqlDatabaseInstanceRestoreBackupContextOutputReference(this, "restore_backup_context");
   public get restoreBackupContext() {
     return this._restoreBackupContext;
   }
@@ -2593,7 +2700,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // settings - computed: false, optional: true, required: false
-  private _settings = new SqlDatabaseInstanceSettingsOutputReference(this, "settings", true);
+  private _settings = new SqlDatabaseInstanceSettingsOutputReference(this, "settings");
   public get settings() {
     return this._settings;
   }
@@ -2609,7 +2716,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlDatabaseInstanceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SqlDatabaseInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -53,7 +53,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dns_record_set";
+  public static readonly tfResourceType = "google_dns_record_set";
 
   // ===========
   // INITIALIZER
@@ -70,7 +70,9 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_dns_record_set',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

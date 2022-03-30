@@ -113,10 +113,9 @@ export class ComputeSnapshotSnapshotEncryptionKeyOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSnapshotSnapshotEncryptionKey | undefined {
@@ -239,10 +238,9 @@ export class ComputeSnapshotSourceDiskEncryptionKeyOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSnapshotSourceDiskEncryptionKey | undefined {
@@ -337,10 +335,9 @@ export class ComputeSnapshotTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeSnapshotTimeouts | undefined {
@@ -433,7 +430,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_snapshot";
+  public static readonly tfResourceType = "google_compute_snapshot";
 
   // ===========
   // INITIALIZER
@@ -450,7 +447,9 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_snapshot',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -625,7 +624,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // snapshot_encryption_key - computed: false, optional: true, required: false
-  private _snapshotEncryptionKey = new ComputeSnapshotSnapshotEncryptionKeyOutputReference(this, "snapshot_encryption_key", true);
+  private _snapshotEncryptionKey = new ComputeSnapshotSnapshotEncryptionKeyOutputReference(this, "snapshot_encryption_key");
   public get snapshotEncryptionKey() {
     return this._snapshotEncryptionKey;
   }
@@ -641,7 +640,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // source_disk_encryption_key - computed: false, optional: true, required: false
-  private _sourceDiskEncryptionKey = new ComputeSnapshotSourceDiskEncryptionKeyOutputReference(this, "source_disk_encryption_key", true);
+  private _sourceDiskEncryptionKey = new ComputeSnapshotSourceDiskEncryptionKeyOutputReference(this, "source_disk_encryption_key");
   public get sourceDiskEncryptionKey() {
     return this._sourceDiskEncryptionKey;
   }
@@ -657,7 +656,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeSnapshotTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeSnapshotTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

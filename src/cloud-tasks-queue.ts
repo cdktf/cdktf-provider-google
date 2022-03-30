@@ -99,10 +99,9 @@ export class CloudTasksQueueAppEngineRoutingOverrideOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudTasksQueueAppEngineRoutingOverride | undefined {
@@ -228,10 +227,9 @@ export class CloudTasksQueueRateLimitsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudTasksQueueRateLimits | undefined {
@@ -374,10 +372,9 @@ export class CloudTasksQueueRetryConfigOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudTasksQueueRetryConfig | undefined {
@@ -532,10 +529,9 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudTasksQueueStackdriverLoggingConfig | undefined {
@@ -605,10 +601,9 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudTasksQueueTimeouts | undefined {
@@ -701,7 +696,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_tasks_queue";
+  public static readonly tfResourceType = "google_cloud_tasks_queue";
 
   // ===========
   // INITIALIZER
@@ -718,7 +713,9 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_tasks_queue',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -790,7 +787,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // app_engine_routing_override - computed: false, optional: true, required: false
-  private _appEngineRoutingOverride = new CloudTasksQueueAppEngineRoutingOverrideOutputReference(this, "app_engine_routing_override", true);
+  private _appEngineRoutingOverride = new CloudTasksQueueAppEngineRoutingOverrideOutputReference(this, "app_engine_routing_override");
   public get appEngineRoutingOverride() {
     return this._appEngineRoutingOverride;
   }
@@ -806,7 +803,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // rate_limits - computed: false, optional: true, required: false
-  private _rateLimits = new CloudTasksQueueRateLimitsOutputReference(this, "rate_limits", true);
+  private _rateLimits = new CloudTasksQueueRateLimitsOutputReference(this, "rate_limits");
   public get rateLimits() {
     return this._rateLimits;
   }
@@ -822,7 +819,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // retry_config - computed: false, optional: true, required: false
-  private _retryConfig = new CloudTasksQueueRetryConfigOutputReference(this, "retry_config", true);
+  private _retryConfig = new CloudTasksQueueRetryConfigOutputReference(this, "retry_config");
   public get retryConfig() {
     return this._retryConfig;
   }
@@ -838,7 +835,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // stackdriver_logging_config - computed: false, optional: true, required: false
-  private _stackdriverLoggingConfig = new CloudTasksQueueStackdriverLoggingConfigOutputReference(this, "stackdriver_logging_config", true);
+  private _stackdriverLoggingConfig = new CloudTasksQueueStackdriverLoggingConfigOutputReference(this, "stackdriver_logging_config");
   public get stackdriverLoggingConfig() {
     return this._stackdriverLoggingConfig;
   }
@@ -854,7 +851,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudTasksQueueTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudTasksQueueTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

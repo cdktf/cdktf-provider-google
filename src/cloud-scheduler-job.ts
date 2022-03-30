@@ -129,10 +129,9 @@ export class CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobAppEngineHttpTargetAppEngineRouting | undefined {
@@ -279,10 +278,9 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobAppEngineHttpTarget | undefined {
@@ -392,7 +390,7 @@ export class CloudSchedulerJobAppEngineHttpTargetOutputReference extends cdktf.C
   }
 
   // app_engine_routing - computed: false, optional: true, required: false
-  private _appEngineRouting = new CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference(this, "app_engine_routing", true);
+  private _appEngineRouting = new CloudSchedulerJobAppEngineHttpTargetAppEngineRoutingOutputReference(this, "app_engine_routing");
   public get appEngineRouting() {
     return this._appEngineRouting;
   }
@@ -441,10 +439,9 @@ export class CloudSchedulerJobHttpTargetOauthTokenOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobHttpTargetOauthToken | undefined {
@@ -537,10 +534,9 @@ export class CloudSchedulerJobHttpTargetOidcTokenOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobHttpTargetOidcToken | undefined {
@@ -664,10 +660,9 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobHttpTarget | undefined {
@@ -783,7 +778,7 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
 
   // oauth_token - computed: false, optional: true, required: false
-  private _oauthToken = new CloudSchedulerJobHttpTargetOauthTokenOutputReference(this, "oauth_token", true);
+  private _oauthToken = new CloudSchedulerJobHttpTargetOauthTokenOutputReference(this, "oauth_token");
   public get oauthToken() {
     return this._oauthToken;
   }
@@ -799,7 +794,7 @@ export class CloudSchedulerJobHttpTargetOutputReference extends cdktf.ComplexObj
   }
 
   // oidc_token - computed: false, optional: true, required: false
-  private _oidcToken = new CloudSchedulerJobHttpTargetOidcTokenOutputReference(this, "oidc_token", true);
+  private _oidcToken = new CloudSchedulerJobHttpTargetOidcTokenOutputReference(this, "oidc_token");
   public get oidcToken() {
     return this._oidcToken;
   }
@@ -860,10 +855,9 @@ export class CloudSchedulerJobPubsubTargetOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobPubsubTarget | undefined {
@@ -1006,10 +1000,9 @@ export class CloudSchedulerJobRetryConfigOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobRetryConfig | undefined {
@@ -1170,10 +1163,9 @@ export class CloudSchedulerJobTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudSchedulerJobTimeouts | undefined {
@@ -1266,7 +1258,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_scheduler_job";
+  public static readonly tfResourceType = "google_cloud_scheduler_job";
 
   // ===========
   // INITIALIZER
@@ -1283,7 +1275,9 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_scheduler_job',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1423,7 +1417,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
 
   // app_engine_http_target - computed: false, optional: true, required: false
-  private _appEngineHttpTarget = new CloudSchedulerJobAppEngineHttpTargetOutputReference(this, "app_engine_http_target", true);
+  private _appEngineHttpTarget = new CloudSchedulerJobAppEngineHttpTargetOutputReference(this, "app_engine_http_target");
   public get appEngineHttpTarget() {
     return this._appEngineHttpTarget;
   }
@@ -1439,7 +1433,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
 
   // http_target - computed: false, optional: true, required: false
-  private _httpTarget = new CloudSchedulerJobHttpTargetOutputReference(this, "http_target", true);
+  private _httpTarget = new CloudSchedulerJobHttpTargetOutputReference(this, "http_target");
   public get httpTarget() {
     return this._httpTarget;
   }
@@ -1455,7 +1449,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
 
   // pubsub_target - computed: false, optional: true, required: false
-  private _pubsubTarget = new CloudSchedulerJobPubsubTargetOutputReference(this, "pubsub_target", true);
+  private _pubsubTarget = new CloudSchedulerJobPubsubTargetOutputReference(this, "pubsub_target");
   public get pubsubTarget() {
     return this._pubsubTarget;
   }
@@ -1471,7 +1465,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
 
   // retry_config - computed: false, optional: true, required: false
-  private _retryConfig = new CloudSchedulerJobRetryConfigOutputReference(this, "retry_config", true);
+  private _retryConfig = new CloudSchedulerJobRetryConfigOutputReference(this, "retry_config");
   public get retryConfig() {
     return this._retryConfig;
   }
@@ -1487,7 +1481,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudSchedulerJobTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudSchedulerJobTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -171,10 +171,9 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudfunctionsFunctionEventTriggerFailurePolicy | undefined {
@@ -250,10 +249,9 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudfunctionsFunctionEventTrigger | undefined {
@@ -316,7 +314,7 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
   }
 
   // failure_policy - computed: false, optional: true, required: false
-  private _failurePolicy = new CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(this, "failure_policy", true);
+  private _failurePolicy = new CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference(this, "failure_policy");
   public get failurePolicy() {
     return this._failurePolicy;
   }
@@ -356,10 +354,9 @@ export class CloudfunctionsFunctionSourceRepositoryOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudfunctionsFunctionSourceRepository | undefined {
@@ -439,10 +436,9 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudfunctionsFunctionTimeouts | undefined {
@@ -557,7 +553,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloudfunctions_function";
+  public static readonly tfResourceType = "google_cloudfunctions_function";
 
   // ===========
   // INITIALIZER
@@ -574,7 +570,9 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -930,7 +928,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // event_trigger - computed: false, optional: true, required: false
-  private _eventTrigger = new CloudfunctionsFunctionEventTriggerOutputReference(this, "event_trigger", true);
+  private _eventTrigger = new CloudfunctionsFunctionEventTriggerOutputReference(this, "event_trigger");
   public get eventTrigger() {
     return this._eventTrigger;
   }
@@ -946,7 +944,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // source_repository - computed: false, optional: true, required: false
-  private _sourceRepository = new CloudfunctionsFunctionSourceRepositoryOutputReference(this, "source_repository", true);
+  private _sourceRepository = new CloudfunctionsFunctionSourceRepositoryOutputReference(this, "source_repository");
   public get sourceRepository() {
     return this._sourceRepository;
   }
@@ -962,7 +960,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudfunctionsFunctionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudfunctionsFunctionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

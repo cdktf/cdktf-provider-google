@@ -18,7 +18,45 @@ groups or customers/{customer_id} for Google Groups.
   */
   readonly parent: string;
 }
-export class DataGoogleCloudIdentityGroupsGroupsGroupKey extends cdktf.ComplexComputedList {
+export interface DataGoogleCloudIdentityGroupsGroupsGroupKey {
+}
+
+export function dataGoogleCloudIdentityGroupsGroupsGroupKeyToTerraform(struct?: DataGoogleCloudIdentityGroupsGroupsGroupKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudIdentityGroupsGroupsGroupKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudIdentityGroupsGroupsGroupKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudIdentityGroupsGroupsGroupKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -30,7 +68,64 @@ export class DataGoogleCloudIdentityGroupsGroupsGroupKey extends cdktf.ComplexCo
     return this.getStringAttribute('namespace');
   }
 }
-export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedList {
+
+export class DataGoogleCloudIdentityGroupsGroupsGroupKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudIdentityGroupsGroupsGroupKeyOutputReference {
+    return new DataGoogleCloudIdentityGroupsGroupsGroupKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudIdentityGroupsGroups {
+}
+
+export function dataGoogleCloudIdentityGroupsGroupsToTerraform(struct?: DataGoogleCloudIdentityGroupsGroups): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudIdentityGroupsGroupsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudIdentityGroupsGroups | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudIdentityGroupsGroups | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -48,9 +143,9 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
   }
 
   // group_key - computed: true, optional: false, required: false
+  private _groupKey = new DataGoogleCloudIdentityGroupsGroupsGroupKeyList(this, "group_key", false);
   public get groupKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_key');
+    return this._groupKey;
   }
 
   // initial_group_config - computed: true, optional: false, required: false
@@ -59,8 +154,8 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
   }
 
   // labels - computed: true, optional: false, required: false
-  public get labels() {
-    return this.getStringMapAttribute('labels');
+  public labels(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // name - computed: true, optional: false, required: false
@@ -79,6 +174,25 @@ export class DataGoogleCloudIdentityGroupsGroups extends cdktf.ComplexComputedLi
   }
 }
 
+export class DataGoogleCloudIdentityGroupsGroupsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudIdentityGroupsGroupsOutputReference {
+    return new DataGoogleCloudIdentityGroupsGroupsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/cloud_identity_groups google_cloud_identity_groups}
 */
@@ -87,7 +201,7 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_identity_groups";
+  public static readonly tfResourceType = "google_cloud_identity_groups";
 
   // ===========
   // INITIALIZER
@@ -104,7 +218,9 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_identity_groups',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -119,8 +235,9 @@ export class DataGoogleCloudIdentityGroups extends cdktf.TerraformDataSource {
   // ==========
 
   // groups - computed: true, optional: false, required: false
-  public groups(index: string) {
-    return new DataGoogleCloudIdentityGroupsGroups(this, 'groups', index, false);
+  private _groups = new DataGoogleCloudIdentityGroupsGroupsList(this, "groups", false);
+  public get groups() {
+    return this._groups;
   }
 
   // id - computed: true, optional: true, required: false

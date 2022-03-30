@@ -18,19 +18,114 @@ export interface DataGoogleSecretManagerSecretConfig extends cdktf.TerraformMeta
   */
   readonly secretId: string;
 }
-export class DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption extends cdktf.ComplexComputedList {
+export interface DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption {
+}
+
+export function dataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionToTerraform(struct?: DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // kms_key_name - computed: true, optional: false, required: false
   public get kmsKeyName() {
     return this.getStringAttribute('kms_key_name');
   }
 }
-export class DataGoogleSecretManagerSecretReplicationUserManagedReplicas extends cdktf.ComplexComputedList {
+
+export class DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference {
+    return new DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSecretManagerSecretReplicationUserManagedReplicas {
+}
+
+export function dataGoogleSecretManagerSecretReplicationUserManagedReplicasToTerraform(struct?: DataGoogleSecretManagerSecretReplicationUserManagedReplicas): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSecretManagerSecretReplicationUserManagedReplicasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSecretManagerSecretReplicationUserManagedReplicas | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSecretManagerSecretReplicationUserManagedReplicas | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // customer_managed_encryption - computed: true, optional: false, required: false
+  private _customerManagedEncryption = new DataGoogleSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionList(this, "customer_managed_encryption", false);
   public get customerManagedEncryption() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('customer_managed_encryption');
+    return this._customerManagedEncryption;
   }
 
   // location - computed: true, optional: false, required: false
@@ -38,15 +133,129 @@ export class DataGoogleSecretManagerSecretReplicationUserManagedReplicas extends
     return this.getStringAttribute('location');
   }
 }
-export class DataGoogleSecretManagerSecretReplicationUserManaged extends cdktf.ComplexComputedList {
 
-  // replicas - computed: true, optional: false, required: false
-  public get replicas() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('replicas');
+export class DataGoogleSecretManagerSecretReplicationUserManagedReplicasList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSecretManagerSecretReplicationUserManagedReplicasOutputReference {
+    return new DataGoogleSecretManagerSecretReplicationUserManagedReplicasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export class DataGoogleSecretManagerSecretReplication extends cdktf.ComplexComputedList {
+export interface DataGoogleSecretManagerSecretReplicationUserManaged {
+}
+
+export function dataGoogleSecretManagerSecretReplicationUserManagedToTerraform(struct?: DataGoogleSecretManagerSecretReplicationUserManaged): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSecretManagerSecretReplicationUserManagedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSecretManagerSecretReplicationUserManaged | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSecretManagerSecretReplicationUserManaged | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // replicas - computed: true, optional: false, required: false
+  private _replicas = new DataGoogleSecretManagerSecretReplicationUserManagedReplicasList(this, "replicas", false);
+  public get replicas() {
+    return this._replicas;
+  }
+}
+
+export class DataGoogleSecretManagerSecretReplicationUserManagedList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSecretManagerSecretReplicationUserManagedOutputReference {
+    return new DataGoogleSecretManagerSecretReplicationUserManagedOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSecretManagerSecretReplication {
+}
+
+export function dataGoogleSecretManagerSecretReplicationToTerraform(struct?: DataGoogleSecretManagerSecretReplication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSecretManagerSecretReplicationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSecretManagerSecretReplication | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSecretManagerSecretReplication | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // automatic - computed: true, optional: false, required: false
   public get automatic() {
@@ -54,12 +263,69 @@ export class DataGoogleSecretManagerSecretReplication extends cdktf.ComplexCompu
   }
 
   // user_managed - computed: true, optional: false, required: false
+  private _userManaged = new DataGoogleSecretManagerSecretReplicationUserManagedList(this, "user_managed", false);
   public get userManaged() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_managed');
+    return this._userManaged;
   }
 }
-export class DataGoogleSecretManagerSecretRotation extends cdktf.ComplexComputedList {
+
+export class DataGoogleSecretManagerSecretReplicationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSecretManagerSecretReplicationOutputReference {
+    return new DataGoogleSecretManagerSecretReplicationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSecretManagerSecretRotation {
+}
+
+export function dataGoogleSecretManagerSecretRotationToTerraform(struct?: DataGoogleSecretManagerSecretRotation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSecretManagerSecretRotationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSecretManagerSecretRotation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSecretManagerSecretRotation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // next_rotation_time - computed: true, optional: false, required: false
   public get nextRotationTime() {
@@ -71,11 +337,87 @@ export class DataGoogleSecretManagerSecretRotation extends cdktf.ComplexComputed
     return this.getStringAttribute('rotation_period');
   }
 }
-export class DataGoogleSecretManagerSecretTopics extends cdktf.ComplexComputedList {
+
+export class DataGoogleSecretManagerSecretRotationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSecretManagerSecretRotationOutputReference {
+    return new DataGoogleSecretManagerSecretRotationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSecretManagerSecretTopics {
+}
+
+export function dataGoogleSecretManagerSecretTopicsToTerraform(struct?: DataGoogleSecretManagerSecretTopics): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSecretManagerSecretTopicsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSecretManagerSecretTopics | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSecretManagerSecretTopics | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
+  }
+}
+
+export class DataGoogleSecretManagerSecretTopicsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSecretManagerSecretTopicsOutputReference {
+    return new DataGoogleSecretManagerSecretTopicsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -87,7 +429,7 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_secret_manager_secret";
+  public static readonly tfResourceType = "google_secret_manager_secret";
 
   // ===========
   // INITIALIZER
@@ -104,7 +446,9 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_secret_manager_secret',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -161,13 +505,15 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   }
 
   // replication - computed: true, optional: false, required: false
-  public replication(index: string) {
-    return new DataGoogleSecretManagerSecretReplication(this, 'replication', index, false);
+  private _replication = new DataGoogleSecretManagerSecretReplicationList(this, "replication", false);
+  public get replication() {
+    return this._replication;
   }
 
   // rotation - computed: true, optional: false, required: false
-  public rotation(index: string) {
-    return new DataGoogleSecretManagerSecretRotation(this, 'rotation', index, false);
+  private _rotation = new DataGoogleSecretManagerSecretRotationList(this, "rotation", false);
+  public get rotation() {
+    return this._rotation;
   }
 
   // secret_id - computed: false, optional: false, required: true
@@ -184,8 +530,9 @@ export class DataGoogleSecretManagerSecret extends cdktf.TerraformDataSource {
   }
 
   // topics - computed: true, optional: false, required: false
-  public topics(index: string) {
-    return new DataGoogleSecretManagerSecretTopics(this, 'topics', index, false);
+  private _topics = new DataGoogleSecretManagerSecretTopicsList(this, "topics", false);
+  public get topics() {
+    return this._topics;
   }
 
   // ttl - computed: true, optional: false, required: false

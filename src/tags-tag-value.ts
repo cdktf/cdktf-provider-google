@@ -67,10 +67,9 @@ export class TagsTagValueTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): TagsTagValueTimeouts | undefined {
@@ -163,7 +162,7 @@ export class TagsTagValue extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_tags_tag_value";
+  public static readonly tfResourceType = "google_tags_tag_value";
 
   // ===========
   // INITIALIZER
@@ -180,7 +179,9 @@ export class TagsTagValue extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_tags_tag_value',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -265,7 +266,7 @@ export class TagsTagValue extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TagsTagValueTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new TagsTagValueTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

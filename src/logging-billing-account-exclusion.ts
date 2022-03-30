@@ -45,7 +45,7 @@ export class LoggingBillingAccountExclusion extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_logging_billing_account_exclusion";
+  public static readonly tfResourceType = "google_logging_billing_account_exclusion";
 
   // ===========
   // INITIALIZER
@@ -62,7 +62,9 @@ export class LoggingBillingAccountExclusion extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_logging_billing_account_exclusion',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -82,10 +82,9 @@ export class HealthcareDicomStoreNotificationConfigOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HealthcareDicomStoreNotificationConfig | undefined {
@@ -155,10 +154,9 @@ export class HealthcareDicomStoreTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HealthcareDicomStoreTimeouts | undefined {
@@ -251,7 +249,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_healthcare_dicom_store";
+  public static readonly tfResourceType = "google_healthcare_dicom_store";
 
   // ===========
   // INITIALIZER
@@ -268,7 +266,9 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_healthcare_dicom_store',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -339,7 +339,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // notification_config - computed: false, optional: true, required: false
-  private _notificationConfig = new HealthcareDicomStoreNotificationConfigOutputReference(this, "notification_config", true);
+  private _notificationConfig = new HealthcareDicomStoreNotificationConfigOutputReference(this, "notification_config");
   public get notificationConfig() {
     return this._notificationConfig;
   }
@@ -355,7 +355,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HealthcareDicomStoreTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new HealthcareDicomStoreTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

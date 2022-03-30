@@ -64,10 +64,9 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector | undefined {
@@ -166,10 +165,9 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): GameServicesGameServerDeploymentRolloutTimeouts | undefined {
@@ -262,7 +260,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_game_services_game_server_deployment_rollout";
+  public static readonly tfResourceType = "google_game_services_game_server_deployment_rollout";
 
   // ===========
   // INITIALIZER
@@ -279,7 +277,9 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
     super(scope, id, {
       terraformResourceType: 'google_game_services_game_server_deployment_rollout',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -367,7 +367,7 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new GameServicesGameServerDeploymentRolloutTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -25,7 +25,7 @@ export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_tpu_tensorflow_versions";
+  public static readonly tfResourceType = "google_tpu_tensorflow_versions";
 
   // ===========
   // INITIALIZER
@@ -42,7 +42,9 @@ export class DataGoogleTpuTensorflowVersions extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_tpu_tensorflow_versions',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

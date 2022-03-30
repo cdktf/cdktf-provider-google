@@ -129,10 +129,9 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableEncryptionConfiguration | undefined {
@@ -234,10 +233,9 @@ export class BigqueryTableExternalDataConfigurationCsvOptionsOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableExternalDataConfigurationCsvOptions | undefined {
@@ -416,10 +414,9 @@ export class BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableExternalDataConfigurationGoogleSheetsOptions | undefined {
@@ -520,10 +517,9 @@ export class BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableExternalDataConfigurationHivePartitioningOptions | undefined {
@@ -695,10 +691,9 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableExternalDataConfiguration | undefined {
@@ -880,7 +875,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   // csv_options - computed: false, optional: true, required: false
-  private _csvOptions = new BigqueryTableExternalDataConfigurationCsvOptionsOutputReference(this, "csv_options", true);
+  private _csvOptions = new BigqueryTableExternalDataConfigurationCsvOptionsOutputReference(this, "csv_options");
   public get csvOptions() {
     return this._csvOptions;
   }
@@ -896,7 +891,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   // google_sheets_options - computed: false, optional: true, required: false
-  private _googleSheetsOptions = new BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference(this, "google_sheets_options", true);
+  private _googleSheetsOptions = new BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference(this, "google_sheets_options");
   public get googleSheetsOptions() {
     return this._googleSheetsOptions;
   }
@@ -912,7 +907,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   }
 
   // hive_partitioning_options - computed: false, optional: true, required: false
-  private _hivePartitioningOptions = new BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference(this, "hive_partitioning_options", true);
+  private _hivePartitioningOptions = new BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference(this, "hive_partitioning_options");
   public get hivePartitioningOptions() {
     return this._hivePartitioningOptions;
   }
@@ -966,10 +961,9 @@ export class BigqueryTableMaterializedViewOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableMaterializedView | undefined {
@@ -1089,10 +1083,9 @@ export class BigqueryTableRangePartitioningRangeOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableRangePartitioningRange | undefined {
@@ -1199,10 +1192,9 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableRangePartitioning | undefined {
@@ -1246,7 +1238,7 @@ export class BigqueryTableRangePartitioningOutputReference extends cdktf.Complex
   }
 
   // range - computed: false, optional: false, required: true
-  private _range = new BigqueryTableRangePartitioningRangeOutputReference(this, "range", true);
+  private _range = new BigqueryTableRangePartitioningRangeOutputReference(this, "range");
   public get range() {
     return this._range;
   }
@@ -1304,10 +1296,9 @@ export class BigqueryTableTimePartitioningOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableTimePartitioning | undefined {
@@ -1442,10 +1433,9 @@ export class BigqueryTableViewOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigqueryTableView | undefined {
@@ -1513,7 +1503,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_bigquery_table";
+  public static readonly tfResourceType = "google_bigquery_table";
 
   // ===========
   // INITIALIZER
@@ -1530,7 +1520,9 @@ export class BigqueryTable extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_bigquery_table',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1764,7 +1756,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new BigqueryTableEncryptionConfigurationOutputReference(this, "encryption_configuration", true);
+  private _encryptionConfiguration = new BigqueryTableEncryptionConfigurationOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
@@ -1780,7 +1772,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // external_data_configuration - computed: false, optional: true, required: false
-  private _externalDataConfiguration = new BigqueryTableExternalDataConfigurationOutputReference(this, "external_data_configuration", true);
+  private _externalDataConfiguration = new BigqueryTableExternalDataConfigurationOutputReference(this, "external_data_configuration");
   public get externalDataConfiguration() {
     return this._externalDataConfiguration;
   }
@@ -1796,7 +1788,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // materialized_view - computed: false, optional: true, required: false
-  private _materializedView = new BigqueryTableMaterializedViewOutputReference(this, "materialized_view", true);
+  private _materializedView = new BigqueryTableMaterializedViewOutputReference(this, "materialized_view");
   public get materializedView() {
     return this._materializedView;
   }
@@ -1812,7 +1804,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // range_partitioning - computed: false, optional: true, required: false
-  private _rangePartitioning = new BigqueryTableRangePartitioningOutputReference(this, "range_partitioning", true);
+  private _rangePartitioning = new BigqueryTableRangePartitioningOutputReference(this, "range_partitioning");
   public get rangePartitioning() {
     return this._rangePartitioning;
   }
@@ -1828,7 +1820,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // time_partitioning - computed: false, optional: true, required: false
-  private _timePartitioning = new BigqueryTableTimePartitioningOutputReference(this, "time_partitioning", true);
+  private _timePartitioning = new BigqueryTableTimePartitioningOutputReference(this, "time_partitioning");
   public get timePartitioning() {
     return this._timePartitioning;
   }
@@ -1844,7 +1836,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // view - computed: false, optional: true, required: false
-  private _view = new BigqueryTableViewOutputReference(this, "view", true);
+  private _view = new BigqueryTableViewOutputReference(this, "view");
   public get view() {
     return this._view;
   }

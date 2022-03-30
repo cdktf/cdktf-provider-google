@@ -156,10 +156,9 @@ export class MonitoringMetricDescriptorMetadataOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringMetricDescriptorMetadata | undefined {
@@ -254,10 +253,9 @@ export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringMetricDescriptorTimeouts | undefined {
@@ -350,7 +348,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_monitoring_metric_descriptor";
+  public static readonly tfResourceType = "google_monitoring_metric_descriptor";
 
   // ===========
   // INITIALIZER
@@ -367,7 +365,9 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_metric_descriptor',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -537,7 +537,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata = new MonitoringMetricDescriptorMetadataOutputReference(this, "metadata", true);
+  private _metadata = new MonitoringMetricDescriptorMetadataOutputReference(this, "metadata");
   public get metadata() {
     return this._metadata;
   }
@@ -553,7 +553,7 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringMetricDescriptorTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitoringMetricDescriptorTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

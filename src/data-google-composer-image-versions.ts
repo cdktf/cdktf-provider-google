@@ -16,7 +16,45 @@ export interface DataGoogleComposerImageVersionsConfig extends cdktf.TerraformMe
   */
   readonly region?: string;
 }
-export class DataGoogleComposerImageVersionsImageVersions extends cdktf.ComplexComputedList {
+export interface DataGoogleComposerImageVersionsImageVersions {
+}
+
+export function dataGoogleComposerImageVersionsImageVersionsToTerraform(struct?: DataGoogleComposerImageVersionsImageVersions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerImageVersionsImageVersionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerImageVersionsImageVersions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerImageVersionsImageVersions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // image_version_id - computed: true, optional: false, required: false
   public get imageVersionId() {
@@ -29,6 +67,25 @@ export class DataGoogleComposerImageVersionsImageVersions extends cdktf.ComplexC
   }
 }
 
+export class DataGoogleComposerImageVersionsImageVersionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerImageVersionsImageVersionsOutputReference {
+    return new DataGoogleComposerImageVersionsImageVersionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions google_composer_image_versions}
 */
@@ -37,7 +94,7 @@ export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_composer_image_versions";
+  public static readonly tfResourceType = "google_composer_image_versions";
 
   // ===========
   // INITIALIZER
@@ -54,7 +111,9 @@ export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_composer_image_versions',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -75,8 +134,9 @@ export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
   }
 
   // image_versions - computed: true, optional: false, required: false
-  public imageVersions(index: string) {
-    return new DataGoogleComposerImageVersionsImageVersions(this, 'image_versions', index, false);
+  private _imageVersions = new DataGoogleComposerImageVersionsImageVersionsList(this, "image_versions", false);
+  public get imageVersions() {
+    return this._imageVersions;
   }
 
   // project - computed: true, optional: true, required: false

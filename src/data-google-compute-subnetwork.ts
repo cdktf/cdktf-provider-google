@@ -24,7 +24,45 @@ export interface DataGoogleComputeSubnetworkConfig extends cdktf.TerraformMetaAr
   */
   readonly selfLink?: string;
 }
-export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexComputedList {
+export interface DataGoogleComputeSubnetworkSecondaryIpRange {
+}
+
+export function dataGoogleComputeSubnetworkSecondaryIpRangeToTerraform(struct?: DataGoogleComputeSubnetworkSecondaryIpRange): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeSubnetworkSecondaryIpRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeSubnetworkSecondaryIpRange | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeSubnetworkSecondaryIpRange | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ip_cidr_range - computed: true, optional: false, required: false
   public get ipCidrRange() {
@@ -37,6 +75,25 @@ export class DataGoogleComputeSubnetworkSecondaryIpRange extends cdktf.ComplexCo
   }
 }
 
+export class DataGoogleComputeSubnetworkSecondaryIpRangeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeSubnetworkSecondaryIpRangeOutputReference {
+    return new DataGoogleComputeSubnetworkSecondaryIpRangeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_subnetwork google_compute_subnetwork}
 */
@@ -45,7 +102,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_subnetwork";
+  public static readonly tfResourceType = "google_compute_subnetwork";
 
   // ===========
   // INITIALIZER
@@ -62,7 +119,9 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_compute_subnetwork',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -158,8 +217,9 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
   }
 
   // secondary_ip_range - computed: true, optional: false, required: false
-  public secondaryIpRange(index: string) {
-    return new DataGoogleComputeSubnetworkSecondaryIpRange(this, 'secondary_ip_range', index, false);
+  private _secondaryIpRange = new DataGoogleComputeSubnetworkSecondaryIpRangeList(this, "secondary_ip_range", false);
+  public get secondaryIpRange() {
+    return this._secondaryIpRange;
   }
 
   // self_link - computed: true, optional: true, required: false

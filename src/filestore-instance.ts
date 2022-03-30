@@ -93,10 +93,9 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FilestoreInstanceFileShares | undefined {
@@ -221,10 +220,9 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FilestoreInstanceTimeouts | undefined {
@@ -317,7 +315,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_filestore_instance";
+  public static readonly tfResourceType = "google_filestore_instance";
 
   // ===========
   // INITIALIZER
@@ -334,7 +332,9 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -459,7 +459,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // file_shares - computed: false, optional: false, required: true
-  private _fileShares = new FilestoreInstanceFileSharesOutputReference(this, "file_shares", true);
+  private _fileShares = new FilestoreInstanceFileSharesOutputReference(this, "file_shares");
   public get fileShares() {
     return this._fileShares;
   }
@@ -486,7 +486,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FilestoreInstanceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new FilestoreInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

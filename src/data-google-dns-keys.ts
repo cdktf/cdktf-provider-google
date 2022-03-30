@@ -16,7 +16,45 @@ export interface DataGoogleDnsKeysConfig extends cdktf.TerraformMetaArguments {
   */
   readonly project?: string;
 }
-export class DataGoogleDnsKeysKeySigningKeysDigests extends cdktf.ComplexComputedList {
+export interface DataGoogleDnsKeysKeySigningKeysDigests {
+}
+
+export function dataGoogleDnsKeysKeySigningKeysDigestsToTerraform(struct?: DataGoogleDnsKeysKeySigningKeysDigests): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDnsKeysKeySigningKeysDigestsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDnsKeysKeySigningKeysDigests | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDnsKeysKeySigningKeysDigests | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // digest - computed: true, optional: false, required: false
   public get digest() {
@@ -28,7 +66,64 @@ export class DataGoogleDnsKeysKeySigningKeysDigests extends cdktf.ComplexCompute
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
+
+export class DataGoogleDnsKeysKeySigningKeysDigestsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDnsKeysKeySigningKeysDigestsOutputReference {
+    return new DataGoogleDnsKeysKeySigningKeysDigestsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleDnsKeysKeySigningKeys {
+}
+
+export function dataGoogleDnsKeysKeySigningKeysToTerraform(struct?: DataGoogleDnsKeysKeySigningKeys): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDnsKeysKeySigningKeysOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDnsKeysKeySigningKeys | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDnsKeysKeySigningKeys | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
@@ -46,9 +141,9 @@ export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
   }
 
   // digests - computed: true, optional: false, required: false
+  private _digests = new DataGoogleDnsKeysKeySigningKeysDigestsList(this, "digests", false);
   public get digests() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('digests');
+    return this._digests;
   }
 
   // ds_record - computed: true, optional: false, required: false
@@ -81,7 +176,64 @@ export class DataGoogleDnsKeysKeySigningKeys extends cdktf.ComplexComputedList {
     return this.getStringAttribute('public_key');
   }
 }
-export class DataGoogleDnsKeysZoneSigningKeysDigests extends cdktf.ComplexComputedList {
+
+export class DataGoogleDnsKeysKeySigningKeysList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDnsKeysKeySigningKeysOutputReference {
+    return new DataGoogleDnsKeysKeySigningKeysOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleDnsKeysZoneSigningKeysDigests {
+}
+
+export function dataGoogleDnsKeysZoneSigningKeysDigestsToTerraform(struct?: DataGoogleDnsKeysZoneSigningKeysDigests): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDnsKeysZoneSigningKeysDigestsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDnsKeysZoneSigningKeysDigests | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDnsKeysZoneSigningKeysDigests | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // digest - computed: true, optional: false, required: false
   public get digest() {
@@ -93,7 +245,64 @@ export class DataGoogleDnsKeysZoneSigningKeysDigests extends cdktf.ComplexComput
     return this.getStringAttribute('type');
   }
 }
-export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList {
+
+export class DataGoogleDnsKeysZoneSigningKeysDigestsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDnsKeysZoneSigningKeysDigestsOutputReference {
+    return new DataGoogleDnsKeysZoneSigningKeysDigestsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleDnsKeysZoneSigningKeys {
+}
+
+export function dataGoogleDnsKeysZoneSigningKeysToTerraform(struct?: DataGoogleDnsKeysZoneSigningKeys): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDnsKeysZoneSigningKeysOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDnsKeysZoneSigningKeys | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDnsKeysZoneSigningKeys | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // algorithm - computed: true, optional: false, required: false
   public get algorithm() {
@@ -111,9 +320,9 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
   }
 
   // digests - computed: true, optional: false, required: false
+  private _digests = new DataGoogleDnsKeysZoneSigningKeysDigestsList(this, "digests", false);
   public get digests() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('digests');
+    return this._digests;
   }
 
   // id - computed: true, optional: false, required: false
@@ -142,6 +351,25 @@ export class DataGoogleDnsKeysZoneSigningKeys extends cdktf.ComplexComputedList 
   }
 }
 
+export class DataGoogleDnsKeysZoneSigningKeysList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDnsKeysZoneSigningKeysOutputReference {
+    return new DataGoogleDnsKeysZoneSigningKeysOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_keys google_dns_keys}
 */
@@ -150,7 +378,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_dns_keys";
+  public static readonly tfResourceType = "google_dns_keys";
 
   // ===========
   // INITIALIZER
@@ -167,7 +395,9 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_dns_keys',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -188,8 +418,9 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   }
 
   // key_signing_keys - computed: true, optional: false, required: false
-  public keySigningKeys(index: string) {
-    return new DataGoogleDnsKeysKeySigningKeys(this, 'key_signing_keys', index, false);
+  private _keySigningKeys = new DataGoogleDnsKeysKeySigningKeysList(this, "key_signing_keys", false);
+  public get keySigningKeys() {
+    return this._keySigningKeys;
   }
 
   // managed_zone - computed: false, optional: false, required: true
@@ -222,8 +453,9 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   }
 
   // zone_signing_keys - computed: true, optional: false, required: false
-  public zoneSigningKeys(index: string) {
-    return new DataGoogleDnsKeysZoneSigningKeys(this, 'zone_signing_keys', index, false);
+  private _zoneSigningKeys = new DataGoogleDnsKeysZoneSigningKeysList(this, "zone_signing_keys", false);
+  public get zoneSigningKeys() {
+    return this._zoneSigningKeys;
   }
 
   // =========

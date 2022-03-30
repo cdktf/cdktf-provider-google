@@ -44,7 +44,45 @@ export interface EndpointsServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: EndpointsServiceTimeouts;
 }
-export class EndpointsServiceApisMethods extends cdktf.ComplexComputedList {
+export interface EndpointsServiceApisMethods {
+}
+
+export function endpointsServiceApisMethodsToTerraform(struct?: EndpointsServiceApisMethods): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class EndpointsServiceApisMethodsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EndpointsServiceApisMethods | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EndpointsServiceApisMethods | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -66,12 +104,69 @@ export class EndpointsServiceApisMethods extends cdktf.ComplexComputedList {
     return this.getStringAttribute('syntax');
   }
 }
-export class EndpointsServiceApis extends cdktf.ComplexComputedList {
+
+export class EndpointsServiceApisMethodsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EndpointsServiceApisMethodsOutputReference {
+    return new EndpointsServiceApisMethodsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EndpointsServiceApis {
+}
+
+export function endpointsServiceApisToTerraform(struct?: EndpointsServiceApis): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class EndpointsServiceApisOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EndpointsServiceApis | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EndpointsServiceApis | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // methods - computed: true, optional: false, required: false
+  private _methods = new EndpointsServiceApisMethodsList(this, "methods", false);
   public get methods() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('methods');
+    return this._methods;
   }
 
   // name - computed: true, optional: false, required: false
@@ -89,7 +184,64 @@ export class EndpointsServiceApis extends cdktf.ComplexComputedList {
     return this.getStringAttribute('version');
   }
 }
-export class EndpointsServiceEndpoints extends cdktf.ComplexComputedList {
+
+export class EndpointsServiceApisList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EndpointsServiceApisOutputReference {
+    return new EndpointsServiceApisOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface EndpointsServiceEndpoints {
+}
+
+export function endpointsServiceEndpointsToTerraform(struct?: EndpointsServiceEndpoints): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class EndpointsServiceEndpointsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EndpointsServiceEndpoints | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EndpointsServiceEndpoints | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // address - computed: true, optional: false, required: false
   public get address() {
@@ -99,6 +251,25 @@ export class EndpointsServiceEndpoints extends cdktf.ComplexComputedList {
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
+  }
+}
+
+export class EndpointsServiceEndpointsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EndpointsServiceEndpointsOutputReference {
+    return new EndpointsServiceEndpointsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface EndpointsServiceTimeouts {
@@ -134,10 +305,9 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EndpointsServiceTimeouts | undefined {
@@ -230,7 +400,7 @@ export class EndpointsService extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_endpoints_service";
+  public static readonly tfResourceType = "google_endpoints_service";
 
   // ===========
   // INITIALIZER
@@ -247,7 +417,9 @@ export class EndpointsService extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_endpoints_service',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -267,8 +439,9 @@ export class EndpointsService extends cdktf.TerraformResource {
   // ==========
 
   // apis - computed: true, optional: false, required: false
-  public apis(index: string) {
-    return new EndpointsServiceApis(this, 'apis', index, false);
+  private _apis = new EndpointsServiceApisList(this, "apis", false);
+  public get apis() {
+    return this._apis;
   }
 
   // config_id - computed: true, optional: false, required: false
@@ -282,8 +455,9 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // endpoints - computed: true, optional: false, required: false
-  public endpoints(index: string) {
-    return new EndpointsServiceEndpoints(this, 'endpoints', index, false);
+  private _endpoints = new EndpointsServiceEndpointsList(this, "endpoints", false);
+  public get endpoints() {
+    return this._endpoints;
   }
 
   // grpc_config - computed: false, optional: true, required: false
@@ -369,7 +543,7 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EndpointsServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new EndpointsServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -117,10 +117,9 @@ export class ComputeRegionNetworkEndpointGroupAppEngineOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupAppEngine | undefined {
@@ -244,10 +243,9 @@ export class ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupCloudFunction | undefined {
@@ -360,10 +358,9 @@ export class ComputeRegionNetworkEndpointGroupCloudRunOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupCloudRun | undefined {
@@ -475,10 +472,9 @@ export class ComputeRegionNetworkEndpointGroupTimeoutsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRegionNetworkEndpointGroupTimeouts | undefined {
@@ -549,7 +545,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_region_network_endpoint_group";
+  public static readonly tfResourceType = "google_compute_region_network_endpoint_group";
 
   // ===========
   // INITIALIZER
@@ -566,7 +562,9 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_region_network_endpoint_group',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -673,7 +671,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // app_engine - computed: false, optional: true, required: false
-  private _appEngine = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this, "app_engine", true);
+  private _appEngine = new ComputeRegionNetworkEndpointGroupAppEngineOutputReference(this, "app_engine");
   public get appEngine() {
     return this._appEngine;
   }
@@ -689,7 +687,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // cloud_function - computed: false, optional: true, required: false
-  private _cloudFunction = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this, "cloud_function", true);
+  private _cloudFunction = new ComputeRegionNetworkEndpointGroupCloudFunctionOutputReference(this, "cloud_function");
   public get cloudFunction() {
     return this._cloudFunction;
   }
@@ -705,7 +703,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // cloud_run - computed: false, optional: true, required: false
-  private _cloudRun = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this, "cloud_run", true);
+  private _cloudRun = new ComputeRegionNetworkEndpointGroupCloudRunOutputReference(this, "cloud_run");
   public get cloudRun() {
     return this._cloudRun;
   }
@@ -721,7 +719,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeRegionNetworkEndpointGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

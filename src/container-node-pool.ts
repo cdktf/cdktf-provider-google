@@ -130,10 +130,9 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolAutoscaling | undefined {
@@ -221,10 +220,9 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolManagement | undefined {
@@ -372,10 +370,9 @@ export class ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolNodeConfigShieldedInstanceConfig | undefined {
@@ -469,10 +466,9 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolNodeConfigWorkloadMetadataConfig | undefined {
@@ -664,10 +660,9 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolNodeConfig | undefined {
@@ -1008,7 +1003,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
-  private _shieldedInstanceConfig = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config", true);
+  private _shieldedInstanceConfig = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
   }
@@ -1024,7 +1019,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // workload_metadata_config - computed: false, optional: true, required: false
-  private _workloadMetadataConfig = new ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(this, "workload_metadata_config", true);
+  private _workloadMetadataConfig = new ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference(this, "workload_metadata_config");
   public get workloadMetadataConfig() {
     return this._workloadMetadataConfig;
   }
@@ -1072,10 +1067,9 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolTimeouts | undefined {
@@ -1191,10 +1185,9 @@ export class ContainerNodePoolUpgradeSettingsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerNodePoolUpgradeSettings | undefined {
@@ -1259,7 +1252,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_container_node_pool";
+  public static readonly tfResourceType = "google_container_node_pool";
 
   // ===========
   // INITIALIZER
@@ -1276,7 +1269,9 @@ export class ContainerNodePool extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1477,7 +1472,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // autoscaling - computed: false, optional: true, required: false
-  private _autoscaling = new ContainerNodePoolAutoscalingOutputReference(this, "autoscaling", true);
+  private _autoscaling = new ContainerNodePoolAutoscalingOutputReference(this, "autoscaling");
   public get autoscaling() {
     return this._autoscaling;
   }
@@ -1493,7 +1488,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // management - computed: false, optional: true, required: false
-  private _management = new ContainerNodePoolManagementOutputReference(this, "management", true);
+  private _management = new ContainerNodePoolManagementOutputReference(this, "management");
   public get management() {
     return this._management;
   }
@@ -1509,7 +1504,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // node_config - computed: false, optional: true, required: false
-  private _nodeConfig = new ContainerNodePoolNodeConfigOutputReference(this, "node_config", true);
+  private _nodeConfig = new ContainerNodePoolNodeConfigOutputReference(this, "node_config");
   public get nodeConfig() {
     return this._nodeConfig;
   }
@@ -1525,7 +1520,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerNodePoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ContainerNodePoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1541,7 +1536,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings = new ContainerNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings", true);
+  private _upgradeSettings = new ContainerNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings");
   public get upgradeSettings() {
     return this._upgradeSettings;
   }

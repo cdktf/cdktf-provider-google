@@ -49,7 +49,7 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_storage_object_signed_url";
+  public static readonly tfResourceType = "google_storage_object_signed_url";
 
   // ===========
   // INITIALIZER
@@ -66,7 +66,9 @@ export class DataGoogleStorageObjectSignedUrl extends cdktf.TerraformDataSource 
     super(scope, id, {
       terraformResourceType: 'google_storage_object_signed_url',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -89,10 +89,9 @@ export class BigtableAppProfileSingleClusterRoutingOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigtableAppProfileSingleClusterRouting | undefined {
@@ -184,10 +183,9 @@ export class BigtableAppProfileTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BigtableAppProfileTimeouts | undefined {
@@ -280,7 +278,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_bigtable_app_profile";
+  public static readonly tfResourceType = "google_bigtable_app_profile";
 
   // ===========
   // INITIALIZER
@@ -297,7 +295,9 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_bigtable_app_profile',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -422,7 +422,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // single_cluster_routing - computed: false, optional: true, required: false
-  private _singleClusterRouting = new BigtableAppProfileSingleClusterRoutingOutputReference(this, "single_cluster_routing", true);
+  private _singleClusterRouting = new BigtableAppProfileSingleClusterRoutingOutputReference(this, "single_cluster_routing");
   public get singleClusterRouting() {
     return this._singleClusterRouting;
   }
@@ -438,7 +438,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BigtableAppProfileTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new BigtableAppProfileTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

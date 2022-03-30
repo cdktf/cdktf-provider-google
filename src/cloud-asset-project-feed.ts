@@ -119,10 +119,9 @@ export class CloudAssetProjectFeedConditionOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudAssetProjectFeedCondition | undefined {
@@ -250,10 +249,9 @@ export class CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudAssetProjectFeedFeedOutputConfigPubsubDestination | undefined {
@@ -315,10 +313,9 @@ export class CloudAssetProjectFeedFeedOutputConfigOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudAssetProjectFeedFeedOutputConfig | undefined {
@@ -343,7 +340,7 @@ export class CloudAssetProjectFeedFeedOutputConfigOutputReference extends cdktf.
   }
 
   // pubsub_destination - computed: false, optional: false, required: true
-  private _pubsubDestination = new CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference(this, "pubsub_destination", true);
+  private _pubsubDestination = new CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference(this, "pubsub_destination");
   public get pubsubDestination() {
     return this._pubsubDestination;
   }
@@ -388,10 +385,9 @@ export class CloudAssetProjectFeedTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudAssetProjectFeedTimeouts | undefined {
@@ -484,7 +480,7 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloud_asset_project_feed";
+  public static readonly tfResourceType = "google_cloud_asset_project_feed";
 
   // ===========
   // INITIALIZER
@@ -501,7 +497,9 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloud_asset_project_feed',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -627,7 +625,7 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new CloudAssetProjectFeedConditionOutputReference(this, "condition", true);
+  private _condition = new CloudAssetProjectFeedConditionOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }
@@ -643,7 +641,7 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
   }
 
   // feed_output_config - computed: false, optional: false, required: true
-  private _feedOutputConfig = new CloudAssetProjectFeedFeedOutputConfigOutputReference(this, "feed_output_config", true);
+  private _feedOutputConfig = new CloudAssetProjectFeedFeedOutputConfigOutputReference(this, "feed_output_config");
   public get feedOutputConfig() {
     return this._feedOutputConfig;
   }
@@ -656,7 +654,7 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudAssetProjectFeedTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudAssetProjectFeedTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

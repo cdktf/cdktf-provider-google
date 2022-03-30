@@ -109,10 +109,9 @@ export class KmsCryptoKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KmsCryptoKeyTimeouts | undefined {
@@ -229,10 +228,9 @@ export class KmsCryptoKeyVersionTemplateOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KmsCryptoKeyVersionTemplate | undefined {
@@ -300,7 +298,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_kms_crypto_key";
+  public static readonly tfResourceType = "google_kms_crypto_key";
 
   // ===========
   // INITIALIZER
@@ -317,7 +315,9 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_kms_crypto_key',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -473,7 +473,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KmsCryptoKeyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KmsCryptoKeyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -489,7 +489,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
   }
 
   // version_template - computed: false, optional: true, required: false
-  private _versionTemplate = new KmsCryptoKeyVersionTemplateOutputReference(this, "version_template", true);
+  private _versionTemplate = new KmsCryptoKeyVersionTemplateOutputReference(this, "version_template");
   public get versionTemplate() {
     return this._versionTemplate;
   }

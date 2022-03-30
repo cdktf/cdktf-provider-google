@@ -100,10 +100,9 @@ export class LoggingMetricBucketOptionsExplicitBucketsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LoggingMetricBucketOptionsExplicitBuckets | undefined {
@@ -179,10 +178,9 @@ export class LoggingMetricBucketOptionsExponentialBucketsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LoggingMetricBucketOptionsExponentialBuckets | undefined {
@@ -305,10 +303,9 @@ export class LoggingMetricBucketOptionsLinearBucketsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LoggingMetricBucketOptionsLinearBuckets | undefined {
@@ -431,10 +428,9 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LoggingMetricBucketOptions | undefined {
@@ -471,7 +467,7 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
   }
 
   // explicit_buckets - computed: false, optional: true, required: false
-  private _explicitBuckets = new LoggingMetricBucketOptionsExplicitBucketsOutputReference(this, "explicit_buckets", true);
+  private _explicitBuckets = new LoggingMetricBucketOptionsExplicitBucketsOutputReference(this, "explicit_buckets");
   public get explicitBuckets() {
     return this._explicitBuckets;
   }
@@ -487,7 +483,7 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
   }
 
   // exponential_buckets - computed: false, optional: true, required: false
-  private _exponentialBuckets = new LoggingMetricBucketOptionsExponentialBucketsOutputReference(this, "exponential_buckets", true);
+  private _exponentialBuckets = new LoggingMetricBucketOptionsExponentialBucketsOutputReference(this, "exponential_buckets");
   public get exponentialBuckets() {
     return this._exponentialBuckets;
   }
@@ -503,7 +499,7 @@ export class LoggingMetricBucketOptionsOutputReference extends cdktf.ComplexObje
   }
 
   // linear_buckets - computed: false, optional: true, required: false
-  private _linearBuckets = new LoggingMetricBucketOptionsLinearBucketsOutputReference(this, "linear_buckets", true);
+  private _linearBuckets = new LoggingMetricBucketOptionsLinearBucketsOutputReference(this, "linear_buckets");
   public get linearBuckets() {
     return this._linearBuckets;
   }
@@ -612,10 +608,9 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LoggingMetricMetricDescriptor | undefined {
@@ -771,10 +766,9 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LoggingMetricTimeouts | undefined {
@@ -867,7 +861,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_logging_metric";
+  public static readonly tfResourceType = "google_logging_metric";
 
   // ===========
   // INITIALIZER
@@ -884,7 +878,9 @@ export class LoggingMetric extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_logging_metric',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1002,7 +998,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // bucket_options - computed: false, optional: true, required: false
-  private _bucketOptions = new LoggingMetricBucketOptionsOutputReference(this, "bucket_options", true);
+  private _bucketOptions = new LoggingMetricBucketOptionsOutputReference(this, "bucket_options");
   public get bucketOptions() {
     return this._bucketOptions;
   }
@@ -1018,7 +1014,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // metric_descriptor - computed: false, optional: false, required: true
-  private _metricDescriptor = new LoggingMetricMetricDescriptorOutputReference(this, "metric_descriptor", true);
+  private _metricDescriptor = new LoggingMetricMetricDescriptorOutputReference(this, "metric_descriptor");
   public get metricDescriptor() {
     return this._metricDescriptor;
   }
@@ -1031,7 +1027,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LoggingMetricTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LoggingMetricTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -33,7 +33,7 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_service_account_access_token";
+  public static readonly tfResourceType = "google_service_account_access_token";
 
   // ===========
   // INITIALIZER
@@ -50,7 +50,9 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
     super(scope, id, {
       terraformResourceType: 'google_service_account_access_token',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

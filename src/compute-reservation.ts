@@ -162,10 +162,9 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeReservationSpecificReservationInstanceProperties | undefined {
@@ -302,10 +301,9 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeReservationSpecificReservation | undefined {
@@ -354,7 +352,7 @@ export class ComputeReservationSpecificReservationOutputReference extends cdktf.
   }
 
   // instance_properties - computed: false, optional: false, required: true
-  private _instanceProperties = new ComputeReservationSpecificReservationInstancePropertiesOutputReference(this, "instance_properties", true);
+  private _instanceProperties = new ComputeReservationSpecificReservationInstancePropertiesOutputReference(this, "instance_properties");
   public get instanceProperties() {
     return this._instanceProperties;
   }
@@ -399,10 +397,9 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeReservationTimeouts | undefined {
@@ -495,7 +492,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_reservation";
+  public static readonly tfResourceType = "google_compute_reservation";
 
   // ===========
   // INITIALIZER
@@ -512,7 +509,9 @@ export class ComputeReservation extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_reservation',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -632,7 +631,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // specific_reservation - computed: false, optional: false, required: true
-  private _specificReservation = new ComputeReservationSpecificReservationOutputReference(this, "specific_reservation", true);
+  private _specificReservation = new ComputeReservationSpecificReservationOutputReference(this, "specific_reservation");
   public get specificReservation() {
     return this._specificReservation;
   }
@@ -645,7 +644,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeReservationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeReservationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

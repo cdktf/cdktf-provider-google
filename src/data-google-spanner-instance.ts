@@ -75,7 +75,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_spanner_instance";
+  public static readonly tfResourceType = "google_spanner_instance";
 
   // ===========
   // INITIALIZER
@@ -92,7 +92,9 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

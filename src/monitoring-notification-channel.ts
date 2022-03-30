@@ -105,10 +105,9 @@ export class MonitoringNotificationChannelSensitiveLabelsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringNotificationChannelSensitiveLabels | undefined {
@@ -225,10 +224,9 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringNotificationChannelTimeouts | undefined {
@@ -321,7 +319,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_monitoring_notification_channel";
+  public static readonly tfResourceType = "google_monitoring_notification_channel";
 
   // ===========
   // INITIALIZER
@@ -338,7 +336,9 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_notification_channel',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -485,7 +485,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // sensitive_labels - computed: false, optional: true, required: false
-  private _sensitiveLabels = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this, "sensitive_labels", true);
+  private _sensitiveLabels = new MonitoringNotificationChannelSensitiveLabelsOutputReference(this, "sensitive_labels");
   public get sensitiveLabels() {
     return this._sensitiveLabels;
   }
@@ -501,7 +501,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringNotificationChannelTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitoringNotificationChannelTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

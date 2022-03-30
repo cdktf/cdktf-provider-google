@@ -157,10 +157,9 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRouterNatLogConfig | undefined {
@@ -288,10 +287,9 @@ export class ComputeRouterNatTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeRouterNatTimeouts | undefined {
@@ -384,7 +382,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_router_nat";
+  public static readonly tfResourceType = "google_compute_router_nat";
 
   // ===========
   // INITIALIZER
@@ -401,7 +399,9 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -649,7 +649,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // log_config - computed: false, optional: true, required: false
-  private _logConfig = new ComputeRouterNatLogConfigOutputReference(this, "log_config", true);
+  private _logConfig = new ComputeRouterNatLogConfigOutputReference(this, "log_config");
   public get logConfig() {
     return this._logConfig;
   }
@@ -682,7 +682,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeRouterNatTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeRouterNatTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

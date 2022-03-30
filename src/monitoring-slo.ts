@@ -100,10 +100,9 @@ export class MonitoringSloBasicSliAvailabilityOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloBasicSliAvailability | undefined {
@@ -170,10 +169,9 @@ export class MonitoringSloBasicSliLatencyOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloBasicSliLatency | undefined {
@@ -278,10 +276,9 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloBasicSli | undefined {
@@ -378,7 +375,7 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   }
 
   // availability - computed: false, optional: true, required: false
-  private _availability = new MonitoringSloBasicSliAvailabilityOutputReference(this, "availability", true);
+  private _availability = new MonitoringSloBasicSliAvailabilityOutputReference(this, "availability");
   public get availability() {
     return this._availability;
   }
@@ -394,7 +391,7 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
   }
 
   // latency - computed: false, optional: true, required: false
-  private _latency = new MonitoringSloBasicSliLatencyOutputReference(this, "latency", true);
+  private _latency = new MonitoringSloBasicSliLatencyOutputReference(this, "latency");
   public get latency() {
     return this._latency;
   }
@@ -445,10 +442,9 @@ export class MonitoringSloRequestBasedSliDistributionCutRangeOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloRequestBasedSliDistributionCutRange | undefined {
@@ -546,10 +542,9 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloRequestBasedSliDistributionCut | undefined {
@@ -593,7 +588,7 @@ export class MonitoringSloRequestBasedSliDistributionCutOutputReference extends 
   }
 
   // range - computed: false, optional: false, required: true
-  private _range = new MonitoringSloRequestBasedSliDistributionCutRangeOutputReference(this, "range", true);
+  private _range = new MonitoringSloRequestBasedSliDistributionCutRangeOutputReference(this, "range");
   public get range() {
     return this._range;
   }
@@ -666,10 +661,9 @@ export class MonitoringSloRequestBasedSliGoodTotalRatioOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloRequestBasedSliGoodTotalRatio | undefined {
@@ -785,10 +779,9 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloRequestBasedSli | undefined {
@@ -819,7 +812,7 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   // distribution_cut - computed: false, optional: true, required: false
-  private _distributionCut = new MonitoringSloRequestBasedSliDistributionCutOutputReference(this, "distribution_cut", true);
+  private _distributionCut = new MonitoringSloRequestBasedSliDistributionCutOutputReference(this, "distribution_cut");
   public get distributionCut() {
     return this._distributionCut;
   }
@@ -835,7 +828,7 @@ export class MonitoringSloRequestBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   // good_total_ratio - computed: false, optional: true, required: false
-  private _goodTotalRatio = new MonitoringSloRequestBasedSliGoodTotalRatioOutputReference(this, "good_total_ratio", true);
+  private _goodTotalRatio = new MonitoringSloRequestBasedSliGoodTotalRatioOutputReference(this, "good_total_ratio");
   public get goodTotalRatio() {
     return this._goodTotalRatio;
   }
@@ -883,10 +876,9 @@ export class MonitoringSloTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloTimeouts | undefined {
@@ -995,10 +987,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability | undefined {
@@ -1065,10 +1056,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency | undefined {
@@ -1173,10 +1163,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance | undefined {
@@ -1273,7 +1262,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
 
   // availability - computed: false, optional: true, required: false
-  private _availability = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference(this, "availability", true);
+  private _availability = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityOutputReference(this, "availability");
   public get availability() {
     return this._availability;
   }
@@ -1289,7 +1278,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
   }
 
   // latency - computed: false, optional: true, required: false
-  private _latency = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference(this, "latency", true);
+  private _latency = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutputReference(this, "latency");
   public get latency() {
     return this._latency;
   }
@@ -1340,10 +1329,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange | undefined {
@@ -1441,10 +1429,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut | undefined {
@@ -1488,7 +1475,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistr
   }
 
   // range - computed: false, optional: false, required: true
-  private _range = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference(this, "range", true);
+  private _range = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutputReference(this, "range");
   public get range() {
     return this._range;
   }
@@ -1559,10 +1546,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodT
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio | undefined {
@@ -1678,10 +1664,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformance | undefined {
@@ -1712,7 +1697,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
   }
 
   // distribution_cut - computed: false, optional: true, required: false
-  private _distributionCut = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference(this, "distribution_cut", true);
+  private _distributionCut = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutputReference(this, "distribution_cut");
   public get distributionCut() {
     return this._distributionCut;
   }
@@ -1728,7 +1713,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutpu
   }
 
   // good_total_ratio - computed: false, optional: true, required: false
-  private _goodTotalRatio = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference(this, "good_total_ratio", true);
+  private _goodTotalRatio = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutputReference(this, "good_total_ratio");
   public get goodTotalRatio() {
     return this._goodTotalRatio;
   }
@@ -1783,10 +1768,9 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliGoodTotalRatioThreshold | undefined {
@@ -1839,7 +1823,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
   }
 
   // basic_sli_performance - computed: false, optional: true, required: false
-  private _basicSliPerformance = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference(this, "basic_sli_performance", true);
+  private _basicSliPerformance = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutputReference(this, "basic_sli_performance");
   public get basicSliPerformance() {
     return this._basicSliPerformance;
   }
@@ -1855,7 +1839,7 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference 
   }
 
   // performance - computed: false, optional: true, required: false
-  private _performance = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference(this, "performance", true);
+  private _performance = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutputReference(this, "performance");
   public get performance() {
     return this._performance;
   }
@@ -1906,10 +1890,9 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRangeRange | undefined {
@@ -2008,10 +1991,9 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricMeanInRange | undefined {
@@ -2055,7 +2037,7 @@ export class MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference extend
   }
 
   // range - computed: false, optional: false, required: true
-  private _range = new MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference(this, "range", true);
+  private _range = new MonitoringSloWindowsBasedSliMetricMeanInRangeRangeOutputReference(this, "range");
   public get range() {
     return this._range;
   }
@@ -2103,10 +2085,9 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRangeRange | undefined {
@@ -2207,10 +2188,9 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSliMetricSumInRange | undefined {
@@ -2254,7 +2234,7 @@ export class MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference extends
   }
 
   // range - computed: false, optional: false, required: true
-  private _range = new MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference(this, "range", true);
+  private _range = new MonitoringSloWindowsBasedSliMetricSumInRangeRangeOutputReference(this, "range");
   public get range() {
     return this._range;
   }
@@ -2325,10 +2305,9 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitoringSloWindowsBasedSli | undefined {
@@ -2409,7 +2388,7 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   // good_total_ratio_threshold - computed: false, optional: true, required: false
-  private _goodTotalRatioThreshold = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference(this, "good_total_ratio_threshold", true);
+  private _goodTotalRatioThreshold = new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdOutputReference(this, "good_total_ratio_threshold");
   public get goodTotalRatioThreshold() {
     return this._goodTotalRatioThreshold;
   }
@@ -2425,7 +2404,7 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   // metric_mean_in_range - computed: false, optional: true, required: false
-  private _metricMeanInRange = new MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference(this, "metric_mean_in_range", true);
+  private _metricMeanInRange = new MonitoringSloWindowsBasedSliMetricMeanInRangeOutputReference(this, "metric_mean_in_range");
   public get metricMeanInRange() {
     return this._metricMeanInRange;
   }
@@ -2441,7 +2420,7 @@ export class MonitoringSloWindowsBasedSliOutputReference extends cdktf.ComplexOb
   }
 
   // metric_sum_in_range - computed: false, optional: true, required: false
-  private _metricSumInRange = new MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference(this, "metric_sum_in_range", true);
+  private _metricSumInRange = new MonitoringSloWindowsBasedSliMetricSumInRangeOutputReference(this, "metric_sum_in_range");
   public get metricSumInRange() {
     return this._metricSumInRange;
   }
@@ -2465,7 +2444,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_monitoring_slo";
+  public static readonly tfResourceType = "google_monitoring_slo";
 
   // ===========
   // INITIALIZER
@@ -2482,7 +2461,9 @@ export class MonitoringSlo extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_monitoring_slo',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2623,7 +2604,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
 
   // basic_sli - computed: false, optional: true, required: false
-  private _basicSli = new MonitoringSloBasicSliOutputReference(this, "basic_sli", true);
+  private _basicSli = new MonitoringSloBasicSliOutputReference(this, "basic_sli");
   public get basicSli() {
     return this._basicSli;
   }
@@ -2639,7 +2620,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
 
   // request_based_sli - computed: false, optional: true, required: false
-  private _requestBasedSli = new MonitoringSloRequestBasedSliOutputReference(this, "request_based_sli", true);
+  private _requestBasedSli = new MonitoringSloRequestBasedSliOutputReference(this, "request_based_sli");
   public get requestBasedSli() {
     return this._requestBasedSli;
   }
@@ -2655,7 +2636,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitoringSloTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitoringSloTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -2671,7 +2652,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
   }
 
   // windows_based_sli - computed: false, optional: true, required: false
-  private _windowsBasedSli = new MonitoringSloWindowsBasedSliOutputReference(this, "windows_based_sli", true);
+  private _windowsBasedSli = new MonitoringSloWindowsBasedSliOutputReference(this, "windows_based_sli");
   public get windowsBasedSli() {
     return this._windowsBasedSli;
   }

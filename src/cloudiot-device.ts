@@ -56,7 +56,45 @@ export interface CloudiotDeviceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: CloudiotDeviceTimeouts;
 }
-export class CloudiotDeviceConfigA extends cdktf.ComplexComputedList {
+export interface CloudiotDeviceConfigA {
+}
+
+export function cloudiotDeviceConfigAToTerraform(struct?: CloudiotDeviceConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudiotDeviceConfigAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudiotDeviceConfigA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudiotDeviceConfigA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // binary_data - computed: true, optional: false, required: false
   public get binaryData() {
@@ -78,11 +116,68 @@ export class CloudiotDeviceConfigA extends cdktf.ComplexComputedList {
     return this.getStringAttribute('version');
   }
 }
-export class CloudiotDeviceLastErrorStatus extends cdktf.ComplexComputedList {
+
+export class CloudiotDeviceConfigAList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudiotDeviceConfigAOutputReference {
+    return new CloudiotDeviceConfigAOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudiotDeviceLastErrorStatus {
+}
+
+export function cloudiotDeviceLastErrorStatusToTerraform(struct?: CloudiotDeviceLastErrorStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudiotDeviceLastErrorStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudiotDeviceLastErrorStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudiotDeviceLastErrorStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // details - computed: true, optional: false, required: false
-  public get details() {
-    return this.getStringMapAttribute('details');
+  public details(index: string, key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, `details.${index}`).lookup(key);
   }
 
   // message - computed: true, optional: false, required: false
@@ -95,7 +190,64 @@ export class CloudiotDeviceLastErrorStatus extends cdktf.ComplexComputedList {
     return this.getNumberAttribute('number');
   }
 }
-export class CloudiotDeviceState extends cdktf.ComplexComputedList {
+
+export class CloudiotDeviceLastErrorStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudiotDeviceLastErrorStatusOutputReference {
+    return new CloudiotDeviceLastErrorStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudiotDeviceState {
+}
+
+export function cloudiotDeviceStateToTerraform(struct?: CloudiotDeviceState): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CloudiotDeviceStateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudiotDeviceState | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudiotDeviceState | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // binary_data - computed: true, optional: false, required: false
   public get binaryData() {
@@ -105,6 +257,25 @@ export class CloudiotDeviceState extends cdktf.ComplexComputedList {
   // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
+  }
+}
+
+export class CloudiotDeviceStateList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudiotDeviceStateOutputReference {
+    return new CloudiotDeviceStateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface CloudiotDeviceCredentialsPublicKey {
@@ -139,10 +310,9 @@ export class CloudiotDeviceCredentialsPublicKeyOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudiotDeviceCredentialsPublicKey | undefined {
@@ -256,10 +426,9 @@ export class CloudiotDeviceGatewayConfigOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudiotDeviceGatewayConfig | undefined {
@@ -364,10 +533,9 @@ export class CloudiotDeviceTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CloudiotDeviceTimeouts | undefined {
@@ -460,7 +628,7 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_cloudiot_device";
+  public static readonly tfResourceType = "google_cloudiot_device";
 
   // ===========
   // INITIALIZER
@@ -477,7 +645,9 @@ export class CloudiotDevice extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_cloudiot_device',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -515,8 +685,9 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   }
 
   // config - computed: true, optional: false, required: false
-  public config(index: string) {
-    return new CloudiotDeviceConfigA(this, 'config', index, false);
+  private _config = new CloudiotDeviceConfigAList(this, "config", false);
+  public get config() {
+    return this._config;
   }
 
   // id - computed: true, optional: true, required: false
@@ -535,8 +706,9 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   }
 
   // last_error_status - computed: true, optional: false, required: false
-  public lastErrorStatus(index: string) {
-    return new CloudiotDeviceLastErrorStatus(this, 'last_error_status', index, false);
+  private _lastErrorStatus = new CloudiotDeviceLastErrorStatusList(this, "last_error_status", false);
+  public get lastErrorStatus() {
+    return this._lastErrorStatus;
   }
 
   // last_error_time - computed: true, optional: false, required: false
@@ -623,8 +795,9 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   }
 
   // state - computed: true, optional: false, required: false
-  public state(index: string) {
-    return new CloudiotDeviceState(this, 'state', index, false);
+  private _state = new CloudiotDeviceStateList(this, "state", false);
+  public get state() {
+    return this._state;
   }
 
   // credentials - computed: false, optional: true, required: false
@@ -645,7 +818,7 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   }
 
   // gateway_config - computed: false, optional: true, required: false
-  private _gatewayConfig = new CloudiotDeviceGatewayConfigOutputReference(this, "gateway_config", true);
+  private _gatewayConfig = new CloudiotDeviceGatewayConfigOutputReference(this, "gateway_config");
   public get gatewayConfig() {
     return this._gatewayConfig;
   }
@@ -661,7 +834,7 @@ export class CloudiotDevice extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CloudiotDeviceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CloudiotDeviceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

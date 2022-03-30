@@ -181,10 +181,9 @@ export class ComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeDiskDiskEncryptionKey | undefined {
@@ -318,10 +317,9 @@ export class ComputeDiskSourceImageEncryptionKeyOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeDiskSourceImageEncryptionKey | undefined {
@@ -455,10 +453,9 @@ export class ComputeDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeDiskSourceSnapshotEncryptionKey | undefined {
@@ -580,10 +577,9 @@ export class ComputeDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ComputeDiskTimeouts | undefined {
@@ -676,7 +672,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_disk";
+  public static readonly tfResourceType = "google_compute_disk";
 
   // ===========
   // INITIALIZER
@@ -693,7 +689,9 @@ export class ComputeDisk extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_compute_disk',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -940,7 +938,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
-  private _diskEncryptionKey = new ComputeDiskDiskEncryptionKeyOutputReference(this, "disk_encryption_key", true);
+  private _diskEncryptionKey = new ComputeDiskDiskEncryptionKeyOutputReference(this, "disk_encryption_key");
   public get diskEncryptionKey() {
     return this._diskEncryptionKey;
   }
@@ -956,7 +954,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // source_image_encryption_key - computed: false, optional: true, required: false
-  private _sourceImageEncryptionKey = new ComputeDiskSourceImageEncryptionKeyOutputReference(this, "source_image_encryption_key", true);
+  private _sourceImageEncryptionKey = new ComputeDiskSourceImageEncryptionKeyOutputReference(this, "source_image_encryption_key");
   public get sourceImageEncryptionKey() {
     return this._sourceImageEncryptionKey;
   }
@@ -972,7 +970,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // source_snapshot_encryption_key - computed: false, optional: true, required: false
-  private _sourceSnapshotEncryptionKey = new ComputeDiskSourceSnapshotEncryptionKeyOutputReference(this, "source_snapshot_encryption_key", true);
+  private _sourceSnapshotEncryptionKey = new ComputeDiskSourceSnapshotEncryptionKeyOutputReference(this, "source_snapshot_encryption_key");
   public get sourceSnapshotEncryptionKey() {
     return this._sourceSnapshotEncryptionKey;
   }
@@ -988,7 +986,7 @@ export class ComputeDisk extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ComputeDiskTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ComputeDiskTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

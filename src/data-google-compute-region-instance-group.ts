@@ -24,7 +24,45 @@ export interface DataGoogleComputeRegionInstanceGroupConfig extends cdktf.Terraf
   */
   readonly selfLink?: string;
 }
-export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends cdktf.ComplexComputedList {
+export interface DataGoogleComputeRegionInstanceGroupInstancesNamedPorts {
+}
+
+export function dataGoogleComputeRegionInstanceGroupInstancesNamedPortsToTerraform(struct?: DataGoogleComputeRegionInstanceGroupInstancesNamedPorts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeRegionInstanceGroupInstancesNamedPortsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeRegionInstanceGroupInstancesNamedPorts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeRegionInstanceGroupInstancesNamedPorts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -36,7 +74,64 @@ export class DataGoogleComputeRegionInstanceGroupInstancesNamedPorts extends cdk
     return this.getNumberAttribute('port');
   }
 }
-export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.ComplexComputedList {
+
+export class DataGoogleComputeRegionInstanceGroupInstancesNamedPortsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeRegionInstanceGroupInstancesNamedPortsOutputReference {
+    return new DataGoogleComputeRegionInstanceGroupInstancesNamedPortsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeRegionInstanceGroupInstances {
+}
+
+export function dataGoogleComputeRegionInstanceGroupInstancesToTerraform(struct?: DataGoogleComputeRegionInstanceGroupInstances): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeRegionInstanceGroupInstancesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeRegionInstanceGroupInstances | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeRegionInstanceGroupInstances | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // instance - computed: true, optional: false, required: false
   public get instance() {
@@ -44,14 +139,33 @@ export class DataGoogleComputeRegionInstanceGroupInstances extends cdktf.Complex
   }
 
   // named_ports - computed: true, optional: false, required: false
+  private _namedPorts = new DataGoogleComputeRegionInstanceGroupInstancesNamedPortsList(this, "named_ports", false);
   public get namedPorts() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('named_ports');
+    return this._namedPorts;
   }
 
   // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
+  }
+}
+
+export class DataGoogleComputeRegionInstanceGroupInstancesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeRegionInstanceGroupInstancesOutputReference {
+    return new DataGoogleComputeRegionInstanceGroupInstancesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 
@@ -63,7 +177,7 @@ export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_compute_region_instance_group";
+  public static readonly tfResourceType = "google_compute_region_instance_group";
 
   // ===========
   // INITIALIZER
@@ -80,7 +194,9 @@ export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSou
     super(scope, id, {
       terraformResourceType: 'google_compute_region_instance_group',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -103,8 +219,9 @@ export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSou
   }
 
   // instances - computed: true, optional: false, required: false
-  public instances(index: string) {
-    return new DataGoogleComputeRegionInstanceGroupInstances(this, 'instances', index, false);
+  private _instances = new DataGoogleComputeRegionInstanceGroupInstancesList(this, "instances", false);
+  public get instances() {
+    return this._instances;
   }
 
   // name - computed: true, optional: true, required: false

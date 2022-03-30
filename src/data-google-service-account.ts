@@ -25,7 +25,7 @@ export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_service_account";
+  public static readonly tfResourceType = "google_service_account";
 
   // ===========
   // INITIALIZER
@@ -42,7 +42,9 @@ export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'google_service_account',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

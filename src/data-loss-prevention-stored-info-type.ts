@@ -80,10 +80,9 @@ export class DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionaryCloudStoragePath | undefined {
@@ -146,10 +145,9 @@ export class DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionaryWordList | undefined {
@@ -218,10 +216,9 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeDictionary | undefined {
@@ -252,7 +249,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   }
 
   // cloud_storage_path - computed: false, optional: true, required: false
-  private _cloudStoragePath = new DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path", true);
+  private _cloudStoragePath = new DataLossPreventionStoredInfoTypeDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path");
   public get cloudStoragePath() {
     return this._cloudStoragePath;
   }
@@ -268,7 +265,7 @@ export class DataLossPreventionStoredInfoTypeDictionaryOutputReference extends c
   }
 
   // word_list - computed: false, optional: true, required: false
-  private _wordList = new DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference(this, "word_list", true);
+  private _wordList = new DataLossPreventionStoredInfoTypeDictionaryWordListOutputReference(this, "word_list");
   public get wordList() {
     return this._wordList;
   }
@@ -308,10 +305,9 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldF
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField | undefined {
@@ -387,10 +383,9 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldT
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable | undefined {
@@ -497,10 +492,9 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryField | undefined {
@@ -531,7 +525,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   }
 
   // field - computed: false, optional: false, required: true
-  private _field = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutputReference(this, "field", true);
+  private _field = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutputReference(this, "field");
   public get field() {
     return this._field;
   }
@@ -544,7 +538,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldO
   }
 
   // table - computed: false, optional: false, required: true
-  private _table = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutputReference(this, "table", true);
+  private _table = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutputReference(this, "table");
   public get table() {
     return this._table;
   }
@@ -581,10 +575,9 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFi
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet | undefined {
@@ -646,10 +639,9 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPath | undefined {
@@ -725,10 +717,9 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeLargeCustomDictionary | undefined {
@@ -765,7 +756,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   // big_query_field - computed: false, optional: true, required: false
-  private _bigQueryField = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutputReference(this, "big_query_field", true);
+  private _bigQueryField = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutputReference(this, "big_query_field");
   public get bigQueryField() {
     return this._bigQueryField;
   }
@@ -781,7 +772,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   // cloud_storage_file_set - computed: false, optional: true, required: false
-  private _cloudStorageFileSet = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutputReference(this, "cloud_storage_file_set", true);
+  private _cloudStorageFileSet = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutputReference(this, "cloud_storage_file_set");
   public get cloudStorageFileSet() {
     return this._cloudStorageFileSet;
   }
@@ -797,7 +788,7 @@ export class DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReferenc
   }
 
   // output_path - computed: false, optional: false, required: true
-  private _outputPath = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutputReference(this, "output_path", true);
+  private _outputPath = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutputReference(this, "output_path");
   public get outputPath() {
     return this._outputPath;
   }
@@ -842,10 +833,9 @@ export class DataLossPreventionStoredInfoTypeRegexOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeRegex | undefined {
@@ -937,10 +927,9 @@ export class DataLossPreventionStoredInfoTypeTimeoutsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataLossPreventionStoredInfoTypeTimeouts | undefined {
@@ -1033,7 +1022,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "google_data_loss_prevention_stored_info_type";
+  public static readonly tfResourceType = "google_data_loss_prevention_stored_info_type";
 
   // ===========
   // INITIALIZER
@@ -1050,7 +1039,9 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'google_data_loss_prevention_stored_info_type',
       terraformGeneratorMetadata: {
-        providerName: 'google'
+        providerName: 'google',
+        providerVersion: '3.90.1',
+        providerVersionConstraint: '~> 3.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1126,7 +1117,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // dictionary - computed: false, optional: true, required: false
-  private _dictionary = new DataLossPreventionStoredInfoTypeDictionaryOutputReference(this, "dictionary", true);
+  private _dictionary = new DataLossPreventionStoredInfoTypeDictionaryOutputReference(this, "dictionary");
   public get dictionary() {
     return this._dictionary;
   }
@@ -1142,7 +1133,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // large_custom_dictionary - computed: false, optional: true, required: false
-  private _largeCustomDictionary = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReference(this, "large_custom_dictionary", true);
+  private _largeCustomDictionary = new DataLossPreventionStoredInfoTypeLargeCustomDictionaryOutputReference(this, "large_custom_dictionary");
   public get largeCustomDictionary() {
     return this._largeCustomDictionary;
   }
@@ -1158,7 +1149,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // regex - computed: false, optional: true, required: false
-  private _regex = new DataLossPreventionStoredInfoTypeRegexOutputReference(this, "regex", true);
+  private _regex = new DataLossPreventionStoredInfoTypeRegexOutputReference(this, "regex");
   public get regex() {
     return this._regex;
   }
@@ -1174,7 +1165,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataLossPreventionStoredInfoTypeTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataLossPreventionStoredInfoTypeTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
