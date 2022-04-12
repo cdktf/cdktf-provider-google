@@ -51,8 +51,10 @@ export interface ComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaAr
     *   Internal HTTP(S) load balancers
 *   `INTERNAL_SELF_MANAGED` is used for:
     *   Traffic Director
+*   `EXTERNAL_MANAGED` is used for:
+    *   Global external HTTP(S) load balancers 
 
-For more information about forwarding rules, refer to [Forwarding rule concepts](/load-balancing/docs/forwarding-rule-concepts). Possible values: INVALID, INTERNAL, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED, EXTERNAL
+For more information about forwarding rules, refer to [Forwarding rule concepts](/load-balancing/docs/forwarding-rule-concepts). Possible values: INVALID, INTERNAL, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED, EXTERNAL, EXTERNAL_MANAGED
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_forwarding_rule#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
   */
@@ -315,8 +317,8 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

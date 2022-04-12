@@ -14,6 +14,15 @@ export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Field to indicate if a router is dedicated to use with encrypted
+Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
+
+Not currently available publicly.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
+  */
+  readonly encryptedInterconnectRouter?: boolean | cdktf.IResolvable;
+  /**
   * Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
@@ -109,6 +118,16 @@ will have the same local ASN.
   */
   readonly asn: number;
   /**
+  * The interval in seconds between BGP keepalive messages that are sent to the peer.
+Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for
+the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
+  */
+  readonly keepaliveInterval?: number;
+  /**
   * advertised_ip_ranges block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
@@ -125,6 +144,7 @@ export function computeRouterBgpToTerraform(struct?: ComputeRouterBgpOutputRefer
     advertise_mode: cdktf.stringToTerraform(struct!.advertiseMode),
     advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.advertisedGroups),
     asn: cdktf.numberToTerraform(struct!.asn),
+    keepalive_interval: cdktf.numberToTerraform(struct!.keepaliveInterval),
     advertised_ip_ranges: cdktf.listMapper(computeRouterBgpAdvertisedIpRangesToTerraform)(struct!.advertisedIpRanges),
   }
 }
@@ -155,6 +175,10 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.asn = this._asn;
     }
+    if (this._keepaliveInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keepaliveInterval = this._keepaliveInterval;
+    }
     if (this._advertisedIpRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedIpRanges = this._advertisedIpRanges;
@@ -168,6 +192,7 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
       this._advertiseMode = undefined;
       this._advertisedGroups = undefined;
       this._asn = undefined;
+      this._keepaliveInterval = undefined;
       this._advertisedIpRanges = undefined;
     }
     else {
@@ -175,6 +200,7 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
       this._advertiseMode = value.advertiseMode;
       this._advertisedGroups = value.advertisedGroups;
       this._asn = value.asn;
+      this._keepaliveInterval = value.keepaliveInterval;
       this._advertisedIpRanges = value.advertisedIpRanges;
     }
   }
@@ -222,6 +248,22 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get asnInput() {
     return this._asn;
+  }
+
+  // keepalive_interval - computed: false, optional: true, required: false
+  private _keepaliveInterval?: number; 
+  public get keepaliveInterval() {
+    return this.getNumberAttribute('keepalive_interval');
+  }
+  public set keepaliveInterval(value: number) {
+    this._keepaliveInterval = value;
+  }
+  public resetKeepaliveInterval() {
+    this._keepaliveInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keepaliveIntervalInput() {
+    return this._keepaliveInterval;
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
@@ -387,8 +429,8 @@ export class ComputeRouter extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -396,6 +438,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._encryptedInterconnectRouter = config.encryptedInterconnectRouter;
     this._name = config.name;
     this._network = config.network;
     this._project = config.project;
@@ -427,6 +470,22 @@ export class ComputeRouter extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // encrypted_interconnect_router - computed: false, optional: true, required: false
+  private _encryptedInterconnectRouter?: boolean | cdktf.IResolvable; 
+  public get encryptedInterconnectRouter() {
+    return this.getBooleanAttribute('encrypted_interconnect_router');
+  }
+  public set encryptedInterconnectRouter(value: boolean | cdktf.IResolvable) {
+    this._encryptedInterconnectRouter = value;
+  }
+  public resetEncryptedInterconnectRouter() {
+    this._encryptedInterconnectRouter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptedInterconnectRouterInput() {
+    return this._encryptedInterconnectRouter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -536,6 +595,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      encrypted_interconnect_router: cdktf.booleanToTerraform(this._encryptedInterconnectRouter),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),

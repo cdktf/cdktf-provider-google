@@ -448,8 +448,8 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -579,11 +579,6 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get sourceDiskInput() {
     return this._sourceDisk;
-  }
-
-  // source_disk_link - computed: true, optional: false, required: false
-  public get sourceDiskLink() {
-    return this.getStringAttribute('source_disk_link');
   }
 
   // storage_bytes - computed: true, optional: false, required: false

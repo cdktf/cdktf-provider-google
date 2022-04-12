@@ -56,6 +56,12 @@ must begin with a letter.
   */
   readonly userLabels?: { [key: string]: string };
   /**
+  * alert_strategy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#alert_strategy MonitoringAlertPolicy#alert_strategy}
+  */
+  readonly alertStrategy?: MonitoringAlertPolicyAlertStrategy;
+  /**
   * conditions block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#conditions MonitoringAlertPolicy#conditions}
@@ -141,6 +147,169 @@ export class MonitoringAlertPolicyCreationRecordList extends cdktf.ComplexList {
   */
   public get(index: number): MonitoringAlertPolicyCreationRecordOutputReference {
     return new MonitoringAlertPolicyCreationRecordOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MonitoringAlertPolicyAlertStrategyNotificationRateLimit {
+  /**
+  * Not more than one notification per period.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#period MonitoringAlertPolicy#period}
+  */
+  readonly period?: string;
+}
+
+export function monitoringAlertPolicyAlertStrategyNotificationRateLimitToTerraform(struct?: MonitoringAlertPolicyAlertStrategyNotificationRateLimitOutputReference | MonitoringAlertPolicyAlertStrategyNotificationRateLimit): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    period: cdktf.stringToTerraform(struct!.period),
+  }
+}
+
+export class MonitoringAlertPolicyAlertStrategyNotificationRateLimitOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyAlertStrategyNotificationRateLimit | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._period !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.period = this._period;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyAlertStrategyNotificationRateLimit | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._period = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._period = value.period;
+    }
+  }
+
+  // period - computed: false, optional: true, required: false
+  private _period?: string; 
+  public get period() {
+    return this.getStringAttribute('period');
+  }
+  public set period(value: string) {
+    this._period = value;
+  }
+  public resetPeriod() {
+    this._period = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get periodInput() {
+    return this._period;
+  }
+}
+export interface MonitoringAlertPolicyAlertStrategy {
+  /**
+  * If an alert policy that was active has no data for this long, any open incidents will close.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#auto_close MonitoringAlertPolicy#auto_close}
+  */
+  readonly autoClose?: string;
+  /**
+  * notification_rate_limit block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#notification_rate_limit MonitoringAlertPolicy#notification_rate_limit}
+  */
+  readonly notificationRateLimit?: MonitoringAlertPolicyAlertStrategyNotificationRateLimit;
+}
+
+export function monitoringAlertPolicyAlertStrategyToTerraform(struct?: MonitoringAlertPolicyAlertStrategyOutputReference | MonitoringAlertPolicyAlertStrategy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_close: cdktf.stringToTerraform(struct!.autoClose),
+    notification_rate_limit: monitoringAlertPolicyAlertStrategyNotificationRateLimitToTerraform(struct!.notificationRateLimit),
+  }
+}
+
+export class MonitoringAlertPolicyAlertStrategyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyAlertStrategy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoClose !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoClose = this._autoClose;
+    }
+    if (this._notificationRateLimit?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notificationRateLimit = this._notificationRateLimit?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyAlertStrategy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._autoClose = undefined;
+      this._notificationRateLimit.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoClose = value.autoClose;
+      this._notificationRateLimit.internalValue = value.notificationRateLimit;
+    }
+  }
+
+  // auto_close - computed: false, optional: true, required: false
+  private _autoClose?: string; 
+  public get autoClose() {
+    return this.getStringAttribute('auto_close');
+  }
+  public set autoClose(value: string) {
+    this._autoClose = value;
+  }
+  public resetAutoClose() {
+    this._autoClose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoCloseInput() {
+    return this._autoClose;
+  }
+
+  // notification_rate_limit - computed: false, optional: true, required: false
+  private _notificationRateLimit = new MonitoringAlertPolicyAlertStrategyNotificationRateLimitOutputReference(this, "notification_rate_limit");
+  public get notificationRateLimit() {
+    return this._notificationRateLimit;
+  }
+  public putNotificationRateLimit(value: MonitoringAlertPolicyAlertStrategyNotificationRateLimit) {
+    this._notificationRateLimit.internalValue = value;
+  }
+  public resetNotificationRateLimit() {
+    this._notificationRateLimit.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationRateLimitInput() {
+    return this._notificationRateLimit.internalValue;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionAbsentAggregations {
@@ -517,6 +686,105 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get triggerInput() {
     return this._trigger.internalValue;
+  }
+}
+export interface MonitoringAlertPolicyConditionsConditionMatchedLog {
+  /**
+  * A logs-based filter.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  */
+  readonly filter: string;
+  /**
+  * A map from a label key to an extractor expression, which is used to
+extract the value for this label key. Each entry in this map is
+a specification for how data should be extracted from log entries that
+match filter. Each combination of extracted values is treated as
+a separate rule for the purposes of triggering notifications.
+Label keys and corresponding values can be used in notifications
+generated by this condition.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#label_extractors MonitoringAlertPolicy#label_extractors}
+  */
+  readonly labelExtractors?: { [key: string]: string };
+}
+
+export function monitoringAlertPolicyConditionsConditionMatchedLogToTerraform(struct?: MonitoringAlertPolicyConditionsConditionMatchedLogOutputReference | MonitoringAlertPolicyConditionsConditionMatchedLog): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    filter: cdktf.stringToTerraform(struct!.filter),
+    label_extractors: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labelExtractors),
+  }
+}
+
+export class MonitoringAlertPolicyConditionsConditionMatchedLogOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionMatchedLog | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._filter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    if (this._labelExtractors !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labelExtractors = this._labelExtractors;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionMatchedLog | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._filter = undefined;
+      this._labelExtractors = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._filter = value.filter;
+      this._labelExtractors = value.labelExtractors;
+    }
+  }
+
+  // filter - computed: false, optional: false, required: true
+  private _filter?: string; 
+  public get filter() {
+    return this.getStringAttribute('filter');
+  }
+  public set filter(value: string) {
+    this._filter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter;
+  }
+
+  // label_extractors - computed: false, optional: true, required: false
+  private _labelExtractors?: { [key: string]: string }; 
+  public get labelExtractors() {
+    return this.getStringMapAttribute('label_extractors');
+  }
+  public set labelExtractors(value: { [key: string]: string }) {
+    this._labelExtractors = value;
+  }
+  public resetLabelExtractors() {
+    this._labelExtractors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelExtractorsInput() {
+    return this._labelExtractors;
   }
 }
 export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger {
@@ -1401,6 +1669,12 @@ policy.
   */
   readonly conditionAbsent?: MonitoringAlertPolicyConditionsConditionAbsent;
   /**
+  * condition_matched_log block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#condition_matched_log MonitoringAlertPolicy#condition_matched_log}
+  */
+  readonly conditionMatchedLog?: MonitoringAlertPolicyConditionsConditionMatchedLog;
+  /**
   * condition_monitoring_query_language block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#condition_monitoring_query_language MonitoringAlertPolicy#condition_monitoring_query_language}
@@ -1422,6 +1696,7 @@ export function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAl
   return {
     display_name: cdktf.stringToTerraform(struct!.displayName),
     condition_absent: monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct!.conditionAbsent),
+    condition_matched_log: monitoringAlertPolicyConditionsConditionMatchedLogToTerraform(struct!.conditionMatchedLog),
     condition_monitoring_query_language: monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageToTerraform(struct!.conditionMonitoringQueryLanguage),
     condition_threshold: monitoringAlertPolicyConditionsConditionThresholdToTerraform(struct!.conditionThreshold),
   }
@@ -1673,8 +1948,8 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_alert_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1687,6 +1962,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
     this._notificationChannels = config.notificationChannels;
     this._project = config.project;
     this._userLabels = config.userLabels;
+    this._alertStrategy.internalValue = config.alertStrategy;
     this._conditions = config.conditions;
     this._documentation.internalValue = config.documentation;
     this._timeouts.internalValue = config.timeouts;
@@ -1802,6 +2078,22 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
     return this._userLabels;
   }
 
+  // alert_strategy - computed: false, optional: true, required: false
+  private _alertStrategy = new MonitoringAlertPolicyAlertStrategyOutputReference(this, "alert_strategy");
+  public get alertStrategy() {
+    return this._alertStrategy;
+  }
+  public putAlertStrategy(value: MonitoringAlertPolicyAlertStrategy) {
+    this._alertStrategy.internalValue = value;
+  }
+  public resetAlertStrategy() {
+    this._alertStrategy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alertStrategyInput() {
+    return this._alertStrategy.internalValue;
+  }
+
   // conditions - computed: false, optional: false, required: true
   private _conditions?: MonitoringAlertPolicyConditions[] | cdktf.IResolvable; 
   public get conditions() {
@@ -1860,6 +2152,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       notification_channels: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationChannels),
       project: cdktf.stringToTerraform(this._project),
       user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
+      alert_strategy: monitoringAlertPolicyAlertStrategyToTerraform(this._alertStrategy.internalValue),
       conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions),
       documentation: monitoringAlertPolicyDocumentationToTerraform(this._documentation.internalValue),
       timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),

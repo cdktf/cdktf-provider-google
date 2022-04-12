@@ -76,6 +76,12 @@ fred@example.com
   */
   readonly userByEmail?: string;
   /**
+  * dataset block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#dataset BigqueryDatasetAccessA#dataset}
+  */
+  readonly dataset?: BigqueryDatasetAccessDatasetA;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#timeouts BigqueryDatasetAccessA#timeouts}
@@ -87,6 +93,187 @@ fred@example.com
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#view BigqueryDatasetAccessA#view}
   */
   readonly view?: BigqueryDatasetAccessViewA;
+}
+export interface BigqueryDatasetAccessDatasetDatasetA {
+  /**
+  * The ID of the dataset containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
+  */
+  readonly datasetId: string;
+  /**
+  * The ID of the project containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
+  */
+  readonly projectId: string;
+}
+
+export function bigqueryDatasetAccessDatasetDatasetAToTerraform(struct?: BigqueryDatasetAccessDatasetDatasetAOutputReference | BigqueryDatasetAccessDatasetDatasetA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
+export class BigqueryDatasetAccessDatasetDatasetAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryDatasetAccessDatasetDatasetA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._datasetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.datasetId = this._datasetId;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccessDatasetDatasetA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._datasetId = undefined;
+      this._projectId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._datasetId = value.datasetId;
+      this._projectId = value.projectId;
+    }
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId;
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+}
+export interface BigqueryDatasetAccessDatasetA {
+  /**
+  * Which resources in the dataset this entry applies to. Currently, only views are supported,
+but additional target types may be added in the future. Possible values: VIEWS
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#target_types BigqueryDatasetAccessA#target_types}
+  */
+  readonly targetTypes: string[];
+  /**
+  * dataset block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#dataset BigqueryDatasetAccessA#dataset}
+  */
+  readonly dataset: BigqueryDatasetAccessDatasetDatasetA;
+}
+
+export function bigqueryDatasetAccessDatasetAToTerraform(struct?: BigqueryDatasetAccessDatasetAOutputReference | BigqueryDatasetAccessDatasetA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    target_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.targetTypes),
+    dataset: bigqueryDatasetAccessDatasetDatasetAToTerraform(struct!.dataset),
+  }
+}
+
+export class BigqueryDatasetAccessDatasetAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryDatasetAccessDatasetA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._targetTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetTypes = this._targetTypes;
+    }
+    if (this._dataset?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataset = this._dataset?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccessDatasetA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._targetTypes = undefined;
+      this._dataset.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._targetTypes = value.targetTypes;
+      this._dataset.internalValue = value.dataset;
+    }
+  }
+
+  // target_types - computed: false, optional: false, required: true
+  private _targetTypes?: string[]; 
+  public get targetTypes() {
+    return this.getListAttribute('target_types');
+  }
+  public set targetTypes(value: string[]) {
+    this._targetTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetTypesInput() {
+    return this._targetTypes;
+  }
+
+  // dataset - computed: false, optional: false, required: true
+  private _dataset = new BigqueryDatasetAccessDatasetDatasetAOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: BigqueryDatasetAccessDatasetDatasetA) {
+    this._dataset.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
 }
 export interface BigqueryDatasetAccessTimeouts {
   /**
@@ -325,8 +512,8 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset_access',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -341,6 +528,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
     this._role = config.role;
     this._specialGroup = config.specialGroup;
     this._userByEmail = config.userByEmail;
+    this._dataset.internalValue = config.dataset;
     this._timeouts.internalValue = config.timeouts;
     this._view.internalValue = config.view;
   }
@@ -484,6 +672,22 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
     return this._userByEmail;
   }
 
+  // dataset - computed: false, optional: true, required: false
+  private _dataset = new BigqueryDatasetAccessDatasetAOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: BigqueryDatasetAccessDatasetA) {
+    this._dataset.internalValue = value;
+  }
+  public resetDataset() {
+    this._dataset.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new BigqueryDatasetAccessTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -530,6 +734,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
       role: cdktf.stringToTerraform(this._role),
       special_group: cdktf.stringToTerraform(this._specialGroup),
       user_by_email: cdktf.stringToTerraform(this._userByEmail),
+      dataset: bigqueryDatasetAccessDatasetAToTerraform(this._dataset.internalValue),
       timeouts: bigqueryDatasetAccessTimeoutsToTerraform(this._timeouts.internalValue),
       view: bigqueryDatasetAccessViewAToTerraform(this._view.internalValue),
     };

@@ -2161,20 +2161,33 @@ export function privatecaCertificateConfigX509ConfigAdditionalExtensionsToTerraf
 
 export interface PrivatecaCertificateConfigX509ConfigCaOptions {
   /**
-  * Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing,
-the extension will be omitted from the CA certificate.
+  * When true, the "CA" in Basic Constraints extension will be set to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate#is_ca PrivatecaCertificate#is_ca}
   */
   readonly isCa?: boolean | cdktf.IResolvable;
   /**
-  * Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
-subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
-value is missing, the max path length will be omitted from the CA certificate.
+  * Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
+subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate#max_issuer_path_length PrivatecaCertificate#max_issuer_path_length}
   */
   readonly maxIssuerPathLength?: number;
+  /**
+  * When true, the "CA" in Basic Constraints extension will be set to false. 
+If both 'is_ca' and 'non_ca' are unset, the extension will be omitted from the CA certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate#non_ca PrivatecaCertificate#non_ca}
+  */
+  readonly nonCa?: boolean | cdktf.IResolvable;
+  /**
+  * When true, the "path length constraint" in Basic Constraints extension will be set to 0.
+if both 'max_issuer_path_length' and 'zero_max_issuer_path_length' are unset,
+the max path length will be omitted from the CA certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate#zero_max_issuer_path_length PrivatecaCertificate#zero_max_issuer_path_length}
+  */
+  readonly zeroMaxIssuerPathLength?: boolean | cdktf.IResolvable;
 }
 
 export function privatecaCertificateConfigX509ConfigCaOptionsToTerraform(struct?: PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference | PrivatecaCertificateConfigX509ConfigCaOptions): any {
@@ -2185,6 +2198,8 @@ export function privatecaCertificateConfigX509ConfigCaOptionsToTerraform(struct?
   return {
     is_ca: cdktf.booleanToTerraform(struct!.isCa),
     max_issuer_path_length: cdktf.numberToTerraform(struct!.maxIssuerPathLength),
+    non_ca: cdktf.booleanToTerraform(struct!.nonCa),
+    zero_max_issuer_path_length: cdktf.booleanToTerraform(struct!.zeroMaxIssuerPathLength),
   }
 }
 
@@ -2210,6 +2225,14 @@ export class PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference extend
       hasAnyValues = true;
       internalValueResult.maxIssuerPathLength = this._maxIssuerPathLength;
     }
+    if (this._nonCa !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nonCa = this._nonCa;
+    }
+    if (this._zeroMaxIssuerPathLength !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.zeroMaxIssuerPathLength = this._zeroMaxIssuerPathLength;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2218,11 +2241,15 @@ export class PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference extend
       this.isEmptyObject = false;
       this._isCa = undefined;
       this._maxIssuerPathLength = undefined;
+      this._nonCa = undefined;
+      this._zeroMaxIssuerPathLength = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._isCa = value.isCa;
       this._maxIssuerPathLength = value.maxIssuerPathLength;
+      this._nonCa = value.nonCa;
+      this._zeroMaxIssuerPathLength = value.zeroMaxIssuerPathLength;
     }
   }
 
@@ -2256,6 +2283,38 @@ export class PrivatecaCertificateConfigX509ConfigCaOptionsOutputReference extend
   // Temporarily expose input value. Use with caution.
   public get maxIssuerPathLengthInput() {
     return this._maxIssuerPathLength;
+  }
+
+  // non_ca - computed: false, optional: true, required: false
+  private _nonCa?: boolean | cdktf.IResolvable; 
+  public get nonCa() {
+    return this.getBooleanAttribute('non_ca');
+  }
+  public set nonCa(value: boolean | cdktf.IResolvable) {
+    this._nonCa = value;
+  }
+  public resetNonCa() {
+    this._nonCa = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonCaInput() {
+    return this._nonCa;
+  }
+
+  // zero_max_issuer_path_length - computed: false, optional: true, required: false
+  private _zeroMaxIssuerPathLength?: boolean | cdktf.IResolvable; 
+  public get zeroMaxIssuerPathLength() {
+    return this.getBooleanAttribute('zero_max_issuer_path_length');
+  }
+  public set zeroMaxIssuerPathLength(value: boolean | cdktf.IResolvable) {
+    this._zeroMaxIssuerPathLength = value;
+  }
+  public resetZeroMaxIssuerPathLength() {
+    this._zeroMaxIssuerPathLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zeroMaxIssuerPathLengthInput() {
+    return this._zeroMaxIssuerPathLength;
   }
 }
 export interface PrivatecaCertificateConfigX509ConfigKeyUsageBaseKeyUsage {
@@ -3345,8 +3404,8 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

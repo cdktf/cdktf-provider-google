@@ -8,12 +8,8 @@ import * as cdktf from 'cdktf';
 
 export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Enables Bucket Policy Only access to a bucket.
+  * Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#bucket_policy_only StorageBucket#bucket_policy_only}
-  */
-  readonly bucketPolicyOnly?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
   */
   readonly defaultEventBasedHold?: boolean | cdktf.IResolvable;
@@ -34,7 +30,7 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#location StorageBucket#location}
   */
-  readonly location?: string;
+  readonly location: string;
   /**
   * The name of the bucket.
   * 
@@ -95,6 +91,12 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#retention_policy StorageBucket#retention_policy}
   */
   readonly retentionPolicy?: StorageBucketRetentionPolicy;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#timeouts StorageBucket#timeouts}
+  */
+  readonly timeouts?: StorageBucketTimeouts;
   /**
   * versioning block
   * 
@@ -817,6 +819,125 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
     return this._retentionPeriod;
   }
 }
+export interface StorageBucketTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#create StorageBucket#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#read StorageBucket#read}
+  */
+  readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#update StorageBucket#update}
+  */
+  readonly update?: string;
+}
+
+export function storageBucketTimeoutsToTerraform(struct?: StorageBucketTimeoutsOutputReference | StorageBucketTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export class StorageBucketTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageBucketTimeouts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketTimeouts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._create = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._create = value.create;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
 export interface StorageBucketVersioning {
   /**
   * While set to true, versioning is fully enabled for this bucket.
@@ -1004,15 +1125,14 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._bucketPolicyOnly = config.bucketPolicyOnly;
     this._defaultEventBasedHold = config.defaultEventBasedHold;
     this._forceDestroy = config.forceDestroy;
     this._labels = config.labels;
@@ -1027,6 +1147,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     this._lifecycleRule = config.lifecycleRule;
     this._logging.internalValue = config.logging;
     this._retentionPolicy.internalValue = config.retentionPolicy;
+    this._timeouts.internalValue = config.timeouts;
     this._versioning.internalValue = config.versioning;
     this._website.internalValue = config.website;
   }
@@ -1034,22 +1155,6 @@ export class StorageBucket extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // bucket_policy_only - computed: true, optional: true, required: false
-  private _bucketPolicyOnly?: boolean | cdktf.IResolvable; 
-  public get bucketPolicyOnly() {
-    return this.getBooleanAttribute('bucket_policy_only');
-  }
-  public set bucketPolicyOnly(value: boolean | cdktf.IResolvable) {
-    this._bucketPolicyOnly = value;
-  }
-  public resetBucketPolicyOnly() {
-    this._bucketPolicyOnly = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get bucketPolicyOnlyInput() {
-    return this._bucketPolicyOnly;
-  }
 
   // default_event_based_hold - computed: false, optional: true, required: false
   private _defaultEventBasedHold?: boolean | cdktf.IResolvable; 
@@ -1104,16 +1209,13 @@ export class StorageBucket extends cdktf.TerraformResource {
     return this._labels;
   }
 
-  // location - computed: false, optional: true, required: false
+  // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
-  }
-  public resetLocation() {
-    this._location = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
@@ -1289,6 +1391,22 @@ export class StorageBucket extends cdktf.TerraformResource {
     return this._retentionPolicy.internalValue;
   }
 
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new StorageBucketTimeoutsOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: StorageBucketTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
   // versioning - computed: false, optional: true, required: false
   private _versioning = new StorageBucketVersioningOutputReference(this, "versioning");
   public get versioning() {
@@ -1327,7 +1445,6 @@ export class StorageBucket extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bucket_policy_only: cdktf.booleanToTerraform(this._bucketPolicyOnly),
       default_event_based_hold: cdktf.booleanToTerraform(this._defaultEventBasedHold),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
@@ -1342,6 +1459,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform)(this._lifecycleRule),
       logging: storageBucketLoggingToTerraform(this._logging.internalValue),
       retention_policy: storageBucketRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
+      timeouts: storageBucketTimeoutsToTerraform(this._timeouts.internalValue),
       versioning: storageBucketVersioningToTerraform(this._versioning.internalValue),
       website: storageBucketWebsiteToTerraform(this._website.internalValue),
     };

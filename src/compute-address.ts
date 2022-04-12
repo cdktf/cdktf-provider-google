@@ -11,7 +11,7 @@ export interface ComputeAddressConfig extends cdktf.TerraformMetaArguments {
   * The static external IP address represented by this resource. Only
 IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
-if any.
+if any. Set by the API if undefined.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#address ComputeAddress#address}
   */
@@ -230,8 +230,8 @@ export class ComputeAddress extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_address',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

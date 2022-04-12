@@ -26,17 +26,6 @@ unique per project and between 4 and 30 characters in length.
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#force_destroy DataGoogleSpannerInstance#force_destroy}
-  */
-  readonly forceDestroy?: boolean | cdktf.IResolvable;
-  /**
-  * An object containing a list of "key": value pairs.
-Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#labels DataGoogleSpannerInstance#labels}
-  */
-  readonly labels?: { [key: string]: string };
-  /**
   * A unique identifier for the instance, which cannot be changed after
 the instance is created. The name must be between 6 and 30 characters
 in length.
@@ -47,20 +36,6 @@ If not provided, a random string starting with 'tf-' will be selected.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#name DataGoogleSpannerInstance#name}
   */
   readonly name: string;
-  /**
-  * The number of nodes allocated to this instance. At most one of either node_count or processing_units
-can be present in terraform.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#num_nodes DataGoogleSpannerInstance#num_nodes}
-  */
-  readonly numNodes?: number;
-  /**
-  * The number of processing units allocated to this instance. At most one of processing_units 
-or node_count can be present in terraform.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#processing_units DataGoogleSpannerInstance#processing_units}
-  */
-  readonly processingUnits?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/spanner_instance#project DataGoogleSpannerInstance#project}
   */
@@ -93,8 +68,8 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -103,11 +78,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     });
     this._config = config.config;
     this._displayName = config.displayName;
-    this._forceDestroy = config.forceDestroy;
-    this._labels = config.labels;
     this._name = config.name;
-    this._numNodes = config.numNodes;
-    this._processingUnits = config.processingUnits;
     this._project = config.project;
   }
 
@@ -147,20 +118,9 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     return this._displayName;
   }
 
-  // force_destroy - computed: false, optional: true, required: false
-  private _forceDestroy?: boolean | cdktf.IResolvable; 
+  // force_destroy - computed: true, optional: false, required: false
   public get forceDestroy() {
     return this.getBooleanAttribute('force_destroy');
-  }
-  public set forceDestroy(value: boolean | cdktf.IResolvable) {
-    this._forceDestroy = value;
-  }
-  public resetForceDestroy() {
-    this._forceDestroy = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get forceDestroyInput() {
-    return this._forceDestroy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -168,20 +128,9 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
-  // labels - computed: false, optional: true, required: false
-  private _labels?: { [key: string]: string }; 
-  public get labels() {
-    return this.getStringMapAttribute('labels');
-  }
-  public set labels(value: { [key: string]: string }) {
-    this._labels = value;
-  }
-  public resetLabels() {
-    this._labels = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get labelsInput() {
-    return this._labels;
+  // labels - computed: true, optional: false, required: false
+  public labels(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'labels').lookup(key);
   }
 
   // name - computed: false, optional: false, required: true
@@ -197,36 +146,14 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     return this._name;
   }
 
-  // num_nodes - computed: true, optional: true, required: false
-  private _numNodes?: number; 
+  // num_nodes - computed: true, optional: false, required: false
   public get numNodes() {
     return this.getNumberAttribute('num_nodes');
   }
-  public set numNodes(value: number) {
-    this._numNodes = value;
-  }
-  public resetNumNodes() {
-    this._numNodes = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get numNodesInput() {
-    return this._numNodes;
-  }
 
-  // processing_units - computed: true, optional: true, required: false
-  private _processingUnits?: number; 
+  // processing_units - computed: true, optional: false, required: false
   public get processingUnits() {
     return this.getNumberAttribute('processing_units');
-  }
-  public set processingUnits(value: number) {
-    this._processingUnits = value;
-  }
-  public resetProcessingUnits() {
-    this._processingUnits = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get processingUnitsInput() {
-    return this._processingUnits;
   }
 
   // project - computed: false, optional: true, required: false
@@ -258,11 +185,7 @@ export class DataGoogleSpannerInstance extends cdktf.TerraformDataSource {
     return {
       config: cdktf.stringToTerraform(this._config),
       display_name: cdktf.stringToTerraform(this._displayName),
-      force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
-      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
-      num_nodes: cdktf.numberToTerraform(this._numNodes),
-      processing_units: cdktf.numberToTerraform(this._processingUnits),
       project: cdktf.stringToTerraform(this._project),
     };
   }

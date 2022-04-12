@@ -1,0 +1,189 @@
+// https://www.terraform.io/docs/providers/google/d/folders
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface DataGoogleFoldersConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folders#parent_id DataGoogleFolders#parent_id}
+  */
+  readonly parentId: string;
+}
+export interface DataGoogleFoldersFolders {
+}
+
+export function dataGoogleFoldersFoldersToTerraform(struct?: DataGoogleFoldersFolders): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleFoldersFoldersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleFoldersFolders | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleFoldersFolders | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // delete_time - computed: true, optional: false, required: false
+  public get deleteTime() {
+    return this.getStringAttribute('delete_time');
+  }
+
+  // display_name - computed: true, optional: false, required: false
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+
+  // etag - computed: true, optional: false, required: false
+  public get etag() {
+    return this.getStringAttribute('etag');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // parent - computed: true, optional: false, required: false
+  public get parent() {
+    return this.getStringAttribute('parent');
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+}
+
+export class DataGoogleFoldersFoldersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleFoldersFoldersOutputReference {
+    return new DataGoogleFoldersFoldersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/google/d/folders google_folders}
+*/
+export class DataGoogleFolders extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "google_folders";
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/google/d/folders google_folders} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataGoogleFoldersConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataGoogleFoldersConfig) {
+    super(scope, id, {
+      terraformResourceType: 'google_folders',
+      terraformGeneratorMetadata: {
+        providerName: 'google',
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._parentId = config.parentId;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // folders - computed: true, optional: false, required: false
+  private _folders = new DataGoogleFoldersFoldersList(this, "folders", false);
+  public get folders() {
+    return this._folders;
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // parent_id - computed: false, optional: false, required: true
+  private _parentId?: string; 
+  public get parentId() {
+    return this.getStringAttribute('parent_id');
+  }
+  public set parentId(value: string) {
+    this._parentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parentIdInput() {
+    return this._parentId;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      parent_id: cdktf.stringToTerraform(this._parentId),
+    };
+  }
+}

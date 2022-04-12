@@ -32,7 +32,7 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
-  * Name of the VPC network. Required if 'ip_cidr_range' is set.
+  * Name or self_link of the VPC network. Required if 'ip_cidr_range' is set.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#network VpcAccessConnector#network}
   */
@@ -173,8 +173,8 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
       terraformResourceType: 'google_vpc_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

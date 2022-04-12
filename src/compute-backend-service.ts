@@ -67,41 +67,54 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
   /**
   * Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
-load balancing cannot be used with the other. Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
+load balancing cannot be used with the other. For more information, refer to
+[Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service). Default value: "EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED", "EXTERNAL_MANAGED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#load_balancing_scheme ComputeBackendService#load_balancing_scheme}
   */
   readonly loadBalancingScheme?: string;
   /**
   * The load balancing algorithm used within the scope of the locality.
-The possible values are -
+The possible values are:
 
-* ROUND_ROBIN - This is a simple policy in which each healthy backend
-                is selected in round robin order.
+* 'ROUND_ROBIN': This is a simple policy in which each healthy backend
+                 is selected in round robin order.
 
-* LEAST_REQUEST - An O(1) algorithm which selects two random healthy
-                  hosts and picks the host which has fewer active requests.
+* 'LEAST_REQUEST': An O(1) algorithm which selects two random healthy
+                   hosts and picks the host which has fewer active requests.
 
-* RING_HASH - The ring/modulo hash load balancer implements consistent
-              hashing to backends. The algorithm has the property that the
-              addition/removal of a host from a set of N hosts only affects
-              1/N of the requests.
+* 'RING_HASH': The ring/modulo hash load balancer implements consistent
+               hashing to backends. The algorithm has the property that the
+               addition/removal of a host from a set of N hosts only affects
+               1/N of the requests.
 
-* RANDOM - The load balancer selects a random healthy host.
+* 'RANDOM': The load balancer selects a random healthy host.
 
-* ORIGINAL_DESTINATION - Backend host is selected based on the client
-                         connection metadata, i.e., connections are opened
-                         to the same address as the destination address of
-                         the incoming connection before the connection
-                         was redirected to the load balancer.
+* 'ORIGINAL_DESTINATION': Backend host is selected based on the client
+                          connection metadata, i.e., connections are opened
+                          to the same address as the destination address of
+                          the incoming connection before the connection
+                          was redirected to the load balancer.
 
-* MAGLEV - used as a drop in replacement for the ring hash load balancer.
-           Maglev is not as stable as ring hash but has faster table lookup
-           build times and host selection times. For more information about
-           Maglev, refer to https://ai.google/research/pubs/pub44824
+* 'MAGLEV': used as a drop in replacement for the ring hash load balancer.
+            Maglev is not as stable as ring hash but has faster table lookup
+            build times and host selection times. For more information about
+            Maglev, refer to https://ai.google/research/pubs/pub44824
 
-This field is applicable only when the load_balancing_scheme is set to
-INTERNAL_SELF_MANAGED. Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"]
+
+This field is applicable to either:
+
+* A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
+  and loadBalancingScheme set to INTERNAL_MANAGED.
+* A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+
+
+If session_affinity is not NONE, and this field is not set to MAGLEV or RING_HASH,
+session affinity settings will not take effect.
+
+Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced
+by a URL map that is bound to target gRPC proxy that has validate_for_proxyless
+field set to true. Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#locality_lb_policy ComputeBackendService#locality_lb_policy}
   */
@@ -200,6 +213,12 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#outlier_detection ComputeBackendService#outlier_detection}
   */
   readonly outlierDetection?: ComputeBackendServiceOutlierDetection;
+  /**
+  * security_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#security_settings ComputeBackendService#security_settings}
+  */
+  readonly securitySettings?: ComputeBackendServiceSecuritySettings;
   /**
   * timeouts block
   * 
@@ -2199,6 +2218,100 @@ export class ComputeBackendServiceOutlierDetectionOutputReference extends cdktf.
     return this._interval.internalValue;
   }
 }
+export interface ComputeBackendServiceSecuritySettings {
+  /**
+  * ClientTlsPolicy is a resource that specifies how a client should authenticate
+connections to backends of a service. This resource itself does not affect
+configuration unless it is attached to a backend service resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#client_tls_policy ComputeBackendService#client_tls_policy}
+  */
+  readonly clientTlsPolicy: string;
+  /**
+  * A list of alternate names to verify the subject identity in the certificate.
+If specified, the client will verify that the server certificate's subject
+alt name matches one of the specified values.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#subject_alt_names ComputeBackendService#subject_alt_names}
+  */
+  readonly subjectAltNames: string[];
+}
+
+export function computeBackendServiceSecuritySettingsToTerraform(struct?: ComputeBackendServiceSecuritySettingsOutputReference | ComputeBackendServiceSecuritySettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_tls_policy: cdktf.stringToTerraform(struct!.clientTlsPolicy),
+    subject_alt_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subjectAltNames),
+  }
+}
+
+export class ComputeBackendServiceSecuritySettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeBackendServiceSecuritySettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientTlsPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientTlsPolicy = this._clientTlsPolicy;
+    }
+    if (this._subjectAltNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subjectAltNames = this._subjectAltNames;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceSecuritySettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientTlsPolicy = undefined;
+      this._subjectAltNames = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientTlsPolicy = value.clientTlsPolicy;
+      this._subjectAltNames = value.subjectAltNames;
+    }
+  }
+
+  // client_tls_policy - computed: false, optional: false, required: true
+  private _clientTlsPolicy?: string; 
+  public get clientTlsPolicy() {
+    return this.getStringAttribute('client_tls_policy');
+  }
+  public set clientTlsPolicy(value: string) {
+    this._clientTlsPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientTlsPolicyInput() {
+    return this._clientTlsPolicy;
+  }
+
+  // subject_alt_names - computed: false, optional: false, required: true
+  private _subjectAltNames?: string[]; 
+  public get subjectAltNames() {
+    return this.getListAttribute('subject_alt_names');
+  }
+  public set subjectAltNames(value: string[]) {
+    this._subjectAltNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectAltNamesInput() {
+    return this._subjectAltNames;
+  }
+}
 export interface ComputeBackendServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#create ComputeBackendService#create}
@@ -2345,8 +2458,8 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2376,6 +2489,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     this._iap.internalValue = config.iap;
     this._logConfig.internalValue = config.logConfig;
     this._outlierDetection.internalValue = config.outlierDetection;
+    this._securitySettings.internalValue = config.securitySettings;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -2769,6 +2883,22 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     return this._outlierDetection.internalValue;
   }
 
+  // security_settings - computed: false, optional: true, required: false
+  private _securitySettings = new ComputeBackendServiceSecuritySettingsOutputReference(this, "security_settings");
+  public get securitySettings() {
+    return this._securitySettings;
+  }
+  public putSecuritySettings(value: ComputeBackendServiceSecuritySettings) {
+    this._securitySettings.internalValue = value;
+  }
+  public resetSecuritySettings() {
+    this._securitySettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securitySettingsInput() {
+    return this._securitySettings.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeBackendServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -2814,6 +2944,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       iap: computeBackendServiceIapToTerraform(this._iap.internalValue),
       log_config: computeBackendServiceLogConfigToTerraform(this._logConfig.internalValue),
       outlier_detection: computeBackendServiceOutlierDetectionToTerraform(this._outlierDetection.internalValue),
+      security_settings: computeBackendServiceSecuritySettingsToTerraform(this._securitySettings.internalValue),
       timeouts: computeBackendServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

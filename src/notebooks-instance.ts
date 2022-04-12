@@ -176,7 +176,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
   */
   readonly subnet?: string;
   /**
-  * The Compute Engine tags to add to runtime.
+  * The Compute Engine tags to add to instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#tags NotebooksInstance#tags}
   */
@@ -803,8 +803,8 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

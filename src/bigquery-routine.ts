@@ -50,6 +50,16 @@ imported JAVASCRIPT libraries.
   */
   readonly project?: string;
   /**
+  * Optional. Can be set only if routineType = "TABLE_VALUED_FUNCTION".
+
+If absent, the return table type is inferred from definitionBody at query time in each query
+that references this routine. If present, then the columns in the evaluated table result will
+be cast to match the column types specificed in return table type, at query time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#return_table_type BigqueryRoutine#return_table_type}
+  */
+  readonly returnTableType?: string;
+  /**
   * A JSON schema for the return type. Optional if language = "SQL"; required otherwise.
 If absent, the return type is inferred from definitionBody at query time in each query
 that references this routine. If present, then the evaluated result will be cast to
@@ -70,7 +80,7 @@ the schema as returned by the API.
   */
   readonly routineId: string;
   /**
-  * The type of routine. Possible values: ["SCALAR_FUNCTION", "PROCEDURE"]
+  * The type of routine. Possible values: ["SCALAR_FUNCTION", "PROCEDURE", "TABLE_VALUED_FUNCTION"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#routine_type BigqueryRoutine#routine_type}
   */
@@ -280,8 +290,8 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_routine',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -295,6 +305,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
     this._importedLibraries = config.importedLibraries;
     this._language = config.language;
     this._project = config.project;
+    this._returnTableType = config.returnTableType;
     this._returnType = config.returnType;
     this._routineId = config.routineId;
     this._routineType = config.routineType;
@@ -427,6 +438,22 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // return_table_type - computed: false, optional: true, required: false
+  private _returnTableType?: string; 
+  public get returnTableType() {
+    return this.getStringAttribute('return_table_type');
+  }
+  public set returnTableType(value: string) {
+    this._returnTableType = value;
+  }
+  public resetReturnTableType() {
+    this._returnTableType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get returnTableTypeInput() {
+    return this._returnTableType;
+  }
+
   // return_type - computed: false, optional: true, required: false
   private _returnType?: string; 
   public get returnType() {
@@ -518,6 +545,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       imported_libraries: cdktf.listMapper(cdktf.stringToTerraform)(this._importedLibraries),
       language: cdktf.stringToTerraform(this._language),
       project: cdktf.stringToTerraform(this._project),
+      return_table_type: cdktf.stringToTerraform(this._returnTableType),
       return_type: cdktf.stringToTerraform(this._returnType),
       routine_id: cdktf.stringToTerraform(this._routineId),
       routine_type: cdktf.stringToTerraform(this._routineType),

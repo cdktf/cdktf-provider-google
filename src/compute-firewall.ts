@@ -26,7 +26,8 @@ must be expressed in CIDR format. Only IPv4 is supported.
   * Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
-sourceRanges OR sourceTags. Possible values: ["INGRESS", "EGRESS"]
+'source_ranges' OR 'source_tags'. For INGRESS traffic, one of 'source_ranges',
+'source_tags' or 'source_service_accounts' is required. Possible values: ["INGRESS", "EGRESS"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#direction ComputeFirewall#direction}
   */
@@ -87,7 +88,8 @@ sourceTags may be set. If both properties are set, the firewall will
 apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
-apply. Only IPv4 is supported.
+apply. Only IPv4 is supported. For INGRESS traffic, one of 'source_ranges',
+'source_tags' or 'source_service_accounts' is required.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_ranges ComputeFirewall#source_ranges}
   */
@@ -103,7 +105,8 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
-used at the same time as sourceTags or targetTags.
+used at the same time as sourceTags or targetTags. For INGRESS traffic,
+one of 'source_ranges', 'source_tags' or 'source_service_accounts' is required.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_service_accounts ComputeFirewall#source_service_accounts}
   */
@@ -117,7 +120,8 @@ address. One or both of sourceRanges and sourceTags may be set. If
 both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
-to match both properties for the firewall to apply.
+to match both properties for the firewall to apply. For INGRESS traffic,
+one of 'source_ranges', 'source_tags' or 'source_service_accounts' is required.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_tags ComputeFirewall#source_tags}
   */
@@ -447,8 +451,8 @@ export class ComputeFirewall extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_firewall',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -632,7 +636,7 @@ export class ComputeFirewall extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
-  // source_ranges - computed: true, optional: true, required: false
+  // source_ranges - computed: false, optional: true, required: false
   private _sourceRanges?: string[]; 
   public get sourceRanges() {
     return cdktf.Fn.tolist(this.getListAttribute('source_ranges'));

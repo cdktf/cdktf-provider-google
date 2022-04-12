@@ -8,6 +8,16 @@ import * as cdktf from 'cdktf';
 
 export interface SpannerDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The dialect of the Cloud Spanner Database.
+If it is not provided, "GOOGLE_STANDARD_SQL" will be used. 
+Note: Databases that are created with POSTGRESQL dialect do not support 
+extra DDL statements in the 'CreateDatabase' call. You must therefore re-apply 
+terraform with ddl on the same database after creation. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#database_dialect SpannerDatabase#database_dialect}
+  */
+  readonly databaseDialect?: string;
+  /**
   * An optional list of DDL statements to run inside the newly created
 database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
@@ -261,14 +271,15 @@ export class SpannerDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._databaseDialect = config.databaseDialect;
     this._ddl = config.ddl;
     this._deletionProtection = config.deletionProtection;
     this._instance = config.instance;
@@ -281,6 +292,22 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // database_dialect - computed: true, optional: true, required: false
+  private _databaseDialect?: string; 
+  public get databaseDialect() {
+    return this.getStringAttribute('database_dialect');
+  }
+  public set databaseDialect(value: string) {
+    this._databaseDialect = value;
+  }
+  public resetDatabaseDialect() {
+    this._databaseDialect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseDialectInput() {
+    return this._databaseDialect;
+  }
 
   // ddl - computed: false, optional: true, required: false
   private _ddl?: string[]; 
@@ -404,6 +431,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      database_dialect: cdktf.stringToTerraform(this._databaseDialect),
       ddl: cdktf.listMapper(cdktf.stringToTerraform)(this._ddl),
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       instance: cdktf.stringToTerraform(this._instance),

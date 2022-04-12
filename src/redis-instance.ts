@@ -77,6 +77,17 @@ be different from [locationId].
   */
   readonly project?: string;
   /**
+  * Optional. Read replica mode. Can only be specified when trying to create the instance.
+If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
+- READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the 
+instance cannot scale up or down the number of replicas.
+- READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance 
+can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
+  */
+  readonly readReplicasMode?: string;
+  /**
   * Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
@@ -99,6 +110,15 @@ at the top for the latest valid values.
   */
   readonly region?: string;
   /**
+  * Optional. The number of replica nodes. The valid range for the Standard Tier with 
+read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled
+for a Standard Tier instance, the only valid value is 1 and the default is 1. 
+The valid value for basic tier is 0 and the default is also 0.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#replica_count RedisInstance#replica_count}
+  */
+  readonly replicaCount?: number;
+  /**
   * The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
@@ -120,17 +140,98 @@ network.
   /**
   * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
 
-- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
+- SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
   */
   readonly transitEncryptionMode?: string;
+  /**
+  * maintenance_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
+  */
+  readonly maintenancePolicy?: RedisInstanceMaintenancePolicy;
+  /**
+  * maintenance_schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#maintenance_schedule RedisInstance#maintenance_schedule}
+  */
+  readonly maintenanceSchedule?: RedisInstanceMaintenanceSchedule;
   /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#timeouts RedisInstance#timeouts}
   */
   readonly timeouts?: RedisInstanceTimeouts;
+}
+export interface RedisInstanceNodes {
+}
+
+export function redisInstanceNodesToTerraform(struct?: RedisInstanceNodes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class RedisInstanceNodesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RedisInstanceNodes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstanceNodes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // zone - computed: true, optional: false, required: false
+  public get zone() {
+    return this.getStringAttribute('zone');
+  }
+}
+
+export class RedisInstanceNodesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RedisInstanceNodesOutputReference {
+    return new RedisInstanceNodesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface RedisInstanceServerCaCerts {
 }
@@ -214,6 +315,359 @@ export class RedisInstanceServerCaCertsList extends cdktf.ComplexList {
   */
   public get(index: number): RedisInstanceServerCaCertsOutputReference {
     return new RedisInstanceServerCaCertsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
+  /**
+  * Hours of day in 24 hour format. Should be from 0 to 23.
+An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#hours RedisInstance#hours}
+  */
+  readonly hours?: number;
+  /**
+  * Minutes of hour of day. Must be from 0 to 59.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#minutes RedisInstance#minutes}
+  */
+  readonly minutes?: number;
+  /**
+  * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#nanos RedisInstance#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Seconds of minutes of the time. Must normally be from 0 to 59.
+An API may allow the value 60 if it allows leap-seconds.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#seconds RedisInstance#seconds}
+  */
+  readonly seconds?: number;
+}
+
+export function redisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct?: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference | RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
+export class RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // hours - computed: false, optional: true, required: false
+  private _hours?: number; 
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+  public set hours(value: number) {
+    this._hours = value;
+  }
+  public resetHours() {
+    this._hours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow {
+  /**
+  * Required. The day of week that maintenance updates occur.
+
+- DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+- MONDAY: Monday
+- TUESDAY: Tuesday
+- WEDNESDAY: Wednesday
+- THURSDAY: Thursday
+- FRIDAY: Friday
+- SATURDAY: Saturday
+- SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#day RedisInstance#day}
+  */
+  readonly day: string;
+  /**
+  * start_time block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#start_time RedisInstance#start_time}
+  */
+  readonly startTime: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
+}
+
+export function redisInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform(struct?: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.stringToTerraform(struct!.day),
+    start_time: redisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct!.startTime),
+  }
+}
+
+export interface RedisInstanceMaintenancePolicy {
+  /**
+  * Optional. Description of what this policy is for.
+Create/Update methods return INVALID_ARGUMENT if the
+length is greater than 512.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#description RedisInstance#description}
+  */
+  readonly description?: string;
+  /**
+  * weekly_maintenance_window block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
+  */
+  readonly weeklyMaintenanceWindow?: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable;
+}
+
+export function redisInstanceMaintenancePolicyToTerraform(struct?: RedisInstanceMaintenancePolicyOutputReference | RedisInstanceMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    weekly_maintenance_window: cdktf.listMapper(redisInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform)(struct!.weeklyMaintenanceWindow),
+  }
+}
+
+export class RedisInstanceMaintenancePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RedisInstanceMaintenancePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._weeklyMaintenanceWindow !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklyMaintenanceWindow = this._weeklyMaintenanceWindow;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstanceMaintenancePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._description = undefined;
+      this._weeklyMaintenanceWindow = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._description = value.description;
+      this._weeklyMaintenanceWindow = value.weeklyMaintenanceWindow;
+    }
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // weekly_maintenance_window - computed: false, optional: true, required: false
+  private _weeklyMaintenanceWindow?: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable; 
+  public get weeklyMaintenanceWindow() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('weekly_maintenance_window');
+  }
+  public set weeklyMaintenanceWindow(value: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable) {
+    this._weeklyMaintenanceWindow = value;
+  }
+  public resetWeeklyMaintenanceWindow() {
+    this._weeklyMaintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyMaintenanceWindowInput() {
+    return this._weeklyMaintenanceWindow;
+  }
+}
+export interface RedisInstanceMaintenanceSchedule {
+}
+
+export function redisInstanceMaintenanceScheduleToTerraform(struct?: RedisInstanceMaintenanceScheduleOutputReference | RedisInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class RedisInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RedisInstanceMaintenanceSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstanceMaintenanceSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // schedule_deadline_time - computed: true, optional: false, required: false
+  public get scheduleDeadlineTime() {
+    return this.getStringAttribute('schedule_deadline_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
   }
 }
 export interface RedisInstanceTimeouts {
@@ -362,8 +816,8 @@ export class RedisInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -380,12 +834,16 @@ export class RedisInstance extends cdktf.TerraformResource {
     this._memorySizeGb = config.memorySizeGb;
     this._name = config.name;
     this._project = config.project;
+    this._readReplicasMode = config.readReplicasMode;
     this._redisConfigs = config.redisConfigs;
     this._redisVersion = config.redisVersion;
     this._region = config.region;
+    this._replicaCount = config.replicaCount;
     this._reservedIpRange = config.reservedIpRange;
     this._tier = config.tier;
     this._transitEncryptionMode = config.transitEncryptionMode;
+    this._maintenancePolicy.internalValue = config.maintenancePolicy;
+    this._maintenanceSchedule.internalValue = config.maintenanceSchedule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -556,6 +1014,12 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // nodes - computed: true, optional: false, required: false
+  private _nodes = new RedisInstanceNodesList(this, "nodes", false);
+  public get nodes() {
+    return this._nodes;
+  }
+
   // persistence_iam_identity - computed: true, optional: false, required: false
   public get persistenceIamIdentity() {
     return this.getStringAttribute('persistence_iam_identity');
@@ -580,6 +1044,32 @@ export class RedisInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // read_endpoint - computed: true, optional: false, required: false
+  public get readEndpoint() {
+    return this.getStringAttribute('read_endpoint');
+  }
+
+  // read_endpoint_port - computed: true, optional: false, required: false
+  public get readEndpointPort() {
+    return this.getNumberAttribute('read_endpoint_port');
+  }
+
+  // read_replicas_mode - computed: true, optional: true, required: false
+  private _readReplicasMode?: string; 
+  public get readReplicasMode() {
+    return this.getStringAttribute('read_replicas_mode');
+  }
+  public set readReplicasMode(value: string) {
+    this._readReplicasMode = value;
+  }
+  public resetReadReplicasMode() {
+    this._readReplicasMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readReplicasModeInput() {
+    return this._readReplicasMode;
   }
 
   // redis_configs - computed: false, optional: true, required: false
@@ -628,6 +1118,22 @@ export class RedisInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
     return this._region;
+  }
+
+  // replica_count - computed: true, optional: true, required: false
+  private _replicaCount?: number; 
+  public get replicaCount() {
+    return this.getNumberAttribute('replica_count');
+  }
+  public set replicaCount(value: number) {
+    this._replicaCount = value;
+  }
+  public resetReplicaCount() {
+    this._replicaCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaCountInput() {
+    return this._replicaCount;
   }
 
   // reserved_ip_range - computed: true, optional: true, required: false
@@ -684,6 +1190,38 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._transitEncryptionMode;
   }
 
+  // maintenance_policy - computed: false, optional: true, required: false
+  private _maintenancePolicy = new RedisInstanceMaintenancePolicyOutputReference(this, "maintenance_policy");
+  public get maintenancePolicy() {
+    return this._maintenancePolicy;
+  }
+  public putMaintenancePolicy(value: RedisInstanceMaintenancePolicy) {
+    this._maintenancePolicy.internalValue = value;
+  }
+  public resetMaintenancePolicy() {
+    this._maintenancePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenancePolicyInput() {
+    return this._maintenancePolicy.internalValue;
+  }
+
+  // maintenance_schedule - computed: false, optional: true, required: false
+  private _maintenanceSchedule = new RedisInstanceMaintenanceScheduleOutputReference(this, "maintenance_schedule");
+  public get maintenanceSchedule() {
+    return this._maintenanceSchedule;
+  }
+  public putMaintenanceSchedule(value: RedisInstanceMaintenanceSchedule) {
+    this._maintenanceSchedule.internalValue = value;
+  }
+  public resetMaintenanceSchedule() {
+    this._maintenanceSchedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceScheduleInput() {
+    return this._maintenanceSchedule.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new RedisInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -716,12 +1254,16 @@ export class RedisInstance extends cdktf.TerraformResource {
       memory_size_gb: cdktf.numberToTerraform(this._memorySizeGb),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      read_replicas_mode: cdktf.stringToTerraform(this._readReplicasMode),
       redis_configs: cdktf.hashMapper(cdktf.stringToTerraform)(this._redisConfigs),
       redis_version: cdktf.stringToTerraform(this._redisVersion),
       region: cdktf.stringToTerraform(this._region),
+      replica_count: cdktf.numberToTerraform(this._replicaCount),
       reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),
       tier: cdktf.stringToTerraform(this._tier),
       transit_encryption_mode: cdktf.stringToTerraform(this._transitEncryptionMode),
+      maintenance_policy: redisInstanceMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),
+      maintenance_schedule: redisInstanceMaintenanceScheduleToTerraform(this._maintenanceSchedule.internalValue),
       timeouts: redisInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

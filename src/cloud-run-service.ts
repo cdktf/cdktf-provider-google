@@ -566,6 +566,168 @@ export class CloudRunServiceTemplateMetadataOutputReference extends cdktf.Comple
     return this.getStringAttribute('uid');
   }
 }
+export interface CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef {
+  /**
+  * A Cloud Secret Manager secret version. Must be 'latest' for the latest
+version or an integer for a specific version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#key CloudRunService#key}
+  */
+  readonly key: string;
+  /**
+  * The name of the secret in Cloud Secret Manager. By default, the secret
+is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+You set the <alias> in this field, and create an annotation with the
+following structure
+"run.googleapis.com/secrets" = "<alias>:projects/<project-id|project-number>/secrets/<secret-name>".
+If multiple alias definitions are needed, they must be separated by
+commas in the annotation field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
+  */
+  readonly name: string;
+}
+
+export function cloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefOutputReference | CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._key = undefined;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._key = value.key;
+      this._name = value.name;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface CloudRunServiceTemplateSpecContainersEnvValueFrom {
+  /**
+  * secret_key_ref block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#secret_key_ref CloudRunService#secret_key_ref}
+  */
+  readonly secretKeyRef: CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef;
+}
+
+export function cloudRunServiceTemplateSpecContainersEnvValueFromToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnvValueFromOutputReference | CloudRunServiceTemplateSpecContainersEnvValueFrom): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_key_ref: cloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefToTerraform(struct!.secretKeyRef),
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersEnvValueFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainersEnvValueFrom | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretKeyRef?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretKeyRef = this._secretKeyRef?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvValueFrom | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._secretKeyRef.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._secretKeyRef.internalValue = value.secretKeyRef;
+    }
+  }
+
+  // secret_key_ref - computed: false, optional: false, required: true
+  private _secretKeyRef = new CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRefOutputReference(this, "secret_key_ref");
+  public get secretKeyRef() {
+    return this._secretKeyRef;
+  }
+  public putSecretKeyRef(value: CloudRunServiceTemplateSpecContainersEnvValueFromSecretKeyRef) {
+    this._secretKeyRef.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretKeyRefInput() {
+    return this._secretKeyRef.internalValue;
+  }
+}
 export interface CloudRunServiceTemplateSpecContainersEnv {
   /**
   * Name of the environment variable.
@@ -586,6 +748,12 @@ Defaults to "".
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#value CloudRunService#value}
   */
   readonly value?: string;
+  /**
+  * value_from block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#value_from CloudRunService#value_from}
+  */
+  readonly valueFrom?: CloudRunServiceTemplateSpecContainersEnvValueFrom;
 }
 
 export function cloudRunServiceTemplateSpecContainersEnvToTerraform(struct?: CloudRunServiceTemplateSpecContainersEnv | cdktf.IResolvable): any {
@@ -596,6 +764,7 @@ export function cloudRunServiceTemplateSpecContainersEnvToTerraform(struct?: Clo
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
+    value_from: cloudRunServiceTemplateSpecContainersEnvValueFromToTerraform(struct!.valueFrom),
   }
 }
 
@@ -958,19 +1127,19 @@ export function cloudRunServiceTemplateSpecContainersEnvFromToTerraform(struct?:
 
 export interface CloudRunServiceTemplateSpecContainersPorts {
   /**
-  * Port number.
+  * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#container_port CloudRunService#container_port}
   */
-  readonly containerPort: number;
+  readonly containerPort?: number;
   /**
-  * Name of the port.
+  * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
   readonly name?: string;
   /**
-  * Protocol used on port. Defaults to TCP.
+  * Protocol for port. Must be "TCP". Defaults to "TCP".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#protocol CloudRunService#protocol}
   */
@@ -1091,6 +1260,33 @@ export class CloudRunServiceTemplateSpecContainersResourcesOutputReference exten
     return this._requests;
   }
 }
+export interface CloudRunServiceTemplateSpecContainersVolumeMounts {
+  /**
+  * Path within the container at which the volume should be mounted.  Must
+not contain ':'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#mount_path CloudRunService#mount_path}
+  */
+  readonly mountPath: string;
+  /**
+  * This must match the Name of a Volume.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
+  */
+  readonly name: string;
+}
+
+export function cloudRunServiceTemplateSpecContainersVolumeMountsToTerraform(struct?: CloudRunServiceTemplateSpecContainersVolumeMounts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface CloudRunServiceTemplateSpecContainers {
   /**
   * Arguments to the entrypoint.
@@ -1160,6 +1356,12 @@ might be configured in the container image.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#resources CloudRunService#resources}
   */
   readonly resources?: CloudRunServiceTemplateSpecContainersResources;
+  /**
+  * volume_mounts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#volume_mounts CloudRunService#volume_mounts}
+  */
+  readonly volumeMounts?: CloudRunServiceTemplateSpecContainersVolumeMounts[] | cdktf.IResolvable;
 }
 
 export function cloudRunServiceTemplateSpecContainersToTerraform(struct?: CloudRunServiceTemplateSpecContainers | cdktf.IResolvable): any {
@@ -1176,6 +1378,207 @@ export function cloudRunServiceTemplateSpecContainersToTerraform(struct?: CloudR
     env_from: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromToTerraform)(struct!.envFrom),
     ports: cdktf.listMapper(cloudRunServiceTemplateSpecContainersPortsToTerraform)(struct!.ports),
     resources: cloudRunServiceTemplateSpecContainersResourcesToTerraform(struct!.resources),
+    volume_mounts: cdktf.listMapper(cloudRunServiceTemplateSpecContainersVolumeMountsToTerraform)(struct!.volumeMounts),
+  }
+}
+
+export interface CloudRunServiceTemplateSpecVolumesSecretItems {
+  /**
+  * The Cloud Secret Manager secret version.
+Can be 'latest' for the latest value or an integer for a specific version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#key CloudRunService#key}
+  */
+  readonly key: string;
+  /**
+  * Mode bits to use on this file, must be a value between 0000 and 0777. If
+not specified, the volume defaultMode will be used. This might be in
+conflict with other options that affect the file mode, like fsGroup, and
+the result can be other mode bits set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#mode CloudRunService#mode}
+  */
+  readonly mode?: number;
+  /**
+  * The relative path of the file to map the key to.
+May not be an absolute path.
+May not contain the path element '..'.
+May not start with the string '..'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#path CloudRunService#path}
+  */
+  readonly path: string;
+}
+
+export function cloudRunServiceTemplateSpecVolumesSecretItemsToTerraform(struct?: CloudRunServiceTemplateSpecVolumesSecretItems | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    mode: cdktf.numberToTerraform(struct!.mode),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
+export interface CloudRunServiceTemplateSpecVolumesSecret {
+  /**
+  * Mode bits to use on created files by default. Must be a value between 0000
+and 0777. Defaults to 0644. Directories within the path are not affected by
+this setting. This might be in conflict with other options that affect the
+file mode, like fsGroup, and the result can be other mode bits set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#default_mode CloudRunService#default_mode}
+  */
+  readonly defaultMode?: number;
+  /**
+  * The name of the secret in Cloud Secret Manager. By default, the secret
+is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+An alias definition has the form:
+<alias>:projects/<project-id|project-number>/secrets/<secret-name>.
+If multiple alias definitions are needed, they must be separated by
+commas.
+The alias definitions must be set on the run.googleapis.com/secrets
+annotation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#secret_name CloudRunService#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * items block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#items CloudRunService#items}
+  */
+  readonly items?: CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable;
+}
+
+export function cloudRunServiceTemplateSpecVolumesSecretToTerraform(struct?: CloudRunServiceTemplateSpecVolumesSecretOutputReference | CloudRunServiceTemplateSpecVolumesSecret): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_mode: cdktf.numberToTerraform(struct!.defaultMode),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    items: cdktf.listMapper(cloudRunServiceTemplateSpecVolumesSecretItemsToTerraform)(struct!.items),
+  }
+}
+
+export class CloudRunServiceTemplateSpecVolumesSecretOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecVolumesSecret | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultMode = this._defaultMode;
+    }
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._items !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.items = this._items;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecVolumesSecret | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._defaultMode = undefined;
+      this._secretName = undefined;
+      this._items = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._defaultMode = value.defaultMode;
+      this._secretName = value.secretName;
+      this._items = value.items;
+    }
+  }
+
+  // default_mode - computed: false, optional: true, required: false
+  private _defaultMode?: number; 
+  public get defaultMode() {
+    return this.getNumberAttribute('default_mode');
+  }
+  public set defaultMode(value: number) {
+    this._defaultMode = value;
+  }
+  public resetDefaultMode() {
+    this._defaultMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultModeInput() {
+    return this._defaultMode;
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+
+  // items - computed: false, optional: true, required: false
+  private _items?: CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable; 
+  public get items() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('items');
+  }
+  public set items(value: CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable) {
+    this._items = value;
+  }
+  public resetItems() {
+    this._items = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get itemsInput() {
+    return this._items;
+  }
+}
+export interface CloudRunServiceTemplateSpecVolumes {
+  /**
+  * Volume's name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
+  */
+  readonly name: string;
+  /**
+  * secret block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#secret CloudRunService#secret}
+  */
+  readonly secret: CloudRunServiceTemplateSpecVolumesSecret;
+}
+
+export function cloudRunServiceTemplateSpecVolumesToTerraform(struct?: CloudRunServiceTemplateSpecVolumes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    secret: cloudRunServiceTemplateSpecVolumesSecretToTerraform(struct!.secret),
   }
 }
 
@@ -1212,6 +1615,12 @@ will use the project's default service account.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#containers CloudRunService#containers}
   */
   readonly containers?: CloudRunServiceTemplateSpecContainers[] | cdktf.IResolvable;
+  /**
+  * volumes block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#volumes CloudRunService#volumes}
+  */
+  readonly volumes?: CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable;
 }
 
 export function cloudRunServiceTemplateSpecToTerraform(struct?: CloudRunServiceTemplateSpecOutputReference | CloudRunServiceTemplateSpec): any {
@@ -1224,6 +1633,7 @@ export function cloudRunServiceTemplateSpecToTerraform(struct?: CloudRunServiceT
     service_account_name: cdktf.stringToTerraform(struct!.serviceAccountName),
     timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
     containers: cdktf.listMapper(cloudRunServiceTemplateSpecContainersToTerraform)(struct!.containers),
+    volumes: cdktf.listMapper(cloudRunServiceTemplateSpecVolumesToTerraform)(struct!.volumes),
   }
 }
 
@@ -1257,6 +1667,10 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.containers = this._containers;
     }
+    if (this._volumes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumes = this._volumes;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1267,6 +1681,7 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
       this._serviceAccountName = undefined;
       this._timeoutSeconds = undefined;
       this._containers = undefined;
+      this._volumes = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1274,6 +1689,7 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
       this._serviceAccountName = value.serviceAccountName;
       this._timeoutSeconds = value.timeoutSeconds;
       this._containers = value.containers;
+      this._volumes = value.volumes;
     }
   }
 
@@ -1293,7 +1709,7 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
     return this._containerConcurrency;
   }
 
-  // service_account_name - computed: false, optional: true, required: false
+  // service_account_name - computed: true, optional: true, required: false
   private _serviceAccountName?: string; 
   public get serviceAccountName() {
     return this.getStringAttribute('service_account_name');
@@ -1345,6 +1761,23 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get containersInput() {
     return this._containers;
+  }
+
+  // volumes - computed: false, optional: true, required: false
+  private _volumes?: CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable; 
+  public get volumes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('volumes');
+  }
+  public set volumes(value: CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable) {
+    this._volumes = value;
+  }
+  public resetVolumes() {
+    this._volumes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumesInput() {
+    return this._volumes;
   }
 }
 export interface CloudRunServiceTemplate {
@@ -1625,8 +2058,8 @@ export class CloudRunService extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

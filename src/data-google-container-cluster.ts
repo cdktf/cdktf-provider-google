@@ -95,6 +95,70 @@ export class DataGoogleContainerClusterAddonsConfigCloudrunConfigList extends cd
     return new DataGoogleContainerClusterAddonsConfigCloudrunConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig {
+}
+
+export function dataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigToTerraform(struct?: DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputReference {
+    return new DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscaling {
 }
 
@@ -333,6 +397,12 @@ export class DataGoogleContainerClusterAddonsConfigOutputReference extends cdktf
     return this._cloudrunConfig;
   }
 
+  // gcp_filestore_csi_driver_config - computed: true, optional: false, required: false
+  private _gcpFilestoreCsiDriverConfig = new DataGoogleContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigList(this, "gcp_filestore_csi_driver_config", false);
+  public get gcpFilestoreCsiDriverConfig() {
+    return this._gcpFilestoreCsiDriverConfig;
+  }
+
   // horizontal_pod_autoscaling - computed: true, optional: false, required: false
   private _horizontalPodAutoscaling = new DataGoogleContainerClusterAddonsConfigHorizontalPodAutoscalingList(this, "horizontal_pod_autoscaling", false);
   public get horizontalPodAutoscaling() {
@@ -472,6 +542,11 @@ export class DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefault
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // image_type - computed: true, optional: false, required: false
+  public get imageType() {
+    return this.getStringAttribute('image_type');
   }
 
   // oauth_scopes - computed: true, optional: false, required: false
@@ -653,6 +728,70 @@ export class DataGoogleContainerClusterClusterAutoscalingList extends cdktf.Comp
     return new DataGoogleContainerClusterClusterAutoscalingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterConfidentialNodes {
+}
+
+export function dataGoogleContainerClusterConfidentialNodesToTerraform(struct?: DataGoogleContainerClusterConfidentialNodes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterConfidentialNodesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterConfidentialNodes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterConfidentialNodes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterConfidentialNodesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterConfidentialNodesOutputReference {
+    return new DataGoogleContainerClusterConfidentialNodesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterDatabaseEncryption {
 }
 
@@ -784,6 +923,80 @@ export class DataGoogleContainerClusterDefaultSnatStatusList extends cdktf.Compl
   */
   public get(index: number): DataGoogleContainerClusterDefaultSnatStatusOutputReference {
     return new DataGoogleContainerClusterDefaultSnatStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleContainerClusterDnsConfig {
+}
+
+export function dataGoogleContainerClusterDnsConfigToTerraform(struct?: DataGoogleContainerClusterDnsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterDnsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterDnsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterDnsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // cluster_dns - computed: true, optional: false, required: false
+  public get clusterDns() {
+    return this.getStringAttribute('cluster_dns');
+  }
+
+  // cluster_dns_domain - computed: true, optional: false, required: false
+  public get clusterDnsDomain() {
+    return this.getStringAttribute('cluster_dns_domain');
+  }
+
+  // cluster_dns_scope - computed: true, optional: false, required: false
+  public get clusterDnsScope() {
+    return this.getStringAttribute('cluster_dns_scope');
+  }
+}
+
+export class DataGoogleContainerClusterDnsConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterDnsConfigOutputReference {
+    return new DataGoogleContainerClusterDnsConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleContainerClusterIpAllocationPolicy {
@@ -1347,16 +1560,6 @@ export class DataGoogleContainerClusterMasterAuthOutputReference extends cdktf.C
   public get clusterCaCertificate() {
     return this.getStringAttribute('cluster_ca_certificate');
   }
-
-  // password - computed: true, optional: false, required: false
-  public get password() {
-    return this.getStringAttribute('password');
-  }
-
-  // username - computed: true, optional: false, required: false
-  public get username() {
-    return this.getStringAttribute('username');
-  }
 }
 
 export class DataGoogleContainerClusterMasterAuthList extends cdktf.ComplexList {
@@ -1644,6 +1847,70 @@ export class DataGoogleContainerClusterNetworkPolicyList extends cdktf.ComplexLi
     return new DataGoogleContainerClusterNetworkPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterNodeConfigGcfsConfig {
+}
+
+export function dataGoogleContainerClusterNodeConfigGcfsConfigToTerraform(struct?: DataGoogleContainerClusterNodeConfigGcfsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigGcfsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodeConfigGcfsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodeConfigGcfsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigGcfsConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodeConfigGcfsConfigOutputReference {
+    return new DataGoogleContainerClusterNodeConfigGcfsConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodeConfigGuestAccelerator {
 }
 
@@ -1716,6 +1983,70 @@ export class DataGoogleContainerClusterNodeConfigGuestAcceleratorList extends cd
   */
   public get(index: number): DataGoogleContainerClusterNodeConfigGuestAcceleratorOutputReference {
     return new DataGoogleContainerClusterNodeConfigGuestAcceleratorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleContainerClusterNodeConfigGvnic {
+}
+
+export function dataGoogleContainerClusterNodeConfigGvnicToTerraform(struct?: DataGoogleContainerClusterNodeConfigGvnic): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigGvnicOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodeConfigGvnic | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodeConfigGvnic | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigGvnicList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodeConfigGvnicOutputReference {
+    return new DataGoogleContainerClusterNodeConfigGvnicOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleContainerClusterNodeConfigShieldedInstanceConfig {
@@ -1905,11 +2236,6 @@ export class DataGoogleContainerClusterNodeConfigWorkloadMetadataConfigOutputRef
   public get mode() {
     return this.getStringAttribute('mode');
   }
-
-  // node_metadata - computed: true, optional: false, required: false
-  public get nodeMetadata() {
-    return this.getStringAttribute('node_metadata');
-  }
 }
 
 export class DataGoogleContainerClusterNodeConfigWorkloadMetadataConfigList extends cdktf.ComplexList {
@@ -1970,6 +2296,11 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
     }
   }
 
+  // boot_disk_kms_key - computed: true, optional: false, required: false
+  public get bootDiskKmsKey() {
+    return this.getStringAttribute('boot_disk_kms_key');
+  }
+
   // disk_size_gb - computed: true, optional: false, required: false
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
@@ -1980,10 +2311,22 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
     return this.getStringAttribute('disk_type');
   }
 
+  // gcfs_config - computed: true, optional: false, required: false
+  private _gcfsConfig = new DataGoogleContainerClusterNodeConfigGcfsConfigList(this, "gcfs_config", false);
+  public get gcfsConfig() {
+    return this._gcfsConfig;
+  }
+
   // guest_accelerator - computed: true, optional: false, required: false
   private _guestAccelerator = new DataGoogleContainerClusterNodeConfigGuestAcceleratorList(this, "guest_accelerator", false);
   public get guestAccelerator() {
     return this._guestAccelerator;
+  }
+
+  // gvnic - computed: true, optional: false, required: false
+  private _gvnic = new DataGoogleContainerClusterNodeConfigGvnicList(this, "gvnic", false);
+  public get gvnic() {
+    return this._gvnic;
   }
 
   // image_type - computed: true, optional: false, required: false
@@ -2014,6 +2357,11 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
   // min_cpu_platform - computed: true, optional: false, required: false
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
+  }
+
+  // node_group - computed: true, optional: false, required: false
+  public get nodeGroup() {
+    return this.getStringAttribute('node_group');
   }
 
   // oauth_scopes - computed: true, optional: false, required: false
@@ -2211,6 +2559,70 @@ export class DataGoogleContainerClusterNodePoolManagementList extends cdktf.Comp
     return new DataGoogleContainerClusterNodePoolManagementOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig {
+}
+
+export function dataGoogleContainerClusterNodePoolNodeConfigGcfsConfigToTerraform(struct?: DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigOutputReference {
+    return new DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodePoolNodeConfigGuestAccelerator {
 }
 
@@ -2283,6 +2695,70 @@ export class DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList ex
   */
   public get(index: number): DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference {
     return new DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleContainerClusterNodePoolNodeConfigGvnic {
+}
+
+export function dataGoogleContainerClusterNodePoolNodeConfigGvnicToTerraform(struct?: DataGoogleContainerClusterNodePoolNodeConfigGvnic): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodePoolNodeConfigGvnic | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodePoolNodeConfigGvnic | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigGvnicList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference {
+    return new DataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
@@ -2472,11 +2948,6 @@ export class DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigO
   public get mode() {
     return this.getStringAttribute('mode');
   }
-
-  // node_metadata - computed: true, optional: false, required: false
-  public get nodeMetadata() {
-    return this.getStringAttribute('node_metadata');
-  }
 }
 
 export class DataGoogleContainerClusterNodePoolNodeConfigWorkloadMetadataConfigList extends cdktf.ComplexList {
@@ -2537,6 +3008,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
     }
   }
 
+  // boot_disk_kms_key - computed: true, optional: false, required: false
+  public get bootDiskKmsKey() {
+    return this.getStringAttribute('boot_disk_kms_key');
+  }
+
   // disk_size_gb - computed: true, optional: false, required: false
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
@@ -2547,10 +3023,22 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
     return this.getStringAttribute('disk_type');
   }
 
+  // gcfs_config - computed: true, optional: false, required: false
+  private _gcfsConfig = new DataGoogleContainerClusterNodePoolNodeConfigGcfsConfigList(this, "gcfs_config", false);
+  public get gcfsConfig() {
+    return this._gcfsConfig;
+  }
+
   // guest_accelerator - computed: true, optional: false, required: false
   private _guestAccelerator = new DataGoogleContainerClusterNodePoolNodeConfigGuestAcceleratorList(this, "guest_accelerator", false);
   public get guestAccelerator() {
     return this._guestAccelerator;
+  }
+
+  // gvnic - computed: true, optional: false, required: false
+  private _gvnic = new DataGoogleContainerClusterNodePoolNodeConfigGvnicList(this, "gvnic", false);
+  public get gvnic() {
+    return this._gvnic;
   }
 
   // image_type - computed: true, optional: false, required: false
@@ -2581,6 +3069,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   // min_cpu_platform - computed: true, optional: false, required: false
   public get minCpuPlatform() {
     return this.getStringAttribute('min_cpu_platform');
+  }
+
+  // node_group - computed: true, optional: false, required: false
+  public get nodeGroup() {
+    return this.getStringAttribute('node_group');
   }
 
   // oauth_scopes - computed: true, optional: false, required: false
@@ -2765,6 +3258,11 @@ export class DataGoogleContainerClusterNodePoolOutputReference extends cdktf.Com
     return this.getListAttribute('instance_group_urls');
   }
 
+  // managed_instance_group_urls - computed: true, optional: false, required: false
+  public get managedInstanceGroupUrls() {
+    return this.getListAttribute('managed_instance_group_urls');
+  }
+
   // management - computed: true, optional: false, required: false
   private _management = new DataGoogleContainerClusterNodePoolManagementList(this, "management", false);
   public get management() {
@@ -2830,70 +3328,6 @@ export class DataGoogleContainerClusterNodePoolList extends cdktf.ComplexList {
   */
   public get(index: number): DataGoogleContainerClusterNodePoolOutputReference {
     return new DataGoogleContainerClusterNodePoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataGoogleContainerClusterPodSecurityPolicyConfig {
-}
-
-export function dataGoogleContainerClusterPodSecurityPolicyConfigToTerraform(struct?: DataGoogleContainerClusterPodSecurityPolicyConfig): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class DataGoogleContainerClusterPodSecurityPolicyConfigOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataGoogleContainerClusterPodSecurityPolicyConfig | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataGoogleContainerClusterPodSecurityPolicyConfig | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // enabled - computed: true, optional: false, required: false
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-}
-
-export class DataGoogleContainerClusterPodSecurityPolicyConfigList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataGoogleContainerClusterPodSecurityPolicyConfigOutputReference {
-    return new DataGoogleContainerClusterPodSecurityPolicyConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleContainerClusterPrivateClusterConfigMasterGlobalAccessConfig {
@@ -3362,11 +3796,6 @@ export class DataGoogleContainerClusterWorkloadIdentityConfigOutputReference ext
     }
   }
 
-  // identity_namespace - computed: true, optional: false, required: false
-  public get identityNamespace() {
-    return this.getStringAttribute('identity_namespace');
-  }
-
   // workload_pool - computed: true, optional: false, required: false
   public get workloadPool() {
     return this.getStringAttribute('workload_pool');
@@ -3418,8 +3847,8 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3458,6 +3887,12 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
     return this.getStringAttribute('cluster_ipv4_cidr');
   }
 
+  // confidential_nodes - computed: true, optional: false, required: false
+  private _confidentialNodes = new DataGoogleContainerClusterConfidentialNodesList(this, "confidential_nodes", false);
+  public get confidentialNodes() {
+    return this._confidentialNodes;
+  }
+
   // database_encryption - computed: true, optional: false, required: false
   private _databaseEncryption = new DataGoogleContainerClusterDatabaseEncryptionList(this, "database_encryption", false);
   public get databaseEncryption() {
@@ -3483,6 +3918,12 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
+  }
+
+  // dns_config - computed: true, optional: false, required: false
+  private _dnsConfig = new DataGoogleContainerClusterDnsConfigList(this, "dns_config", false);
+  public get dnsConfig() {
+    return this._dnsConfig;
   }
 
   // enable_autopilot - computed: true, optional: false, required: false
@@ -3533,11 +3974,6 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // initial_node_count - computed: true, optional: false, required: false
   public get initialNodeCount() {
     return this.getNumberAttribute('initial_node_count');
-  }
-
-  // instance_group_urls - computed: true, optional: false, required: false
-  public get instanceGroupUrls() {
-    return this.getListAttribute('instance_group_urls');
   }
 
   // ip_allocation_policy - computed: true, optional: false, required: false
@@ -3671,12 +4107,6 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // operation - computed: true, optional: false, required: false
   public get operation() {
     return this.getStringAttribute('operation');
-  }
-
-  // pod_security_policy_config - computed: true, optional: false, required: false
-  private _podSecurityPolicyConfig = new DataGoogleContainerClusterPodSecurityPolicyConfigList(this, "pod_security_policy_config", false);
-  public get podSecurityPolicyConfig() {
-    return this._podSecurityPolicyConfig;
   }
 
   // private_cluster_config - computed: true, optional: false, required: false

@@ -116,6 +116,187 @@ Changing this forces a new resource to be created.
   */
   readonly timeouts?: BigqueryDatasetTimeouts;
 }
+export interface BigqueryDatasetAccessDatasetDataset {
+  /**
+  * The ID of the dataset containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
+  */
+  readonly datasetId: string;
+  /**
+  * The ID of the project containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#project_id BigqueryDataset#project_id}
+  */
+  readonly projectId: string;
+}
+
+export function bigqueryDatasetAccessDatasetDatasetToTerraform(struct?: BigqueryDatasetAccessDatasetDatasetOutputReference | BigqueryDatasetAccessDatasetDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
+export class BigqueryDatasetAccessDatasetDatasetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryDatasetAccessDatasetDataset | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._datasetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.datasetId = this._datasetId;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccessDatasetDataset | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._datasetId = undefined;
+      this._projectId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._datasetId = value.datasetId;
+      this._projectId = value.projectId;
+    }
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId;
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+}
+export interface BigqueryDatasetAccessDataset {
+  /**
+  * Which resources in the dataset this entry applies to. Currently, only views are supported,
+but additional target types may be added in the future. Possible values: VIEWS
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#target_types BigqueryDataset#target_types}
+  */
+  readonly targetTypes: string[];
+  /**
+  * dataset block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#dataset BigqueryDataset#dataset}
+  */
+  readonly dataset: BigqueryDatasetAccessDatasetDataset;
+}
+
+export function bigqueryDatasetAccessDatasetToTerraform(struct?: BigqueryDatasetAccessDatasetOutputReference | BigqueryDatasetAccessDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    target_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.targetTypes),
+    dataset: bigqueryDatasetAccessDatasetDatasetToTerraform(struct!.dataset),
+  }
+}
+
+export class BigqueryDatasetAccessDatasetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryDatasetAccessDataset | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._targetTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetTypes = this._targetTypes;
+    }
+    if (this._dataset?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataset = this._dataset?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccessDataset | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._targetTypes = undefined;
+      this._dataset.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._targetTypes = value.targetTypes;
+      this._dataset.internalValue = value.dataset;
+    }
+  }
+
+  // target_types - computed: false, optional: false, required: true
+  private _targetTypes?: string[]; 
+  public get targetTypes() {
+    return this.getListAttribute('target_types');
+  }
+  public set targetTypes(value: string[]) {
+    this._targetTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetTypesInput() {
+    return this._targetTypes;
+  }
+
+  // dataset - computed: false, optional: false, required: true
+  private _dataset = new BigqueryDatasetAccessDatasetDatasetOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: BigqueryDatasetAccessDatasetDataset) {
+    this._dataset.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
+}
 export interface BigqueryDatasetAccessView {
   /**
   * The ID of the dataset containing this table.
@@ -284,6 +465,12 @@ fred@example.com
   */
   readonly userByEmail?: string;
   /**
+  * dataset block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#dataset BigqueryDataset#dataset}
+  */
+  readonly dataset?: BigqueryDatasetAccessDataset;
+  /**
   * view block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#view BigqueryDataset#view}
@@ -302,6 +489,7 @@ export function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess 
     role: cdktf.stringToTerraform(struct!.role),
     special_group: cdktf.stringToTerraform(struct!.specialGroup),
     user_by_email: cdktf.stringToTerraform(struct!.userByEmail),
+    dataset: bigqueryDatasetAccessDatasetToTerraform(struct!.dataset),
     view: bigqueryDatasetAccessViewToTerraform(struct!.view),
   }
 }
@@ -518,8 +706,8 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

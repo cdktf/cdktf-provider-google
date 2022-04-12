@@ -235,8 +235,8 @@ export class Project extends cdktf.TerraformResource {
       terraformResourceType: 'google_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -290,7 +290,7 @@ export class Project extends cdktf.TerraformResource {
     return this._billingAccount;
   }
 
-  // folder_id - computed: true, optional: true, required: false
+  // folder_id - computed: false, optional: true, required: false
   private _folderId?: string; 
   public get folderId() {
     return this.getStringAttribute('folder_id');
@@ -345,7 +345,7 @@ export class Project extends cdktf.TerraformResource {
     return this.getStringAttribute('number');
   }
 
-  // org_id - computed: true, optional: true, required: false
+  // org_id - computed: false, optional: true, required: false
   private _orgId?: string; 
   public get orgId() {
     return this.getStringAttribute('org_id');

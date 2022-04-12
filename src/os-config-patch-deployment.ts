@@ -2307,6 +2307,12 @@ export class OsConfigPatchDeploymentPatchConfigZypperOutputReference extends cdk
 }
 export interface OsConfigPatchDeploymentPatchConfig {
   /**
+  * Allows the patch job to run on Managed instance groups (MIGs).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment#mig_instances_allowed OsConfigPatchDeployment#mig_instances_allowed}
+  */
+  readonly migInstancesAllowed?: boolean | cdktf.IResolvable;
+  /**
   * Post-patch reboot settings. Possible values: ["DEFAULT", "ALWAYS", "NEVER"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment#reboot_config OsConfigPatchDeployment#reboot_config}
@@ -2362,6 +2368,7 @@ export function osConfigPatchDeploymentPatchConfigToTerraform(struct?: OsConfigP
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    mig_instances_allowed: cdktf.booleanToTerraform(struct!.migInstancesAllowed),
     reboot_config: cdktf.stringToTerraform(struct!.rebootConfig),
     apt: osConfigPatchDeploymentPatchConfigAptToTerraform(struct!.apt),
     goo: osConfigPatchDeploymentPatchConfigGooToTerraform(struct!.goo),
@@ -2387,6 +2394,10 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   public get internalValue(): OsConfigPatchDeploymentPatchConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._migInstancesAllowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.migInstancesAllowed = this._migInstancesAllowed;
+    }
     if (this._rebootConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.rebootConfig = this._rebootConfig;
@@ -2425,6 +2436,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
   public set internalValue(value: OsConfigPatchDeploymentPatchConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._migInstancesAllowed = undefined;
       this._rebootConfig = undefined;
       this._apt.internalValue = undefined;
       this._goo.internalValue = undefined;
@@ -2436,6 +2448,7 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._migInstancesAllowed = value.migInstancesAllowed;
       this._rebootConfig = value.rebootConfig;
       this._apt.internalValue = value.apt;
       this._goo.internalValue = value.goo;
@@ -2445,6 +2458,22 @@ export class OsConfigPatchDeploymentPatchConfigOutputReference extends cdktf.Com
       this._yum.internalValue = value.yum;
       this._zypper.internalValue = value.zypper;
     }
+  }
+
+  // mig_instances_allowed - computed: false, optional: true, required: false
+  private _migInstancesAllowed?: boolean | cdktf.IResolvable; 
+  public get migInstancesAllowed() {
+    return this.getBooleanAttribute('mig_instances_allowed');
+  }
+  public set migInstancesAllowed(value: boolean | cdktf.IResolvable) {
+    this._migInstancesAllowed = value;
+  }
+  public resetMigInstancesAllowed() {
+    this._migInstancesAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get migInstancesAllowedInput() {
+    return this._migInstancesAllowed;
   }
 
   // reboot_config - computed: false, optional: true, required: false
@@ -3598,8 +3627,8 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'google_os_config_patch_deployment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

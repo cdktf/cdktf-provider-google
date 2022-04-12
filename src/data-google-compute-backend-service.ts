@@ -1097,6 +1097,75 @@ export class DataGoogleComputeBackendServiceOutlierDetectionList extends cdktf.C
     return new DataGoogleComputeBackendServiceOutlierDetectionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleComputeBackendServiceSecuritySettings {
+}
+
+export function dataGoogleComputeBackendServiceSecuritySettingsToTerraform(struct?: DataGoogleComputeBackendServiceSecuritySettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeBackendServiceSecuritySettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeBackendServiceSecuritySettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeBackendServiceSecuritySettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_tls_policy - computed: true, optional: false, required: false
+  public get clientTlsPolicy() {
+    return this.getStringAttribute('client_tls_policy');
+  }
+
+  // subject_alt_names - computed: true, optional: false, required: false
+  public get subjectAltNames() {
+    return this.getListAttribute('subject_alt_names');
+  }
+}
+
+export class DataGoogleComputeBackendServiceSecuritySettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeBackendServiceSecuritySettingsOutputReference {
+    return new DataGoogleComputeBackendServiceSecuritySettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_service google_compute_backend_service}
@@ -1124,8 +1193,8 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1284,6 +1353,12 @@ export class DataGoogleComputeBackendService extends cdktf.TerraformDataSource {
   // security_policy - computed: true, optional: false, required: false
   public get securityPolicy() {
     return this.getStringAttribute('security_policy');
+  }
+
+  // security_settings - computed: true, optional: false, required: false
+  private _securitySettings = new DataGoogleComputeBackendServiceSecuritySettingsList(this, "security_settings", false);
+  public get securitySettings() {
+    return this._securitySettings;
   }
 
   // self_link - computed: true, optional: false, required: false

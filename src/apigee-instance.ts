@@ -27,9 +27,19 @@ Use the following format: 'projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
   */
   readonly displayName?: string;
   /**
-  * Compute Engine location where the instance resides. For trial organization
-subscriptions, the location must be a Compute Engine zone. For paid organization
-subscriptions, it should correspond to a Compute Engine region.
+  * IP range represents the customer-provided CIDR block of length 22 that will be used for
+the Apigee instance creation. This optional range, if provided, should be freely
+available as part of larger named range the customer has allocated to the Service
+Networking peering. If this is not provided, Apigee will automatically request for any
+available /22 CIDR block from Service Networking. The customer should use this CIDR block
+for configuring their firewall needs to allow traffic from Apigee.
+Input format: "a.b.c.d/22"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#ip_range ApigeeInstance#ip_range}
+  */
+  readonly ipRange?: string;
+  /**
+  * Required. Compute Engine location where the instance resides.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#location ApigeeInstance#location}
   */
@@ -48,7 +58,8 @@ in the format 'organizations/{{org_name}}'.
   */
   readonly orgId: string;
   /**
-  * The size of the CIDR block range that will be reserved by the instance. Possible values: ["SLASH_16", "SLASH_20", "SLASH_22"]
+  * The size of the CIDR block range that will be reserved by the instance. For valid values, 
+see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#peering_cidr_range ApigeeInstance#peering_cidr_range}
   */
@@ -179,8 +190,8 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -190,6 +201,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     this._description = config.description;
     this._diskEncryptionKeyName = config.diskEncryptionKeyName;
     this._displayName = config.displayName;
+    this._ipRange = config.ipRange;
     this._location = config.location;
     this._name = config.name;
     this._orgId = config.orgId;
@@ -259,6 +271,22 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
+  // ip_range - computed: false, optional: true, required: false
+  private _ipRange?: string; 
+  public get ipRange() {
+    return this.getStringAttribute('ip_range');
+  }
+  public set ipRange(value: string) {
+    this._ipRange = value;
+  }
+  public resetIpRange() {
+    this._ipRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRangeInput() {
+    return this._ipRange;
+  }
+
   // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
@@ -298,7 +326,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     return this._orgId;
   }
 
-  // peering_cidr_range - computed: false, optional: true, required: false
+  // peering_cidr_range - computed: true, optional: true, required: false
   private _peeringCidrRange?: string; 
   public get peeringCidrRange() {
     return this.getStringAttribute('peering_cidr_range');
@@ -344,6 +372,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       disk_encryption_key_name: cdktf.stringToTerraform(this._diskEncryptionKeyName),
       display_name: cdktf.stringToTerraform(this._displayName),
+      ip_range: cdktf.stringToTerraform(this._ipRange),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),

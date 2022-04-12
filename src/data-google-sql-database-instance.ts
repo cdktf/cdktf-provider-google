@@ -60,6 +60,11 @@ export class DataGoogleSqlDatabaseInstanceCloneOutputReference extends cdktf.Com
     }
   }
 
+  // allocated_ip_range - computed: true, optional: false, required: false
+  public get allocatedIpRange() {
+    return this.getStringAttribute('allocated_ip_range');
+  }
+
   // point_in_time - computed: true, optional: false, required: false
   public get pointInTime() {
     return this.getStringAttribute('point_in_time');
@@ -861,6 +866,11 @@ export class DataGoogleSqlDatabaseInstanceSettingsIpConfigurationOutputReference
     }
   }
 
+  // allocated_ip_range - computed: true, optional: false, required: false
+  public get allocatedIpRange() {
+    return this.getStringAttribute('allocated_ip_range');
+  }
+
   // authorized_networks - computed: true, optional: false, required: false
   private _authorizedNetworks = new DataGoogleSqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksList(this, "authorized_networks", true);
   public get authorizedNetworks() {
@@ -1089,11 +1099,6 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
     return this.getStringAttribute('activation_policy');
   }
 
-  // authorized_gae_applications - computed: true, optional: false, required: false
-  public get authorizedGaeApplications() {
-    return this.getListAttribute('authorized_gae_applications');
-  }
-
   // availability_type - computed: true, optional: false, required: false
   public get availabilityType() {
     return this.getStringAttribute('availability_type');
@@ -1108,11 +1113,6 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
   // collation - computed: true, optional: false, required: false
   public get collation() {
     return this.getStringAttribute('collation');
-  }
-
-  // crash_safe_replication - computed: true, optional: false, required: false
-  public get crashSafeReplication() {
-    return this.getBooleanAttribute('crash_safe_replication');
   }
 
   // database_flags - computed: true, optional: false, required: false
@@ -1168,11 +1168,6 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
   // pricing_plan - computed: true, optional: false, required: false
   public get pricingPlan() {
     return this.getStringAttribute('pricing_plan');
-  }
-
-  // replication_type - computed: true, optional: false, required: false
-  public get replicationType() {
-    return this.getStringAttribute('replication_type');
   }
 
   // tier - computed: true, optional: false, required: false
@@ -1236,8 +1231,8 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

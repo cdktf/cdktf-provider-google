@@ -30,7 +30,7 @@ export interface StorageTransferJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#schedule StorageTransferJob#schedule}
   */
-  readonly schedule: StorageTransferJobSchedule;
+  readonly schedule?: StorageTransferJobSchedule;
   /**
   * transfer_spec block
   * 
@@ -414,6 +414,12 @@ export class StorageTransferJobScheduleStartTimeOfDayOutputReference extends cdk
 }
 export interface StorageTransferJobSchedule {
   /**
+  * Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#repeat_interval StorageTransferJob#repeat_interval}
+  */
+  readonly repeatInterval?: string;
+  /**
   * schedule_end_date block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#schedule_end_date StorageTransferJob#schedule_end_date}
@@ -439,6 +445,7 @@ export function storageTransferJobScheduleToTerraform(struct?: StorageTransferJo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    repeat_interval: cdktf.stringToTerraform(struct!.repeatInterval),
     schedule_end_date: storageTransferJobScheduleScheduleEndDateToTerraform(struct!.scheduleEndDate),
     schedule_start_date: storageTransferJobScheduleScheduleStartDateToTerraform(struct!.scheduleStartDate),
     start_time_of_day: storageTransferJobScheduleStartTimeOfDayToTerraform(struct!.startTimeOfDay),
@@ -459,6 +466,10 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   public get internalValue(): StorageTransferJobSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._repeatInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repeatInterval = this._repeatInterval;
+    }
     if (this._scheduleEndDate?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.scheduleEndDate = this._scheduleEndDate?.internalValue;
@@ -477,16 +488,34 @@ export class StorageTransferJobScheduleOutputReference extends cdktf.ComplexObje
   public set internalValue(value: StorageTransferJobSchedule | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._repeatInterval = undefined;
       this._scheduleEndDate.internalValue = undefined;
       this._scheduleStartDate.internalValue = undefined;
       this._startTimeOfDay.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._repeatInterval = value.repeatInterval;
       this._scheduleEndDate.internalValue = value.scheduleEndDate;
       this._scheduleStartDate.internalValue = value.scheduleStartDate;
       this._startTimeOfDay.internalValue = value.startTimeOfDay;
     }
+  }
+
+  // repeat_interval - computed: false, optional: true, required: false
+  private _repeatInterval?: string; 
+  public get repeatInterval() {
+    return this.getStringAttribute('repeat_interval');
+  }
+  public set repeatInterval(value: string) {
+    this._repeatInterval = value;
+  }
+  public resetRepeatInterval() {
+    this._repeatInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repeatIntervalInput() {
+    return this._repeatInterval;
   }
 
   // schedule_end_date - computed: false, optional: true, required: false
@@ -632,11 +661,17 @@ export interface StorageTransferJobTransferSpecAwsS3DataSource {
   */
   readonly bucketName: string;
   /**
+  * The Amazon Resource Name (ARN) of the role to support temporary credentials via 'AssumeRoleWithWebIdentity'. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a 'AssumeRoleWithWebIdentity' call for the provided role using the [GoogleServiceAccount][] for this project.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#role_arn StorageTransferJob#role_arn}
+  */
+  readonly roleArn?: string;
+  /**
   * aws_access_key block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#aws_access_key StorageTransferJob#aws_access_key}
   */
-  readonly awsAccessKey: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
+  readonly awsAccessKey?: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
 }
 
 export function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?: StorageTransferJobTransferSpecAwsS3DataSourceOutputReference | StorageTransferJobTransferSpecAwsS3DataSource): any {
@@ -646,6 +681,7 @@ export function storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct?
   }
   return {
     bucket_name: cdktf.stringToTerraform(struct!.bucketName),
+    role_arn: cdktf.stringToTerraform(struct!.roleArn),
     aws_access_key: storageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyToTerraform(struct!.awsAccessKey),
   }
 }
@@ -668,6 +704,10 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
       hasAnyValues = true;
       internalValueResult.bucketName = this._bucketName;
     }
+    if (this._roleArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.roleArn = this._roleArn;
+    }
     if (this._awsAccessKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.awsAccessKey = this._awsAccessKey?.internalValue;
@@ -679,11 +719,13 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
     if (value === undefined) {
       this.isEmptyObject = false;
       this._bucketName = undefined;
+      this._roleArn = undefined;
       this._awsAccessKey.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._bucketName = value.bucketName;
+      this._roleArn = value.roleArn;
       this._awsAccessKey.internalValue = value.awsAccessKey;
     }
   }
@@ -701,13 +743,32 @@ export class StorageTransferJobTransferSpecAwsS3DataSourceOutputReference extend
     return this._bucketName;
   }
 
-  // aws_access_key - computed: false, optional: false, required: true
+  // role_arn - computed: false, optional: true, required: false
+  private _roleArn?: string; 
+  public get roleArn() {
+    return this.getStringAttribute('role_arn');
+  }
+  public set roleArn(value: string) {
+    this._roleArn = value;
+  }
+  public resetRoleArn() {
+    this._roleArn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleArnInput() {
+    return this._roleArn;
+  }
+
+  // aws_access_key - computed: false, optional: true, required: false
   private _awsAccessKey = new StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutputReference(this, "aws_access_key");
   public get awsAccessKey() {
     return this._awsAccessKey;
   }
   public putAwsAccessKey(value: StorageTransferJobTransferSpecAwsS3DataSourceAwsAccessKey) {
     this._awsAccessKey.internalValue = value;
+  }
+  public resetAwsAccessKey() {
+    this._awsAccessKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get awsAccessKeyInput() {
@@ -1327,6 +1388,134 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
     return this._minTimeElapsedSinceLastModification;
   }
 }
+export interface StorageTransferJobTransferSpecPosixDataSink {
+  /**
+  * Root directory path to the filesystem.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#root_directory StorageTransferJob#root_directory}
+  */
+  readonly rootDirectory: string;
+}
+
+export function storageTransferJobTransferSpecPosixDataSinkToTerraform(struct?: StorageTransferJobTransferSpecPosixDataSinkOutputReference | StorageTransferJobTransferSpecPosixDataSink): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    root_directory: cdktf.stringToTerraform(struct!.rootDirectory),
+  }
+}
+
+export class StorageTransferJobTransferSpecPosixDataSinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageTransferJobTransferSpecPosixDataSink | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._rootDirectory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rootDirectory = this._rootDirectory;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecPosixDataSink | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._rootDirectory = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._rootDirectory = value.rootDirectory;
+    }
+  }
+
+  // root_directory - computed: false, optional: false, required: true
+  private _rootDirectory?: string; 
+  public get rootDirectory() {
+    return this.getStringAttribute('root_directory');
+  }
+  public set rootDirectory(value: string) {
+    this._rootDirectory = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootDirectoryInput() {
+    return this._rootDirectory;
+  }
+}
+export interface StorageTransferJobTransferSpecPosixDataSource {
+  /**
+  * Root directory path to the filesystem.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#root_directory StorageTransferJob#root_directory}
+  */
+  readonly rootDirectory: string;
+}
+
+export function storageTransferJobTransferSpecPosixDataSourceToTerraform(struct?: StorageTransferJobTransferSpecPosixDataSourceOutputReference | StorageTransferJobTransferSpecPosixDataSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    root_directory: cdktf.stringToTerraform(struct!.rootDirectory),
+  }
+}
+
+export class StorageTransferJobTransferSpecPosixDataSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageTransferJobTransferSpecPosixDataSource | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._rootDirectory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rootDirectory = this._rootDirectory;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobTransferSpecPosixDataSource | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._rootDirectory = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._rootDirectory = value.rootDirectory;
+    }
+  }
+
+  // root_directory - computed: false, optional: false, required: true
+  private _rootDirectory?: string; 
+  public get rootDirectory() {
+    return this.getStringAttribute('root_directory');
+  }
+  public set rootDirectory(value: string) {
+    this._rootDirectory = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootDirectoryInput() {
+    return this._rootDirectory;
+  }
+}
 export interface StorageTransferJobTransferSpecTransferOptions {
   /**
   * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and delete_objects_unique_in_sink are mutually exclusive.
@@ -1490,6 +1679,18 @@ export interface StorageTransferJobTransferSpec {
   */
   readonly objectConditions?: StorageTransferJobTransferSpecObjectConditions;
   /**
+  * posix_data_sink block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#posix_data_sink StorageTransferJob#posix_data_sink}
+  */
+  readonly posixDataSink?: StorageTransferJobTransferSpecPosixDataSink;
+  /**
+  * posix_data_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#posix_data_source StorageTransferJob#posix_data_source}
+  */
+  readonly posixDataSource?: StorageTransferJobTransferSpecPosixDataSource;
+  /**
   * transfer_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#transfer_options StorageTransferJob#transfer_options}
@@ -1509,6 +1710,8 @@ export function storageTransferJobTransferSpecToTerraform(struct?: StorageTransf
     gcs_data_source: storageTransferJobTransferSpecGcsDataSourceToTerraform(struct!.gcsDataSource),
     http_data_source: storageTransferJobTransferSpecHttpDataSourceToTerraform(struct!.httpDataSource),
     object_conditions: storageTransferJobTransferSpecObjectConditionsToTerraform(struct!.objectConditions),
+    posix_data_sink: storageTransferJobTransferSpecPosixDataSinkToTerraform(struct!.posixDataSink),
+    posix_data_source: storageTransferJobTransferSpecPosixDataSourceToTerraform(struct!.posixDataSource),
     transfer_options: storageTransferJobTransferSpecTransferOptionsToTerraform(struct!.transferOptions),
   }
 }
@@ -1551,6 +1754,14 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.objectConditions = this._objectConditions?.internalValue;
     }
+    if (this._posixDataSink?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.posixDataSink = this._posixDataSink?.internalValue;
+    }
+    if (this._posixDataSource?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.posixDataSource = this._posixDataSource?.internalValue;
+    }
     if (this._transferOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.transferOptions = this._transferOptions?.internalValue;
@@ -1567,6 +1778,8 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
       this._gcsDataSource.internalValue = undefined;
       this._httpDataSource.internalValue = undefined;
       this._objectConditions.internalValue = undefined;
+      this._posixDataSink.internalValue = undefined;
+      this._posixDataSource.internalValue = undefined;
       this._transferOptions.internalValue = undefined;
     }
     else {
@@ -1577,6 +1790,8 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
       this._gcsDataSource.internalValue = value.gcsDataSource;
       this._httpDataSource.internalValue = value.httpDataSource;
       this._objectConditions.internalValue = value.objectConditions;
+      this._posixDataSink.internalValue = value.posixDataSink;
+      this._posixDataSource.internalValue = value.posixDataSource;
       this._transferOptions.internalValue = value.transferOptions;
     }
   }
@@ -1677,6 +1892,38 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
     return this._objectConditions.internalValue;
   }
 
+  // posix_data_sink - computed: false, optional: true, required: false
+  private _posixDataSink = new StorageTransferJobTransferSpecPosixDataSinkOutputReference(this, "posix_data_sink");
+  public get posixDataSink() {
+    return this._posixDataSink;
+  }
+  public putPosixDataSink(value: StorageTransferJobTransferSpecPosixDataSink) {
+    this._posixDataSink.internalValue = value;
+  }
+  public resetPosixDataSink() {
+    this._posixDataSink.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get posixDataSinkInput() {
+    return this._posixDataSink.internalValue;
+  }
+
+  // posix_data_source - computed: false, optional: true, required: false
+  private _posixDataSource = new StorageTransferJobTransferSpecPosixDataSourceOutputReference(this, "posix_data_source");
+  public get posixDataSource() {
+    return this._posixDataSource;
+  }
+  public putPosixDataSource(value: StorageTransferJobTransferSpecPosixDataSource) {
+    this._posixDataSource.internalValue = value;
+  }
+  public resetPosixDataSource() {
+    this._posixDataSource.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get posixDataSourceInput() {
+    return this._posixDataSource.internalValue;
+  }
+
   // transfer_options - computed: false, optional: true, required: false
   private _transferOptions = new StorageTransferJobTransferSpecTransferOptionsOutputReference(this, "transfer_options");
   public get transferOptions() {
@@ -1720,8 +1967,8 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_transfer_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1809,13 +2056,16 @@ export class StorageTransferJob extends cdktf.TerraformResource {
     return this._status;
   }
 
-  // schedule - computed: false, optional: false, required: true
+  // schedule - computed: false, optional: true, required: false
   private _schedule = new StorageTransferJobScheduleOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
   public putSchedule(value: StorageTransferJobSchedule) {
     this._schedule.internalValue = value;
+  }
+  public resetSchedule() {
+    this._schedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {

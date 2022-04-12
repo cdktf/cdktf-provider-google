@@ -14,7 +14,7 @@ export interface ProjectIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding#project ProjectIamBinding#project}
   */
-  readonly project?: string;
+  readonly project: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_iam_binding#role ProjectIamBinding#role}
   */
@@ -166,8 +166,8 @@ export class ProjectIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -207,16 +207,13 @@ export class ProjectIamBinding extends cdktf.TerraformResource {
     return this._members;
   }
 
-  // project - computed: true, optional: true, required: false
+  // project - computed: false, optional: false, required: true
   private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
   public set project(value: string) {
     this._project = value;
-  }
-  public resetProject() {
-    this._project = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {

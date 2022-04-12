@@ -26,6 +26,12 @@ export interface ComputeSecurityPolicyConfig extends cdktf.TerraformMetaArgument
   */
   readonly project?: string;
   /**
+  * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_security_policy#type ComputeSecurityPolicy#type}
+  */
+  readonly type?: string;
+  /**
   * rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_security_policy#rule ComputeSecurityPolicy#rule}
@@ -293,7 +299,7 @@ export class ComputeSecurityPolicyRuleMatchOutputReference extends cdktf.Complex
 }
 export interface ComputeSecurityPolicyRule {
   /**
-  * Action to take when match matches the request. Valid values:   "allow" : allow access to target, "deny(status)" : deny access to target, returns the HTTP response code specified (valid values are 403, 404 and 502)
+  * Action to take when match matches the request.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_security_policy#action ComputeSecurityPolicy#action}
   */
@@ -484,8 +490,8 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_security_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -495,6 +501,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._project = config.project;
+    this._type = config.type;
     this._rule = config.rule;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -563,6 +570,22 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
+  // type - computed: true, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
   // rule - computed: false, optional: true, required: false
   private _rule?: ComputeSecurityPolicyRule[] | cdktf.IResolvable; 
   public get rule() {
@@ -605,6 +628,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      type: cdktf.stringToTerraform(this._type),
       rule: cdktf.listMapper(computeSecurityPolicyRuleToTerraform)(this._rule),
       timeouts: computeSecurityPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

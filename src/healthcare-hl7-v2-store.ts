@@ -199,7 +199,7 @@ A base64-encoded string.
   */
   readonly segmentTerminator?: string;
   /**
-  * The version of the unschematized parser to be used when a custom 'schema' is not set. Default value: "V1" Possible values: ["V1", "V2"]
+  * The version of the unschematized parser to be used when a custom 'schema' is not set. Default value: "V1" Possible values: ["V1", "V2", "V3"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store#version HealthcareHl7V2Store#version}
   */
@@ -479,8 +479,8 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_hl7_v2_store',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

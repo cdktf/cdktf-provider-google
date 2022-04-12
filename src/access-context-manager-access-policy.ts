@@ -15,6 +15,13 @@ Format: organizations/{organization_id}
   */
   readonly parent: string;
   /**
+  * Folder or project on which this policy is applicable.
+Format: folders/{{folder_id}} or projects/{{project_id}}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#scopes AccessContextManagerAccessPolicy#scopes}
+  */
+  readonly scopes?: string[];
+  /**
   * Human readable title. Does not affect behavior.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#title AccessContextManagerAccessPolicy#title}
@@ -173,8 +180,8 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_access_context_manager_access_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -182,6 +189,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._parent = config.parent;
+    this._scopes = config.scopes;
     this._title = config.title;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -216,6 +224,22 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get parentInput() {
     return this._parent;
+  }
+
+  // scopes - computed: false, optional: true, required: false
+  private _scopes?: string[]; 
+  public get scopes() {
+    return this.getListAttribute('scopes');
+  }
+  public set scopes(value: string[]) {
+    this._scopes = value;
+  }
+  public resetScopes() {
+    this._scopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopesInput() {
+    return this._scopes;
   }
 
   // title - computed: false, optional: false, required: true
@@ -259,6 +283,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       parent: cdktf.stringToTerraform(this._parent),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
       title: cdktf.stringToTerraform(this._title),
       timeouts: accessContextManagerAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

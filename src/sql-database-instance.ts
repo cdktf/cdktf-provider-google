@@ -12,7 +12,7 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#database_version SqlDatabaseInstance#database_version}
   */
-  readonly databaseVersion?: string;
+  readonly databaseVersion: string;
   /**
   * Used to block Terraform from deleting a SQL Instance.
   * 
@@ -240,6 +240,12 @@ export class SqlDatabaseInstanceServerCaCertList extends cdktf.ComplexList {
 }
 export interface SqlDatabaseInstanceClone {
   /**
+  * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#allocated_ip_range SqlDatabaseInstance#allocated_ip_range}
+  */
+  readonly allocatedIpRange?: string;
+  /**
   * The timestamp of the point in time that should be restored.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#point_in_time SqlDatabaseInstance#point_in_time}
@@ -259,6 +265,7 @@ export function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstance
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    allocated_ip_range: cdktf.stringToTerraform(struct!.allocatedIpRange),
     point_in_time: cdktf.stringToTerraform(struct!.pointInTime),
     source_instance_name: cdktf.stringToTerraform(struct!.sourceInstanceName),
   }
@@ -278,6 +285,10 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   public get internalValue(): SqlDatabaseInstanceClone | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._allocatedIpRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allocatedIpRange = this._allocatedIpRange;
+    }
     if (this._pointInTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.pointInTime = this._pointInTime;
@@ -292,14 +303,32 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   public set internalValue(value: SqlDatabaseInstanceClone | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._allocatedIpRange = undefined;
       this._pointInTime = undefined;
       this._sourceInstanceName = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._allocatedIpRange = value.allocatedIpRange;
       this._pointInTime = value.pointInTime;
       this._sourceInstanceName = value.sourceInstanceName;
     }
+  }
+
+  // allocated_ip_range - computed: false, optional: true, required: false
+  private _allocatedIpRange?: string; 
+  public get allocatedIpRange() {
+    return this.getStringAttribute('allocated_ip_range');
+  }
+  public set allocatedIpRange(value: string) {
+    this._allocatedIpRange = value;
+  }
+  public resetAllocatedIpRange() {
+    this._allocatedIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocatedIpRangeInput() {
+    return this._allocatedIpRange;
   }
 
   // point_in_time - computed: false, optional: true, required: false
@@ -1353,6 +1382,12 @@ export function sqlDatabaseInstanceSettingsIpConfigurationAuthorizedNetworksToTe
 
 export interface SqlDatabaseInstanceSettingsIpConfiguration {
   /**
+  * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#allocated_ip_range SqlDatabaseInstance#allocated_ip_range}
+  */
+  readonly allocatedIpRange?: string;
+  /**
   * Whether this Cloud SQL instance should be assigned a public IPV4 address. At least ipv4_enabled must be enabled or a private_network must be configured.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#ipv4_enabled SqlDatabaseInstance#ipv4_enabled}
@@ -1382,6 +1417,7 @@ export function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: S
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    allocated_ip_range: cdktf.stringToTerraform(struct!.allocatedIpRange),
     ipv4_enabled: cdktf.booleanToTerraform(struct!.ipv4Enabled),
     private_network: cdktf.stringToTerraform(struct!.privateNetwork),
     require_ssl: cdktf.booleanToTerraform(struct!.requireSsl),
@@ -1403,6 +1439,10 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   public get internalValue(): SqlDatabaseInstanceSettingsIpConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._allocatedIpRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allocatedIpRange = this._allocatedIpRange;
+    }
     if (this._ipv4Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipv4Enabled = this._ipv4Enabled;
@@ -1425,6 +1465,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   public set internalValue(value: SqlDatabaseInstanceSettingsIpConfiguration | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._allocatedIpRange = undefined;
       this._ipv4Enabled = undefined;
       this._privateNetwork = undefined;
       this._requireSsl = undefined;
@@ -1432,11 +1473,28 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._allocatedIpRange = value.allocatedIpRange;
       this._ipv4Enabled = value.ipv4Enabled;
       this._privateNetwork = value.privateNetwork;
       this._requireSsl = value.requireSsl;
       this._authorizedNetworks = value.authorizedNetworks;
     }
+  }
+
+  // allocated_ip_range - computed: false, optional: true, required: false
+  private _allocatedIpRange?: string; 
+  public get allocatedIpRange() {
+    return this.getStringAttribute('allocated_ip_range');
+  }
+  public set allocatedIpRange(value: string) {
+    this._allocatedIpRange = value;
+  }
+  public resetAllocatedIpRange() {
+    this._allocatedIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocatedIpRangeInput() {
+    return this._allocatedIpRange;
   }
 
   // ipv4_enabled - computed: false, optional: true, required: false
@@ -1733,12 +1791,6 @@ export interface SqlDatabaseInstanceSettings {
   */
   readonly activationPolicy?: string;
   /**
-  * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see https://cloud.google.com/sql/docs/mysql/deprecation-notice for information on how to upgrade to Second Generation instances. A list of Google App Engine project names that are allowed to access this instance.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#authorized_gae_applications SqlDatabaseInstance#authorized_gae_applications}
-  */
-  readonly authorizedGaeApplications?: string[];
-  /**
   * The availability type of the Cloud SQL instance, high availability
 (REGIONAL) or single zone (ZONAL). For MySQL instances, ensure that
 settings.backup_configuration.enabled and
@@ -1753,12 +1805,6 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#collation SqlDatabaseInstance#collation}
   */
   readonly collation?: string;
-  /**
-  * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see here for information on how to upgrade to Second Generation instances. Specific to read instances, indicates when crash-safe replication flags are enabled.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#crash_safe_replication SqlDatabaseInstance#crash_safe_replication}
-  */
-  readonly crashSafeReplication?: boolean | cdktf.IResolvable;
   /**
   * Configuration to increase storage size automatically.  Note that future terraform apply calls will attempt to resize the disk to the value specified in disk_size - if this is set, do not set disk_size.
   * 
@@ -1789,12 +1835,6 @@ settings.backup_configuration.binary_log_enabled are both set to true.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#pricing_plan SqlDatabaseInstance#pricing_plan}
   */
   readonly pricingPlan?: string;
-  /**
-  * This property is only applicable to First Generation instances. First Generation instances are now deprecated, see here for information on how to upgrade to Second Generation instances. Replication type for this instance, can be one of ASYNCHRONOUS or SYNCHRONOUS.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#replication_type SqlDatabaseInstance#replication_type}
-  */
-  readonly replicationType?: string;
   /**
   * The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types.
   * 
@@ -1852,16 +1892,13 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
   }
   return {
     activation_policy: cdktf.stringToTerraform(struct!.activationPolicy),
-    authorized_gae_applications: cdktf.listMapper(cdktf.stringToTerraform)(struct!.authorizedGaeApplications),
     availability_type: cdktf.stringToTerraform(struct!.availabilityType),
     collation: cdktf.stringToTerraform(struct!.collation),
-    crash_safe_replication: cdktf.booleanToTerraform(struct!.crashSafeReplication),
     disk_autoresize: cdktf.booleanToTerraform(struct!.diskAutoresize),
     disk_autoresize_limit: cdktf.numberToTerraform(struct!.diskAutoresizeLimit),
     disk_size: cdktf.numberToTerraform(struct!.diskSize),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     pricing_plan: cdktf.stringToTerraform(struct!.pricingPlan),
-    replication_type: cdktf.stringToTerraform(struct!.replicationType),
     tier: cdktf.stringToTerraform(struct!.tier),
     user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.userLabels),
     backup_configuration: sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct!.backupConfiguration),
@@ -1891,10 +1928,6 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.activationPolicy = this._activationPolicy;
     }
-    if (this._authorizedGaeApplications !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.authorizedGaeApplications = this._authorizedGaeApplications;
-    }
     if (this._availabilityType !== undefined) {
       hasAnyValues = true;
       internalValueResult.availabilityType = this._availabilityType;
@@ -1902,10 +1935,6 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     if (this._collation !== undefined) {
       hasAnyValues = true;
       internalValueResult.collation = this._collation;
-    }
-    if (this._crashSafeReplication !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.crashSafeReplication = this._crashSafeReplication;
     }
     if (this._diskAutoresize !== undefined) {
       hasAnyValues = true;
@@ -1926,10 +1955,6 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     if (this._pricingPlan !== undefined) {
       hasAnyValues = true;
       internalValueResult.pricingPlan = this._pricingPlan;
-    }
-    if (this._replicationType !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.replicationType = this._replicationType;
     }
     if (this._tier !== undefined) {
       hasAnyValues = true;
@@ -1970,16 +1995,13 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     if (value === undefined) {
       this.isEmptyObject = false;
       this._activationPolicy = undefined;
-      this._authorizedGaeApplications = undefined;
       this._availabilityType = undefined;
       this._collation = undefined;
-      this._crashSafeReplication = undefined;
       this._diskAutoresize = undefined;
       this._diskAutoresizeLimit = undefined;
       this._diskSize = undefined;
       this._diskType = undefined;
       this._pricingPlan = undefined;
-      this._replicationType = undefined;
       this._tier = undefined;
       this._userLabels = undefined;
       this._backupConfiguration.internalValue = undefined;
@@ -1992,16 +2014,13 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._activationPolicy = value.activationPolicy;
-      this._authorizedGaeApplications = value.authorizedGaeApplications;
       this._availabilityType = value.availabilityType;
       this._collation = value.collation;
-      this._crashSafeReplication = value.crashSafeReplication;
       this._diskAutoresize = value.diskAutoresize;
       this._diskAutoresizeLimit = value.diskAutoresizeLimit;
       this._diskSize = value.diskSize;
       this._diskType = value.diskType;
       this._pricingPlan = value.pricingPlan;
-      this._replicationType = value.replicationType;
       this._tier = value.tier;
       this._userLabels = value.userLabels;
       this._backupConfiguration.internalValue = value.backupConfiguration;
@@ -2013,7 +2032,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     }
   }
 
-  // activation_policy - computed: true, optional: true, required: false
+  // activation_policy - computed: false, optional: true, required: false
   private _activationPolicy?: string; 
   public get activationPolicy() {
     return this.getStringAttribute('activation_policy');
@@ -2029,23 +2048,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     return this._activationPolicy;
   }
 
-  // authorized_gae_applications - computed: true, optional: true, required: false
-  private _authorizedGaeApplications?: string[]; 
-  public get authorizedGaeApplications() {
-    return this.getListAttribute('authorized_gae_applications');
-  }
-  public set authorizedGaeApplications(value: string[]) {
-    this._authorizedGaeApplications = value;
-  }
-  public resetAuthorizedGaeApplications() {
-    this._authorizedGaeApplications = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get authorizedGaeApplicationsInput() {
-    return this._authorizedGaeApplications;
-  }
-
-  // availability_type - computed: true, optional: true, required: false
+  // availability_type - computed: false, optional: true, required: false
   private _availabilityType?: string; 
   public get availabilityType() {
     return this.getStringAttribute('availability_type');
@@ -2075,22 +2078,6 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
     return this._collation;
-  }
-
-  // crash_safe_replication - computed: true, optional: true, required: false
-  private _crashSafeReplication?: boolean | cdktf.IResolvable; 
-  public get crashSafeReplication() {
-    return this.getBooleanAttribute('crash_safe_replication');
-  }
-  public set crashSafeReplication(value: boolean | cdktf.IResolvable) {
-    this._crashSafeReplication = value;
-  }
-  public resetCrashSafeReplication() {
-    this._crashSafeReplication = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get crashSafeReplicationInput() {
-    return this._crashSafeReplication;
   }
 
   // disk_autoresize - computed: false, optional: true, required: false
@@ -2141,7 +2128,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     return this._diskSize;
   }
 
-  // disk_type - computed: true, optional: true, required: false
+  // disk_type - computed: false, optional: true, required: false
   private _diskType?: string; 
   public get diskType() {
     return this.getStringAttribute('disk_type');
@@ -2171,22 +2158,6 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get pricingPlanInput() {
     return this._pricingPlan;
-  }
-
-  // replication_type - computed: true, optional: true, required: false
-  private _replicationType?: string; 
-  public get replicationType() {
-    return this.getStringAttribute('replication_type');
-  }
-  public set replicationType(value: string) {
-    this._replicationType = value;
-  }
-  public resetReplicationType() {
-    this._replicationType = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get replicationTypeInput() {
-    return this._replicationType;
   }
 
   // tier - computed: false, optional: false, required: true
@@ -2459,15 +2430,15 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options SqlDatabaseInstanceConfig = {}
+  * @param options SqlDatabaseInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: SqlDatabaseInstanceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: SqlDatabaseInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2497,16 +2468,13 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     return this.getStringAttribute('connection_name');
   }
 
-  // database_version - computed: false, optional: true, required: false
+  // database_version - computed: false, optional: false, required: true
   private _databaseVersion?: string; 
   public get databaseVersion() {
     return this.getStringAttribute('database_version');
   }
   public set databaseVersion(value: string) {
     this._databaseVersion = value;
-  }
-  public resetDatabaseVersion() {
-    this._databaseVersion = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get databaseVersionInput() {

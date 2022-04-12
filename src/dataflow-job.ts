@@ -92,6 +92,12 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly serviceAccountEmail?: string;
   /**
+  * If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are different, e.g. by embedding a release ID or by using a random_id.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job#skip_wait_on_job_termination DataflowJob#skip_wait_on_job_termination}
+  */
+  readonly skipWaitOnJobTermination?: boolean | cdktf.IResolvable;
+  /**
   * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataflow_job#subnetwork DataflowJob#subnetwork}
@@ -220,8 +226,8 @@ export class DataflowJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataflow_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -242,6 +248,7 @@ export class DataflowJob extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._serviceAccountEmail = config.serviceAccountEmail;
+    this._skipWaitOnJobTermination = config.skipWaitOnJobTermination;
     this._subnetwork = config.subnetwork;
     this._tempGcsLocation = config.tempGcsLocation;
     this._templateGcsPath = config.templateGcsPath;
@@ -485,6 +492,22 @@ export class DataflowJob extends cdktf.TerraformResource {
     return this._serviceAccountEmail;
   }
 
+  // skip_wait_on_job_termination - computed: false, optional: true, required: false
+  private _skipWaitOnJobTermination?: boolean | cdktf.IResolvable; 
+  public get skipWaitOnJobTermination() {
+    return this.getBooleanAttribute('skip_wait_on_job_termination');
+  }
+  public set skipWaitOnJobTermination(value: boolean | cdktf.IResolvable) {
+    this._skipWaitOnJobTermination = value;
+  }
+  public resetSkipWaitOnJobTermination() {
+    this._skipWaitOnJobTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipWaitOnJobTerminationInput() {
+    return this._skipWaitOnJobTermination;
+  }
+
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
@@ -605,6 +628,7 @@ export class DataflowJob extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       service_account_email: cdktf.stringToTerraform(this._serviceAccountEmail),
+      skip_wait_on_job_termination: cdktf.booleanToTerraform(this._skipWaitOnJobTermination),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       temp_gcs_location: cdktf.stringToTerraform(this._tempGcsLocation),
       template_gcs_path: cdktf.stringToTerraform(this._templateGcsPath),

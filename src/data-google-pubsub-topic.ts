@@ -178,8 +178,8 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -207,6 +207,11 @@ export class DataGooglePubsubTopic extends cdktf.TerraformDataSource {
   // labels - computed: true, optional: false, required: false
   public labels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'labels').lookup(key);
+  }
+
+  // message_retention_duration - computed: true, optional: false, required: false
+  public get messageRetentionDuration() {
+    return this.getStringAttribute('message_retention_duration');
   }
 
   // message_storage_policy - computed: true, optional: false, required: false

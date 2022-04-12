@@ -66,9 +66,9 @@ export interface DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTra
   /**
   * Characters to not transform when masking.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template#character_to_skip DataLossPreventionDeidentifyTemplate#character_to_skip}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_deidentify_template#characters_to_skip DataLossPreventionDeidentifyTemplate#characters_to_skip}
   */
-  readonly characterToSkip?: string;
+  readonly charactersToSkip?: string;
   /**
   * Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: ["NUMERIC", "ALPHA_UPPER_CASE", "ALPHA_LOWER_CASE", "PUNCTUATION", "WHITESPACE"]
   * 
@@ -83,7 +83,7 @@ export function dataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTran
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    character_to_skip: cdktf.stringToTerraform(struct!.characterToSkip),
+    characters_to_skip: cdktf.stringToTerraform(struct!.charactersToSkip),
     common_characters_to_ignore: cdktf.stringToTerraform(struct!.commonCharactersToIgnore),
   }
 }
@@ -2646,8 +2646,8 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
       terraformResourceType: 'google_data_loss_prevention_deidentify_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

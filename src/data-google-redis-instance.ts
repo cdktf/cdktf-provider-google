@@ -24,6 +24,383 @@ export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArgume
   */
   readonly region?: string;
 }
+export interface DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
+}
+
+export function dataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct?: DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // hours - computed: true, optional: false, required: false
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+
+  // minutes - computed: true, optional: false, required: false
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+
+  // nanos - computed: true, optional: false, required: false
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+
+  // seconds - computed: true, optional: false, required: false
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference {
+    return new DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindow {
+}
+
+export function dataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform(struct?: DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindow | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // day - computed: true, optional: false, required: false
+  public get day() {
+    return this.getStringAttribute('day');
+  }
+
+  // duration - computed: true, optional: false, required: false
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  private _startTime = new DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeList(this, "start_time", false);
+  public get startTime() {
+    return this._startTime;
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference {
+    return new DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleRedisInstanceMaintenancePolicy {
+}
+
+export function dataGoogleRedisInstanceMaintenancePolicyToTerraform(struct?: DataGoogleRedisInstanceMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenancePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleRedisInstanceMaintenancePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleRedisInstanceMaintenancePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // weekly_maintenance_window - computed: true, optional: false, required: false
+  private _weeklyMaintenanceWindow = new DataGoogleRedisInstanceMaintenancePolicyWeeklyMaintenanceWindowList(this, "weekly_maintenance_window", false);
+  public get weeklyMaintenanceWindow() {
+    return this._weeklyMaintenanceWindow;
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenancePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleRedisInstanceMaintenancePolicyOutputReference {
+    return new DataGoogleRedisInstanceMaintenancePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleRedisInstanceMaintenanceSchedule {
+}
+
+export function dataGoogleRedisInstanceMaintenanceScheduleToTerraform(struct?: DataGoogleRedisInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleRedisInstanceMaintenanceSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleRedisInstanceMaintenanceSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // schedule_deadline_time - computed: true, optional: false, required: false
+  public get scheduleDeadlineTime() {
+    return this.getStringAttribute('schedule_deadline_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
+
+export class DataGoogleRedisInstanceMaintenanceScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleRedisInstanceMaintenanceScheduleOutputReference {
+    return new DataGoogleRedisInstanceMaintenanceScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleRedisInstanceNodes {
+}
+
+export function dataGoogleRedisInstanceNodesToTerraform(struct?: DataGoogleRedisInstanceNodes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleRedisInstanceNodesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleRedisInstanceNodes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleRedisInstanceNodes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // zone - computed: true, optional: false, required: false
+  public get zone() {
+    return this.getStringAttribute('zone');
+  }
+}
+
+export class DataGoogleRedisInstanceNodesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleRedisInstanceNodesOutputReference {
+    return new DataGoogleRedisInstanceNodesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleRedisInstanceServerCaCerts {
 }
 
@@ -135,8 +512,8 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -212,6 +589,18 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
     return this.getStringAttribute('location_id');
   }
 
+  // maintenance_policy - computed: true, optional: false, required: false
+  private _maintenancePolicy = new DataGoogleRedisInstanceMaintenancePolicyList(this, "maintenance_policy", false);
+  public get maintenancePolicy() {
+    return this._maintenancePolicy;
+  }
+
+  // maintenance_schedule - computed: true, optional: false, required: false
+  private _maintenanceSchedule = new DataGoogleRedisInstanceMaintenanceScheduleList(this, "maintenance_schedule", false);
+  public get maintenanceSchedule() {
+    return this._maintenanceSchedule;
+  }
+
   // memory_size_gb - computed: true, optional: false, required: false
   public get memorySizeGb() {
     return this.getNumberAttribute('memory_size_gb');
@@ -228,6 +617,12 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // nodes - computed: true, optional: false, required: false
+  private _nodes = new DataGoogleRedisInstanceNodesList(this, "nodes", false);
+  public get nodes() {
+    return this._nodes;
   }
 
   // persistence_iam_identity - computed: true, optional: false, required: false
@@ -256,6 +651,21 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
     return this._project;
   }
 
+  // read_endpoint - computed: true, optional: false, required: false
+  public get readEndpoint() {
+    return this.getStringAttribute('read_endpoint');
+  }
+
+  // read_endpoint_port - computed: true, optional: false, required: false
+  public get readEndpointPort() {
+    return this.getNumberAttribute('read_endpoint_port');
+  }
+
+  // read_replicas_mode - computed: true, optional: false, required: false
+  public get readReplicasMode() {
+    return this.getStringAttribute('read_replicas_mode');
+  }
+
   // redis_configs - computed: true, optional: false, required: false
   public redisConfigs(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'redis_configs').lookup(key);
@@ -280,6 +690,11 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get regionInput() {
     return this._region;
+  }
+
+  // replica_count - computed: true, optional: false, required: false
+  public get replicaCount() {
+    return this.getNumberAttribute('replica_count');
   }
 
   // reserved_ip_range - computed: true, optional: false, required: false

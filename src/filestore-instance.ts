@@ -20,6 +20,12 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly labels?: { [key: string]: string };
   /**
+  * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#location FilestoreInstance#location}
+  */
+  readonly location?: string;
+  /**
   * The resource name of the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#name FilestoreInstance#name}
@@ -30,7 +36,8 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly project?: string;
   /**
-  * The service tier of the instance. Possible values: ["TIER_UNSPECIFIED", "STANDARD", "PREMIUM", "BASIC_HDD", "BASIC_SSD", "HIGH_SCALE_SSD"]
+  * The service tier of the instance.
+Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#tier FilestoreInstance#tier}
   */
@@ -40,7 +47,7 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#zone FilestoreInstance#zone}
   */
-  readonly zone: string;
+  readonly zone?: string;
   /**
   * file_shares block
   * 
@@ -333,8 +340,8 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -343,6 +350,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._labels = config.labels;
+    this._location = config.location;
     this._name = config.name;
     this._project = config.project;
     this._tier = config.tier;
@@ -403,6 +411,22 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     return this._labels;
   }
 
+  // location - computed: true, optional: true, required: false
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -445,13 +469,16 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     return this._tier;
   }
 
-  // zone - computed: false, optional: false, required: true
+  // zone - computed: true, optional: true, required: false
   private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
   public set zone(value: string) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
@@ -509,6 +536,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
+      location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       tier: cdktf.stringToTerraform(this._tier),

@@ -164,6 +164,11 @@ export class DataGoogleComputeRouterBgpOutputReference extends cdktf.ComplexObje
   public get asn() {
     return this.getNumberAttribute('asn');
   }
+
+  // keepalive_interval - computed: true, optional: false, required: false
+  public get keepaliveInterval() {
+    return this.getNumberAttribute('keepalive_interval');
+  }
 }
 
 export class DataGoogleComputeRouterBgpList extends cdktf.ComplexList {
@@ -211,8 +216,8 @@ export class DataGoogleComputeRouter extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_router',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -243,6 +248,11 @@ export class DataGoogleComputeRouter extends cdktf.TerraformDataSource {
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
+  }
+
+  // encrypted_interconnect_router - computed: true, optional: false, required: false
+  public get encryptedInterconnectRouter() {
+    return this.getBooleanAttribute('encrypted_interconnect_router');
   }
 
   // id - computed: true, optional: true, required: false

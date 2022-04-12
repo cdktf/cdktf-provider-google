@@ -48,7 +48,8 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
   readonly runtime: string;
   /**
   * The version of the API in the given runtime environment.
-Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
+Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
+Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version#runtime_api_version AppEngineStandardAppVersion#runtime_api_version}
   */
@@ -94,7 +95,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version#entrypoint AppEngineStandardAppVersion#entrypoint}
   */
-  readonly entrypoint?: AppEngineStandardAppVersionEntrypoint;
+  readonly entrypoint: AppEngineStandardAppVersionEntrypoint;
   /**
   * handlers block
   * 
@@ -1550,8 +1551,8 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_standard_app_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1809,16 +1810,13 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
     return this._deployment.internalValue;
   }
 
-  // entrypoint - computed: false, optional: true, required: false
+  // entrypoint - computed: false, optional: false, required: true
   private _entrypoint = new AppEngineStandardAppVersionEntrypointOutputReference(this, "entrypoint");
   public get entrypoint() {
     return this._entrypoint;
   }
   public putEntrypoint(value: AppEngineStandardAppVersionEntrypoint) {
     this._entrypoint.internalValue = value;
-  }
-  public resetEntrypoint() {
-    this._entrypoint.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get entrypointInput() {

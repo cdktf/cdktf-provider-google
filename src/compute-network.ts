@@ -215,8 +215,8 @@ export class ComputeNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

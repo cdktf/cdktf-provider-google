@@ -56,6 +56,12 @@ export interface DataprocJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly placement: DataprocJobPlacement;
   /**
+  * presto_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#presto_config DataprocJob#presto_config}
+  */
+  readonly prestoConfig?: DataprocJobPrestoConfig;
+  /**
   * pyspark_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#pyspark_config DataprocJob#pyspark_config}
@@ -1089,6 +1095,311 @@ export class DataprocJobPlacementOutputReference extends cdktf.ComplexObject {
   // cluster_uuid - computed: true, optional: false, required: false
   public get clusterUuid() {
     return this.getStringAttribute('cluster_uuid');
+  }
+}
+export interface DataprocJobPrestoConfigLoggingConfig {
+  /**
+  * Optional. The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#driver_log_levels DataprocJob#driver_log_levels}
+  */
+  readonly driverLogLevels: { [key: string]: string };
+}
+
+export function dataprocJobPrestoConfigLoggingConfigToTerraform(struct?: DataprocJobPrestoConfigLoggingConfigOutputReference | DataprocJobPrestoConfigLoggingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    driver_log_levels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.driverLogLevels),
+  }
+}
+
+export class DataprocJobPrestoConfigLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocJobPrestoConfigLoggingConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._driverLogLevels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.driverLogLevels = this._driverLogLevels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocJobPrestoConfigLoggingConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._driverLogLevels = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._driverLogLevels = value.driverLogLevels;
+    }
+  }
+
+  // driver_log_levels - computed: false, optional: false, required: true
+  private _driverLogLevels?: { [key: string]: string }; 
+  public get driverLogLevels() {
+    return this.getStringMapAttribute('driver_log_levels');
+  }
+  public set driverLogLevels(value: { [key: string]: string }) {
+    this._driverLogLevels = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get driverLogLevelsInput() {
+    return this._driverLogLevels;
+  }
+}
+export interface DataprocJobPrestoConfig {
+  /**
+  * Presto client tags to attach to this query.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#client_tags DataprocJob#client_tags}
+  */
+  readonly clientTags?: string[];
+  /**
+  * Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#continue_on_failure DataprocJob#continue_on_failure}
+  */
+  readonly continueOnFailure?: boolean | cdktf.IResolvable;
+  /**
+  * The format in which query output will be displayed. See the Presto documentation for supported output formats.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#output_format DataprocJob#output_format}
+  */
+  readonly outputFormat?: string;
+  /**
+  * A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#properties DataprocJob#properties}
+  */
+  readonly properties?: { [key: string]: string };
+  /**
+  * The HCFS URI of the script that contains SQL queries. Conflicts with query_list
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#query_file_uri DataprocJob#query_file_uri}
+  */
+  readonly queryFileUri?: string;
+  /**
+  * The list of SQL queries or statements to execute as part of the job. Conflicts with query_file_uri
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#query_list DataprocJob#query_list}
+  */
+  readonly queryList?: string[];
+  /**
+  * logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_job#logging_config DataprocJob#logging_config}
+  */
+  readonly loggingConfig?: DataprocJobPrestoConfigLoggingConfig;
+}
+
+export function dataprocJobPrestoConfigToTerraform(struct?: DataprocJobPrestoConfigOutputReference | DataprocJobPrestoConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clientTags),
+    continue_on_failure: cdktf.booleanToTerraform(struct!.continueOnFailure),
+    output_format: cdktf.stringToTerraform(struct!.outputFormat),
+    properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
+    query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    logging_config: dataprocJobPrestoConfigLoggingConfigToTerraform(struct!.loggingConfig),
+  }
+}
+
+export class DataprocJobPrestoConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocJobPrestoConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientTags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientTags = this._clientTags;
+    }
+    if (this._continueOnFailure !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.continueOnFailure = this._continueOnFailure;
+    }
+    if (this._outputFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outputFormat = this._outputFormat;
+    }
+    if (this._properties !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._queryFileUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryFileUri = this._queryFileUri;
+    }
+    if (this._queryList !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryList = this._queryList;
+    }
+    if (this._loggingConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loggingConfig = this._loggingConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocJobPrestoConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientTags = undefined;
+      this._continueOnFailure = undefined;
+      this._outputFormat = undefined;
+      this._properties = undefined;
+      this._queryFileUri = undefined;
+      this._queryList = undefined;
+      this._loggingConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientTags = value.clientTags;
+      this._continueOnFailure = value.continueOnFailure;
+      this._outputFormat = value.outputFormat;
+      this._properties = value.properties;
+      this._queryFileUri = value.queryFileUri;
+      this._queryList = value.queryList;
+      this._loggingConfig.internalValue = value.loggingConfig;
+    }
+  }
+
+  // client_tags - computed: false, optional: true, required: false
+  private _clientTags?: string[]; 
+  public get clientTags() {
+    return this.getListAttribute('client_tags');
+  }
+  public set clientTags(value: string[]) {
+    this._clientTags = value;
+  }
+  public resetClientTags() {
+    this._clientTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientTagsInput() {
+    return this._clientTags;
+  }
+
+  // continue_on_failure - computed: false, optional: true, required: false
+  private _continueOnFailure?: boolean | cdktf.IResolvable; 
+  public get continueOnFailure() {
+    return this.getBooleanAttribute('continue_on_failure');
+  }
+  public set continueOnFailure(value: boolean | cdktf.IResolvable) {
+    this._continueOnFailure = value;
+  }
+  public resetContinueOnFailure() {
+    this._continueOnFailure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get continueOnFailureInput() {
+    return this._continueOnFailure;
+  }
+
+  // output_format - computed: false, optional: true, required: false
+  private _outputFormat?: string; 
+  public get outputFormat() {
+    return this.getStringAttribute('output_format');
+  }
+  public set outputFormat(value: string) {
+    this._outputFormat = value;
+  }
+  public resetOutputFormat() {
+    this._outputFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputFormatInput() {
+    return this._outputFormat;
+  }
+
+  // properties - computed: false, optional: true, required: false
+  private _properties?: { [key: string]: string }; 
+  public get properties() {
+    return this.getStringMapAttribute('properties');
+  }
+  public set properties(value: { [key: string]: string }) {
+    this._properties = value;
+  }
+  public resetProperties() {
+    this._properties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties;
+  }
+
+  // query_file_uri - computed: false, optional: true, required: false
+  private _queryFileUri?: string; 
+  public get queryFileUri() {
+    return this.getStringAttribute('query_file_uri');
+  }
+  public set queryFileUri(value: string) {
+    this._queryFileUri = value;
+  }
+  public resetQueryFileUri() {
+    this._queryFileUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryFileUriInput() {
+    return this._queryFileUri;
+  }
+
+  // query_list - computed: false, optional: true, required: false
+  private _queryList?: string[]; 
+  public get queryList() {
+    return this.getListAttribute('query_list');
+  }
+  public set queryList(value: string[]) {
+    this._queryList = value;
+  }
+  public resetQueryList() {
+    this._queryList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryListInput() {
+    return this._queryList;
+  }
+
+  // logging_config - computed: false, optional: true, required: false
+  private _loggingConfig = new DataprocJobPrestoConfigLoggingConfigOutputReference(this, "logging_config");
+  public get loggingConfig() {
+    return this._loggingConfig;
+  }
+  public putLoggingConfig(value: DataprocJobPrestoConfigLoggingConfig) {
+    this._loggingConfig.internalValue = value;
+  }
+  public resetLoggingConfig() {
+    this._loggingConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingConfigInput() {
+    return this._loggingConfig.internalValue;
   }
 }
 export interface DataprocJobPysparkConfigLoggingConfig {
@@ -2308,8 +2619,8 @@ export class DataprocJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2324,6 +2635,7 @@ export class DataprocJob extends cdktf.TerraformResource {
     this._hiveConfig.internalValue = config.hiveConfig;
     this._pigConfig.internalValue = config.pigConfig;
     this._placement.internalValue = config.placement;
+    this._prestoConfig.internalValue = config.prestoConfig;
     this._pysparkConfig.internalValue = config.pysparkConfig;
     this._reference.internalValue = config.reference;
     this._scheduling.internalValue = config.scheduling;
@@ -2482,6 +2794,22 @@ export class DataprocJob extends cdktf.TerraformResource {
     return this._placement.internalValue;
   }
 
+  // presto_config - computed: false, optional: true, required: false
+  private _prestoConfig = new DataprocJobPrestoConfigOutputReference(this, "presto_config");
+  public get prestoConfig() {
+    return this._prestoConfig;
+  }
+  public putPrestoConfig(value: DataprocJobPrestoConfig) {
+    this._prestoConfig.internalValue = value;
+  }
+  public resetPrestoConfig() {
+    this._prestoConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prestoConfigInput() {
+    return this._prestoConfig.internalValue;
+  }
+
   // pyspark_config - computed: false, optional: true, required: false
   private _pysparkConfig = new DataprocJobPysparkConfigOutputReference(this, "pyspark_config");
   public get pysparkConfig() {
@@ -2592,6 +2920,7 @@ export class DataprocJob extends cdktf.TerraformResource {
       hive_config: dataprocJobHiveConfigToTerraform(this._hiveConfig.internalValue),
       pig_config: dataprocJobPigConfigToTerraform(this._pigConfig.internalValue),
       placement: dataprocJobPlacementToTerraform(this._placement.internalValue),
+      presto_config: dataprocJobPrestoConfigToTerraform(this._prestoConfig.internalValue),
       pyspark_config: dataprocJobPysparkConfigToTerraform(this._pysparkConfig.internalValue),
       reference: dataprocJobReferenceToTerraform(this._reference.internalValue),
       scheduling: dataprocJobSchedulingToTerraform(this._scheduling.internalValue),
