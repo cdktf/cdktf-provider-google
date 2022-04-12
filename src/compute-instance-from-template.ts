@@ -958,6 +958,12 @@ export interface ComputeInstanceFromTemplateNetworkInterface {
   */
   readonly nicType?: string;
   /**
+  * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#queue_count ComputeInstanceFromTemplate#queue_count}
+  */
+  readonly queueCount?: number;
+  /**
   * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#stack_type ComputeInstanceFromTemplate#stack_type}
@@ -994,6 +1000,7 @@ export function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: 
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
     nic_type: cdktf.stringToTerraform(struct!.nicType),
+    queue_count: cdktf.numberToTerraform(struct!.queueCount),
     stack_type: cdktf.stringToTerraform(struct!.stackType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
@@ -1664,8 +1671,8 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_from_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

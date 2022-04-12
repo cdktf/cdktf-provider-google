@@ -1130,6 +1130,12 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfig {
   */
   readonly numInstances?: number;
   /**
+  * Specifies the preemptibility of the secondary nodes. Defaults to PREEMPTIBLE.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#preemptibility DataprocCluster#preemptibility}
+  */
+  readonly preemptibility?: string;
+  /**
   * disk_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#disk_config DataprocCluster#disk_config}
@@ -1144,6 +1150,7 @@ export function dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(s
   }
   return {
     num_instances: cdktf.numberToTerraform(struct!.numInstances),
+    preemptibility: cdktf.stringToTerraform(struct!.preemptibility),
     disk_config: dataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfigToTerraform(struct!.diskConfig),
   }
 }
@@ -1166,6 +1173,10 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
       hasAnyValues = true;
       internalValueResult.numInstances = this._numInstances;
     }
+    if (this._preemptibility !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preemptibility = this._preemptibility;
+    }
     if (this._diskConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskConfig = this._diskConfig?.internalValue;
@@ -1177,11 +1188,13 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
     if (value === undefined) {
       this.isEmptyObject = false;
       this._numInstances = undefined;
+      this._preemptibility = undefined;
       this._diskConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._numInstances = value.numInstances;
+      this._preemptibility = value.preemptibility;
       this._diskConfig.internalValue = value.diskConfig;
     }
   }
@@ -1205,6 +1218,22 @@ export class DataprocClusterClusterConfigPreemptibleWorkerConfigOutputReference 
   // Temporarily expose input value. Use with caution.
   public get numInstancesInput() {
     return this._numInstances;
+  }
+
+  // preemptibility - computed: false, optional: true, required: false
+  private _preemptibility?: string; 
+  public get preemptibility() {
+    return this.getStringAttribute('preemptibility');
+  }
+  public set preemptibility(value: string) {
+    this._preemptibility = value;
+  }
+  public resetPreemptibility() {
+    this._preemptibility = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preemptibilityInput() {
+    return this._preemptibility;
   }
 
   // disk_config - computed: false, optional: true, required: false
@@ -2765,8 +2794,8 @@ export class DataprocCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

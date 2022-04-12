@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The asymmetric crypto key version to use for signing approval requests.
+Empty active_key_version indicates that a Google-managed key should be used for signing.
+This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#active_key_version FolderAccessApprovalSettings#active_key_version}
+  */
+  readonly activeKeyVersion?: string;
+  /**
   * ID of the folder of the access approval settings.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#folder_id FolderAccessApprovalSettings#folder_id}
@@ -229,14 +237,15 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
       terraformResourceType: 'google_folder_access_approval_settings',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._activeKeyVersion = config.activeKeyVersion;
     this._folderId = config.folderId;
     this._notificationEmails = config.notificationEmails;
     this._enrolledServices = config.enrolledServices;
@@ -246,6 +255,27 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // active_key_version - computed: false, optional: true, required: false
+  private _activeKeyVersion?: string; 
+  public get activeKeyVersion() {
+    return this.getStringAttribute('active_key_version');
+  }
+  public set activeKeyVersion(value: string) {
+    this._activeKeyVersion = value;
+  }
+  public resetActiveKeyVersion() {
+    this._activeKeyVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activeKeyVersionInput() {
+    return this._activeKeyVersion;
+  }
+
+  // ancestor_has_active_key_version - computed: true, optional: false, required: false
+  public get ancestorHasActiveKeyVersion() {
+    return this.getBooleanAttribute('ancestor_has_active_key_version');
+  }
 
   // enrolled_ancestor - computed: true, optional: false, required: false
   public get enrolledAncestor() {
@@ -268,6 +298,11 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // invalid_key_version - computed: true, optional: false, required: false
+  public get invalidKeyVersion() {
+    return this.getBooleanAttribute('invalid_key_version');
   }
 
   // name - computed: true, optional: false, required: false
@@ -327,6 +362,7 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      active_key_version: cdktf.stringToTerraform(this._activeKeyVersion),
       folder_id: cdktf.stringToTerraform(this._folderId),
       notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
       enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),

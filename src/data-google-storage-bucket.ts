@@ -699,8 +699,8 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -713,11 +713,6 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // bucket_policy_only - computed: true, optional: false, required: false
-  public get bucketPolicyOnly() {
-    return this.getBooleanAttribute('bucket_policy_only');
-  }
 
   // cors - computed: true, optional: false, required: false
   private _cors = new DataGoogleStorageBucketCorsList(this, "cors", false);

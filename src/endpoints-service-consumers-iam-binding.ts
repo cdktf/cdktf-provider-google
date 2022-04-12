@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member
+// https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,46 +6,46 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RuntimeconfigConfigIamMemberConfig extends cdktf.TerraformMetaArguments {
+export interface EndpointsServiceConsumersIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#config RuntimeconfigConfigIamMember#config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#consumer_project EndpointsServiceConsumersIamBinding#consumer_project}
   */
-  readonly config: string;
+  readonly consumerProject: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#member RuntimeconfigConfigIamMember#member}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#members EndpointsServiceConsumersIamBinding#members}
   */
-  readonly member: string;
+  readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#project RuntimeconfigConfigIamMember#project}
-  */
-  readonly project?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#role RuntimeconfigConfigIamMember#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#role EndpointsServiceConsumersIamBinding#role}
   */
   readonly role: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#service_name EndpointsServiceConsumersIamBinding#service_name}
+  */
+  readonly serviceName: string;
+  /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#condition RuntimeconfigConfigIamMember#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#condition EndpointsServiceConsumersIamBinding#condition}
   */
-  readonly condition?: RuntimeconfigConfigIamMemberCondition;
+  readonly condition?: EndpointsServiceConsumersIamBindingCondition;
 }
-export interface RuntimeconfigConfigIamMemberCondition {
+export interface EndpointsServiceConsumersIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#description RuntimeconfigConfigIamMember#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#description EndpointsServiceConsumersIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#expression RuntimeconfigConfigIamMember#expression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#expression EndpointsServiceConsumersIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member#title RuntimeconfigConfigIamMember#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding#title EndpointsServiceConsumersIamBinding#title}
   */
   readonly title: string;
 }
 
-export function runtimeconfigConfigIamMemberConditionToTerraform(struct?: RuntimeconfigConfigIamMemberConditionOutputReference | RuntimeconfigConfigIamMemberCondition): any {
+export function endpointsServiceConsumersIamBindingConditionToTerraform(struct?: EndpointsServiceConsumersIamBindingConditionOutputReference | EndpointsServiceConsumersIamBindingCondition): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -57,7 +57,7 @@ export function runtimeconfigConfigIamMemberConditionToTerraform(struct?: Runtim
   }
 }
 
-export class RuntimeconfigConfigIamMemberConditionOutputReference extends cdktf.ComplexObject {
+export class EndpointsServiceConsumersIamBindingConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -68,7 +68,7 @@ export class RuntimeconfigConfigIamMemberConditionOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): RuntimeconfigConfigIamMemberCondition | undefined {
+  public get internalValue(): EndpointsServiceConsumersIamBindingCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description !== undefined) {
@@ -86,7 +86,7 @@ export class RuntimeconfigConfigIamMemberConditionOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: RuntimeconfigConfigIamMemberCondition | undefined) {
+  public set internalValue(value: EndpointsServiceConsumersIamBindingCondition | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._description = undefined;
@@ -145,43 +145,43 @@ export class RuntimeconfigConfigIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member google_runtimeconfig_config_iam_member}
+* Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding google_endpoints_service_consumers_iam_binding}
 */
-export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
+export class EndpointsServiceConsumersIamBinding extends cdktf.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType = "google_runtimeconfig_config_iam_member";
+  public static readonly tfResourceType = "google_endpoints_service_consumers_iam_binding";
 
   // ===========
   // INITIALIZER
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/runtimeconfig_config_iam_member google_runtimeconfig_config_iam_member} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding google_endpoints_service_consumers_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options RuntimeconfigConfigIamMemberConfig
+  * @param options EndpointsServiceConsumersIamBindingConfig
   */
-  public constructor(scope: Construct, id: string, config: RuntimeconfigConfigIamMemberConfig) {
+  public constructor(scope: Construct, id: string, config: EndpointsServiceConsumersIamBindingConfig) {
     super(scope, id, {
-      terraformResourceType: 'google_runtimeconfig_config_iam_member',
+      terraformResourceType: 'google_endpoints_service_consumers_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._config = config.config;
-    this._member = config.member;
-    this._project = config.project;
+    this._consumerProject = config.consumerProject;
+    this._members = config.members;
     this._role = config.role;
+    this._serviceName = config.serviceName;
     this._condition.internalValue = config.condition;
   }
 
@@ -189,17 +189,17 @@ export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // config - computed: false, optional: false, required: true
-  private _config?: string; 
-  public get config() {
-    return this.getStringAttribute('config');
+  // consumer_project - computed: false, optional: false, required: true
+  private _consumerProject?: string; 
+  public get consumerProject() {
+    return this.getStringAttribute('consumer_project');
   }
-  public set config(value: string) {
-    this._config = value;
+  public set consumerProject(value: string) {
+    this._consumerProject = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get configInput() {
-    return this._config;
+  public get consumerProjectInput() {
+    return this._consumerProject;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -212,33 +212,17 @@ export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // member - computed: false, optional: false, required: true
-  private _member?: string; 
-  public get member() {
-    return this.getStringAttribute('member');
+  // members - computed: false, optional: false, required: true
+  private _members?: string[]; 
+  public get members() {
+    return cdktf.Fn.tolist(this.getListAttribute('members'));
   }
-  public set member(value: string) {
-    this._member = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get memberInput() {
-    return this._member;
-  }
-
-  // project - computed: true, optional: true, required: false
-  private _project?: string; 
-  public get project() {
-    return this.getStringAttribute('project');
-  }
-  public set project(value: string) {
-    this._project = value;
-  }
-  public resetProject() {
-    this._project = undefined;
+  public set members(value: string[]) {
+    this._members = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get projectInput() {
-    return this._project;
+  public get membersInput() {
+    return this._members;
   }
 
   // role - computed: false, optional: false, required: true
@@ -254,12 +238,25 @@ export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
     return this._role;
   }
 
+  // service_name - computed: false, optional: false, required: true
+  private _serviceName?: string; 
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName;
+  }
+
   // condition - computed: false, optional: true, required: false
-  private _condition = new RuntimeconfigConfigIamMemberConditionOutputReference(this, "condition");
+  private _condition = new EndpointsServiceConsumersIamBindingConditionOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: RuntimeconfigConfigIamMemberCondition) {
+  public putCondition(value: EndpointsServiceConsumersIamBindingCondition) {
     this._condition.internalValue = value;
   }
   public resetCondition() {
@@ -276,11 +273,11 @@ export class RuntimeconfigConfigIamMember extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      config: cdktf.stringToTerraform(this._config),
-      member: cdktf.stringToTerraform(this._member),
-      project: cdktf.stringToTerraform(this._project),
+      consumer_project: cdktf.stringToTerraform(this._consumerProject),
+      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
       role: cdktf.stringToTerraform(this._role),
-      condition: runtimeconfigConfigIamMemberConditionToTerraform(this._condition.internalValue),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      condition: endpointsServiceConsumersIamBindingConditionToTerraform(this._condition.internalValue),
     };
   }
 }

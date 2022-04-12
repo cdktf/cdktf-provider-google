@@ -8,6 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Optional. API Proxy type supported by the environment. The type can be set when creating
+the Environment and cannot be changed. Possible values: ["API_PROXY_TYPE_UNSPECIFIED", "PROGRAMMABLE", "CONFIGURABLE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#api_proxy_type ApigeeEnvironment#api_proxy_type}
+  */
+  readonly apiProxyType?: string;
+  /**
+  * Optional. Deployment type supported by the environment. The deployment type can be
+set when creating the environment and cannot be changed. When you enable archive
+deployment, you will be prevented from performing a subset of actions within the
+environment, including:
+Managing the deployment of API proxy or shared flow revisions;
+Creating, updating, or deleting resource files;
+Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TYPE_UNSPECIFIED", "PROXY", "ARCHIVE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#deployment_type ApigeeEnvironment#deployment_type}
+  */
+  readonly deploymentType?: string;
+  /**
   * Description of the environment.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#description ApigeeEnvironment#description}
@@ -185,14 +204,16 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._apiProxyType = config.apiProxyType;
+    this._deploymentType = config.deploymentType;
     this._description = config.description;
     this._displayName = config.displayName;
     this._name = config.name;
@@ -203,6 +224,38 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // api_proxy_type - computed: true, optional: true, required: false
+  private _apiProxyType?: string; 
+  public get apiProxyType() {
+    return this.getStringAttribute('api_proxy_type');
+  }
+  public set apiProxyType(value: string) {
+    this._apiProxyType = value;
+  }
+  public resetApiProxyType() {
+    this._apiProxyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiProxyTypeInput() {
+    return this._apiProxyType;
+  }
+
+  // deployment_type - computed: true, optional: true, required: false
+  private _deploymentType?: string; 
+  public get deploymentType() {
+    return this.getStringAttribute('deployment_type');
+  }
+  public set deploymentType(value: string) {
+    this._deploymentType = value;
+  }
+  public resetDeploymentType() {
+    this._deploymentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deploymentTypeInput() {
+    return this._deploymentType;
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -289,6 +342,8 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      api_proxy_type: cdktf.stringToTerraform(this._apiProxyType),
+      deployment_type: cdktf.stringToTerraform(this._deploymentType),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       name: cdktf.stringToTerraform(this._name),

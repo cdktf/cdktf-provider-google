@@ -26,7 +26,7 @@ export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#project DataGoogleComputeInstanceTemplate#project}
   */
-  readonly project: string;
+  readonly project?: string;
 }
 export interface DataGoogleComputeInstanceTemplateAdvancedMachineFeatures {
 }
@@ -729,6 +729,11 @@ export class DataGoogleComputeInstanceTemplateNetworkInterfaceOutputReference ex
     return this.getStringAttribute('nic_type');
   }
 
+  // queue_count - computed: true, optional: false, required: false
+  public get queueCount() {
+    return this.getNumberAttribute('queue_count');
+  }
+
   // stack_type - computed: true, optional: false, required: false
   public get stackType() {
     return this.getStringAttribute('stack_type');
@@ -1224,15 +1229,15 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataGoogleComputeInstanceTemplateConfig
+  * @param options DataGoogleComputeInstanceTemplateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataGoogleComputeInstanceTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: DataGoogleComputeInstanceTemplateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1275,11 +1280,6 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   private _disk = new DataGoogleComputeInstanceTemplateDiskList(this, "disk", false);
   public get disk() {
     return this._disk;
-  }
-
-  // enable_display - computed: true, optional: false, required: false
-  public get enableDisplay() {
-    return this.getBooleanAttribute('enable_display');
   }
 
   // filter - computed: false, optional: true, required: false
@@ -1387,13 +1387,16 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
     return this._networkInterface;
   }
 
-  // project - computed: false, optional: false, required: true
+  // project - computed: false, optional: true, required: false
   private _project?: string; 
   public get project() {
     return this.getStringAttribute('project');
   }
   public set project(value: string) {
     this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get projectInput() {

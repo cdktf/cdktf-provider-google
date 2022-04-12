@@ -24,6 +24,18 @@ The expected format is 'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*'
   */
   readonly labels?: { [key: string]: string };
   /**
+  * Indicates the minimum duration to retain a message after it is published
+to the topic. If this field is set, messages published to the topic in
+the last messageRetentionDuration are always available to subscribers.
+For instance, it allows any attached subscription to seek to a timestamp
+that is up to messageRetentionDuration in the past. If this field is not
+set, message retention is controlled by settings on individual subscriptions.
+Cannot be more than 7 days or less than 10 minutes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic#message_retention_duration PubsubTopic#message_retention_duration}
+  */
+  readonly messageRetentionDuration?: string;
+  /**
   * Name of the topic.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic#name PubsubTopic#name}
@@ -363,8 +375,8 @@ export class PubsubTopic extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -373,6 +385,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
     });
     this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
+    this._messageRetentionDuration = config.messageRetentionDuration;
     this._name = config.name;
     this._project = config.project;
     this._messageStoragePolicy.internalValue = config.messageStoragePolicy;
@@ -419,6 +432,22 @@ export class PubsubTopic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
     return this._labels;
+  }
+
+  // message_retention_duration - computed: false, optional: true, required: false
+  private _messageRetentionDuration?: string; 
+  public get messageRetentionDuration() {
+    return this.getStringAttribute('message_retention_duration');
+  }
+  public set messageRetentionDuration(value: string) {
+    this._messageRetentionDuration = value;
+  }
+  public resetMessageRetentionDuration() {
+    this._messageRetentionDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageRetentionDurationInput() {
+    return this._messageRetentionDuration;
   }
 
   // name - computed: false, optional: false, required: true
@@ -506,6 +535,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
     return {
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
+      message_retention_duration: cdktf.stringToTerraform(this._messageRetentionDuration),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       message_storage_policy: pubsubTopicMessageStoragePolicyToTerraform(this._messageStoragePolicy.internalValue),

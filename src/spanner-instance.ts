@@ -48,15 +48,15 @@ If not provided, a random string starting with 'tf-' will be selected.
   */
   readonly name?: string;
   /**
-  * The number of nodes allocated to this instance. At most one of either node_count or processing_units
-can be present in terraform.
+  * The number of nodes allocated to this instance. Exactly one of either node_count or processing_units
+must be present in terraform.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#num_nodes SpannerInstance#num_nodes}
   */
   readonly numNodes?: number;
   /**
-  * The number of processing units allocated to this instance. At most one of processing_units 
-or node_count can be present in terraform.
+  * The number of processing units allocated to this instance. Exactly one of processing_units 
+or node_count must be present in terraform.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#processing_units SpannerInstance#processing_units}
   */
@@ -218,8 +218,8 @@ export class SpannerInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

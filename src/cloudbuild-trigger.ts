@@ -20,11 +20,19 @@ export interface CloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
-  * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
+  * Path, from the source root, to a file whose contents is used for the template. 
+Either a filename or build template must be provided. Set this only when using trigger_template or github.
+When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#filename CloudbuildTrigger#filename}
   */
   readonly filename?: string;
+  /**
+  * A Common Expression Language string. Used only with Pub/Sub and Webhook.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#filter CloudbuildTrigger#filter}
+  */
+  readonly filter?: string;
   /**
   * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for '**'.
@@ -90,11 +98,23 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   */
   readonly tags?: string[];
   /**
+  * approval_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#approval_config CloudbuildTrigger#approval_config}
+  */
+  readonly approvalConfig?: CloudbuildTriggerApprovalConfig;
+  /**
   * build block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#build CloudbuildTrigger#build}
   */
   readonly buildAttribute?: CloudbuildTriggerBuild;
+  /**
+  * git_file_source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#git_file_source CloudbuildTrigger#git_file_source}
+  */
+  readonly gitFileSource?: CloudbuildTriggerGitFileSource;
   /**
   * github block
   * 
@@ -107,6 +127,12 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#pubsub_config CloudbuildTrigger#pubsub_config}
   */
   readonly pubsubConfig?: CloudbuildTriggerPubsubConfig;
+  /**
+  * source_to_build block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#source_to_build CloudbuildTrigger#source_to_build}
+  */
+  readonly sourceToBuild?: CloudbuildTriggerSourceToBuild;
   /**
   * timeouts block
   * 
@@ -125,6 +151,74 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#webhook_config CloudbuildTrigger#webhook_config}
   */
   readonly webhookConfig?: CloudbuildTriggerWebhookConfig;
+}
+export interface CloudbuildTriggerApprovalConfig {
+  /**
+  * Whether or not approval is needed. If this is set on a build, it will become pending when run, 
+and will need to be explicitly approved to start.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#approval_required CloudbuildTrigger#approval_required}
+  */
+  readonly approvalRequired?: boolean | cdktf.IResolvable;
+}
+
+export function cloudbuildTriggerApprovalConfigToTerraform(struct?: CloudbuildTriggerApprovalConfigOutputReference | CloudbuildTriggerApprovalConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    approval_required: cdktf.booleanToTerraform(struct!.approvalRequired),
+  }
+}
+
+export class CloudbuildTriggerApprovalConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudbuildTriggerApprovalConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._approvalRequired !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.approvalRequired = this._approvalRequired;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerApprovalConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._approvalRequired = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._approvalRequired = value.approvalRequired;
+    }
+  }
+
+  // approval_required - computed: false, optional: true, required: false
+  private _approvalRequired?: boolean | cdktf.IResolvable; 
+  public get approvalRequired() {
+    return this.getBooleanAttribute('approval_required');
+  }
+  public set approvalRequired(value: boolean | cdktf.IResolvable) {
+    this._approvalRequired = value;
+  }
+  public resetApprovalRequired() {
+    this._approvalRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get approvalRequiredInput() {
+    return this._approvalRequired;
+  }
 }
 export interface CloudbuildTriggerBuildArtifactsObjectsTiming {
 }
@@ -400,6 +494,99 @@ export class CloudbuildTriggerBuildArtifactsOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get objectsInput() {
     return this._objects.internalValue;
+  }
+}
+export interface CloudbuildTriggerBuildAvailableSecretsSecretManager {
+  /**
+  * Environment variable name to associate with the secret. Secret environment
+variables must be unique across all of a build's secrets, and must be used
+by at least one build step.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#env CloudbuildTrigger#env}
+  */
+  readonly env: string;
+  /**
+  * Resource name of the SecretVersion. In format: projects/*\/secrets/*\/versions/*
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#version_name CloudbuildTrigger#version_name}
+  */
+  readonly versionName: string;
+}
+
+export function cloudbuildTriggerBuildAvailableSecretsSecretManagerToTerraform(struct?: CloudbuildTriggerBuildAvailableSecretsSecretManager | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    env: cdktf.stringToTerraform(struct!.env),
+    version_name: cdktf.stringToTerraform(struct!.versionName),
+  }
+}
+
+export interface CloudbuildTriggerBuildAvailableSecrets {
+  /**
+  * secret_manager block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#secret_manager CloudbuildTrigger#secret_manager}
+  */
+  readonly secretManager: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable;
+}
+
+export function cloudbuildTriggerBuildAvailableSecretsToTerraform(struct?: CloudbuildTriggerBuildAvailableSecretsOutputReference | CloudbuildTriggerBuildAvailableSecrets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_manager: cdktf.listMapper(cloudbuildTriggerBuildAvailableSecretsSecretManagerToTerraform)(struct!.secretManager),
+  }
+}
+
+export class CloudbuildTriggerBuildAvailableSecretsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildAvailableSecrets | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretManager !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretManager = this._secretManager;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildAvailableSecrets | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._secretManager = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._secretManager = value.secretManager;
+    }
+  }
+
+  // secret_manager - computed: false, optional: false, required: true
+  private _secretManager?: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable; 
+  public get secretManager() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('secret_manager');
+  }
+  public set secretManager(value: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable) {
+    this._secretManager = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretManagerInput() {
+    return this._secretManager;
   }
 }
 export interface CloudbuildTriggerBuildOptionsVolumes {
@@ -1583,6 +1770,12 @@ Default time is ten minutes (600s).
   */
   readonly artifacts?: CloudbuildTriggerBuildArtifacts;
   /**
+  * available_secrets block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#available_secrets CloudbuildTrigger#available_secrets}
+  */
+  readonly availableSecrets?: CloudbuildTriggerBuildAvailableSecrets;
+  /**
   * options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#options CloudbuildTrigger#options}
@@ -1621,6 +1814,7 @@ export function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuil
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     timeout: cdktf.stringToTerraform(struct!.timeout),
     artifacts: cloudbuildTriggerBuildArtifactsToTerraform(struct!.artifacts),
+    available_secrets: cloudbuildTriggerBuildAvailableSecretsToTerraform(struct!.availableSecrets),
     options: cloudbuildTriggerBuildOptionsToTerraform(struct!.options),
     secret: cdktf.listMapper(cloudbuildTriggerBuildSecretToTerraform)(struct!.secret),
     source: cloudbuildTriggerBuildSourceToTerraform(struct!.source),
@@ -1670,6 +1864,10 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.artifacts = this._artifacts?.internalValue;
     }
+    if (this._availableSecrets?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availableSecrets = this._availableSecrets?.internalValue;
+    }
     if (this._options?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.options = this._options?.internalValue;
@@ -1699,6 +1897,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       this._tags = undefined;
       this._timeout = undefined;
       this._artifacts.internalValue = undefined;
+      this._availableSecrets.internalValue = undefined;
       this._options.internalValue = undefined;
       this._secret = undefined;
       this._source.internalValue = undefined;
@@ -1713,6 +1912,7 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       this._tags = value.tags;
       this._timeout = value.timeout;
       this._artifacts.internalValue = value.artifacts;
+      this._availableSecrets.internalValue = value.availableSecrets;
       this._options.internalValue = value.options;
       this._secret = value.secret;
       this._source.internalValue = value.source;
@@ -1832,6 +2032,22 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
     return this._artifacts.internalValue;
   }
 
+  // available_secrets - computed: false, optional: true, required: false
+  private _availableSecrets = new CloudbuildTriggerBuildAvailableSecretsOutputReference(this, "available_secrets");
+  public get availableSecrets() {
+    return this._availableSecrets;
+  }
+  public putAvailableSecrets(value: CloudbuildTriggerBuildAvailableSecrets) {
+    this._availableSecrets.internalValue = value;
+  }
+  public resetAvailableSecrets() {
+    this._availableSecrets.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availableSecretsInput() {
+    return this._availableSecrets.internalValue;
+  }
+
   // options - computed: false, optional: true, required: false
   private _options = new CloudbuildTriggerBuildOptionsOutputReference(this, "options");
   public get options() {
@@ -1893,6 +2109,158 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get stepInput() {
     return this._step;
+  }
+}
+export interface CloudbuildTriggerGitFileSource {
+  /**
+  * The path of the file, with the repo root as the root of the path.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#path CloudbuildTrigger#path}
+  */
+  readonly path: string;
+  /**
+  * The type of the repo, since it may not be explicit from the repo field (e.g from a URL). 
+Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB Possible values: ["UNKNOWN", "CLOUD_SOURCE_REPOSITORIES", "GITHUB"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#repo_type CloudbuildTrigger#repo_type}
+  */
+  readonly repoType: string;
+  /**
+  * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the 
+filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions 
+If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#revision CloudbuildTrigger#revision}
+  */
+  readonly revision?: string;
+  /**
+  * The URI of the repo (optional). If unspecified, the repo from which the trigger 
+invocation originated is assumed to be the repo from which to read the specified path.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#uri CloudbuildTrigger#uri}
+  */
+  readonly uri?: string;
+}
+
+export function cloudbuildTriggerGitFileSourceToTerraform(struct?: CloudbuildTriggerGitFileSourceOutputReference | CloudbuildTriggerGitFileSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    repo_type: cdktf.stringToTerraform(struct!.repoType),
+    revision: cdktf.stringToTerraform(struct!.revision),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class CloudbuildTriggerGitFileSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudbuildTriggerGitFileSource | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._repoType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repoType = this._repoType;
+    }
+    if (this._revision !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.revision = this._revision;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerGitFileSource | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._path = undefined;
+      this._repoType = undefined;
+      this._revision = undefined;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._path = value.path;
+      this._repoType = value.repoType;
+      this._revision = value.revision;
+      this._uri = value.uri;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // repo_type - computed: false, optional: false, required: true
+  private _repoType?: string; 
+  public get repoType() {
+    return this.getStringAttribute('repo_type');
+  }
+  public set repoType(value: string) {
+    this._repoType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repoTypeInput() {
+    return this._repoType;
+  }
+
+  // revision - computed: false, optional: true, required: false
+  private _revision?: string; 
+  public get revision() {
+    return this.getStringAttribute('revision');
+  }
+  public set revision(value: string) {
+    this._revision = value;
+  }
+  public resetRevision() {
+    this._revision = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revisionInput() {
+    return this._revision;
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
   }
 }
 export interface CloudbuildTriggerGithubPullRequest {
@@ -2401,6 +2769,123 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
     return this._topic;
   }
 }
+export interface CloudbuildTriggerSourceToBuild {
+  /**
+  * The branch or tag to use. Must start with "refs/" (required).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#ref CloudbuildTrigger#ref}
+  */
+  readonly ref: string;
+  /**
+  * The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
+Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB Possible values: ["UNKNOWN", "CLOUD_SOURCE_REPOSITORIES", "GITHUB"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#repo_type CloudbuildTrigger#repo_type}
+  */
+  readonly repoType: string;
+  /**
+  * The URI of the repo (required).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#uri CloudbuildTrigger#uri}
+  */
+  readonly uri: string;
+}
+
+export function cloudbuildTriggerSourceToBuildToTerraform(struct?: CloudbuildTriggerSourceToBuildOutputReference | CloudbuildTriggerSourceToBuild): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ref: cdktf.stringToTerraform(struct!.ref),
+    repo_type: cdktf.stringToTerraform(struct!.repoType),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class CloudbuildTriggerSourceToBuildOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CloudbuildTriggerSourceToBuild | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ref !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ref = this._ref;
+    }
+    if (this._repoType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repoType = this._repoType;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerSourceToBuild | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._ref = undefined;
+      this._repoType = undefined;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._ref = value.ref;
+      this._repoType = value.repoType;
+      this._uri = value.uri;
+    }
+  }
+
+  // ref - computed: false, optional: false, required: true
+  private _ref?: string; 
+  public get ref() {
+    return this.getStringAttribute('ref');
+  }
+  public set ref(value: string) {
+    this._ref = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get refInput() {
+    return this._ref;
+  }
+
+  // repo_type - computed: false, optional: false, required: true
+  private _repoType?: string; 
+  public get repoType() {
+    return this.getStringAttribute('repo_type');
+  }
+  public set repoType(value: string) {
+    this._repoType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repoTypeInput() {
+    return this._repoType;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
 export interface CloudbuildTriggerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#create CloudbuildTrigger#create}
@@ -2864,8 +3349,8 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2875,6 +3360,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._description = config.description;
     this._disabled = config.disabled;
     this._filename = config.filename;
+    this._filter = config.filter;
     this._ignoredFiles = config.ignoredFiles;
     this._includedFiles = config.includedFiles;
     this._name = config.name;
@@ -2882,9 +3368,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._serviceAccount = config.serviceAccount;
     this._substitutions = config.substitutions;
     this._tags = config.tags;
+    this._approvalConfig.internalValue = config.approvalConfig;
     this._build.internalValue = config.buildAttribute;
+    this._gitFileSource.internalValue = config.gitFileSource;
     this._github.internalValue = config.github;
     this._pubsubConfig.internalValue = config.pubsubConfig;
+    this._sourceToBuild.internalValue = config.sourceToBuild;
     this._timeouts.internalValue = config.timeouts;
     this._triggerTemplate.internalValue = config.triggerTemplate;
     this._webhookConfig.internalValue = config.webhookConfig;
@@ -2945,6 +3434,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get filenameInput() {
     return this._filename;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter?: string; 
+  public get filter() {
+    return this.getStringAttribute('filter');
+  }
+  public set filter(value: string) {
+    this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -3069,6 +3574,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     return this.getStringAttribute('trigger_id');
   }
 
+  // approval_config - computed: false, optional: true, required: false
+  private _approvalConfig = new CloudbuildTriggerApprovalConfigOutputReference(this, "approval_config");
+  public get approvalConfig() {
+    return this._approvalConfig;
+  }
+  public putApprovalConfig(value: CloudbuildTriggerApprovalConfig) {
+    this._approvalConfig.internalValue = value;
+  }
+  public resetApprovalConfig() {
+    this._approvalConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get approvalConfigInput() {
+    return this._approvalConfig.internalValue;
+  }
+
   // build - computed: false, optional: true, required: false
   private _build = new CloudbuildTriggerBuildOutputReference(this, "build");
   public get buildAttribute() {
@@ -3083,6 +3604,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get buildAttributeInput() {
     return this._build.internalValue;
+  }
+
+  // git_file_source - computed: false, optional: true, required: false
+  private _gitFileSource = new CloudbuildTriggerGitFileSourceOutputReference(this, "git_file_source");
+  public get gitFileSource() {
+    return this._gitFileSource;
+  }
+  public putGitFileSource(value: CloudbuildTriggerGitFileSource) {
+    this._gitFileSource.internalValue = value;
+  }
+  public resetGitFileSource() {
+    this._gitFileSource.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gitFileSourceInput() {
+    return this._gitFileSource.internalValue;
   }
 
   // github - computed: false, optional: true, required: false
@@ -3115,6 +3652,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get pubsubConfigInput() {
     return this._pubsubConfig.internalValue;
+  }
+
+  // source_to_build - computed: false, optional: true, required: false
+  private _sourceToBuild = new CloudbuildTriggerSourceToBuildOutputReference(this, "source_to_build");
+  public get sourceToBuild() {
+    return this._sourceToBuild;
+  }
+  public putSourceToBuild(value: CloudbuildTriggerSourceToBuild) {
+    this._sourceToBuild.internalValue = value;
+  }
+  public resetSourceToBuild() {
+    this._sourceToBuild.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceToBuildInput() {
+    return this._sourceToBuild.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -3174,6 +3727,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       disabled: cdktf.booleanToTerraform(this._disabled),
       filename: cdktf.stringToTerraform(this._filename),
+      filter: cdktf.stringToTerraform(this._filter),
       ignored_files: cdktf.listMapper(cdktf.stringToTerraform)(this._ignoredFiles),
       included_files: cdktf.listMapper(cdktf.stringToTerraform)(this._includedFiles),
       name: cdktf.stringToTerraform(this._name),
@@ -3181,9 +3735,12 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       service_account: cdktf.stringToTerraform(this._serviceAccount),
       substitutions: cdktf.hashMapper(cdktf.stringToTerraform)(this._substitutions),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      approval_config: cloudbuildTriggerApprovalConfigToTerraform(this._approvalConfig.internalValue),
       build: cloudbuildTriggerBuildToTerraform(this._build.internalValue),
+      git_file_source: cloudbuildTriggerGitFileSourceToTerraform(this._gitFileSource.internalValue),
       github: cloudbuildTriggerGithubToTerraform(this._github.internalValue),
       pubsub_config: cloudbuildTriggerPubsubConfigToTerraform(this._pubsubConfig.internalValue),
+      source_to_build: cloudbuildTriggerSourceToBuildToTerraform(this._sourceToBuild.internalValue),
       timeouts: cloudbuildTriggerTimeoutsToTerraform(this._timeouts.internalValue),
       trigger_template: cloudbuildTriggerTriggerTemplateToTerraform(this._triggerTemplate.internalValue),
       webhook_config: cloudbuildTriggerWebhookConfigToTerraform(this._webhookConfig.internalValue),

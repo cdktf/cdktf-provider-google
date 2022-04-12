@@ -338,6 +338,134 @@ export function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNo
   }
 }
 
+export interface ContainerNodePoolNodeConfigGcfsConfig {
+  /**
+  * Whether or not GCFS is enabled
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#enabled ContainerNodePool#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerNodePoolNodeConfigGcfsConfigToTerraform(struct?: ContainerNodePoolNodeConfigGcfsConfigOutputReference | ContainerNodePoolNodeConfigGcfsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerNodePoolNodeConfigGcfsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigGcfsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigGcfsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+export interface ContainerNodePoolNodeConfigGvnic {
+  /**
+  * Whether or not gvnic is enabled
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#enabled ContainerNodePool#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerNodePoolNodeConfigGvnicToTerraform(struct?: ContainerNodePoolNodeConfigGvnicOutputReference | ContainerNodePoolNodeConfigGvnic): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerNodePoolNodeConfigGvnicOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigGvnic | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigGvnic | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
 export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
   /**
   * Defines whether the instance has integrity monitoring enabled.
@@ -440,13 +568,7 @@ export interface ContainerNodePoolNodeConfigWorkloadMetadataConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#mode ContainerNodePool#mode}
   */
-  readonly mode?: string;
-  /**
-  * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#node_metadata ContainerNodePool#node_metadata}
-  */
-  readonly nodeMetadata?: string;
+  readonly mode: string;
 }
 
 export function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct?: ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference | ContainerNodePoolNodeConfigWorkloadMetadataConfig): any {
@@ -456,7 +578,6 @@ export function containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(str
   }
   return {
     mode: cdktf.stringToTerraform(struct!.mode),
-    node_metadata: cdktf.stringToTerraform(struct!.nodeMetadata),
   }
 }
 
@@ -478,10 +599,6 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._nodeMetadata !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.nodeMetadata = this._nodeMetadata;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -489,16 +606,14 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
     if (value === undefined) {
       this.isEmptyObject = false;
       this._mode = undefined;
-      this._nodeMetadata = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
-      this._nodeMetadata = value.nodeMetadata;
     }
   }
 
-  // mode - computed: true, optional: true, required: false
+  // mode - computed: false, optional: false, required: true
   private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
@@ -506,31 +621,18 @@ export class ContainerNodePoolNodeConfigWorkloadMetadataConfigOutputReference ex
   public set mode(value: string) {
     this._mode = value;
   }
-  public resetMode() {
-    this._mode = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
     return this._mode;
   }
-
-  // node_metadata - computed: true, optional: true, required: false
-  private _nodeMetadata?: string; 
-  public get nodeMetadata() {
-    return this.getStringAttribute('node_metadata');
-  }
-  public set nodeMetadata(value: string) {
-    this._nodeMetadata = value;
-  }
-  public resetNodeMetadata() {
-    this._nodeMetadata = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nodeMetadataInput() {
-    return this._nodeMetadata;
-  }
 }
 export interface ContainerNodePoolNodeConfig {
+  /**
+  * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#boot_disk_kms_key ContainerNodePool#boot_disk_kms_key}
+  */
+  readonly bootDiskKmsKey?: string;
   /**
   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB.
   * 
@@ -586,6 +688,12 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly minCpuPlatform?: string;
   /**
+  * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on sole tenant nodes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#node_group ContainerNodePool#node_group}
+  */
+  readonly nodeGroup?: string;
+  /**
   * The set of Google API scopes to be made available on all of the node VMs.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#oauth_scopes ContainerNodePool#oauth_scopes}
@@ -616,6 +724,18 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly taint?: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable;
   /**
+  * gcfs_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#gcfs_config ContainerNodePool#gcfs_config}
+  */
+  readonly gcfsConfig?: ContainerNodePoolNodeConfigGcfsConfig;
+  /**
+  * gvnic block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#gvnic ContainerNodePool#gvnic}
+  */
+  readonly gvnic?: ContainerNodePoolNodeConfigGvnic;
+  /**
   * shielded_instance_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#shielded_instance_config ContainerNodePool#shielded_instance_config}
@@ -635,6 +755,7 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    boot_disk_kms_key: cdktf.stringToTerraform(struct!.bootDiskKmsKey),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     guest_accelerator: cdktf.listMapper(containerNodePoolNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
@@ -644,11 +765,14 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
+    node_group: cdktf.stringToTerraform(struct!.nodeGroup),
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform)(struct!.taint),
+    gcfs_config: containerNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
+    gvnic: containerNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
     shielded_instance_config: containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
     workload_metadata_config: containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct!.workloadMetadataConfig),
   }
@@ -668,6 +792,10 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   public get internalValue(): ContainerNodePoolNodeConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._bootDiskKmsKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bootDiskKmsKey = this._bootDiskKmsKey;
+    }
     if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
@@ -704,6 +832,10 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
+    if (this._nodeGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeGroup = this._nodeGroup;
+    }
     if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
@@ -724,6 +856,14 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.taint = this._taint;
     }
+    if (this._gcfsConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gcfsConfig = this._gcfsConfig?.internalValue;
+    }
+    if (this._gvnic?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gvnic = this._gvnic?.internalValue;
+    }
     if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
@@ -738,6 +878,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   public set internalValue(value: ContainerNodePoolNodeConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._bootDiskKmsKey = undefined;
       this._diskSizeGb = undefined;
       this._diskType = undefined;
       this._guestAccelerator = undefined;
@@ -747,16 +888,20 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._machineType = undefined;
       this._metadata = undefined;
       this._minCpuPlatform = undefined;
+      this._nodeGroup = undefined;
       this._oauthScopes = undefined;
       this._preemptible = undefined;
       this._serviceAccount = undefined;
       this._tags = undefined;
       this._taint = undefined;
+      this._gcfsConfig.internalValue = undefined;
+      this._gvnic.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
       this._workloadMetadataConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._bootDiskKmsKey = value.bootDiskKmsKey;
       this._diskSizeGb = value.diskSizeGb;
       this._diskType = value.diskType;
       this._guestAccelerator = value.guestAccelerator;
@@ -766,14 +911,33 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._machineType = value.machineType;
       this._metadata = value.metadata;
       this._minCpuPlatform = value.minCpuPlatform;
+      this._nodeGroup = value.nodeGroup;
       this._oauthScopes = value.oauthScopes;
       this._preemptible = value.preemptible;
       this._serviceAccount = value.serviceAccount;
       this._tags = value.tags;
       this._taint = value.taint;
+      this._gcfsConfig.internalValue = value.gcfsConfig;
+      this._gvnic.internalValue = value.gvnic;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
       this._workloadMetadataConfig.internalValue = value.workloadMetadataConfig;
     }
+  }
+
+  // boot_disk_kms_key - computed: false, optional: true, required: false
+  private _bootDiskKmsKey?: string; 
+  public get bootDiskKmsKey() {
+    return this.getStringAttribute('boot_disk_kms_key');
+  }
+  public set bootDiskKmsKey(value: string) {
+    this._bootDiskKmsKey = value;
+  }
+  public resetBootDiskKmsKey() {
+    this._bootDiskKmsKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootDiskKmsKeyInput() {
+    return this._bootDiskKmsKey;
   }
 
   // disk_size_gb - computed: true, optional: true, required: false
@@ -921,6 +1085,22 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
     return this._minCpuPlatform;
   }
 
+  // node_group - computed: false, optional: true, required: false
+  private _nodeGroup?: string; 
+  public get nodeGroup() {
+    return this.getStringAttribute('node_group');
+  }
+  public set nodeGroup(value: string) {
+    this._nodeGroup = value;
+  }
+  public resetNodeGroup() {
+    this._nodeGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupInput() {
+    return this._nodeGroup;
+  }
+
   // oauth_scopes - computed: true, optional: true, required: false
   private _oauthScopes?: string[]; 
   public get oauthScopes() {
@@ -1000,6 +1180,38 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get taintInput() {
     return this._taint;
+  }
+
+  // gcfs_config - computed: false, optional: true, required: false
+  private _gcfsConfig = new ContainerNodePoolNodeConfigGcfsConfigOutputReference(this, "gcfs_config");
+  public get gcfsConfig() {
+    return this._gcfsConfig;
+  }
+  public putGcfsConfig(value: ContainerNodePoolNodeConfigGcfsConfig) {
+    this._gcfsConfig.internalValue = value;
+  }
+  public resetGcfsConfig() {
+    this._gcfsConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gcfsConfigInput() {
+    return this._gcfsConfig.internalValue;
+  }
+
+  // gvnic - computed: false, optional: true, required: false
+  private _gvnic = new ContainerNodePoolNodeConfigGvnicOutputReference(this, "gvnic");
+  public get gvnic() {
+    return this._gvnic;
+  }
+  public putGvnic(value: ContainerNodePoolNodeConfigGvnic) {
+    this._gvnic.internalValue = value;
+  }
+  public resetGvnic() {
+    this._gvnic.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gvnicInput() {
+    return this._gvnic.internalValue;
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
@@ -1270,8 +1482,8 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1352,6 +1564,11 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // managed_instance_group_urls - computed: true, optional: false, required: false
+  public get managedInstanceGroupUrls() {
+    return this.getListAttribute('managed_instance_group_urls');
   }
 
   // max_pods_per_node - computed: true, optional: true, required: false

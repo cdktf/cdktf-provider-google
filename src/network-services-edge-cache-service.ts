@@ -14,6 +14,16 @@ export interface NetworkServicesEdgeCacheServiceConfig extends cdktf.TerraformMe
   */
   readonly description?: string;
   /**
+  * Disables HTTP/2.
+
+HTTP/2 (h2) is enabled by default and recommended for performance. HTTP/2 improves connection re-use and reduces connection setup overhead by sending multiple streams over the same connection.
+
+Some legacy HTTP clients may have issues with HTTP/2 connections due to broken HTTP/2 implementations. Setting this to true will prevent HTTP/2 from being advertised and negotiated.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#disable_http2 NetworkServicesEdgeCacheService#disable_http2}
+  */
+  readonly disableHttp2?: boolean | cdktf.IResolvable;
+  /**
   * HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#disable_quic NetworkServicesEdgeCacheService#disable_quic}
@@ -195,10 +205,22 @@ export interface NetworkServicesEdgeCacheServiceRoutingHostRule {
   /**
   * The list of host patterns to match.
 
-Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
-The only accepted ports are :80 and :443.
+Host patterns must be valid hostnames. Ports are not allowed. Wildcard hosts are supported in the suffix or prefix form. * matches any string of ([a-z0-9-.]*). It does not match the empty string.
 
-Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
+When multiple hosts are specified, hosts are matched in the following priority:
+
+  1. Exact domain names: ''www.foo.com''.
+  2. Suffix domain wildcards: ''*.foo.com'' or ''*-bar.foo.com''.
+  3. Prefix domain wildcards: ''foo.*'' or ''foo-*''.
+  4. Special wildcard ''*'' matching any domain.
+
+  Notes:
+
+    The wildcard will not match the empty string. e.g. ''*-bar.foo.com'' will match ''baz-bar.foo.com'' but not ''-bar.foo.com''. The longest wildcards match first. Only a single host in the entire service can match on ''*''. A domain must be unique across all configured hosts within a service.
+
+    Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
+
+    You may specify up to 10 hosts.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#hosts NetworkServicesEdgeCacheService#hosts}
   */
@@ -641,7 +663,7 @@ export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRoute
   /**
   * If true, requests to different hosts will be cached separately.
 
-Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#exclude_host NetworkServicesEdgeCacheService#exclude_host}
   */
@@ -672,6 +694,21 @@ Either specify includedQueryParameters or excludedQueryParameters, not both. '&'
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#include_protocol NetworkServicesEdgeCacheService#include_protocol}
   */
   readonly includeProtocol?: boolean | cdktf.IResolvable;
+  /**
+  * Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+
+Cookie names:
+  - must be valid RFC 6265 "cookie-name" tokens
+  - are case sensitive
+  - cannot start with "Edge-Cache-" (case insensitive)
+
+  Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+
+  You may specify up to three cookie names.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#included_cookie_names NetworkServicesEdgeCacheService#included_cookie_names}
+  */
+  readonly includedCookieNames?: string[];
   /**
   * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
 
@@ -704,6 +741,7 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
     exclude_query_string: cdktf.booleanToTerraform(struct!.excludeQueryString),
     excluded_query_parameters: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludedQueryParameters),
     include_protocol: cdktf.booleanToTerraform(struct!.includeProtocol),
+    included_cookie_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedCookieNames),
     included_header_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedHeaderNames),
     included_query_parameters: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedQueryParameters),
   }
@@ -739,6 +777,10 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       hasAnyValues = true;
       internalValueResult.includeProtocol = this._includeProtocol;
     }
+    if (this._includedCookieNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includedCookieNames = this._includedCookieNames;
+    }
     if (this._includedHeaderNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.includedHeaderNames = this._includedHeaderNames;
@@ -757,6 +799,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._excludeQueryString = undefined;
       this._excludedQueryParameters = undefined;
       this._includeProtocol = undefined;
+      this._includedCookieNames = undefined;
       this._includedHeaderNames = undefined;
       this._includedQueryParameters = undefined;
     }
@@ -766,6 +809,7 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._excludeQueryString = value.excludeQueryString;
       this._excludedQueryParameters = value.excludedQueryParameters;
       this._includeProtocol = value.includeProtocol;
+      this._includedCookieNames = value.includedCookieNames;
       this._includedHeaderNames = value.includedHeaderNames;
       this._includedQueryParameters = value.includedQueryParameters;
     }
@@ -835,6 +879,22 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     return this._includeProtocol;
   }
 
+  // included_cookie_names - computed: false, optional: true, required: false
+  private _includedCookieNames?: string[]; 
+  public get includedCookieNames() {
+    return this.getListAttribute('included_cookie_names');
+  }
+  public set includedCookieNames(value: string[]) {
+    this._includedCookieNames = value;
+  }
+  public resetIncludedCookieNames() {
+    this._includedCookieNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includedCookieNamesInput() {
+    return this._includedCookieNames;
+  }
+
   // included_header_names - computed: false, optional: true, required: false
   private _includedHeaderNames?: string[]; 
   public get includedHeaderNames() {
@@ -882,10 +942,11 @@ For all cache modes, Cache-Control headers will be passed to the client. Use cli
 - The TTL must be > 0 and <= 86400s (1 day)
 - The clientTtl cannot be larger than the defaultTtl (if set)
 - Fractions of a second are not allowed.
-- Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
+
+Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
 
 When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+A duration in seconds terminated by 's'. Example: "3s".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#client_ttl NetworkServicesEdgeCacheService#client_ttl}
   */
@@ -895,7 +956,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 Defaults to 3600s (1 hour).
 
-- The TTL must be >= 0 and <= 2592000s (1 month)
+- The TTL must be >= 0 and <= 31,536,000 seconds (1 year)
 - Setting a TTL of "0" means "always revalidate" (equivalent to must-revalidate)
 - The value of defaultTTL cannot be set to a value greater than that of maxTTL.
 - Fractions of a second are not allowed.
@@ -905,7 +966,7 @@ Note that infrequently accessed objects may be evicted from the cache before the
 
 When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.
 
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+A duration in seconds terminated by 's'. Example: "3s".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#default_ttl NetworkServicesEdgeCacheService#default_ttl}
   */
@@ -917,13 +978,14 @@ Defaults to 86400s (1 day).
 
 Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.
 
-- The TTL must be >= 0 and <= 2592000s (1 month)
+- The TTL must be >= 0 and <= 31,536,000 seconds (1 year)
 - Setting a TTL of "0" means "always revalidate"
 - The value of maxTtl must be equal to or greater than defaultTtl.
 - Fractions of a second are not allowed.
-- When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.
 
-A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.
+
+A duration in seconds terminated by 's'. Example: "3s".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#max_ttl NetworkServicesEdgeCacheService#max_ttl}
   */
@@ -2297,8 +2359,8 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2306,6 +2368,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._disableHttp2 = config.disableHttp2;
     this._disableQuic = config.disableQuic;
     this._edgeSecurityPolicy = config.edgeSecurityPolicy;
     this._edgeSslCertificates = config.edgeSslCertificates;
@@ -2337,6 +2400,22 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // disable_http2 - computed: false, optional: true, required: false
+  private _disableHttp2?: boolean | cdktf.IResolvable; 
+  public get disableHttp2() {
+    return this.getBooleanAttribute('disable_http2');
+  }
+  public set disableHttp2(value: boolean | cdktf.IResolvable) {
+    this._disableHttp2 = value;
+  }
+  public resetDisableHttp2() {
+    this._disableHttp2 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableHttp2Input() {
+    return this._disableHttp2;
   }
 
   // disable_quic - computed: true, optional: true, required: false
@@ -2531,6 +2610,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      disable_http2: cdktf.booleanToTerraform(this._disableHttp2),
       disable_quic: cdktf.booleanToTerraform(this._disableQuic),
       edge_security_policy: cdktf.stringToTerraform(this._edgeSecurityPolicy),
       edge_ssl_certificates: cdktf.listMapper(cdktf.stringToTerraform)(this._edgeSslCertificates),

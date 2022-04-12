@@ -220,8 +220,8 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -260,6 +260,11 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
+  }
+
+  // edge_security_policy - computed: true, optional: false, required: false
+  public get edgeSecurityPolicy() {
+    return this.getStringAttribute('edge_security_policy');
   }
 
   // enable_cdn - computed: true, optional: false, required: false

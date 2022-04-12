@@ -62,6 +62,12 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly maxInstances?: number;
   /**
+  * The limit on the minimum number of function instances that may coexist at a given time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#min_instances CloudfunctionsFunction#min_instances}
+  */
+  readonly minInstances?: number;
+  /**
   * A user-defined name of the function. Function names must be unique globally.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#name CloudfunctionsFunction#name}
@@ -133,6 +139,18 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#event_trigger CloudfunctionsFunction#event_trigger}
   */
   readonly eventTrigger?: CloudfunctionsFunctionEventTrigger;
+  /**
+  * secret_environment_variables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#secret_environment_variables CloudfunctionsFunction#secret_environment_variables}
+  */
+  readonly secretEnvironmentVariables?: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable;
+  /**
+  * secret_volumes block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#secret_volumes CloudfunctionsFunction#secret_volumes}
+  */
+  readonly secretVolumes?: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable;
   /**
   * source_repository block
   * 
@@ -329,6 +347,112 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
     return this._failurePolicy.internalValue;
   }
 }
+export interface CloudfunctionsFunctionSecretEnvironmentVariables {
+  /**
+  * Name of the environment variable.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#key CloudfunctionsFunction#key}
+  */
+  readonly key: string;
+  /**
+  * Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function's project, assuming that the secret exists in the same project as of the function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
+  */
+  readonly projectId?: string;
+  /**
+  * ID of the secret in secret manager (not the full resource name).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#secret CloudfunctionsFunction#secret}
+  */
+  readonly secret: string;
+  /**
+  * Version of the secret (version number or the string "latest"). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#version CloudfunctionsFunction#version}
+  */
+  readonly version: string;
+}
+
+export function cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform(struct?: CloudfunctionsFunctionSecretEnvironmentVariables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    secret: cdktf.stringToTerraform(struct!.secret),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export interface CloudfunctionsFunctionSecretVolumesVersions {
+  /**
+  * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as "/etc/secrets" and path as "/secret_foo" would mount the secret value file at "/etc/secrets/secret_foo".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#path CloudfunctionsFunction#path}
+  */
+  readonly path: string;
+  /**
+  * Version of the secret (version number or the string "latest"). It is preferable to use "latest" version with secret volumes as secret value changes are reflected immediately.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#version CloudfunctionsFunction#version}
+  */
+  readonly version: string;
+}
+
+export function cloudfunctionsFunctionSecretVolumesVersionsToTerraform(struct?: CloudfunctionsFunctionSecretVolumesVersions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export interface CloudfunctionsFunctionSecretVolumes {
+  /**
+  * The path within the container to mount the secret volume. For example, setting the mount_path as "/etc/secrets" would mount the secret value files under the "/etc/secrets" directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: "/etc/secrets" Restricted mount paths: "/cloudsql", "/dev/log", "/pod", "/proc", "/var/log".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#mount_path CloudfunctionsFunction#mount_path}
+  */
+  readonly mountPath: string;
+  /**
+  * Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function's project, assuming that the secret exists in the same project as of the function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
+  */
+  readonly projectId?: string;
+  /**
+  * ID of the secret in secret manager (not the full resource name).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#secret CloudfunctionsFunction#secret}
+  */
+  readonly secret: string;
+  /**
+  * versions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#versions CloudfunctionsFunction#versions}
+  */
+  readonly versions?: CloudfunctionsFunctionSecretVolumesVersions[] | cdktf.IResolvable;
+}
+
+export function cloudfunctionsFunctionSecretVolumesToTerraform(struct?: CloudfunctionsFunctionSecretVolumes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    secret: cdktf.stringToTerraform(struct!.secret),
+    versions: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesVersionsToTerraform)(struct!.versions),
+  }
+}
+
 export interface CloudfunctionsFunctionSourceRepository {
   /**
   * The URL pointing to the hosted repository where the function is defined.
@@ -571,8 +695,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -588,6 +712,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._ingressSettings = config.ingressSettings;
     this._labels = config.labels;
     this._maxInstances = config.maxInstances;
+    this._minInstances = config.minInstances;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
@@ -600,6 +725,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._vpcConnector = config.vpcConnector;
     this._vpcConnectorEgressSettings = config.vpcConnectorEgressSettings;
     this._eventTrigger.internalValue = config.eventTrigger;
+    this._secretEnvironmentVariables = config.secretEnvironmentVariables;
+    this._secretVolumes = config.secretVolumes;
     this._sourceRepository.internalValue = config.sourceRepository;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -755,6 +882,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get maxInstancesInput() {
     return this._maxInstances;
+  }
+
+  // min_instances - computed: false, optional: true, required: false
+  private _minInstances?: number; 
+  public get minInstances() {
+    return this.getNumberAttribute('min_instances');
+  }
+  public set minInstances(value: number) {
+    this._minInstances = value;
+  }
+  public resetMinInstances() {
+    this._minInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInstancesInput() {
+    return this._minInstances;
   }
 
   // name - computed: false, optional: false, required: true
@@ -943,6 +1086,40 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     return this._eventTrigger.internalValue;
   }
 
+  // secret_environment_variables - computed: false, optional: true, required: false
+  private _secretEnvironmentVariables?: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable; 
+  public get secretEnvironmentVariables() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('secret_environment_variables');
+  }
+  public set secretEnvironmentVariables(value: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable) {
+    this._secretEnvironmentVariables = value;
+  }
+  public resetSecretEnvironmentVariables() {
+    this._secretEnvironmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretEnvironmentVariablesInput() {
+    return this._secretEnvironmentVariables;
+  }
+
+  // secret_volumes - computed: false, optional: true, required: false
+  private _secretVolumes?: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable; 
+  public get secretVolumes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('secret_volumes');
+  }
+  public set secretVolumes(value: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable) {
+    this._secretVolumes = value;
+  }
+  public resetSecretVolumes() {
+    this._secretVolumes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretVolumesInput() {
+    return this._secretVolumes;
+  }
+
   // source_repository - computed: false, optional: true, required: false
   private _sourceRepository = new CloudfunctionsFunctionSourceRepositoryOutputReference(this, "source_repository");
   public get sourceRepository() {
@@ -990,6 +1167,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       ingress_settings: cdktf.stringToTerraform(this._ingressSettings),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       max_instances: cdktf.numberToTerraform(this._maxInstances),
+      min_instances: cdktf.numberToTerraform(this._minInstances),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
@@ -1002,6 +1180,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       vpc_connector: cdktf.stringToTerraform(this._vpcConnector),
       vpc_connector_egress_settings: cdktf.stringToTerraform(this._vpcConnectorEgressSettings),
       event_trigger: cloudfunctionsFunctionEventTriggerToTerraform(this._eventTrigger.internalValue),
+      secret_environment_variables: cdktf.listMapper(cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform)(this._secretEnvironmentVariables),
+      secret_volumes: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesToTerraform)(this._secretVolumes),
       source_repository: cloudfunctionsFunctionSourceRepositoryToTerraform(this._sourceRepository.internalValue),
       timeouts: cloudfunctionsFunctionTimeoutsToTerraform(this._timeouts.internalValue),
     };

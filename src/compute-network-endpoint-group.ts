@@ -41,7 +41,13 @@ Uses "default" project network if unspecified.
   */
   readonly network: string;
   /**
-  * Type of network endpoints in this network endpoint group. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP_PORT"]
+  * Type of network endpoints in this network endpoint group.
+NON_GCP_PRIVATE_IP_PORT is used for hybrid connectivity network
+endpoint groups (see https://cloud.google.com/load-balancing/docs/hybrid).
+Note that NON_GCP_PRIVATE_IP_PORT can only be used with Backend Services
+that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
+INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
+CONNECTION balancing modes. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP_PORT", "NON_GCP_PRIVATE_IP_PORT"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint_group#network_endpoint_type ComputeNetworkEndpointGroup#network_endpoint_type}
   */
@@ -188,8 +194,8 @@ export class ComputeNetworkEndpointGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network_endpoint_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

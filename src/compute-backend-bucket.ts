@@ -27,6 +27,12 @@ client when the resource is created.
   */
   readonly description?: string;
   /**
+  * The security policy associated with this backend bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#edge_security_policy ComputeBackendBucket#edge_security_policy}
+  */
+  readonly edgeSecurityPolicy?: string;
+  /**
   * If true, enable Cloud CDN for this BackendBucket.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#enable_cdn ComputeBackendBucket#enable_cdn}
@@ -515,8 +521,8 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -526,6 +532,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
     this._bucketName = config.bucketName;
     this._customResponseHeaders = config.customResponseHeaders;
     this._description = config.description;
+    this._edgeSecurityPolicy = config.edgeSecurityPolicy;
     this._enableCdn = config.enableCdn;
     this._name = config.name;
     this._project = config.project;
@@ -585,6 +592,22 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // edge_security_policy - computed: false, optional: true, required: false
+  private _edgeSecurityPolicy?: string; 
+  public get edgeSecurityPolicy() {
+    return this.getStringAttribute('edge_security_policy');
+  }
+  public set edgeSecurityPolicy(value: string) {
+    this._edgeSecurityPolicy = value;
+  }
+  public resetEdgeSecurityPolicy() {
+    this._edgeSecurityPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeSecurityPolicyInput() {
+    return this._edgeSecurityPolicy;
   }
 
   // enable_cdn - computed: false, optional: true, required: false
@@ -683,6 +706,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       bucket_name: cdktf.stringToTerraform(this._bucketName),
       custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
+      edge_security_policy: cdktf.stringToTerraform(this._edgeSecurityPolicy),
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

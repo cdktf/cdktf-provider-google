@@ -117,8 +117,8 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_kms_crypto_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -187,11 +187,6 @@ export class DataGoogleKmsCryptoKey extends cdktf.TerraformDataSource {
   // rotation_period - computed: true, optional: false, required: false
   public get rotationPeriod() {
     return this.getStringAttribute('rotation_period');
-  }
-
-  // self_link - computed: true, optional: false, required: false
-  public get selfLink() {
-    return this.getStringAttribute('self_link');
   }
 
   // skip_initial_version_creation - computed: true, optional: false, required: false

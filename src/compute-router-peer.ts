@@ -110,6 +110,12 @@ If it is not provided, the provider region is used.
   */
   readonly advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable;
   /**
+  * bfd block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#bfd ComputeRouterPeer#bfd}
+  */
+  readonly bfd?: ComputeRouterPeerBfd;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
@@ -143,6 +149,171 @@ export function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeR
   }
 }
 
+export interface ComputeRouterPeerBfd {
+  /**
+  * The minimum interval, in milliseconds, between BFD control packets
+received from the peer router. The actual value is negotiated
+between the two routers and is equal to the greater of this value
+and the transmit interval of the other router. If set, this value
+must be between 1000 and 30000.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#min_receive_interval ComputeRouterPeer#min_receive_interval}
+  */
+  readonly minReceiveInterval?: number;
+  /**
+  * The minimum interval, in milliseconds, between BFD control packets
+transmitted to the peer router. The actual value is negotiated
+between the two routers and is equal to the greater of this value
+and the corresponding receive interval of the other router. If set,
+this value must be between 1000 and 30000.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#min_transmit_interval ComputeRouterPeer#min_transmit_interval}
+  */
+  readonly minTransmitInterval?: number;
+  /**
+  * The number of consecutive BFD packets that must be missed before
+BFD declares that a peer is unavailable. If set, the value must
+be a value between 5 and 16.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#multiplier ComputeRouterPeer#multiplier}
+  */
+  readonly multiplier?: number;
+  /**
+  * The BFD session initialization mode for this BGP peer.
+If set to 'ACTIVE', the Cloud Router will initiate the BFD session
+for this BGP peer. If set to 'PASSIVE', the Cloud Router will wait
+for the peer router to initiate the BFD session for this BGP peer.
+If set to 'DISABLED', BFD is disabled for this BGP peer. Possible values: ["ACTIVE", "DISABLED", "PASSIVE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#session_initialization_mode ComputeRouterPeer#session_initialization_mode}
+  */
+  readonly sessionInitializationMode: string;
+}
+
+export function computeRouterPeerBfdToTerraform(struct?: ComputeRouterPeerBfdOutputReference | ComputeRouterPeerBfd): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    min_receive_interval: cdktf.numberToTerraform(struct!.minReceiveInterval),
+    min_transmit_interval: cdktf.numberToTerraform(struct!.minTransmitInterval),
+    multiplier: cdktf.numberToTerraform(struct!.multiplier),
+    session_initialization_mode: cdktf.stringToTerraform(struct!.sessionInitializationMode),
+  }
+}
+
+export class ComputeRouterPeerBfdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRouterPeerBfd | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._minReceiveInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minReceiveInterval = this._minReceiveInterval;
+    }
+    if (this._minTransmitInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minTransmitInterval = this._minTransmitInterval;
+    }
+    if (this._multiplier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.multiplier = this._multiplier;
+    }
+    if (this._sessionInitializationMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionInitializationMode = this._sessionInitializationMode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterPeerBfd | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._minReceiveInterval = undefined;
+      this._minTransmitInterval = undefined;
+      this._multiplier = undefined;
+      this._sessionInitializationMode = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._minReceiveInterval = value.minReceiveInterval;
+      this._minTransmitInterval = value.minTransmitInterval;
+      this._multiplier = value.multiplier;
+      this._sessionInitializationMode = value.sessionInitializationMode;
+    }
+  }
+
+  // min_receive_interval - computed: false, optional: true, required: false
+  private _minReceiveInterval?: number; 
+  public get minReceiveInterval() {
+    return this.getNumberAttribute('min_receive_interval');
+  }
+  public set minReceiveInterval(value: number) {
+    this._minReceiveInterval = value;
+  }
+  public resetMinReceiveInterval() {
+    this._minReceiveInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minReceiveIntervalInput() {
+    return this._minReceiveInterval;
+  }
+
+  // min_transmit_interval - computed: false, optional: true, required: false
+  private _minTransmitInterval?: number; 
+  public get minTransmitInterval() {
+    return this.getNumberAttribute('min_transmit_interval');
+  }
+  public set minTransmitInterval(value: number) {
+    this._minTransmitInterval = value;
+  }
+  public resetMinTransmitInterval() {
+    this._minTransmitInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minTransmitIntervalInput() {
+    return this._minTransmitInterval;
+  }
+
+  // multiplier - computed: false, optional: true, required: false
+  private _multiplier?: number; 
+  public get multiplier() {
+    return this.getNumberAttribute('multiplier');
+  }
+  public set multiplier(value: number) {
+    this._multiplier = value;
+  }
+  public resetMultiplier() {
+    this._multiplier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiplierInput() {
+    return this._multiplier;
+  }
+
+  // session_initialization_mode - computed: false, optional: false, required: true
+  private _sessionInitializationMode?: string; 
+  public get sessionInitializationMode() {
+    return this.getStringAttribute('session_initialization_mode');
+  }
+  public set sessionInitializationMode(value: string) {
+    this._sessionInitializationMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionInitializationModeInput() {
+    return this._sessionInitializationMode;
+  }
+}
 export interface ComputeRouterPeerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#create ComputeRouterPeer#create}
@@ -289,8 +460,8 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_peer',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -310,6 +481,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._region = config.region;
     this._router = config.router;
     this._advertisedIpRanges = config.advertisedIpRanges;
+    this._bfd.internalValue = config.bfd;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -521,6 +693,22 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     return this._advertisedIpRanges;
   }
 
+  // bfd - computed: false, optional: true, required: false
+  private _bfd = new ComputeRouterPeerBfdOutputReference(this, "bfd");
+  public get bfd() {
+    return this._bfd;
+  }
+  public putBfd(value: ComputeRouterPeerBfd) {
+    this._bfd.internalValue = value;
+  }
+  public resetBfd() {
+    this._bfd.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bfdInput() {
+    return this._bfd.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeRouterPeerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -556,6 +744,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
       advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform)(this._advertisedIpRanges),
+      bfd: computeRouterPeerBfdToTerraform(this._bfd.internalValue),
       timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

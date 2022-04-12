@@ -67,7 +67,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
   readonly runtime: string;
   /**
   * The version of the API in the given runtime environment.
-Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
+Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
+Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#runtime_api_version AppEngineFlexibleAppVersion#runtime_api_version}
   */
@@ -3409,8 +3410,8 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_flexible_app_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

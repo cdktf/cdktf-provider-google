@@ -14,7 +14,7 @@ The instance must be in the same zone of network endpoint group.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#instance ComputeNetworkEndpoint#instance}
   */
-  readonly instance: string;
+  readonly instance?: string;
   /**
   * IPv4 address of network endpoint. The IP address must belong
 to a VM in GCE (either the primary IP or as part of an aliased IP
@@ -171,8 +171,8 @@ export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -197,13 +197,16 @@ export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // instance - computed: false, optional: false, required: true
+  // instance - computed: false, optional: true, required: false
   private _instance?: string; 
   public get instance() {
     return this.getStringAttribute('instance');
   }
   public set instance(value: string) {
     this._instance = value;
+  }
+  public resetInstance() {
+    this._instance = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {

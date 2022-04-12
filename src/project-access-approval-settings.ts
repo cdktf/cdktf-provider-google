@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface ProjectAccessApprovalSettingsConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The asymmetric crypto key version to use for signing approval requests.
+Empty active_key_version indicates that a Google-managed key should be used for signing.
+This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_access_approval_settings#active_key_version ProjectAccessApprovalSettings#active_key_version}
+  */
+  readonly activeKeyVersion?: string;
+  /**
   * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
@@ -222,14 +230,15 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_access_approval_settings',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._activeKeyVersion = config.activeKeyVersion;
     this._notificationEmails = config.notificationEmails;
     this._project = config.project;
     this._projectId = config.projectId;
@@ -241,6 +250,27 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // active_key_version - computed: false, optional: true, required: false
+  private _activeKeyVersion?: string; 
+  public get activeKeyVersion() {
+    return this.getStringAttribute('active_key_version');
+  }
+  public set activeKeyVersion(value: string) {
+    this._activeKeyVersion = value;
+  }
+  public resetActiveKeyVersion() {
+    this._activeKeyVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activeKeyVersionInput() {
+    return this._activeKeyVersion;
+  }
+
+  // ancestor_has_active_key_version - computed: true, optional: false, required: false
+  public get ancestorHasActiveKeyVersion() {
+    return this.getBooleanAttribute('ancestor_has_active_key_version');
+  }
+
   // enrolled_ancestor - computed: true, optional: false, required: false
   public get enrolledAncestor() {
     return this.getBooleanAttribute('enrolled_ancestor');
@@ -249,6 +279,11 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // invalid_key_version - computed: true, optional: false, required: false
+  public get invalidKeyVersion() {
+    return this.getBooleanAttribute('invalid_key_version');
   }
 
   // name - computed: true, optional: false, required: false
@@ -337,6 +372,7 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      active_key_version: cdktf.stringToTerraform(this._activeKeyVersion),
       notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
       project: cdktf.stringToTerraform(this._project),
       project_id: cdktf.stringToTerraform(this._projectId),

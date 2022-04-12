@@ -165,6 +165,234 @@ export class DataGoogleCloudfunctionsFunctionEventTriggerList extends cdktf.Comp
     return new DataGoogleCloudfunctionsFunctionEventTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleCloudfunctionsFunctionSecretEnvironmentVariables {
+}
+
+export function dataGoogleCloudfunctionsFunctionSecretEnvironmentVariablesToTerraform(struct?: DataGoogleCloudfunctionsFunctionSecretEnvironmentVariables): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSecretEnvironmentVariablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionSecretEnvironmentVariables | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionSecretEnvironmentVariables | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // project_id - computed: true, optional: false, required: false
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+
+  // secret - computed: true, optional: false, required: false
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSecretEnvironmentVariablesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionSecretEnvironmentVariablesOutputReference {
+    return new DataGoogleCloudfunctionsFunctionSecretEnvironmentVariablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudfunctionsFunctionSecretVolumesVersions {
+}
+
+export function dataGoogleCloudfunctionsFunctionSecretVolumesVersionsToTerraform(struct?: DataGoogleCloudfunctionsFunctionSecretVolumesVersions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSecretVolumesVersionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionSecretVolumesVersions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionSecretVolumesVersions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // path - computed: true, optional: false, required: false
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSecretVolumesVersionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionSecretVolumesVersionsOutputReference {
+    return new DataGoogleCloudfunctionsFunctionSecretVolumesVersionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleCloudfunctionsFunctionSecretVolumes {
+}
+
+export function dataGoogleCloudfunctionsFunctionSecretVolumesToTerraform(struct?: DataGoogleCloudfunctionsFunctionSecretVolumes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSecretVolumesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleCloudfunctionsFunctionSecretVolumes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleCloudfunctionsFunctionSecretVolumes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // mount_path - computed: true, optional: false, required: false
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+
+  // project_id - computed: true, optional: false, required: false
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+
+  // secret - computed: true, optional: false, required: false
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+
+  // versions - computed: true, optional: false, required: false
+  private _versions = new DataGoogleCloudfunctionsFunctionSecretVolumesVersionsList(this, "versions", false);
+  public get versions() {
+    return this._versions;
+  }
+}
+
+export class DataGoogleCloudfunctionsFunctionSecretVolumesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleCloudfunctionsFunctionSecretVolumesOutputReference {
+    return new DataGoogleCloudfunctionsFunctionSecretVolumesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleCloudfunctionsFunctionSourceRepository {
 }
 
@@ -261,8 +489,8 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -334,6 +562,11 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
     return this.getNumberAttribute('max_instances');
   }
 
+  // min_instances - computed: true, optional: false, required: false
+  public get minInstances() {
+    return this.getNumberAttribute('min_instances');
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -382,6 +615,18 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // runtime - computed: true, optional: false, required: false
   public get runtime() {
     return this.getStringAttribute('runtime');
+  }
+
+  // secret_environment_variables - computed: true, optional: false, required: false
+  private _secretEnvironmentVariables = new DataGoogleCloudfunctionsFunctionSecretEnvironmentVariablesList(this, "secret_environment_variables", false);
+  public get secretEnvironmentVariables() {
+    return this._secretEnvironmentVariables;
+  }
+
+  // secret_volumes - computed: true, optional: false, required: false
+  private _secretVolumes = new DataGoogleCloudfunctionsFunctionSecretVolumesList(this, "secret_volumes", false);
+  public get secretVolumes() {
+    return this._secretVolumes;
   }
 
   // service_account_email - computed: true, optional: false, required: false

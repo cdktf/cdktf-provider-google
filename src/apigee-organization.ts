@@ -22,6 +22,12 @@ Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only whe
   */
   readonly authorizedNetwork?: string;
   /**
+  * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#billing_type ApigeeOrganization#billing_type}
+  */
+  readonly billingType?: string;
+  /**
   * Description of the Apigee organization.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#description ApigeeOrganization#description}
@@ -207,8 +213,8 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_organization',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -217,6 +223,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
     });
     this._analyticsRegion = config.analyticsRegion;
     this._authorizedNetwork = config.authorizedNetwork;
+    this._billingType = config.billingType;
     this._description = config.description;
     this._displayName = config.displayName;
     this._projectId = config.projectId;
@@ -259,6 +266,22 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get authorizedNetworkInput() {
     return this._authorizedNetwork;
+  }
+
+  // billing_type - computed: true, optional: true, required: false
+  private _billingType?: string; 
+  public get billingType() {
+    return this.getStringAttribute('billing_type');
+  }
+  public set billingType(value: string) {
+    this._billingType = value;
+  }
+  public resetBillingType() {
+    this._billingType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get billingTypeInput() {
+    return this._billingType;
   }
 
   // ca_certificate - computed: true, optional: false, required: false
@@ -382,6 +405,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
     return {
       analytics_region: cdktf.stringToTerraform(this._analyticsRegion),
       authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
+      billing_type: cdktf.stringToTerraform(this._billingType),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       project_id: cdktf.stringToTerraform(this._projectId),

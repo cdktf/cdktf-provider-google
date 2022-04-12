@@ -192,9 +192,11 @@ value 2. The maximum depth allowed is 5.
   */
   readonly recursiveStructureDepth: number;
   /**
-  * Specifies the output schema type. Only ANALYTICS is supported at this time.
+  * Specifies the output schema type.
  * ANALYTICS: Analytics schema defined by the FHIR community.
-  See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md. Default value: "ANALYTICS" Possible values: ["ANALYTICS"]
+  See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+ * ANALYTICS_V2: Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
+ * LOSSLESS: A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification. Default value: "ANALYTICS" Possible values: ["ANALYTICS", "ANALYTICS_V2", "LOSSLESS"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store#schema_type HealthcareFhirStore#schema_type}
   */
@@ -543,8 +545,8 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_fhir_store',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

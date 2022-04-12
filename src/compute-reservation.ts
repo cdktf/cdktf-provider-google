@@ -44,6 +44,12 @@ affinity for any reservation. Defaults to false.
   */
   readonly zone: string;
   /**
+  * share_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#share_settings ComputeReservation#share_settings}
+  */
+  readonly shareSettings?: ComputeReservationShareSettings;
+  /**
   * specific_reservation block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#specific_reservation ComputeReservation#specific_reservation}
@@ -55,6 +61,127 @@ affinity for any reservation. Defaults to false.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#timeouts ComputeReservation#timeouts}
   */
   readonly timeouts?: ComputeReservationTimeouts;
+}
+export interface ComputeReservationShareSettingsProjectMap {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#id ComputeReservation#id}
+  */
+  readonly id: string;
+  /**
+  * The project id/number, should be same as the key of this project config in the project map.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#project_id ComputeReservation#project_id}
+  */
+  readonly projectId?: string;
+}
+
+export function computeReservationShareSettingsProjectMapToTerraform(struct?: ComputeReservationShareSettingsProjectMap | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
+export interface ComputeReservationShareSettings {
+  /**
+  * Type of sharing for this shared-reservation Possible values: ["LOCAL", "SPECIFIC_PROJECTS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#share_type ComputeReservation#share_type}
+  */
+  readonly shareType?: string;
+  /**
+  * project_map block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#project_map ComputeReservation#project_map}
+  */
+  readonly projectMap?: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable;
+}
+
+export function computeReservationShareSettingsToTerraform(struct?: ComputeReservationShareSettingsOutputReference | ComputeReservationShareSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    share_type: cdktf.stringToTerraform(struct!.shareType),
+    project_map: cdktf.listMapper(computeReservationShareSettingsProjectMapToTerraform)(struct!.projectMap),
+  }
+}
+
+export class ComputeReservationShareSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeReservationShareSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._shareType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shareType = this._shareType;
+    }
+    if (this._projectMap !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectMap = this._projectMap;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeReservationShareSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._shareType = undefined;
+      this._projectMap = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._shareType = value.shareType;
+      this._projectMap = value.projectMap;
+    }
+  }
+
+  // share_type - computed: true, optional: true, required: false
+  private _shareType?: string; 
+  public get shareType() {
+    return this.getStringAttribute('share_type');
+  }
+  public set shareType(value: string) {
+    this._shareType = value;
+  }
+  public resetShareType() {
+    this._shareType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareTypeInput() {
+    return this._shareType;
+  }
+
+  // project_map - computed: false, optional: true, required: false
+  private _projectMap?: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable; 
+  public get projectMap() {
+    // Getting the computed value is not yet implemented
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('project_map')));
+  }
+  public set projectMap(value: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable) {
+    this._projectMap = value;
+  }
+  public resetProjectMap() {
+    this._projectMap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectMapInput() {
+    return this._projectMap;
+  }
 }
 export interface ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators {
   /**
@@ -510,8 +637,8 @@ export class ComputeReservation extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_reservation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -523,6 +650,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
     this._project = config.project;
     this._specificReservationRequired = config.specificReservationRequired;
     this._zone = config.zone;
+    this._shareSettings.internalValue = config.shareSettings;
     this._specificReservation.internalValue = config.specificReservation;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -630,6 +758,22 @@ export class ComputeReservation extends cdktf.TerraformResource {
     return this._zone;
   }
 
+  // share_settings - computed: false, optional: true, required: false
+  private _shareSettings = new ComputeReservationShareSettingsOutputReference(this, "share_settings");
+  public get shareSettings() {
+    return this._shareSettings;
+  }
+  public putShareSettings(value: ComputeReservationShareSettings) {
+    this._shareSettings.internalValue = value;
+  }
+  public resetShareSettings() {
+    this._shareSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareSettingsInput() {
+    return this._shareSettings.internalValue;
+  }
+
   // specific_reservation - computed: false, optional: false, required: true
   private _specificReservation = new ComputeReservationSpecificReservationOutputReference(this, "specific_reservation");
   public get specificReservation() {
@@ -670,6 +814,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       specific_reservation_required: cdktf.booleanToTerraform(this._specificReservationRequired),
       zone: cdktf.stringToTerraform(this._zone),
+      share_settings: computeReservationShareSettingsToTerraform(this._shareSettings.internalValue),
       specific_reservation: computeReservationSpecificReservationToTerraform(this._specificReservation.internalValue),
       timeouts: computeReservationTimeoutsToTerraform(this._timeouts.internalValue),
     };

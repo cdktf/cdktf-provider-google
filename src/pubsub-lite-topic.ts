@@ -315,7 +315,9 @@ dropped to make room for newer ones, regardless of the value of period.
   readonly perPartitionBytes: string;
   /**
   * How long a published message is retained. If unset, messages will be retained as
-long as the bytes retained for each partition is below perPartitionBytes.
+long as the bytes retained for each partition is below perPartitionBytes. A
+duration in seconds with up to nine fractional digits, terminated by 's'.
+Example: "3.5s".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_lite_topic#period PubsubLiteTopic#period}
   */
@@ -546,8 +548,8 @@ export class PubsubLiteTopic extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_lite_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

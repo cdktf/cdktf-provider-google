@@ -214,7 +214,7 @@ export interface MonitoringUptimeCheckConfigHttpCheck {
   */
   readonly maskHeaders?: boolean | cdktf.IResolvable;
   /**
-  * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+  * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with "/", a "/" will be prepended automatically. Optional (defaults to "/").
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#path MonitoringUptimeCheckConfig#path}
   */
@@ -912,8 +912,8 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_uptime_check_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

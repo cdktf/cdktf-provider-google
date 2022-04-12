@@ -20,12 +20,6 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   */
   readonly description?: string;
   /**
-  * Enable Virtual Displays on this instance. Note: allow_stopping_for_update must be set to true in order to update this field.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#enable_display ComputeInstanceTemplate#enable_display}
-  */
-  readonly enableDisplay?: boolean | cdktf.IResolvable;
-  /**
   * A description of the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#instance_description ComputeInstanceTemplate#instance_description}
@@ -603,6 +597,12 @@ export interface ComputeInstanceTemplateNetworkInterface {
   */
   readonly nicType?: string;
   /**
+  * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#queue_count ComputeInstanceTemplate#queue_count}
+  */
+  readonly queueCount?: number;
+  /**
   * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#stack_type ComputeInstanceTemplate#stack_type}
@@ -649,6 +649,7 @@ export function computeInstanceTemplateNetworkInterfaceToTerraform(struct?: Comp
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
     nic_type: cdktf.stringToTerraform(struct!.nicType),
+    queue_count: cdktf.numberToTerraform(struct!.queueCount),
     stack_type: cdktf.stringToTerraform(struct!.stackType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
@@ -1389,8 +1390,8 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1399,7 +1400,6 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     });
     this._canIpForward = config.canIpForward;
     this._description = config.description;
-    this._enableDisplay = config.enableDisplay;
     this._instanceDescription = config.instanceDescription;
     this._labels = config.labels;
     this._machineType = config.machineType;
@@ -1457,22 +1457,6 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
-  }
-
-  // enable_display - computed: false, optional: true, required: false
-  private _enableDisplay?: boolean | cdktf.IResolvable; 
-  public get enableDisplay() {
-    return this.getBooleanAttribute('enable_display');
-  }
-  public set enableDisplay(value: boolean | cdktf.IResolvable) {
-    this._enableDisplay = value;
-  }
-  public resetEnableDisplay() {
-    this._enableDisplay = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableDisplayInput() {
-    return this._enableDisplay;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1836,7 +1820,6 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     return {
       can_ip_forward: cdktf.booleanToTerraform(this._canIpForward),
       description: cdktf.stringToTerraform(this._description),
-      enable_display: cdktf.booleanToTerraform(this._enableDisplay),
       instance_description: cdktf.stringToTerraform(this._instanceDescription),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       machine_type: cdktf.stringToTerraform(this._machineType),

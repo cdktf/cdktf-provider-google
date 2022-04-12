@@ -51,41 +51,54 @@ or serverless NEG as a backend.
   /**
   * Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
-balancing cannot be used with the other(s). Default value: "INTERNAL" Possible values: ["EXTERNAL", "INTERNAL", "INTERNAL_MANAGED"]
+balancing cannot be used with the other(s). For more information, refer to
+[Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service). Default value: "INTERNAL" Possible values: ["EXTERNAL", "EXTERNAL_MANAGED", "INTERNAL", "INTERNAL_MANAGED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service#load_balancing_scheme ComputeRegionBackendService#load_balancing_scheme}
   */
   readonly loadBalancingScheme?: string;
   /**
   * The load balancing algorithm used within the scope of the locality.
-The possible values are -
+The possible values are:
 
-* ROUND_ROBIN - This is a simple policy in which each healthy backend
-                is selected in round robin order.
+* 'ROUND_ROBIN': This is a simple policy in which each healthy backend
+                 is selected in round robin order.
 
-* LEAST_REQUEST - An O(1) algorithm which selects two random healthy
-                  hosts and picks the host which has fewer active requests.
+* 'LEAST_REQUEST': An O(1) algorithm which selects two random healthy
+                   hosts and picks the host which has fewer active requests.
 
-* RING_HASH - The ring/modulo hash load balancer implements consistent
-              hashing to backends. The algorithm has the property that the
-              addition/removal of a host from a set of N hosts only affects
-              1/N of the requests.
+* 'RING_HASH': The ring/modulo hash load balancer implements consistent
+               hashing to backends. The algorithm has the property that the
+               addition/removal of a host from a set of N hosts only affects
+               1/N of the requests.
 
-* RANDOM - The load balancer selects a random healthy host.
+* 'RANDOM': The load balancer selects a random healthy host.
 
-* ORIGINAL_DESTINATION - Backend host is selected based on the client
-                         connection metadata, i.e., connections are opened
-                         to the same address as the destination address of
-                         the incoming connection before the connection
-                         was redirected to the load balancer.
+* 'ORIGINAL_DESTINATION': Backend host is selected based on the client
+                          connection metadata, i.e., connections are opened
+                          to the same address as the destination address of
+                          the incoming connection before the connection
+                          was redirected to the load balancer.
 
-* MAGLEV - used as a drop in replacement for the ring hash load balancer.
-           Maglev is not as stable as ring hash but has faster table lookup
-           build times and host selection times. For more information about
-           Maglev, refer to https://ai.google/research/pubs/pub44824
+* 'MAGLEV': used as a drop in replacement for the ring hash load balancer.
+            Maglev is not as stable as ring hash but has faster table lookup
+            build times and host selection times. For more information about
+            Maglev, refer to https://ai.google/research/pubs/pub44824
 
-This field is applicable only when the 'load_balancing_scheme' is set to
-INTERNAL_MANAGED and the 'protocol' is set to HTTP, HTTPS, or HTTP2. Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"]
+
+This field is applicable to either:
+
+* A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
+  and loadBalancingScheme set to INTERNAL_MANAGED.
+* A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+
+
+If session_affinity is not NONE, and this field is not set to MAGLEV or RING_HASH,
+session affinity settings will not take effect.
+
+Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced
+by a URL map that is bound to target gRPC proxy that has validate_for_proxyless
+field set to true. Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service#locality_lb_policy ComputeRegionBackendService#locality_lb_policy}
   */
@@ -112,7 +125,7 @@ This field can only be specified when the load balancing scheme is set to INTERN
   /**
   * A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
-loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
+loadBalancingScheme is EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
 and the backends are instance groups. The named port must be defined on each
 backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
 default of "http" if not given.
@@ -2498,8 +2511,8 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

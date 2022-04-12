@@ -32,6 +32,12 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   */
   readonly instance?: string;
   /**
+  * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_app_profile#multi_cluster_routing_cluster_ids BigtableAppProfile#multi_cluster_routing_cluster_ids}
+  */
+  readonly multiClusterRoutingClusterIds?: string[];
+  /**
   * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
@@ -296,8 +302,8 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_app_profile',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -308,6 +314,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
     this._description = config.description;
     this._ignoreWarnings = config.ignoreWarnings;
     this._instance = config.instance;
+    this._multiClusterRoutingClusterIds = config.multiClusterRoutingClusterIds;
     this._multiClusterRoutingUseAny = config.multiClusterRoutingUseAny;
     this._project = config.project;
     this._singleClusterRouting.internalValue = config.singleClusterRouting;
@@ -382,6 +389,22 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get instanceInput() {
     return this._instance;
+  }
+
+  // multi_cluster_routing_cluster_ids - computed: false, optional: true, required: false
+  private _multiClusterRoutingClusterIds?: string[]; 
+  public get multiClusterRoutingClusterIds() {
+    return this.getListAttribute('multi_cluster_routing_cluster_ids');
+  }
+  public set multiClusterRoutingClusterIds(value: string[]) {
+    this._multiClusterRoutingClusterIds = value;
+  }
+  public resetMultiClusterRoutingClusterIds() {
+    this._multiClusterRoutingClusterIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiClusterRoutingClusterIdsInput() {
+    return this._multiClusterRoutingClusterIds;
   }
 
   // multi_cluster_routing_use_any - computed: false, optional: true, required: false
@@ -463,6 +486,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       ignore_warnings: cdktf.booleanToTerraform(this._ignoreWarnings),
       instance: cdktf.stringToTerraform(this._instance),
+      multi_cluster_routing_cluster_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._multiClusterRoutingClusterIds),
       multi_cluster_routing_use_any: cdktf.booleanToTerraform(this._multiClusterRoutingUseAny),
       project: cdktf.stringToTerraform(this._project),
       single_cluster_routing: bigtableAppProfileSingleClusterRoutingToTerraform(this._singleClusterRouting.internalValue),

@@ -31,6 +31,20 @@ will eventually redeliver the message.
   */
   readonly ackDeadlineSeconds?: number;
   /**
+  * If 'true', Pub/Sub provides the following guarantees for the delivery
+of a message with a given value of messageId on this Subscriptions':
+
+- The message sent to a subscriber is guaranteed not to be resent before the message's acknowledgement deadline expires.
+
+- An acknowledged message will not be resent to a subscriber.
+
+Note that subscribers may still receive multiple copies of a message when 'enable_exactly_once_delivery'
+is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct messageId values
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#enable_exactly_once_delivery PubsubSubscription#enable_exactly_once_delivery}
+  */
+  readonly enableExactlyOnceDelivery?: boolean | cdktf.IResolvable;
+  /**
   * If 'true', messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
 may be delivered in any order.
@@ -56,7 +70,7 @@ you can't modify the filter.
   /**
   * How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
-retainAckedMessages is true, then this also configures the retention
+retain_acked_messages is true, then this also configures the retention
 of acknowledged messages, and thus configures how far back in time a
 subscriptions.seek can be done. Defaults to 7 days. Cannot be more
 than 7 days ('"604800s"') or less than 10 minutes ('"600s"').
@@ -799,8 +813,8 @@ export class PubsubSubscription extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_subscription',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -808,6 +822,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._ackDeadlineSeconds = config.ackDeadlineSeconds;
+    this._enableExactlyOnceDelivery = config.enableExactlyOnceDelivery;
     this._enableMessageOrdering = config.enableMessageOrdering;
     this._filter = config.filter;
     this._labels = config.labels;
@@ -841,6 +856,22 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ackDeadlineSecondsInput() {
     return this._ackDeadlineSeconds;
+  }
+
+  // enable_exactly_once_delivery - computed: false, optional: true, required: false
+  private _enableExactlyOnceDelivery?: boolean | cdktf.IResolvable; 
+  public get enableExactlyOnceDelivery() {
+    return this.getBooleanAttribute('enable_exactly_once_delivery');
+  }
+  public set enableExactlyOnceDelivery(value: boolean | cdktf.IResolvable) {
+    this._enableExactlyOnceDelivery = value;
+  }
+  public resetEnableExactlyOnceDelivery() {
+    this._enableExactlyOnceDelivery = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableExactlyOnceDeliveryInput() {
+    return this._enableExactlyOnceDelivery;
   }
 
   // enable_message_ordering - computed: false, optional: true, required: false
@@ -923,11 +954,6 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
-  }
-
-  // path - computed: true, optional: false, required: false
-  public get path() {
-    return this.getStringAttribute('path');
   }
 
   // project - computed: true, optional: true, required: false
@@ -1062,6 +1088,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ack_deadline_seconds: cdktf.numberToTerraform(this._ackDeadlineSeconds),
+      enable_exactly_once_delivery: cdktf.booleanToTerraform(this._enableExactlyOnceDelivery),
       enable_message_ordering: cdktf.booleanToTerraform(this._enableMessageOrdering),
       filter: cdktf.stringToTerraform(this._filter),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),

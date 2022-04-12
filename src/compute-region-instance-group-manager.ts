@@ -677,12 +677,6 @@ export interface ComputeRegionInstanceGroupManagerUpdatePolicy {
   */
   readonly maxUnavailablePercent?: number;
   /**
-  * Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager#min_ready_sec ComputeRegionInstanceGroupManager#min_ready_sec}
-  */
-  readonly minReadySec?: number;
-  /**
   * Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager#minimal_action ComputeRegionInstanceGroupManager#minimal_action}
@@ -713,7 +707,6 @@ export function computeRegionInstanceGroupManagerUpdatePolicyToTerraform(struct?
     max_surge_percent: cdktf.numberToTerraform(struct!.maxSurgePercent),
     max_unavailable_fixed: cdktf.numberToTerraform(struct!.maxUnavailableFixed),
     max_unavailable_percent: cdktf.numberToTerraform(struct!.maxUnavailablePercent),
-    min_ready_sec: cdktf.numberToTerraform(struct!.minReadySec),
     minimal_action: cdktf.stringToTerraform(struct!.minimalAction),
     replacement_method: cdktf.stringToTerraform(struct!.replacementMethod),
     type: cdktf.stringToTerraform(struct!.type),
@@ -754,10 +747,6 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
       hasAnyValues = true;
       internalValueResult.maxUnavailablePercent = this._maxUnavailablePercent;
     }
-    if (this._minReadySec !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minReadySec = this._minReadySec;
-    }
     if (this._minimalAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimalAction = this._minimalAction;
@@ -781,7 +770,6 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
       this._maxSurgePercent = undefined;
       this._maxUnavailableFixed = undefined;
       this._maxUnavailablePercent = undefined;
-      this._minReadySec = undefined;
       this._minimalAction = undefined;
       this._replacementMethod = undefined;
       this._type = undefined;
@@ -793,7 +781,6 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
       this._maxSurgePercent = value.maxSurgePercent;
       this._maxUnavailableFixed = value.maxUnavailableFixed;
       this._maxUnavailablePercent = value.maxUnavailablePercent;
-      this._minReadySec = value.minReadySec;
       this._minimalAction = value.minimalAction;
       this._replacementMethod = value.replacementMethod;
       this._type = value.type;
@@ -878,22 +865,6 @@ export class ComputeRegionInstanceGroupManagerUpdatePolicyOutputReference extend
   // Temporarily expose input value. Use with caution.
   public get maxUnavailablePercentInput() {
     return this._maxUnavailablePercent;
-  }
-
-  // min_ready_sec - computed: false, optional: true, required: false
-  private _minReadySec?: number; 
-  public get minReadySec() {
-    return this.getNumberAttribute('min_ready_sec');
-  }
-  public set minReadySec(value: number) {
-    this._minReadySec = value;
-  }
-  public resetMinReadySec() {
-    this._minReadySec = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get minReadySecInput() {
-    return this._minReadySec;
   }
 
   // minimal_action - computed: false, optional: false, required: true
@@ -1094,8 +1065,8 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_instance_group_manager',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

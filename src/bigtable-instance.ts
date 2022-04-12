@@ -50,6 +50,122 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cluster?: BigtableInstanceCluster[] | cdktf.IResolvable;
 }
+export interface BigtableInstanceClusterAutoscalingConfig {
+  /**
+  * The target CPU utilization for autoscaling. Value must be between 10 and 80.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#cpu_target BigtableInstance#cpu_target}
+  */
+  readonly cpuTarget: number;
+  /**
+  * The maximum number of nodes for autoscaling.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#max_nodes BigtableInstance#max_nodes}
+  */
+  readonly maxNodes: number;
+  /**
+  * The minimum number of nodes for autoscaling.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#min_nodes BigtableInstance#min_nodes}
+  */
+  readonly minNodes: number;
+}
+
+export function bigtableInstanceClusterAutoscalingConfigToTerraform(struct?: BigtableInstanceClusterAutoscalingConfigOutputReference | BigtableInstanceClusterAutoscalingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cpu_target: cdktf.numberToTerraform(struct!.cpuTarget),
+    max_nodes: cdktf.numberToTerraform(struct!.maxNodes),
+    min_nodes: cdktf.numberToTerraform(struct!.minNodes),
+  }
+}
+
+export class BigtableInstanceClusterAutoscalingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigtableInstanceClusterAutoscalingConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cpuTarget !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpuTarget = this._cpuTarget;
+    }
+    if (this._maxNodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxNodes = this._maxNodes;
+    }
+    if (this._minNodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minNodes = this._minNodes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigtableInstanceClusterAutoscalingConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cpuTarget = undefined;
+      this._maxNodes = undefined;
+      this._minNodes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cpuTarget = value.cpuTarget;
+      this._maxNodes = value.maxNodes;
+      this._minNodes = value.minNodes;
+    }
+  }
+
+  // cpu_target - computed: false, optional: false, required: true
+  private _cpuTarget?: number; 
+  public get cpuTarget() {
+    return this.getNumberAttribute('cpu_target');
+  }
+  public set cpuTarget(value: number) {
+    this._cpuTarget = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuTargetInput() {
+    return this._cpuTarget;
+  }
+
+  // max_nodes - computed: false, optional: false, required: true
+  private _maxNodes?: number; 
+  public get maxNodes() {
+    return this.getNumberAttribute('max_nodes');
+  }
+  public set maxNodes(value: number) {
+    this._maxNodes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxNodesInput() {
+    return this._maxNodes;
+  }
+
+  // min_nodes - computed: false, optional: false, required: true
+  private _minNodes?: number; 
+  public get minNodes() {
+    return this.getNumberAttribute('min_nodes');
+  }
+  public set minNodes(value: number) {
+    this._minNodes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minNodesInput() {
+    return this._minNodes;
+  }
+}
 export interface BigtableInstanceCluster {
   /**
   * The ID of the Cloud Bigtable cluster.
@@ -81,6 +197,12 @@ export interface BigtableInstanceCluster {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#zone BigtableInstance#zone}
   */
   readonly zone?: string;
+  /**
+  * autoscaling_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#autoscaling_config BigtableInstance#autoscaling_config}
+  */
+  readonly autoscalingConfig?: BigtableInstanceClusterAutoscalingConfig;
 }
 
 export function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceCluster | cdktf.IResolvable): any {
@@ -94,6 +216,7 @@ export function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceClus
     num_nodes: cdktf.numberToTerraform(struct!.numNodes),
     storage_type: cdktf.stringToTerraform(struct!.storageType),
     zone: cdktf.stringToTerraform(struct!.zone),
+    autoscaling_config: bigtableInstanceClusterAutoscalingConfigToTerraform(struct!.autoscalingConfig),
   }
 }
 
@@ -124,8 +247,8 @@ export class BigtableInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

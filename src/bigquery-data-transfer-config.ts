@@ -56,7 +56,9 @@ associated with this transfer config finish.
   */
   readonly notificationPubsubTopic?: string;
   /**
-  * These parameters are specific to each data source.
+  * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
+section for each data source. For example the parameters for Cloud Storage transfers are listed here:
+https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config#params BigqueryDataTransferConfig#params}
   */
@@ -79,7 +81,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
   */
   readonly schedule?: string;
   /**
-  * Optional service account name. If this field is set, transfer config will
+  * Service account email. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
   * 
@@ -521,8 +523,8 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_data_transfer_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

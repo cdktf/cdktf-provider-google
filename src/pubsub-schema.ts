@@ -47,10 +47,6 @@ export interface PubsubSchemaTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#delete PubsubSchema#delete}
   */
   readonly delete?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#update PubsubSchema#update}
-  */
-  readonly update?: string;
 }
 
 export function pubsubSchemaTimeoutsToTerraform(struct?: PubsubSchemaTimeoutsOutputReference | PubsubSchemaTimeouts | cdktf.IResolvable): any {
@@ -61,7 +57,6 @@ export function pubsubSchemaTimeoutsToTerraform(struct?: PubsubSchemaTimeoutsOut
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
-    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -87,10 +82,6 @@ export class PubsubSchemaTimeoutsOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._update !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.update = this._update;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -99,13 +90,11 @@ export class PubsubSchemaTimeoutsOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
-      this._update = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
-      this._update = value.update;
     }
   }
 
@@ -140,22 +129,6 @@ export class PubsubSchemaTimeoutsOutputReference extends cdktf.ComplexObject {
   public get deleteInput() {
     return this._delete;
   }
-
-  // update - computed: false, optional: true, required: false
-  private _update?: string; 
-  public get update() {
-    return this.getStringAttribute('update');
-  }
-  public set update(value: string) {
-    this._update = value;
-  }
-  public resetUpdate() {
-    this._update = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get updateInput() {
-    return this._update;
-  }
 }
 
 /**
@@ -184,8 +157,8 @@ export class PubsubSchema extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_schema',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '3.90.1',
-        providerVersionConstraint: '~> 3.0'
+        providerVersion: '4.17.0',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
