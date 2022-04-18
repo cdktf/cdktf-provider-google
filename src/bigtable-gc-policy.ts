@@ -14,6 +14,12 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly columnFamily: string;
   /**
+  * Serialized JSON string for garbage collection policy. Conflicts with "mode", "max_age" and "max_version".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#gc_rules BigtableGcPolicy#gc_rules}
+  */
+  readonly gcRules?: string;
+  /**
   * The name of the Bigtable instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#instance_name BigtableGcPolicy#instance_name}
@@ -192,7 +198,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_gc_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -201,6 +207,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._columnFamily = config.columnFamily;
+    this._gcRules = config.gcRules;
     this._instanceName = config.instanceName;
     this._mode = config.mode;
     this._project = config.project;
@@ -224,6 +231,22 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get columnFamilyInput() {
     return this._columnFamily;
+  }
+
+  // gc_rules - computed: false, optional: true, required: false
+  private _gcRules?: string; 
+  public get gcRules() {
+    return this.getStringAttribute('gc_rules');
+  }
+  public set gcRules(value: string) {
+    this._gcRules = value;
+  }
+  public resetGcRules() {
+    this._gcRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gcRulesInput() {
+    return this._gcRules;
   }
 
   // id - computed: true, optional: true, required: false
@@ -329,6 +352,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       column_family: cdktf.stringToTerraform(this._columnFamily),
+      gc_rules: cdktf.stringToTerraform(this._gcRules),
       instance_name: cdktf.stringToTerraform(this._instanceName),
       mode: cdktf.stringToTerraform(this._mode),
       project: cdktf.stringToTerraform(this._project),

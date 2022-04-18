@@ -53,7 +53,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_backup_run',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

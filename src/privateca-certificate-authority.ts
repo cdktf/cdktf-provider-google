@@ -1972,6 +1972,10 @@ export interface PrivatecaCertificateAuthorityTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#delete PrivatecaCertificateAuthority#delete}
   */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#update PrivatecaCertificateAuthority#update}
+  */
+  readonly update?: string;
 }
 
 export function privatecaCertificateAuthorityTimeoutsToTerraform(struct?: PrivatecaCertificateAuthorityTimeoutsOutputReference | PrivatecaCertificateAuthorityTimeouts | cdktf.IResolvable): any {
@@ -1982,6 +1986,7 @@ export function privatecaCertificateAuthorityTimeoutsToTerraform(struct?: Privat
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -2007,6 +2012,10 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2015,11 +2024,13 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
       this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
+      this._update = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
+      this._update = value.update;
     }
   }
 
@@ -2054,6 +2065,22 @@ export class PrivatecaCertificateAuthorityTimeoutsOutputReference extends cdktf.
   public get deleteInput() {
     return this._delete;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
@@ -2082,7 +2109,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
