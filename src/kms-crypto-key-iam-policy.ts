@@ -43,7 +43,7 @@ export class KmsCryptoKeyIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_crypto_key_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

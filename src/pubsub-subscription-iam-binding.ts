@@ -170,7 +170,7 @@ export class PubsubSubscriptionIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_subscription_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.17.0',
+        providerVersion: '4.18.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
