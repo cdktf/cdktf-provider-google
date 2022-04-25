@@ -14,6 +14,12 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * KMS key name used for data encryption.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#kms_key_name FilestoreInstance#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
+  /**
   * Resource labels to represent user-provided metadata.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#labels FilestoreInstance#labels}
@@ -37,7 +43,7 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The service tier of the instance.
-Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#tier FilestoreInstance#tier}
   */
@@ -67,6 +73,61 @@ Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD
   */
   readonly timeouts?: FilestoreInstanceTimeouts;
 }
+export interface FilestoreInstanceFileSharesNfsExportOptions {
+  /**
+  * Either READ_ONLY, for allowing only read requests on the exported directory,
+or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#access_mode FilestoreInstance#access_mode}
+  */
+  readonly accessMode?: string;
+  /**
+  * An integer representing the anonymous group id with a default value of 65534.
+Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#anon_gid FilestoreInstance#anon_gid}
+  */
+  readonly anonGid?: number;
+  /**
+  * An integer representing the anonymous user id with a default value of 65534.
+Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
+if this field is specified for other squashMode settings.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#anon_uid FilestoreInstance#anon_uid}
+  */
+  readonly anonUid?: number;
+  /**
+  * List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
+Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
+The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#ip_ranges FilestoreInstance#ip_ranges}
+  */
+  readonly ipRanges?: string[];
+  /**
+  * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
+for not allowing root access. The default is NO_ROOT_SQUASH. Default value: "NO_ROOT_SQUASH" Possible values: ["NO_ROOT_SQUASH", "ROOT_SQUASH"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#squash_mode FilestoreInstance#squash_mode}
+  */
+  readonly squashMode?: string;
+}
+
+export function filestoreInstanceFileSharesNfsExportOptionsToTerraform(struct?: FilestoreInstanceFileSharesNfsExportOptions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_mode: cdktf.stringToTerraform(struct!.accessMode),
+    anon_gid: cdktf.numberToTerraform(struct!.anonGid),
+    anon_uid: cdktf.numberToTerraform(struct!.anonUid),
+    ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRanges),
+    squash_mode: cdktf.stringToTerraform(struct!.squashMode),
+  }
+}
+
 export interface FilestoreInstanceFileShares {
   /**
   * File share capacity in GiB. This must be at least 1024 GiB
@@ -81,6 +142,12 @@ for the standard tier, or 2560 GiB for the premium tier.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
+  /**
+  * nfs_export_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#nfs_export_options FilestoreInstance#nfs_export_options}
+  */
+  readonly nfsExportOptions?: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable;
 }
 
 export function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanceFileSharesOutputReference | FilestoreInstanceFileShares): any {
@@ -91,6 +158,7 @@ export function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanc
   return {
     capacity_gb: cdktf.numberToTerraform(struct!.capacityGb),
     name: cdktf.stringToTerraform(struct!.name),
+    nfs_export_options: cdktf.listMapper(filestoreInstanceFileSharesNfsExportOptionsToTerraform)(struct!.nfsExportOptions),
   }
 }
 
@@ -116,6 +184,10 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._nfsExportOptions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfsExportOptions = this._nfsExportOptions;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -124,11 +196,13 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = false;
       this._capacityGb = undefined;
       this._name = undefined;
+      this._nfsExportOptions = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._capacityGb = value.capacityGb;
       this._name = value.name;
+      this._nfsExportOptions = value.nfsExportOptions;
     }
   }
 
@@ -157,8 +231,33 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   public get nameInput() {
     return this._name;
   }
+
+  // nfs_export_options - computed: false, optional: true, required: false
+  private _nfsExportOptions?: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable; 
+  public get nfsExportOptions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('nfs_export_options');
+  }
+  public set nfsExportOptions(value: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable) {
+    this._nfsExportOptions = value;
+  }
+  public resetNfsExportOptions() {
+    this._nfsExportOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsExportOptionsInput() {
+    return this._nfsExportOptions;
+  }
 }
 export interface FilestoreInstanceNetworks {
+  /**
+  * The network connect mode of the Filestore instance.
+If not provided, the connect mode defaults to
+DIRECT_PEERING. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#connect_mode FilestoreInstance#connect_mode}
+  */
+  readonly connectMode?: string;
   /**
   * IP versions for which the instance has
 IP addresses assigned. Possible values: ["ADDRESS_MODE_UNSPECIFIED", "MODE_IPV4", "MODE_IPV6"]
@@ -188,6 +287,7 @@ export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceN
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    connect_mode: cdktf.stringToTerraform(struct!.connectMode),
     modes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.modes),
     network: cdktf.stringToTerraform(struct!.network),
     reserved_ip_range: cdktf.stringToTerraform(struct!.reservedIpRange),
@@ -340,7 +440,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.18.0',
+        providerVersion: '4.19.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -349,6 +449,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
     this._location = config.location;
     this._name = config.name;
@@ -393,6 +494,22 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -535,6 +652,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
