@@ -47,7 +47,7 @@ export class SecretManagerSecretIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_secret_manager_secret_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.18.0',
+        providerVersion: '4.19.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
