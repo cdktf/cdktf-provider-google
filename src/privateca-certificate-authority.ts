@@ -14,6 +14,10 @@ export interface PrivatecaCertificateAuthorityConfig extends cdktf.TerraformMeta
   */
   readonly certificateAuthorityId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#deletion_protection PrivatecaCertificateAuthority#deletion_protection}
+  */
+  readonly deletionProtection?: boolean | cdktf.IResolvable;
+  /**
   * The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
 such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
 (such as 'gs://') or suffixes (such as '.googleapis.com'). For example, to use a bucket named
@@ -2109,7 +2113,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2118,6 +2122,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._certificateAuthorityId = config.certificateAuthorityId;
+    this._deletionProtection = config.deletionProtection;
     this._gcsBucket = config.gcsBucket;
     this._ignoreActiveCertificatesOnDeletion = config.ignoreActiveCertificatesOnDeletion;
     this._labels = config.labels;
@@ -2157,6 +2162,22 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // deletion_protection - computed: false, optional: true, required: false
+  private _deletionProtection?: boolean | cdktf.IResolvable; 
+  public get deletionProtection() {
+    return this.getBooleanAttribute('deletion_protection');
+  }
+  public set deletionProtection(value: boolean | cdktf.IResolvable) {
+    this._deletionProtection = value;
+  }
+  public resetDeletionProtection() {
+    this._deletionProtection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionInput() {
+    return this._deletionProtection;
   }
 
   // gcs_bucket - computed: false, optional: true, required: false
@@ -2355,6 +2376,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       certificate_authority_id: cdktf.stringToTerraform(this._certificateAuthorityId),
+      deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       gcs_bucket: cdktf.stringToTerraform(this._gcsBucket),
       ignore_active_certificates_on_deletion: cdktf.booleanToTerraform(this._ignoreActiveCertificatesOnDeletion),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),

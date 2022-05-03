@@ -443,7 +443,7 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
       terraformResourceType: 'google_access_context_manager_access_level_condition',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1212,6 +1212,12 @@ export interface ComputeInstanceScheduling {
   */
   readonly preemptible?: boolean | cdktf.IResolvable;
   /**
+  * Whether the instance is spot. If this is set as SPOT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance#provisioning_model ComputeInstance#provisioning_model}
+  */
+  readonly provisioningModel?: string;
+  /**
   * node_affinities block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance#node_affinities ComputeInstance#node_affinities}
@@ -1229,6 +1235,7 @@ export function computeInstanceSchedulingToTerraform(struct?: ComputeInstanceSch
     min_node_cpus: cdktf.numberToTerraform(struct!.minNodeCpus),
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+    provisioning_model: cdktf.stringToTerraform(struct!.provisioningModel),
     node_affinities: cdktf.listMapper(computeInstanceSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),
   }
 }
@@ -1263,6 +1270,10 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
+    if (this._provisioningModel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.provisioningModel = this._provisioningModel;
+    }
     if (this._nodeAffinities !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeAffinities = this._nodeAffinities;
@@ -1277,6 +1288,7 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
       this._minNodeCpus = undefined;
       this._onHostMaintenance = undefined;
       this._preemptible = undefined;
+      this._provisioningModel = undefined;
       this._nodeAffinities = undefined;
     }
     else {
@@ -1285,6 +1297,7 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
       this._minNodeCpus = value.minNodeCpus;
       this._onHostMaintenance = value.onHostMaintenance;
       this._preemptible = value.preemptible;
+      this._provisioningModel = value.provisioningModel;
       this._nodeAffinities = value.nodeAffinities;
     }
   }
@@ -1351,6 +1364,22 @@ export class ComputeInstanceSchedulingOutputReference extends cdktf.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get preemptibleInput() {
     return this._preemptible;
+  }
+
+  // provisioning_model - computed: true, optional: true, required: false
+  private _provisioningModel?: string; 
+  public get provisioningModel() {
+    return this.getStringAttribute('provisioning_model');
+  }
+  public set provisioningModel(value: string) {
+    this._provisioningModel = value;
+  }
+  public resetProvisioningModel() {
+    this._provisioningModel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisioningModelInput() {
+    return this._provisioningModel;
   }
 
   // node_affinities - computed: false, optional: true, required: false
@@ -1753,7 +1782,7 @@ export class ComputeInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

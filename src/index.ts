@@ -490,6 +490,7 @@ export * from './data-google-compute-address';
 export * from './data-google-compute-backend-bucket';
 export * from './data-google-compute-backend-service';
 export * from './data-google-compute-default-service-account';
+export * from './data-google-compute-disk';
 export * from './data-google-compute-forwarding-rule';
 export * from './data-google-compute-global-address';
 export * from './data-google-compute-global-forwarding-rule';
