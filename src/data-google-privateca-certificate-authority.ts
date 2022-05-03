@@ -1220,7 +1220,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1269,6 +1269,11 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // deletion_protection - computed: true, optional: false, required: false
+  public get deletionProtection() {
+    return this.getBooleanAttribute('deletion_protection');
   }
 
   // gcs_bucket - computed: true, optional: false, required: false

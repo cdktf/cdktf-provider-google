@@ -1124,6 +1124,11 @@ export class DataGoogleComputeInstanceSchedulingOutputReference extends cdktf.Co
   public get preemptible() {
     return this.getBooleanAttribute('preemptible');
   }
+
+  // provisioning_model - computed: true, optional: false, required: false
+  public get provisioningModel() {
+    return this.getStringAttribute('provisioning_model');
+  }
 }
 
 export class DataGoogleComputeInstanceSchedulingList extends cdktf.ComplexList {
@@ -1378,7 +1383,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

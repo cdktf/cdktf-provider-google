@@ -129,6 +129,15 @@ network.
   */
   readonly reservedIpRange?: string;
   /**
+  * Optional. Additional IP range for node placement. Required when enabling read replicas on
+an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+"auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address 
+range associated with the private service access connection, or "auto".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
+  */
+  readonly secondaryIpRange?: string;
+  /**
   * The service tier of the instance. Must be one of these values:
 
 - BASIC: standalone instance
@@ -816,7 +825,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -840,6 +849,7 @@ export class RedisInstance extends cdktf.TerraformResource {
     this._region = config.region;
     this._replicaCount = config.replicaCount;
     this._reservedIpRange = config.reservedIpRange;
+    this._secondaryIpRange = config.secondaryIpRange;
     this._tier = config.tier;
     this._transitEncryptionMode = config.transitEncryptionMode;
     this._maintenancePolicy.internalValue = config.maintenancePolicy;
@@ -1152,6 +1162,22 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._reservedIpRange;
   }
 
+  // secondary_ip_range - computed: true, optional: true, required: false
+  private _secondaryIpRange?: string; 
+  public get secondaryIpRange() {
+    return this.getStringAttribute('secondary_ip_range');
+  }
+  public set secondaryIpRange(value: string) {
+    this._secondaryIpRange = value;
+  }
+  public resetSecondaryIpRange() {
+    this._secondaryIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryIpRangeInput() {
+    return this._secondaryIpRange;
+  }
+
   // server_ca_certs - computed: true, optional: false, required: false
   private _serverCaCerts = new RedisInstanceServerCaCertsList(this, "server_ca_certs", false);
   public get serverCaCerts() {
@@ -1260,6 +1286,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       replica_count: cdktf.numberToTerraform(this._replicaCount),
       reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),
+      secondary_ip_range: cdktf.stringToTerraform(this._secondaryIpRange),
       tier: cdktf.stringToTerraform(this._tier),
       transit_encryption_mode: cdktf.stringToTerraform(this._transitEncryptionMode),
       maintenance_policy: redisInstanceMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),

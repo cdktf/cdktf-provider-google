@@ -8,6 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface ApigeeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Optional. Customer accept list represents the list of projects (id/number) on customer
+side that can privately connect to the service attachment. It is an optional field
+which the customers can provide during the instance creation. By default, the customer
+project associated with the Apigee organization will be included to the list.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#consumer_accept_list ApigeeInstance#consumer_accept_list}
+  */
+  readonly consumerAcceptList?: string[];
+  /**
   * Description of the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#description ApigeeInstance#description}
@@ -190,7 +199,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.19.0',
+        providerVersion: '4.20.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -198,6 +207,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._consumerAcceptList = config.consumerAcceptList;
     this._description = config.description;
     this._diskEncryptionKeyName = config.diskEncryptionKeyName;
     this._displayName = config.displayName;
@@ -212,6 +222,22 @@ export class ApigeeInstance extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // consumer_accept_list - computed: true, optional: true, required: false
+  private _consumerAcceptList?: string[]; 
+  public get consumerAcceptList() {
+    return this.getListAttribute('consumer_accept_list');
+  }
+  public set consumerAcceptList(value: string[]) {
+    this._consumerAcceptList = value;
+  }
+  public resetConsumerAcceptList() {
+    this._consumerAcceptList = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerAcceptListInput() {
+    return this._consumerAcceptList;
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -347,6 +373,11 @@ export class ApigeeInstance extends cdktf.TerraformResource {
     return this.getStringAttribute('port');
   }
 
+  // service_attachment - computed: true, optional: false, required: false
+  public get serviceAttachment() {
+    return this.getStringAttribute('service_attachment');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ApigeeInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -369,6 +400,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      consumer_accept_list: cdktf.listMapper(cdktf.stringToTerraform)(this._consumerAcceptList),
       description: cdktf.stringToTerraform(this._description),
       disk_encryption_key_name: cdktf.stringToTerraform(this._diskEncryptionKeyName),
       display_name: cdktf.stringToTerraform(this._displayName),
