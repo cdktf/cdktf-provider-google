@@ -489,7 +489,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -521,6 +521,11 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
     return this.getStringAttribute('description');
   }
 
+  // docker_repository - computed: true, optional: false, required: false
+  public get dockerRepository() {
+    return this.getStringAttribute('docker_repository');
+  }
+
   // entry_point - computed: true, optional: false, required: false
   public get entryPoint() {
     return this.getStringAttribute('entry_point');
@@ -550,6 +555,11 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // ingress_settings - computed: true, optional: false, required: false
   public get ingressSettings() {
     return this.getStringAttribute('ingress_settings');
+  }
+
+  // kms_key_name - computed: true, optional: false, required: false
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
   }
 
   // labels - computed: true, optional: false, required: false

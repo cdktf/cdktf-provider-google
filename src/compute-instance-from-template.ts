@@ -407,7 +407,7 @@ export interface ComputeInstanceFromTemplateBootDiskInitializeParams {
   */
   readonly size?: number;
   /**
-  * The Google Compute Engine disk type. One of pd-standard, pd-ssd or pd-balanced.
+  * The Google Compute Engine disk type. Such as pd-standard, pd-ssd or pd-balanced.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#type ComputeInstanceFromTemplate#type}
   */
@@ -1700,7 +1700,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_from_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

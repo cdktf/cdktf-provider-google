@@ -228,6 +228,96 @@ export class ContainerAwsNodePoolConfigConfigEncryptionOutputReference extends c
     return this._kmsKeyArn;
   }
 }
+export interface ContainerAwsNodePoolConfigProxyConfig {
+  /**
+  * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_node_pool#secret_arn ContainerAwsNodePool#secret_arn}
+  */
+  readonly secretArn: string;
+  /**
+  * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_node_pool#secret_version ContainerAwsNodePool#secret_version}
+  */
+  readonly secretVersion: string;
+}
+
+export function containerAwsNodePoolConfigProxyConfigToTerraform(struct?: ContainerAwsNodePoolConfigProxyConfigOutputReference | ContainerAwsNodePoolConfigProxyConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_arn: cdktf.stringToTerraform(struct!.secretArn),
+    secret_version: cdktf.stringToTerraform(struct!.secretVersion),
+  }
+}
+
+export class ContainerAwsNodePoolConfigProxyConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerAwsNodePoolConfigProxyConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretArn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretArn = this._secretArn;
+    }
+    if (this._secretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretVersion = this._secretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAwsNodePoolConfigProxyConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._secretArn = undefined;
+      this._secretVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._secretArn = value.secretArn;
+      this._secretVersion = value.secretVersion;
+    }
+  }
+
+  // secret_arn - computed: false, optional: false, required: true
+  private _secretArn?: string; 
+  public get secretArn() {
+    return this.getStringAttribute('secret_arn');
+  }
+  public set secretArn(value: string) {
+    this._secretArn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretArnInput() {
+    return this._secretArn;
+  }
+
+  // secret_version - computed: false, optional: false, required: true
+  private _secretVersion?: string; 
+  public get secretVersion() {
+    return this.getStringAttribute('secret_version');
+  }
+  public set secretVersion(value: string) {
+    this._secretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretVersionInput() {
+    return this._secretVersion;
+  }
+}
 export interface ContainerAwsNodePoolConfigRootVolume {
   /**
   * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
@@ -517,6 +607,12 @@ export interface ContainerAwsNodePoolConfigA {
   */
   readonly configEncryption: ContainerAwsNodePoolConfigConfigEncryption;
   /**
+  * proxy_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_node_pool#proxy_config ContainerAwsNodePool#proxy_config}
+  */
+  readonly proxyConfig?: ContainerAwsNodePoolConfigProxyConfig;
+  /**
   * root_volume block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_node_pool#root_volume ContainerAwsNodePool#root_volume}
@@ -548,6 +644,7 @@ export function containerAwsNodePoolConfigAToTerraform(struct?: ContainerAwsNode
     security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.securityGroupIds),
     tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     config_encryption: containerAwsNodePoolConfigConfigEncryptionToTerraform(struct!.configEncryption),
+    proxy_config: containerAwsNodePoolConfigProxyConfigToTerraform(struct!.proxyConfig),
     root_volume: containerAwsNodePoolConfigRootVolumeToTerraform(struct!.rootVolume),
     ssh_config: containerAwsNodePoolConfigSshConfigToTerraform(struct!.sshConfig),
     taints: cdktf.listMapper(containerAwsNodePoolConfigTaintsToTerraform)(struct!.taints),
@@ -592,6 +689,10 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.configEncryption = this._configEncryption?.internalValue;
     }
+    if (this._proxyConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.proxyConfig = this._proxyConfig?.internalValue;
+    }
     if (this._rootVolume?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootVolume = this._rootVolume?.internalValue;
@@ -616,6 +717,7 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
       this._securityGroupIds = undefined;
       this._tags = undefined;
       this._configEncryption.internalValue = undefined;
+      this._proxyConfig.internalValue = undefined;
       this._rootVolume.internalValue = undefined;
       this._sshConfig.internalValue = undefined;
       this._taints = undefined;
@@ -628,6 +730,7 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
       this._securityGroupIds = value.securityGroupIds;
       this._tags = value.tags;
       this._configEncryption.internalValue = value.configEncryption;
+      this._proxyConfig.internalValue = value.proxyConfig;
       this._rootVolume.internalValue = value.rootVolume;
       this._sshConfig.internalValue = value.sshConfig;
       this._taints = value.taints;
@@ -722,6 +825,22 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get configEncryptionInput() {
     return this._configEncryption.internalValue;
+  }
+
+  // proxy_config - computed: false, optional: true, required: false
+  private _proxyConfig = new ContainerAwsNodePoolConfigProxyConfigOutputReference(this, "proxy_config");
+  public get proxyConfig() {
+    return this._proxyConfig;
+  }
+  public putProxyConfig(value: ContainerAwsNodePoolConfigProxyConfig) {
+    this._proxyConfig.internalValue = value;
+  }
+  public resetProxyConfig() {
+    this._proxyConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyConfigInput() {
+    return this._proxyConfig.internalValue;
   }
 
   // root_volume - computed: false, optional: true, required: false
@@ -983,7 +1102,7 @@ export class ContainerAwsNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_aws_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

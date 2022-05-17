@@ -51,7 +51,7 @@ export class SpannerDatabaseIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_database_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

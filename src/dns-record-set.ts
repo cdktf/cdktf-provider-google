@@ -30,7 +30,7 @@ export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#rrdatas DnsRecordSet#rrdatas}
   */
-  readonly rrdatas: string[];
+  readonly rrdatas?: string[];
   /**
   * The time-to-live of this record set (seconds).
   * 
@@ -43,6 +43,158 @@ export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#type DnsRecordSet#type}
   */
   readonly type: string;
+  /**
+  * routing_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#routing_policy DnsRecordSet#routing_policy}
+  */
+  readonly routingPolicy?: DnsRecordSetRoutingPolicy;
+}
+export interface DnsRecordSetRoutingPolicyGeo {
+  /**
+  * The location name defined in Google Cloud.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#location DnsRecordSet#location}
+  */
+  readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#rrdatas DnsRecordSet#rrdatas}
+  */
+  readonly rrdatas: string[];
+}
+
+export function dnsRecordSetRoutingPolicyGeoToTerraform(struct?: DnsRecordSetRoutingPolicyGeo | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+    rrdatas: cdktf.listMapper(cdktf.stringToTerraform)(struct!.rrdatas),
+  }
+}
+
+export interface DnsRecordSetRoutingPolicyWrr {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#rrdatas DnsRecordSet#rrdatas}
+  */
+  readonly rrdatas: string[];
+  /**
+  * The ratio of traffic routed to the target.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#weight DnsRecordSet#weight}
+  */
+  readonly weight: number;
+}
+
+export function dnsRecordSetRoutingPolicyWrrToTerraform(struct?: DnsRecordSetRoutingPolicyWrr | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    rrdatas: cdktf.listMapper(cdktf.stringToTerraform)(struct!.rrdatas),
+    weight: cdktf.numberToTerraform(struct!.weight),
+  }
+}
+
+export interface DnsRecordSetRoutingPolicy {
+  /**
+  * geo block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#geo DnsRecordSet#geo}
+  */
+  readonly geo?: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable;
+  /**
+  * wrr block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#wrr DnsRecordSet#wrr}
+  */
+  readonly wrr?: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable;
+}
+
+export function dnsRecordSetRoutingPolicyToTerraform(struct?: DnsRecordSetRoutingPolicyOutputReference | DnsRecordSetRoutingPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    geo: cdktf.listMapper(dnsRecordSetRoutingPolicyGeoToTerraform)(struct!.geo),
+    wrr: cdktf.listMapper(dnsRecordSetRoutingPolicyWrrToTerraform)(struct!.wrr),
+  }
+}
+
+export class DnsRecordSetRoutingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DnsRecordSetRoutingPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._geo !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.geo = this._geo;
+    }
+    if (this._wrr !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.wrr = this._wrr;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsRecordSetRoutingPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._geo = undefined;
+      this._wrr = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._geo = value.geo;
+      this._wrr = value.wrr;
+    }
+  }
+
+  // geo - computed: false, optional: true, required: false
+  private _geo?: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable; 
+  public get geo() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('geo');
+  }
+  public set geo(value: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable) {
+    this._geo = value;
+  }
+  public resetGeo() {
+    this._geo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoInput() {
+    return this._geo;
+  }
+
+  // wrr - computed: false, optional: true, required: false
+  private _wrr?: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable; 
+  public get wrr() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('wrr');
+  }
+  public set wrr(value: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable) {
+    this._wrr = value;
+  }
+  public resetWrr() {
+    this._wrr = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get wrrInput() {
+    return this._wrr;
+  }
 }
 
 /**
@@ -71,7 +223,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
       terraformResourceType: 'google_dns_record_set',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -85,6 +237,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     this._rrdatas = config.rrdatas;
     this._ttl = config.ttl;
     this._type = config.type;
+    this._routingPolicy.internalValue = config.routingPolicy;
   }
 
   // ==========
@@ -138,13 +291,16 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     return this._project;
   }
 
-  // rrdatas - computed: false, optional: false, required: true
+  // rrdatas - computed: false, optional: true, required: false
   private _rrdatas?: string[]; 
   public get rrdatas() {
     return this.getListAttribute('rrdatas');
   }
   public set rrdatas(value: string[]) {
     this._rrdatas = value;
+  }
+  public resetRrdatas() {
+    this._rrdatas = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rrdatasInput() {
@@ -180,6 +336,22 @@ export class DnsRecordSet extends cdktf.TerraformResource {
     return this._type;
   }
 
+  // routing_policy - computed: false, optional: true, required: false
+  private _routingPolicy = new DnsRecordSetRoutingPolicyOutputReference(this, "routing_policy");
+  public get routingPolicy() {
+    return this._routingPolicy;
+  }
+  public putRoutingPolicy(value: DnsRecordSetRoutingPolicy) {
+    this._routingPolicy.internalValue = value;
+  }
+  public resetRoutingPolicy() {
+    this._routingPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingPolicyInput() {
+    return this._routingPolicy.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -192,6 +364,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
       rrdatas: cdktf.listMapper(cdktf.stringToTerraform)(this._rrdatas),
       ttl: cdktf.numberToTerraform(this._ttl),
       type: cdktf.stringToTerraform(this._type),
+      routing_policy: dnsRecordSetRoutingPolicyToTerraform(this._routingPolicy.internalValue),
     };
   }
 }

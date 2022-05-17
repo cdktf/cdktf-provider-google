@@ -640,7 +640,7 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly diskSizeGb?: number;
   /**
-  * Type of the disk attached to each node.
+  * Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#disk_type ContainerNodePool#disk_type}
   */
@@ -1482,7 +1482,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -677,7 +677,7 @@ export class ApikeysKey extends cdktf.TerraformResource {
       terraformResourceType: 'google_apikeys_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -26,6 +26,75 @@ export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMe
   */
   readonly region?: string;
 }
+export interface DataGoogleComputeForwardingRuleServiceDirectoryRegistrations {
+}
+
+export function dataGoogleComputeForwardingRuleServiceDirectoryRegistrationsToTerraform(struct?: DataGoogleComputeForwardingRuleServiceDirectoryRegistrations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeForwardingRuleServiceDirectoryRegistrations | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeForwardingRuleServiceDirectoryRegistrations | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // namespace - computed: true, optional: false, required: false
+  public get namespace() {
+    return this.getStringAttribute('namespace');
+  }
+
+  // service - computed: true, optional: false, required: false
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+}
+
+export class DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsOutputReference {
+    return new DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_forwarding_rule google_compute_forwarding_rule}
@@ -53,7 +122,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -198,6 +267,12 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
+  }
+
+  // service_directory_registrations - computed: true, optional: false, required: false
+  private _serviceDirectoryRegistrations = new DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList(this, "service_directory_registrations", false);
+  public get serviceDirectoryRegistrations() {
+    return this._serviceDirectoryRegistrations;
   }
 
   // service_label - computed: true, optional: false, required: false

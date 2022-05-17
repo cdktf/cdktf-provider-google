@@ -2805,7 +2805,7 @@ export interface ContainerClusterNodeConfig {
   */
   readonly diskSizeGb?: number;
   /**
-  * Type of the disk attached to each node.
+  * Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disk_type ContainerCluster#disk_type}
   */
@@ -3953,7 +3953,7 @@ export interface ContainerClusterNodePoolNodeConfig {
   */
   readonly diskSizeGb?: number;
   /**
-  * Type of the disk attached to each node.
+  * Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disk_type ContainerCluster#disk_type}
   */
@@ -5526,7 +5526,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
