@@ -146,12 +146,44 @@ For more information about forwarding rules, refer to [Forwarding rule concepts]
   */
   readonly target?: string;
   /**
+  * service_directory_registrations block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#service_directory_registrations ComputeForwardingRule#service_directory_registrations}
+  */
+  readonly serviceDirectoryRegistrations?: ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#timeouts ComputeForwardingRule#timeouts}
   */
   readonly timeouts?: ComputeForwardingRuleTimeouts;
 }
+export interface ComputeForwardingRuleServiceDirectoryRegistrations {
+  /**
+  * Service Directory namespace to register the forwarding rule under.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#namespace ComputeForwardingRule#namespace}
+  */
+  readonly namespace?: string;
+  /**
+  * Service Directory service to register the forwarding rule under.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#service ComputeForwardingRule#service}
+  */
+  readonly service?: string;
+}
+
+export function computeForwardingRuleServiceDirectoryRegistrationsToTerraform(struct?: ComputeForwardingRuleServiceDirectoryRegistrations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    namespace: cdktf.stringToTerraform(struct!.namespace),
+    service: cdktf.stringToTerraform(struct!.service),
+  }
+}
+
 export interface ComputeForwardingRuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#create ComputeForwardingRule#create}
@@ -298,7 +330,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -325,6 +357,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     this._serviceLabel = config.serviceLabel;
     this._subnetwork = config.subnetwork;
     this._target = config.target;
+    this._serviceDirectoryRegistrations = config.serviceDirectoryRegistrations;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -658,6 +691,23 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     return this._target;
   }
 
+  // service_directory_registrations - computed: false, optional: true, required: false
+  private _serviceDirectoryRegistrations?: ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable; 
+  public get serviceDirectoryRegistrations() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('service_directory_registrations');
+  }
+  public set serviceDirectoryRegistrations(value: ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable) {
+    this._serviceDirectoryRegistrations = value;
+  }
+  public resetServiceDirectoryRegistrations() {
+    this._serviceDirectoryRegistrations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceDirectoryRegistrationsInput() {
+    return this._serviceDirectoryRegistrations;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeForwardingRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -699,6 +749,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       service_label: cdktf.stringToTerraform(this._serviceLabel),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       target: cdktf.stringToTerraform(this._target),
+      service_directory_registrations: cdktf.listMapper(computeForwardingRuleServiceDirectoryRegistrationsToTerraform)(this._serviceDirectoryRegistrations),
       timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

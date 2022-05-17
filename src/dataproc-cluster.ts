@@ -662,7 +662,7 @@ export interface DataprocClusterClusterConfigMasterConfigDiskConfig {
   */
   readonly bootDiskSizeGb?: number;
   /**
-  * The disk type of the primary disk attached to each node. One of "pd-ssd" or "pd-standard". Defaults to "pd-standard".
+  * The disk type of the primary disk attached to each node. Such as "pd-ssd" or "pd-standard". Defaults to "pd-standard".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_type DataprocCluster#boot_disk_type}
   */
@@ -1005,7 +1005,7 @@ export interface DataprocClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
   */
   readonly bootDiskSizeGb?: number;
   /**
-  * The disk type of the primary disk attached to each preemptible worker node. One of "pd-ssd" or "pd-standard". Defaults to "pd-standard".
+  * The disk type of the primary disk attached to each preemptible worker node. Such as "pd-ssd" or "pd-standard". Defaults to "pd-standard".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_type DataprocCluster#boot_disk_type}
   */
@@ -1950,7 +1950,7 @@ export interface DataprocClusterClusterConfigWorkerConfigDiskConfig {
   */
   readonly bootDiskSizeGb?: number;
   /**
-  * The disk type of the primary disk attached to each node. One of "pd-ssd" or "pd-standard". Defaults to "pd-standard".
+  * The disk type of the primary disk attached to each node. Such as "pd-ssd" or "pd-standard". Defaults to "pd-standard".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#boot_disk_type DataprocCluster#boot_disk_type}
   */
@@ -2794,7 +2794,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -26,6 +26,12 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly description?: string;
   /**
+  * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry for storing images built with Cloud Build.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#docker_repository CloudfunctionsFunction#docker_repository}
+  */
+  readonly dockerRepository?: string;
+  /**
   * Name of the function that will be executed when the Google Cloud Function is triggered.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#entry_point CloudfunctionsFunction#entry_point}
@@ -49,6 +55,12 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#ingress_settings CloudfunctionsFunction#ingress_settings}
   */
   readonly ingressSettings?: string;
+  /**
+  * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#kms_key_name CloudfunctionsFunction#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
   /**
   * A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
   * 
@@ -695,7 +707,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.20.0',
+        providerVersion: '4.21.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -706,10 +718,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._availableMemoryMb = config.availableMemoryMb;
     this._buildEnvironmentVariables = config.buildEnvironmentVariables;
     this._description = config.description;
+    this._dockerRepository = config.dockerRepository;
     this._entryPoint = config.entryPoint;
     this._environmentVariables = config.environmentVariables;
     this._httpsTriggerUrl = config.httpsTriggerUrl;
     this._ingressSettings = config.ingressSettings;
+    this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
     this._maxInstances = config.maxInstances;
     this._minInstances = config.minInstances;
@@ -783,6 +797,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     return this._description;
   }
 
+  // docker_repository - computed: false, optional: true, required: false
+  private _dockerRepository?: string; 
+  public get dockerRepository() {
+    return this.getStringAttribute('docker_repository');
+  }
+  public set dockerRepository(value: string) {
+    this._dockerRepository = value;
+  }
+  public resetDockerRepository() {
+    this._dockerRepository = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dockerRepositoryInput() {
+    return this._dockerRepository;
+  }
+
   // entry_point - computed: false, optional: true, required: false
   private _entryPoint?: string; 
   public get entryPoint() {
@@ -850,6 +880,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ingressSettingsInput() {
     return this._ingressSettings;
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -1161,10 +1207,12 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       available_memory_mb: cdktf.numberToTerraform(this._availableMemoryMb),
       build_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._buildEnvironmentVariables),
       description: cdktf.stringToTerraform(this._description),
+      docker_repository: cdktf.stringToTerraform(this._dockerRepository),
       entry_point: cdktf.stringToTerraform(this._entryPoint),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       https_trigger_url: cdktf.stringToTerraform(this._httpsTriggerUrl),
       ingress_settings: cdktf.stringToTerraform(this._ingressSettings),
+      kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       max_instances: cdktf.numberToTerraform(this._maxInstances),
       min_instances: cdktf.numberToTerraform(this._minInstances),
