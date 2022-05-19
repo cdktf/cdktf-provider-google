@@ -582,7 +582,7 @@ builtins@^5.0.0:
   dependencies:
     semver "^7.0.0"
 
-cacache@^16.0.0, cacache@^16.0.2:
+cacache@^16.0.0, cacache@^16.1.0:
   version "16.1.0"
   resolved "https://registry.yarnpkg.com/cacache/-/cacache-16.1.0.tgz#87a6bae558a511c9cb2a13768073e240ca76153a"
   integrity sha512-Pk4aQkwCW82A4jGKFvcGkQFqZcMspfP9YWq9Pr87/ldDvlWf718zeI6KWCdKt/jeihu6BytHRUicJPB1K2k8EQ==
@@ -926,9 +926,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 constructs@^10.0.0, constructs@^10.0.25:
-  version "10.1.10"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.10.tgz#8953af15f9fa7d5969606f28d6da667cc77fbd3e"
-  integrity sha512-r6d3QYygh+nveBJK9Iu70XYFVNzUOKIeqQP4uYwyOsQcTlmGydpGdgePPSxmBb80Zv2ZiFoKI87Jt2DmLGoXaA==
+  version "10.1.11"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.11.tgz#2e55e100b1dc0723f0ff99cec3025702f3ba0676"
+  integrity sha512-VojJd35T7VY3mq9DExDWKxXdOB2WJZK4YtQlrljwP8pBcH9pAw8RzFf358KN8aRj1Bi5oAY+fOpt3DFsPnrm7w==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2264,7 +2264,7 @@ jsii-docgen@^1.8.110:
     jsii-reflect "^1.30.0"
     yargs "^16.2.0"
 
-jsii-pacmak@^1.55.1, jsii-pacmak@^1.58.0, jsii-pacmak@^1.59.0:
+jsii-pacmak@^1.55.1, jsii-pacmak@^1.59.0:
   version "1.59.0"
   resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.59.0.tgz#2e9ffafe1e343de74a20cfe1949e1d995962ca10"
   integrity sha512-/ncoEz33NdxPYTFGp/FQf3Y+VqRp5PnE26Jjjf2k48dF3fzFY5axfujNdRO2KfEp1/GsLu8+EdSOpn7DxH09mA==
@@ -2315,17 +2315,17 @@ jsii-rosetta@^1.55.1, jsii-rosetta@^1.59.0:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.520:
-  version "0.1.562"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.562.tgz#0a08f0fe21c84f951c8e4af169ab7f99db7f7a4e"
-  integrity sha512-nXDcgRv5OsBNsU3YMPWLKiAgoTtcIF4GnUTFe0M8Qi4kVvH7jND9uD5ge1FksfwZdvbS3kSZQO9JrJRIgcXVOg==
+  version "0.1.563"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.563.tgz#eecd9a5af47556725b48d207e241098dd96472c8"
+  integrity sha512-njEi6974vnNDTB0SLSBOiHgIYtOWZAWZsOVtKpEfvhyqaBq/qnxiPsUVXw+4riBXeLp7OnYBlmkU3vUiFFCVQg==
   dependencies:
     fs-extra "^9.1.0"
-    jsii "^1.58.0"
-    jsii-pacmak "^1.58.0"
+    jsii "^1.59.0"
+    jsii-pacmak "^1.59.0"
     ncp "^2.0.0"
     yargs "^15.4.1"
 
-jsii@1.59.0, jsii@^1.53.0, jsii@^1.55.1, jsii@^1.58.0:
+jsii@1.59.0, jsii@^1.53.0, jsii@^1.55.1, jsii@^1.59.0:
   version "1.59.0"
   resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.59.0.tgz#65d3454311f931345b4996177135321f8bfd506d"
   integrity sha512-vTVMRN5ViX1aCe0K7P8ECKi2CseNDEcvIWvw4xyg+nCg9a73XZ16ONOqBAGjKUnJv2gOsecsb1FyuqcRbfs+zQ==
@@ -2592,12 +2592,12 @@ make-dir@^3.0.0:
     semver "^6.0.0"
 
 make-fetch-happen@^10.0.3, make-fetch-happen@^10.0.6:
-  version "10.1.3"
-  resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-10.1.3.tgz#d7ecd4a22563b2c05b74735eda46569da26a46f6"
-  integrity sha512-s/UjmGjUHn9m52cctFhN2ITObbT+axoUhgeir8xGrOlPbKDyJsdhQzb8PGncPQQ28uduHybFJ6Iumy2OZnreXw==
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-10.1.4.tgz#b68a64367d2c402f24edc48308ff193d11fc2618"
+  integrity sha512-hU1w68PqfH7FdMgjbiziJoACY0edlbIZ0CyKnpcEruVdCjsUrN+qoenOCIayNqVBK7toSWwbDxvQlrhH0gjRdg==
   dependencies:
     agentkeepalive "^4.2.1"
-    cacache "^16.0.2"
+    cacache "^16.1.0"
     http-cache-semantics "^4.1.0"
     http-proxy-agent "^5.0.0"
     https-proxy-agent "^5.0.0"
@@ -3271,10 +3271,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.56.16:
-  version "0.56.16"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.56.16.tgz#9dd741becf57b48bf1bd5b1894efcfda70bae477"
-  integrity sha512-t0miiqGtUXnn2Y0kRPd/LdbW1QTh8UL9tgNRbzay9aD5QejqzU0qYkW3Qnf6IzCdXKdpMktnz4P5yu4zy33L6A==
+projen@^0.56.17:
+  version "0.56.17"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.56.17.tgz#f09b0b3ef2c150930fa21473d066d67a611a8e00"
+  integrity sha512-qDcQlbTxzgCtJq0V5BTSzAaMTi00Qw5dk9bjJHEcHQqCM14PUGJMEQR2FzRLD848pg2D3LSdSkRpf/c0Gdr5hg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
