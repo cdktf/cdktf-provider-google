@@ -109,7 +109,7 @@ export class DataGoogleMonitoringUptimeCheckIps extends cdktf.TerraformDataSourc
       terraformResourceType: 'google_monitoring_uptime_check_ips',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

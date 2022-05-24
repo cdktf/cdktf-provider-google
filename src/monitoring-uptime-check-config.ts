@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values: ["STATIC_IP_CHECKERS", "VPC_CHECKERS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#checker_type MonitoringUptimeCheckConfig#checker_type}
+  */
+  readonly checkerType?: string;
+  /**
   * A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#display_name MonitoringUptimeCheckConfig#display_name}
@@ -912,7 +918,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_uptime_check_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -920,6 +926,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._checkerType = config.checkerType;
     this._displayName = config.displayName;
     this._period = config.period;
     this._project = config.project;
@@ -936,6 +943,22 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // checker_type - computed: true, optional: true, required: false
+  private _checkerType?: string; 
+  public get checkerType() {
+    return this.getStringAttribute('checker_type');
+  }
+  public set checkerType(value: string) {
+    this._checkerType = value;
+  }
+  public resetCheckerType() {
+    this._checkerType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get checkerTypeInput() {
+    return this._checkerType;
+  }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName?: string; 
@@ -1129,6 +1152,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      checker_type: cdktf.stringToTerraform(this._checkerType),
       display_name: cdktf.stringToTerraform(this._displayName),
       period: cdktf.stringToTerraform(this._period),
       project: cdktf.stringToTerraform(this._project),

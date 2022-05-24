@@ -18,6 +18,10 @@ export interface PrivatecaCertificateAuthorityConfig extends cdktf.TerraformMeta
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#desired_state PrivatecaCertificateAuthority#desired_state}
+  */
+  readonly desiredState?: string;
+  /**
   * The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
 such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
 (such as 'gs://') or suffixes (such as '.googleapis.com'). For example, to use a bucket named
@@ -2113,7 +2117,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2123,6 +2127,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     });
     this._certificateAuthorityId = config.certificateAuthorityId;
     this._deletionProtection = config.deletionProtection;
+    this._desiredState = config.desiredState;
     this._gcsBucket = config.gcsBucket;
     this._ignoreActiveCertificatesOnDeletion = config.ignoreActiveCertificatesOnDeletion;
     this._labels = config.labels;
@@ -2178,6 +2183,22 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get deletionProtectionInput() {
     return this._deletionProtection;
+  }
+
+  // desired_state - computed: false, optional: true, required: false
+  private _desiredState?: string; 
+  public get desiredState() {
+    return this.getStringAttribute('desired_state');
+  }
+  public set desiredState(value: string) {
+    this._desiredState = value;
+  }
+  public resetDesiredState() {
+    this._desiredState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get desiredStateInput() {
+    return this._desiredState;
   }
 
   // gcs_bucket - computed: false, optional: true, required: false
@@ -2377,6 +2398,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     return {
       certificate_authority_id: cdktf.stringToTerraform(this._certificateAuthorityId),
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
+      desired_state: cdktf.stringToTerraform(this._desiredState),
       gcs_bucket: cdktf.stringToTerraform(this._gcsBucket),
       ignore_active_certificates_on_deletion: cdktf.booleanToTerraform(this._ignoreActiveCertificatesOnDeletion),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),

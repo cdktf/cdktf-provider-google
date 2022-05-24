@@ -174,7 +174,7 @@ export class CloudfunctionsFunctionIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

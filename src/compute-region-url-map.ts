@@ -5356,7 +5356,7 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_url_map',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

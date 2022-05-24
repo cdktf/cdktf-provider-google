@@ -44,6 +44,10 @@ export interface GoogleProviderConfig {
   */
   readonly bigQueryCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}
+  */
+  readonly bigqueryConnectionCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}
   */
   readonly bigqueryDataTransferCustomEndpoint?: string;
@@ -67,6 +71,10 @@ export interface GoogleProviderConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}
   */
   readonly binaryAuthorizationCustomEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}
+  */
+  readonly certificateManagerCustomEndpoint?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}
   */
@@ -111,6 +119,10 @@ export interface GoogleProviderConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}
   */
   readonly cloudTasksCustomEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}
+  */
+  readonly clouddeployCustomEndpoint?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}
   */
@@ -328,9 +340,9 @@ export interface GoogleProviderConfig {
   */
   readonly resourceManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_v2_custom_endpoint GoogleProvider#resource_manager_v2_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}
   */
-  readonly resourceManagerV2CustomEndpoint?: string;
+  readonly resourceManagerV3CustomEndpoint?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#scopes GoogleProvider#scopes}
   */
@@ -465,7 +477,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -479,12 +491,14 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._appEngineCustomEndpoint = config.appEngineCustomEndpoint;
     this._assuredWorkloadsCustomEndpoint = config.assuredWorkloadsCustomEndpoint;
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
+    this._bigqueryConnectionCustomEndpoint = config.bigqueryConnectionCustomEndpoint;
     this._bigqueryDataTransferCustomEndpoint = config.bigqueryDataTransferCustomEndpoint;
     this._bigqueryReservationCustomEndpoint = config.bigqueryReservationCustomEndpoint;
     this._bigtableCustomEndpoint = config.bigtableCustomEndpoint;
     this._billingCustomEndpoint = config.billingCustomEndpoint;
     this._billingProject = config.billingProject;
     this._binaryAuthorizationCustomEndpoint = config.binaryAuthorizationCustomEndpoint;
+    this._certificateManagerCustomEndpoint = config.certificateManagerCustomEndpoint;
     this._cloudAssetCustomEndpoint = config.cloudAssetCustomEndpoint;
     this._cloudBillingCustomEndpoint = config.cloudBillingCustomEndpoint;
     this._cloudBuildCustomEndpoint = config.cloudBuildCustomEndpoint;
@@ -496,6 +510,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._cloudRunCustomEndpoint = config.cloudRunCustomEndpoint;
     this._cloudSchedulerCustomEndpoint = config.cloudSchedulerCustomEndpoint;
     this._cloudTasksCustomEndpoint = config.cloudTasksCustomEndpoint;
+    this._clouddeployCustomEndpoint = config.clouddeployCustomEndpoint;
     this._composerCustomEndpoint = config.composerCustomEndpoint;
     this._computeCustomEndpoint = config.computeCustomEndpoint;
     this._containerAnalysisCustomEndpoint = config.containerAnalysisCustomEndpoint;
@@ -550,7 +565,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._requestReason = config.requestReason;
     this._requestTimeout = config.requestTimeout;
     this._resourceManagerCustomEndpoint = config.resourceManagerCustomEndpoint;
-    this._resourceManagerV2CustomEndpoint = config.resourceManagerV2CustomEndpoint;
+    this._resourceManagerV3CustomEndpoint = config.resourceManagerV3CustomEndpoint;
     this._scopes = config.scopes;
     this._secretManagerCustomEndpoint = config.secretManagerCustomEndpoint;
     this._securityCenterCustomEndpoint = config.securityCenterCustomEndpoint;
@@ -721,6 +736,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._bigQueryCustomEndpoint;
   }
 
+  // bigquery_connection_custom_endpoint - computed: false, optional: true, required: false
+  private _bigqueryConnectionCustomEndpoint?: string; 
+  public get bigqueryConnectionCustomEndpoint() {
+    return this._bigqueryConnectionCustomEndpoint;
+  }
+  public set bigqueryConnectionCustomEndpoint(value: string | undefined) {
+    this._bigqueryConnectionCustomEndpoint = value;
+  }
+  public resetBigqueryConnectionCustomEndpoint() {
+    this._bigqueryConnectionCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryConnectionCustomEndpointInput() {
+    return this._bigqueryConnectionCustomEndpoint;
+  }
+
   // bigquery_data_transfer_custom_endpoint - computed: false, optional: true, required: false
   private _bigqueryDataTransferCustomEndpoint?: string; 
   public get bigqueryDataTransferCustomEndpoint() {
@@ -815,6 +846,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get binaryAuthorizationCustomEndpointInput() {
     return this._binaryAuthorizationCustomEndpoint;
+  }
+
+  // certificate_manager_custom_endpoint - computed: false, optional: true, required: false
+  private _certificateManagerCustomEndpoint?: string; 
+  public get certificateManagerCustomEndpoint() {
+    return this._certificateManagerCustomEndpoint;
+  }
+  public set certificateManagerCustomEndpoint(value: string | undefined) {
+    this._certificateManagerCustomEndpoint = value;
+  }
+  public resetCertificateManagerCustomEndpoint() {
+    this._certificateManagerCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateManagerCustomEndpointInput() {
+    return this._certificateManagerCustomEndpoint;
   }
 
   // cloud_asset_custom_endpoint - computed: false, optional: true, required: false
@@ -991,6 +1038,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get cloudTasksCustomEndpointInput() {
     return this._cloudTasksCustomEndpoint;
+  }
+
+  // clouddeploy_custom_endpoint - computed: false, optional: true, required: false
+  private _clouddeployCustomEndpoint?: string; 
+  public get clouddeployCustomEndpoint() {
+    return this._clouddeployCustomEndpoint;
+  }
+  public set clouddeployCustomEndpoint(value: string | undefined) {
+    this._clouddeployCustomEndpoint = value;
+  }
+  public resetClouddeployCustomEndpoint() {
+    this._clouddeployCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clouddeployCustomEndpointInput() {
+    return this._clouddeployCustomEndpoint;
   }
 
   // composer_custom_endpoint - computed: false, optional: true, required: false
@@ -1857,20 +1920,20 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._resourceManagerCustomEndpoint;
   }
 
-  // resource_manager_v2_custom_endpoint - computed: false, optional: true, required: false
-  private _resourceManagerV2CustomEndpoint?: string; 
-  public get resourceManagerV2CustomEndpoint() {
-    return this._resourceManagerV2CustomEndpoint;
+  // resource_manager_v3_custom_endpoint - computed: false, optional: true, required: false
+  private _resourceManagerV3CustomEndpoint?: string; 
+  public get resourceManagerV3CustomEndpoint() {
+    return this._resourceManagerV3CustomEndpoint;
   }
-  public set resourceManagerV2CustomEndpoint(value: string | undefined) {
-    this._resourceManagerV2CustomEndpoint = value;
+  public set resourceManagerV3CustomEndpoint(value: string | undefined) {
+    this._resourceManagerV3CustomEndpoint = value;
   }
-  public resetResourceManagerV2CustomEndpoint() {
-    this._resourceManagerV2CustomEndpoint = undefined;
+  public resetResourceManagerV3CustomEndpoint() {
+    this._resourceManagerV3CustomEndpoint = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get resourceManagerV2CustomEndpointInput() {
-    return this._resourceManagerV2CustomEndpoint;
+  public get resourceManagerV3CustomEndpointInput() {
+    return this._resourceManagerV3CustomEndpoint;
   }
 
   // scopes - computed: false, optional: true, required: false
@@ -2208,12 +2271,14 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       app_engine_custom_endpoint: cdktf.stringToTerraform(this._appEngineCustomEndpoint),
       assured_workloads_custom_endpoint: cdktf.stringToTerraform(this._assuredWorkloadsCustomEndpoint),
       big_query_custom_endpoint: cdktf.stringToTerraform(this._bigQueryCustomEndpoint),
+      bigquery_connection_custom_endpoint: cdktf.stringToTerraform(this._bigqueryConnectionCustomEndpoint),
       bigquery_data_transfer_custom_endpoint: cdktf.stringToTerraform(this._bigqueryDataTransferCustomEndpoint),
       bigquery_reservation_custom_endpoint: cdktf.stringToTerraform(this._bigqueryReservationCustomEndpoint),
       bigtable_custom_endpoint: cdktf.stringToTerraform(this._bigtableCustomEndpoint),
       billing_custom_endpoint: cdktf.stringToTerraform(this._billingCustomEndpoint),
       billing_project: cdktf.stringToTerraform(this._billingProject),
       binary_authorization_custom_endpoint: cdktf.stringToTerraform(this._binaryAuthorizationCustomEndpoint),
+      certificate_manager_custom_endpoint: cdktf.stringToTerraform(this._certificateManagerCustomEndpoint),
       cloud_asset_custom_endpoint: cdktf.stringToTerraform(this._cloudAssetCustomEndpoint),
       cloud_billing_custom_endpoint: cdktf.stringToTerraform(this._cloudBillingCustomEndpoint),
       cloud_build_custom_endpoint: cdktf.stringToTerraform(this._cloudBuildCustomEndpoint),
@@ -2225,6 +2290,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       cloud_run_custom_endpoint: cdktf.stringToTerraform(this._cloudRunCustomEndpoint),
       cloud_scheduler_custom_endpoint: cdktf.stringToTerraform(this._cloudSchedulerCustomEndpoint),
       cloud_tasks_custom_endpoint: cdktf.stringToTerraform(this._cloudTasksCustomEndpoint),
+      clouddeploy_custom_endpoint: cdktf.stringToTerraform(this._clouddeployCustomEndpoint),
       composer_custom_endpoint: cdktf.stringToTerraform(this._composerCustomEndpoint),
       compute_custom_endpoint: cdktf.stringToTerraform(this._computeCustomEndpoint),
       container_analysis_custom_endpoint: cdktf.stringToTerraform(this._containerAnalysisCustomEndpoint),
@@ -2279,7 +2345,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       request_reason: cdktf.stringToTerraform(this._requestReason),
       request_timeout: cdktf.stringToTerraform(this._requestTimeout),
       resource_manager_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerCustomEndpoint),
-      resource_manager_v2_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerV2CustomEndpoint),
+      resource_manager_v3_custom_endpoint: cdktf.stringToTerraform(this._resourceManagerV3CustomEndpoint),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
       secret_manager_custom_endpoint: cdktf.stringToTerraform(this._secretManagerCustomEndpoint),
       security_center_custom_endpoint: cdktf.stringToTerraform(this._securityCenterCustomEndpoint),

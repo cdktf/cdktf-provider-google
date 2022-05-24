@@ -489,7 +489,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -540,6 +540,11 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   private _eventTrigger = new DataGoogleCloudfunctionsFunctionEventTriggerList(this, "event_trigger", false);
   public get eventTrigger() {
     return this._eventTrigger;
+  }
+
+  // https_trigger_security_level - computed: true, optional: false, required: false
+  public get httpsTriggerSecurityLevel() {
+    return this.getStringAttribute('https_trigger_security_level');
   }
 
   // https_trigger_url - computed: true, optional: false, required: false
