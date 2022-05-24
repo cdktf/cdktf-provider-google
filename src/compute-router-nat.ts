@@ -15,6 +15,16 @@ valid static external IPs that have been assigned to the NAT.
   */
   readonly drainNatIps?: string[];
   /**
+  * Enable Dynamic Port Allocation.
+If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. 
+If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+
+Mutually exclusive with enableEndpointIndependentMapping.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#enable_dynamic_port_allocation ComputeRouterNat#enable_dynamic_port_allocation}
+  */
+  readonly enableDynamicPortAllocation?: boolean | cdktf.IResolvable;
+  /**
   * Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
   * 
@@ -400,7 +410,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -409,6 +419,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._drainNatIps = config.drainNatIps;
+    this._enableDynamicPortAllocation = config.enableDynamicPortAllocation;
     this._enableEndpointIndependentMapping = config.enableEndpointIndependentMapping;
     this._icmpIdleTimeoutSec = config.icmpIdleTimeoutSec;
     this._minPortsPerVm = config.minPortsPerVm;
@@ -445,6 +456,22 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get drainNatIpsInput() {
     return this._drainNatIps;
+  }
+
+  // enable_dynamic_port_allocation - computed: false, optional: true, required: false
+  private _enableDynamicPortAllocation?: boolean | cdktf.IResolvable; 
+  public get enableDynamicPortAllocation() {
+    return this.getBooleanAttribute('enable_dynamic_port_allocation');
+  }
+  public set enableDynamicPortAllocation(value: boolean | cdktf.IResolvable) {
+    this._enableDynamicPortAllocation = value;
+  }
+  public resetEnableDynamicPortAllocation() {
+    this._enableDynamicPortAllocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableDynamicPortAllocationInput() {
+    return this._enableDynamicPortAllocation;
   }
 
   // enable_endpoint_independent_mapping - computed: false, optional: true, required: false
@@ -704,6 +731,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       drain_nat_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._drainNatIps),
+      enable_dynamic_port_allocation: cdktf.booleanToTerraform(this._enableDynamicPortAllocation),
       enable_endpoint_independent_mapping: cdktf.booleanToTerraform(this._enableEndpointIndependentMapping),
       icmp_idle_timeout_sec: cdktf.numberToTerraform(this._icmpIdleTimeoutSec),
       min_ports_per_vm: cdktf.numberToTerraform(this._minPortsPerVm),

@@ -440,6 +440,70 @@ export class DataGoogleSqlDatabaseInstanceServerCaCertList extends cdktf.Complex
     return new DataGoogleSqlDatabaseInstanceServerCaCertOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // domain - computed: true, optional: false, required: false
+  public get domain() {
+    return this.getStringAttribute('domain');
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleSqlDatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
 }
 
@@ -1099,6 +1163,12 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
     return this.getStringAttribute('activation_policy');
   }
 
+  // active_directory_config - computed: true, optional: false, required: false
+  private _activeDirectoryConfig = new DataGoogleSqlDatabaseInstanceSettingsActiveDirectoryConfigList(this, "active_directory_config", false);
+  public get activeDirectoryConfig() {
+    return this._activeDirectoryConfig;
+  }
+
   // availability_type - computed: true, optional: false, required: false
   public get availabilityType() {
     return this.getStringAttribute('availability_type');
@@ -1231,7 +1301,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

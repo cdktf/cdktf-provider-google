@@ -1040,7 +1040,7 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_loss_prevention_stored_info_type',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

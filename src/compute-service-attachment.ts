@@ -28,6 +28,15 @@ attachment.
   */
   readonly description?: string;
   /**
+  * If specified, the domain name will be used during the integration between
+the PSC connected endpoints and the Cloud DNS. For example, this is a
+valid domain name: "p.mycompany.com.". Current max number of domain names
+supported is 1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#domain_names ComputeServiceAttachment#domain_names}
+  */
+  readonly domainNames?: string[];
+  /**
   * If true, enable the proxy protocol which is for supplying client TCP/IP
 address data in TCP connections that traverse proxies on their way to
 destination servers.
@@ -324,7 +333,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_service_attachment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -335,6 +344,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
     this._connectionPreference = config.connectionPreference;
     this._consumerRejectLists = config.consumerRejectLists;
     this._description = config.description;
+    this._domainNames = config.domainNames;
     this._enableProxyProtocol = config.enableProxyProtocol;
     this._name = config.name;
     this._natSubnets = config.natSubnets;
@@ -398,6 +408,22 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // domain_names - computed: false, optional: true, required: false
+  private _domainNames?: string[]; 
+  public get domainNames() {
+    return this.getListAttribute('domain_names');
+  }
+  public set domainNames(value: string[]) {
+    this._domainNames = value;
+  }
+  public resetDomainNames() {
+    this._domainNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNamesInput() {
+    return this._domainNames;
   }
 
   // enable_proxy_protocol - computed: false, optional: false, required: true
@@ -541,6 +567,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
       connection_preference: cdktf.stringToTerraform(this._connectionPreference),
       consumer_reject_lists: cdktf.listMapper(cdktf.stringToTerraform)(this._consumerRejectLists),
       description: cdktf.stringToTerraform(this._description),
+      domain_names: cdktf.listMapper(cdktf.stringToTerraform)(this._domainNames),
       enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
       name: cdktf.stringToTerraform(this._name),
       nat_subnets: cdktf.listMapper(cdktf.stringToTerraform)(this._natSubnets),

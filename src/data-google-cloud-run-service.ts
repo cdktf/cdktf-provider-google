@@ -1693,6 +1693,16 @@ export class DataGoogleCloudRunServiceTrafficOutputReference extends cdktf.Compl
   public get revisionName() {
     return this.getStringAttribute('revision_name');
   }
+
+  // tag - computed: true, optional: false, required: false
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
+  }
 }
 
 export class DataGoogleCloudRunServiceTrafficList extends cdktf.ComplexList {
@@ -1740,7 +1750,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_run_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

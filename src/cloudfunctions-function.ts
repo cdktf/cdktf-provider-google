@@ -44,6 +44,12 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
+  * The security level for the function. Defaults to SECURE_OPTIONAL. Valid only if trigger_http is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#https_trigger_security_level CloudfunctionsFunction#https_trigger_security_level}
+  */
+  readonly httpsTriggerSecurityLevel?: string;
+  /**
   * URL which triggers function execution. Returned only if trigger_http is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#https_trigger_url CloudfunctionsFunction#https_trigger_url}
@@ -707,7 +713,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.21.0',
+        providerVersion: '4.22.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -721,6 +727,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._dockerRepository = config.dockerRepository;
     this._entryPoint = config.entryPoint;
     this._environmentVariables = config.environmentVariables;
+    this._httpsTriggerSecurityLevel = config.httpsTriggerSecurityLevel;
     this._httpsTriggerUrl = config.httpsTriggerUrl;
     this._ingressSettings = config.ingressSettings;
     this._kmsKeyName = config.kmsKeyName;
@@ -843,6 +850,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get environmentVariablesInput() {
     return this._environmentVariables;
+  }
+
+  // https_trigger_security_level - computed: true, optional: true, required: false
+  private _httpsTriggerSecurityLevel?: string; 
+  public get httpsTriggerSecurityLevel() {
+    return this.getStringAttribute('https_trigger_security_level');
+  }
+  public set httpsTriggerSecurityLevel(value: string) {
+    this._httpsTriggerSecurityLevel = value;
+  }
+  public resetHttpsTriggerSecurityLevel() {
+    this._httpsTriggerSecurityLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsTriggerSecurityLevelInput() {
+    return this._httpsTriggerSecurityLevel;
   }
 
   // https_trigger_url - computed: true, optional: true, required: false
@@ -1210,6 +1233,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       docker_repository: cdktf.stringToTerraform(this._dockerRepository),
       entry_point: cdktf.stringToTerraform(this._entryPoint),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
+      https_trigger_security_level: cdktf.stringToTerraform(this._httpsTriggerSecurityLevel),
       https_trigger_url: cdktf.stringToTerraform(this._httpsTriggerUrl),
       ingress_settings: cdktf.stringToTerraform(this._ingressSettings),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
