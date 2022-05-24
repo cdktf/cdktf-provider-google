@@ -24,6 +24,13 @@ export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#id DnsManagedZone#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A set of key/value label pairs to assign to this ManagedZone.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#labels DnsManagedZone#labels}
@@ -123,6 +130,152 @@ export function dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform(struct?: Dn
   }
 }
 
+export class DnsManagedZoneDnssecConfigDefaultKeySpecsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DnsManagedZoneDnssecConfigDefaultKeySpecs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._algorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.algorithm = this._algorithm;
+    }
+    if (this._keyLength !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyLength = this._keyLength;
+    }
+    if (this._keyType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyType = this._keyType;
+    }
+    if (this._kind !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kind = this._kind;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZoneDnssecConfigDefaultKeySpecs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._algorithm = undefined;
+      this._keyLength = undefined;
+      this._keyType = undefined;
+      this._kind = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._algorithm = value.algorithm;
+      this._keyLength = value.keyLength;
+      this._keyType = value.keyType;
+      this._kind = value.kind;
+    }
+  }
+
+  // algorithm - computed: false, optional: true, required: false
+  private _algorithm?: string; 
+  public get algorithm() {
+    return this.getStringAttribute('algorithm');
+  }
+  public set algorithm(value: string) {
+    this._algorithm = value;
+  }
+  public resetAlgorithm() {
+    this._algorithm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get algorithmInput() {
+    return this._algorithm;
+  }
+
+  // key_length - computed: false, optional: true, required: false
+  private _keyLength?: number; 
+  public get keyLength() {
+    return this.getNumberAttribute('key_length');
+  }
+  public set keyLength(value: number) {
+    this._keyLength = value;
+  }
+  public resetKeyLength() {
+    this._keyLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyLengthInput() {
+    return this._keyLength;
+  }
+
+  // key_type - computed: false, optional: true, required: false
+  private _keyType?: string; 
+  public get keyType() {
+    return this.getStringAttribute('key_type');
+  }
+  public set keyType(value: string) {
+    this._keyType = value;
+  }
+  public resetKeyType() {
+    this._keyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyTypeInput() {
+    return this._keyType;
+  }
+
+  // kind - computed: false, optional: true, required: false
+  private _kind?: string; 
+  public get kind() {
+    return this.getStringAttribute('kind');
+  }
+  public set kind(value: string) {
+    this._kind = value;
+  }
+  public resetKind() {
+    this._kind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind;
+  }
+}
+
+export class DnsManagedZoneDnssecConfigDefaultKeySpecsList extends cdktf.ComplexList {
+  public internalValue? : DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DnsManagedZoneDnssecConfigDefaultKeySpecsOutputReference {
+    return new DnsManagedZoneDnssecConfigDefaultKeySpecsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DnsManagedZoneDnssecConfig {
   /**
   * Identifies what kind of resource this is
@@ -190,9 +343,9 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.state = this._state;
     }
-    if (this._defaultKeySpecs !== undefined) {
+    if (this._defaultKeySpecs?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.defaultKeySpecs = this._defaultKeySpecs;
+      internalValueResult.defaultKeySpecs = this._defaultKeySpecs?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -203,14 +356,14 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
       this._kind = undefined;
       this._nonExistence = undefined;
       this._state = undefined;
-      this._defaultKeySpecs = undefined;
+      this._defaultKeySpecs.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._kind = value.kind;
       this._nonExistence = value.nonExistence;
       this._state = value.state;
-      this._defaultKeySpecs = value.defaultKeySpecs;
+      this._defaultKeySpecs.internalValue = value.defaultKeySpecs;
     }
   }
 
@@ -263,20 +416,19 @@ export class DnsManagedZoneDnssecConfigOutputReference extends cdktf.ComplexObje
   }
 
   // default_key_specs - computed: false, optional: true, required: false
-  private _defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable; 
+  private _defaultKeySpecs = new DnsManagedZoneDnssecConfigDefaultKeySpecsList(this, "default_key_specs", false);
   public get defaultKeySpecs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('default_key_specs');
+    return this._defaultKeySpecs;
   }
-  public set defaultKeySpecs(value: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable) {
-    this._defaultKeySpecs = value;
+  public putDefaultKeySpecs(value: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable) {
+    this._defaultKeySpecs.internalValue = value;
   }
   public resetDefaultKeySpecs() {
-    this._defaultKeySpecs = undefined;
+    this._defaultKeySpecs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultKeySpecsInput() {
-    return this._defaultKeySpecs;
+    return this._defaultKeySpecs.internalValue;
   }
 }
 export interface DnsManagedZoneForwardingConfigTargetNameServers {
@@ -307,6 +459,105 @@ export function dnsManagedZoneForwardingConfigTargetNameServersToTerraform(struc
   }
 }
 
+export class DnsManagedZoneForwardingConfigTargetNameServersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DnsManagedZoneForwardingConfigTargetNameServers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._forwardingPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardingPath = this._forwardingPath;
+    }
+    if (this._ipv4Address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipv4Address = this._ipv4Address;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZoneForwardingConfigTargetNameServers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._forwardingPath = undefined;
+      this._ipv4Address = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._forwardingPath = value.forwardingPath;
+      this._ipv4Address = value.ipv4Address;
+    }
+  }
+
+  // forwarding_path - computed: false, optional: true, required: false
+  private _forwardingPath?: string; 
+  public get forwardingPath() {
+    return this.getStringAttribute('forwarding_path');
+  }
+  public set forwardingPath(value: string) {
+    this._forwardingPath = value;
+  }
+  public resetForwardingPath() {
+    this._forwardingPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardingPathInput() {
+    return this._forwardingPath;
+  }
+
+  // ipv4_address - computed: false, optional: false, required: true
+  private _ipv4Address?: string; 
+  public get ipv4Address() {
+    return this.getStringAttribute('ipv4_address');
+  }
+  public set ipv4Address(value: string) {
+    this._ipv4Address = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv4AddressInput() {
+    return this._ipv4Address;
+  }
+}
+
+export class DnsManagedZoneForwardingConfigTargetNameServersList extends cdktf.ComplexList {
+  public internalValue? : DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DnsManagedZoneForwardingConfigTargetNameServersOutputReference {
+    return new DnsManagedZoneForwardingConfigTargetNameServersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DnsManagedZoneForwardingConfig {
   /**
   * target_name_servers block
@@ -340,9 +591,9 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   public get internalValue(): DnsManagedZoneForwardingConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._targetNameServers !== undefined) {
+    if (this._targetNameServers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.targetNameServers = this._targetNameServers;
+      internalValueResult.targetNameServers = this._targetNameServers?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -350,26 +601,25 @@ export class DnsManagedZoneForwardingConfigOutputReference extends cdktf.Complex
   public set internalValue(value: DnsManagedZoneForwardingConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._targetNameServers = undefined;
+      this._targetNameServers.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._targetNameServers = value.targetNameServers;
+      this._targetNameServers.internalValue = value.targetNameServers;
     }
   }
 
   // target_name_servers - computed: false, optional: false, required: true
-  private _targetNameServers?: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable; 
+  private _targetNameServers = new DnsManagedZoneForwardingConfigTargetNameServersList(this, "target_name_servers", true);
   public get targetNameServers() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('target_name_servers')));
+    return this._targetNameServers;
   }
-  public set targetNameServers(value: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable) {
-    this._targetNameServers = value;
+  public putTargetNameServers(value: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable) {
+    this._targetNameServers.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get targetNameServersInput() {
-    return this._targetNameServers;
+    return this._targetNameServers.internalValue;
   }
 }
 export interface DnsManagedZonePeeringConfigTargetNetwork {
@@ -523,6 +773,83 @@ export function dnsManagedZonePrivateVisibilityConfigNetworksToTerraform(struct?
   }
 }
 
+export class DnsManagedZonePrivateVisibilityConfigNetworksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DnsManagedZonePrivateVisibilityConfigNetworks | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._networkUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkUrl = this._networkUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZonePrivateVisibilityConfigNetworks | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._networkUrl = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._networkUrl = value.networkUrl;
+    }
+  }
+
+  // network_url - computed: false, optional: false, required: true
+  private _networkUrl?: string; 
+  public get networkUrl() {
+    return this.getStringAttribute('network_url');
+  }
+  public set networkUrl(value: string) {
+    this._networkUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkUrlInput() {
+    return this._networkUrl;
+  }
+}
+
+export class DnsManagedZonePrivateVisibilityConfigNetworksList extends cdktf.ComplexList {
+  public internalValue? : DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DnsManagedZonePrivateVisibilityConfigNetworksOutputReference {
+    return new DnsManagedZonePrivateVisibilityConfigNetworksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DnsManagedZonePrivateVisibilityConfig {
   /**
   * networks block
@@ -556,9 +883,9 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   public get internalValue(): DnsManagedZonePrivateVisibilityConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._networks !== undefined) {
+    if (this._networks?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.networks = this._networks;
+      internalValueResult.networks = this._networks?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -566,26 +893,25 @@ export class DnsManagedZonePrivateVisibilityConfigOutputReference extends cdktf.
   public set internalValue(value: DnsManagedZonePrivateVisibilityConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._networks = undefined;
+      this._networks.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._networks = value.networks;
+      this._networks.internalValue = value.networks;
     }
   }
 
   // networks - computed: false, optional: false, required: true
-  private _networks?: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable; 
+  private _networks = new DnsManagedZonePrivateVisibilityConfigNetworksList(this, "networks", true);
   public get networks() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('networks')));
+    return this._networks;
   }
-  public set networks(value: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable) {
-    this._networks = value;
+  public putNetworks(value: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable) {
+    this._networks.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get networksInput() {
-    return this._networks;
+    return this._networks.internalValue;
   }
 }
 export interface DnsManagedZoneTimeouts {
@@ -617,6 +943,7 @@ export function dnsManagedZoneTimeoutsToTerraform(struct?: DnsManagedZoneTimeout
 
 export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -626,7 +953,10 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DnsManagedZoneTimeouts | undefined {
+  public get internalValue(): DnsManagedZoneTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -644,15 +974,21 @@ export class DnsManagedZoneTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DnsManagedZoneTimeouts | undefined) {
+  public set internalValue(value: DnsManagedZoneTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -745,6 +1081,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
     this._description = config.description;
     this._dnsName = config.dnsName;
     this._forceDestroy = config.forceDestroy;
+    this._id = config.id;
     this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
@@ -806,8 +1143,19 @@ export class DnsManagedZone extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -965,6 +1313,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       dns_name: cdktf.stringToTerraform(this._dnsName),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

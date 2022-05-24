@@ -20,6 +20,13 @@ export interface ContainerAwsNodePoolConfig extends cdktf.TerraformMetaArguments
   */
   readonly cluster: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_node_pool#id ContainerAwsNodePool#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location for the resource
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_node_pool#location ContainerAwsNodePool#location}
@@ -569,6 +576,121 @@ export function containerAwsNodePoolConfigTaintsToTerraform(struct?: ContainerAw
   }
 }
 
+export class ContainerAwsNodePoolConfigTaintsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAwsNodePoolConfigTaints | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._effect !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.effect = this._effect;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAwsNodePoolConfigTaints | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._effect = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._effect = value.effect;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // effect - computed: false, optional: false, required: true
+  private _effect?: string; 
+  public get effect() {
+    return this.getStringAttribute('effect');
+  }
+  public set effect(value: string) {
+    this._effect = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get effectInput() {
+    return this._effect;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ContainerAwsNodePoolConfigTaintsList extends cdktf.ComplexList {
+  public internalValue? : ContainerAwsNodePoolConfigTaints[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAwsNodePoolConfigTaintsOutputReference {
+    return new ContainerAwsNodePoolConfigTaintsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAwsNodePoolConfigA {
   /**
   * The name of the AWS IAM role assigned to nodes in the pool.
@@ -701,9 +823,9 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.sshConfig = this._sshConfig?.internalValue;
     }
-    if (this._taints !== undefined) {
+    if (this._taints?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.taints = this._taints;
+      internalValueResult.taints = this._taints?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -720,7 +842,7 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
       this._proxyConfig.internalValue = undefined;
       this._rootVolume.internalValue = undefined;
       this._sshConfig.internalValue = undefined;
-      this._taints = undefined;
+      this._taints.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -733,7 +855,7 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
       this._proxyConfig.internalValue = value.proxyConfig;
       this._rootVolume.internalValue = value.rootVolume;
       this._sshConfig.internalValue = value.sshConfig;
-      this._taints = value.taints;
+      this._taints.internalValue = value.taints;
     }
   }
 
@@ -876,20 +998,19 @@ export class ContainerAwsNodePoolConfigAOutputReference extends cdktf.ComplexObj
   }
 
   // taints - computed: false, optional: true, required: false
-  private _taints?: ContainerAwsNodePoolConfigTaints[] | cdktf.IResolvable; 
+  private _taints = new ContainerAwsNodePoolConfigTaintsList(this, "taints", false);
   public get taints() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('taints');
+    return this._taints;
   }
-  public set taints(value: ContainerAwsNodePoolConfigTaints[] | cdktf.IResolvable) {
-    this._taints = value;
+  public putTaints(value: ContainerAwsNodePoolConfigTaints[] | cdktf.IResolvable) {
+    this._taints.internalValue = value;
   }
   public resetTaints() {
-    this._taints = undefined;
+    this._taints.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get taintsInput() {
-    return this._taints;
+    return this._taints.internalValue;
   }
 }
 export interface ContainerAwsNodePoolMaxPodsConstraint {
@@ -985,6 +1106,7 @@ export function containerAwsNodePoolTimeoutsToTerraform(struct?: ContainerAwsNod
 
 export class ContainerAwsNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -994,7 +1116,10 @@ export class ContainerAwsNodePoolTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerAwsNodePoolTimeouts | undefined {
+  public get internalValue(): ContainerAwsNodePoolTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1012,15 +1137,21 @@ export class ContainerAwsNodePoolTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerAwsNodePoolTimeouts | undefined) {
+  public set internalValue(value: ContainerAwsNodePoolTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1112,6 +1243,7 @@ export class ContainerAwsNodePool extends cdktf.TerraformResource {
     });
     this._annotations = config.annotations;
     this._cluster = config.cluster;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
@@ -1167,8 +1299,19 @@ export class ContainerAwsNodePool extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1322,6 +1465,7 @@ export class ContainerAwsNodePool extends cdktf.TerraformResource {
     return {
       annotations: cdktf.hashMapper(cdktf.stringToTerraform)(this._annotations),
       cluster: cdktf.stringToTerraform(this._cluster),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

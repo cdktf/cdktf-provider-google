@@ -34,6 +34,13 @@ When using Pub/Sub, Webhook or Manual set the file name using git_file_source in
   */
   readonly filter?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#id CloudbuildTrigger#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for '**'.
 
@@ -524,6 +531,102 @@ export function cloudbuildTriggerBuildAvailableSecretsSecretManagerToTerraform(s
   }
 }
 
+export class CloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildAvailableSecretsSecretManager | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._env !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.env = this._env;
+    }
+    if (this._versionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.versionName = this._versionName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildAvailableSecretsSecretManager | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._env = undefined;
+      this._versionName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._env = value.env;
+      this._versionName = value.versionName;
+    }
+  }
+
+  // env - computed: false, optional: false, required: true
+  private _env?: string; 
+  public get env() {
+    return this.getStringAttribute('env');
+  }
+  public set env(value: string) {
+    this._env = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envInput() {
+    return this._env;
+  }
+
+  // version_name - computed: false, optional: false, required: true
+  private _versionName?: string; 
+  public get versionName() {
+    return this.getStringAttribute('version_name');
+  }
+  public set versionName(value: string) {
+    this._versionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionNameInput() {
+    return this._versionName;
+  }
+}
+
+export class CloudbuildTriggerBuildAvailableSecretsSecretManagerList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference {
+    return new CloudbuildTriggerBuildAvailableSecretsSecretManagerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuildAvailableSecrets {
   /**
   * secret_manager block
@@ -557,9 +660,9 @@ export class CloudbuildTriggerBuildAvailableSecretsOutputReference extends cdktf
   public get internalValue(): CloudbuildTriggerBuildAvailableSecrets | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._secretManager !== undefined) {
+    if (this._secretManager?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.secretManager = this._secretManager;
+      internalValueResult.secretManager = this._secretManager?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -567,26 +670,25 @@ export class CloudbuildTriggerBuildAvailableSecretsOutputReference extends cdktf
   public set internalValue(value: CloudbuildTriggerBuildAvailableSecrets | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._secretManager = undefined;
+      this._secretManager.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._secretManager = value.secretManager;
+      this._secretManager.internalValue = value.secretManager;
     }
   }
 
   // secret_manager - computed: false, optional: false, required: true
-  private _secretManager?: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable; 
+  private _secretManager = new CloudbuildTriggerBuildAvailableSecretsSecretManagerList(this, "secret_manager", false);
   public get secretManager() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_manager');
+    return this._secretManager;
   }
-  public set secretManager(value: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable) {
-    this._secretManager = value;
+  public putSecretManager(value: CloudbuildTriggerBuildAvailableSecretsSecretManager[] | cdktf.IResolvable) {
+    this._secretManager.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get secretManagerInput() {
-    return this._secretManager;
+    return this._secretManager.internalValue;
   }
 }
 export interface CloudbuildTriggerBuildOptionsVolumes {
@@ -621,6 +723,108 @@ export function cloudbuildTriggerBuildOptionsVolumesToTerraform(struct?: Cloudbu
   }
 }
 
+export class CloudbuildTriggerBuildOptionsVolumesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildOptionsVolumes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildOptionsVolumes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._path = value.path;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CloudbuildTriggerBuildOptionsVolumesList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildOptionsVolumesOutputReference {
+    return new CloudbuildTriggerBuildOptionsVolumesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuildOptions {
   /**
   * Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
@@ -792,9 +996,9 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.workerPool = this._workerPool;
     }
-    if (this._volumes !== undefined) {
+    if (this._volumes?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.volumes = this._volumes;
+      internalValueResult.volumes = this._volumes?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -813,7 +1017,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
       this._sourceProvenanceHash = undefined;
       this._substitutionOption = undefined;
       this._workerPool = undefined;
-      this._volumes = undefined;
+      this._volumes.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -828,7 +1032,7 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
       this._sourceProvenanceHash = value.sourceProvenanceHash;
       this._substitutionOption = value.substitutionOption;
       this._workerPool = value.workerPool;
-      this._volumes = value.volumes;
+      this._volumes.internalValue = value.volumes;
     }
   }
 
@@ -1009,20 +1213,19 @@ export class CloudbuildTriggerBuildOptionsOutputReference extends cdktf.ComplexO
   }
 
   // volumes - computed: false, optional: true, required: false
-  private _volumes?: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable; 
+  private _volumes = new CloudbuildTriggerBuildOptionsVolumesList(this, "volumes", false);
   public get volumes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('volumes');
+    return this._volumes;
   }
-  public set volumes(value: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable) {
-    this._volumes = value;
+  public putVolumes(value: CloudbuildTriggerBuildOptionsVolumes[] | cdktf.IResolvable) {
+    this._volumes.internalValue = value;
   }
   public resetVolumes() {
-    this._volumes = undefined;
+    this._volumes.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get volumesInput() {
-    return this._volumes;
+    return this._volumes.internalValue;
   }
 }
 export interface CloudbuildTriggerBuildSecret {
@@ -1054,6 +1257,105 @@ export function cloudbuildTriggerBuildSecretToTerraform(struct?: CloudbuildTrigg
   }
 }
 
+export class CloudbuildTriggerBuildSecretOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildSecret | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    if (this._secretEnv !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretEnv = this._secretEnv;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildSecret | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._kmsKeyName = undefined;
+      this._secretEnv = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._kmsKeyName = value.kmsKeyName;
+      this._secretEnv = value.secretEnv;
+    }
+  }
+
+  // kms_key_name - computed: false, optional: false, required: true
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
+  }
+
+  // secret_env - computed: false, optional: true, required: false
+  private _secretEnv?: { [key: string]: string }; 
+  public get secretEnv() {
+    return this.getStringMapAttribute('secret_env');
+  }
+  public set secretEnv(value: { [key: string]: string }) {
+    this._secretEnv = value;
+  }
+  public resetSecretEnv() {
+    this._secretEnv = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretEnvInput() {
+    return this._secretEnv;
+  }
+}
+
+export class CloudbuildTriggerBuildSecretList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildSecret[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildSecretOutputReference {
+    return new CloudbuildTriggerBuildSecretOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuildSourceRepoSource {
   /**
   * Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
@@ -1577,6 +1879,102 @@ export function cloudbuildTriggerBuildStepVolumesToTerraform(struct?: Cloudbuild
   }
 }
 
+export class CloudbuildTriggerBuildStepVolumesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildStepVolumes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildStepVolumes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._path = value.path;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CloudbuildTriggerBuildStepVolumesList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildStepVolumes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildStepVolumesOutputReference {
+    return new CloudbuildTriggerBuildStepVolumesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuildStep {
   /**
   * A list of arguments that will be presented to the step when it is started.
@@ -1628,6 +2026,9 @@ The elements are of the form "KEY=VALUE" for the environment variable
 reference this build step as a dependency.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#id CloudbuildTrigger#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
@@ -1715,6 +2116,303 @@ export function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTrigger
   }
 }
 
+export class CloudbuildTriggerBuildStepOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudbuildTriggerBuildStep | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._args !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._dir !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dir = this._dir;
+    }
+    if (this._entrypoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.entrypoint = this._entrypoint;
+    }
+    if (this._env !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.env = this._env;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._secretEnv !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretEnv = this._secretEnv;
+    }
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    if (this._timing !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timing = this._timing;
+    }
+    if (this._waitFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.waitFor = this._waitFor;
+    }
+    if (this._volumes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumes = this._volumes?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudbuildTriggerBuildStep | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._args = undefined;
+      this._dir = undefined;
+      this._entrypoint = undefined;
+      this._env = undefined;
+      this._id = undefined;
+      this._name = undefined;
+      this._secretEnv = undefined;
+      this._timeout = undefined;
+      this._timing = undefined;
+      this._waitFor = undefined;
+      this._volumes.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._args = value.args;
+      this._dir = value.dir;
+      this._entrypoint = value.entrypoint;
+      this._env = value.env;
+      this._id = value.id;
+      this._name = value.name;
+      this._secretEnv = value.secretEnv;
+      this._timeout = value.timeout;
+      this._timing = value.timing;
+      this._waitFor = value.waitFor;
+      this._volumes.internalValue = value.volumes;
+    }
+  }
+
+  // args - computed: false, optional: true, required: false
+  private _args?: string[]; 
+  public get args() {
+    return this.getListAttribute('args');
+  }
+  public set args(value: string[]) {
+    this._args = value;
+  }
+  public resetArgs() {
+    this._args = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argsInput() {
+    return this._args;
+  }
+
+  // dir - computed: false, optional: true, required: false
+  private _dir?: string; 
+  public get dir() {
+    return this.getStringAttribute('dir');
+  }
+  public set dir(value: string) {
+    this._dir = value;
+  }
+  public resetDir() {
+    this._dir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dirInput() {
+    return this._dir;
+  }
+
+  // entrypoint - computed: false, optional: true, required: false
+  private _entrypoint?: string; 
+  public get entrypoint() {
+    return this.getStringAttribute('entrypoint');
+  }
+  public set entrypoint(value: string) {
+    this._entrypoint = value;
+  }
+  public resetEntrypoint() {
+    this._entrypoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entrypointInput() {
+    return this._entrypoint;
+  }
+
+  // env - computed: false, optional: true, required: false
+  private _env?: string[]; 
+  public get env() {
+    return this.getListAttribute('env');
+  }
+  public set env(value: string[]) {
+    this._env = value;
+  }
+  public resetEnv() {
+    this._env = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envInput() {
+    return this._env;
+  }
+
+  // id - computed: false, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // secret_env - computed: false, optional: true, required: false
+  private _secretEnv?: string[]; 
+  public get secretEnv() {
+    return this.getListAttribute('secret_env');
+  }
+  public set secretEnv(value: string[]) {
+    this._secretEnv = value;
+  }
+  public resetSecretEnv() {
+    this._secretEnv = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretEnvInput() {
+    return this._secretEnv;
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+
+  // timing - computed: false, optional: true, required: false
+  private _timing?: string; 
+  public get timing() {
+    return this.getStringAttribute('timing');
+  }
+  public set timing(value: string) {
+    this._timing = value;
+  }
+  public resetTiming() {
+    this._timing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timingInput() {
+    return this._timing;
+  }
+
+  // wait_for - computed: false, optional: true, required: false
+  private _waitFor?: string[]; 
+  public get waitFor() {
+    return this.getListAttribute('wait_for');
+  }
+  public set waitFor(value: string[]) {
+    this._waitFor = value;
+  }
+  public resetWaitFor() {
+    this._waitFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get waitForInput() {
+    return this._waitFor;
+  }
+
+  // volumes - computed: false, optional: true, required: false
+  private _volumes = new CloudbuildTriggerBuildStepVolumesList(this, "volumes", false);
+  public get volumes() {
+    return this._volumes;
+  }
+  public putVolumes(value: CloudbuildTriggerBuildStepVolumes[] | cdktf.IResolvable) {
+    this._volumes.internalValue = value;
+  }
+  public resetVolumes() {
+    this._volumes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumesInput() {
+    return this._volumes.internalValue;
+  }
+}
+
+export class CloudbuildTriggerBuildStepList extends cdktf.ComplexList {
+  public internalValue? : CloudbuildTriggerBuildStep[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudbuildTriggerBuildStepOutputReference {
+    return new CloudbuildTriggerBuildStepOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudbuildTriggerBuild {
   /**
   * A list of images to be pushed upon the successful completion of all build steps.
@@ -1872,17 +2570,17 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.options = this._options?.internalValue;
     }
-    if (this._secret !== undefined) {
+    if (this._secret?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.secret = this._secret;
+      internalValueResult.secret = this._secret?.internalValue;
     }
     if (this._source?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.source = this._source?.internalValue;
     }
-    if (this._step !== undefined) {
+    if (this._step?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.step = this._step;
+      internalValueResult.step = this._step?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1899,9 +2597,9 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       this._artifacts.internalValue = undefined;
       this._availableSecrets.internalValue = undefined;
       this._options.internalValue = undefined;
-      this._secret = undefined;
+      this._secret.internalValue = undefined;
       this._source.internalValue = undefined;
-      this._step = undefined;
+      this._step.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1914,9 +2612,9 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
       this._artifacts.internalValue = value.artifacts;
       this._availableSecrets.internalValue = value.availableSecrets;
       this._options.internalValue = value.options;
-      this._secret = value.secret;
+      this._secret.internalValue = value.secret;
       this._source.internalValue = value.source;
-      this._step = value.step;
+      this._step.internalValue = value.step;
     }
   }
 
@@ -2065,20 +2763,19 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable; 
+  private _secret = new CloudbuildTriggerBuildSecretList(this, "secret", false);
   public get secret() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret');
+    return this._secret;
   }
-  public set secret(value: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable) {
-    this._secret = value;
+  public putSecret(value: CloudbuildTriggerBuildSecret[] | cdktf.IResolvable) {
+    this._secret.internalValue = value;
   }
   public resetSecret() {
-    this._secret = undefined;
+    this._secret.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret;
+    return this._secret.internalValue;
   }
 
   // source - computed: false, optional: true, required: false
@@ -2098,17 +2795,16 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
   }
 
   // step - computed: false, optional: false, required: true
-  private _step?: CloudbuildTriggerBuildStep[] | cdktf.IResolvable; 
+  private _step = new CloudbuildTriggerBuildStepList(this, "step", false);
   public get step() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('step');
+    return this._step;
   }
-  public set step(value: CloudbuildTriggerBuildStep[] | cdktf.IResolvable) {
-    this._step = value;
+  public putStep(value: CloudbuildTriggerBuildStep[] | cdktf.IResolvable) {
+    this._step.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get stepInput() {
-    return this._step;
+    return this._step.internalValue;
   }
 }
 export interface CloudbuildTriggerGitFileSource {
@@ -2915,6 +3611,7 @@ export function cloudbuildTriggerTimeoutsToTerraform(struct?: CloudbuildTriggerT
 
 export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2924,7 +3621,10 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CloudbuildTriggerTimeouts | undefined {
+  public get internalValue(): CloudbuildTriggerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2942,15 +3642,21 @@ export class CloudbuildTriggerTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CloudbuildTriggerTimeouts | undefined) {
+  public set internalValue(value: CloudbuildTriggerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -3361,6 +4067,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._disabled = config.disabled;
     this._filename = config.filename;
     this._filter = config.filter;
+    this._id = config.id;
     this._ignoredFiles = config.ignoredFiles;
     this._includedFiles = config.includedFiles;
     this._name = config.name;
@@ -3453,8 +4160,19 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ignored_files - computed: false, optional: true, required: false
@@ -3728,6 +4446,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       disabled: cdktf.booleanToTerraform(this._disabled),
       filename: cdktf.stringToTerraform(this._filename),
       filter: cdktf.stringToTerraform(this._filter),
+      id: cdktf.stringToTerraform(this._id),
       ignored_files: cdktf.listMapper(cdktf.stringToTerraform)(this._ignoredFiles),
       included_files: cdktf.listMapper(cdktf.stringToTerraform)(this._includedFiles),
       name: cdktf.stringToTerraform(this._name),

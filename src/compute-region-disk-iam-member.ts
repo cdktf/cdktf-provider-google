@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeRegionDiskIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member#id ComputeRegionDiskIamMember#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member#member ComputeRegionDiskIamMember#member}
   */
   readonly member: string;
@@ -182,6 +189,7 @@ export class ComputeRegionDiskIamMember extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._member = config.member;
     this._name = config.name;
     this._project = config.project;
@@ -200,8 +208,19 @@ export class ComputeRegionDiskIamMember extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // member - computed: false, optional: false, required: true
@@ -297,6 +316,7 @@ export class ComputeRegionDiskIamMember extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       member: cdktf.stringToTerraform(this._member),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

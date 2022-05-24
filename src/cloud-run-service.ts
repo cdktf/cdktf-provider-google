@@ -12,6 +12,13 @@ export interface CloudRunServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly autogenerateRevisionName?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#id CloudRunService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location of the cloud run instance. eg us-central1
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#location CloudRunService#location}
@@ -765,6 +772,130 @@ export function cloudRunServiceTemplateSpecContainersEnvToTerraform(struct?: Clo
   }
 }
 
+export class CloudRunServiceTemplateSpecContainersEnvOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainersEnv | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    if (this._valueFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.valueFrom = this._valueFrom?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainersEnv | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+      this._valueFrom.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+      this._valueFrom.internalValue = value.valueFrom;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+
+  // value_from - computed: false, optional: true, required: false
+  private _valueFrom = new CloudRunServiceTemplateSpecContainersEnvValueFromOutputReference(this, "value_from");
+  public get valueFrom() {
+    return this._valueFrom;
+  }
+  public putValueFrom(value: CloudRunServiceTemplateSpecContainersEnvValueFrom) {
+    this._valueFrom.internalValue = value;
+  }
+  public resetValueFrom() {
+    this._valueFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueFromInput() {
+    return this._valueFrom.internalValue;
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersEnvList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecContainersEnv[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecContainersEnvOutputReference {
+    return new CloudRunServiceTemplateSpecContainersEnvOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference {
   /**
   * Name of the referent.
@@ -1122,6 +1253,130 @@ export function cloudRunServiceTemplateSpecContainersEnvFromToTerraform(struct?:
   }
 }
 
+export class CloudRunServiceTemplateSpecContainersEnvFromOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainersEnvFrom | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    if (this._configMapRef?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configMapRef = this._configMapRef?.internalValue;
+    }
+    if (this._secretRef?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRef = this._secretRef?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainersEnvFrom | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._prefix = undefined;
+      this._configMapRef.internalValue = undefined;
+      this._secretRef.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._prefix = value.prefix;
+      this._configMapRef.internalValue = value.configMapRef;
+      this._secretRef.internalValue = value.secretRef;
+    }
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // config_map_ref - computed: false, optional: true, required: false
+  private _configMapRef = new CloudRunServiceTemplateSpecContainersEnvFromConfigMapRefOutputReference(this, "config_map_ref");
+  public get configMapRef() {
+    return this._configMapRef;
+  }
+  public putConfigMapRef(value: CloudRunServiceTemplateSpecContainersEnvFromConfigMapRef) {
+    this._configMapRef.internalValue = value;
+  }
+  public resetConfigMapRef() {
+    this._configMapRef.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configMapRefInput() {
+    return this._configMapRef.internalValue;
+  }
+
+  // secret_ref - computed: false, optional: true, required: false
+  private _secretRef = new CloudRunServiceTemplateSpecContainersEnvFromSecretRefOutputReference(this, "secret_ref");
+  public get secretRef() {
+    return this._secretRef;
+  }
+  public putSecretRef(value: CloudRunServiceTemplateSpecContainersEnvFromSecretRef) {
+    this._secretRef.internalValue = value;
+  }
+  public resetSecretRef() {
+    this._secretRef.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretRefInput() {
+    return this._secretRef.internalValue;
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersEnvFromList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecContainersEnvFrom[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecContainersEnvFromOutputReference {
+    return new CloudRunServiceTemplateSpecContainersEnvFromOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpecContainersPorts {
   /**
   * Port number the container listens on. This must be a valid port number, 0 < x < 65536.
@@ -1155,6 +1410,130 @@ export function cloudRunServiceTemplateSpecContainersPortsToTerraform(struct?: C
   }
 }
 
+export class CloudRunServiceTemplateSpecContainersPortsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainersPorts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._containerPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerPort = this._containerPort;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainersPorts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._containerPort = undefined;
+      this._name = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._containerPort = value.containerPort;
+      this._name = value.name;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // container_port - computed: false, optional: true, required: false
+  private _containerPort?: number; 
+  public get containerPort() {
+    return this.getNumberAttribute('container_port');
+  }
+  public set containerPort(value: number) {
+    this._containerPort = value;
+  }
+  public resetContainerPort() {
+    this._containerPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerPortInput() {
+    return this._containerPort;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersPortsList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecContainersPorts[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecContainersPortsOutputReference {
+    return new CloudRunServiceTemplateSpecContainersPortsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpecContainersResources {
   /**
   * Limits describes the maximum amount of compute resources allowed.
@@ -1284,6 +1663,102 @@ export function cloudRunServiceTemplateSpecContainersVolumeMountsToTerraform(str
   }
 }
 
+export class CloudRunServiceTemplateSpecContainersVolumeMountsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainersVolumeMounts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainersVolumeMounts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mountPath = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mountPath = value.mountPath;
+      this._name = value.name;
+    }
+  }
+
+  // mount_path - computed: false, optional: false, required: true
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersVolumeMountsList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecContainersVolumeMounts[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecContainersVolumeMountsOutputReference {
+    return new CloudRunServiceTemplateSpecContainersVolumeMountsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpecContainers {
   /**
   * Arguments to the entrypoint.
@@ -1379,6 +1854,259 @@ export function cloudRunServiceTemplateSpecContainersToTerraform(struct?: CloudR
   }
 }
 
+export class CloudRunServiceTemplateSpecContainersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecContainers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._args !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._command !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.command = this._command;
+    }
+    if (this._image !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    if (this._workingDir !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workingDir = this._workingDir;
+    }
+    if (this._env?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.env = this._env?.internalValue;
+    }
+    if (this._envFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.envFrom = this._envFrom?.internalValue;
+    }
+    if (this._ports?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ports = this._ports?.internalValue;
+    }
+    if (this._resources?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources?.internalValue;
+    }
+    if (this._volumeMounts?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeMounts = this._volumeMounts?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecContainers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._args = undefined;
+      this._command = undefined;
+      this._image = undefined;
+      this._workingDir = undefined;
+      this._env.internalValue = undefined;
+      this._envFrom.internalValue = undefined;
+      this._ports.internalValue = undefined;
+      this._resources.internalValue = undefined;
+      this._volumeMounts.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._args = value.args;
+      this._command = value.command;
+      this._image = value.image;
+      this._workingDir = value.workingDir;
+      this._env.internalValue = value.env;
+      this._envFrom.internalValue = value.envFrom;
+      this._ports.internalValue = value.ports;
+      this._resources.internalValue = value.resources;
+      this._volumeMounts.internalValue = value.volumeMounts;
+    }
+  }
+
+  // args - computed: false, optional: true, required: false
+  private _args?: string[]; 
+  public get args() {
+    return this.getListAttribute('args');
+  }
+  public set args(value: string[]) {
+    this._args = value;
+  }
+  public resetArgs() {
+    this._args = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argsInput() {
+    return this._args;
+  }
+
+  // command - computed: false, optional: true, required: false
+  private _command?: string[]; 
+  public get command() {
+    return this.getListAttribute('command');
+  }
+  public set command(value: string[]) {
+    this._command = value;
+  }
+  public resetCommand() {
+    this._command = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commandInput() {
+    return this._command;
+  }
+
+  // image - computed: false, optional: false, required: true
+  private _image?: string; 
+  public get image() {
+    return this.getStringAttribute('image');
+  }
+  public set image(value: string) {
+    this._image = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageInput() {
+    return this._image;
+  }
+
+  // working_dir - computed: false, optional: true, required: false
+  private _workingDir?: string; 
+  public get workingDir() {
+    return this.getStringAttribute('working_dir');
+  }
+  public set workingDir(value: string) {
+    this._workingDir = value;
+  }
+  public resetWorkingDir() {
+    this._workingDir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workingDirInput() {
+    return this._workingDir;
+  }
+
+  // env - computed: false, optional: true, required: false
+  private _env = new CloudRunServiceTemplateSpecContainersEnvList(this, "env", true);
+  public get env() {
+    return this._env;
+  }
+  public putEnv(value: CloudRunServiceTemplateSpecContainersEnv[] | cdktf.IResolvable) {
+    this._env.internalValue = value;
+  }
+  public resetEnv() {
+    this._env.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envInput() {
+    return this._env.internalValue;
+  }
+
+  // env_from - computed: false, optional: true, required: false
+  private _envFrom = new CloudRunServiceTemplateSpecContainersEnvFromList(this, "env_from", false);
+  public get envFrom() {
+    return this._envFrom;
+  }
+  public putEnvFrom(value: CloudRunServiceTemplateSpecContainersEnvFrom[] | cdktf.IResolvable) {
+    this._envFrom.internalValue = value;
+  }
+  public resetEnvFrom() {
+    this._envFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get envFromInput() {
+    return this._envFrom.internalValue;
+  }
+
+  // ports - computed: false, optional: true, required: false
+  private _ports = new CloudRunServiceTemplateSpecContainersPortsList(this, "ports", false);
+  public get ports() {
+    return this._ports;
+  }
+  public putPorts(value: CloudRunServiceTemplateSpecContainersPorts[] | cdktf.IResolvable) {
+    this._ports.internalValue = value;
+  }
+  public resetPorts() {
+    this._ports.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portsInput() {
+    return this._ports.internalValue;
+  }
+
+  // resources - computed: false, optional: true, required: false
+  private _resources = new CloudRunServiceTemplateSpecContainersResourcesOutputReference(this, "resources");
+  public get resources() {
+    return this._resources;
+  }
+  public putResources(value: CloudRunServiceTemplateSpecContainersResources) {
+    this._resources.internalValue = value;
+  }
+  public resetResources() {
+    this._resources.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourcesInput() {
+    return this._resources.internalValue;
+  }
+
+  // volume_mounts - computed: false, optional: true, required: false
+  private _volumeMounts = new CloudRunServiceTemplateSpecContainersVolumeMountsList(this, "volume_mounts", false);
+  public get volumeMounts() {
+    return this._volumeMounts;
+  }
+  public putVolumeMounts(value: CloudRunServiceTemplateSpecContainersVolumeMounts[] | cdktf.IResolvable) {
+    this._volumeMounts.internalValue = value;
+  }
+  public resetVolumeMounts() {
+    this._volumeMounts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeMountsInput() {
+    return this._volumeMounts.internalValue;
+  }
+}
+
+export class CloudRunServiceTemplateSpecContainersList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecContainers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecContainersOutputReference {
+    return new CloudRunServiceTemplateSpecContainersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpecVolumesSecretItems {
   /**
   * The Cloud Secret Manager secret version.
@@ -1419,6 +2147,124 @@ export function cloudRunServiceTemplateSpecVolumesSecretItemsToTerraform(struct?
   }
 }
 
+export class CloudRunServiceTemplateSpecVolumesSecretItemsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecVolumesSecretItems | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecVolumesSecretItems | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._mode = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._mode = value.mode;
+      this._path = value.path;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: number; 
+  public get mode() {
+    return this.getNumberAttribute('mode');
+  }
+  public set mode(value: number) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CloudRunServiceTemplateSpecVolumesSecretItemsList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecVolumesSecretItemsOutputReference {
+    return new CloudRunServiceTemplateSpecVolumesSecretItemsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpecVolumesSecret {
   /**
   * Mode bits to use on created files by default. Must be a value between 0000
@@ -1485,9 +2331,9 @@ export class CloudRunServiceTemplateSpecVolumesSecretOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.secretName = this._secretName;
     }
-    if (this._items !== undefined) {
+    if (this._items?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.items = this._items;
+      internalValueResult.items = this._items?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1497,13 +2343,13 @@ export class CloudRunServiceTemplateSpecVolumesSecretOutputReference extends cdk
       this.isEmptyObject = false;
       this._defaultMode = undefined;
       this._secretName = undefined;
-      this._items = undefined;
+      this._items.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultMode = value.defaultMode;
       this._secretName = value.secretName;
-      this._items = value.items;
+      this._items.internalValue = value.items;
     }
   }
 
@@ -1537,20 +2383,19 @@ export class CloudRunServiceTemplateSpecVolumesSecretOutputReference extends cdk
   }
 
   // items - computed: false, optional: true, required: false
-  private _items?: CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable; 
+  private _items = new CloudRunServiceTemplateSpecVolumesSecretItemsList(this, "items", false);
   public get items() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('items');
+    return this._items;
   }
-  public set items(value: CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable) {
-    this._items = value;
+  public putItems(value: CloudRunServiceTemplateSpecVolumesSecretItems[] | cdktf.IResolvable) {
+    this._items.internalValue = value;
   }
   public resetItems() {
-    this._items = undefined;
+    this._items.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get itemsInput() {
-    return this._items;
+    return this._items.internalValue;
   }
 }
 export interface CloudRunServiceTemplateSpecVolumes {
@@ -1579,6 +2424,102 @@ export function cloudRunServiceTemplateSpecVolumesToTerraform(struct?: CloudRunS
   }
 }
 
+export class CloudRunServiceTemplateSpecVolumesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTemplateSpecVolumes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._secret?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTemplateSpecVolumes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._secret.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._secret.internalValue = value.secret;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret = new CloudRunServiceTemplateSpecVolumesSecretOutputReference(this, "secret");
+  public get secret() {
+    return this._secret;
+  }
+  public putSecret(value: CloudRunServiceTemplateSpecVolumesSecret) {
+    this._secret.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret.internalValue;
+  }
+}
+
+export class CloudRunServiceTemplateSpecVolumesList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTemplateSpecVolumesOutputReference {
+    return new CloudRunServiceTemplateSpecVolumesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudRunServiceTemplateSpec {
   /**
   * ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
@@ -1660,13 +2601,13 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.timeoutSeconds = this._timeoutSeconds;
     }
-    if (this._containers !== undefined) {
+    if (this._containers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.containers = this._containers;
+      internalValueResult.containers = this._containers?.internalValue;
     }
-    if (this._volumes !== undefined) {
+    if (this._volumes?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.volumes = this._volumes;
+      internalValueResult.volumes = this._volumes?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1677,16 +2618,16 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
       this._containerConcurrency = undefined;
       this._serviceAccountName = undefined;
       this._timeoutSeconds = undefined;
-      this._containers = undefined;
-      this._volumes = undefined;
+      this._containers.internalValue = undefined;
+      this._volumes.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._containerConcurrency = value.containerConcurrency;
       this._serviceAccountName = value.serviceAccountName;
       this._timeoutSeconds = value.timeoutSeconds;
-      this._containers = value.containers;
-      this._volumes = value.volumes;
+      this._containers.internalValue = value.containers;
+      this._volumes.internalValue = value.volumes;
     }
   }
 
@@ -1744,37 +2685,35 @@ export class CloudRunServiceTemplateSpecOutputReference extends cdktf.ComplexObj
   }
 
   // containers - computed: false, optional: true, required: false
-  private _containers?: CloudRunServiceTemplateSpecContainers[] | cdktf.IResolvable; 
+  private _containers = new CloudRunServiceTemplateSpecContainersList(this, "containers", false);
   public get containers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('containers');
+    return this._containers;
   }
-  public set containers(value: CloudRunServiceTemplateSpecContainers[] | cdktf.IResolvable) {
-    this._containers = value;
+  public putContainers(value: CloudRunServiceTemplateSpecContainers[] | cdktf.IResolvable) {
+    this._containers.internalValue = value;
   }
   public resetContainers() {
-    this._containers = undefined;
+    this._containers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get containersInput() {
-    return this._containers;
+    return this._containers.internalValue;
   }
 
   // volumes - computed: false, optional: true, required: false
-  private _volumes?: CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable; 
+  private _volumes = new CloudRunServiceTemplateSpecVolumesList(this, "volumes", false);
   public get volumes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('volumes');
+    return this._volumes;
   }
-  public set volumes(value: CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable) {
-    this._volumes = value;
+  public putVolumes(value: CloudRunServiceTemplateSpecVolumes[] | cdktf.IResolvable) {
+    this._volumes.internalValue = value;
   }
   public resetVolumes() {
-    this._volumes = undefined;
+    this._volumes.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get volumesInput() {
-    return this._volumes;
+    return this._volumes.internalValue;
   }
 }
 export interface CloudRunServiceTemplate {
@@ -1902,6 +2841,7 @@ export function cloudRunServiceTimeoutsToTerraform(struct?: CloudRunServiceTimeo
 
 export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1911,7 +2851,10 @@ export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CloudRunServiceTimeouts | undefined {
+  public get internalValue(): CloudRunServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1929,15 +2872,21 @@ export class CloudRunServiceTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CloudRunServiceTimeouts | undefined) {
+  public set internalValue(value: CloudRunServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -2035,6 +2984,154 @@ export function cloudRunServiceTrafficToTerraform(struct?: CloudRunServiceTraffi
   }
 }
 
+export class CloudRunServiceTrafficOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudRunServiceTraffic | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._latestRevision !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.latestRevision = this._latestRevision;
+    }
+    if (this._percent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.percent = this._percent;
+    }
+    if (this._revisionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.revisionName = this._revisionName;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudRunServiceTraffic | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._latestRevision = undefined;
+      this._percent = undefined;
+      this._revisionName = undefined;
+      this._tag = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._latestRevision = value.latestRevision;
+      this._percent = value.percent;
+      this._revisionName = value.revisionName;
+      this._tag = value.tag;
+    }
+  }
+
+  // latest_revision - computed: false, optional: true, required: false
+  private _latestRevision?: boolean | cdktf.IResolvable; 
+  public get latestRevision() {
+    return this.getBooleanAttribute('latest_revision');
+  }
+  public set latestRevision(value: boolean | cdktf.IResolvable) {
+    this._latestRevision = value;
+  }
+  public resetLatestRevision() {
+    this._latestRevision = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get latestRevisionInput() {
+    return this._latestRevision;
+  }
+
+  // percent - computed: false, optional: false, required: true
+  private _percent?: number; 
+  public get percent() {
+    return this.getNumberAttribute('percent');
+  }
+  public set percent(value: number) {
+    this._percent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentInput() {
+    return this._percent;
+  }
+
+  // revision_name - computed: false, optional: true, required: false
+  private _revisionName?: string; 
+  public get revisionName() {
+    return this.getStringAttribute('revision_name');
+  }
+  public set revisionName(value: string) {
+    this._revisionName = value;
+  }
+  public resetRevisionName() {
+    this._revisionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revisionNameInput() {
+    return this._revisionName;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+}
+
+export class CloudRunServiceTrafficList extends cdktf.ComplexList {
+  public internalValue? : CloudRunServiceTraffic[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudRunServiceTrafficOutputReference {
+    return new CloudRunServiceTrafficOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service google_cloud_run_service}
@@ -2071,13 +3168,14 @@ export class CloudRunService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._autogenerateRevisionName = config.autogenerateRevisionName;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
     this._metadata.internalValue = config.metadata;
     this._template.internalValue = config.template;
     this._timeouts.internalValue = config.timeouts;
-    this._traffic = config.traffic;
+    this._traffic.internalValue = config.traffic;
   }
 
   // ==========
@@ -2101,8 +3199,19 @@ export class CloudRunService extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2202,20 +3311,19 @@ export class CloudRunService extends cdktf.TerraformResource {
   }
 
   // traffic - computed: false, optional: true, required: false
-  private _traffic?: CloudRunServiceTraffic[] | cdktf.IResolvable; 
+  private _traffic = new CloudRunServiceTrafficList(this, "traffic", false);
   public get traffic() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('traffic');
+    return this._traffic;
   }
-  public set traffic(value: CloudRunServiceTraffic[] | cdktf.IResolvable) {
-    this._traffic = value;
+  public putTraffic(value: CloudRunServiceTraffic[] | cdktf.IResolvable) {
+    this._traffic.internalValue = value;
   }
   public resetTraffic() {
-    this._traffic = undefined;
+    this._traffic.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trafficInput() {
-    return this._traffic;
+    return this._traffic.internalValue;
   }
 
   // =========
@@ -2225,13 +3333,14 @@ export class CloudRunService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       autogenerate_revision_name: cdktf.booleanToTerraform(this._autogenerateRevisionName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       metadata: cloudRunServiceMetadataToTerraform(this._metadata.internalValue),
       template: cloudRunServiceTemplateToTerraform(this._template.internalValue),
       timeouts: cloudRunServiceTimeoutsToTerraform(this._timeouts.internalValue),
-      traffic: cdktf.listMapper(cloudRunServiceTrafficToTerraform)(this._traffic),
+      traffic: cdktf.listMapper(cloudRunServiceTrafficToTerraform)(this._traffic.internalValue),
     };
   }
 }

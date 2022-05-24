@@ -14,6 +14,13 @@ export interface BigqueryReservationAssignmentConfig extends cdktf.TerraformMeta
   */
   readonly assignee: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation_assignment#id BigqueryReservationAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation_assignment#job_type BigqueryReservationAssignment#job_type}
@@ -68,6 +75,7 @@ export function bigqueryReservationAssignmentTimeoutsToTerraform(struct?: Bigque
 
 export class BigqueryReservationAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -77,7 +85,10 @@ export class BigqueryReservationAssignmentTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BigqueryReservationAssignmentTimeouts | undefined {
+  public get internalValue(): BigqueryReservationAssignmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -91,14 +102,20 @@ export class BigqueryReservationAssignmentTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BigqueryReservationAssignmentTimeouts | undefined) {
+  public set internalValue(value: BigqueryReservationAssignmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -172,6 +189,7 @@ export class BigqueryReservationAssignment extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._assignee = config.assignee;
+    this._id = config.id;
     this._jobType = config.jobType;
     this._location = config.location;
     this._project = config.project;
@@ -197,8 +215,19 @@ export class BigqueryReservationAssignment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // job_type - computed: false, optional: false, required: true
@@ -292,6 +321,7 @@ export class BigqueryReservationAssignment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       assignee: cdktf.stringToTerraform(this._assignee),
+      id: cdktf.stringToTerraform(this._id),
       job_type: cdktf.stringToTerraform(this._jobType),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),

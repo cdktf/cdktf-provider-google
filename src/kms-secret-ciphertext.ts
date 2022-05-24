@@ -21,6 +21,13 @@ Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
   */
   readonly cryptoKey: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext#id KmsSecretCiphertext#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The plaintext to be encrypted.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_secret_ciphertext#plaintext KmsSecretCiphertext#plaintext}
@@ -57,6 +64,7 @@ export function kmsSecretCiphertextTimeoutsToTerraform(struct?: KmsSecretCiphert
 
 export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -66,7 +74,10 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KmsSecretCiphertextTimeouts | undefined {
+  public get internalValue(): KmsSecretCiphertextTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -80,14 +91,20 @@ export class KmsSecretCiphertextTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KmsSecretCiphertextTimeouts | undefined) {
+  public set internalValue(value: KmsSecretCiphertextTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -162,6 +179,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
     });
     this._additionalAuthenticatedData = config.additionalAuthenticatedData;
     this._cryptoKey = config.cryptoKey;
+    this._id = config.id;
     this._plaintext = config.plaintext;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -205,8 +223,19 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // plaintext - computed: false, optional: false, required: true
@@ -246,6 +275,7 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
     return {
       additional_authenticated_data: cdktf.stringToTerraform(this._additionalAuthenticatedData),
       crypto_key: cdktf.stringToTerraform(this._cryptoKey),
+      id: cdktf.stringToTerraform(this._id),
       plaintext: cdktf.stringToTerraform(this._plaintext),
       timeouts: kmsSecretCiphertextTimeoutsToTerraform(this._timeouts.internalValue),
     };

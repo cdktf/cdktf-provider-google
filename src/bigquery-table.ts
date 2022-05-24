@@ -44,6 +44,13 @@ export interface BigqueryTableConfig extends cdktf.TerraformMetaArguments {
   */
   readonly friendlyName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#id BigqueryTable#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A mapping of labels to assign to the resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#labels BigqueryTable#labels}
@@ -1535,6 +1542,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
     this._description = config.description;
     this._expirationTime = config.expirationTime;
     this._friendlyName = config.friendlyName;
+    this._id = config.id;
     this._labels = config.labels;
     this._project = config.project;
     this._schema = config.schema;
@@ -1655,8 +1663,19 @@ export class BigqueryTable extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -1863,6 +1882,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       expiration_time: cdktf.numberToTerraform(this._expirationTime),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       schema: cdktf.stringToTerraform(this._schema),

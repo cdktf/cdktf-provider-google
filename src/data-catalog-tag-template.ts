@@ -20,6 +20,13 @@ export interface DataCatalogTagTemplateConfig extends cdktf.TerraformMetaArgumen
   */
   readonly forceDelete?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template#id DataCatalogTagTemplate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template#project DataCatalogTagTemplate#project}
   */
   readonly project?: string;
@@ -67,6 +74,83 @@ export function dataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesToTerraform
   }
 }
 
+export class DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._displayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._displayName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._displayName = value.displayName;
+    }
+  }
+
+  // display_name - computed: false, optional: false, required: true
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+}
+
+export class DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesList extends cdktf.ComplexList {
+  public internalValue? : DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesOutputReference {
+    return new DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataCatalogTagTemplateFieldsTypeEnumType {
   /**
   * allowed_values block
@@ -100,9 +184,9 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
   public get internalValue(): DataCatalogTagTemplateFieldsTypeEnumType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedValues !== undefined) {
+    if (this._allowedValues?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.allowedValues = this._allowedValues;
+      internalValueResult.allowedValues = this._allowedValues?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -110,26 +194,25 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeOutputReference extends cdk
   public set internalValue(value: DataCatalogTagTemplateFieldsTypeEnumType | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._allowedValues = undefined;
+      this._allowedValues.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._allowedValues = value.allowedValues;
+      this._allowedValues.internalValue = value.allowedValues;
     }
   }
 
   // allowed_values - computed: false, optional: false, required: true
-  private _allowedValues?: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues[] | cdktf.IResolvable; 
+  private _allowedValues = new DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesList(this, "allowed_values", true);
   public get allowedValues() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('allowed_values')));
+    return this._allowedValues;
   }
-  public set allowedValues(value: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues[] | cdktf.IResolvable) {
-    this._allowedValues = value;
+  public putAllowedValues(value: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues[] | cdktf.IResolvable) {
+    this._allowedValues.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get allowedValuesInput() {
-    return this._allowedValues;
+    return this._allowedValues.internalValue;
   }
 }
 export interface DataCatalogTagTemplateFieldsType {
@@ -283,6 +366,195 @@ export function dataCatalogTagTemplateFieldsToTerraform(struct?: DataCatalogTagT
   }
 }
 
+export class DataCatalogTagTemplateFieldsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataCatalogTagTemplateFields | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._displayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
+    if (this._fieldId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fieldId = this._fieldId;
+    }
+    if (this._isRequired !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isRequired = this._isRequired;
+    }
+    if (this._order !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.order = this._order;
+    }
+    if (this._type?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataCatalogTagTemplateFields | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._displayName = undefined;
+      this._fieldId = undefined;
+      this._isRequired = undefined;
+      this._order = undefined;
+      this._type.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._displayName = value.displayName;
+      this._fieldId = value.fieldId;
+      this._isRequired = value.isRequired;
+      this._order = value.order;
+      this._type.internalValue = value.type;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // field_id - computed: false, optional: false, required: true
+  private _fieldId?: string; 
+  public get fieldId() {
+    return this.getStringAttribute('field_id');
+  }
+  public set fieldId(value: string) {
+    this._fieldId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldIdInput() {
+    return this._fieldId;
+  }
+
+  // is_required - computed: false, optional: true, required: false
+  private _isRequired?: boolean | cdktf.IResolvable; 
+  public get isRequired() {
+    return this.getBooleanAttribute('is_required');
+  }
+  public set isRequired(value: boolean | cdktf.IResolvable) {
+    this._isRequired = value;
+  }
+  public resetIsRequired() {
+    this._isRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isRequiredInput() {
+    return this._isRequired;
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // order - computed: false, optional: true, required: false
+  private _order?: number; 
+  public get order() {
+    return this.getNumberAttribute('order');
+  }
+  public set order(value: number) {
+    this._order = value;
+  }
+  public resetOrder() {
+    this._order = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderInput() {
+    return this._order;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type = new DataCatalogTagTemplateFieldsTypeOutputReference(this, "type");
+  public get type() {
+    return this._type;
+  }
+  public putType(value: DataCatalogTagTemplateFieldsType) {
+    this._type.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type.internalValue;
+  }
+}
+
+export class DataCatalogTagTemplateFieldsList extends cdktf.ComplexList {
+  public internalValue? : DataCatalogTagTemplateFields[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataCatalogTagTemplateFieldsOutputReference {
+    return new DataCatalogTagTemplateFieldsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataCatalogTagTemplateTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_catalog_tag_template#create DataCatalogTagTemplate#create}
@@ -312,6 +584,7 @@ export function dataCatalogTagTemplateTimeoutsToTerraform(struct?: DataCatalogTa
 
 export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -321,7 +594,10 @@ export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataCatalogTagTemplateTimeouts | undefined {
+  public get internalValue(): DataCatalogTagTemplateTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -339,15 +615,21 @@ export class DataCatalogTagTemplateTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataCatalogTagTemplateTimeouts | undefined) {
+  public set internalValue(value: DataCatalogTagTemplateTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -439,10 +721,11 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
     });
     this._displayName = config.displayName;
     this._forceDelete = config.forceDelete;
+    this._id = config.id;
     this._project = config.project;
     this._region = config.region;
     this._tagTemplateId = config.tagTemplateId;
-    this._fields = config.fields;
+    this._fields.internalValue = config.fields;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -483,8 +766,19 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -538,17 +832,16 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
   }
 
   // fields - computed: false, optional: false, required: true
-  private _fields?: DataCatalogTagTemplateFields[] | cdktf.IResolvable; 
+  private _fields = new DataCatalogTagTemplateFieldsList(this, "fields", true);
   public get fields() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('fields')));
+    return this._fields;
   }
-  public set fields(value: DataCatalogTagTemplateFields[] | cdktf.IResolvable) {
-    this._fields = value;
+  public putFields(value: DataCatalogTagTemplateFields[] | cdktf.IResolvable) {
+    this._fields.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get fieldsInput() {
-    return this._fields;
+    return this._fields.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -575,10 +868,11 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
       force_delete: cdktf.booleanToTerraform(this._forceDelete),
+      id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       tag_template_id: cdktf.stringToTerraform(this._tagTemplateId),
-      fields: cdktf.listMapper(dataCatalogTagTemplateFieldsToTerraform)(this._fields),
+      fields: cdktf.listMapper(dataCatalogTagTemplateFieldsToTerraform)(this._fields.internalValue),
       timeouts: dataCatalogTagTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

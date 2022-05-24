@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComposerEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment#id DataGoogleComposerEnvironment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the environment.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_environment#name DataGoogleComposerEnvironment#name}
@@ -547,13 +554,15 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfigOutputReference ex
   }
 
   // airflow_config_overrides - computed: true, optional: false, required: false
-  public airflowConfigOverrides(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'airflow_config_overrides').lookup(key);
+  private _airflowConfigOverrides = new cdktf.StringMap(this, "airflow_config_overrides");
+  public get airflowConfigOverrides() {
+    return this._airflowConfigOverrides;
   }
 
   // env_variables - computed: true, optional: false, required: false
-  public envVariables(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'env_variables').lookup(key);
+  private _envVariables = new cdktf.StringMap(this, "env_variables");
+  public get envVariables() {
+    return this._envVariables;
   }
 
   // image_version - computed: true, optional: false, required: false
@@ -562,8 +571,9 @@ export class DataGoogleComposerEnvironmentConfigSoftwareConfigOutputReference ex
   }
 
   // pypi_packages - computed: true, optional: false, required: false
-  public pypiPackages(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'pypi_packages').lookup(key);
+  private _pypiPackages = new cdktf.StringMap(this, "pypi_packages");
+  public get pypiPackages() {
+    return this._pypiPackages;
   }
 
   // python_version - computed: true, optional: false, required: false
@@ -1280,6 +1290,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
@@ -1296,13 +1307,25 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
   }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1356,6 +1379,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

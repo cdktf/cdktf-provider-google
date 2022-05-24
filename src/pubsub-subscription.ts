@@ -62,6 +62,13 @@ you can't modify the filter.
   */
   readonly filter?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#id PubsubSubscription#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A set of key/value label pairs to assign to this Subscription.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_subscription#labels PubsubSubscription#labels}
@@ -696,6 +703,7 @@ export function pubsubSubscriptionTimeoutsToTerraform(struct?: PubsubSubscriptio
 
 export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -705,7 +713,10 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): PubsubSubscriptionTimeouts | undefined {
+  public get internalValue(): PubsubSubscriptionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -723,15 +734,21 @@ export class PubsubSubscriptionTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: PubsubSubscriptionTimeouts | undefined) {
+  public set internalValue(value: PubsubSubscriptionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -825,6 +842,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
     this._enableExactlyOnceDelivery = config.enableExactlyOnceDelivery;
     this._enableMessageOrdering = config.enableMessageOrdering;
     this._filter = config.filter;
+    this._id = config.id;
     this._labels = config.labels;
     this._messageRetentionDuration = config.messageRetentionDuration;
     this._name = config.name;
@@ -907,8 +925,19 @@ export class PubsubSubscription extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -1091,6 +1120,7 @@ export class PubsubSubscription extends cdktf.TerraformResource {
       enable_exactly_once_delivery: cdktf.booleanToTerraform(this._enableExactlyOnceDelivery),
       enable_message_ordering: cdktf.booleanToTerraform(this._enableMessageOrdering),
       filter: cdktf.stringToTerraform(this._filter),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       message_retention_duration: cdktf.stringToTerraform(this._messageRetentionDuration),
       name: cdktf.stringToTerraform(this._name),

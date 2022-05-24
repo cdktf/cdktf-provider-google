@@ -21,6 +21,13 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
   */
   readonly globalNetworkEndpointGroup: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint#id ComputeGlobalNetworkEndpoint#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * IPv4 address external endpoint.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_global_network_endpoint#ip_address ComputeGlobalNetworkEndpoint#ip_address}
@@ -67,6 +74,7 @@ export function computeGlobalNetworkEndpointTimeoutsToTerraform(struct?: Compute
 
 export class ComputeGlobalNetworkEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -76,7 +84,10 @@ export class ComputeGlobalNetworkEndpointTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeGlobalNetworkEndpointTimeouts | undefined {
+  public get internalValue(): ComputeGlobalNetworkEndpointTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -90,14 +101,20 @@ export class ComputeGlobalNetworkEndpointTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeGlobalNetworkEndpointTimeouts | undefined) {
+  public set internalValue(value: ComputeGlobalNetworkEndpointTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -172,6 +189,7 @@ export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
     });
     this._fqdn = config.fqdn;
     this._globalNetworkEndpointGroup = config.globalNetworkEndpointGroup;
+    this._id = config.id;
     this._ipAddress = config.ipAddress;
     this._port = config.port;
     this._project = config.project;
@@ -212,8 +230,19 @@ export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_address - computed: false, optional: true, required: false
@@ -285,6 +314,7 @@ export class ComputeGlobalNetworkEndpoint extends cdktf.TerraformResource {
     return {
       fqdn: cdktf.stringToTerraform(this._fqdn),
       global_network_endpoint_group: cdktf.stringToTerraform(this._globalNetworkEndpointGroup),
+      id: cdktf.stringToTerraform(this._id),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       port: cdktf.numberToTerraform(this._port),
       project: cdktf.stringToTerraform(this._project),

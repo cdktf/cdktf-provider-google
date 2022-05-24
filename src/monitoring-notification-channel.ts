@@ -26,6 +26,13 @@ export interface MonitoringNotificationChannelConfig extends cdktf.TerraformMeta
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel#id MonitoringNotificationChannel#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Configuration fields that define the channel and its behavior. The
 permissible and required labels are specified in the
 NotificationChannelDescriptor corresponding to the type field.
@@ -220,6 +227,7 @@ export function monitoringNotificationChannelTimeoutsToTerraform(struct?: Monito
 
 export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -229,7 +237,10 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitoringNotificationChannelTimeouts | undefined {
+  public get internalValue(): MonitoringNotificationChannelTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -247,15 +258,21 @@ export class MonitoringNotificationChannelTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitoringNotificationChannelTimeouts | undefined) {
+  public set internalValue(value: MonitoringNotificationChannelTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -348,6 +365,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._labels = config.labels;
     this._project = config.project;
     this._type = config.type;
@@ -409,8 +427,19 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -525,6 +554,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),

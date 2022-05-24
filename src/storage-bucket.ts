@@ -20,6 +20,13 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#id StorageBucket#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A set of key/value label pairs to assign to the bucket.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#labels StorageBucket#labels}
@@ -150,6 +157,152 @@ export function storageBucketCorsToTerraform(struct?: StorageBucketCors | cdktf.
   }
 }
 
+export class StorageBucketCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageBucketCors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxAgeSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxAgeSeconds = this._maxAgeSeconds;
+    }
+    if (this._method !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._origin !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.origin = this._origin;
+    }
+    if (this._responseHeader !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.responseHeader = this._responseHeader;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketCors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._maxAgeSeconds = undefined;
+      this._method = undefined;
+      this._origin = undefined;
+      this._responseHeader = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._maxAgeSeconds = value.maxAgeSeconds;
+      this._method = value.method;
+      this._origin = value.origin;
+      this._responseHeader = value.responseHeader;
+    }
+  }
+
+  // max_age_seconds - computed: false, optional: true, required: false
+  private _maxAgeSeconds?: number; 
+  public get maxAgeSeconds() {
+    return this.getNumberAttribute('max_age_seconds');
+  }
+  public set maxAgeSeconds(value: number) {
+    this._maxAgeSeconds = value;
+  }
+  public resetMaxAgeSeconds() {
+    this._maxAgeSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeSecondsInput() {
+    return this._maxAgeSeconds;
+  }
+
+  // method - computed: false, optional: true, required: false
+  private _method?: string[]; 
+  public get method() {
+    return this.getListAttribute('method');
+  }
+  public set method(value: string[]) {
+    this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method;
+  }
+
+  // origin - computed: false, optional: true, required: false
+  private _origin?: string[]; 
+  public get origin() {
+    return this.getListAttribute('origin');
+  }
+  public set origin(value: string[]) {
+    this._origin = value;
+  }
+  public resetOrigin() {
+    this._origin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originInput() {
+    return this._origin;
+  }
+
+  // response_header - computed: false, optional: true, required: false
+  private _responseHeader?: string[]; 
+  public get responseHeader() {
+    return this.getListAttribute('response_header');
+  }
+  public set responseHeader(value: string[]) {
+    this._responseHeader = value;
+  }
+  public resetResponseHeader() {
+    this._responseHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeaderInput() {
+    return this._responseHeader;
+  }
+}
+
+export class StorageBucketCorsList extends cdktf.ComplexList {
+  public internalValue? : StorageBucketCors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageBucketCorsOutputReference {
+    return new StorageBucketCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageBucketEncryption {
   /**
   * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified. You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details.
@@ -633,6 +786,102 @@ export function storageBucketLifecycleRuleToTerraform(struct?: StorageBucketLife
   }
 }
 
+export class StorageBucketLifecycleRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageBucketLifecycleRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action?.internalValue;
+    }
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketLifecycleRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action.internalValue = undefined;
+      this._condition.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action.internalValue = value.action;
+      this._condition.internalValue = value.condition;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action = new StorageBucketLifecycleRuleActionOutputReference(this, "action");
+  public get action() {
+    return this._action;
+  }
+  public putAction(value: StorageBucketLifecycleRuleAction) {
+    this._action.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action.internalValue;
+  }
+
+  // condition - computed: false, optional: false, required: true
+  private _condition = new StorageBucketLifecycleRuleConditionOutputReference(this, "condition");
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: StorageBucketLifecycleRuleCondition) {
+    this._condition.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+}
+
+export class StorageBucketLifecycleRuleList extends cdktf.ComplexList {
+  public internalValue? : StorageBucketLifecycleRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageBucketLifecycleRuleOutputReference {
+    return new StorageBucketLifecycleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageBucketLogging {
   /**
   * The bucket that will receive log objects.
@@ -848,6 +1097,7 @@ export function storageBucketTimeoutsToTerraform(struct?: StorageBucketTimeoutsO
 
 export class StorageBucketTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -857,7 +1107,10 @@ export class StorageBucketTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageBucketTimeouts | undefined {
+  public get internalValue(): StorageBucketTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -875,15 +1128,21 @@ export class StorageBucketTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageBucketTimeouts | undefined) {
+  public set internalValue(value: StorageBucketTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._read = value.read;
       this._update = value.update;
@@ -1135,6 +1394,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     });
     this._defaultEventBasedHold = config.defaultEventBasedHold;
     this._forceDestroy = config.forceDestroy;
+    this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
     this._name = config.name;
@@ -1142,9 +1402,9 @@ export class StorageBucket extends cdktf.TerraformResource {
     this._requesterPays = config.requesterPays;
     this._storageClass = config.storageClass;
     this._uniformBucketLevelAccess = config.uniformBucketLevelAccess;
-    this._cors = config.cors;
+    this._cors.internalValue = config.cors;
     this._encryption.internalValue = config.encryption;
-    this._lifecycleRule = config.lifecycleRule;
+    this._lifecycleRule.internalValue = config.lifecycleRule;
     this._logging.internalValue = config.logging;
     this._retentionPolicy.internalValue = config.retentionPolicy;
     this._timeouts.internalValue = config.timeouts;
@@ -1189,8 +1449,19 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -1310,20 +1581,19 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: StorageBucketCors[] | cdktf.IResolvable; 
+  private _cors = new StorageBucketCorsList(this, "cors", false);
   public get cors() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors');
+    return this._cors;
   }
-  public set cors(value: StorageBucketCors[] | cdktf.IResolvable) {
-    this._cors = value;
+  public putCors(value: StorageBucketCors[] | cdktf.IResolvable) {
+    this._cors.internalValue = value;
   }
   public resetCors() {
-    this._cors = undefined;
+    this._cors.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
-    return this._cors;
+    return this._cors.internalValue;
   }
 
   // encryption - computed: false, optional: true, required: false
@@ -1343,20 +1613,19 @@ export class StorageBucket extends cdktf.TerraformResource {
   }
 
   // lifecycle_rule - computed: false, optional: true, required: false
-  private _lifecycleRule?: StorageBucketLifecycleRule[] | cdktf.IResolvable; 
+  private _lifecycleRule = new StorageBucketLifecycleRuleList(this, "lifecycle_rule", false);
   public get lifecycleRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('lifecycle_rule');
+    return this._lifecycleRule;
   }
-  public set lifecycleRule(value: StorageBucketLifecycleRule[] | cdktf.IResolvable) {
-    this._lifecycleRule = value;
+  public putLifecycleRule(value: StorageBucketLifecycleRule[] | cdktf.IResolvable) {
+    this._lifecycleRule.internalValue = value;
   }
   public resetLifecycleRule() {
-    this._lifecycleRule = undefined;
+    this._lifecycleRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get lifecycleRuleInput() {
-    return this._lifecycleRule;
+    return this._lifecycleRule.internalValue;
   }
 
   // logging - computed: false, optional: true, required: false
@@ -1447,6 +1716,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     return {
       default_event_based_hold: cdktf.booleanToTerraform(this._defaultEventBasedHold),
       force_destroy: cdktf.booleanToTerraform(this._forceDestroy),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -1454,9 +1724,9 @@ export class StorageBucket extends cdktf.TerraformResource {
       requester_pays: cdktf.booleanToTerraform(this._requesterPays),
       storage_class: cdktf.stringToTerraform(this._storageClass),
       uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),
-      cors: cdktf.listMapper(storageBucketCorsToTerraform)(this._cors),
+      cors: cdktf.listMapper(storageBucketCorsToTerraform)(this._cors.internalValue),
       encryption: storageBucketEncryptionToTerraform(this._encryption.internalValue),
-      lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform)(this._lifecycleRule),
+      lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform)(this._lifecycleRule.internalValue),
       logging: storageBucketLoggingToTerraform(this._logging.internalValue),
       retention_policy: storageBucketRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
       timeouts: storageBucketTimeoutsToTerraform(this._timeouts.internalValue),

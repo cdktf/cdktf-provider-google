@@ -22,6 +22,13 @@ is used to match log entries.
   */
   readonly filter: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#id LoggingMetric#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
@@ -547,6 +554,127 @@ export function loggingMetricMetricDescriptorLabelsToTerraform(struct?: LoggingM
   }
 }
 
+export class LoggingMetricMetricDescriptorLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LoggingMetricMetricDescriptorLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._valueType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.valueType = this._valueType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LoggingMetricMetricDescriptorLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._key = undefined;
+      this._valueType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._key = value.key;
+      this._valueType = value.valueType;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value_type - computed: false, optional: true, required: false
+  private _valueType?: string; 
+  public get valueType() {
+    return this.getStringAttribute('value_type');
+  }
+  public set valueType(value: string) {
+    this._valueType = value;
+  }
+  public resetValueType() {
+    this._valueType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueTypeInput() {
+    return this._valueType;
+  }
+}
+
+export class LoggingMetricMetricDescriptorLabelsList extends cdktf.ComplexList {
+  public internalValue? : LoggingMetricMetricDescriptorLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LoggingMetricMetricDescriptorLabelsOutputReference {
+    return new LoggingMetricMetricDescriptorLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LoggingMetricMetricDescriptor {
   /**
   * A concise name for the metric, which can be displayed in user interfaces. Use sentence case 
@@ -632,9 +760,9 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.valueType = this._valueType;
     }
-    if (this._labels !== undefined) {
+    if (this._labels?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.labels = this._labels;
+      internalValueResult.labels = this._labels?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -646,7 +774,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
       this._metricKind = undefined;
       this._unit = undefined;
       this._valueType = undefined;
-      this._labels = undefined;
+      this._labels.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -654,7 +782,7 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
       this._metricKind = value.metricKind;
       this._unit = value.unit;
       this._valueType = value.valueType;
-      this._labels = value.labels;
+      this._labels.internalValue = value.labels;
     }
   }
 
@@ -717,20 +845,19 @@ export class LoggingMetricMetricDescriptorOutputReference extends cdktf.ComplexO
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: LoggingMetricMetricDescriptorLabels[] | cdktf.IResolvable; 
+  private _labels = new LoggingMetricMetricDescriptorLabelsList(this, "labels", true);
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('labels')));
+    return this._labels;
   }
-  public set labels(value: LoggingMetricMetricDescriptorLabels[] | cdktf.IResolvable) {
-    this._labels = value;
+  public putLabels(value: LoggingMetricMetricDescriptorLabels[] | cdktf.IResolvable) {
+    this._labels.internalValue = value;
   }
   public resetLabels() {
-    this._labels = undefined;
+    this._labels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels;
+    return this._labels.internalValue;
   }
 }
 export interface LoggingMetricTimeouts {
@@ -762,6 +889,7 @@ export function loggingMetricTimeoutsToTerraform(struct?: LoggingMetricTimeoutsO
 
 export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -771,7 +899,10 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LoggingMetricTimeouts | undefined {
+  public get internalValue(): LoggingMetricTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -789,15 +920,21 @@ export class LoggingMetricTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LoggingMetricTimeouts | undefined) {
+  public set internalValue(value: LoggingMetricTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -889,6 +1026,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._filter = config.filter;
+    this._id = config.id;
     this._labelExtractors = config.labelExtractors;
     this._name = config.name;
     this._project = config.project;
@@ -932,8 +1070,19 @@ export class LoggingMetric extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // label_extractors - computed: false, optional: true, required: false
@@ -1050,6 +1199,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       filter: cdktf.stringToTerraform(this._filter),
+      id: cdktf.stringToTerraform(this._id),
       label_extractors: cdktf.hashMapper(cdktf.stringToTerraform)(this._labelExtractors),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

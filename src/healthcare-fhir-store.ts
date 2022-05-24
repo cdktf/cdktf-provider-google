@@ -63,6 +63,13 @@ notifications.
   */
   readonly enableUpdateCreate?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store#id HealthcareFhirStore#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * User-supplied key-value pairs used to organize FHIR stores.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -399,6 +406,105 @@ export function healthcareFhirStoreStreamConfigsToTerraform(struct?: HealthcareF
   }
 }
 
+export class HealthcareFhirStoreStreamConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HealthcareFhirStoreStreamConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._resourceTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceTypes = this._resourceTypes;
+    }
+    if (this._bigqueryDestination?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bigqueryDestination = this._bigqueryDestination?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareFhirStoreStreamConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._resourceTypes = undefined;
+      this._bigqueryDestination.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._resourceTypes = value.resourceTypes;
+      this._bigqueryDestination.internalValue = value.bigqueryDestination;
+    }
+  }
+
+  // resource_types - computed: false, optional: true, required: false
+  private _resourceTypes?: string[]; 
+  public get resourceTypes() {
+    return this.getListAttribute('resource_types');
+  }
+  public set resourceTypes(value: string[]) {
+    this._resourceTypes = value;
+  }
+  public resetResourceTypes() {
+    this._resourceTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceTypesInput() {
+    return this._resourceTypes;
+  }
+
+  // bigquery_destination - computed: false, optional: false, required: true
+  private _bigqueryDestination = new HealthcareFhirStoreStreamConfigsBigqueryDestinationOutputReference(this, "bigquery_destination");
+  public get bigqueryDestination() {
+    return this._bigqueryDestination;
+  }
+  public putBigqueryDestination(value: HealthcareFhirStoreStreamConfigsBigqueryDestination) {
+    this._bigqueryDestination.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryDestinationInput() {
+    return this._bigqueryDestination.internalValue;
+  }
+}
+
+export class HealthcareFhirStoreStreamConfigsList extends cdktf.ComplexList {
+  public internalValue? : HealthcareFhirStoreStreamConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HealthcareFhirStoreStreamConfigsOutputReference {
+    return new HealthcareFhirStoreStreamConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HealthcareFhirStoreTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store#create HealthcareFhirStore#create}
@@ -428,6 +534,7 @@ export function healthcareFhirStoreTimeoutsToTerraform(struct?: HealthcareFhirSt
 
 export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -437,7 +544,10 @@ export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): HealthcareFhirStoreTimeouts | undefined {
+  public get internalValue(): HealthcareFhirStoreTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -455,15 +565,21 @@ export class HealthcareFhirStoreTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: HealthcareFhirStoreTimeouts | undefined) {
+  public set internalValue(value: HealthcareFhirStoreTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -558,11 +674,12 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
     this._disableResourceVersioning = config.disableResourceVersioning;
     this._enableHistoryImport = config.enableHistoryImport;
     this._enableUpdateCreate = config.enableUpdateCreate;
+    this._id = config.id;
     this._labels = config.labels;
     this._name = config.name;
     this._version = config.version;
     this._notificationConfig.internalValue = config.notificationConfig;
-    this._streamConfigs = config.streamConfigs;
+    this._streamConfigs.internalValue = config.streamConfigs;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -648,8 +765,19 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -716,20 +844,19 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
   }
 
   // stream_configs - computed: false, optional: true, required: false
-  private _streamConfigs?: HealthcareFhirStoreStreamConfigs[] | cdktf.IResolvable; 
+  private _streamConfigs = new HealthcareFhirStoreStreamConfigsList(this, "stream_configs", false);
   public get streamConfigs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('stream_configs');
+    return this._streamConfigs;
   }
-  public set streamConfigs(value: HealthcareFhirStoreStreamConfigs[] | cdktf.IResolvable) {
-    this._streamConfigs = value;
+  public putStreamConfigs(value: HealthcareFhirStoreStreamConfigs[] | cdktf.IResolvable) {
+    this._streamConfigs.internalValue = value;
   }
   public resetStreamConfigs() {
-    this._streamConfigs = undefined;
+    this._streamConfigs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get streamConfigsInput() {
-    return this._streamConfigs;
+    return this._streamConfigs.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -759,11 +886,12 @@ export class HealthcareFhirStore extends cdktf.TerraformResource {
       disable_resource_versioning: cdktf.booleanToTerraform(this._disableResourceVersioning),
       enable_history_import: cdktf.booleanToTerraform(this._enableHistoryImport),
       enable_update_create: cdktf.booleanToTerraform(this._enableUpdateCreate),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       version: cdktf.stringToTerraform(this._version),
       notification_config: healthcareFhirStoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
-      stream_configs: cdktf.listMapper(healthcareFhirStoreStreamConfigsToTerraform)(this._streamConfigs),
+      stream_configs: cdktf.listMapper(healthcareFhirStoreStreamConfigsToTerraform)(this._streamConfigs.internalValue),
       timeouts: healthcareFhirStoreTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

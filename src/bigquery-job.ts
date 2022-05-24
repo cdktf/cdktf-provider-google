@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface BigqueryJobConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#id BigqueryJob#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#job_id BigqueryJob#job_id}
@@ -517,6 +524,127 @@ export function bigqueryJobCopySourceTablesToTerraform(struct?: BigqueryJobCopyS
   }
 }
 
+export class BigqueryJobCopySourceTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryJobCopySourceTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._datasetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.datasetId = this._datasetId;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    if (this._tableId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tableId = this._tableId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryJobCopySourceTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._datasetId = undefined;
+      this._projectId = undefined;
+      this._tableId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._datasetId = value.datasetId;
+      this._projectId = value.projectId;
+      this._tableId = value.tableId;
+    }
+  }
+
+  // dataset_id - computed: true, optional: true, required: false
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  public resetDatasetId() {
+    this._datasetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId;
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+
+  // table_id - computed: false, optional: false, required: true
+  private _tableId?: string; 
+  public get tableId() {
+    return this.getStringAttribute('table_id');
+  }
+  public set tableId(value: string) {
+    this._tableId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableIdInput() {
+    return this._tableId;
+  }
+}
+
+export class BigqueryJobCopySourceTablesList extends cdktf.ComplexList {
+  public internalValue? : BigqueryJobCopySourceTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryJobCopySourceTablesOutputReference {
+    return new BigqueryJobCopySourceTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BigqueryJobCopy {
   /**
   * Specifies whether the job is allowed to create new tables. The following values are supported:
@@ -602,9 +730,9 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.destinationTable = this._destinationTable?.internalValue;
     }
-    if (this._sourceTables !== undefined) {
+    if (this._sourceTables?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.sourceTables = this._sourceTables;
+      internalValueResult.sourceTables = this._sourceTables?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -616,7 +744,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
       this._writeDisposition = undefined;
       this._destinationEncryptionConfiguration.internalValue = undefined;
       this._destinationTable.internalValue = undefined;
-      this._sourceTables = undefined;
+      this._sourceTables.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -624,7 +752,7 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
       this._writeDisposition = value.writeDisposition;
       this._destinationEncryptionConfiguration.internalValue = value.destinationEncryptionConfiguration;
       this._destinationTable.internalValue = value.destinationTable;
-      this._sourceTables = value.sourceTables;
+      this._sourceTables.internalValue = value.sourceTables;
     }
   }
 
@@ -693,17 +821,16 @@ export class BigqueryJobCopyOutputReference extends cdktf.ComplexObject {
   }
 
   // source_tables - computed: false, optional: false, required: true
-  private _sourceTables?: BigqueryJobCopySourceTables[] | cdktf.IResolvable; 
+  private _sourceTables = new BigqueryJobCopySourceTablesList(this, "source_tables", false);
   public get sourceTables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source_tables');
+    return this._sourceTables;
   }
-  public set sourceTables(value: BigqueryJobCopySourceTables[] | cdktf.IResolvable) {
-    this._sourceTables = value;
+  public putSourceTables(value: BigqueryJobCopySourceTables[] | cdktf.IResolvable) {
+    this._sourceTables.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceTablesInput() {
-    return this._sourceTables;
+    return this._sourceTables.internalValue;
   }
 }
 export interface BigqueryJobExtractSourceModel {
@@ -2608,6 +2735,108 @@ export function bigqueryJobQueryUserDefinedFunctionResourcesToTerraform(struct?:
   }
 }
 
+export class BigqueryJobQueryUserDefinedFunctionResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryJobQueryUserDefinedFunctionResources | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._inlineCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inlineCode = this._inlineCode;
+    }
+    if (this._resourceUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceUri = this._resourceUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryJobQueryUserDefinedFunctionResources | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._inlineCode = undefined;
+      this._resourceUri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._inlineCode = value.inlineCode;
+      this._resourceUri = value.resourceUri;
+    }
+  }
+
+  // inline_code - computed: false, optional: true, required: false
+  private _inlineCode?: string; 
+  public get inlineCode() {
+    return this.getStringAttribute('inline_code');
+  }
+  public set inlineCode(value: string) {
+    this._inlineCode = value;
+  }
+  public resetInlineCode() {
+    this._inlineCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inlineCodeInput() {
+    return this._inlineCode;
+  }
+
+  // resource_uri - computed: false, optional: true, required: false
+  private _resourceUri?: string; 
+  public get resourceUri() {
+    return this.getStringAttribute('resource_uri');
+  }
+  public set resourceUri(value: string) {
+    this._resourceUri = value;
+  }
+  public resetResourceUri() {
+    this._resourceUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceUriInput() {
+    return this._resourceUri;
+  }
+}
+
+export class BigqueryJobQueryUserDefinedFunctionResourcesList extends cdktf.ComplexList {
+  public internalValue? : BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryJobQueryUserDefinedFunctionResourcesOutputReference {
+    return new BigqueryJobQueryUserDefinedFunctionResourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BigqueryJobQuery {
   /**
   * If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
@@ -2841,9 +3070,9 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.scriptOptions = this._scriptOptions?.internalValue;
     }
-    if (this._userDefinedFunctionResources !== undefined) {
+    if (this._userDefinedFunctionResources?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.userDefinedFunctionResources = this._userDefinedFunctionResources;
+      internalValueResult.userDefinedFunctionResources = this._userDefinedFunctionResources?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2867,7 +3096,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
       this._destinationEncryptionConfiguration.internalValue = undefined;
       this._destinationTable.internalValue = undefined;
       this._scriptOptions.internalValue = undefined;
-      this._userDefinedFunctionResources = undefined;
+      this._userDefinedFunctionResources.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2887,7 +3116,7 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
       this._destinationEncryptionConfiguration.internalValue = value.destinationEncryptionConfiguration;
       this._destinationTable.internalValue = value.destinationTable;
       this._scriptOptions.internalValue = value.scriptOptions;
-      this._userDefinedFunctionResources = value.userDefinedFunctionResources;
+      this._userDefinedFunctionResources.internalValue = value.userDefinedFunctionResources;
     }
   }
 
@@ -3145,20 +3374,19 @@ export class BigqueryJobQueryOutputReference extends cdktf.ComplexObject {
   }
 
   // user_defined_function_resources - computed: false, optional: true, required: false
-  private _userDefinedFunctionResources?: BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable; 
+  private _userDefinedFunctionResources = new BigqueryJobQueryUserDefinedFunctionResourcesList(this, "user_defined_function_resources", false);
   public get userDefinedFunctionResources() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_defined_function_resources');
+    return this._userDefinedFunctionResources;
   }
-  public set userDefinedFunctionResources(value: BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable) {
-    this._userDefinedFunctionResources = value;
+  public putUserDefinedFunctionResources(value: BigqueryJobQueryUserDefinedFunctionResources[] | cdktf.IResolvable) {
+    this._userDefinedFunctionResources.internalValue = value;
   }
   public resetUserDefinedFunctionResources() {
-    this._userDefinedFunctionResources = undefined;
+    this._userDefinedFunctionResources.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get userDefinedFunctionResourcesInput() {
-    return this._userDefinedFunctionResources;
+    return this._userDefinedFunctionResources.internalValue;
   }
 }
 export interface BigqueryJobTimeouts {
@@ -3185,6 +3413,7 @@ export function bigqueryJobTimeoutsToTerraform(struct?: BigqueryJobTimeoutsOutpu
 
 export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -3194,7 +3423,10 @@ export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BigqueryJobTimeouts | undefined {
+  public get internalValue(): BigqueryJobTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -3208,14 +3440,20 @@ export class BigqueryJobTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BigqueryJobTimeouts | undefined) {
+  public set internalValue(value: BigqueryJobTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -3288,6 +3526,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._jobId = config.jobId;
     this._jobTimeoutMs = config.jobTimeoutMs;
     this._labels = config.labels;
@@ -3305,8 +3544,19 @@ export class BigqueryJob extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // job_id - computed: false, optional: false, required: true
@@ -3488,6 +3738,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       job_id: cdktf.stringToTerraform(this._jobId),
       job_timeout_ms: cdktf.stringToTerraform(this._jobTimeoutMs),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),

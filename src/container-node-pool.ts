@@ -14,6 +14,13 @@ export interface ContainerNodePoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cluster: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#id ContainerNodePool#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The initial number of nodes for the pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Changing this will force recreation of the resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#initial_node_count ContainerNodePool#initial_node_count}
@@ -311,6 +318,130 @@ export function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: 
   }
 }
 
+export class ContainerNodePoolNodeConfigGuestAcceleratorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigGuestAccelerator | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._gpuPartitionSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gpuPartitionSize = this._gpuPartitionSize;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigGuestAccelerator | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._count = undefined;
+      this._gpuPartitionSize = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._count = value.count;
+      this._gpuPartitionSize = value.gpuPartitionSize;
+      this._type = value.type;
+    }
+  }
+
+  // count - computed: true, optional: true, required: false
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  public resetCount() {
+    this._count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count;
+  }
+
+  // gpu_partition_size - computed: true, optional: true, required: false
+  private _gpuPartitionSize?: string; 
+  public get gpuPartitionSize() {
+    return this.getStringAttribute('gpu_partition_size');
+  }
+  public set gpuPartitionSize(value: string) {
+    this._gpuPartitionSize = value;
+  }
+  public resetGpuPartitionSize() {
+    this._gpuPartitionSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gpuPartitionSizeInput() {
+    return this._gpuPartitionSize;
+  }
+
+  // type - computed: true, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class ContainerNodePoolNodeConfigGuestAcceleratorList extends cdktf.ComplexList {
+  public internalValue? : ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerNodePoolNodeConfigGuestAcceleratorOutputReference {
+    return new ContainerNodePoolNodeConfigGuestAcceleratorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerNodePoolNodeConfigTaint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#effect ContainerNodePool#effect}
@@ -338,6 +469,130 @@ export function containerNodePoolNodeConfigTaintToTerraform(struct?: ContainerNo
   }
 }
 
+export class ContainerNodePoolNodeConfigTaintOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigTaint | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._effect !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.effect = this._effect;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigTaint | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._effect = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._effect = value.effect;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // effect - computed: true, optional: true, required: false
+  private _effect?: string; 
+  public get effect() {
+    return this.getStringAttribute('effect');
+  }
+  public set effect(value: string) {
+    this._effect = value;
+  }
+  public resetEffect() {
+    this._effect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get effectInput() {
+    return this._effect;
+  }
+
+  // key - computed: true, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: true, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ContainerNodePoolNodeConfigTaintList extends cdktf.ComplexList {
+  public internalValue? : ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerNodePoolNodeConfigTaintOutputReference {
+    return new ContainerNodePoolNodeConfigTaintOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerNodePoolNodeConfigGcfsConfig {
   /**
   * Whether or not GCFS is enabled
@@ -804,9 +1059,9 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.diskType = this._diskType;
     }
-    if (this._guestAccelerator !== undefined) {
+    if (this._guestAccelerator?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.guestAccelerator = this._guestAccelerator;
+      internalValueResult.guestAccelerator = this._guestAccelerator?.internalValue;
     }
     if (this._imageType !== undefined) {
       hasAnyValues = true;
@@ -852,9 +1107,9 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._taint !== undefined) {
+    if (this._taint?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.taint = this._taint;
+      internalValueResult.taint = this._taint?.internalValue;
     }
     if (this._gcfsConfig?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -881,7 +1136,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._bootDiskKmsKey = undefined;
       this._diskSizeGb = undefined;
       this._diskType = undefined;
-      this._guestAccelerator = undefined;
+      this._guestAccelerator.internalValue = undefined;
       this._imageType = undefined;
       this._labels = undefined;
       this._localSsdCount = undefined;
@@ -893,7 +1148,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._preemptible = undefined;
       this._serviceAccount = undefined;
       this._tags = undefined;
-      this._taint = undefined;
+      this._taint.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
       this._gvnic.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
@@ -904,7 +1159,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._bootDiskKmsKey = value.bootDiskKmsKey;
       this._diskSizeGb = value.diskSizeGb;
       this._diskType = value.diskType;
-      this._guestAccelerator = value.guestAccelerator;
+      this._guestAccelerator.internalValue = value.guestAccelerator;
       this._imageType = value.imageType;
       this._labels = value.labels;
       this._localSsdCount = value.localSsdCount;
@@ -916,7 +1171,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._preemptible = value.preemptible;
       this._serviceAccount = value.serviceAccount;
       this._tags = value.tags;
-      this._taint = value.taint;
+      this._taint.internalValue = value.taint;
       this._gcfsConfig.internalValue = value.gcfsConfig;
       this._gvnic.internalValue = value.gvnic;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
@@ -973,20 +1228,19 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // guest_accelerator - computed: true, optional: true, required: false
-  private _guestAccelerator?: ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable; 
+  private _guestAccelerator = new ContainerNodePoolNodeConfigGuestAcceleratorList(this, "guest_accelerator", false);
   public get guestAccelerator() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_accelerator');
+    return this._guestAccelerator;
   }
-  public set guestAccelerator(value: ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable) {
-    this._guestAccelerator = value;
+  public putGuestAccelerator(value: ContainerNodePoolNodeConfigGuestAccelerator[] | cdktf.IResolvable) {
+    this._guestAccelerator.internalValue = value;
   }
   public resetGuestAccelerator() {
-    this._guestAccelerator = undefined;
+    this._guestAccelerator.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get guestAcceleratorInput() {
-    return this._guestAccelerator;
+    return this._guestAccelerator.internalValue;
   }
 
   // image_type - computed: true, optional: true, required: false
@@ -1166,20 +1420,19 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   }
 
   // taint - computed: true, optional: true, required: false
-  private _taint?: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable; 
+  private _taint = new ContainerNodePoolNodeConfigTaintList(this, "taint", false);
   public get taint() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('taint');
+    return this._taint;
   }
-  public set taint(value: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable) {
-    this._taint = value;
+  public putTaint(value: ContainerNodePoolNodeConfigTaint[] | cdktf.IResolvable) {
+    this._taint.internalValue = value;
   }
   public resetTaint() {
-    this._taint = undefined;
+    this._taint.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get taintInput() {
-    return this._taint;
+    return this._taint.internalValue;
   }
 
   // gcfs_config - computed: false, optional: true, required: false
@@ -1275,6 +1528,7 @@ export function containerNodePoolTimeoutsToTerraform(struct?: ContainerNodePoolT
 
 export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1284,7 +1538,10 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerNodePoolTimeouts | undefined {
+  public get internalValue(): ContainerNodePoolTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1302,15 +1559,21 @@ export class ContainerNodePoolTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerNodePoolTimeouts | undefined) {
+  public set internalValue(value: ContainerNodePoolTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1491,6 +1754,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._cluster = config.cluster;
+    this._id = config.id;
     this._initialNodeCount = config.initialNodeCount;
     this._location = config.location;
     this._maxPodsPerNode = config.maxPodsPerNode;
@@ -1525,8 +1789,19 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // initial_node_count - computed: true, optional: true, required: false
@@ -1775,6 +2050,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster: cdktf.stringToTerraform(this._cluster),
+      id: cdktf.stringToTerraform(this._id),
       initial_node_count: cdktf.numberToTerraform(this._initialNodeCount),
       location: cdktf.stringToTerraform(this._location),
       max_pods_per_node: cdktf.numberToTerraform(this._maxPodsPerNode),

@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#id DnsRecordSet#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the zone in which this record set will reside.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#managed_zone DnsRecordSet#managed_zone}
@@ -74,6 +81,102 @@ export function dnsRecordSetRoutingPolicyGeoToTerraform(struct?: DnsRecordSetRou
   }
 }
 
+export class DnsRecordSetRoutingPolicyGeoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DnsRecordSetRoutingPolicyGeo | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._rrdatas !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rrdatas = this._rrdatas;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsRecordSetRoutingPolicyGeo | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._location = undefined;
+      this._rrdatas = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._location = value.location;
+      this._rrdatas = value.rrdatas;
+    }
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+
+  // rrdatas - computed: false, optional: false, required: true
+  private _rrdatas?: string[]; 
+  public get rrdatas() {
+    return this.getListAttribute('rrdatas');
+  }
+  public set rrdatas(value: string[]) {
+    this._rrdatas = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rrdatasInput() {
+    return this._rrdatas;
+  }
+}
+
+export class DnsRecordSetRoutingPolicyGeoList extends cdktf.ComplexList {
+  public internalValue? : DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DnsRecordSetRoutingPolicyGeoOutputReference {
+    return new DnsRecordSetRoutingPolicyGeoOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DnsRecordSetRoutingPolicyWrr {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_record_set#rrdatas DnsRecordSet#rrdatas}
@@ -98,6 +201,102 @@ export function dnsRecordSetRoutingPolicyWrrToTerraform(struct?: DnsRecordSetRou
   }
 }
 
+export class DnsRecordSetRoutingPolicyWrrOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DnsRecordSetRoutingPolicyWrr | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._rrdatas !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rrdatas = this._rrdatas;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsRecordSetRoutingPolicyWrr | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._rrdatas = undefined;
+      this._weight = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._rrdatas = value.rrdatas;
+      this._weight = value.weight;
+    }
+  }
+
+  // rrdatas - computed: false, optional: false, required: true
+  private _rrdatas?: string[]; 
+  public get rrdatas() {
+    return this.getListAttribute('rrdatas');
+  }
+  public set rrdatas(value: string[]) {
+    this._rrdatas = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rrdatasInput() {
+    return this._rrdatas;
+  }
+
+  // weight - computed: false, optional: false, required: true
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+}
+
+export class DnsRecordSetRoutingPolicyWrrList extends cdktf.ComplexList {
+  public internalValue? : DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DnsRecordSetRoutingPolicyWrrOutputReference {
+    return new DnsRecordSetRoutingPolicyWrrOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DnsRecordSetRoutingPolicy {
   /**
   * geo block
@@ -138,13 +337,13 @@ export class DnsRecordSetRoutingPolicyOutputReference extends cdktf.ComplexObjec
   public get internalValue(): DnsRecordSetRoutingPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._geo !== undefined) {
+    if (this._geo?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.geo = this._geo;
+      internalValueResult.geo = this._geo?.internalValue;
     }
-    if (this._wrr !== undefined) {
+    if (this._wrr?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.wrr = this._wrr;
+      internalValueResult.wrr = this._wrr?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -152,48 +351,46 @@ export class DnsRecordSetRoutingPolicyOutputReference extends cdktf.ComplexObjec
   public set internalValue(value: DnsRecordSetRoutingPolicy | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._geo = undefined;
-      this._wrr = undefined;
+      this._geo.internalValue = undefined;
+      this._wrr.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._geo = value.geo;
-      this._wrr = value.wrr;
+      this._geo.internalValue = value.geo;
+      this._wrr.internalValue = value.wrr;
     }
   }
 
   // geo - computed: false, optional: true, required: false
-  private _geo?: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable; 
+  private _geo = new DnsRecordSetRoutingPolicyGeoList(this, "geo", false);
   public get geo() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('geo');
+    return this._geo;
   }
-  public set geo(value: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable) {
-    this._geo = value;
+  public putGeo(value: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable) {
+    this._geo.internalValue = value;
   }
   public resetGeo() {
-    this._geo = undefined;
+    this._geo.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get geoInput() {
-    return this._geo;
+    return this._geo.internalValue;
   }
 
   // wrr - computed: false, optional: true, required: false
-  private _wrr?: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable; 
+  private _wrr = new DnsRecordSetRoutingPolicyWrrList(this, "wrr", false);
   public get wrr() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('wrr');
+    return this._wrr;
   }
-  public set wrr(value: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable) {
-    this._wrr = value;
+  public putWrr(value: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable) {
+    this._wrr.internalValue = value;
   }
   public resetWrr() {
-    this._wrr = undefined;
+    this._wrr.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get wrrInput() {
-    return this._wrr;
+    return this._wrr.internalValue;
   }
 }
 
@@ -231,6 +428,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._managedZone = config.managedZone;
     this._name = config.name;
     this._project = config.project;
@@ -245,8 +443,19 @@ export class DnsRecordSet extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // managed_zone - computed: false, optional: false, required: true
@@ -358,6 +567,7 @@ export class DnsRecordSet extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       managed_zone: cdktf.stringToTerraform(this._managedZone),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

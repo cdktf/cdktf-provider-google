@@ -21,6 +21,13 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   */
   readonly duration?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment#id OsConfigPatchDeployment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
 * Must start with a letter.
@@ -91,6 +98,83 @@ export function osConfigPatchDeploymentInstanceFilterGroupLabelsToTerraform(stru
   }
 }
 
+export class OsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigPatchDeploymentInstanceFilterGroupLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._labels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigPatchDeploymentInstanceFilterGroupLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._labels = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._labels = value.labels;
+    }
+  }
+
+  // labels - computed: false, optional: false, required: true
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
+  }
+}
+
+export class OsConfigPatchDeploymentInstanceFilterGroupLabelsList extends cdktf.ComplexList {
+  public internalValue? : OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference {
+    return new OsConfigPatchDeploymentInstanceFilterGroupLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigPatchDeploymentInstanceFilter {
   /**
   * Target all VM instances in the project. If true, no other criteria is permitted.
@@ -171,9 +255,9 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.zones = this._zones;
     }
-    if (this._groupLabels !== undefined) {
+    if (this._groupLabels?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.groupLabels = this._groupLabels;
+      internalValueResult.groupLabels = this._groupLabels?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -185,7 +269,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
       this._instanceNamePrefixes = undefined;
       this._instances = undefined;
       this._zones = undefined;
-      this._groupLabels = undefined;
+      this._groupLabels.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -193,7 +277,7 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
       this._instanceNamePrefixes = value.instanceNamePrefixes;
       this._instances = value.instances;
       this._zones = value.zones;
-      this._groupLabels = value.groupLabels;
+      this._groupLabels.internalValue = value.groupLabels;
     }
   }
 
@@ -262,20 +346,19 @@ export class OsConfigPatchDeploymentInstanceFilterOutputReference extends cdktf.
   }
 
   // group_labels - computed: false, optional: true, required: false
-  private _groupLabels?: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable; 
+  private _groupLabels = new OsConfigPatchDeploymentInstanceFilterGroupLabelsList(this, "group_labels", false);
   public get groupLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('group_labels');
+    return this._groupLabels;
   }
-  public set groupLabels(value: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable) {
-    this._groupLabels = value;
+  public putGroupLabels(value: OsConfigPatchDeploymentInstanceFilterGroupLabels[] | cdktf.IResolvable) {
+    this._groupLabels.internalValue = value;
   }
   public resetGroupLabels() {
-    this._groupLabels = undefined;
+    this._groupLabels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get groupLabelsInput() {
-    return this._groupLabels;
+    return this._groupLabels.internalValue;
   }
 }
 export interface OsConfigPatchDeploymentOneTimeSchedule {
@@ -2952,6 +3035,9 @@ export interface OsConfigPatchDeploymentRecurringScheduleTimeZone {
   * IANA Time Zone Database time zone, e.g. "America/New_York".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_patch_deployment#id OsConfigPatchDeployment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -3532,6 +3618,7 @@ export function osConfigPatchDeploymentTimeoutsToTerraform(struct?: OsConfigPatc
 
 export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -3541,7 +3628,10 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): OsConfigPatchDeploymentTimeouts | undefined {
+  public get internalValue(): OsConfigPatchDeploymentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -3555,14 +3645,20 @@ export class OsConfigPatchDeploymentTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: OsConfigPatchDeploymentTimeouts | undefined) {
+  public set internalValue(value: OsConfigPatchDeploymentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -3637,6 +3733,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._duration = config.duration;
+    this._id = config.id;
     this._patchDeploymentId = config.patchDeploymentId;
     this._project = config.project;
     this._instanceFilter.internalValue = config.instanceFilter;
@@ -3689,8 +3786,19 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // last_execute_time - computed: true, optional: false, required: false
@@ -3838,6 +3946,7 @@ export class OsConfigPatchDeployment extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       duration: cdktf.stringToTerraform(this._duration),
+      id: cdktf.stringToTerraform(this._id),
       patch_deployment_id: cdktf.stringToTerraform(this._patchDeploymentId),
       project: cdktf.stringToTerraform(this._project),
       instance_filter: osConfigPatchDeploymentInstanceFilterToTerraform(this._instanceFilter.internalValue),

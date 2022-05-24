@@ -32,6 +32,13 @@ export interface ContainerAzureClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#id ContainerAzureCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location for the resource
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#location ContainerAzureCluster#location}
@@ -179,6 +186,83 @@ export function containerAzureClusterAuthorizationAdminUsersToTerraform(struct?:
   }
 }
 
+export class ContainerAzureClusterAuthorizationAdminUsersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAzureClusterAuthorizationAdminUsers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAzureClusterAuthorizationAdminUsers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._username = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._username = value.username;
+    }
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class ContainerAzureClusterAuthorizationAdminUsersList extends cdktf.ComplexList {
+  public internalValue? : ContainerAzureClusterAuthorizationAdminUsers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAzureClusterAuthorizationAdminUsersOutputReference {
+    return new ContainerAzureClusterAuthorizationAdminUsersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAzureClusterAuthorization {
   /**
   * admin_users block
@@ -212,9 +296,9 @@ export class ContainerAzureClusterAuthorizationOutputReference extends cdktf.Com
   public get internalValue(): ContainerAzureClusterAuthorization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminUsers !== undefined) {
+    if (this._adminUsers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.adminUsers = this._adminUsers;
+      internalValueResult.adminUsers = this._adminUsers?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -222,26 +306,25 @@ export class ContainerAzureClusterAuthorizationOutputReference extends cdktf.Com
   public set internalValue(value: ContainerAzureClusterAuthorization | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._adminUsers = undefined;
+      this._adminUsers.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._adminUsers = value.adminUsers;
+      this._adminUsers.internalValue = value.adminUsers;
     }
   }
 
   // admin_users - computed: false, optional: false, required: true
-  private _adminUsers?: ContainerAzureClusterAuthorizationAdminUsers[] | cdktf.IResolvable; 
+  private _adminUsers = new ContainerAzureClusterAuthorizationAdminUsersList(this, "admin_users", false);
   public get adminUsers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('admin_users');
+    return this._adminUsers;
   }
-  public set adminUsers(value: ContainerAzureClusterAuthorizationAdminUsers[] | cdktf.IResolvable) {
-    this._adminUsers = value;
+  public putAdminUsers(value: ContainerAzureClusterAuthorizationAdminUsers[] | cdktf.IResolvable) {
+    this._adminUsers.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get adminUsersInput() {
-    return this._adminUsers;
+    return this._adminUsers.internalValue;
   }
 }
 export interface ContainerAzureClusterControlPlaneDatabaseEncryption {
@@ -491,6 +574,102 @@ export function containerAzureClusterControlPlaneReplicaPlacementsToTerraform(st
   }
 }
 
+export class ContainerAzureClusterControlPlaneReplicaPlacementsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAzureClusterControlPlaneReplicaPlacements | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._azureAvailabilityZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureAvailabilityZone = this._azureAvailabilityZone;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAzureClusterControlPlaneReplicaPlacements | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._azureAvailabilityZone = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._azureAvailabilityZone = value.azureAvailabilityZone;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // azure_availability_zone - computed: false, optional: false, required: true
+  private _azureAvailabilityZone?: string; 
+  public get azureAvailabilityZone() {
+    return this.getStringAttribute('azure_availability_zone');
+  }
+  public set azureAvailabilityZone(value: string) {
+    this._azureAvailabilityZone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureAvailabilityZoneInput() {
+    return this._azureAvailabilityZone;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ContainerAzureClusterControlPlaneReplicaPlacementsList extends cdktf.ComplexList {
+  public internalValue? : ContainerAzureClusterControlPlaneReplicaPlacements[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAzureClusterControlPlaneReplicaPlacementsOutputReference {
+    return new ContainerAzureClusterControlPlaneReplicaPlacementsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAzureClusterControlPlaneRootVolume {
   /**
   * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
@@ -746,9 +925,9 @@ export class ContainerAzureClusterControlPlaneOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.proxyConfig = this._proxyConfig?.internalValue;
     }
-    if (this._replicaPlacements !== undefined) {
+    if (this._replicaPlacements?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.replicaPlacements = this._replicaPlacements;
+      internalValueResult.replicaPlacements = this._replicaPlacements?.internalValue;
     }
     if (this._rootVolume?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -771,7 +950,7 @@ export class ContainerAzureClusterControlPlaneOutputReference extends cdktf.Comp
       this._databaseEncryption.internalValue = undefined;
       this._mainVolume.internalValue = undefined;
       this._proxyConfig.internalValue = undefined;
-      this._replicaPlacements = undefined;
+      this._replicaPlacements.internalValue = undefined;
       this._rootVolume.internalValue = undefined;
       this._sshConfig.internalValue = undefined;
     }
@@ -784,7 +963,7 @@ export class ContainerAzureClusterControlPlaneOutputReference extends cdktf.Comp
       this._databaseEncryption.internalValue = value.databaseEncryption;
       this._mainVolume.internalValue = value.mainVolume;
       this._proxyConfig.internalValue = value.proxyConfig;
-      this._replicaPlacements = value.replicaPlacements;
+      this._replicaPlacements.internalValue = value.replicaPlacements;
       this._rootVolume.internalValue = value.rootVolume;
       this._sshConfig.internalValue = value.sshConfig;
     }
@@ -897,20 +1076,19 @@ export class ContainerAzureClusterControlPlaneOutputReference extends cdktf.Comp
   }
 
   // replica_placements - computed: false, optional: true, required: false
-  private _replicaPlacements?: ContainerAzureClusterControlPlaneReplicaPlacements[] | cdktf.IResolvable; 
+  private _replicaPlacements = new ContainerAzureClusterControlPlaneReplicaPlacementsList(this, "replica_placements", false);
   public get replicaPlacements() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('replica_placements');
+    return this._replicaPlacements;
   }
-  public set replicaPlacements(value: ContainerAzureClusterControlPlaneReplicaPlacements[] | cdktf.IResolvable) {
-    this._replicaPlacements = value;
+  public putReplicaPlacements(value: ContainerAzureClusterControlPlaneReplicaPlacements[] | cdktf.IResolvable) {
+    this._replicaPlacements.internalValue = value;
   }
   public resetReplicaPlacements() {
-    this._replicaPlacements = undefined;
+    this._replicaPlacements.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get replicaPlacementsInput() {
-    return this._replicaPlacements;
+    return this._replicaPlacements.internalValue;
   }
 
   // root_volume - computed: false, optional: true, required: false
@@ -1159,6 +1337,7 @@ export function containerAzureClusterTimeoutsToTerraform(struct?: ContainerAzure
 
 export class ContainerAzureClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1168,7 +1347,10 @@ export class ContainerAzureClusterTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerAzureClusterTimeouts | undefined {
+  public get internalValue(): ContainerAzureClusterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1186,15 +1368,21 @@ export class ContainerAzureClusterTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerAzureClusterTimeouts | undefined) {
+  public set internalValue(value: ContainerAzureClusterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1288,6 +1476,7 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
     this._azureRegion = config.azureRegion;
     this._client = config.client;
     this._description = config.description;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
@@ -1377,8 +1566,19 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1540,6 +1740,7 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
       azure_region: cdktf.stringToTerraform(this._azureRegion),
       client: cdktf.stringToTerraform(this._client),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

@@ -20,6 +20,13 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly displayName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#id BigtableInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The instance type to create. One of "DEVELOPMENT" or "PRODUCTION". Defaults to "PRODUCTION".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#instance_type BigtableInstance#instance_type}
@@ -220,6 +227,193 @@ export function bigtableInstanceClusterToTerraform(struct?: BigtableInstanceClus
   }
 }
 
+export class BigtableInstanceClusterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigtableInstanceCluster | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clusterId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clusterId = this._clusterId;
+    }
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
+    if (this._numNodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.numNodes = this._numNodes;
+    }
+    if (this._storageType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageType = this._storageType;
+    }
+    if (this._zone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.zone = this._zone;
+    }
+    if (this._autoscalingConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigtableInstanceCluster | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._clusterId = undefined;
+      this._kmsKeyName = undefined;
+      this._numNodes = undefined;
+      this._storageType = undefined;
+      this._zone = undefined;
+      this._autoscalingConfig.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._clusterId = value.clusterId;
+      this._kmsKeyName = value.kmsKeyName;
+      this._numNodes = value.numNodes;
+      this._storageType = value.storageType;
+      this._zone = value.zone;
+      this._autoscalingConfig.internalValue = value.autoscalingConfig;
+    }
+  }
+
+  // cluster_id - computed: false, optional: false, required: true
+  private _clusterId?: string; 
+  public get clusterId() {
+    return this.getStringAttribute('cluster_id');
+  }
+  public set clusterId(value: string) {
+    this._clusterId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterIdInput() {
+    return this._clusterId;
+  }
+
+  // kms_key_name - computed: true, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
+  }
+
+  // num_nodes - computed: true, optional: true, required: false
+  private _numNodes?: number; 
+  public get numNodes() {
+    return this.getNumberAttribute('num_nodes');
+  }
+  public set numNodes(value: number) {
+    this._numNodes = value;
+  }
+  public resetNumNodes() {
+    this._numNodes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numNodesInput() {
+    return this._numNodes;
+  }
+
+  // storage_type - computed: false, optional: true, required: false
+  private _storageType?: string; 
+  public get storageType() {
+    return this.getStringAttribute('storage_type');
+  }
+  public set storageType(value: string) {
+    this._storageType = value;
+  }
+  public resetStorageType() {
+    this._storageType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageTypeInput() {
+    return this._storageType;
+  }
+
+  // zone - computed: true, optional: true, required: false
+  private _zone?: string; 
+  public get zone() {
+    return this.getStringAttribute('zone');
+  }
+  public set zone(value: string) {
+    this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone;
+  }
+
+  // autoscaling_config - computed: false, optional: true, required: false
+  private _autoscalingConfig = new BigtableInstanceClusterAutoscalingConfigOutputReference(this, "autoscaling_config");
+  public get autoscalingConfig() {
+    return this._autoscalingConfig;
+  }
+  public putAutoscalingConfig(value: BigtableInstanceClusterAutoscalingConfig) {
+    this._autoscalingConfig.internalValue = value;
+  }
+  public resetAutoscalingConfig() {
+    this._autoscalingConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscalingConfigInput() {
+    return this._autoscalingConfig.internalValue;
+  }
+}
+
+export class BigtableInstanceClusterList extends cdktf.ComplexList {
+  public internalValue? : BigtableInstanceCluster[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigtableInstanceClusterOutputReference {
+    return new BigtableInstanceClusterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance google_bigtable_instance}
@@ -257,11 +451,12 @@ export class BigtableInstance extends cdktf.TerraformResource {
     });
     this._deletionProtection = config.deletionProtection;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._instanceType = config.instanceType;
     this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
-    this._cluster = config.cluster;
+    this._cluster.internalValue = config.cluster;
   }
 
   // ==========
@@ -301,8 +496,19 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance_type - computed: false, optional: true, required: false
@@ -367,20 +573,19 @@ export class BigtableInstance extends cdktf.TerraformResource {
   }
 
   // cluster - computed: false, optional: true, required: false
-  private _cluster?: BigtableInstanceCluster[] | cdktf.IResolvable; 
+  private _cluster = new BigtableInstanceClusterList(this, "cluster", false);
   public get cluster() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster');
+    return this._cluster;
   }
-  public set cluster(value: BigtableInstanceCluster[] | cdktf.IResolvable) {
-    this._cluster = value;
+  public putCluster(value: BigtableInstanceCluster[] | cdktf.IResolvable) {
+    this._cluster.internalValue = value;
   }
   public resetCluster() {
-    this._cluster = undefined;
+    this._cluster.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clusterInput() {
-    return this._cluster;
+    return this._cluster.internalValue;
   }
 
   // =========
@@ -391,11 +596,12 @@ export class BigtableInstance extends cdktf.TerraformResource {
     return {
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       instance_type: cdktf.stringToTerraform(this._instanceType),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      cluster: cdktf.listMapper(bigtableInstanceClusterToTerraform)(this._cluster),
+      cluster: cdktf.listMapper(bigtableInstanceClusterToTerraform)(this._cluster.internalValue),
     };
   }
 }

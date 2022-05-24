@@ -20,6 +20,13 @@ export interface DataLossPreventionJobTriggerConfig extends cdktf.TerraformMetaA
   */
   readonly displayName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The parent of the trigger, either in the format 'projects/{{project}}'
 or 'projects/{{project}}/locations/{{location}}'
   * 
@@ -354,6 +361,83 @@ export function dataLossPreventionJobTriggerInspectJobActionsToTerraform(struct?
   }
 }
 
+export class DataLossPreventionJobTriggerInspectJobActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._saveFindings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.saveFindings = this._saveFindings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._saveFindings.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._saveFindings.internalValue = value.saveFindings;
+    }
+  }
+
+  // save_findings - computed: false, optional: false, required: true
+  private _saveFindings = new DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference(this, "save_findings");
+  public get saveFindings() {
+    return this._saveFindings;
+  }
+  public putSaveFindings(value: DataLossPreventionJobTriggerInspectJobActionsSaveFindings) {
+    this._saveFindings.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saveFindingsInput() {
+    return this._saveFindings.internalValue;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobActionsList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobActionsOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference {
   /**
   * The dataset ID of the table.
@@ -1652,9 +1736,9 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.inspectTemplateName = this._inspectTemplateName;
     }
-    if (this._actions !== undefined) {
+    if (this._actions?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.actions = this._actions;
+      internalValueResult.actions = this._actions?.internalValue;
     }
     if (this._storageConfig?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1667,13 +1751,13 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
     if (value === undefined) {
       this.isEmptyObject = false;
       this._inspectTemplateName = undefined;
-      this._actions = undefined;
+      this._actions.internalValue = undefined;
       this._storageConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._inspectTemplateName = value.inspectTemplateName;
-      this._actions = value.actions;
+      this._actions.internalValue = value.actions;
       this._storageConfig.internalValue = value.storageConfig;
     }
   }
@@ -1692,17 +1776,16 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
   }
 
   // actions - computed: false, optional: false, required: true
-  private _actions?: DataLossPreventionJobTriggerInspectJobActions[] | cdktf.IResolvable; 
+  private _actions = new DataLossPreventionJobTriggerInspectJobActionsList(this, "actions", false);
   public get actions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('actions');
+    return this._actions;
   }
-  public set actions(value: DataLossPreventionJobTriggerInspectJobActions[] | cdktf.IResolvable) {
-    this._actions = value;
+  public putActions(value: DataLossPreventionJobTriggerInspectJobActions[] | cdktf.IResolvable) {
+    this._actions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get actionsInput() {
-    return this._actions;
+    return this._actions.internalValue;
   }
 
   // storage_config - computed: false, optional: false, required: true
@@ -1747,6 +1830,7 @@ export function dataLossPreventionJobTriggerTimeoutsToTerraform(struct?: DataLos
 
 export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1756,7 +1840,10 @@ export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataLossPreventionJobTriggerTimeouts | undefined {
+  public get internalValue(): DataLossPreventionJobTriggerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1774,15 +1861,21 @@ export class DataLossPreventionJobTriggerTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataLossPreventionJobTriggerTimeouts | undefined) {
+  public set internalValue(value: DataLossPreventionJobTriggerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1929,6 +2022,86 @@ export function dataLossPreventionJobTriggerTriggersToTerraform(struct?: DataLos
   }
 }
 
+export class DataLossPreventionJobTriggerTriggersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerTriggers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schedule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerTriggers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schedule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schedule.internalValue = value.schedule;
+    }
+  }
+
+  // schedule - computed: false, optional: true, required: false
+  private _schedule = new DataLossPreventionJobTriggerTriggersScheduleOutputReference(this, "schedule");
+  public get schedule() {
+    return this._schedule;
+  }
+  public putSchedule(value: DataLossPreventionJobTriggerTriggersSchedule) {
+    this._schedule.internalValue = value;
+  }
+  public resetSchedule() {
+    this._schedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule.internalValue;
+  }
+}
+
+export class DataLossPreventionJobTriggerTriggersList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerTriggers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerTriggersOutputReference {
+    return new DataLossPreventionJobTriggerTriggersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger}
@@ -1966,11 +2139,12 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._parent = config.parent;
     this._status = config.status;
     this._inspectJob.internalValue = config.inspectJob;
     this._timeouts.internalValue = config.timeouts;
-    this._triggers = config.triggers;
+    this._triggers.internalValue = config.triggers;
   }
 
   // ==========
@@ -2010,8 +2184,19 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // last_run_time - computed: true, optional: false, required: false
@@ -2086,17 +2271,16 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   }
 
   // triggers - computed: false, optional: false, required: true
-  private _triggers?: DataLossPreventionJobTriggerTriggers[] | cdktf.IResolvable; 
+  private _triggers = new DataLossPreventionJobTriggerTriggersList(this, "triggers", false);
   public get triggers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('triggers');
+    return this._triggers;
   }
-  public set triggers(value: DataLossPreventionJobTriggerTriggers[] | cdktf.IResolvable) {
-    this._triggers = value;
+  public putTriggers(value: DataLossPreventionJobTriggerTriggers[] | cdktf.IResolvable) {
+    this._triggers.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get triggersInput() {
-    return this._triggers;
+    return this._triggers.internalValue;
   }
 
   // =========
@@ -2107,11 +2291,12 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       parent: cdktf.stringToTerraform(this._parent),
       status: cdktf.stringToTerraform(this._status),
       inspect_job: dataLossPreventionJobTriggerInspectJobToTerraform(this._inspectJob.internalValue),
       timeouts: dataLossPreventionJobTriggerTimeoutsToTerraform(this._timeouts.internalValue),
-      triggers: cdktf.listMapper(dataLossPreventionJobTriggerTriggersToTerraform)(this._triggers),
+      triggers: cdktf.listMapper(dataLossPreventionJobTriggerTriggersToTerraform)(this._triggers.internalValue),
     };
   }
 }

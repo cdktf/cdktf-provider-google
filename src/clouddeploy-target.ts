@@ -20,6 +20,13 @@ export interface ClouddeployTargetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#id ClouddeployTarget#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#labels ClouddeployTarget#labels}
@@ -181,6 +188,149 @@ export function clouddeployTargetExecutionConfigsToTerraform(struct?: Clouddeplo
   }
 }
 
+export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ClouddeployTargetExecutionConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._artifactStorage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.artifactStorage = this._artifactStorage;
+    }
+    if (this._serviceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceAccount = this._serviceAccount;
+    }
+    if (this._usages !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.usages = this._usages;
+    }
+    if (this._workerPool !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workerPool = this._workerPool;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ClouddeployTargetExecutionConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._artifactStorage = undefined;
+      this._serviceAccount = undefined;
+      this._usages = undefined;
+      this._workerPool = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._artifactStorage = value.artifactStorage;
+      this._serviceAccount = value.serviceAccount;
+      this._usages = value.usages;
+      this._workerPool = value.workerPool;
+    }
+  }
+
+  // artifact_storage - computed: false, optional: true, required: false
+  private _artifactStorage?: string; 
+  public get artifactStorage() {
+    return this.getStringAttribute('artifact_storage');
+  }
+  public set artifactStorage(value: string) {
+    this._artifactStorage = value;
+  }
+  public resetArtifactStorage() {
+    this._artifactStorage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get artifactStorageInput() {
+    return this._artifactStorage;
+  }
+
+  // service_account - computed: false, optional: true, required: false
+  private _serviceAccount?: string; 
+  public get serviceAccount() {
+    return this.getStringAttribute('service_account');
+  }
+  public set serviceAccount(value: string) {
+    this._serviceAccount = value;
+  }
+  public resetServiceAccount() {
+    this._serviceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountInput() {
+    return this._serviceAccount;
+  }
+
+  // usages - computed: false, optional: false, required: true
+  private _usages?: string[]; 
+  public get usages() {
+    return this.getListAttribute('usages');
+  }
+  public set usages(value: string[]) {
+    this._usages = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usagesInput() {
+    return this._usages;
+  }
+
+  // worker_pool - computed: false, optional: true, required: false
+  private _workerPool?: string; 
+  public get workerPool() {
+    return this.getStringAttribute('worker_pool');
+  }
+  public set workerPool(value: string) {
+    this._workerPool = value;
+  }
+  public resetWorkerPool() {
+    this._workerPool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workerPoolInput() {
+    return this._workerPool;
+  }
+}
+
+export class ClouddeployTargetExecutionConfigsList extends cdktf.ComplexList {
+  public internalValue? : ClouddeployTargetExecutionConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ClouddeployTargetExecutionConfigsOutputReference {
+    return new ClouddeployTargetExecutionConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ClouddeployTargetGke {
   /**
   * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
@@ -306,6 +456,7 @@ export function clouddeployTargetTimeoutsToTerraform(struct?: ClouddeployTargetT
 
 export class ClouddeployTargetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -315,7 +466,10 @@ export class ClouddeployTargetTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ClouddeployTargetTimeouts | undefined {
+  public get internalValue(): ClouddeployTargetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -333,15 +487,21 @@ export class ClouddeployTargetTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ClouddeployTargetTimeouts | undefined) {
+  public set internalValue(value: ClouddeployTargetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -433,13 +593,14 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
     });
     this._annotations = config.annotations;
     this._description = config.description;
+    this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
     this._requireApproval = config.requireApproval;
     this._anthosCluster.internalValue = config.anthosCluster;
-    this._executionConfigs = config.executionConfigs;
+    this._executionConfigs.internalValue = config.executionConfigs;
     this._gke.internalValue = config.gke;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -491,8 +652,19 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -601,20 +773,19 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
   }
 
   // execution_configs - computed: false, optional: true, required: false
-  private _executionConfigs?: ClouddeployTargetExecutionConfigs[] | cdktf.IResolvable; 
+  private _executionConfigs = new ClouddeployTargetExecutionConfigsList(this, "execution_configs", false);
   public get executionConfigs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('execution_configs');
+    return this._executionConfigs;
   }
-  public set executionConfigs(value: ClouddeployTargetExecutionConfigs[] | cdktf.IResolvable) {
-    this._executionConfigs = value;
+  public putExecutionConfigs(value: ClouddeployTargetExecutionConfigs[] | cdktf.IResolvable) {
+    this._executionConfigs.internalValue = value;
   }
   public resetExecutionConfigs() {
-    this._executionConfigs = undefined;
+    this._executionConfigs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get executionConfigsInput() {
-    return this._executionConfigs;
+    return this._executionConfigs.internalValue;
   }
 
   // gke - computed: false, optional: true, required: false
@@ -657,13 +828,14 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
     return {
       annotations: cdktf.hashMapper(cdktf.stringToTerraform)(this._annotations),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       require_approval: cdktf.booleanToTerraform(this._requireApproval),
       anthos_cluster: clouddeployTargetAnthosClusterToTerraform(this._anthosCluster.internalValue),
-      execution_configs: cdktf.listMapper(clouddeployTargetExecutionConfigsToTerraform)(this._executionConfigs),
+      execution_configs: cdktf.listMapper(clouddeployTargetExecutionConfigsToTerraform)(this._executionConfigs.internalValue),
       gke: clouddeployTargetGkeToTerraform(this._gke.internalValue),
       timeouts: clouddeployTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };

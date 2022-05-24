@@ -15,6 +15,13 @@ behavior.
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeter#id AccessContextManagerServicePerimeter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
@@ -218,6 +225,108 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOp
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._method !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._permission !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permission = this._permission;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._method = undefined;
+      this._permission = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._method = value.method;
+      this._permission = value.permission;
+    }
+  }
+
+  // method - computed: false, optional: true, required: false
+  private _method?: string; 
+  public get method() {
+    return this.getStringAttribute('method');
+  }
+  public set method(value: string) {
+    this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method;
+  }
+
+  // permission - computed: false, optional: true, required: false
+  private _permission?: string; 
+  public get permission() {
+    return this.getStringAttribute('permission');
+  }
+  public set permission(value: string) {
+    this._permission = value;
+  }
+  public resetPermission() {
+    this._permission = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionInput() {
+    return this._permission;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsOutputReference {
+    return new AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations {
   /**
   * The name of the API whose methods or permissions the 'IngressPolicy' or 
@@ -246,6 +355,108 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOp
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._serviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceName = this._serviceName;
+    }
+    if (this._methodSelectors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.methodSelectors = this._methodSelectors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._serviceName = undefined;
+      this._methodSelectors.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._serviceName = value.serviceName;
+      this._methodSelectors.internalValue = value.methodSelectors;
+    }
+  }
+
+  // service_name - computed: false, optional: true, required: false
+  private _serviceName?: string; 
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  public resetServiceName() {
+    this._serviceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName;
+  }
+
+  // method_selectors - computed: false, optional: true, required: false
+  private _methodSelectors = new AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsList(this, "method_selectors", false);
+  public get methodSelectors() {
+    return this._methodSelectors;
+  }
+  public putMethodSelectors(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectors[] | cdktf.IResolvable) {
+    this._methodSelectors.internalValue = value;
+  }
+  public resetMethodSelectors() {
+    this._methodSelectors.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodSelectorsInput() {
+    return this._methodSelectors.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsOutputReference {
+    return new AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo {
   /**
   * A list of resources, currently only projects in the form 
@@ -294,9 +505,9 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations !== undefined) {
+    if (this._operations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.operations = this._operations;
+      internalValueResult.operations = this._operations?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -305,12 +516,12 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
     if (value === undefined) {
       this.isEmptyObject = false;
       this._resources = undefined;
-      this._operations = undefined;
+      this._operations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
-      this._operations = value.operations;
+      this._operations.internalValue = value.operations;
     }
   }
 
@@ -331,20 +542,19 @@ export class AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutpu
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable; 
+  private _operations = new AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsList(this, "operations", false);
   public get operations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations');
+    return this._operations;
   }
-  public set operations(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable) {
-    this._operations = value;
+  public putOperations(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperations[] | cdktf.IResolvable) {
+    this._operations.internalValue = value;
   }
   public resetOperations() {
-    this._operations = undefined;
+    this._operations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations;
+    return this._operations.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecEgressPolicies {
@@ -373,6 +583,108 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesToTerrafor
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecEgressPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecEgressPolicies | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._egressFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressFrom = this._egressFrom?.internalValue;
+    }
+    if (this._egressTo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressTo = this._egressTo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecEgressPolicies | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._egressFrom.internalValue = undefined;
+      this._egressTo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._egressFrom.internalValue = value.egressFrom;
+      this._egressTo.internalValue = value.egressTo;
+    }
+  }
+
+  // egress_from - computed: false, optional: true, required: false
+  private _egressFrom = new AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFromOutputReference(this, "egress_from");
+  public get egressFrom() {
+    return this._egressFrom;
+  }
+  public putEgressFrom(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom) {
+    this._egressFrom.internalValue = value;
+  }
+  public resetEgressFrom() {
+    this._egressFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressFromInput() {
+    return this._egressFrom.internalValue;
+  }
+
+  // egress_to - computed: false, optional: true, required: false
+  private _egressTo = new AccessContextManagerServicePerimeterSpecEgressPoliciesEgressToOutputReference(this, "egress_to");
+  public get egressTo() {
+    return this._egressTo;
+  }
+  public putEgressTo(value: AccessContextManagerServicePerimeterSpecEgressPoliciesEgressTo) {
+    this._egressTo.internalValue = value;
+  }
+  public resetEgressTo() {
+    this._egressTo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressToInput() {
+    return this._egressTo.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecEgressPoliciesList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecEgressPoliciesOutputReference {
+    return new AccessContextManagerServicePerimeterSpecEgressPoliciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources {
   /**
   * An 'AccessLevel' resource name that allow resources within the 
@@ -411,6 +723,108 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFr
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessLevel = this._accessLevel;
+    }
+    if (this._resource !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resource = this._resource;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessLevel = undefined;
+      this._resource = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessLevel = value.accessLevel;
+      this._resource = value.resource;
+    }
+  }
+
+  // access_level - computed: false, optional: true, required: false
+  private _accessLevel?: string; 
+  public get accessLevel() {
+    return this.getStringAttribute('access_level');
+  }
+  public set accessLevel(value: string) {
+    this._accessLevel = value;
+  }
+  public resetAccessLevel() {
+    this._accessLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessLevelInput() {
+    return this._accessLevel;
+  }
+
+  // resource - computed: false, optional: true, required: false
+  private _resource?: string; 
+  public get resource() {
+    return this.getStringAttribute('resource');
+  }
+  public set resource(value: string) {
+    this._resource = value;
+  }
+  public resetResource() {
+    this._resource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceInput() {
+    return this._resource;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesOutputReference {
+    return new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom {
   /**
   * A list of identities that are allowed access through this ingress policy.
@@ -470,9 +884,9 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
       hasAnyValues = true;
       internalValueResult.identityType = this._identityType;
     }
-    if (this._sources !== undefined) {
+    if (this._sources?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.sources = this._sources;
+      internalValueResult.sources = this._sources?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -482,13 +896,13 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
       this.isEmptyObject = false;
       this._identities = undefined;
       this._identityType = undefined;
-      this._sources = undefined;
+      this._sources.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._identities = value.identities;
       this._identityType = value.identityType;
-      this._sources = value.sources;
+      this._sources.internalValue = value.sources;
     }
   }
 
@@ -525,20 +939,19 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromO
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable; 
+  private _sources = new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesList(this, "sources", false);
   public get sources() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sources');
+    return this._sources;
   }
-  public set sources(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable) {
-    this._sources = value;
+  public putSources(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSources[] | cdktf.IResolvable) {
+    this._sources.internalValue = value;
   }
   public resetSources() {
-    this._sources = undefined;
+    this._sources.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourcesInput() {
-    return this._sources;
+    return this._sources.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors {
@@ -570,6 +983,108 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressTo
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._method !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._permission !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permission = this._permission;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._method = undefined;
+      this._permission = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._method = value.method;
+      this._permission = value.permission;
+    }
+  }
+
+  // method - computed: false, optional: true, required: false
+  private _method?: string; 
+  public get method() {
+    return this.getStringAttribute('method');
+  }
+  public set method(value: string) {
+    this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method;
+  }
+
+  // permission - computed: false, optional: true, required: false
+  private _permission?: string; 
+  public get permission() {
+    return this.getStringAttribute('permission');
+  }
+  public set permission(value: string) {
+    this._permission = value;
+  }
+  public resetPermission() {
+    this._permission = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionInput() {
+    return this._permission;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsOutputReference {
+    return new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations {
   /**
   * The name of the API whose methods or permissions the 'IngressPolicy' or 
@@ -598,6 +1113,108 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressTo
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._serviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceName = this._serviceName;
+    }
+    if (this._methodSelectors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.methodSelectors = this._methodSelectors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._serviceName = undefined;
+      this._methodSelectors.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._serviceName = value.serviceName;
+      this._methodSelectors.internalValue = value.methodSelectors;
+    }
+  }
+
+  // service_name - computed: false, optional: true, required: false
+  private _serviceName?: string; 
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  public resetServiceName() {
+    this._serviceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName;
+  }
+
+  // method_selectors - computed: false, optional: true, required: false
+  private _methodSelectors = new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsList(this, "method_selectors", false);
+  public get methodSelectors() {
+    return this._methodSelectors;
+  }
+  public putMethodSelectors(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectors[] | cdktf.IResolvable) {
+    this._methodSelectors.internalValue = value;
+  }
+  public resetMethodSelectors() {
+    this._methodSelectors.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodSelectorsInput() {
+    return this._methodSelectors.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsOutputReference {
+    return new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo {
   /**
   * A list of resources, currently only projects in the form 
@@ -649,9 +1266,9 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations !== undefined) {
+    if (this._operations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.operations = this._operations;
+      internalValueResult.operations = this._operations?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -660,12 +1277,12 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
     if (value === undefined) {
       this.isEmptyObject = false;
       this._resources = undefined;
-      this._operations = undefined;
+      this._operations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
-      this._operations = value.operations;
+      this._operations.internalValue = value.operations;
     }
   }
 
@@ -686,20 +1303,19 @@ export class AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOut
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable; 
+  private _operations = new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsList(this, "operations", false);
   public get operations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations');
+    return this._operations;
   }
-  public set operations(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable) {
-    this._operations = value;
+  public putOperations(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperations[] | cdktf.IResolvable) {
+    this._operations.internalValue = value;
   }
   public resetOperations() {
-    this._operations = undefined;
+    this._operations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations;
+    return this._operations.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterSpecIngressPolicies {
@@ -728,6 +1344,108 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesToTerrafo
   }
 }
 
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterSpecIngressPolicies | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ingressFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ingressFrom = this._ingressFrom?.internalValue;
+    }
+    if (this._ingressTo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ingressTo = this._ingressTo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterSpecIngressPolicies | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ingressFrom.internalValue = undefined;
+      this._ingressTo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ingressFrom.internalValue = value.ingressFrom;
+      this._ingressTo.internalValue = value.ingressTo;
+    }
+  }
+
+  // ingress_from - computed: false, optional: true, required: false
+  private _ingressFrom = new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFromOutputReference(this, "ingress_from");
+  public get ingressFrom() {
+    return this._ingressFrom;
+  }
+  public putIngressFrom(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressFrom) {
+    this._ingressFrom.internalValue = value;
+  }
+  public resetIngressFrom() {
+    this._ingressFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressFromInput() {
+    return this._ingressFrom.internalValue;
+  }
+
+  // ingress_to - computed: false, optional: true, required: false
+  private _ingressTo = new AccessContextManagerServicePerimeterSpecIngressPoliciesIngressToOutputReference(this, "ingress_to");
+  public get ingressTo() {
+    return this._ingressTo;
+  }
+  public putIngressTo(value: AccessContextManagerServicePerimeterSpecIngressPoliciesIngressTo) {
+    this._ingressTo.internalValue = value;
+  }
+  public resetIngressTo() {
+    this._ingressTo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressToInput() {
+    return this._ingressTo.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterSpecIngressPoliciesList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterSpecIngressPoliciesOutputReference {
+    return new AccessContextManagerServicePerimeterSpecIngressPoliciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterSpecVpcAccessibleServices {
   /**
   * The list of APIs usable within the Service Perimeter.
@@ -921,13 +1639,13 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.restrictedServices = this._restrictedServices;
     }
-    if (this._egressPolicies !== undefined) {
+    if (this._egressPolicies?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.egressPolicies = this._egressPolicies;
+      internalValueResult.egressPolicies = this._egressPolicies?.internalValue;
     }
-    if (this._ingressPolicies !== undefined) {
+    if (this._ingressPolicies?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.ingressPolicies = this._ingressPolicies;
+      internalValueResult.ingressPolicies = this._ingressPolicies?.internalValue;
     }
     if (this._vpcAccessibleServices?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -942,8 +1660,8 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
       this._accessLevels = undefined;
       this._resources = undefined;
       this._restrictedServices = undefined;
-      this._egressPolicies = undefined;
-      this._ingressPolicies = undefined;
+      this._egressPolicies.internalValue = undefined;
+      this._ingressPolicies.internalValue = undefined;
       this._vpcAccessibleServices.internalValue = undefined;
     }
     else {
@@ -951,8 +1669,8 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
       this._accessLevels = value.accessLevels;
       this._resources = value.resources;
       this._restrictedServices = value.restrictedServices;
-      this._egressPolicies = value.egressPolicies;
-      this._ingressPolicies = value.ingressPolicies;
+      this._egressPolicies.internalValue = value.egressPolicies;
+      this._ingressPolicies.internalValue = value.ingressPolicies;
       this._vpcAccessibleServices.internalValue = value.vpcAccessibleServices;
     }
   }
@@ -1006,37 +1724,35 @@ export class AccessContextManagerServicePerimeterSpecOutputReference extends cdk
   }
 
   // egress_policies - computed: false, optional: true, required: false
-  private _egressPolicies?: AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable; 
+  private _egressPolicies = new AccessContextManagerServicePerimeterSpecEgressPoliciesList(this, "egress_policies", false);
   public get egressPolicies() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('egress_policies');
+    return this._egressPolicies;
   }
-  public set egressPolicies(value: AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable) {
-    this._egressPolicies = value;
+  public putEgressPolicies(value: AccessContextManagerServicePerimeterSpecEgressPolicies[] | cdktf.IResolvable) {
+    this._egressPolicies.internalValue = value;
   }
   public resetEgressPolicies() {
-    this._egressPolicies = undefined;
+    this._egressPolicies.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get egressPoliciesInput() {
-    return this._egressPolicies;
+    return this._egressPolicies.internalValue;
   }
 
   // ingress_policies - computed: false, optional: true, required: false
-  private _ingressPolicies?: AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable; 
+  private _ingressPolicies = new AccessContextManagerServicePerimeterSpecIngressPoliciesList(this, "ingress_policies", false);
   public get ingressPolicies() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_policies');
+    return this._ingressPolicies;
   }
-  public set ingressPolicies(value: AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable) {
-    this._ingressPolicies = value;
+  public putIngressPolicies(value: AccessContextManagerServicePerimeterSpecIngressPolicies[] | cdktf.IResolvable) {
+    this._ingressPolicies.internalValue = value;
   }
   public resetIngressPolicies() {
-    this._ingressPolicies = undefined;
+    this._ingressPolicies.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ingressPoliciesInput() {
-    return this._ingressPolicies;
+    return this._ingressPolicies.internalValue;
   }
 
   // vpc_accessible_services - computed: false, optional: true, required: false
@@ -1184,6 +1900,108 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressTo
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._method !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._permission !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permission = this._permission;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._method = undefined;
+      this._permission = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._method = value.method;
+      this._permission = value.permission;
+    }
+  }
+
+  // method - computed: false, optional: true, required: false
+  private _method?: string; 
+  public get method() {
+    return this.getStringAttribute('method');
+  }
+  public set method(value: string) {
+    this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method;
+  }
+
+  // permission - computed: false, optional: true, required: false
+  private _permission?: string; 
+  public get permission() {
+    return this.getStringAttribute('permission');
+  }
+  public set permission(value: string) {
+    this._permission = value;
+  }
+  public resetPermission() {
+    this._permission = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionInput() {
+    return this._permission;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsOutputReference {
+    return new AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations {
   /**
   * The name of the API whose methods or permissions the 'IngressPolicy' or 
@@ -1212,6 +2030,108 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressTo
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._serviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceName = this._serviceName;
+    }
+    if (this._methodSelectors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.methodSelectors = this._methodSelectors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._serviceName = undefined;
+      this._methodSelectors.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._serviceName = value.serviceName;
+      this._methodSelectors.internalValue = value.methodSelectors;
+    }
+  }
+
+  // service_name - computed: false, optional: true, required: false
+  private _serviceName?: string; 
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  public resetServiceName() {
+    this._serviceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName;
+  }
+
+  // method_selectors - computed: false, optional: true, required: false
+  private _methodSelectors = new AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsList(this, "method_selectors", false);
+  public get methodSelectors() {
+    return this._methodSelectors;
+  }
+  public putMethodSelectors(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectors[] | cdktf.IResolvable) {
+    this._methodSelectors.internalValue = value;
+  }
+  public resetMethodSelectors() {
+    this._methodSelectors.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodSelectorsInput() {
+    return this._methodSelectors.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsOutputReference {
+    return new AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo {
   /**
   * A list of resources, currently only projects in the form 
@@ -1260,9 +2180,9 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations !== undefined) {
+    if (this._operations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.operations = this._operations;
+      internalValueResult.operations = this._operations?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1271,12 +2191,12 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
     if (value === undefined) {
       this.isEmptyObject = false;
       this._resources = undefined;
-      this._operations = undefined;
+      this._operations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
-      this._operations = value.operations;
+      this._operations.internalValue = value.operations;
     }
   }
 
@@ -1297,20 +2217,19 @@ export class AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOut
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable; 
+  private _operations = new AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsList(this, "operations", false);
   public get operations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations');
+    return this._operations;
   }
-  public set operations(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable) {
-    this._operations = value;
+  public putOperations(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperations[] | cdktf.IResolvable) {
+    this._operations.internalValue = value;
   }
   public resetOperations() {
-    this._operations = undefined;
+    this._operations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations;
+    return this._operations.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusEgressPolicies {
@@ -1339,6 +2258,108 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesToTerraf
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusEgressPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusEgressPolicies | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._egressFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressFrom = this._egressFrom?.internalValue;
+    }
+    if (this._egressTo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressTo = this._egressTo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusEgressPolicies | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._egressFrom.internalValue = undefined;
+      this._egressTo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._egressFrom.internalValue = value.egressFrom;
+      this._egressTo.internalValue = value.egressTo;
+    }
+  }
+
+  // egress_from - computed: false, optional: true, required: false
+  private _egressFrom = new AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFromOutputReference(this, "egress_from");
+  public get egressFrom() {
+    return this._egressFrom;
+  }
+  public putEgressFrom(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressFrom) {
+    this._egressFrom.internalValue = value;
+  }
+  public resetEgressFrom() {
+    this._egressFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressFromInput() {
+    return this._egressFrom.internalValue;
+  }
+
+  // egress_to - computed: false, optional: true, required: false
+  private _egressTo = new AccessContextManagerServicePerimeterStatusEgressPoliciesEgressToOutputReference(this, "egress_to");
+  public get egressTo() {
+    return this._egressTo;
+  }
+  public putEgressTo(value: AccessContextManagerServicePerimeterStatusEgressPoliciesEgressTo) {
+    this._egressTo.internalValue = value;
+  }
+  public resetEgressTo() {
+    this._egressTo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressToInput() {
+    return this._egressTo.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusEgressPoliciesList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusEgressPoliciesOutputReference {
+    return new AccessContextManagerServicePerimeterStatusEgressPoliciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources {
   /**
   * An 'AccessLevel' resource name that allow resources within the 
@@ -1377,6 +2398,108 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessLevel = this._accessLevel;
+    }
+    if (this._resource !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resource = this._resource;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessLevel = undefined;
+      this._resource = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessLevel = value.accessLevel;
+      this._resource = value.resource;
+    }
+  }
+
+  // access_level - computed: false, optional: true, required: false
+  private _accessLevel?: string; 
+  public get accessLevel() {
+    return this.getStringAttribute('access_level');
+  }
+  public set accessLevel(value: string) {
+    this._accessLevel = value;
+  }
+  public resetAccessLevel() {
+    this._accessLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessLevelInput() {
+    return this._accessLevel;
+  }
+
+  // resource - computed: false, optional: true, required: false
+  private _resource?: string; 
+  public get resource() {
+    return this.getStringAttribute('resource');
+  }
+  public set resource(value: string) {
+    this._resource = value;
+  }
+  public resetResource() {
+    this._resource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceInput() {
+    return this._resource;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesOutputReference {
+    return new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom {
   /**
   * A list of identities that are allowed access through this ingress policy.
@@ -1436,9 +2559,9 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
       hasAnyValues = true;
       internalValueResult.identityType = this._identityType;
     }
-    if (this._sources !== undefined) {
+    if (this._sources?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.sources = this._sources;
+      internalValueResult.sources = this._sources?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1448,13 +2571,13 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
       this.isEmptyObject = false;
       this._identities = undefined;
       this._identityType = undefined;
-      this._sources = undefined;
+      this._sources.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._identities = value.identities;
       this._identityType = value.identityType;
-      this._sources = value.sources;
+      this._sources.internalValue = value.sources;
     }
   }
 
@@ -1491,20 +2614,19 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFro
   }
 
   // sources - computed: false, optional: true, required: false
-  private _sources?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable; 
+  private _sources = new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesList(this, "sources", false);
   public get sources() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sources');
+    return this._sources;
   }
-  public set sources(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable) {
-    this._sources = value;
+  public putSources(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSources[] | cdktf.IResolvable) {
+    this._sources.internalValue = value;
   }
   public resetSources() {
-    this._sources = undefined;
+    this._sources.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourcesInput() {
-    return this._sources;
+    return this._sources.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors {
@@ -1536,6 +2658,108 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._method !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._permission !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permission = this._permission;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._method = undefined;
+      this._permission = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._method = value.method;
+      this._permission = value.permission;
+    }
+  }
+
+  // method - computed: false, optional: true, required: false
+  private _method?: string; 
+  public get method() {
+    return this.getStringAttribute('method');
+  }
+  public set method(value: string) {
+    this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method;
+  }
+
+  // permission - computed: false, optional: true, required: false
+  private _permission?: string; 
+  public get permission() {
+    return this.getStringAttribute('permission');
+  }
+  public set permission(value: string) {
+    this._permission = value;
+  }
+  public resetPermission() {
+    this._permission = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionInput() {
+    return this._permission;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsOutputReference {
+    return new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations {
   /**
   * The name of the API whose methods or permissions the 'IngressPolicy' or 
@@ -1564,6 +2788,108 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._serviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceName = this._serviceName;
+    }
+    if (this._methodSelectors?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.methodSelectors = this._methodSelectors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._serviceName = undefined;
+      this._methodSelectors.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._serviceName = value.serviceName;
+      this._methodSelectors.internalValue = value.methodSelectors;
+    }
+  }
+
+  // service_name - computed: false, optional: true, required: false
+  private _serviceName?: string; 
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  public resetServiceName() {
+    this._serviceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName;
+  }
+
+  // method_selectors - computed: false, optional: true, required: false
+  private _methodSelectors = new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsList(this, "method_selectors", false);
+  public get methodSelectors() {
+    return this._methodSelectors;
+  }
+  public putMethodSelectors(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectors[] | cdktf.IResolvable) {
+    this._methodSelectors.internalValue = value;
+  }
+  public resetMethodSelectors() {
+    this._methodSelectors.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodSelectorsInput() {
+    return this._methodSelectors.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsOutputReference {
+    return new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo {
   /**
   * A list of resources, currently only projects in the form 
@@ -1615,9 +2941,9 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
     }
-    if (this._operations !== undefined) {
+    if (this._operations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.operations = this._operations;
+      internalValueResult.operations = this._operations?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1626,12 +2952,12 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
     if (value === undefined) {
       this.isEmptyObject = false;
       this._resources = undefined;
-      this._operations = undefined;
+      this._operations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._resources = value.resources;
-      this._operations = value.operations;
+      this._operations.internalValue = value.operations;
     }
   }
 
@@ -1652,20 +2978,19 @@ export class AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToO
   }
 
   // operations - computed: false, optional: true, required: false
-  private _operations?: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable; 
+  private _operations = new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsList(this, "operations", false);
   public get operations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('operations');
+    return this._operations;
   }
-  public set operations(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable) {
-    this._operations = value;
+  public putOperations(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperations[] | cdktf.IResolvable) {
+    this._operations.internalValue = value;
   }
   public resetOperations() {
-    this._operations = undefined;
+    this._operations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get operationsInput() {
-    return this._operations;
+    return this._operations.internalValue;
   }
 }
 export interface AccessContextManagerServicePerimeterStatusIngressPolicies {
@@ -1694,6 +3019,108 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesToTerra
   }
 }
 
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerServicePerimeterStatusIngressPolicies | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ingressFrom?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ingressFrom = this._ingressFrom?.internalValue;
+    }
+    if (this._ingressTo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ingressTo = this._ingressTo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerServicePerimeterStatusIngressPolicies | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ingressFrom.internalValue = undefined;
+      this._ingressTo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ingressFrom.internalValue = value.ingressFrom;
+      this._ingressTo.internalValue = value.ingressTo;
+    }
+  }
+
+  // ingress_from - computed: false, optional: true, required: false
+  private _ingressFrom = new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFromOutputReference(this, "ingress_from");
+  public get ingressFrom() {
+    return this._ingressFrom;
+  }
+  public putIngressFrom(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressFrom) {
+    this._ingressFrom.internalValue = value;
+  }
+  public resetIngressFrom() {
+    this._ingressFrom.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressFromInput() {
+    return this._ingressFrom.internalValue;
+  }
+
+  // ingress_to - computed: false, optional: true, required: false
+  private _ingressTo = new AccessContextManagerServicePerimeterStatusIngressPoliciesIngressToOutputReference(this, "ingress_to");
+  public get ingressTo() {
+    return this._ingressTo;
+  }
+  public putIngressTo(value: AccessContextManagerServicePerimeterStatusIngressPoliciesIngressTo) {
+    this._ingressTo.internalValue = value;
+  }
+  public resetIngressTo() {
+    this._ingressTo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressToInput() {
+    return this._ingressTo.internalValue;
+  }
+}
+
+export class AccessContextManagerServicePerimeterStatusIngressPoliciesList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerServicePerimeterStatusIngressPoliciesOutputReference {
+    return new AccessContextManagerServicePerimeterStatusIngressPoliciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerServicePerimeterStatusVpcAccessibleServices {
   /**
   * The list of APIs usable within the Service Perimeter.
@@ -1887,13 +3314,13 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
       hasAnyValues = true;
       internalValueResult.restrictedServices = this._restrictedServices;
     }
-    if (this._egressPolicies !== undefined) {
+    if (this._egressPolicies?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.egressPolicies = this._egressPolicies;
+      internalValueResult.egressPolicies = this._egressPolicies?.internalValue;
     }
-    if (this._ingressPolicies !== undefined) {
+    if (this._ingressPolicies?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.ingressPolicies = this._ingressPolicies;
+      internalValueResult.ingressPolicies = this._ingressPolicies?.internalValue;
     }
     if (this._vpcAccessibleServices?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1908,8 +3335,8 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
       this._accessLevels = undefined;
       this._resources = undefined;
       this._restrictedServices = undefined;
-      this._egressPolicies = undefined;
-      this._ingressPolicies = undefined;
+      this._egressPolicies.internalValue = undefined;
+      this._ingressPolicies.internalValue = undefined;
       this._vpcAccessibleServices.internalValue = undefined;
     }
     else {
@@ -1917,8 +3344,8 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
       this._accessLevels = value.accessLevels;
       this._resources = value.resources;
       this._restrictedServices = value.restrictedServices;
-      this._egressPolicies = value.egressPolicies;
-      this._ingressPolicies = value.ingressPolicies;
+      this._egressPolicies.internalValue = value.egressPolicies;
+      this._ingressPolicies.internalValue = value.ingressPolicies;
       this._vpcAccessibleServices.internalValue = value.vpcAccessibleServices;
     }
   }
@@ -1972,37 +3399,35 @@ export class AccessContextManagerServicePerimeterStatusOutputReference extends c
   }
 
   // egress_policies - computed: false, optional: true, required: false
-  private _egressPolicies?: AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable; 
+  private _egressPolicies = new AccessContextManagerServicePerimeterStatusEgressPoliciesList(this, "egress_policies", false);
   public get egressPolicies() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('egress_policies');
+    return this._egressPolicies;
   }
-  public set egressPolicies(value: AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable) {
-    this._egressPolicies = value;
+  public putEgressPolicies(value: AccessContextManagerServicePerimeterStatusEgressPolicies[] | cdktf.IResolvable) {
+    this._egressPolicies.internalValue = value;
   }
   public resetEgressPolicies() {
-    this._egressPolicies = undefined;
+    this._egressPolicies.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get egressPoliciesInput() {
-    return this._egressPolicies;
+    return this._egressPolicies.internalValue;
   }
 
   // ingress_policies - computed: false, optional: true, required: false
-  private _ingressPolicies?: AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable; 
+  private _ingressPolicies = new AccessContextManagerServicePerimeterStatusIngressPoliciesList(this, "ingress_policies", false);
   public get ingressPolicies() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_policies');
+    return this._ingressPolicies;
   }
-  public set ingressPolicies(value: AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable) {
-    this._ingressPolicies = value;
+  public putIngressPolicies(value: AccessContextManagerServicePerimeterStatusIngressPolicies[] | cdktf.IResolvable) {
+    this._ingressPolicies.internalValue = value;
   }
   public resetIngressPolicies() {
-    this._ingressPolicies = undefined;
+    this._ingressPolicies.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ingressPoliciesInput() {
-    return this._ingressPolicies;
+    return this._ingressPolicies.internalValue;
   }
 
   // vpc_accessible_services - computed: false, optional: true, required: false
@@ -2050,6 +3475,7 @@ export function accessContextManagerServicePerimeterTimeoutsToTerraform(struct?:
 
 export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2059,7 +3485,10 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AccessContextManagerServicePerimeterTimeouts | undefined {
+  public get internalValue(): AccessContextManagerServicePerimeterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2077,15 +3506,21 @@ export class AccessContextManagerServicePerimeterTimeoutsOutputReference extends
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AccessContextManagerServicePerimeterTimeouts | undefined) {
+  public set internalValue(value: AccessContextManagerServicePerimeterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -2176,6 +3611,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._parent = config.parent;
     this._perimeterType = config.perimeterType;
@@ -2212,8 +3648,19 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2347,6 +3794,7 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       parent: cdktf.stringToTerraform(this._parent),
       perimeter_type: cdktf.stringToTerraform(this._perimeterType),

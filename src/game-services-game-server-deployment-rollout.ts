@@ -23,6 +23,13 @@ applied by default to all realms and clusters. For example,
   */
   readonly deploymentId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#id GameServicesGameServerDeploymentRollout#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#project GameServicesGameServerDeploymentRollout#project}
   */
   readonly project?: string;
@@ -132,6 +139,108 @@ export function gameServicesGameServerDeploymentRolloutGameServerConfigOverrides
   }
 }
 
+export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): GameServicesGameServerDeploymentRolloutGameServerConfigOverrides | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._configVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configVersion = this._configVersion;
+    }
+    if (this._realmsSelector?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.realmsSelector = this._realmsSelector?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._configVersion = undefined;
+      this._realmsSelector.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._configVersion = value.configVersion;
+      this._realmsSelector.internalValue = value.realmsSelector;
+    }
+  }
+
+  // config_version - computed: false, optional: true, required: false
+  private _configVersion?: string; 
+  public get configVersion() {
+    return this.getStringAttribute('config_version');
+  }
+  public set configVersion(value: string) {
+    this._configVersion = value;
+  }
+  public resetConfigVersion() {
+    this._configVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configVersionInput() {
+    return this._configVersion;
+  }
+
+  // realms_selector - computed: false, optional: true, required: false
+  private _realmsSelector = new GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference(this, "realms_selector");
+  public get realmsSelector() {
+    return this._realmsSelector;
+  }
+  public putRealmsSelector(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector) {
+    this._realmsSelector.internalValue = value;
+  }
+  public resetRealmsSelector() {
+    this._realmsSelector.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get realmsSelectorInput() {
+    return this._realmsSelector.internalValue;
+  }
+}
+
+export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesList extends cdktf.ComplexList {
+  public internalValue? : GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): GameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference {
+    return new GameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface GameServicesGameServerDeploymentRolloutTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_deployment_rollout#create GameServicesGameServerDeploymentRollout#create}
@@ -161,6 +270,7 @@ export function gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(struc
 
 export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -170,7 +280,10 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): GameServicesGameServerDeploymentRolloutTimeouts | undefined {
+  public get internalValue(): GameServicesGameServerDeploymentRolloutTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -188,15 +301,21 @@ export class GameServicesGameServerDeploymentRolloutTimeoutsOutputReference exte
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: GameServicesGameServerDeploymentRolloutTimeouts | undefined) {
+  public set internalValue(value: GameServicesGameServerDeploymentRolloutTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -288,8 +407,9 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
     });
     this._defaultGameServerConfig = config.defaultGameServerConfig;
     this._deploymentId = config.deploymentId;
+    this._id = config.id;
     this._project = config.project;
-    this._gameServerConfigOverrides = config.gameServerConfigOverrides;
+    this._gameServerConfigOverrides.internalValue = config.gameServerConfigOverrides;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -324,8 +444,19 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -350,20 +481,19 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
   }
 
   // game_server_config_overrides - computed: false, optional: true, required: false
-  private _gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable; 
+  private _gameServerConfigOverrides = new GameServicesGameServerDeploymentRolloutGameServerConfigOverridesList(this, "game_server_config_overrides", false);
   public get gameServerConfigOverrides() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('game_server_config_overrides');
+    return this._gameServerConfigOverrides;
   }
-  public set gameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable) {
-    this._gameServerConfigOverrides = value;
+  public putGameServerConfigOverrides(value: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable) {
+    this._gameServerConfigOverrides.internalValue = value;
   }
   public resetGameServerConfigOverrides() {
-    this._gameServerConfigOverrides = undefined;
+    this._gameServerConfigOverrides.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gameServerConfigOverridesInput() {
-    return this._gameServerConfigOverrides;
+    return this._gameServerConfigOverrides.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -390,8 +520,9 @@ export class GameServicesGameServerDeploymentRollout extends cdktf.TerraformReso
     return {
       default_game_server_config: cdktf.stringToTerraform(this._defaultGameServerConfig),
       deployment_id: cdktf.stringToTerraform(this._deploymentId),
+      id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
-      game_server_config_overrides: cdktf.listMapper(gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform)(this._gameServerConfigOverrides),
+      game_server_config_overrides: cdktf.listMapper(gameServicesGameServerDeploymentRolloutGameServerConfigOverridesToTerraform)(this._gameServerConfigOverrides.internalValue),
       timeouts: gameServicesGameServerDeploymentRolloutTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

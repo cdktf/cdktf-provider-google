@@ -14,6 +14,13 @@ export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaA
   */
   readonly group: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * preferred_member_key block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
@@ -45,6 +52,9 @@ to the Identity Source's requirements.
 Must be unique within a namespace.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -159,6 +169,83 @@ export function cloudIdentityGroupMembershipRolesToTerraform(struct?: CloudIdent
   }
 }
 
+export class CloudIdentityGroupMembershipRolesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudIdentityGroupMembershipRoles | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudIdentityGroupMembershipRoles | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CloudIdentityGroupMembershipRolesList extends cdktf.ComplexList {
+  public internalValue? : CloudIdentityGroupMembershipRoles[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudIdentityGroupMembershipRolesOutputReference {
+    return new CloudIdentityGroupMembershipRolesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudIdentityGroupMembershipTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_identity_group_membership#create CloudIdentityGroupMembership#create}
@@ -188,6 +275,7 @@ export function cloudIdentityGroupMembershipTimeoutsToTerraform(struct?: CloudId
 
 export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -197,7 +285,10 @@ export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CloudIdentityGroupMembershipTimeouts | undefined {
+  public get internalValue(): CloudIdentityGroupMembershipTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -215,15 +306,21 @@ export class CloudIdentityGroupMembershipTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CloudIdentityGroupMembershipTimeouts | undefined) {
+  public set internalValue(value: CloudIdentityGroupMembershipTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -314,8 +411,9 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._group = config.group;
+    this._id = config.id;
     this._preferredMemberKey.internalValue = config.preferredMemberKey;
-    this._roles = config.roles;
+    this._roles.internalValue = config.roles;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -342,8 +440,19 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -378,17 +487,16 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   }
 
   // roles - computed: false, optional: false, required: true
-  private _roles?: CloudIdentityGroupMembershipRoles[] | cdktf.IResolvable; 
+  private _roles = new CloudIdentityGroupMembershipRolesList(this, "roles", true);
   public get roles() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('roles')));
+    return this._roles;
   }
-  public set roles(value: CloudIdentityGroupMembershipRoles[] | cdktf.IResolvable) {
-    this._roles = value;
+  public putRoles(value: CloudIdentityGroupMembershipRoles[] | cdktf.IResolvable) {
+    this._roles.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rolesInput() {
-    return this._roles;
+    return this._roles.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -414,8 +522,9 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       group: cdktf.stringToTerraform(this._group),
+      id: cdktf.stringToTerraform(this._id),
       preferred_member_key: cloudIdentityGroupMembershipPreferredMemberKeyToTerraform(this._preferredMemberKey.internalValue),
-      roles: cdktf.listMapper(cloudIdentityGroupMembershipRolesToTerraform)(this._roles),
+      roles: cdktf.listMapper(cloudIdentityGroupMembershipRolesToTerraform)(this._roles.internalValue),
       timeouts: cloudIdentityGroupMembershipTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

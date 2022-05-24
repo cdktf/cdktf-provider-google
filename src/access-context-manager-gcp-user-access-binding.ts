@@ -20,6 +20,13 @@ export interface AccessContextManagerGcpUserAccessBindingConfig extends cdktf.Te
   */
   readonly groupKey: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding#id AccessContextManagerGcpUserAccessBinding#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Required. ID of the parent organization.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_gcp_user_access_binding#organization_id AccessContextManagerGcpUserAccessBinding#organization_id}
@@ -61,6 +68,7 @@ export function accessContextManagerGcpUserAccessBindingTimeoutsToTerraform(stru
 
 export class AccessContextManagerGcpUserAccessBindingTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -70,7 +78,10 @@ export class AccessContextManagerGcpUserAccessBindingTimeoutsOutputReference ext
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AccessContextManagerGcpUserAccessBindingTimeouts | undefined {
+  public get internalValue(): AccessContextManagerGcpUserAccessBindingTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -88,15 +99,21 @@ export class AccessContextManagerGcpUserAccessBindingTimeoutsOutputReference ext
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AccessContextManagerGcpUserAccessBindingTimeouts | undefined) {
+  public set internalValue(value: AccessContextManagerGcpUserAccessBindingTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -188,6 +205,7 @@ export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformRes
     });
     this._accessLevels = config.accessLevels;
     this._groupKey = config.groupKey;
+    this._id = config.id;
     this._organizationId = config.organizationId;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -223,8 +241,19 @@ export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformRes
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -269,6 +298,7 @@ export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformRes
     return {
       access_levels: cdktf.listMapper(cdktf.stringToTerraform)(this._accessLevels),
       group_key: cdktf.stringToTerraform(this._groupKey),
+      id: cdktf.stringToTerraform(this._id),
       organization_id: cdktf.stringToTerraform(this._organizationId),
       timeouts: accessContextManagerGcpUserAccessBindingTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -22,6 +22,13 @@ policy will be subject to the project admission policy. Possible values: ["ENABL
   */
   readonly globalPolicyEvaluationMode?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_policy#id BinaryAuthorizationPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_policy#project BinaryAuthorizationPolicy#project}
   */
   readonly project?: string;
@@ -72,6 +79,83 @@ export function binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform(s
   }
 }
 
+export class BinaryAuthorizationPolicyAdmissionWhitelistPatternsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BinaryAuthorizationPolicyAdmissionWhitelistPatterns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._namePattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.namePattern = this._namePattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._namePattern = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._namePattern = value.namePattern;
+    }
+  }
+
+  // name_pattern - computed: false, optional: false, required: true
+  private _namePattern?: string; 
+  public get namePattern() {
+    return this.getStringAttribute('name_pattern');
+  }
+  public set namePattern(value: string) {
+    this._namePattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePatternInput() {
+    return this._namePattern;
+  }
+}
+
+export class BinaryAuthorizationPolicyAdmissionWhitelistPatternsList extends cdktf.ComplexList {
+  public internalValue? : BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BinaryAuthorizationPolicyAdmissionWhitelistPatternsOutputReference {
+    return new BinaryAuthorizationPolicyAdmissionWhitelistPatternsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BinaryAuthorizationPolicyClusterAdmissionRules {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_policy#cluster BinaryAuthorizationPolicy#cluster}
@@ -118,6 +202,143 @@ export function binaryAuthorizationPolicyClusterAdmissionRulesToTerraform(struct
   }
 }
 
+export class BinaryAuthorizationPolicyClusterAdmissionRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BinaryAuthorizationPolicyClusterAdmissionRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cluster !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cluster = this._cluster;
+    }
+    if (this._enforcementMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enforcementMode = this._enforcementMode;
+    }
+    if (this._evaluationMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.evaluationMode = this._evaluationMode;
+    }
+    if (this._requireAttestationsBy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requireAttestationsBy = this._requireAttestationsBy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationPolicyClusterAdmissionRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._cluster = undefined;
+      this._enforcementMode = undefined;
+      this._evaluationMode = undefined;
+      this._requireAttestationsBy = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._cluster = value.cluster;
+      this._enforcementMode = value.enforcementMode;
+      this._evaluationMode = value.evaluationMode;
+      this._requireAttestationsBy = value.requireAttestationsBy;
+    }
+  }
+
+  // cluster - computed: false, optional: false, required: true
+  private _cluster?: string; 
+  public get cluster() {
+    return this.getStringAttribute('cluster');
+  }
+  public set cluster(value: string) {
+    this._cluster = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterInput() {
+    return this._cluster;
+  }
+
+  // enforcement_mode - computed: false, optional: false, required: true
+  private _enforcementMode?: string; 
+  public get enforcementMode() {
+    return this.getStringAttribute('enforcement_mode');
+  }
+  public set enforcementMode(value: string) {
+    this._enforcementMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcementModeInput() {
+    return this._enforcementMode;
+  }
+
+  // evaluation_mode - computed: false, optional: false, required: true
+  private _evaluationMode?: string; 
+  public get evaluationMode() {
+    return this.getStringAttribute('evaluation_mode');
+  }
+  public set evaluationMode(value: string) {
+    this._evaluationMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationModeInput() {
+    return this._evaluationMode;
+  }
+
+  // require_attestations_by - computed: false, optional: true, required: false
+  private _requireAttestationsBy?: string[]; 
+  public get requireAttestationsBy() {
+    return cdktf.Fn.tolist(this.getListAttribute('require_attestations_by'));
+  }
+  public set requireAttestationsBy(value: string[]) {
+    this._requireAttestationsBy = value;
+  }
+  public resetRequireAttestationsBy() {
+    this._requireAttestationsBy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireAttestationsByInput() {
+    return this._requireAttestationsBy;
+  }
+}
+
+export class BinaryAuthorizationPolicyClusterAdmissionRulesList extends cdktf.ComplexList {
+  public internalValue? : BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BinaryAuthorizationPolicyClusterAdmissionRulesOutputReference {
+    return new BinaryAuthorizationPolicyClusterAdmissionRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BinaryAuthorizationPolicyDefaultAdmissionRule {
   /**
   * The action when a pod creation is denied by the admission rule. Possible values: ["ENFORCED_BLOCK_AND_AUDIT_LOG", "DRYRUN_AUDIT_LOG_ONLY"]
@@ -274,6 +495,7 @@ export function binaryAuthorizationPolicyTimeoutsToTerraform(struct?: BinaryAuth
 
 export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -283,7 +505,10 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BinaryAuthorizationPolicyTimeouts | undefined {
+  public get internalValue(): BinaryAuthorizationPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -301,15 +526,21 @@ export class BinaryAuthorizationPolicyTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BinaryAuthorizationPolicyTimeouts | undefined) {
+  public set internalValue(value: BinaryAuthorizationPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -401,9 +632,10 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._globalPolicyEvaluationMode = config.globalPolicyEvaluationMode;
+    this._id = config.id;
     this._project = config.project;
-    this._admissionWhitelistPatterns = config.admissionWhitelistPatterns;
-    this._clusterAdmissionRules = config.clusterAdmissionRules;
+    this._admissionWhitelistPatterns.internalValue = config.admissionWhitelistPatterns;
+    this._clusterAdmissionRules.internalValue = config.clusterAdmissionRules;
     this._defaultAdmissionRule.internalValue = config.defaultAdmissionRule;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -445,8 +677,19 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // project - computed: true, optional: true, required: false
@@ -466,37 +709,35 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
   }
 
   // admission_whitelist_patterns - computed: false, optional: true, required: false
-  private _admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable; 
+  private _admissionWhitelistPatterns = new BinaryAuthorizationPolicyAdmissionWhitelistPatternsList(this, "admission_whitelist_patterns", false);
   public get admissionWhitelistPatterns() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('admission_whitelist_patterns');
+    return this._admissionWhitelistPatterns;
   }
-  public set admissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable) {
-    this._admissionWhitelistPatterns = value;
+  public putAdmissionWhitelistPatterns(value: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable) {
+    this._admissionWhitelistPatterns.internalValue = value;
   }
   public resetAdmissionWhitelistPatterns() {
-    this._admissionWhitelistPatterns = undefined;
+    this._admissionWhitelistPatterns.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get admissionWhitelistPatternsInput() {
-    return this._admissionWhitelistPatterns;
+    return this._admissionWhitelistPatterns.internalValue;
   }
 
   // cluster_admission_rules - computed: false, optional: true, required: false
-  private _clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable; 
+  private _clusterAdmissionRules = new BinaryAuthorizationPolicyClusterAdmissionRulesList(this, "cluster_admission_rules", true);
   public get clusterAdmissionRules() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('cluster_admission_rules')));
+    return this._clusterAdmissionRules;
   }
-  public set clusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable) {
-    this._clusterAdmissionRules = value;
+  public putClusterAdmissionRules(value: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable) {
+    this._clusterAdmissionRules.internalValue = value;
   }
   public resetClusterAdmissionRules() {
-    this._clusterAdmissionRules = undefined;
+    this._clusterAdmissionRules.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clusterAdmissionRulesInput() {
-    return this._clusterAdmissionRules;
+    return this._clusterAdmissionRules.internalValue;
   }
 
   // default_admission_rule - computed: false, optional: false, required: true
@@ -536,9 +777,10 @@ export class BinaryAuthorizationPolicy extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       global_policy_evaluation_mode: cdktf.stringToTerraform(this._globalPolicyEvaluationMode),
+      id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
-      admission_whitelist_patterns: cdktf.listMapper(binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform)(this._admissionWhitelistPatterns),
-      cluster_admission_rules: cdktf.listMapper(binaryAuthorizationPolicyClusterAdmissionRulesToTerraform)(this._clusterAdmissionRules),
+      admission_whitelist_patterns: cdktf.listMapper(binaryAuthorizationPolicyAdmissionWhitelistPatternsToTerraform)(this._admissionWhitelistPatterns.internalValue),
+      cluster_admission_rules: cdktf.listMapper(binaryAuthorizationPolicyClusterAdmissionRulesToTerraform)(this._clusterAdmissionRules.internalValue),
       default_admission_rule: binaryAuthorizationPolicyDefaultAdmissionRuleToTerraform(this._defaultAdmissionRule.internalValue),
       timeouts: binaryAuthorizationPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

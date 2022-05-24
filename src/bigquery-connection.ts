@@ -26,6 +26,13 @@ export interface BigqueryConnectionConfig extends cdktf.TerraformMetaArguments {
   */
   readonly friendlyName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#id BigqueryConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
@@ -361,6 +368,7 @@ export function bigqueryConnectionTimeoutsToTerraform(struct?: BigqueryConnectio
 
 export class BigqueryConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -370,7 +378,10 @@ export class BigqueryConnectionTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BigqueryConnectionTimeouts | undefined {
+  public get internalValue(): BigqueryConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -388,15 +399,21 @@ export class BigqueryConnectionTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BigqueryConnectionTimeouts | undefined) {
+  public set internalValue(value: BigqueryConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -489,6 +506,7 @@ export class BigqueryConnection extends cdktf.TerraformResource {
     this._connectionId = config.connectionId;
     this._description = config.description;
     this._friendlyName = config.friendlyName;
+    this._id = config.id;
     this._location = config.location;
     this._project = config.project;
     this._cloudResource.internalValue = config.cloudResource;
@@ -554,8 +572,19 @@ export class BigqueryConnection extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: true, required: false
@@ -652,6 +681,7 @@ export class BigqueryConnection extends cdktf.TerraformResource {
       connection_id: cdktf.stringToTerraform(this._connectionId),
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       cloud_resource: bigqueryConnectionCloudResourceToTerraform(this._cloudResource.internalValue),

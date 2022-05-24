@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface FirebaserulesRulesetConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_ruleset#id FirebaserulesRuleset#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The project for the resource
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_ruleset#project FirebaserulesRuleset#project}
@@ -123,6 +130,124 @@ export function firebaserulesRulesetSourceFilesToTerraform(struct?: Firebaserule
   }
 }
 
+export class FirebaserulesRulesetSourceFilesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FirebaserulesRulesetSourceFiles | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._fingerprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fingerprint = this._fingerprint;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirebaserulesRulesetSourceFiles | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._fingerprint = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._fingerprint = value.fingerprint;
+      this._name = value.name;
+    }
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // fingerprint - computed: false, optional: true, required: false
+  private _fingerprint?: string; 
+  public get fingerprint() {
+    return this.getStringAttribute('fingerprint');
+  }
+  public set fingerprint(value: string) {
+    this._fingerprint = value;
+  }
+  public resetFingerprint() {
+    this._fingerprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fingerprintInput() {
+    return this._fingerprint;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class FirebaserulesRulesetSourceFilesList extends cdktf.ComplexList {
+  public internalValue? : FirebaserulesRulesetSourceFiles[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FirebaserulesRulesetSourceFilesOutputReference {
+    return new FirebaserulesRulesetSourceFilesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FirebaserulesRulesetSource {
   /**
   * `Language` of the `Source` bundle. If unspecified, the language will default to `FIREBASE_RULES`. Possible values: LANGUAGE_UNSPECIFIED, FIREBASE_RULES, EVENT_FLOW_TRIGGERS
@@ -167,9 +292,9 @@ export class FirebaserulesRulesetSourceOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.language = this._language;
     }
-    if (this._files !== undefined) {
+    if (this._files?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.files = this._files;
+      internalValueResult.files = this._files?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -178,12 +303,12 @@ export class FirebaserulesRulesetSourceOutputReference extends cdktf.ComplexObje
     if (value === undefined) {
       this.isEmptyObject = false;
       this._language = undefined;
-      this._files = undefined;
+      this._files.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._language = value.language;
-      this._files = value.files;
+      this._files.internalValue = value.files;
     }
   }
 
@@ -204,17 +329,16 @@ export class FirebaserulesRulesetSourceOutputReference extends cdktf.ComplexObje
   }
 
   // files - computed: false, optional: false, required: true
-  private _files?: FirebaserulesRulesetSourceFiles[] | cdktf.IResolvable; 
+  private _files = new FirebaserulesRulesetSourceFilesList(this, "files", false);
   public get files() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('files');
+    return this._files;
   }
-  public set files(value: FirebaserulesRulesetSourceFiles[] | cdktf.IResolvable) {
-    this._files = value;
+  public putFiles(value: FirebaserulesRulesetSourceFiles[] | cdktf.IResolvable) {
+    this._files.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get filesInput() {
-    return this._files;
+    return this._files.internalValue;
   }
 }
 export interface FirebaserulesRulesetTimeouts {
@@ -241,6 +365,7 @@ export function firebaserulesRulesetTimeoutsToTerraform(struct?: FirebaserulesRu
 
 export class FirebaserulesRulesetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -250,7 +375,10 @@ export class FirebaserulesRulesetTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FirebaserulesRulesetTimeouts | undefined {
+  public get internalValue(): FirebaserulesRulesetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -264,14 +392,20 @@ export class FirebaserulesRulesetTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FirebaserulesRulesetTimeouts | undefined) {
+  public set internalValue(value: FirebaserulesRulesetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -344,6 +478,7 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._project = config.project;
     this._source.internalValue = config.source;
     this._timeouts.internalValue = config.timeouts;
@@ -359,8 +494,19 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // metadata - computed: true, optional: false, required: false
@@ -425,6 +571,7 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
       source: firebaserulesRulesetSourceToTerraform(this._source.internalValue),
       timeouts: firebaserulesRulesetTimeoutsToTerraform(this._timeouts.internalValue),

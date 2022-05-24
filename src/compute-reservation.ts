@@ -14,6 +14,13 @@ export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#id ComputeReservation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -65,6 +72,9 @@ affinity for any reservation. Defaults to false.
 export interface ComputeReservationShareSettingsProjectMap {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_reservation#id ComputeReservation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -86,6 +96,105 @@ export function computeReservationShareSettingsProjectMapToTerraform(struct?: Co
   }
 }
 
+export class ComputeReservationShareSettingsProjectMapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeReservationShareSettingsProjectMap | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeReservationShareSettingsProjectMap | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._projectId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._projectId = value.projectId;
+    }
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // project_id - computed: false, optional: true, required: false
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+}
+
+export class ComputeReservationShareSettingsProjectMapList extends cdktf.ComplexList {
+  public internalValue? : ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeReservationShareSettingsProjectMapOutputReference {
+    return new ComputeReservationShareSettingsProjectMapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeReservationShareSettings {
   /**
   * Type of sharing for this shared-reservation Possible values: ["LOCAL", "SPECIFIC_PROJECTS"]
@@ -130,9 +239,9 @@ export class ComputeReservationShareSettingsOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.shareType = this._shareType;
     }
-    if (this._projectMap !== undefined) {
+    if (this._projectMap?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.projectMap = this._projectMap;
+      internalValueResult.projectMap = this._projectMap?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -141,12 +250,12 @@ export class ComputeReservationShareSettingsOutputReference extends cdktf.Comple
     if (value === undefined) {
       this.isEmptyObject = false;
       this._shareType = undefined;
-      this._projectMap = undefined;
+      this._projectMap.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._shareType = value.shareType;
-      this._projectMap = value.projectMap;
+      this._projectMap.internalValue = value.projectMap;
     }
   }
 
@@ -167,20 +276,19 @@ export class ComputeReservationShareSettingsOutputReference extends cdktf.Comple
   }
 
   // project_map - computed: false, optional: true, required: false
-  private _projectMap?: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable; 
+  private _projectMap = new ComputeReservationShareSettingsProjectMapList(this, "project_map", true);
   public get projectMap() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('project_map')));
+    return this._projectMap;
   }
-  public set projectMap(value: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable) {
-    this._projectMap = value;
+  public putProjectMap(value: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable) {
+    this._projectMap.internalValue = value;
   }
   public resetProjectMap() {
-    this._projectMap = undefined;
+    this._projectMap.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get projectMapInput() {
-    return this._projectMap;
+    return this._projectMap.internalValue;
   }
 }
 export interface ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators {
@@ -214,6 +322,102 @@ export function computeReservationSpecificReservationInstancePropertiesGuestAcce
   }
 }
 
+export class ComputeReservationSpecificReservationInstancePropertiesGuestAcceleratorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._acceleratorCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.acceleratorCount = this._acceleratorCount;
+    }
+    if (this._acceleratorType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.acceleratorType = this._acceleratorType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._acceleratorCount = undefined;
+      this._acceleratorType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._acceleratorCount = value.acceleratorCount;
+      this._acceleratorType = value.acceleratorType;
+    }
+  }
+
+  // accelerator_count - computed: false, optional: false, required: true
+  private _acceleratorCount?: number; 
+  public get acceleratorCount() {
+    return this.getNumberAttribute('accelerator_count');
+  }
+  public set acceleratorCount(value: number) {
+    this._acceleratorCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratorCountInput() {
+    return this._acceleratorCount;
+  }
+
+  // accelerator_type - computed: false, optional: false, required: true
+  private _acceleratorType?: string; 
+  public get acceleratorType() {
+    return this.getStringAttribute('accelerator_type');
+  }
+  public set acceleratorType(value: string) {
+    this._acceleratorType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratorTypeInput() {
+    return this._acceleratorType;
+  }
+}
+
+export class ComputeReservationSpecificReservationInstancePropertiesGuestAcceleratorsList extends cdktf.ComplexList {
+  public internalValue? : ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeReservationSpecificReservationInstancePropertiesGuestAcceleratorsOutputReference {
+    return new ComputeReservationSpecificReservationInstancePropertiesGuestAcceleratorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeReservationSpecificReservationInstancePropertiesLocalSsds {
   /**
   * The size of the disk in base-2 GB.
@@ -240,6 +444,105 @@ export function computeReservationSpecificReservationInstancePropertiesLocalSsds
   }
 }
 
+export class ComputeReservationSpecificReservationInstancePropertiesLocalSsdsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeReservationSpecificReservationInstancePropertiesLocalSsds | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._diskSizeGb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._interface !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interface = this._interface;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeReservationSpecificReservationInstancePropertiesLocalSsds | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._diskSizeGb = undefined;
+      this._interface = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._diskSizeGb = value.diskSizeGb;
+      this._interface = value.interface;
+    }
+  }
+
+  // disk_size_gb - computed: false, optional: false, required: true
+  private _diskSizeGb?: number; 
+  public get diskSizeGb() {
+    return this.getNumberAttribute('disk_size_gb');
+  }
+  public set diskSizeGb(value: number) {
+    this._diskSizeGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeGbInput() {
+    return this._diskSizeGb;
+  }
+
+  // interface - computed: false, optional: true, required: false
+  private _interface?: string; 
+  public get interface() {
+    return this.getStringAttribute('interface');
+  }
+  public set interface(value: string) {
+    this._interface = value;
+  }
+  public resetInterface() {
+    this._interface = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interfaceInput() {
+    return this._interface;
+  }
+}
+
+export class ComputeReservationSpecificReservationInstancePropertiesLocalSsdsList extends cdktf.ComplexList {
+  public internalValue? : ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeReservationSpecificReservationInstancePropertiesLocalSsdsOutputReference {
+    return new ComputeReservationSpecificReservationInstancePropertiesLocalSsdsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeReservationSpecificReservationInstanceProperties {
   /**
   * The name of the machine type to reserve.
@@ -305,13 +608,13 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
       hasAnyValues = true;
       internalValueResult.minCpuPlatform = this._minCpuPlatform;
     }
-    if (this._guestAccelerators !== undefined) {
+    if (this._guestAccelerators?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.guestAccelerators = this._guestAccelerators;
+      internalValueResult.guestAccelerators = this._guestAccelerators?.internalValue;
     }
-    if (this._localSsds !== undefined) {
+    if (this._localSsds?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.localSsds = this._localSsds;
+      internalValueResult.localSsds = this._localSsds?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -321,15 +624,15 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
       this.isEmptyObject = false;
       this._machineType = undefined;
       this._minCpuPlatform = undefined;
-      this._guestAccelerators = undefined;
-      this._localSsds = undefined;
+      this._guestAccelerators.internalValue = undefined;
+      this._localSsds.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._machineType = value.machineType;
       this._minCpuPlatform = value.minCpuPlatform;
-      this._guestAccelerators = value.guestAccelerators;
-      this._localSsds = value.localSsds;
+      this._guestAccelerators.internalValue = value.guestAccelerators;
+      this._localSsds.internalValue = value.localSsds;
     }
   }
 
@@ -363,37 +666,35 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
   }
 
   // guest_accelerators - computed: false, optional: true, required: false
-  private _guestAccelerators?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | cdktf.IResolvable; 
+  private _guestAccelerators = new ComputeReservationSpecificReservationInstancePropertiesGuestAcceleratorsList(this, "guest_accelerators", false);
   public get guestAccelerators() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('guest_accelerators');
+    return this._guestAccelerators;
   }
-  public set guestAccelerators(value: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | cdktf.IResolvable) {
-    this._guestAccelerators = value;
+  public putGuestAccelerators(value: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | cdktf.IResolvable) {
+    this._guestAccelerators.internalValue = value;
   }
   public resetGuestAccelerators() {
-    this._guestAccelerators = undefined;
+    this._guestAccelerators.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get guestAcceleratorsInput() {
-    return this._guestAccelerators;
+    return this._guestAccelerators.internalValue;
   }
 
   // local_ssds - computed: false, optional: true, required: false
-  private _localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | cdktf.IResolvable; 
+  private _localSsds = new ComputeReservationSpecificReservationInstancePropertiesLocalSsdsList(this, "local_ssds", false);
   public get localSsds() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('local_ssds');
+    return this._localSsds;
   }
-  public set localSsds(value: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | cdktf.IResolvable) {
-    this._localSsds = value;
+  public putLocalSsds(value: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | cdktf.IResolvable) {
+    this._localSsds.internalValue = value;
   }
   public resetLocalSsds() {
-    this._localSsds = undefined;
+    this._localSsds.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get localSsdsInput() {
-    return this._localSsds;
+    return this._localSsds.internalValue;
   }
 }
 export interface ComputeReservationSpecificReservation {
@@ -520,6 +821,7 @@ export function computeReservationTimeoutsToTerraform(struct?: ComputeReservatio
 
 export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -529,7 +831,10 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeReservationTimeouts | undefined {
+  public get internalValue(): ComputeReservationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -547,15 +852,21 @@ export class ComputeReservationTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeReservationTimeouts | undefined) {
+  public set internalValue(value: ComputeReservationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -646,6 +957,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._specificReservationRequired = config.specificReservationRequired;
@@ -686,8 +998,19 @@ export class ComputeReservation extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -810,6 +1133,7 @@ export class ComputeReservation extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       specific_reservation_required: cdktf.booleanToTerraform(this._specificReservationRequired),

@@ -12,6 +12,13 @@ export interface SpannerDatabaseIamMemberConfig extends cdktf.TerraformMetaArgum
   */
   readonly database: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member#id SpannerDatabaseIamMember#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database_iam_member#instance SpannerDatabaseIamMember#instance}
   */
   readonly instance: string;
@@ -183,6 +190,7 @@ export class SpannerDatabaseIamMember extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._database = config.database;
+    this._id = config.id;
     this._instance = config.instance;
     this._member = config.member;
     this._project = config.project;
@@ -213,8 +221,19 @@ export class SpannerDatabaseIamMember extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance - computed: false, optional: false, required: true
@@ -295,6 +314,7 @@ export class SpannerDatabaseIamMember extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database: cdktf.stringToTerraform(this._database),
+      id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
       member: cdktf.stringToTerraform(this._member),
       project: cdktf.stringToTerraform(this._project),

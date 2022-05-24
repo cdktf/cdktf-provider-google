@@ -42,6 +42,13 @@ Set the value to 0 to use the default value.
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config#id BigqueryDataTransferConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
   * 
@@ -406,6 +413,7 @@ export function bigqueryDataTransferConfigTimeoutsToTerraform(struct?: BigqueryD
 
 export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -415,7 +423,10 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BigqueryDataTransferConfigTimeouts | undefined {
+  public get internalValue(): BigqueryDataTransferConfigTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -433,15 +444,21 @@ export class BigqueryDataTransferConfigTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BigqueryDataTransferConfigTimeouts | undefined) {
+  public set internalValue(value: BigqueryDataTransferConfigTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -536,6 +553,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
     this._destinationDatasetId = config.destinationDatasetId;
     this._disabled = config.disabled;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._location = config.location;
     this._notificationPubsubTopic = config.notificationPubsubTopic;
     this._params = config.params;
@@ -627,8 +645,19 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: true, required: false
@@ -804,6 +833,7 @@ export class BigqueryDataTransferConfig extends cdktf.TerraformResource {
       destination_dataset_id: cdktf.stringToTerraform(this._destinationDatasetId),
       disabled: cdktf.booleanToTerraform(this._disabled),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       notification_pubsub_topic: cdktf.stringToTerraform(this._notificationPubsubTopic),
       params: cdktf.hashMapper(cdktf.stringToTerraform)(this._params),

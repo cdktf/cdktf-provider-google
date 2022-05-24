@@ -20,6 +20,13 @@ export interface DialogflowFulfillmentConfig extends cdktf.TerraformMetaArgument
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment#id DialogflowFulfillment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_fulfillment#project DialogflowFulfillment#project}
   */
   readonly project?: string;
@@ -62,6 +69,83 @@ export function dialogflowFulfillmentFeaturesToTerraform(struct?: DialogflowFulf
   }
 }
 
+export class DialogflowFulfillmentFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowFulfillmentFeatures | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowFulfillmentFeatures | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class DialogflowFulfillmentFeaturesList extends cdktf.ComplexList {
+  public internalValue? : DialogflowFulfillmentFeatures[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowFulfillmentFeaturesOutputReference {
+    return new DialogflowFulfillmentFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DialogflowFulfillmentGenericWebService {
   /**
   * The password for HTTP Basic authentication.
@@ -242,6 +326,7 @@ export function dialogflowFulfillmentTimeoutsToTerraform(struct?: DialogflowFulf
 
 export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -251,7 +336,10 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DialogflowFulfillmentTimeouts | undefined {
+  public get internalValue(): DialogflowFulfillmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -269,15 +357,21 @@ export class DialogflowFulfillmentTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DialogflowFulfillmentTimeouts | undefined) {
+  public set internalValue(value: DialogflowFulfillmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -369,8 +463,9 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
     });
     this._displayName = config.displayName;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._project = config.project;
-    this._features = config.features;
+    this._features.internalValue = config.features;
     this._genericWebService.internalValue = config.genericWebService;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -409,8 +504,19 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -435,20 +541,19 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
   }
 
   // features - computed: false, optional: true, required: false
-  private _features?: DialogflowFulfillmentFeatures[] | cdktf.IResolvable; 
+  private _features = new DialogflowFulfillmentFeaturesList(this, "features", false);
   public get features() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('features');
+    return this._features;
   }
-  public set features(value: DialogflowFulfillmentFeatures[] | cdktf.IResolvable) {
-    this._features = value;
+  public putFeatures(value: DialogflowFulfillmentFeatures[] | cdktf.IResolvable) {
+    this._features.internalValue = value;
   }
   public resetFeatures() {
-    this._features = undefined;
+    this._features.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get featuresInput() {
-    return this._features;
+    return this._features.internalValue;
   }
 
   // generic_web_service - computed: false, optional: true, required: false
@@ -491,8 +596,9 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
-      features: cdktf.listMapper(dialogflowFulfillmentFeaturesToTerraform)(this._features),
+      features: cdktf.listMapper(dialogflowFulfillmentFeaturesToTerraform)(this._features.internalValue),
       generic_web_service: dialogflowFulfillmentGenericWebServiceToTerraform(this._genericWebService.internalValue),
       timeouts: dialogflowFulfillmentTimeoutsToTerraform(this._timeouts.internalValue),
     };

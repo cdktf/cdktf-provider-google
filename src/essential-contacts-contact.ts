@@ -14,6 +14,13 @@ export interface EssentialContactsContactConfig extends cdktf.TerraformMetaArgum
   */
   readonly email: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#id EssentialContactsContact#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#language_tag EssentialContactsContact#language_tag}
@@ -67,6 +74,7 @@ export function essentialContactsContactTimeoutsToTerraform(struct?: EssentialCo
 
 export class EssentialContactsContactTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -76,7 +84,10 @@ export class EssentialContactsContactTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): EssentialContactsContactTimeouts | undefined {
+  public get internalValue(): EssentialContactsContactTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -94,15 +105,21 @@ export class EssentialContactsContactTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: EssentialContactsContactTimeouts | undefined) {
+  public set internalValue(value: EssentialContactsContactTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -193,6 +210,7 @@ export class EssentialContactsContact extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._email = config.email;
+    this._id = config.id;
     this._languageTag = config.languageTag;
     this._notificationCategorySubscriptions = config.notificationCategorySubscriptions;
     this._parent = config.parent;
@@ -217,8 +235,19 @@ export class EssentialContactsContact extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // language_tag - computed: false, optional: false, required: true
@@ -288,6 +317,7 @@ export class EssentialContactsContact extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       email: cdktf.stringToTerraform(this._email),
+      id: cdktf.stringToTerraform(this._id),
       language_tag: cdktf.stringToTerraform(this._languageTag),
       notification_category_subscriptions: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationCategorySubscriptions),
       parent: cdktf.stringToTerraform(this._parent),

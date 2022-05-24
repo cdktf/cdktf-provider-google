@@ -14,6 +14,13 @@ export interface ComputePacketMirroringConfig extends cdktf.TerraformMetaArgumen
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring#id ComputePacketMirroring#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the packet mirroring rule
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring#name ComputePacketMirroring#name}
@@ -278,6 +285,83 @@ export function computePacketMirroringMirroredResourcesInstancesToTerraform(stru
   }
 }
 
+export class ComputePacketMirroringMirroredResourcesInstancesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputePacketMirroringMirroredResourcesInstances | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePacketMirroringMirroredResourcesInstances | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._url = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._url = value.url;
+    }
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+
+export class ComputePacketMirroringMirroredResourcesInstancesList extends cdktf.ComplexList {
+  public internalValue? : ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputePacketMirroringMirroredResourcesInstancesOutputReference {
+    return new ComputePacketMirroringMirroredResourcesInstancesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputePacketMirroringMirroredResourcesSubnetworks {
   /**
   * The URL of the subnetwork where this rule should be active.
@@ -297,6 +381,83 @@ export function computePacketMirroringMirroredResourcesSubnetworksToTerraform(st
   }
 }
 
+export class ComputePacketMirroringMirroredResourcesSubnetworksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputePacketMirroringMirroredResourcesSubnetworks | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputePacketMirroringMirroredResourcesSubnetworks | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._url = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._url = value.url;
+    }
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+
+export class ComputePacketMirroringMirroredResourcesSubnetworksList extends cdktf.ComplexList {
+  public internalValue? : ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputePacketMirroringMirroredResourcesSubnetworksOutputReference {
+    return new ComputePacketMirroringMirroredResourcesSubnetworksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputePacketMirroringMirroredResources {
   /**
   * All instances with these tags will be mirrored.
@@ -348,13 +509,13 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._instances !== undefined) {
+    if (this._instances?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.instances = this._instances;
+      internalValueResult.instances = this._instances?.internalValue;
     }
-    if (this._subnetworks !== undefined) {
+    if (this._subnetworks?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.subnetworks = this._subnetworks;
+      internalValueResult.subnetworks = this._subnetworks?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -363,14 +524,14 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
     if (value === undefined) {
       this.isEmptyObject = false;
       this._tags = undefined;
-      this._instances = undefined;
-      this._subnetworks = undefined;
+      this._instances.internalValue = undefined;
+      this._subnetworks.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._tags = value.tags;
-      this._instances = value.instances;
-      this._subnetworks = value.subnetworks;
+      this._instances.internalValue = value.instances;
+      this._subnetworks.internalValue = value.subnetworks;
     }
   }
 
@@ -391,37 +552,35 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
   }
 
   // instances - computed: false, optional: true, required: false
-  private _instances?: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable; 
+  private _instances = new ComputePacketMirroringMirroredResourcesInstancesList(this, "instances", false);
   public get instances() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('instances');
+    return this._instances;
   }
-  public set instances(value: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable) {
-    this._instances = value;
+  public putInstances(value: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable) {
+    this._instances.internalValue = value;
   }
   public resetInstances() {
-    this._instances = undefined;
+    this._instances.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instancesInput() {
-    return this._instances;
+    return this._instances.internalValue;
   }
 
   // subnetworks - computed: false, optional: true, required: false
-  private _subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable; 
+  private _subnetworks = new ComputePacketMirroringMirroredResourcesSubnetworksList(this, "subnetworks", false);
   public get subnetworks() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subnetworks');
+    return this._subnetworks;
   }
-  public set subnetworks(value: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable) {
-    this._subnetworks = value;
+  public putSubnetworks(value: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable) {
+    this._subnetworks.internalValue = value;
   }
   public resetSubnetworks() {
-    this._subnetworks = undefined;
+    this._subnetworks.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subnetworksInput() {
-    return this._subnetworks;
+    return this._subnetworks.internalValue;
   }
 }
 export interface ComputePacketMirroringNetwork {
@@ -517,6 +676,7 @@ export function computePacketMirroringTimeoutsToTerraform(struct?: ComputePacket
 
 export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -526,7 +686,10 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputePacketMirroringTimeouts | undefined {
+  public get internalValue(): ComputePacketMirroringTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -544,15 +707,21 @@ export class ComputePacketMirroringTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputePacketMirroringTimeouts | undefined) {
+  public set internalValue(value: ComputePacketMirroringTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -643,6 +812,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._priority = config.priority;
     this._project = config.project;
@@ -675,8 +845,19 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -818,6 +999,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       project: cdktf.stringToTerraform(this._project),

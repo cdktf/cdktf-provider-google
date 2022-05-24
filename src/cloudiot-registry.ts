@@ -14,6 +14,13 @@ export interface CloudiotRegistryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpConfig?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#id CloudiotRegistry#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The default logging verbosity for activity from devices in this
 registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
@@ -90,6 +97,83 @@ export function cloudiotRegistryCredentialsToTerraform(struct?: CloudiotRegistry
   }
 }
 
+export class CloudiotRegistryCredentialsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudiotRegistryCredentials | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._publicKeyCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicKeyCertificate = this._publicKeyCertificate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudiotRegistryCredentials | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._publicKeyCertificate = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._publicKeyCertificate = value.publicKeyCertificate;
+    }
+  }
+
+  // public_key_certificate - computed: false, optional: false, required: true
+  private _publicKeyCertificate?: { [key: string]: string }; 
+  public get publicKeyCertificate() {
+    return this.getStringMapAttribute('public_key_certificate');
+  }
+  public set publicKeyCertificate(value: { [key: string]: string }) {
+    this._publicKeyCertificate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyCertificateInput() {
+    return this._publicKeyCertificate;
+  }
+}
+
+export class CloudiotRegistryCredentialsList extends cdktf.ComplexList {
+  public internalValue? : CloudiotRegistryCredentials[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudiotRegistryCredentialsOutputReference {
+    return new CloudiotRegistryCredentialsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudiotRegistryEventNotificationConfigs {
   /**
   * PubSub topic name to publish device events.
@@ -120,6 +204,105 @@ export function cloudiotRegistryEventNotificationConfigsToTerraform(struct?: Clo
   }
 }
 
+export class CloudiotRegistryEventNotificationConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudiotRegistryEventNotificationConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._pubsubTopicName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pubsubTopicName = this._pubsubTopicName;
+    }
+    if (this._subfolderMatches !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subfolderMatches = this._subfolderMatches;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudiotRegistryEventNotificationConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._pubsubTopicName = undefined;
+      this._subfolderMatches = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._pubsubTopicName = value.pubsubTopicName;
+      this._subfolderMatches = value.subfolderMatches;
+    }
+  }
+
+  // pubsub_topic_name - computed: false, optional: false, required: true
+  private _pubsubTopicName?: string; 
+  public get pubsubTopicName() {
+    return this.getStringAttribute('pubsub_topic_name');
+  }
+  public set pubsubTopicName(value: string) {
+    this._pubsubTopicName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubTopicNameInput() {
+    return this._pubsubTopicName;
+  }
+
+  // subfolder_matches - computed: false, optional: true, required: false
+  private _subfolderMatches?: string; 
+  public get subfolderMatches() {
+    return this.getStringAttribute('subfolder_matches');
+  }
+  public set subfolderMatches(value: string) {
+    this._subfolderMatches = value;
+  }
+  public resetSubfolderMatches() {
+    this._subfolderMatches = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subfolderMatchesInput() {
+    return this._subfolderMatches;
+  }
+}
+
+export class CloudiotRegistryEventNotificationConfigsList extends cdktf.ComplexList {
+  public internalValue? : CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudiotRegistryEventNotificationConfigsOutputReference {
+    return new CloudiotRegistryEventNotificationConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudiotRegistryTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry#create CloudiotRegistry#create}
@@ -149,6 +332,7 @@ export function cloudiotRegistryTimeoutsToTerraform(struct?: CloudiotRegistryTim
 
 export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -158,7 +342,10 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CloudiotRegistryTimeouts | undefined {
+  public get internalValue(): CloudiotRegistryTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -176,15 +363,21 @@ export class CloudiotRegistryTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CloudiotRegistryTimeouts | undefined) {
+  public set internalValue(value: CloudiotRegistryTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -275,14 +468,15 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._httpConfig = config.httpConfig;
+    this._id = config.id;
     this._logLevel = config.logLevel;
     this._mqttConfig = config.mqttConfig;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
     this._stateNotificationConfig = config.stateNotificationConfig;
-    this._credentials = config.credentials;
-    this._eventNotificationConfigs = config.eventNotificationConfigs;
+    this._credentials.internalValue = config.credentials;
+    this._eventNotificationConfigs.internalValue = config.eventNotificationConfigs;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -307,8 +501,19 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // log_level - computed: false, optional: true, required: false
@@ -405,37 +610,35 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: CloudiotRegistryCredentials[] | cdktf.IResolvable; 
+  private _credentials = new CloudiotRegistryCredentialsList(this, "credentials", false);
   public get credentials() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('credentials');
+    return this._credentials;
   }
-  public set credentials(value: CloudiotRegistryCredentials[] | cdktf.IResolvable) {
-    this._credentials = value;
+  public putCredentials(value: CloudiotRegistryCredentials[] | cdktf.IResolvable) {
+    this._credentials.internalValue = value;
   }
   public resetCredentials() {
-    this._credentials = undefined;
+    this._credentials.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get credentialsInput() {
-    return this._credentials;
+    return this._credentials.internalValue;
   }
 
   // event_notification_configs - computed: false, optional: true, required: false
-  private _eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable; 
+  private _eventNotificationConfigs = new CloudiotRegistryEventNotificationConfigsList(this, "event_notification_configs", false);
   public get eventNotificationConfigs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('event_notification_configs');
+    return this._eventNotificationConfigs;
   }
-  public set eventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable) {
-    this._eventNotificationConfigs = value;
+  public putEventNotificationConfigs(value: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable) {
+    this._eventNotificationConfigs.internalValue = value;
   }
   public resetEventNotificationConfigs() {
-    this._eventNotificationConfigs = undefined;
+    this._eventNotificationConfigs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get eventNotificationConfigsInput() {
-    return this._eventNotificationConfigs;
+    return this._eventNotificationConfigs.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -461,14 +664,15 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       http_config: cdktf.hashMapper(cdktf.stringToTerraform)(this._httpConfig),
+      id: cdktf.stringToTerraform(this._id),
       log_level: cdktf.stringToTerraform(this._logLevel),
       mqtt_config: cdktf.hashMapper(cdktf.stringToTerraform)(this._mqttConfig),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       state_notification_config: cdktf.hashMapper(cdktf.stringToTerraform)(this._stateNotificationConfig),
-      credentials: cdktf.listMapper(cloudiotRegistryCredentialsToTerraform)(this._credentials),
-      event_notification_configs: cdktf.listMapper(cloudiotRegistryEventNotificationConfigsToTerraform)(this._eventNotificationConfigs),
+      credentials: cdktf.listMapper(cloudiotRegistryCredentialsToTerraform)(this._credentials.internalValue),
+      event_notification_configs: cdktf.listMapper(cloudiotRegistryEventNotificationConfigsToTerraform)(this._eventNotificationConfigs.internalValue),
       timeouts: cloudiotRegistryTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

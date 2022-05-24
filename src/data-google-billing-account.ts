@@ -16,6 +16,13 @@ export interface DataGoogleBillingAccountConfig extends cdktf.TerraformMetaArgum
   */
   readonly displayName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account#id DataGoogleBillingAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/billing_account#open DataGoogleBillingAccount#open}
   */
   readonly open?: boolean | cdktf.IResolvable;
@@ -57,6 +64,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
     });
     this._billingAccount = config.billingAccount;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._open = config.open;
   }
 
@@ -97,8 +105,19 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -135,6 +154,7 @@ export class DataGoogleBillingAccount extends cdktf.TerraformDataSource {
     return {
       billing_account: cdktf.stringToTerraform(this._billingAccount),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       open: cdktf.booleanToTerraform(this._open),
     };
   }

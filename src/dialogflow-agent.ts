@@ -62,6 +62,13 @@ for a list of the currently supported language codes. This field cannot be updat
   */
   readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_agent#id DialogflowAgent#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Determines how intents are detected from user queries.
 * MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
 syntax and composite entities.
@@ -135,6 +142,7 @@ export function dialogflowAgentTimeoutsToTerraform(struct?: DialogflowAgentTimeo
 
 export class DialogflowAgentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -144,7 +152,10 @@ export class DialogflowAgentTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DialogflowAgentTimeouts | undefined {
+  public get internalValue(): DialogflowAgentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -162,15 +173,21 @@ export class DialogflowAgentTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DialogflowAgentTimeouts | undefined) {
+  public set internalValue(value: DialogflowAgentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -267,6 +284,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._enableLogging = config.enableLogging;
+    this._id = config.id;
     this._matchMode = config.matchMode;
     this._project = config.project;
     this._supportedLanguageCodes = config.supportedLanguageCodes;
@@ -391,8 +409,19 @@ export class DialogflowAgent extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // match_mode - computed: true, optional: true, required: false
@@ -501,6 +530,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       enable_logging: cdktf.booleanToTerraform(this._enableLogging),
+      id: cdktf.stringToTerraform(this._id),
       match_mode: cdktf.stringToTerraform(this._matchMode),
       project: cdktf.stringToTerraform(this._project),
       supported_language_codes: cdktf.listMapper(cdktf.stringToTerraform)(this._supportedLanguageCodes),

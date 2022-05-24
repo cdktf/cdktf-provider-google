@@ -12,6 +12,13 @@ export interface ApigeeEnvironmentIamMemberConfig extends cdktf.TerraformMetaArg
   */
   readonly envId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment_iam_member#id ApigeeEnvironmentIamMember#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment_iam_member#member ApigeeEnvironmentIamMember#member}
   */
   readonly member: string;
@@ -179,6 +186,7 @@ export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._envId = config.envId;
+    this._id = config.id;
     this._member = config.member;
     this._orgId = config.orgId;
     this._role = config.role;
@@ -208,8 +216,19 @@ export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // member - computed: false, optional: false, required: true
@@ -274,6 +293,7 @@ export class ApigeeEnvironmentIamMember extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       env_id: cdktf.stringToTerraform(this._envId),
+      id: cdktf.stringToTerraform(this._id),
       member: cdktf.stringToTerraform(this._member),
       org_id: cdktf.stringToTerraform(this._orgId),
       role: cdktf.stringToTerraform(this._role),

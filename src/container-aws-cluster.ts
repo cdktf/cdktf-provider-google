@@ -26,6 +26,13 @@ export interface ContainerAwsClusterConfig extends cdktf.TerraformMetaArguments 
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_cluster#id ContainerAwsCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location for the resource
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_aws_cluster#location ContainerAwsCluster#location}
@@ -167,6 +174,83 @@ export function containerAwsClusterAuthorizationAdminUsersToTerraform(struct?: C
   }
 }
 
+export class ContainerAwsClusterAuthorizationAdminUsersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAwsClusterAuthorizationAdminUsers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAwsClusterAuthorizationAdminUsers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._username = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._username = value.username;
+    }
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class ContainerAwsClusterAuthorizationAdminUsersList extends cdktf.ComplexList {
+  public internalValue? : ContainerAwsClusterAuthorizationAdminUsers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAwsClusterAuthorizationAdminUsersOutputReference {
+    return new ContainerAwsClusterAuthorizationAdminUsersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAwsClusterAuthorization {
   /**
   * admin_users block
@@ -200,9 +284,9 @@ export class ContainerAwsClusterAuthorizationOutputReference extends cdktf.Compl
   public get internalValue(): ContainerAwsClusterAuthorization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminUsers !== undefined) {
+    if (this._adminUsers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.adminUsers = this._adminUsers;
+      internalValueResult.adminUsers = this._adminUsers?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -210,26 +294,25 @@ export class ContainerAwsClusterAuthorizationOutputReference extends cdktf.Compl
   public set internalValue(value: ContainerAwsClusterAuthorization | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._adminUsers = undefined;
+      this._adminUsers.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._adminUsers = value.adminUsers;
+      this._adminUsers.internalValue = value.adminUsers;
     }
   }
 
   // admin_users - computed: false, optional: false, required: true
-  private _adminUsers?: ContainerAwsClusterAuthorizationAdminUsers[] | cdktf.IResolvable; 
+  private _adminUsers = new ContainerAwsClusterAuthorizationAdminUsersList(this, "admin_users", false);
   public get adminUsers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('admin_users');
+    return this._adminUsers;
   }
-  public set adminUsers(value: ContainerAwsClusterAuthorizationAdminUsers[] | cdktf.IResolvable) {
-    this._adminUsers = value;
+  public putAdminUsers(value: ContainerAwsClusterAuthorizationAdminUsers[] | cdktf.IResolvable) {
+    this._adminUsers.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get adminUsersInput() {
-    return this._adminUsers;
+    return this._adminUsers.internalValue;
   }
 }
 export interface ContainerAwsClusterControlPlaneAwsServicesAuthentication {
@@ -1529,6 +1612,7 @@ export function containerAwsClusterTimeoutsToTerraform(struct?: ContainerAwsClus
 
 export class ContainerAwsClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1538,7 +1622,10 @@ export class ContainerAwsClusterTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerAwsClusterTimeouts | undefined {
+  public get internalValue(): ContainerAwsClusterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1556,15 +1643,21 @@ export class ContainerAwsClusterTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerAwsClusterTimeouts | undefined) {
+  public set internalValue(value: ContainerAwsClusterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1657,6 +1750,7 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
     this._annotations = config.annotations;
     this._awsRegion = config.awsRegion;
     this._description = config.description;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
@@ -1732,8 +1826,19 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1881,6 +1986,7 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
       annotations: cdktf.hashMapper(cdktf.stringToTerraform)(this._annotations),
       aws_region: cdktf.stringToTerraform(this._awsRegion),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

@@ -20,6 +20,13 @@ export interface MonitoringMetricDescriptorConfig extends cdktf.TerraformMetaArg
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor#id MonitoringMetricDescriptor#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The launch stage of the metric definition. Possible values: ["LAUNCH_STAGE_UNSPECIFIED", "UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor#launch_stage MonitoringMetricDescriptor#launch_stage}
@@ -124,6 +131,127 @@ export function monitoringMetricDescriptorLabelsToTerraform(struct?: MonitoringM
   }
 }
 
+export class MonitoringMetricDescriptorLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringMetricDescriptorLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._valueType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.valueType = this._valueType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringMetricDescriptorLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._key = undefined;
+      this._valueType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._key = value.key;
+      this._valueType = value.valueType;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value_type - computed: false, optional: true, required: false
+  private _valueType?: string; 
+  public get valueType() {
+    return this.getStringAttribute('value_type');
+  }
+  public set valueType(value: string) {
+    this._valueType = value;
+  }
+  public resetValueType() {
+    this._valueType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueTypeInput() {
+    return this._valueType;
+  }
+}
+
+export class MonitoringMetricDescriptorLabelsList extends cdktf.ComplexList {
+  public internalValue? : MonitoringMetricDescriptorLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringMetricDescriptorLabelsOutputReference {
+    return new MonitoringMetricDescriptorLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitoringMetricDescriptorMetadata {
   /**
   * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'.
@@ -249,6 +377,7 @@ export function monitoringMetricDescriptorTimeoutsToTerraform(struct?: Monitorin
 
 export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -258,7 +387,10 @@ export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitoringMetricDescriptorTimeouts | undefined {
+  public get internalValue(): MonitoringMetricDescriptorTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -276,15 +408,21 @@ export class MonitoringMetricDescriptorTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitoringMetricDescriptorTimeouts | undefined) {
+  public set internalValue(value: MonitoringMetricDescriptorTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -376,13 +514,14 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._launchStage = config.launchStage;
     this._metricKind = config.metricKind;
     this._project = config.project;
     this._type = config.type;
     this._unit = config.unit;
     this._valueType = config.valueType;
-    this._labels = config.labels;
+    this._labels.internalValue = config.labels;
     this._metadata.internalValue = config.metadata;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -418,8 +557,19 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // launch_stage - computed: false, optional: true, required: false
@@ -520,20 +670,19 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable; 
+  private _labels = new MonitoringMetricDescriptorLabelsList(this, "labels", true);
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('labels')));
+    return this._labels;
   }
-  public set labels(value: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable) {
-    this._labels = value;
+  public putLabels(value: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable) {
+    this._labels.internalValue = value;
   }
   public resetLabels() {
-    this._labels = undefined;
+    this._labels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels;
+    return this._labels.internalValue;
   }
 
   // metadata - computed: false, optional: true, required: false
@@ -576,13 +725,14 @@ export class MonitoringMetricDescriptor extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       launch_stage: cdktf.stringToTerraform(this._launchStage),
       metric_kind: cdktf.stringToTerraform(this._metricKind),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
       unit: cdktf.stringToTerraform(this._unit),
       value_type: cdktf.stringToTerraform(this._valueType),
-      labels: cdktf.listMapper(monitoringMetricDescriptorLabelsToTerraform)(this._labels),
+      labels: cdktf.listMapper(monitoringMetricDescriptorLabelsToTerraform)(this._labels.internalValue),
       metadata: monitoringMetricDescriptorMetadataToTerraform(this._metadata.internalValue),
       timeouts: monitoringMetricDescriptorTimeoutsToTerraform(this._timeouts.internalValue),
     };

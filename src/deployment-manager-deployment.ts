@@ -35,6 +35,13 @@ actually change the deployment, just how it is updated. Default value: "DELETE" 
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment#id DeploymentManagerDeployment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Unique name for the deployment
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/deployment_manager_deployment#name DeploymentManagerDeployment#name}
@@ -102,6 +109,108 @@ export function deploymentManagerDeploymentLabelsToTerraform(struct?: Deployment
   }
 }
 
+export class DeploymentManagerDeploymentLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DeploymentManagerDeploymentLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeploymentManagerDeploymentLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DeploymentManagerDeploymentLabelsList extends cdktf.ComplexList {
+  public internalValue? : DeploymentManagerDeploymentLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DeploymentManagerDeploymentLabelsOutputReference {
+    return new DeploymentManagerDeploymentLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DeploymentManagerDeploymentTargetConfig {
   /**
   * The full YAML contents of your configuration file.
@@ -193,6 +302,108 @@ export function deploymentManagerDeploymentTargetImportsToTerraform(struct?: Dep
   }
 }
 
+export class DeploymentManagerDeploymentTargetImportsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DeploymentManagerDeploymentTargetImports | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DeploymentManagerDeploymentTargetImports | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._name = value.name;
+    }
+  }
+
+  // content - computed: false, optional: true, required: false
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  public resetContent() {
+    this._content = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class DeploymentManagerDeploymentTargetImportsList extends cdktf.ComplexList {
+  public internalValue? : DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DeploymentManagerDeploymentTargetImportsOutputReference {
+    return new DeploymentManagerDeploymentTargetImportsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DeploymentManagerDeploymentTarget {
   /**
   * config block
@@ -237,9 +448,9 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.config = this._config?.internalValue;
     }
-    if (this._imports !== undefined) {
+    if (this._imports?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.imports = this._imports;
+      internalValueResult.imports = this._imports?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -248,12 +459,12 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
     if (value === undefined) {
       this.isEmptyObject = false;
       this._config.internalValue = undefined;
-      this._imports = undefined;
+      this._imports.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._config.internalValue = value.config;
-      this._imports = value.imports;
+      this._imports.internalValue = value.imports;
     }
   }
 
@@ -271,20 +482,19 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
   }
 
   // imports - computed: false, optional: true, required: false
-  private _imports?: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable; 
+  private _imports = new DeploymentManagerDeploymentTargetImportsList(this, "imports", false);
   public get imports() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('imports');
+    return this._imports;
   }
-  public set imports(value: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable) {
-    this._imports = value;
+  public putImports(value: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable) {
+    this._imports.internalValue = value;
   }
   public resetImports() {
-    this._imports = undefined;
+    this._imports.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get importsInput() {
-    return this._imports;
+    return this._imports.internalValue;
   }
 }
 export interface DeploymentManagerDeploymentTimeouts {
@@ -316,6 +526,7 @@ export function deploymentManagerDeploymentTimeoutsToTerraform(struct?: Deployme
 
 export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -325,7 +536,10 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DeploymentManagerDeploymentTimeouts | undefined {
+  public get internalValue(): DeploymentManagerDeploymentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -343,15 +557,21 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DeploymentManagerDeploymentTimeouts | undefined) {
+  public set internalValue(value: DeploymentManagerDeploymentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -444,10 +664,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
     this._createPolicy = config.createPolicy;
     this._deletePolicy = config.deletePolicy;
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._preview = config.preview;
     this._project = config.project;
-    this._labels = config.labels;
+    this._labels.internalValue = config.labels;
     this._target.internalValue = config.target;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -510,8 +731,19 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // manifest - computed: true, optional: false, required: false
@@ -570,20 +802,19 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable; 
+  private _labels = new DeploymentManagerDeploymentLabelsList(this, "labels", true);
   public get labels() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('labels')));
+    return this._labels;
   }
-  public set labels(value: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable) {
-    this._labels = value;
+  public putLabels(value: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable) {
+    this._labels.internalValue = value;
   }
   public resetLabels() {
-    this._labels = undefined;
+    this._labels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels;
+    return this._labels.internalValue;
   }
 
   // target - computed: false, optional: false, required: true
@@ -624,10 +855,11 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       create_policy: cdktf.stringToTerraform(this._createPolicy),
       delete_policy: cdktf.stringToTerraform(this._deletePolicy),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       preview: cdktf.booleanToTerraform(this._preview),
       project: cdktf.stringToTerraform(this._project),
-      labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform)(this._labels),
+      labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform)(this._labels.internalValue),
       target: deploymentManagerDeploymentTargetToTerraform(this._target.internalValue),
       timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };

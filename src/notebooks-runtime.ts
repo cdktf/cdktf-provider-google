@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface NotebooksRuntimeConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#id NotebooksRuntime#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A reference to the zone where the machine resides.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#location NotebooksRuntime#location}
@@ -89,8 +96,9 @@ export class NotebooksRuntimeMetricsOutputReference extends cdktf.ComplexObject 
   }
 
   // system_metrics - computed: true, optional: false, required: false
-  public systemMetrics(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'system_metrics').lookup(key);
+  private _systemMetrics = new cdktf.StringMap(this, "system_metrics");
+  public get systemMetrics() {
+    return this._systemMetrics;
   }
 }
 
@@ -492,6 +500,7 @@ export function notebooksRuntimeTimeoutsToTerraform(struct?: NotebooksRuntimeTim
 
 export class NotebooksRuntimeTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -501,7 +510,10 @@ export class NotebooksRuntimeTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NotebooksRuntimeTimeouts | undefined {
+  public get internalValue(): NotebooksRuntimeTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -519,15 +531,21 @@ export class NotebooksRuntimeTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NotebooksRuntimeTimeouts | undefined) {
+  public set internalValue(value: NotebooksRuntimeTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -707,6 +725,105 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigContainerImage
   }
 }
 
+export class NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._repository !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._repository = undefined;
+      this._tag = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._repository = value.repository;
+      this._tag = value.tag;
+    }
+  }
+
+  // repository - computed: false, optional: false, required: true
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+}
+
+export class NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesList extends cdktf.ComplexList {
+  public internalValue? : NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference {
+    return new NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NotebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams {
   /**
   * Provide this property when creating the disk.
@@ -1521,9 +1638,9 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
       hasAnyValues = true;
       internalValueResult.acceleratorConfig = this._acceleratorConfig?.internalValue;
     }
-    if (this._containerImages !== undefined) {
+    if (this._containerImages?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.containerImages = this._containerImages;
+      internalValueResult.containerImages = this._containerImages?.internalValue;
     }
     if (this._dataDisk?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1552,7 +1669,7 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
       this._subnet = undefined;
       this._tags = undefined;
       this._acceleratorConfig.internalValue = undefined;
-      this._containerImages = undefined;
+      this._containerImages.internalValue = undefined;
       this._dataDisk.internalValue = undefined;
       this._encryptionConfig.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
@@ -1568,7 +1685,7 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
       this._subnet = value.subnet;
       this._tags = value.tags;
       this._acceleratorConfig.internalValue = value.acceleratorConfig;
-      this._containerImages = value.containerImages;
+      this._containerImages.internalValue = value.containerImages;
       this._dataDisk.internalValue = value.dataDisk;
       this._encryptionConfig.internalValue = value.encryptionConfig;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
@@ -1576,8 +1693,9 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
   }
 
   // guest_attributes - computed: true, optional: false, required: false
-  public guestAttributes(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'guest_attributes').lookup(key);
+  private _guestAttributes = new cdktf.StringMap(this, "guest_attributes");
+  public get guestAttributes() {
+    return this._guestAttributes;
   }
 
   // internal_ip_only - computed: false, optional: true, required: false
@@ -1727,20 +1845,19 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
   }
 
   // container_images - computed: false, optional: true, required: false
-  private _containerImages?: NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages[] | cdktf.IResolvable; 
+  private _containerImages = new NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesList(this, "container_images", false);
   public get containerImages() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('container_images');
+    return this._containerImages;
   }
-  public set containerImages(value: NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages[] | cdktf.IResolvable) {
-    this._containerImages = value;
+  public putContainerImages(value: NotebooksRuntimeVirtualMachineVirtualMachineConfigContainerImages[] | cdktf.IResolvable) {
+    this._containerImages.internalValue = value;
   }
   public resetContainerImages() {
-    this._containerImages = undefined;
+    this._containerImages.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get containerImagesInput() {
-    return this._containerImages;
+    return this._containerImages.internalValue;
   }
 
   // data_disk - computed: false, optional: false, required: true
@@ -1900,6 +2017,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
@@ -1919,8 +2037,19 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2046,6 +2175,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

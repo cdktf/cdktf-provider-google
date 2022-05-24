@@ -56,6 +56,13 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly httpsTriggerUrl?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#id CloudfunctionsFunction#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#ingress_settings CloudfunctionsFunction#ingress_settings}
@@ -405,6 +412,143 @@ export function cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform(stru
   }
 }
 
+export class CloudfunctionsFunctionSecretEnvironmentVariablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudfunctionsFunctionSecretEnvironmentVariables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudfunctionsFunctionSecretEnvironmentVariables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._projectId = undefined;
+      this._secret = undefined;
+      this._version = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._projectId = value.projectId;
+      this._secret = value.secret;
+      this._version = value.version;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: string; 
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+  public set secret(value: string) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class CloudfunctionsFunctionSecretEnvironmentVariablesList extends cdktf.ComplexList {
+  public internalValue? : CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudfunctionsFunctionSecretEnvironmentVariablesOutputReference {
+    return new CloudfunctionsFunctionSecretEnvironmentVariablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudfunctionsFunctionSecretVolumesVersions {
   /**
   * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as "/etc/secrets" and path as "/secret_foo" would mount the secret value file at "/etc/secrets/secret_foo".
@@ -431,6 +575,102 @@ export function cloudfunctionsFunctionSecretVolumesVersionsToTerraform(struct?: 
   }
 }
 
+export class CloudfunctionsFunctionSecretVolumesVersionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudfunctionsFunctionSecretVolumesVersions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudfunctionsFunctionSecretVolumesVersions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._version = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._version = value.version;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class CloudfunctionsFunctionSecretVolumesVersionsList extends cdktf.ComplexList {
+  public internalValue? : CloudfunctionsFunctionSecretVolumesVersions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudfunctionsFunctionSecretVolumesVersionsOutputReference {
+    return new CloudfunctionsFunctionSecretVolumesVersionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudfunctionsFunctionSecretVolumes {
   /**
   * The path within the container to mount the secret volume. For example, setting the mount_path as "/etc/secrets" would mount the secret value files under the "/etc/secrets" directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: "/etc/secrets" Restricted mount paths: "/cloudsql", "/dev/log", "/pod", "/proc", "/var/log".
@@ -471,6 +711,146 @@ export function cloudfunctionsFunctionSecretVolumesToTerraform(struct?: Cloudfun
   }
 }
 
+export class CloudfunctionsFunctionSecretVolumesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudfunctionsFunctionSecretVolumes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._versions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.versions = this._versions?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudfunctionsFunctionSecretVolumes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mountPath = undefined;
+      this._projectId = undefined;
+      this._secret = undefined;
+      this._versions.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mountPath = value.mountPath;
+      this._projectId = value.projectId;
+      this._secret = value.secret;
+      this._versions.internalValue = value.versions;
+    }
+  }
+
+  // mount_path - computed: false, optional: false, required: true
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: string; 
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+  public set secret(value: string) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // versions - computed: false, optional: true, required: false
+  private _versions = new CloudfunctionsFunctionSecretVolumesVersionsList(this, "versions", false);
+  public get versions() {
+    return this._versions;
+  }
+  public putVersions(value: CloudfunctionsFunctionSecretVolumesVersions[] | cdktf.IResolvable) {
+    this._versions.internalValue = value;
+  }
+  public resetVersions() {
+    this._versions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionsInput() {
+    return this._versions.internalValue;
+  }
+}
+
+export class CloudfunctionsFunctionSecretVolumesList extends cdktf.ComplexList {
+  public internalValue? : CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudfunctionsFunctionSecretVolumesOutputReference {
+    return new CloudfunctionsFunctionSecretVolumesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudfunctionsFunctionSourceRepository {
   /**
   * The URL pointing to the hosted repository where the function is defined.
@@ -574,6 +954,7 @@ export function cloudfunctionsFunctionTimeoutsToTerraform(struct?: Cloudfunction
 
 export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -583,7 +964,10 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CloudfunctionsFunctionTimeouts | undefined {
+  public get internalValue(): CloudfunctionsFunctionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -605,16 +989,22 @@ export class CloudfunctionsFunctionTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CloudfunctionsFunctionTimeouts | undefined) {
+  public set internalValue(value: CloudfunctionsFunctionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -729,6 +1119,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._environmentVariables = config.environmentVariables;
     this._httpsTriggerSecurityLevel = config.httpsTriggerSecurityLevel;
     this._httpsTriggerUrl = config.httpsTriggerUrl;
+    this._id = config.id;
     this._ingressSettings = config.ingressSettings;
     this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
@@ -746,8 +1137,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._vpcConnector = config.vpcConnector;
     this._vpcConnectorEgressSettings = config.vpcConnectorEgressSettings;
     this._eventTrigger.internalValue = config.eventTrigger;
-    this._secretEnvironmentVariables = config.secretEnvironmentVariables;
-    this._secretVolumes = config.secretVolumes;
+    this._secretEnvironmentVariables.internalValue = config.secretEnvironmentVariables;
+    this._secretVolumes.internalValue = config.secretVolumes;
     this._sourceRepository.internalValue = config.sourceRepository;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -885,8 +1276,19 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ingress_settings - computed: false, optional: true, required: false
@@ -1156,37 +1558,35 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   }
 
   // secret_environment_variables - computed: false, optional: true, required: false
-  private _secretEnvironmentVariables?: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable; 
+  private _secretEnvironmentVariables = new CloudfunctionsFunctionSecretEnvironmentVariablesList(this, "secret_environment_variables", false);
   public get secretEnvironmentVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_environment_variables');
+    return this._secretEnvironmentVariables;
   }
-  public set secretEnvironmentVariables(value: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable) {
-    this._secretEnvironmentVariables = value;
+  public putSecretEnvironmentVariables(value: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable) {
+    this._secretEnvironmentVariables.internalValue = value;
   }
   public resetSecretEnvironmentVariables() {
-    this._secretEnvironmentVariables = undefined;
+    this._secretEnvironmentVariables.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretEnvironmentVariablesInput() {
-    return this._secretEnvironmentVariables;
+    return this._secretEnvironmentVariables.internalValue;
   }
 
   // secret_volumes - computed: false, optional: true, required: false
-  private _secretVolumes?: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable; 
+  private _secretVolumes = new CloudfunctionsFunctionSecretVolumesList(this, "secret_volumes", false);
   public get secretVolumes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_volumes');
+    return this._secretVolumes;
   }
-  public set secretVolumes(value: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable) {
-    this._secretVolumes = value;
+  public putSecretVolumes(value: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable) {
+    this._secretVolumes.internalValue = value;
   }
   public resetSecretVolumes() {
-    this._secretVolumes = undefined;
+    this._secretVolumes.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretVolumesInput() {
-    return this._secretVolumes;
+    return this._secretVolumes.internalValue;
   }
 
   // source_repository - computed: false, optional: true, required: false
@@ -1235,6 +1635,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       https_trigger_security_level: cdktf.stringToTerraform(this._httpsTriggerSecurityLevel),
       https_trigger_url: cdktf.stringToTerraform(this._httpsTriggerUrl),
+      id: cdktf.stringToTerraform(this._id),
       ingress_settings: cdktf.stringToTerraform(this._ingressSettings),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
@@ -1252,8 +1653,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       vpc_connector: cdktf.stringToTerraform(this._vpcConnector),
       vpc_connector_egress_settings: cdktf.stringToTerraform(this._vpcConnectorEgressSettings),
       event_trigger: cloudfunctionsFunctionEventTriggerToTerraform(this._eventTrigger.internalValue),
-      secret_environment_variables: cdktf.listMapper(cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform)(this._secretEnvironmentVariables),
-      secret_volumes: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesToTerraform)(this._secretVolumes),
+      secret_environment_variables: cdktf.listMapper(cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform)(this._secretEnvironmentVariables.internalValue),
+      secret_volumes: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesToTerraform)(this._secretVolumes.internalValue),
       source_repository: cloudfunctionsFunctionSourceRepositoryToTerraform(this._sourceRepository.internalValue),
       timeouts: cloudfunctionsFunctionTimeoutsToTerraform(this._timeouts.internalValue),
     };

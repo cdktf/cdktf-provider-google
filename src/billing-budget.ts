@@ -20,6 +20,13 @@ export interface BillingBudgetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly displayName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#id BillingBudget#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * all_updates_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#all_updates_rule BillingBudget#all_updates_rule}
@@ -707,6 +714,105 @@ export function billingBudgetThresholdRulesToTerraform(struct?: BillingBudgetThr
   }
 }
 
+export class BillingBudgetThresholdRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BillingBudgetThresholdRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._spendBasis !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spendBasis = this._spendBasis;
+    }
+    if (this._thresholdPercent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.thresholdPercent = this._thresholdPercent;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetThresholdRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._spendBasis = undefined;
+      this._thresholdPercent = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._spendBasis = value.spendBasis;
+      this._thresholdPercent = value.thresholdPercent;
+    }
+  }
+
+  // spend_basis - computed: false, optional: true, required: false
+  private _spendBasis?: string; 
+  public get spendBasis() {
+    return this.getStringAttribute('spend_basis');
+  }
+  public set spendBasis(value: string) {
+    this._spendBasis = value;
+  }
+  public resetSpendBasis() {
+    this._spendBasis = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spendBasisInput() {
+    return this._spendBasis;
+  }
+
+  // threshold_percent - computed: false, optional: false, required: true
+  private _thresholdPercent?: number; 
+  public get thresholdPercent() {
+    return this.getNumberAttribute('threshold_percent');
+  }
+  public set thresholdPercent(value: number) {
+    this._thresholdPercent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdPercentInput() {
+    return this._thresholdPercent;
+  }
+}
+
+export class BillingBudgetThresholdRulesList extends cdktf.ComplexList {
+  public internalValue? : BillingBudgetThresholdRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BillingBudgetThresholdRulesOutputReference {
+    return new BillingBudgetThresholdRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BillingBudgetTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#create BillingBudget#create}
@@ -736,6 +842,7 @@ export function billingBudgetTimeoutsToTerraform(struct?: BillingBudgetTimeoutsO
 
 export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -745,7 +852,10 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BillingBudgetTimeouts | undefined {
+  public get internalValue(): BillingBudgetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -763,15 +873,21 @@ export class BillingBudgetTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BillingBudgetTimeouts | undefined) {
+  public set internalValue(value: BillingBudgetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -863,10 +979,11 @@ export class BillingBudget extends cdktf.TerraformResource {
     });
     this._billingAccount = config.billingAccount;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._allUpdatesRule.internalValue = config.allUpdatesRule;
     this._amount.internalValue = config.amount;
     this._budgetFilter.internalValue = config.budgetFilter;
-    this._thresholdRules = config.thresholdRules;
+    this._thresholdRules.internalValue = config.thresholdRules;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -904,8 +1021,19 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -959,17 +1087,16 @@ export class BillingBudget extends cdktf.TerraformResource {
   }
 
   // threshold_rules - computed: false, optional: false, required: true
-  private _thresholdRules?: BillingBudgetThresholdRules[] | cdktf.IResolvable; 
+  private _thresholdRules = new BillingBudgetThresholdRulesList(this, "threshold_rules", false);
   public get thresholdRules() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('threshold_rules');
+    return this._thresholdRules;
   }
-  public set thresholdRules(value: BillingBudgetThresholdRules[] | cdktf.IResolvable) {
-    this._thresholdRules = value;
+  public putThresholdRules(value: BillingBudgetThresholdRules[] | cdktf.IResolvable) {
+    this._thresholdRules.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdRulesInput() {
-    return this._thresholdRules;
+    return this._thresholdRules.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -996,10 +1123,11 @@ export class BillingBudget extends cdktf.TerraformResource {
     return {
       billing_account: cdktf.stringToTerraform(this._billingAccount),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       all_updates_rule: billingBudgetAllUpdatesRuleToTerraform(this._allUpdatesRule.internalValue),
       amount: billingBudgetAmountToTerraform(this._amount.internalValue),
       budget_filter: billingBudgetBudgetFilterToTerraform(this._budgetFilter.internalValue),
-      threshold_rules: cdktf.listMapper(billingBudgetThresholdRulesToTerraform)(this._thresholdRules),
+      threshold_rules: cdktf.listMapper(billingBudgetThresholdRulesToTerraform)(this._thresholdRules.internalValue),
       timeouts: billingBudgetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

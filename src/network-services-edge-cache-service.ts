@@ -44,6 +44,13 @@ Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attac
   */
   readonly edgeSslCertificates?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#id NetworkServicesEdgeCacheService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Set of label tags associated with the EdgeCache resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#labels NetworkServicesEdgeCacheService#labels}
@@ -245,6 +252,124 @@ export function networkServicesEdgeCacheServiceRoutingHostRuleToTerraform(struct
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingHostRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingHostRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._hosts !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hosts = this._hosts;
+    }
+    if (this._pathMatcher !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathMatcher = this._pathMatcher;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingHostRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._hosts = undefined;
+      this._pathMatcher = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._hosts = value.hosts;
+      this._pathMatcher = value.pathMatcher;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // hosts - computed: false, optional: false, required: true
+  private _hosts?: string[]; 
+  public get hosts() {
+    return this.getListAttribute('hosts');
+  }
+  public set hosts(value: string[]) {
+    this._hosts = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostsInput() {
+    return this._hosts;
+  }
+
+  // path_matcher - computed: false, optional: false, required: true
+  private _pathMatcher?: string; 
+  public get pathMatcher() {
+    return this.getStringAttribute('path_matcher');
+  }
+  public set pathMatcher(value: string) {
+    this._pathMatcher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathMatcherInput() {
+    return this._pathMatcher;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingHostRuleList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingHostRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingHostRuleOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingHostRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd {
   /**
   * The name of the header to add.
@@ -278,6 +403,124 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeader
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: true, optional: true, required: false
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  public resetReplace() {
+    this._replace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove {
   /**
   * The name of the header to remove.
@@ -297,6 +540,83 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeader
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd {
   /**
   * The name of the header to add.
@@ -330,6 +650,124 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeader
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: true, optional: true, required: false
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  public resetReplace() {
+    this._replace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove {
   /**
   * Headers to remove from the response prior to sending it back to the client.
@@ -351,6 +789,83 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeader
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
   /**
   * request_header_to_add block
@@ -405,21 +920,21 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeaderToAdd !== undefined) {
+    if (this._requestHeaderToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeaderToAdd = this._requestHeaderToAdd;
+      internalValueResult.requestHeaderToAdd = this._requestHeaderToAdd?.internalValue;
     }
-    if (this._requestHeaderToRemove !== undefined) {
+    if (this._requestHeaderToRemove?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeaderToRemove = this._requestHeaderToRemove;
+      internalValueResult.requestHeaderToRemove = this._requestHeaderToRemove?.internalValue;
     }
-    if (this._responseHeaderToAdd !== undefined) {
+    if (this._responseHeaderToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.responseHeaderToAdd = this._responseHeaderToAdd;
+      internalValueResult.responseHeaderToAdd = this._responseHeaderToAdd?.internalValue;
     }
-    if (this._responseHeaderToRemove !== undefined) {
+    if (this._responseHeaderToRemove?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.responseHeaderToRemove = this._responseHeaderToRemove;
+      internalValueResult.responseHeaderToRemove = this._responseHeaderToRemove?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -427,86 +942,82 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAct
   public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._requestHeaderToAdd = undefined;
-      this._requestHeaderToRemove = undefined;
-      this._responseHeaderToAdd = undefined;
-      this._responseHeaderToRemove = undefined;
+      this._requestHeaderToAdd.internalValue = undefined;
+      this._requestHeaderToRemove.internalValue = undefined;
+      this._responseHeaderToAdd.internalValue = undefined;
+      this._responseHeaderToRemove.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._requestHeaderToAdd = value.requestHeaderToAdd;
-      this._requestHeaderToRemove = value.requestHeaderToRemove;
-      this._responseHeaderToAdd = value.responseHeaderToAdd;
-      this._responseHeaderToRemove = value.responseHeaderToRemove;
+      this._requestHeaderToAdd.internalValue = value.requestHeaderToAdd;
+      this._requestHeaderToRemove.internalValue = value.requestHeaderToRemove;
+      this._responseHeaderToAdd.internalValue = value.responseHeaderToAdd;
+      this._responseHeaderToRemove.internalValue = value.responseHeaderToRemove;
     }
   }
 
   // request_header_to_add - computed: false, optional: true, required: false
-  private _requestHeaderToAdd?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[] | cdktf.IResolvable; 
+  private _requestHeaderToAdd = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddList(this, "request_header_to_add", false);
   public get requestHeaderToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_header_to_add');
+    return this._requestHeaderToAdd;
   }
-  public set requestHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[] | cdktf.IResolvable) {
-    this._requestHeaderToAdd = value;
+  public putRequestHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd[] | cdktf.IResolvable) {
+    this._requestHeaderToAdd.internalValue = value;
   }
   public resetRequestHeaderToAdd() {
-    this._requestHeaderToAdd = undefined;
+    this._requestHeaderToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderToAddInput() {
-    return this._requestHeaderToAdd;
+    return this._requestHeaderToAdd.internalValue;
   }
 
   // request_header_to_remove - computed: false, optional: true, required: false
-  private _requestHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[] | cdktf.IResolvable; 
+  private _requestHeaderToRemove = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveList(this, "request_header_to_remove", false);
   public get requestHeaderToRemove() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_header_to_remove');
+    return this._requestHeaderToRemove;
   }
-  public set requestHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[] | cdktf.IResolvable) {
-    this._requestHeaderToRemove = value;
+  public putRequestHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove[] | cdktf.IResolvable) {
+    this._requestHeaderToRemove.internalValue = value;
   }
   public resetRequestHeaderToRemove() {
-    this._requestHeaderToRemove = undefined;
+    this._requestHeaderToRemove.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderToRemoveInput() {
-    return this._requestHeaderToRemove;
+    return this._requestHeaderToRemove.internalValue;
   }
 
   // response_header_to_add - computed: false, optional: true, required: false
-  private _responseHeaderToAdd?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[] | cdktf.IResolvable; 
+  private _responseHeaderToAdd = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddList(this, "response_header_to_add", false);
   public get responseHeaderToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_header_to_add');
+    return this._responseHeaderToAdd;
   }
-  public set responseHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[] | cdktf.IResolvable) {
-    this._responseHeaderToAdd = value;
+  public putResponseHeaderToAdd(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd[] | cdktf.IResolvable) {
+    this._responseHeaderToAdd.internalValue = value;
   }
   public resetResponseHeaderToAdd() {
-    this._responseHeaderToAdd = undefined;
+    this._responseHeaderToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeaderToAddInput() {
-    return this._responseHeaderToAdd;
+    return this._responseHeaderToAdd.internalValue;
   }
 
   // response_header_to_remove - computed: false, optional: true, required: false
-  private _responseHeaderToRemove?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[] | cdktf.IResolvable; 
+  private _responseHeaderToRemove = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveList(this, "response_header_to_remove", false);
   public get responseHeaderToRemove() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_header_to_remove');
+    return this._responseHeaderToRemove;
   }
-  public set responseHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[] | cdktf.IResolvable) {
-    this._responseHeaderToRemove = value;
+  public putResponseHeaderToRemove(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove[] | cdktf.IResolvable) {
+    this._responseHeaderToRemove.internalValue = value;
   }
   public resetResponseHeaderToRemove() {
-    this._responseHeaderToRemove = undefined;
+    this._responseHeaderToRemove.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeaderToRemoveInput() {
-    return this._responseHeaderToRemove;
+    return this._responseHeaderToRemove.internalValue;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch {
@@ -564,6 +1075,193 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchR
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exactMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exactMatch = this._exactMatch;
+    }
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._invertMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.invertMatch = this._invertMatch;
+    }
+    if (this._prefixMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefixMatch = this._prefixMatch;
+    }
+    if (this._presentMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.presentMatch = this._presentMatch;
+    }
+    if (this._suffixMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.suffixMatch = this._suffixMatch;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exactMatch = undefined;
+      this._headerName = undefined;
+      this._invertMatch = undefined;
+      this._prefixMatch = undefined;
+      this._presentMatch = undefined;
+      this._suffixMatch = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exactMatch = value.exactMatch;
+      this._headerName = value.headerName;
+      this._invertMatch = value.invertMatch;
+      this._prefixMatch = value.prefixMatch;
+      this._presentMatch = value.presentMatch;
+      this._suffixMatch = value.suffixMatch;
+    }
+  }
+
+  // exact_match - computed: false, optional: true, required: false
+  private _exactMatch?: string; 
+  public get exactMatch() {
+    return this.getStringAttribute('exact_match');
+  }
+  public set exactMatch(value: string) {
+    this._exactMatch = value;
+  }
+  public resetExactMatch() {
+    this._exactMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exactMatchInput() {
+    return this._exactMatch;
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // invert_match - computed: true, optional: true, required: false
+  private _invertMatch?: boolean | cdktf.IResolvable; 
+  public get invertMatch() {
+    return this.getBooleanAttribute('invert_match');
+  }
+  public set invertMatch(value: boolean | cdktf.IResolvable) {
+    this._invertMatch = value;
+  }
+  public resetInvertMatch() {
+    this._invertMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertMatchInput() {
+    return this._invertMatch;
+  }
+
+  // prefix_match - computed: false, optional: true, required: false
+  private _prefixMatch?: string; 
+  public get prefixMatch() {
+    return this.getStringAttribute('prefix_match');
+  }
+  public set prefixMatch(value: string) {
+    this._prefixMatch = value;
+  }
+  public resetPrefixMatch() {
+    this._prefixMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixMatchInput() {
+    return this._prefixMatch;
+  }
+
+  // present_match - computed: false, optional: true, required: false
+  private _presentMatch?: boolean | cdktf.IResolvable; 
+  public get presentMatch() {
+    return this.getBooleanAttribute('present_match');
+  }
+  public set presentMatch(value: boolean | cdktf.IResolvable) {
+    this._presentMatch = value;
+  }
+  public resetPresentMatch() {
+    this._presentMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get presentMatchInput() {
+    return this._presentMatch;
+  }
+
+  // suffix_match - computed: false, optional: true, required: false
+  private _suffixMatch?: string; 
+  public get suffixMatch() {
+    return this.getStringAttribute('suffix_match');
+  }
+  public set suffixMatch(value: string) {
+    this._suffixMatch = value;
+  }
+  public resetSuffixMatch() {
+    this._suffixMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suffixMatchInput() {
+    return this._suffixMatch;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
   /**
   * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
@@ -597,6 +1295,127 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchR
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exactMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exactMatch = this._exactMatch;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._presentMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.presentMatch = this._presentMatch;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exactMatch = undefined;
+      this._name = undefined;
+      this._presentMatch = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exactMatch = value.exactMatch;
+      this._name = value.name;
+      this._presentMatch = value.presentMatch;
+    }
+  }
+
+  // exact_match - computed: false, optional: true, required: false
+  private _exactMatch?: string; 
+  public get exactMatch() {
+    return this.getStringAttribute('exact_match');
+  }
+  public set exactMatch(value: string) {
+    this._exactMatch = value;
+  }
+  public resetExactMatch() {
+    this._exactMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exactMatchInput() {
+    return this._exactMatch;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // present_match - computed: false, optional: true, required: false
+  private _presentMatch?: boolean | cdktf.IResolvable; 
+  public get presentMatch() {
+    return this.getBooleanAttribute('present_match');
+  }
+  public set presentMatch(value: boolean | cdktf.IResolvable) {
+    this._presentMatch = value;
+  }
+  public resetPresentMatch() {
+    this._presentMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get presentMatchInput() {
+    return this._presentMatch;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
   /**
   * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
@@ -659,6 +1478,196 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchR
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fullPathMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fullPathMatch = this._fullPathMatch;
+    }
+    if (this._ignoreCase !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreCase = this._ignoreCase;
+    }
+    if (this._pathTemplateMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathTemplateMatch = this._pathTemplateMatch;
+    }
+    if (this._prefixMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefixMatch = this._prefixMatch;
+    }
+    if (this._headerMatch?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerMatch = this._headerMatch?.internalValue;
+    }
+    if (this._queryParameterMatch?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryParameterMatch = this._queryParameterMatch?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fullPathMatch = undefined;
+      this._ignoreCase = undefined;
+      this._pathTemplateMatch = undefined;
+      this._prefixMatch = undefined;
+      this._headerMatch.internalValue = undefined;
+      this._queryParameterMatch.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fullPathMatch = value.fullPathMatch;
+      this._ignoreCase = value.ignoreCase;
+      this._pathTemplateMatch = value.pathTemplateMatch;
+      this._prefixMatch = value.prefixMatch;
+      this._headerMatch.internalValue = value.headerMatch;
+      this._queryParameterMatch.internalValue = value.queryParameterMatch;
+    }
+  }
+
+  // full_path_match - computed: false, optional: true, required: false
+  private _fullPathMatch?: string; 
+  public get fullPathMatch() {
+    return this.getStringAttribute('full_path_match');
+  }
+  public set fullPathMatch(value: string) {
+    this._fullPathMatch = value;
+  }
+  public resetFullPathMatch() {
+    this._fullPathMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fullPathMatchInput() {
+    return this._fullPathMatch;
+  }
+
+  // ignore_case - computed: true, optional: true, required: false
+  private _ignoreCase?: boolean | cdktf.IResolvable; 
+  public get ignoreCase() {
+    return this.getBooleanAttribute('ignore_case');
+  }
+  public set ignoreCase(value: boolean | cdktf.IResolvable) {
+    this._ignoreCase = value;
+  }
+  public resetIgnoreCase() {
+    this._ignoreCase = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreCaseInput() {
+    return this._ignoreCase;
+  }
+
+  // path_template_match - computed: false, optional: true, required: false
+  private _pathTemplateMatch?: string; 
+  public get pathTemplateMatch() {
+    return this.getStringAttribute('path_template_match');
+  }
+  public set pathTemplateMatch(value: string) {
+    this._pathTemplateMatch = value;
+  }
+  public resetPathTemplateMatch() {
+    this._pathTemplateMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathTemplateMatchInput() {
+    return this._pathTemplateMatch;
+  }
+
+  // prefix_match - computed: false, optional: true, required: false
+  private _prefixMatch?: string; 
+  public get prefixMatch() {
+    return this.getStringAttribute('prefix_match');
+  }
+  public set prefixMatch(value: string) {
+    this._prefixMatch = value;
+  }
+  public resetPrefixMatch() {
+    this._prefixMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixMatchInput() {
+    return this._prefixMatch;
+  }
+
+  // header_match - computed: false, optional: true, required: false
+  private _headerMatch = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchList(this, "header_match", false);
+  public get headerMatch() {
+    return this._headerMatch;
+  }
+  public putHeaderMatch(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch[] | cdktf.IResolvable) {
+    this._headerMatch.internalValue = value;
+  }
+  public resetHeaderMatch() {
+    this._headerMatch.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerMatchInput() {
+    return this._headerMatch.internalValue;
+  }
+
+  // query_parameter_match - computed: false, optional: true, required: false
+  private _queryParameterMatch = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchList(this, "query_parameter_match", false);
+  public get queryParameterMatch() {
+    return this._queryParameterMatch;
+  }
+  public putQueryParameterMatch(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch[] | cdktf.IResolvable) {
+    this._queryParameterMatch.internalValue = value;
+  }
+  public resetQueryParameterMatch() {
+    this._queryParameterMatch.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryParameterMatchInput() {
+    return this._queryParameterMatch.internalValue;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
   /**
   * If true, requests to different hosts will be cached separately.
@@ -2088,6 +3097,212 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleToTerr
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._origin !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.origin = this._origin;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._headerAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerAction = this._headerAction?.internalValue;
+    }
+    if (this._matchRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchRule = this._matchRule?.internalValue;
+    }
+    if (this._routeAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routeAction = this._routeAction?.internalValue;
+    }
+    if (this._urlRedirect?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRedirect = this._urlRedirect?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._origin = undefined;
+      this._priority = undefined;
+      this._headerAction.internalValue = undefined;
+      this._matchRule.internalValue = undefined;
+      this._routeAction.internalValue = undefined;
+      this._urlRedirect.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._origin = value.origin;
+      this._priority = value.priority;
+      this._headerAction.internalValue = value.headerAction;
+      this._matchRule.internalValue = value.matchRule;
+      this._routeAction.internalValue = value.routeAction;
+      this._urlRedirect.internalValue = value.urlRedirect;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // origin - computed: false, optional: true, required: false
+  private _origin?: string; 
+  public get origin() {
+    return this.getStringAttribute('origin');
+  }
+  public set origin(value: string) {
+    this._origin = value;
+  }
+  public resetOrigin() {
+    this._origin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originInput() {
+    return this._origin;
+  }
+
+  // priority - computed: false, optional: false, required: true
+  private _priority?: string; 
+  public get priority() {
+    return this.getStringAttribute('priority');
+  }
+  public set priority(value: string) {
+    this._priority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // header_action - computed: false, optional: true, required: false
+  private _headerAction = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionOutputReference(this, "header_action");
+  public get headerAction() {
+    return this._headerAction;
+  }
+  public putHeaderAction(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction) {
+    this._headerAction.internalValue = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction.internalValue;
+  }
+
+  // match_rule - computed: false, optional: false, required: true
+  private _matchRule = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleList(this, "match_rule", false);
+  public get matchRule() {
+    return this._matchRule;
+  }
+  public putMatchRule(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule[] | cdktf.IResolvable) {
+    this._matchRule.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchRuleInput() {
+    return this._matchRule.internalValue;
+  }
+
+  // route_action - computed: false, optional: true, required: false
+  private _routeAction = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionOutputReference(this, "route_action");
+  public get routeAction() {
+    return this._routeAction;
+  }
+  public putRouteAction(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction) {
+    this._routeAction.internalValue = value;
+  }
+  public resetRouteAction() {
+    this._routeAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeActionInput() {
+    return this._routeAction.internalValue;
+  }
+
+  // url_redirect - computed: false, optional: true, required: false
+  private _urlRedirect = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectOutputReference(this, "url_redirect");
+  public get urlRedirect() {
+    return this._urlRedirect;
+  }
+  public putUrlRedirect(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect) {
+    this._urlRedirect.internalValue = value;
+  }
+  public resetUrlRedirect() {
+    this._urlRedirect.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRedirectInput() {
+    return this._urlRedirect.internalValue;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcher {
   /**
   * A human-readable description of the resource.
@@ -2121,6 +3336,124 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherToTerraform(str
   }
 }
 
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcher | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._routeRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routeRule = this._routeRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcher | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._name = undefined;
+      this._routeRule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._name = value.name;
+      this._routeRule.internalValue = value.routeRule;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // route_rule - computed: false, optional: false, required: true
+  private _routeRule = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleList(this, "route_rule", false);
+  public get routeRule() {
+    return this._routeRule;
+  }
+  public putRouteRule(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRule[] | cdktf.IResolvable) {
+    this._routeRule.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeRuleInput() {
+    return this._routeRule.internalValue;
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheServiceRoutingPathMatcher[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheServiceRoutingPathMatcherOutputReference {
+    return new NetworkServicesEdgeCacheServiceRoutingPathMatcherOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRouting {
   /**
   * host_rule block
@@ -2161,13 +3494,13 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
   public get internalValue(): NetworkServicesEdgeCacheServiceRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostRule !== undefined) {
+    if (this._hostRule?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.hostRule = this._hostRule;
+      internalValueResult.hostRule = this._hostRule?.internalValue;
     }
-    if (this._pathMatcher !== undefined) {
+    if (this._pathMatcher?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.pathMatcher = this._pathMatcher;
+      internalValueResult.pathMatcher = this._pathMatcher?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2175,42 +3508,40 @@ export class NetworkServicesEdgeCacheServiceRoutingOutputReference extends cdktf
   public set internalValue(value: NetworkServicesEdgeCacheServiceRouting | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._hostRule = undefined;
-      this._pathMatcher = undefined;
+      this._hostRule.internalValue = undefined;
+      this._pathMatcher.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._hostRule = value.hostRule;
-      this._pathMatcher = value.pathMatcher;
+      this._hostRule.internalValue = value.hostRule;
+      this._pathMatcher.internalValue = value.pathMatcher;
     }
   }
 
   // host_rule - computed: false, optional: false, required: true
-  private _hostRule?: NetworkServicesEdgeCacheServiceRoutingHostRule[] | cdktf.IResolvable; 
+  private _hostRule = new NetworkServicesEdgeCacheServiceRoutingHostRuleList(this, "host_rule", false);
   public get hostRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('host_rule');
+    return this._hostRule;
   }
-  public set hostRule(value: NetworkServicesEdgeCacheServiceRoutingHostRule[] | cdktf.IResolvable) {
-    this._hostRule = value;
+  public putHostRule(value: NetworkServicesEdgeCacheServiceRoutingHostRule[] | cdktf.IResolvable) {
+    this._hostRule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get hostRuleInput() {
-    return this._hostRule;
+    return this._hostRule.internalValue;
   }
 
   // path_matcher - computed: false, optional: false, required: true
-  private _pathMatcher?: NetworkServicesEdgeCacheServiceRoutingPathMatcher[] | cdktf.IResolvable; 
+  private _pathMatcher = new NetworkServicesEdgeCacheServiceRoutingPathMatcherList(this, "path_matcher", false);
   public get pathMatcher() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('path_matcher');
+    return this._pathMatcher;
   }
-  public set pathMatcher(value: NetworkServicesEdgeCacheServiceRoutingPathMatcher[] | cdktf.IResolvable) {
-    this._pathMatcher = value;
+  public putPathMatcher(value: NetworkServicesEdgeCacheServiceRoutingPathMatcher[] | cdktf.IResolvable) {
+    this._pathMatcher.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get pathMatcherInput() {
-    return this._pathMatcher;
+    return this._pathMatcher.internalValue;
   }
 }
 export interface NetworkServicesEdgeCacheServiceTimeouts {
@@ -2242,6 +3573,7 @@ export function networkServicesEdgeCacheServiceTimeoutsToTerraform(struct?: Netw
 
 export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2251,7 +3583,10 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NetworkServicesEdgeCacheServiceTimeouts | undefined {
+  public get internalValue(): NetworkServicesEdgeCacheServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2269,15 +3604,21 @@ export class NetworkServicesEdgeCacheServiceTimeoutsOutputReference extends cdkt
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkServicesEdgeCacheServiceTimeouts | undefined) {
+  public set internalValue(value: NetworkServicesEdgeCacheServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -2372,6 +3713,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
     this._disableQuic = config.disableQuic;
     this._edgeSecurityPolicy = config.edgeSecurityPolicy;
     this._edgeSslCertificates = config.edgeSslCertificates;
+    this._id = config.id;
     this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
@@ -2467,8 +3809,19 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ipv4_addresses - computed: true, optional: false, required: false
@@ -2614,6 +3967,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
       disable_quic: cdktf.booleanToTerraform(this._disableQuic),
       edge_security_policy: cdktf.stringToTerraform(this._edgeSecurityPolicy),
       edge_ssl_certificates: cdktf.listMapper(cdktf.stringToTerraform)(this._edgeSslCertificates),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

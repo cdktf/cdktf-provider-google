@@ -44,6 +44,13 @@ export interface ComputeFirewallPolicyRuleConfig extends cdktf.TerraformMetaArgu
   */
   readonly firewallPolicy: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_rule#id ComputeFirewallPolicyRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_rule#priority ComputeFirewallPolicyRule#priority}
@@ -100,6 +107,105 @@ export function computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform(struct?: 
   }
 }
 
+export class ComputeFirewallPolicyRuleMatchLayer4ConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeFirewallPolicyRuleMatchLayer4Configs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ipProtocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipProtocol = this._ipProtocol;
+    }
+    if (this._ports !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ports = this._ports;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeFirewallPolicyRuleMatchLayer4Configs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ipProtocol = undefined;
+      this._ports = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ipProtocol = value.ipProtocol;
+      this._ports = value.ports;
+    }
+  }
+
+  // ip_protocol - computed: false, optional: false, required: true
+  private _ipProtocol?: string; 
+  public get ipProtocol() {
+    return this.getStringAttribute('ip_protocol');
+  }
+  public set ipProtocol(value: string) {
+    this._ipProtocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipProtocolInput() {
+    return this._ipProtocol;
+  }
+
+  // ports - computed: false, optional: true, required: false
+  private _ports?: string[]; 
+  public get ports() {
+    return this.getListAttribute('ports');
+  }
+  public set ports(value: string[]) {
+    this._ports = value;
+  }
+  public resetPorts() {
+    this._ports = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portsInput() {
+    return this._ports;
+  }
+}
+
+export class ComputeFirewallPolicyRuleMatchLayer4ConfigsList extends cdktf.ComplexList {
+  public internalValue? : ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeFirewallPolicyRuleMatchLayer4ConfigsOutputReference {
+    return new ComputeFirewallPolicyRuleMatchLayer4ConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeFirewallPolicyRuleMatch {
   /**
   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
@@ -155,9 +261,9 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.srcIpRanges = this._srcIpRanges;
     }
-    if (this._layer4Configs !== undefined) {
+    if (this._layer4Configs?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.layer4Configs = this._layer4Configs;
+      internalValueResult.layer4Configs = this._layer4Configs?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -167,13 +273,13 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
       this.isEmptyObject = false;
       this._destIpRanges = undefined;
       this._srcIpRanges = undefined;
-      this._layer4Configs = undefined;
+      this._layer4Configs.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._destIpRanges = value.destIpRanges;
       this._srcIpRanges = value.srcIpRanges;
-      this._layer4Configs = value.layer4Configs;
+      this._layer4Configs.internalValue = value.layer4Configs;
     }
   }
 
@@ -210,17 +316,16 @@ export class ComputeFirewallPolicyRuleMatchOutputReference extends cdktf.Complex
   }
 
   // layer4_configs - computed: false, optional: false, required: true
-  private _layer4Configs?: ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable; 
+  private _layer4Configs = new ComputeFirewallPolicyRuleMatchLayer4ConfigsList(this, "layer4_configs", false);
   public get layer4Configs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('layer4_configs');
+    return this._layer4Configs;
   }
-  public set layer4Configs(value: ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable) {
-    this._layer4Configs = value;
+  public putLayer4Configs(value: ComputeFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable) {
+    this._layer4Configs.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get layer4ConfigsInput() {
-    return this._layer4Configs;
+    return this._layer4Configs.internalValue;
   }
 }
 export interface ComputeFirewallPolicyRuleTimeouts {
@@ -252,6 +357,7 @@ export function computeFirewallPolicyRuleTimeoutsToTerraform(struct?: ComputeFir
 
 export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -261,7 +367,10 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeFirewallPolicyRuleTimeouts | undefined {
+  public get internalValue(): ComputeFirewallPolicyRuleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -279,15 +388,21 @@ export class ComputeFirewallPolicyRuleTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeFirewallPolicyRuleTimeouts | undefined) {
+  public set internalValue(value: ComputeFirewallPolicyRuleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -383,6 +498,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
     this._disabled = config.disabled;
     this._enableLogging = config.enableLogging;
     this._firewallPolicy = config.firewallPolicy;
+    this._id = config.id;
     this._priority = config.priority;
     this._targetResources = config.targetResources;
     this._targetServiceAccounts = config.targetServiceAccounts;
@@ -482,8 +598,19 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kind - computed: true, optional: false, required: false
@@ -582,6 +709,7 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
       disabled: cdktf.booleanToTerraform(this._disabled),
       enable_logging: cdktf.booleanToTerraform(this._enableLogging),
       firewall_policy: cdktf.stringToTerraform(this._firewallPolicy),
+      id: cdktf.stringToTerraform(this._id),
       priority: cdktf.numberToTerraform(this._priority),
       target_resources: cdktf.listMapper(cdktf.stringToTerraform)(this._targetResources),
       target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._targetServiceAccounts),

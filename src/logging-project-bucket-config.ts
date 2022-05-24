@@ -20,6 +20,13 @@ export interface LoggingProjectBucketConfigConfig extends cdktf.TerraformMetaArg
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config#id LoggingProjectBucketConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location of the bucket.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config#location LoggingProjectBucketConfig#location}
@@ -75,6 +82,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
     });
     this._bucketId = config.bucketId;
     this._description = config.description;
+    this._id = config.id;
     this._location = config.location;
     this._project = config.project;
     this._retentionDays = config.retentionDays;
@@ -114,8 +122,19 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // lifecycle_state - computed: true, optional: false, required: false
@@ -178,6 +197,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
     return {
       bucket_id: cdktf.stringToTerraform(this._bucketId),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       retention_days: cdktf.numberToTerraform(this._retentionDays),

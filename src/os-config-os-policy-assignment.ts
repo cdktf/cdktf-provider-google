@@ -14,6 +14,13 @@ export interface OsConfigOsPolicyAssignmentConfig extends cdktf.TerraformMetaArg
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location for the resource
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#location OsConfigOsPolicyAssignment#location}
@@ -75,6 +82,86 @@ export function osConfigOsPolicyAssignmentInstanceFilterExclusionLabelsToTerrafo
   }
 }
 
+export class OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._labels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._labels = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._labels = value.labels;
+    }
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference {
+    return new OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels {
   /**
   * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
@@ -94,6 +181,86 @@ export function osConfigOsPolicyAssignmentInstanceFilterInclusionLabelsToTerrafo
   }
 }
 
+export class OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._labels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._labels = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._labels = value.labels;
+    }
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference {
+    return new OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentInstanceFilterInventories {
   /**
   * Required. The OS short name
@@ -120,6 +287,105 @@ export function osConfigOsPolicyAssignmentInstanceFilterInventoriesToTerraform(s
   }
 }
 
+export class OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentInstanceFilterInventories | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._osShortName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.osShortName = this._osShortName;
+    }
+    if (this._osVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.osVersion = this._osVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentInstanceFilterInventories | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._osShortName = undefined;
+      this._osVersion = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._osShortName = value.osShortName;
+      this._osVersion = value.osVersion;
+    }
+  }
+
+  // os_short_name - computed: false, optional: false, required: true
+  private _osShortName?: string; 
+  public get osShortName() {
+    return this.getStringAttribute('os_short_name');
+  }
+  public set osShortName(value: string) {
+    this._osShortName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osShortNameInput() {
+    return this._osShortName;
+  }
+
+  // os_version - computed: false, optional: true, required: false
+  private _osVersion?: string; 
+  public get osVersion() {
+    return this.getStringAttribute('os_version');
+  }
+  public set osVersion(value: string) {
+    this._osVersion = value;
+  }
+  public resetOsVersion() {
+    this._osVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osVersionInput() {
+    return this._osVersion;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentInstanceFilterInventoriesList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentInstanceFilterInventories[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference {
+    return new OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentInstanceFilter {
   /**
   * Target all VMs in the project. If true, no other criteria is permitted.
@@ -178,17 +444,17 @@ export class OsConfigOsPolicyAssignmentInstanceFilterOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.all = this._all;
     }
-    if (this._exclusionLabels !== undefined) {
+    if (this._exclusionLabels?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.exclusionLabels = this._exclusionLabels;
+      internalValueResult.exclusionLabels = this._exclusionLabels?.internalValue;
     }
-    if (this._inclusionLabels !== undefined) {
+    if (this._inclusionLabels?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.inclusionLabels = this._inclusionLabels;
+      internalValueResult.inclusionLabels = this._inclusionLabels?.internalValue;
     }
-    if (this._inventories !== undefined) {
+    if (this._inventories?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.inventories = this._inventories;
+      internalValueResult.inventories = this._inventories?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -197,16 +463,16 @@ export class OsConfigOsPolicyAssignmentInstanceFilterOutputReference extends cdk
     if (value === undefined) {
       this.isEmptyObject = false;
       this._all = undefined;
-      this._exclusionLabels = undefined;
-      this._inclusionLabels = undefined;
-      this._inventories = undefined;
+      this._exclusionLabels.internalValue = undefined;
+      this._inclusionLabels.internalValue = undefined;
+      this._inventories.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._all = value.all;
-      this._exclusionLabels = value.exclusionLabels;
-      this._inclusionLabels = value.inclusionLabels;
-      this._inventories = value.inventories;
+      this._exclusionLabels.internalValue = value.exclusionLabels;
+      this._inclusionLabels.internalValue = value.inclusionLabels;
+      this._inventories.internalValue = value.inventories;
     }
   }
 
@@ -227,54 +493,51 @@ export class OsConfigOsPolicyAssignmentInstanceFilterOutputReference extends cdk
   }
 
   // exclusion_labels - computed: false, optional: true, required: false
-  private _exclusionLabels?: OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels[] | cdktf.IResolvable; 
+  private _exclusionLabels = new OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsList(this, "exclusion_labels", false);
   public get exclusionLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exclusion_labels');
+    return this._exclusionLabels;
   }
-  public set exclusionLabels(value: OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels[] | cdktf.IResolvable) {
-    this._exclusionLabels = value;
+  public putExclusionLabels(value: OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels[] | cdktf.IResolvable) {
+    this._exclusionLabels.internalValue = value;
   }
   public resetExclusionLabels() {
-    this._exclusionLabels = undefined;
+    this._exclusionLabels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get exclusionLabelsInput() {
-    return this._exclusionLabels;
+    return this._exclusionLabels.internalValue;
   }
 
   // inclusion_labels - computed: false, optional: true, required: false
-  private _inclusionLabels?: OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels[] | cdktf.IResolvable; 
+  private _inclusionLabels = new OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsList(this, "inclusion_labels", false);
   public get inclusionLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('inclusion_labels');
+    return this._inclusionLabels;
   }
-  public set inclusionLabels(value: OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels[] | cdktf.IResolvable) {
-    this._inclusionLabels = value;
+  public putInclusionLabels(value: OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels[] | cdktf.IResolvable) {
+    this._inclusionLabels.internalValue = value;
   }
   public resetInclusionLabels() {
-    this._inclusionLabels = undefined;
+    this._inclusionLabels.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inclusionLabelsInput() {
-    return this._inclusionLabels;
+    return this._inclusionLabels.internalValue;
   }
 
   // inventories - computed: false, optional: true, required: false
-  private _inventories?: OsConfigOsPolicyAssignmentInstanceFilterInventories[] | cdktf.IResolvable; 
+  private _inventories = new OsConfigOsPolicyAssignmentInstanceFilterInventoriesList(this, "inventories", false);
   public get inventories() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('inventories');
+    return this._inventories;
   }
-  public set inventories(value: OsConfigOsPolicyAssignmentInstanceFilterInventories[] | cdktf.IResolvable) {
-    this._inventories = value;
+  public putInventories(value: OsConfigOsPolicyAssignmentInstanceFilterInventories[] | cdktf.IResolvable) {
+    this._inventories.internalValue = value;
   }
   public resetInventories() {
-    this._inventories = undefined;
+    this._inventories.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inventoriesInput() {
-    return this._inventories;
+    return this._inventories.internalValue;
   }
 }
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters {
@@ -303,6 +566,105 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilte
   }
 }
 
+export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._osShortName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.osShortName = this._osShortName;
+    }
+    if (this._osVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.osVersion = this._osVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._osShortName = undefined;
+      this._osVersion = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._osShortName = value.osShortName;
+      this._osVersion = value.osVersion;
+    }
+  }
+
+  // os_short_name - computed: false, optional: false, required: true
+  private _osShortName?: string; 
+  public get osShortName() {
+    return this.getStringAttribute('os_short_name');
+  }
+  public set osShortName(value: string) {
+    this._osShortName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osShortNameInput() {
+    return this._osShortName;
+  }
+
+  // os_version - computed: false, optional: true, required: false
+  private _osVersion?: string; 
+  public get osVersion() {
+    return this.getStringAttribute('os_version');
+  }
+  public set osVersion(value: string) {
+    this._osVersion = value;
+  }
+  public resetOsVersion() {
+    this._osVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osVersionInput() {
+    return this._osVersion;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference {
+    return new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs {
   /**
   * Required. Bucket of the Cloud Storage object.
@@ -4191,6 +4553,9 @@ export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepo
   * Required. A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
 }
@@ -4339,6 +4704,9 @@ export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepo
   * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
 }
@@ -4623,6 +4991,9 @@ export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources {
   * Required. The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -4665,6 +5036,171 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesToTer
   }
 }
 
+export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._exec?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exec = this._exec?.internalValue;
+    }
+    if (this._file?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.file = this._file?.internalValue;
+    }
+    if (this._pkg?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pkg = this._pkg?.internalValue;
+    }
+    if (this._repository?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._exec.internalValue = undefined;
+      this._file.internalValue = undefined;
+      this._pkg.internalValue = undefined;
+      this._repository.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._exec.internalValue = value.exec;
+      this._file.internalValue = value.file;
+      this._pkg.internalValue = value.pkg;
+      this._repository.internalValue = value.repository;
+    }
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // exec - computed: false, optional: true, required: false
+  private _exec = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecOutputReference(this, "exec");
+  public get exec() {
+    return this._exec;
+  }
+  public putExec(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExec) {
+    this._exec.internalValue = value;
+  }
+  public resetExec() {
+    this._exec.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get execInput() {
+    return this._exec.internalValue;
+  }
+
+  // file - computed: false, optional: true, required: false
+  private _file = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileOutputReference(this, "file");
+  public get file() {
+    return this._file;
+  }
+  public putFile(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile) {
+    this._file.internalValue = value;
+  }
+  public resetFile() {
+    this._file.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileInput() {
+    return this._file.internalValue;
+  }
+
+  // pkg - computed: false, optional: true, required: false
+  private _pkg = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgOutputReference(this, "pkg");
+  public get pkg() {
+    return this._pkg;
+  }
+  public putPkg(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg) {
+    this._pkg.internalValue = value;
+  }
+  public resetPkg() {
+    this._pkg.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pkgInput() {
+    return this._pkg.internalValue;
+  }
+
+  // repository - computed: false, optional: true, required: false
+  private _repository = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryOutputReference(this, "repository");
+  public get repository() {
+    return this._repository;
+  }
+  public putRepository(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepository) {
+    this._repository.internalValue = value;
+  }
+  public resetRepository() {
+    this._repository.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository.internalValue;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference {
+    return new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentOsPoliciesResourceGroups {
   /**
   * inventory_filters block
@@ -4691,6 +5227,105 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsToTerraform(st
   }
 }
 
+export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentOsPoliciesResourceGroups | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._inventoryFilters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inventoryFilters = this._inventoryFilters?.internalValue;
+    }
+    if (this._resources?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroups | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._inventoryFilters.internalValue = undefined;
+      this._resources.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._inventoryFilters.internalValue = value.inventoryFilters;
+      this._resources.internalValue = value.resources;
+    }
+  }
+
+  // inventory_filters - computed: false, optional: true, required: false
+  private _inventoryFilters = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersList(this, "inventory_filters", false);
+  public get inventoryFilters() {
+    return this._inventoryFilters;
+  }
+  public putInventoryFilters(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters[] | cdktf.IResolvable) {
+    this._inventoryFilters.internalValue = value;
+  }
+  public resetInventoryFilters() {
+    this._inventoryFilters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inventoryFiltersInput() {
+    return this._inventoryFilters.internalValue;
+  }
+
+  // resources - computed: false, optional: false, required: true
+  private _resources = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesList(this, "resources", false);
+  public get resources() {
+    return this._resources;
+  }
+  public putResources(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources[] | cdktf.IResolvable) {
+    this._resources.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourcesInput() {
+    return this._resources.internalValue;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentOsPoliciesResourceGroups[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference {
+    return new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentOsPolicies {
   /**
   * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
@@ -4708,6 +5343,9 @@ export interface OsConfigOsPolicyAssignmentOsPolicies {
   * Required. The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -4738,6 +5376,165 @@ export function osConfigOsPolicyAssignmentOsPoliciesToTerraform(struct?: OsConfi
   }
 }
 
+export class OsConfigOsPolicyAssignmentOsPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OsConfigOsPolicyAssignmentOsPolicies | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowNoResourceGroupMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowNoResourceGroupMatch = this._allowNoResourceGroupMatch;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._resourceGroups?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceGroups = this._resourceGroups?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OsConfigOsPolicyAssignmentOsPolicies | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowNoResourceGroupMatch = undefined;
+      this._description = undefined;
+      this._id = undefined;
+      this._mode = undefined;
+      this._resourceGroups.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowNoResourceGroupMatch = value.allowNoResourceGroupMatch;
+      this._description = value.description;
+      this._id = value.id;
+      this._mode = value.mode;
+      this._resourceGroups.internalValue = value.resourceGroups;
+    }
+  }
+
+  // allow_no_resource_group_match - computed: false, optional: true, required: false
+  private _allowNoResourceGroupMatch?: boolean | cdktf.IResolvable; 
+  public get allowNoResourceGroupMatch() {
+    return this.getBooleanAttribute('allow_no_resource_group_match');
+  }
+  public set allowNoResourceGroupMatch(value: boolean | cdktf.IResolvable) {
+    this._allowNoResourceGroupMatch = value;
+  }
+  public resetAllowNoResourceGroupMatch() {
+    this._allowNoResourceGroupMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowNoResourceGroupMatchInput() {
+    return this._allowNoResourceGroupMatch;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // resource_groups - computed: false, optional: false, required: true
+  private _resourceGroups = new OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsList(this, "resource_groups", false);
+  public get resourceGroups() {
+    return this._resourceGroups;
+  }
+  public putResourceGroups(value: OsConfigOsPolicyAssignmentOsPoliciesResourceGroups[] | cdktf.IResolvable) {
+    this._resourceGroups.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupsInput() {
+    return this._resourceGroups.internalValue;
+  }
+}
+
+export class OsConfigOsPolicyAssignmentOsPoliciesList extends cdktf.ComplexList {
+  public internalValue? : OsConfigOsPolicyAssignmentOsPolicies[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OsConfigOsPolicyAssignmentOsPoliciesOutputReference {
+    return new OsConfigOsPolicyAssignmentOsPoliciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OsConfigOsPolicyAssignmentRolloutDisruptionBudget {
   /**
   * Specifies a fixed value.
@@ -4953,6 +5750,7 @@ export function osConfigOsPolicyAssignmentTimeoutsToTerraform(struct?: OsConfigO
 
 export class OsConfigOsPolicyAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -4962,7 +5760,10 @@ export class OsConfigOsPolicyAssignmentTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): OsConfigOsPolicyAssignmentTimeouts | undefined {
+  public get internalValue(): OsConfigOsPolicyAssignmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -4980,15 +5781,21 @@ export class OsConfigOsPolicyAssignmentTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: OsConfigOsPolicyAssignmentTimeouts | undefined) {
+  public set internalValue(value: OsConfigOsPolicyAssignmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -5079,11 +5886,12 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
     this._instanceFilter.internalValue = config.instanceFilter;
-    this._osPolicies = config.osPolicies;
+    this._osPolicies.internalValue = config.osPolicies;
     this._rollout.internalValue = config.rollout;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -5124,8 +5932,19 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -5209,17 +6028,16 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // os_policies - computed: false, optional: false, required: true
-  private _osPolicies?: OsConfigOsPolicyAssignmentOsPolicies[] | cdktf.IResolvable; 
+  private _osPolicies = new OsConfigOsPolicyAssignmentOsPoliciesList(this, "os_policies", false);
   public get osPolicies() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('os_policies');
+    return this._osPolicies;
   }
-  public set osPolicies(value: OsConfigOsPolicyAssignmentOsPolicies[] | cdktf.IResolvable) {
-    this._osPolicies = value;
+  public putOsPolicies(value: OsConfigOsPolicyAssignmentOsPolicies[] | cdktf.IResolvable) {
+    this._osPolicies.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get osPoliciesInput() {
-    return this._osPolicies;
+    return this._osPolicies.internalValue;
   }
 
   // rollout - computed: false, optional: false, required: true
@@ -5258,11 +6076,12 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       instance_filter: osConfigOsPolicyAssignmentInstanceFilterToTerraform(this._instanceFilter.internalValue),
-      os_policies: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesToTerraform)(this._osPolicies),
+      os_policies: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesToTerraform)(this._osPolicies.internalValue),
       rollout: osConfigOsPolicyAssignmentRolloutToTerraform(this._rollout.internalValue),
       timeouts: osConfigOsPolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -36,6 +36,13 @@ the contexts must be present in the active user session for an event to trigger 
   */
   readonly events?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_intent#id DialogflowIntent#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
   * 
@@ -196,6 +203,7 @@ export function dialogflowIntentTimeoutsToTerraform(struct?: DialogflowIntentTim
 
 export class DialogflowIntentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -205,7 +213,10 @@ export class DialogflowIntentTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DialogflowIntentTimeouts | undefined {
+  public get internalValue(): DialogflowIntentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -223,15 +234,21 @@ export class DialogflowIntentTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DialogflowIntentTimeouts | undefined) {
+  public set internalValue(value: DialogflowIntentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -325,6 +342,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
     this._defaultResponsePlatforms = config.defaultResponsePlatforms;
     this._displayName = config.displayName;
     this._events = config.events;
+    this._id = config.id;
     this._inputContextNames = config.inputContextNames;
     this._isFallback = config.isFallback;
     this._mlDisabled = config.mlDisabled;
@@ -408,8 +426,19 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // input_context_names - computed: false, optional: true, required: false
@@ -576,6 +605,7 @@ export class DialogflowIntent extends cdktf.TerraformResource {
       default_response_platforms: cdktf.listMapper(cdktf.stringToTerraform)(this._defaultResponsePlatforms),
       display_name: cdktf.stringToTerraform(this._displayName),
       events: cdktf.listMapper(cdktf.stringToTerraform)(this._events),
+      id: cdktf.stringToTerraform(this._id),
       input_context_names: cdktf.listMapper(cdktf.stringToTerraform)(this._inputContextNames),
       is_fallback: cdktf.booleanToTerraform(this._isFallback),
       ml_disabled: cdktf.booleanToTerraform(this._mlDisabled),

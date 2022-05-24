@@ -20,6 +20,13 @@ export interface DialogflowEntityTypeConfig extends cdktf.TerraformMetaArguments
   */
   readonly enableFuzzyExtraction?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#id DialogflowEntityType#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Indicates the kind of entity type.
 * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value.
 * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity
@@ -80,6 +87,102 @@ export function dialogflowEntityTypeEntitiesToTerraform(struct?: DialogflowEntit
   }
 }
 
+export class DialogflowEntityTypeEntitiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DialogflowEntityTypeEntities | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._synonyms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.synonyms = this._synonyms;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DialogflowEntityTypeEntities | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._synonyms = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._synonyms = value.synonyms;
+      this._value = value.value;
+    }
+  }
+
+  // synonyms - computed: false, optional: false, required: true
+  private _synonyms?: string[]; 
+  public get synonyms() {
+    return this.getListAttribute('synonyms');
+  }
+  public set synonyms(value: string[]) {
+    this._synonyms = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get synonymsInput() {
+    return this._synonyms;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class DialogflowEntityTypeEntitiesList extends cdktf.ComplexList {
+  public internalValue? : DialogflowEntityTypeEntities[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DialogflowEntityTypeEntitiesOutputReference {
+    return new DialogflowEntityTypeEntitiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DialogflowEntityTypeTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_entity_type#create DialogflowEntityType#create}
@@ -109,6 +212,7 @@ export function dialogflowEntityTypeTimeoutsToTerraform(struct?: DialogflowEntit
 
 export class DialogflowEntityTypeTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -118,7 +222,10 @@ export class DialogflowEntityTypeTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DialogflowEntityTypeTimeouts | undefined {
+  public get internalValue(): DialogflowEntityTypeTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -136,15 +243,21 @@ export class DialogflowEntityTypeTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DialogflowEntityTypeTimeouts | undefined) {
+  public set internalValue(value: DialogflowEntityTypeTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -236,9 +349,10 @@ export class DialogflowEntityType extends cdktf.TerraformResource {
     });
     this._displayName = config.displayName;
     this._enableFuzzyExtraction = config.enableFuzzyExtraction;
+    this._id = config.id;
     this._kind = config.kind;
     this._project = config.project;
-    this._entities = config.entities;
+    this._entities.internalValue = config.entities;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -276,8 +390,19 @@ export class DialogflowEntityType extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kind - computed: false, optional: false, required: true
@@ -315,20 +440,19 @@ export class DialogflowEntityType extends cdktf.TerraformResource {
   }
 
   // entities - computed: false, optional: true, required: false
-  private _entities?: DialogflowEntityTypeEntities[] | cdktf.IResolvable; 
+  private _entities = new DialogflowEntityTypeEntitiesList(this, "entities", false);
   public get entities() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('entities');
+    return this._entities;
   }
-  public set entities(value: DialogflowEntityTypeEntities[] | cdktf.IResolvable) {
-    this._entities = value;
+  public putEntities(value: DialogflowEntityTypeEntities[] | cdktf.IResolvable) {
+    this._entities.internalValue = value;
   }
   public resetEntities() {
-    this._entities = undefined;
+    this._entities.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get entitiesInput() {
-    return this._entities;
+    return this._entities.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -355,9 +479,10 @@ export class DialogflowEntityType extends cdktf.TerraformResource {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
       enable_fuzzy_extraction: cdktf.booleanToTerraform(this._enableFuzzyExtraction),
+      id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       project: cdktf.stringToTerraform(this._project),
-      entities: cdktf.listMapper(dialogflowEntityTypeEntitiesToTerraform)(this._entities),
+      entities: cdktf.listMapper(dialogflowEntityTypeEntitiesToTerraform)(this._entities.internalValue),
       timeouts: dialogflowEntityTypeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

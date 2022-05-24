@@ -28,6 +28,13 @@ a value of 'en_US.UTF8' at creation time.
   */
   readonly collation?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#id SqlDatabase#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the Cloud SQL instance. This does not include the project
 ID.
   * 
@@ -81,6 +88,7 @@ export function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeoutsOutpu
 
 export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -90,7 +98,10 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SqlDatabaseTimeouts | undefined {
+  public get internalValue(): SqlDatabaseTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -108,15 +119,21 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SqlDatabaseTimeouts | undefined) {
+  public set internalValue(value: SqlDatabaseTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -208,6 +225,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
     });
     this._charset = config.charset;
     this._collation = config.collation;
+    this._id = config.id;
     this._instance = config.instance;
     this._name = config.name;
     this._project = config.project;
@@ -251,8 +269,19 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance - computed: false, optional: false, required: true
@@ -326,6 +355,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
     return {
       charset: cdktf.stringToTerraform(this._charset),
       collation: cdktf.stringToTerraform(this._collation),
+      id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
