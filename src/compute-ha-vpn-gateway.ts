@@ -14,6 +14,13 @@ export interface ComputeHaVpnGatewayConfig extends cdktf.TerraformMetaArguments 
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway#id ComputeHaVpnGateway#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -78,6 +85,7 @@ export function computeHaVpnGatewayTimeoutsToTerraform(struct?: ComputeHaVpnGate
 
 export class ComputeHaVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -87,7 +95,10 @@ export class ComputeHaVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeHaVpnGatewayTimeouts | undefined {
+  public get internalValue(): ComputeHaVpnGatewayTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -101,14 +112,20 @@ export class ComputeHaVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeHaVpnGatewayTimeouts | undefined) {
+  public set internalValue(value: ComputeHaVpnGatewayTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -151,6 +168,9 @@ export interface ComputeHaVpnGatewayVpnInterfaces {
   * The numeric ID of this VPN gateway interface.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway#id ComputeHaVpnGateway#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: number;
   /**
@@ -178,6 +198,113 @@ export function computeHaVpnGatewayVpnInterfacesToTerraform(struct?: ComputeHaVp
   }
 }
 
+export class ComputeHaVpnGatewayVpnInterfacesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeHaVpnGatewayVpnInterfaces | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._interconnectAttachment !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interconnectAttachment = this._interconnectAttachment;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeHaVpnGatewayVpnInterfaces | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._interconnectAttachment = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._interconnectAttachment = value.interconnectAttachment;
+    }
+  }
+
+  // id - computed: false, optional: true, required: false
+  private _id?: number; 
+  public get id() {
+    return this.getNumberAttribute('id');
+  }
+  public set id(value: number) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // interconnect_attachment - computed: false, optional: true, required: false
+  private _interconnectAttachment?: string; 
+  public get interconnectAttachment() {
+    return this.getStringAttribute('interconnect_attachment');
+  }
+  public set interconnectAttachment(value: string) {
+    this._interconnectAttachment = value;
+  }
+  public resetInterconnectAttachment() {
+    this._interconnectAttachment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interconnectAttachmentInput() {
+    return this._interconnectAttachment;
+  }
+
+  // ip_address - computed: true, optional: false, required: false
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+}
+
+export class ComputeHaVpnGatewayVpnInterfacesList extends cdktf.ComplexList {
+  public internalValue? : ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeHaVpnGatewayVpnInterfacesOutputReference {
+    return new ComputeHaVpnGatewayVpnInterfacesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway google_compute_ha_vpn_gateway}
@@ -214,12 +341,13 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._network = config.network;
     this._project = config.project;
     this._region = config.region;
     this._timeouts.internalValue = config.timeouts;
-    this._vpnInterfaces = config.vpnInterfaces;
+    this._vpnInterfaces.internalValue = config.vpnInterfaces;
   }
 
   // ==========
@@ -243,8 +371,19 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -327,20 +466,19 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
   }
 
   // vpn_interfaces - computed: false, optional: true, required: false
-  private _vpnInterfaces?: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable; 
+  private _vpnInterfaces = new ComputeHaVpnGatewayVpnInterfacesList(this, "vpn_interfaces", false);
   public get vpnInterfaces() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('vpn_interfaces');
+    return this._vpnInterfaces;
   }
-  public set vpnInterfaces(value: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable) {
-    this._vpnInterfaces = value;
+  public putVpnInterfaces(value: ComputeHaVpnGatewayVpnInterfaces[] | cdktf.IResolvable) {
+    this._vpnInterfaces.internalValue = value;
   }
   public resetVpnInterfaces() {
-    this._vpnInterfaces = undefined;
+    this._vpnInterfaces.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vpnInterfacesInput() {
-    return this._vpnInterfaces;
+    return this._vpnInterfaces.internalValue;
   }
 
   // =========
@@ -350,12 +488,13 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       timeouts: computeHaVpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
-      vpn_interfaces: cdktf.listMapper(computeHaVpnGatewayVpnInterfacesToTerraform)(this._vpnInterfaces),
+      vpn_interfaces: cdktf.listMapper(computeHaVpnGatewayVpnInterfacesToTerraform)(this._vpnInterfaces.internalValue),
     };
   }
 }

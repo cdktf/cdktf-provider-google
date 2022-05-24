@@ -20,6 +20,13 @@ export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaAr
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#id MonitoringUptimeCheckConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#period MonitoringUptimeCheckConfig#period}
@@ -104,6 +111,105 @@ export function monitoringUptimeCheckConfigContentMatchersToTerraform(struct?: M
   }
 }
 
+export class MonitoringUptimeCheckConfigContentMatchersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringUptimeCheckConfigContentMatchers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._matcher !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matcher = this._matcher;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringUptimeCheckConfigContentMatchers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._matcher = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._matcher = value.matcher;
+    }
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // matcher - computed: false, optional: true, required: false
+  private _matcher?: string; 
+  public get matcher() {
+    return this.getStringAttribute('matcher');
+  }
+  public set matcher(value: string) {
+    this._matcher = value;
+  }
+  public resetMatcher() {
+    this._matcher = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matcherInput() {
+    return this._matcher;
+  }
+}
+
+export class MonitoringUptimeCheckConfigContentMatchersList extends cdktf.ComplexList {
+  public internalValue? : MonitoringUptimeCheckConfigContentMatchers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringUptimeCheckConfigContentMatchersOutputReference {
+    return new MonitoringUptimeCheckConfigContentMatchersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitoringUptimeCheckConfigHttpCheckAuthInfo {
   /**
   * The password to authenticate.
@@ -801,6 +907,7 @@ export function monitoringUptimeCheckConfigTimeoutsToTerraform(struct?: Monitori
 
 export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -810,7 +917,10 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitoringUptimeCheckConfigTimeouts | undefined {
+  public get internalValue(): MonitoringUptimeCheckConfigTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -828,15 +938,21 @@ export class MonitoringUptimeCheckConfigTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitoringUptimeCheckConfigTimeouts | undefined) {
+  public set internalValue(value: MonitoringUptimeCheckConfigTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -928,11 +1044,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
     });
     this._checkerType = config.checkerType;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._period = config.period;
     this._project = config.project;
     this._selectedRegions = config.selectedRegions;
     this._timeout = config.timeout;
-    this._contentMatchers = config.contentMatchers;
+    this._contentMatchers.internalValue = config.contentMatchers;
     this._httpCheck.internalValue = config.httpCheck;
     this._monitoredResource.internalValue = config.monitoredResource;
     this._resourceGroup.internalValue = config.resourceGroup;
@@ -974,8 +1091,19 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -1050,20 +1178,19 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
   }
 
   // content_matchers - computed: false, optional: true, required: false
-  private _contentMatchers?: MonitoringUptimeCheckConfigContentMatchers[] | cdktf.IResolvable; 
+  private _contentMatchers = new MonitoringUptimeCheckConfigContentMatchersList(this, "content_matchers", false);
   public get contentMatchers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('content_matchers');
+    return this._contentMatchers;
   }
-  public set contentMatchers(value: MonitoringUptimeCheckConfigContentMatchers[] | cdktf.IResolvable) {
-    this._contentMatchers = value;
+  public putContentMatchers(value: MonitoringUptimeCheckConfigContentMatchers[] | cdktf.IResolvable) {
+    this._contentMatchers.internalValue = value;
   }
   public resetContentMatchers() {
-    this._contentMatchers = undefined;
+    this._contentMatchers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get contentMatchersInput() {
-    return this._contentMatchers;
+    return this._contentMatchers.internalValue;
   }
 
   // http_check - computed: false, optional: true, required: false
@@ -1154,11 +1281,12 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
     return {
       checker_type: cdktf.stringToTerraform(this._checkerType),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       period: cdktf.stringToTerraform(this._period),
       project: cdktf.stringToTerraform(this._project),
       selected_regions: cdktf.listMapper(cdktf.stringToTerraform)(this._selectedRegions),
       timeout: cdktf.stringToTerraform(this._timeout),
-      content_matchers: cdktf.listMapper(monitoringUptimeCheckConfigContentMatchersToTerraform)(this._contentMatchers),
+      content_matchers: cdktf.listMapper(monitoringUptimeCheckConfigContentMatchersToTerraform)(this._contentMatchers.internalValue),
       http_check: monitoringUptimeCheckConfigHttpCheckToTerraform(this._httpCheck.internalValue),
       monitored_resource: monitoringUptimeCheckConfigMonitoredResourceToTerraform(this._monitoredResource.internalValue),
       resource_group: monitoringUptimeCheckConfigResourceGroupToTerraform(this._resourceGroup.internalValue),

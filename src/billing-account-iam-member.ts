@@ -12,6 +12,13 @@ export interface BillingAccountIamMemberConfig extends cdktf.TerraformMetaArgume
   */
   readonly billingAccountId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#id BillingAccountIamMember#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#member BillingAccountIamMember#member}
   */
   readonly member: string;
@@ -175,6 +182,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._billingAccountId = config.billingAccountId;
+    this._id = config.id;
     this._member = config.member;
     this._role = config.role;
     this._condition.internalValue = config.condition;
@@ -203,8 +211,19 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // member - computed: false, optional: false, required: true
@@ -256,6 +275,7 @@ export class BillingAccountIamMember extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       billing_account_id: cdktf.stringToTerraform(this._billingAccountId),
+      id: cdktf.stringToTerraform(this._id),
       member: cdktf.stringToTerraform(this._member),
       role: cdktf.stringToTerraform(this._role),
       condition: billingAccountIamMemberConditionToTerraform(this._condition.internalValue),

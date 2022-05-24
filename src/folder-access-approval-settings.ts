@@ -22,6 +22,13 @@ This property will be ignored if set by an ancestor of the resource, and new non
   */
   readonly folderId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#id FolderAccessApprovalSettings#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
@@ -91,6 +98,105 @@ export function folderAccessApprovalSettingsEnrolledServicesToTerraform(struct?:
   }
 }
 
+export class FolderAccessApprovalSettingsEnrolledServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FolderAccessApprovalSettingsEnrolledServices | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudProduct !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudProduct = this._cloudProduct;
+    }
+    if (this._enrollmentLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enrollmentLevel = this._enrollmentLevel;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FolderAccessApprovalSettingsEnrolledServices | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._cloudProduct = undefined;
+      this._enrollmentLevel = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._cloudProduct = value.cloudProduct;
+      this._enrollmentLevel = value.enrollmentLevel;
+    }
+  }
+
+  // cloud_product - computed: false, optional: false, required: true
+  private _cloudProduct?: string; 
+  public get cloudProduct() {
+    return this.getStringAttribute('cloud_product');
+  }
+  public set cloudProduct(value: string) {
+    this._cloudProduct = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudProductInput() {
+    return this._cloudProduct;
+  }
+
+  // enrollment_level - computed: false, optional: true, required: false
+  private _enrollmentLevel?: string; 
+  public get enrollmentLevel() {
+    return this.getStringAttribute('enrollment_level');
+  }
+  public set enrollmentLevel(value: string) {
+    this._enrollmentLevel = value;
+  }
+  public resetEnrollmentLevel() {
+    this._enrollmentLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enrollmentLevelInput() {
+    return this._enrollmentLevel;
+  }
+}
+
+export class FolderAccessApprovalSettingsEnrolledServicesList extends cdktf.ComplexList {
+  public internalValue? : FolderAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FolderAccessApprovalSettingsEnrolledServicesOutputReference {
+    return new FolderAccessApprovalSettingsEnrolledServicesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FolderAccessApprovalSettingsTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/folder_access_approval_settings#create FolderAccessApprovalSettings#create}
@@ -120,6 +226,7 @@ export function folderAccessApprovalSettingsTimeoutsToTerraform(struct?: FolderA
 
 export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -129,7 +236,10 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FolderAccessApprovalSettingsTimeouts | undefined {
+  public get internalValue(): FolderAccessApprovalSettingsTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -147,15 +257,21 @@ export class FolderAccessApprovalSettingsTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FolderAccessApprovalSettingsTimeouts | undefined) {
+  public set internalValue(value: FolderAccessApprovalSettingsTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -247,8 +363,9 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
     });
     this._activeKeyVersion = config.activeKeyVersion;
     this._folderId = config.folderId;
+    this._id = config.id;
     this._notificationEmails = config.notificationEmails;
-    this._enrolledServices = config.enrolledServices;
+    this._enrolledServices.internalValue = config.enrolledServices;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -296,8 +413,19 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // invalid_key_version - computed: true, optional: false, required: false
@@ -327,17 +455,16 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
   }
 
   // enrolled_services - computed: false, optional: false, required: true
-  private _enrolledServices?: FolderAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable; 
+  private _enrolledServices = new FolderAccessApprovalSettingsEnrolledServicesList(this, "enrolled_services", true);
   public get enrolledServices() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('enrolled_services')));
+    return this._enrolledServices;
   }
-  public set enrolledServices(value: FolderAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable) {
-    this._enrolledServices = value;
+  public putEnrolledServices(value: FolderAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable) {
+    this._enrolledServices.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get enrolledServicesInput() {
-    return this._enrolledServices;
+    return this._enrolledServices.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -364,8 +491,9 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
     return {
       active_key_version: cdktf.stringToTerraform(this._activeKeyVersion),
       folder_id: cdktf.stringToTerraform(this._folderId),
+      id: cdktf.stringToTerraform(this._id),
       notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
-      enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices),
+      enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices.internalValue),
       timeouts: folderAccessApprovalSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

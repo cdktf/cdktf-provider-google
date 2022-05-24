@@ -15,6 +15,13 @@ displayed in chooser dialogs.
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The resource name.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor#name BinaryAuthorizationAttestor#name}
@@ -168,6 +175,9 @@ be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor#id BinaryAuthorizationAttestor#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
@@ -186,10 +196,157 @@ export function binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToT
   return {
     ascii_armored_pgp_public_key: cdktf.stringToTerraform(struct!.asciiArmoredPgpPublicKey),
     comment: cdktf.stringToTerraform(struct!.comment),
+    id: cdktf.stringToTerraform(struct!.id),
     pkix_public_key: binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyToTerraform(struct!.pkixPublicKey),
   }
 }
 
+export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._asciiArmoredPgpPublicKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.asciiArmoredPgpPublicKey = this._asciiArmoredPgpPublicKey;
+    }
+    if (this._comment !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.comment = this._comment;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._pkixPublicKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pkixPublicKey = this._pkixPublicKey?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._asciiArmoredPgpPublicKey = undefined;
+      this._comment = undefined;
+      this._id = undefined;
+      this._pkixPublicKey.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._asciiArmoredPgpPublicKey = value.asciiArmoredPgpPublicKey;
+      this._comment = value.comment;
+      this._id = value.id;
+      this._pkixPublicKey.internalValue = value.pkixPublicKey;
+    }
+  }
+
+  // ascii_armored_pgp_public_key - computed: false, optional: true, required: false
+  private _asciiArmoredPgpPublicKey?: string; 
+  public get asciiArmoredPgpPublicKey() {
+    return this.getStringAttribute('ascii_armored_pgp_public_key');
+  }
+  public set asciiArmoredPgpPublicKey(value: string) {
+    this._asciiArmoredPgpPublicKey = value;
+  }
+  public resetAsciiArmoredPgpPublicKey() {
+    this._asciiArmoredPgpPublicKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get asciiArmoredPgpPublicKeyInput() {
+    return this._asciiArmoredPgpPublicKey;
+  }
+
+  // comment - computed: false, optional: true, required: false
+  private _comment?: string; 
+  public get comment() {
+    return this.getStringAttribute('comment');
+  }
+  public set comment(value: string) {
+    this._comment = value;
+  }
+  public resetComment() {
+    this._comment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commentInput() {
+    return this._comment;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // pkix_public_key - computed: false, optional: true, required: false
+  private _pkixPublicKey = new BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKeyOutputReference(this, "pkix_public_key");
+  public get pkixPublicKey() {
+    return this._pkixPublicKey;
+  }
+  public putPkixPublicKey(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysPkixPublicKey) {
+    this._pkixPublicKey.internalValue = value;
+  }
+  public resetPkixPublicKey() {
+    this._pkixPublicKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pkixPublicKeyInput() {
+    return this._pkixPublicKey.internalValue;
+  }
+}
+
+export class BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysList extends cdktf.ComplexList {
+  public internalValue? : BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysOutputReference {
+    return new BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BinaryAuthorizationAttestorAttestationAuthorityNote {
   /**
   * The resource name of a ATTESTATION_AUTHORITY Note, created by the
@@ -240,9 +397,9 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
       hasAnyValues = true;
       internalValueResult.noteReference = this._noteReference;
     }
-    if (this._publicKeys !== undefined) {
+    if (this._publicKeys?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.publicKeys = this._publicKeys;
+      internalValueResult.publicKeys = this._publicKeys?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -251,12 +408,12 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
     if (value === undefined) {
       this.isEmptyObject = false;
       this._noteReference = undefined;
-      this._publicKeys = undefined;
+      this._publicKeys.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._noteReference = value.noteReference;
-      this._publicKeys = value.publicKeys;
+      this._publicKeys.internalValue = value.publicKeys;
     }
   }
 
@@ -279,20 +436,19 @@ export class BinaryAuthorizationAttestorAttestationAuthorityNoteOutputReference 
   }
 
   // public_keys - computed: false, optional: true, required: false
-  private _publicKeys?: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable; 
+  private _publicKeys = new BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeysList(this, "public_keys", false);
   public get publicKeys() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('public_keys');
+    return this._publicKeys;
   }
-  public set publicKeys(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable) {
-    this._publicKeys = value;
+  public putPublicKeys(value: BinaryAuthorizationAttestorAttestationAuthorityNotePublicKeys[] | cdktf.IResolvable) {
+    this._publicKeys.internalValue = value;
   }
   public resetPublicKeys() {
-    this._publicKeys = undefined;
+    this._publicKeys.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get publicKeysInput() {
-    return this._publicKeys;
+    return this._publicKeys.internalValue;
   }
 }
 export interface BinaryAuthorizationAttestorTimeouts {
@@ -324,6 +480,7 @@ export function binaryAuthorizationAttestorTimeoutsToTerraform(struct?: BinaryAu
 
 export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -333,7 +490,10 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BinaryAuthorizationAttestorTimeouts | undefined {
+  public get internalValue(): BinaryAuthorizationAttestorTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -351,15 +511,21 @@ export class BinaryAuthorizationAttestorTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BinaryAuthorizationAttestorTimeouts | undefined) {
+  public set internalValue(value: BinaryAuthorizationAttestorTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -450,6 +616,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._attestationAuthorityNote.internalValue = config.attestationAuthorityNote;
@@ -477,8 +644,19 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -546,6 +724,7 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       attestation_authority_note: binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(this._attestationAuthorityNote.internalValue),

@@ -49,6 +49,13 @@ The default is true.
   */
   readonly enable?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#id ComputeRouterPeer#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the interface the BGP peer is associated with.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#interface ComputeRouterPeer#interface}
@@ -149,6 +156,105 @@ export function computeRouterPeerAdvertisedIpRangesToTerraform(struct?: ComputeR
   }
 }
 
+export class ComputeRouterPeerAdvertisedIpRangesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRouterPeerAdvertisedIpRanges | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._range !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterPeerAdvertisedIpRanges | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._range = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._range = value.range;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // range - computed: false, optional: false, required: true
+  private _range?: string; 
+  public get range() {
+    return this.getStringAttribute('range');
+  }
+  public set range(value: string) {
+    this._range = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeInput() {
+    return this._range;
+  }
+}
+
+export class ComputeRouterPeerAdvertisedIpRangesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRouterPeerAdvertisedIpRangesOutputReference {
+    return new ComputeRouterPeerAdvertisedIpRangesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRouterPeerBfd {
   /**
   * The minimum interval, in milliseconds, between BFD control packets
@@ -343,6 +449,7 @@ export function computeRouterPeerTimeoutsToTerraform(struct?: ComputeRouterPeerT
 
 export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -352,7 +459,10 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeRouterPeerTimeouts | undefined {
+  public get internalValue(): ComputeRouterPeerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -370,15 +480,21 @@ export class ComputeRouterPeerTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeRouterPeerTimeouts | undefined) {
+  public set internalValue(value: ComputeRouterPeerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -472,6 +588,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._advertisedGroups = config.advertisedGroups;
     this._advertisedRoutePriority = config.advertisedRoutePriority;
     this._enable = config.enable;
+    this._id = config.id;
     this._interface = config.interface;
     this._ipAddress = config.ipAddress;
     this._name = config.name;
@@ -480,7 +597,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._router = config.router;
-    this._advertisedIpRanges = config.advertisedIpRanges;
+    this._advertisedIpRanges.internalValue = config.advertisedIpRanges;
     this._bfd.internalValue = config.bfd;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -554,8 +671,19 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // interface - computed: false, optional: false, required: true
@@ -677,20 +805,19 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
-  private _advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable; 
+  private _advertisedIpRanges = new ComputeRouterPeerAdvertisedIpRangesList(this, "advertised_ip_ranges", false);
   public get advertisedIpRanges() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('advertised_ip_ranges');
+    return this._advertisedIpRanges;
   }
-  public set advertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable) {
-    this._advertisedIpRanges = value;
+  public putAdvertisedIpRanges(value: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable) {
+    this._advertisedIpRanges.internalValue = value;
   }
   public resetAdvertisedIpRanges() {
-    this._advertisedIpRanges = undefined;
+    this._advertisedIpRanges.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get advertisedIpRangesInput() {
-    return this._advertisedIpRanges;
+    return this._advertisedIpRanges.internalValue;
   }
 
   // bfd - computed: false, optional: true, required: false
@@ -735,6 +862,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._advertisedGroups),
       advertised_route_priority: cdktf.numberToTerraform(this._advertisedRoutePriority),
       enable: cdktf.booleanToTerraform(this._enable),
+      id: cdktf.stringToTerraform(this._id),
       interface: cdktf.stringToTerraform(this._interface),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       name: cdktf.stringToTerraform(this._name),
@@ -743,7 +871,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
-      advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform)(this._advertisedIpRanges),
+      advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform)(this._advertisedIpRanges.internalValue),
       bfd: computeRouterPeerBfdToTerraform(this._bfd.internalValue),
       timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts.internalValue),
     };

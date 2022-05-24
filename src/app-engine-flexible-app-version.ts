@@ -31,6 +31,13 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
   */
   readonly envVariables?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#id AppEngineFlexibleAppVersion#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A list of the types of messages that this application is able to receive. Possible values: ["INBOUND_SERVICE_MAIL", "INBOUND_SERVICE_MAIL_BOUNCE", "INBOUND_SERVICE_XMPP_ERROR", "INBOUND_SERVICE_XMPP_MESSAGE", "INBOUND_SERVICE_XMPP_SUBSCRIBE", "INBOUND_SERVICE_XMPP_PRESENCE", "INBOUND_SERVICE_CHANNEL_PRESENCE", "INBOUND_SERVICE_WARMUP"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#inbound_services AppEngineFlexibleAppVersion#inbound_services}
@@ -1438,6 +1445,124 @@ export function appEngineFlexibleAppVersionDeploymentFilesToTerraform(struct?: A
   }
 }
 
+export class AppEngineFlexibleAppVersionDeploymentFilesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppEngineFlexibleAppVersionDeploymentFiles | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sha1Sum !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sha1Sum = this._sha1Sum;
+    }
+    if (this._sourceUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceUrl = this._sourceUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionDeploymentFiles | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._sha1Sum = undefined;
+      this._sourceUrl = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._sha1Sum = value.sha1Sum;
+      this._sourceUrl = value.sourceUrl;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // sha1_sum - computed: false, optional: true, required: false
+  private _sha1Sum?: string; 
+  public get sha1Sum() {
+    return this.getStringAttribute('sha1_sum');
+  }
+  public set sha1Sum(value: string) {
+    this._sha1Sum = value;
+  }
+  public resetSha1Sum() {
+    this._sha1Sum = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sha1SumInput() {
+    return this._sha1Sum;
+  }
+
+  // source_url - computed: false, optional: false, required: true
+  private _sourceUrl?: string; 
+  public get sourceUrl() {
+    return this.getStringAttribute('source_url');
+  }
+  public set sourceUrl(value: string) {
+    this._sourceUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUrlInput() {
+    return this._sourceUrl;
+  }
+}
+
+export class AppEngineFlexibleAppVersionDeploymentFilesList extends cdktf.ComplexList {
+  public internalValue? : AppEngineFlexibleAppVersionDeploymentFiles[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppEngineFlexibleAppVersionDeploymentFilesOutputReference {
+    return new AppEngineFlexibleAppVersionDeploymentFilesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppEngineFlexibleAppVersionDeploymentZip {
   /**
   * files count
@@ -1593,9 +1718,9 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.container = this._container?.internalValue;
     }
-    if (this._files !== undefined) {
+    if (this._files?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.files = this._files;
+      internalValueResult.files = this._files?.internalValue;
     }
     if (this._zip?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1609,14 +1734,14 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
       this.isEmptyObject = false;
       this._cloudBuildOptions.internalValue = undefined;
       this._container.internalValue = undefined;
-      this._files = undefined;
+      this._files.internalValue = undefined;
       this._zip.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudBuildOptions.internalValue = value.cloudBuildOptions;
       this._container.internalValue = value.container;
-      this._files = value.files;
+      this._files.internalValue = value.files;
       this._zip.internalValue = value.zip;
     }
   }
@@ -1654,20 +1779,19 @@ export class AppEngineFlexibleAppVersionDeploymentOutputReference extends cdktf.
   }
 
   // files - computed: false, optional: true, required: false
-  private _files?: AppEngineFlexibleAppVersionDeploymentFiles[] | cdktf.IResolvable; 
+  private _files = new AppEngineFlexibleAppVersionDeploymentFilesList(this, "files", true);
   public get files() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('files')));
+    return this._files;
   }
-  public set files(value: AppEngineFlexibleAppVersionDeploymentFiles[] | cdktf.IResolvable) {
-    this._files = value;
+  public putFiles(value: AppEngineFlexibleAppVersionDeploymentFiles[] | cdktf.IResolvable) {
+    this._files.internalValue = value;
   }
   public resetFiles() {
-    this._files = undefined;
+    this._files.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get filesInput() {
-    return this._files;
+    return this._files.internalValue;
   }
 
   // zip - computed: false, optional: true, required: false
@@ -2283,6 +2407,218 @@ export function appEngineFlexibleAppVersionHandlersToTerraform(struct?: AppEngin
   }
 }
 
+export class AppEngineFlexibleAppVersionHandlersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppEngineFlexibleAppVersionHandlers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._authFailAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authFailAction = this._authFailAction;
+    }
+    if (this._login !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.login = this._login;
+    }
+    if (this._redirectHttpResponseCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.redirectHttpResponseCode = this._redirectHttpResponseCode;
+    }
+    if (this._securityLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityLevel = this._securityLevel;
+    }
+    if (this._urlRegex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRegex = this._urlRegex;
+    }
+    if (this._script?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.script = this._script?.internalValue;
+    }
+    if (this._staticFiles?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.staticFiles = this._staticFiles?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionHandlers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._authFailAction = undefined;
+      this._login = undefined;
+      this._redirectHttpResponseCode = undefined;
+      this._securityLevel = undefined;
+      this._urlRegex = undefined;
+      this._script.internalValue = undefined;
+      this._staticFiles.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._authFailAction = value.authFailAction;
+      this._login = value.login;
+      this._redirectHttpResponseCode = value.redirectHttpResponseCode;
+      this._securityLevel = value.securityLevel;
+      this._urlRegex = value.urlRegex;
+      this._script.internalValue = value.script;
+      this._staticFiles.internalValue = value.staticFiles;
+    }
+  }
+
+  // auth_fail_action - computed: false, optional: true, required: false
+  private _authFailAction?: string; 
+  public get authFailAction() {
+    return this.getStringAttribute('auth_fail_action');
+  }
+  public set authFailAction(value: string) {
+    this._authFailAction = value;
+  }
+  public resetAuthFailAction() {
+    this._authFailAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authFailActionInput() {
+    return this._authFailAction;
+  }
+
+  // login - computed: false, optional: true, required: false
+  private _login?: string; 
+  public get login() {
+    return this.getStringAttribute('login');
+  }
+  public set login(value: string) {
+    this._login = value;
+  }
+  public resetLogin() {
+    this._login = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginInput() {
+    return this._login;
+  }
+
+  // redirect_http_response_code - computed: false, optional: true, required: false
+  private _redirectHttpResponseCode?: string; 
+  public get redirectHttpResponseCode() {
+    return this.getStringAttribute('redirect_http_response_code');
+  }
+  public set redirectHttpResponseCode(value: string) {
+    this._redirectHttpResponseCode = value;
+  }
+  public resetRedirectHttpResponseCode() {
+    this._redirectHttpResponseCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectHttpResponseCodeInput() {
+    return this._redirectHttpResponseCode;
+  }
+
+  // security_level - computed: false, optional: true, required: false
+  private _securityLevel?: string; 
+  public get securityLevel() {
+    return this.getStringAttribute('security_level');
+  }
+  public set securityLevel(value: string) {
+    this._securityLevel = value;
+  }
+  public resetSecurityLevel() {
+    this._securityLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityLevelInput() {
+    return this._securityLevel;
+  }
+
+  // url_regex - computed: false, optional: true, required: false
+  private _urlRegex?: string; 
+  public get urlRegex() {
+    return this.getStringAttribute('url_regex');
+  }
+  public set urlRegex(value: string) {
+    this._urlRegex = value;
+  }
+  public resetUrlRegex() {
+    this._urlRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRegexInput() {
+    return this._urlRegex;
+  }
+
+  // script - computed: false, optional: true, required: false
+  private _script = new AppEngineFlexibleAppVersionHandlersScriptOutputReference(this, "script");
+  public get script() {
+    return this._script;
+  }
+  public putScript(value: AppEngineFlexibleAppVersionHandlersScript) {
+    this._script.internalValue = value;
+  }
+  public resetScript() {
+    this._script.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptInput() {
+    return this._script.internalValue;
+  }
+
+  // static_files - computed: false, optional: true, required: false
+  private _staticFiles = new AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference(this, "static_files");
+  public get staticFiles() {
+    return this._staticFiles;
+  }
+  public putStaticFiles(value: AppEngineFlexibleAppVersionHandlersStaticFiles) {
+    this._staticFiles.internalValue = value;
+  }
+  public resetStaticFiles() {
+    this._staticFiles.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get staticFilesInput() {
+    return this._staticFiles.internalValue;
+  }
+}
+
+export class AppEngineFlexibleAppVersionHandlersList extends cdktf.ComplexList {
+  public internalValue? : AppEngineFlexibleAppVersionHandlers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppEngineFlexibleAppVersionHandlersOutputReference {
+    return new AppEngineFlexibleAppVersionHandlersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppEngineFlexibleAppVersionLivenessCheck {
   /**
   * Interval between health checks.
@@ -3045,6 +3381,121 @@ export function appEngineFlexibleAppVersionResourcesVolumesToTerraform(struct?: 
   }
 }
 
+export class AppEngineFlexibleAppVersionResourcesVolumesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppEngineFlexibleAppVersionResourcesVolumes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sizeGb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sizeGb = this._sizeGb;
+    }
+    if (this._volumeType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volumeType = this._volumeType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppEngineFlexibleAppVersionResourcesVolumes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._sizeGb = undefined;
+      this._volumeType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._sizeGb = value.sizeGb;
+      this._volumeType = value.volumeType;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // size_gb - computed: false, optional: false, required: true
+  private _sizeGb?: number; 
+  public get sizeGb() {
+    return this.getNumberAttribute('size_gb');
+  }
+  public set sizeGb(value: number) {
+    this._sizeGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeGbInput() {
+    return this._sizeGb;
+  }
+
+  // volume_type - computed: false, optional: false, required: true
+  private _volumeType?: string; 
+  public get volumeType() {
+    return this.getStringAttribute('volume_type');
+  }
+  public set volumeType(value: string) {
+    this._volumeType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeTypeInput() {
+    return this._volumeType;
+  }
+}
+
+export class AppEngineFlexibleAppVersionResourcesVolumesList extends cdktf.ComplexList {
+  public internalValue? : AppEngineFlexibleAppVersionResourcesVolumes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppEngineFlexibleAppVersionResourcesVolumesOutputReference {
+    return new AppEngineFlexibleAppVersionResourcesVolumesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppEngineFlexibleAppVersionResources {
   /**
   * Number of CPU cores needed.
@@ -3111,9 +3562,9 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.memoryGb = this._memoryGb;
     }
-    if (this._volumes !== undefined) {
+    if (this._volumes?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.volumes = this._volumes;
+      internalValueResult.volumes = this._volumes?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -3124,14 +3575,14 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
       this._cpu = undefined;
       this._diskGb = undefined;
       this._memoryGb = undefined;
-      this._volumes = undefined;
+      this._volumes.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._cpu = value.cpu;
       this._diskGb = value.diskGb;
       this._memoryGb = value.memoryGb;
-      this._volumes = value.volumes;
+      this._volumes.internalValue = value.volumes;
     }
   }
 
@@ -3184,20 +3635,19 @@ export class AppEngineFlexibleAppVersionResourcesOutputReference extends cdktf.C
   }
 
   // volumes - computed: false, optional: true, required: false
-  private _volumes?: AppEngineFlexibleAppVersionResourcesVolumes[] | cdktf.IResolvable; 
+  private _volumes = new AppEngineFlexibleAppVersionResourcesVolumesList(this, "volumes", false);
   public get volumes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('volumes');
+    return this._volumes;
   }
-  public set volumes(value: AppEngineFlexibleAppVersionResourcesVolumes[] | cdktf.IResolvable) {
-    this._volumes = value;
+  public putVolumes(value: AppEngineFlexibleAppVersionResourcesVolumes[] | cdktf.IResolvable) {
+    this._volumes.internalValue = value;
   }
   public resetVolumes() {
-    this._volumes = undefined;
+    this._volumes.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get volumesInput() {
-    return this._volumes;
+    return this._volumes.internalValue;
   }
 }
 export interface AppEngineFlexibleAppVersionTimeouts {
@@ -3229,6 +3679,7 @@ export function appEngineFlexibleAppVersionTimeoutsToTerraform(struct?: AppEngin
 
 export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -3238,7 +3689,10 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppEngineFlexibleAppVersionTimeouts | undefined {
+  public get internalValue(): AppEngineFlexibleAppVersionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -3256,15 +3710,21 @@ export class AppEngineFlexibleAppVersionTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppEngineFlexibleAppVersionTimeouts | undefined) {
+  public set internalValue(value: AppEngineFlexibleAppVersionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -3422,6 +3882,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
     this._defaultExpiration = config.defaultExpiration;
     this._deleteServiceOnDestroy = config.deleteServiceOnDestroy;
     this._envVariables = config.envVariables;
+    this._id = config.id;
     this._inboundServices = config.inboundServices;
     this._instanceClass = config.instanceClass;
     this._nobuildFilesRegex = config.nobuildFilesRegex;
@@ -3439,7 +3900,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
     this._deployment.internalValue = config.deployment;
     this._endpointsApiService.internalValue = config.endpointsApiService;
     this._entrypoint.internalValue = config.entrypoint;
-    this._handlers = config.handlers;
+    this._handlers.internalValue = config.handlers;
     this._livenessCheck.internalValue = config.livenessCheck;
     this._manualScaling.internalValue = config.manualScaling;
     this._network.internalValue = config.network;
@@ -3518,8 +3979,19 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // inbound_services - computed: false, optional: true, required: false
@@ -3794,20 +4266,19 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
   }
 
   // handlers - computed: false, optional: true, required: false
-  private _handlers?: AppEngineFlexibleAppVersionHandlers[] | cdktf.IResolvable; 
+  private _handlers = new AppEngineFlexibleAppVersionHandlersList(this, "handlers", false);
   public get handlers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('handlers');
+    return this._handlers;
   }
-  public set handlers(value: AppEngineFlexibleAppVersionHandlers[] | cdktf.IResolvable) {
-    this._handlers = value;
+  public putHandlers(value: AppEngineFlexibleAppVersionHandlers[] | cdktf.IResolvable) {
+    this._handlers.internalValue = value;
   }
   public resetHandlers() {
-    this._handlers = undefined;
+    this._handlers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get handlersInput() {
-    return this._handlers;
+    return this._handlers.internalValue;
   }
 
   // liveness_check - computed: false, optional: false, required: true
@@ -3926,6 +4397,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       default_expiration: cdktf.stringToTerraform(this._defaultExpiration),
       delete_service_on_destroy: cdktf.booleanToTerraform(this._deleteServiceOnDestroy),
       env_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._envVariables),
+      id: cdktf.stringToTerraform(this._id),
       inbound_services: cdktf.listMapper(cdktf.stringToTerraform)(this._inboundServices),
       instance_class: cdktf.stringToTerraform(this._instanceClass),
       nobuild_files_regex: cdktf.stringToTerraform(this._nobuildFilesRegex),
@@ -3943,7 +4415,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       deployment: appEngineFlexibleAppVersionDeploymentToTerraform(this._deployment.internalValue),
       endpoints_api_service: appEngineFlexibleAppVersionEndpointsApiServiceToTerraform(this._endpointsApiService.internalValue),
       entrypoint: appEngineFlexibleAppVersionEntrypointToTerraform(this._entrypoint.internalValue),
-      handlers: cdktf.listMapper(appEngineFlexibleAppVersionHandlersToTerraform)(this._handlers),
+      handlers: cdktf.listMapper(appEngineFlexibleAppVersionHandlersToTerraform)(this._handlers.internalValue),
       liveness_check: appEngineFlexibleAppVersionLivenessCheckToTerraform(this._livenessCheck.internalValue),
       manual_scaling: appEngineFlexibleAppVersionManualScalingToTerraform(this._manualScaling.internalValue),
       network: appEngineFlexibleAppVersionNetworkToTerraform(this._network.internalValue),

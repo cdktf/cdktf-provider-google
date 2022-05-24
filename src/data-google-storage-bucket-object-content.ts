@@ -20,6 +20,13 @@ export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.Terraf
   */
   readonly content?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content#id DataGoogleStorageBucketObjectContent#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/storage_bucket_object_content#name DataGoogleStorageBucketObjectContent#name}
@@ -132,6 +139,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
     });
     this._bucket = config.bucket;
     this._content = config.content;
+    this._id = config.id;
     this._name = config.name;
   }
 
@@ -215,8 +223,19 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kms_key_name - computed: true, optional: false, required: false
@@ -235,8 +254,9 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'metadata').lookup(key);
+  private _metadata = new cdktf.StringMap(this, "metadata");
+  public get metadata() {
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -285,6 +305,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
     return {
       bucket: cdktf.stringToTerraform(this._bucket),
       content: cdktf.stringToTerraform(this._content),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
     };
   }

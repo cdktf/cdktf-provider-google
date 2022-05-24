@@ -20,6 +20,13 @@ export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMe
   */
   readonly host: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#id SqlSourceRepresentationInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the source representation instance. Use any valid Cloud SQL instance name.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#name SqlSourceRepresentationInstance#name}
@@ -74,6 +81,7 @@ export function sqlSourceRepresentationInstanceTimeoutsToTerraform(struct?: SqlS
 
 export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -83,7 +91,10 @@ export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SqlSourceRepresentationInstanceTimeouts | undefined {
+  public get internalValue(): SqlSourceRepresentationInstanceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -97,14 +108,20 @@ export class SqlSourceRepresentationInstanceTimeoutsOutputReference extends cdkt
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SqlSourceRepresentationInstanceTimeouts | undefined) {
+  public set internalValue(value: SqlSourceRepresentationInstanceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -179,6 +196,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
     });
     this._databaseVersion = config.databaseVersion;
     this._host = config.host;
+    this._id = config.id;
     this._name = config.name;
     this._port = config.port;
     this._project = config.project;
@@ -217,8 +235,19 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -306,6 +335,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
     return {
       database_version: cdktf.stringToTerraform(this._databaseVersion),
       host: cdktf.stringToTerraform(this._host),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       port: cdktf.numberToTerraform(this._port),
       project: cdktf.stringToTerraform(this._project),

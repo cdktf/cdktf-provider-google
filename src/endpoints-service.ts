@@ -14,6 +14,13 @@ export interface EndpointsServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly grpcConfig?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#id EndpointsService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and protoc_output_base64 must be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#openapi_config EndpointsService#openapi_config}
@@ -301,6 +308,7 @@ export function endpointsServiceTimeoutsToTerraform(struct?: EndpointsServiceTim
 
 export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -310,7 +318,10 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): EndpointsServiceTimeouts | undefined {
+  public get internalValue(): EndpointsServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -328,15 +339,21 @@ export class EndpointsServiceTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: EndpointsServiceTimeouts | undefined) {
+  public set internalValue(value: EndpointsServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -427,6 +444,7 @@ export class EndpointsService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._grpcConfig = config.grpcConfig;
+    this._id = config.id;
     this._openapiConfig = config.openapiConfig;
     this._project = config.project;
     this._protocOutputBase64 = config.protocOutputBase64;
@@ -477,8 +495,19 @@ export class EndpointsService extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // openapi_config - computed: false, optional: true, required: false
@@ -565,6 +594,7 @@ export class EndpointsService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       grpc_config: cdktf.stringToTerraform(this._grpcConfig),
+      id: cdktf.stringToTerraform(this._id),
       openapi_config: cdktf.stringToTerraform(this._openapiConfig),
       project: cdktf.stringToTerraform(this._project),
       protoc_output_base64: cdktf.stringToTerraform(this._protocOutputBase64),

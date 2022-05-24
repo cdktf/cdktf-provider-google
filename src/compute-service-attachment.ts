@@ -45,6 +45,13 @@ destination servers.
   */
   readonly enableProxyProtocol: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#id ComputeServiceAttachment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
@@ -187,6 +194,102 @@ export function computeServiceAttachmentConsumerAcceptListsToTerraform(struct?: 
   }
 }
 
+export class ComputeServiceAttachmentConsumerAcceptListsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeServiceAttachmentConsumerAcceptLists | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectionLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionLimit = this._connectionLimit;
+    }
+    if (this._projectIdOrNum !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectIdOrNum = this._projectIdOrNum;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeServiceAttachmentConsumerAcceptLists | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._connectionLimit = undefined;
+      this._projectIdOrNum = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._connectionLimit = value.connectionLimit;
+      this._projectIdOrNum = value.projectIdOrNum;
+    }
+  }
+
+  // connection_limit - computed: false, optional: false, required: true
+  private _connectionLimit?: number; 
+  public get connectionLimit() {
+    return this.getNumberAttribute('connection_limit');
+  }
+  public set connectionLimit(value: number) {
+    this._connectionLimit = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionLimitInput() {
+    return this._connectionLimit;
+  }
+
+  // project_id_or_num - computed: false, optional: false, required: true
+  private _projectIdOrNum?: string; 
+  public get projectIdOrNum() {
+    return this.getStringAttribute('project_id_or_num');
+  }
+  public set projectIdOrNum(value: string) {
+    this._projectIdOrNum = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdOrNumInput() {
+    return this._projectIdOrNum;
+  }
+}
+
+export class ComputeServiceAttachmentConsumerAcceptListsList extends cdktf.ComplexList {
+  public internalValue? : ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeServiceAttachmentConsumerAcceptListsOutputReference {
+    return new ComputeServiceAttachmentConsumerAcceptListsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeServiceAttachmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_service_attachment#create ComputeServiceAttachment#create}
@@ -216,6 +319,7 @@ export function computeServiceAttachmentTimeoutsToTerraform(struct?: ComputeServ
 
 export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -225,7 +329,10 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeServiceAttachmentTimeouts | undefined {
+  public get internalValue(): ComputeServiceAttachmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -243,15 +350,21 @@ export class ComputeServiceAttachmentTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeServiceAttachmentTimeouts | undefined) {
+  public set internalValue(value: ComputeServiceAttachmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -346,12 +459,13 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
     this._description = config.description;
     this._domainNames = config.domainNames;
     this._enableProxyProtocol = config.enableProxyProtocol;
+    this._id = config.id;
     this._name = config.name;
     this._natSubnets = config.natSubnets;
     this._project = config.project;
     this._region = config.region;
     this._targetService = config.targetService;
-    this._consumerAcceptLists = config.consumerAcceptLists;
+    this._consumerAcceptLists.internalValue = config.consumerAcceptLists;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -445,8 +559,19 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -526,20 +651,19 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   }
 
   // consumer_accept_lists - computed: false, optional: true, required: false
-  private _consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable; 
+  private _consumerAcceptLists = new ComputeServiceAttachmentConsumerAcceptListsList(this, "consumer_accept_lists", false);
   public get consumerAcceptLists() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('consumer_accept_lists');
+    return this._consumerAcceptLists;
   }
-  public set consumerAcceptLists(value: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable) {
-    this._consumerAcceptLists = value;
+  public putConsumerAcceptLists(value: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable) {
+    this._consumerAcceptLists.internalValue = value;
   }
   public resetConsumerAcceptLists() {
-    this._consumerAcceptLists = undefined;
+    this._consumerAcceptLists.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get consumerAcceptListsInput() {
-    return this._consumerAcceptLists;
+    return this._consumerAcceptLists.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -569,12 +693,13 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       domain_names: cdktf.listMapper(cdktf.stringToTerraform)(this._domainNames),
       enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       nat_subnets: cdktf.listMapper(cdktf.stringToTerraform)(this._natSubnets),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       target_service: cdktf.stringToTerraform(this._targetService),
-      consumer_accept_lists: cdktf.listMapper(computeServiceAttachmentConsumerAcceptListsToTerraform)(this._consumerAcceptLists),
+      consumer_accept_lists: cdktf.listMapper(computeServiceAttachmentConsumerAcceptListsToTerraform)(this._consumerAcceptLists.internalValue),
       timeouts: computeServiceAttachmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

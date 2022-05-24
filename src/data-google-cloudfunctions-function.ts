@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function#id DataGoogleCloudfunctionsFunction#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A user-defined name of the function. Function names must be unique globally.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
@@ -497,6 +504,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
@@ -512,8 +520,9 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // build_environment_variables - computed: true, optional: false, required: false
-  public buildEnvironmentVariables(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'build_environment_variables').lookup(key);
+  private _buildEnvironmentVariables = new cdktf.StringMap(this, "build_environment_variables");
+  public get buildEnvironmentVariables() {
+    return this._buildEnvironmentVariables;
   }
 
   // description - computed: true, optional: false, required: false
@@ -532,8 +541,9 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // environment_variables - computed: true, optional: false, required: false
-  public environmentVariables(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'environment_variables').lookup(key);
+  private _environmentVariables = new cdktf.StringMap(this, "environment_variables");
+  public get environmentVariables() {
+    return this._environmentVariables;
   }
 
   // event_trigger - computed: true, optional: false, required: false
@@ -553,8 +563,19 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ingress_settings - computed: true, optional: false, required: false
@@ -568,8 +589,9 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // max_instances - computed: true, optional: false, required: false
@@ -691,6 +713,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

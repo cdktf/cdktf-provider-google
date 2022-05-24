@@ -20,6 +20,13 @@ export interface IdentityPlatformInboundSamlConfigConfig extends cdktf.Terraform
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_inbound_saml_config#id IdentityPlatformInboundSamlConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
@@ -69,6 +76,86 @@ export function identityPlatformInboundSamlConfigIdpConfigIdpCertificatesToTerra
   }
 }
 
+export class IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._x509Certificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.x509Certificate = this._x509Certificate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._x509Certificate = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._x509Certificate = value.x509Certificate;
+    }
+  }
+
+  // x509_certificate - computed: false, optional: true, required: false
+  private _x509Certificate?: string; 
+  public get x509Certificate() {
+    return this.getStringAttribute('x509_certificate');
+  }
+  public set x509Certificate(value: string) {
+    this._x509Certificate = value;
+  }
+  public resetX509Certificate() {
+    this._x509Certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get x509CertificateInput() {
+    return this._x509Certificate;
+  }
+}
+
+export class IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesList extends cdktf.ComplexList {
+  public internalValue? : IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesOutputReference {
+    return new IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface IdentityPlatformInboundSamlConfigIdpConfig {
   /**
   * Unique identifier for all SAML entities
@@ -135,9 +222,9 @@ export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends c
       hasAnyValues = true;
       internalValueResult.ssoUrl = this._ssoUrl;
     }
-    if (this._idpCertificates !== undefined) {
+    if (this._idpCertificates?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.idpCertificates = this._idpCertificates;
+      internalValueResult.idpCertificates = this._idpCertificates?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -148,14 +235,14 @@ export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends c
       this._idpEntityId = undefined;
       this._signRequest = undefined;
       this._ssoUrl = undefined;
-      this._idpCertificates = undefined;
+      this._idpCertificates.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._idpEntityId = value.idpEntityId;
       this._signRequest = value.signRequest;
       this._ssoUrl = value.ssoUrl;
-      this._idpCertificates = value.idpCertificates;
+      this._idpCertificates.internalValue = value.idpCertificates;
     }
   }
 
@@ -202,17 +289,16 @@ export class IdentityPlatformInboundSamlConfigIdpConfigOutputReference extends c
   }
 
   // idp_certificates - computed: false, optional: false, required: true
-  private _idpCertificates?: IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates[] | cdktf.IResolvable; 
+  private _idpCertificates = new IdentityPlatformInboundSamlConfigIdpConfigIdpCertificatesList(this, "idp_certificates", false);
   public get idpCertificates() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('idp_certificates');
+    return this._idpCertificates;
   }
-  public set idpCertificates(value: IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates[] | cdktf.IResolvable) {
-    this._idpCertificates = value;
+  public putIdpCertificates(value: IdentityPlatformInboundSamlConfigIdpConfigIdpCertificates[] | cdktf.IResolvable) {
+    this._idpCertificates.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get idpCertificatesInput() {
-    return this._idpCertificates;
+    return this._idpCertificates.internalValue;
   }
 }
 export interface IdentityPlatformInboundSamlConfigSpConfigSpCertificates {
@@ -323,6 +409,10 @@ export class IdentityPlatformInboundSamlConfigSpConfigOutputReference extends cd
       hasAnyValues = true;
       internalValueResult.callbackUri = this._callbackUri;
     }
+    if (this._spEntityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spEntityId = this._spEntityId;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -406,6 +496,7 @@ export function identityPlatformInboundSamlConfigTimeoutsToTerraform(struct?: Id
 
 export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -415,7 +506,10 @@ export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): IdentityPlatformInboundSamlConfigTimeouts | undefined {
+  public get internalValue(): IdentityPlatformInboundSamlConfigTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -433,15 +527,21 @@ export class IdentityPlatformInboundSamlConfigTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: IdentityPlatformInboundSamlConfigTimeouts | undefined) {
+  public set internalValue(value: IdentityPlatformInboundSamlConfigTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -533,6 +633,7 @@ export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
     });
     this._displayName = config.displayName;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._idpConfig.internalValue = config.idpConfig;
@@ -574,8 +675,19 @@ export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -657,6 +769,7 @@ export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       idp_config: identityPlatformInboundSamlConfigIdpConfigToTerraform(this._idpConfig.internalValue),

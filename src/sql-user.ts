@@ -22,6 +22,13 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   */
   readonly host?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#id SqlUser#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the Cloud SQL instance. Changing this forces a new resource to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#instance SqlUser#instance}
@@ -89,6 +96,7 @@ export function sqlUserTimeoutsToTerraform(struct?: SqlUserTimeoutsOutputReferen
 
 export class SqlUserTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -98,7 +106,10 @@ export class SqlUserTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SqlUserTimeouts | undefined {
+  public get internalValue(): SqlUserTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -116,15 +127,21 @@ export class SqlUserTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SqlUserTimeouts | undefined) {
+  public set internalValue(value: SqlUserTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -216,6 +233,7 @@ export class SqlUser extends cdktf.TerraformResource {
     });
     this._deletionPolicy = config.deletionPolicy;
     this._host = config.host;
+    this._id = config.id;
     this._instance = config.instance;
     this._name = config.name;
     this._password = config.password;
@@ -261,8 +279,19 @@ export class SqlUser extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance - computed: false, optional: false, required: true
@@ -363,6 +392,7 @@ export class SqlUser extends cdktf.TerraformResource {
     return {
       deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       host: cdktf.stringToTerraform(this._host),
+      id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
       name: cdktf.stringToTerraform(this._name),
       password: cdktf.stringToTerraform(this._password),

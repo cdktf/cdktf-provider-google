@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeRegionPerInstanceConfigConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config#id ComputeRegionPerInstanceConfig#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_per_instance_config#minimal_action ComputeRegionPerInstanceConfig#minimal_action}
   */
   readonly minimalAction?: string;
@@ -99,6 +106,146 @@ export function computeRegionPerInstanceConfigPreservedStateDiskToTerraform(stru
   }
 }
 
+export class ComputeRegionPerInstanceConfigPreservedStateDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionPerInstanceConfigPreservedStateDisk | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._deleteRule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deleteRule = this._deleteRule;
+    }
+    if (this._deviceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceName = this._deviceName;
+    }
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._source !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.source = this._source;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionPerInstanceConfigPreservedStateDisk | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._deleteRule = undefined;
+      this._deviceName = undefined;
+      this._mode = undefined;
+      this._source = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._deleteRule = value.deleteRule;
+      this._deviceName = value.deviceName;
+      this._mode = value.mode;
+      this._source = value.source;
+    }
+  }
+
+  // delete_rule - computed: false, optional: true, required: false
+  private _deleteRule?: string; 
+  public get deleteRule() {
+    return this.getStringAttribute('delete_rule');
+  }
+  public set deleteRule(value: string) {
+    this._deleteRule = value;
+  }
+  public resetDeleteRule() {
+    this._deleteRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteRuleInput() {
+    return this._deleteRule;
+  }
+
+  // device_name - computed: false, optional: false, required: true
+  private _deviceName?: string; 
+  public get deviceName() {
+    return this.getStringAttribute('device_name');
+  }
+  public set deviceName(value: string) {
+    this._deviceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceNameInput() {
+    return this._deviceName;
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // source - computed: false, optional: false, required: true
+  private _source?: string; 
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+  public set source(value: string) {
+    this._source = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source;
+  }
+}
+
+export class ComputeRegionPerInstanceConfigPreservedStateDiskList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionPerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionPerInstanceConfigPreservedStateDiskOutputReference {
+    return new ComputeRegionPerInstanceConfigPreservedStateDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionPerInstanceConfigPreservedState {
   /**
   * Preserved metadata defined for this instance. This is a list of key->value pairs.
@@ -143,9 +290,9 @@ export class ComputeRegionPerInstanceConfigPreservedStateOutputReference extends
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._disk !== undefined) {
+    if (this._disk?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.disk = this._disk;
+      internalValueResult.disk = this._disk?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -154,12 +301,12 @@ export class ComputeRegionPerInstanceConfigPreservedStateOutputReference extends
     if (value === undefined) {
       this.isEmptyObject = false;
       this._metadata = undefined;
-      this._disk = undefined;
+      this._disk.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._metadata = value.metadata;
-      this._disk = value.disk;
+      this._disk.internalValue = value.disk;
     }
   }
 
@@ -180,20 +327,19 @@ export class ComputeRegionPerInstanceConfigPreservedStateOutputReference extends
   }
 
   // disk - computed: false, optional: true, required: false
-  private _disk?: ComputeRegionPerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable; 
+  private _disk = new ComputeRegionPerInstanceConfigPreservedStateDiskList(this, "disk", true);
   public get disk() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('disk')));
+    return this._disk;
   }
-  public set disk(value: ComputeRegionPerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable) {
-    this._disk = value;
+  public putDisk(value: ComputeRegionPerInstanceConfigPreservedStateDisk[] | cdktf.IResolvable) {
+    this._disk.internalValue = value;
   }
   public resetDisk() {
-    this._disk = undefined;
+    this._disk.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diskInput() {
-    return this._disk;
+    return this._disk.internalValue;
   }
 }
 export interface ComputeRegionPerInstanceConfigTimeouts {
@@ -225,6 +371,7 @@ export function computeRegionPerInstanceConfigTimeoutsToTerraform(struct?: Compu
 
 export class ComputeRegionPerInstanceConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -234,7 +381,10 @@ export class ComputeRegionPerInstanceConfigTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeRegionPerInstanceConfigTimeouts | undefined {
+  public get internalValue(): ComputeRegionPerInstanceConfigTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -252,15 +402,21 @@ export class ComputeRegionPerInstanceConfigTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeRegionPerInstanceConfigTimeouts | undefined) {
+  public set internalValue(value: ComputeRegionPerInstanceConfigTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -350,6 +506,7 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._minimalAction = config.minimalAction;
     this._mostDisruptiveAllowedAction = config.mostDisruptiveAllowedAction;
     this._name = config.name;
@@ -366,8 +523,19 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // minimal_action - computed: false, optional: true, required: false
@@ -514,6 +682,7 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       minimal_action: cdktf.stringToTerraform(this._minimalAction),
       most_disruptive_allowed_action: cdktf.stringToTerraform(this._mostDisruptiveAllowedAction),
       name: cdktf.stringToTerraform(this._name),

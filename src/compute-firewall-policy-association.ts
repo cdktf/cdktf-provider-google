@@ -20,6 +20,13 @@ export interface ComputeFirewallPolicyAssociationConfig extends cdktf.TerraformM
   */
   readonly firewallPolicy: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#id ComputeFirewallPolicyAssociation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name for an association.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall_policy_association#name ComputeFirewallPolicyAssociation#name}
@@ -56,6 +63,7 @@ export function computeFirewallPolicyAssociationTimeoutsToTerraform(struct?: Com
 
 export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -65,7 +73,10 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeFirewallPolicyAssociationTimeouts | undefined {
+  public get internalValue(): ComputeFirewallPolicyAssociationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -79,14 +90,20 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeFirewallPolicyAssociationTimeouts | undefined) {
+  public set internalValue(value: ComputeFirewallPolicyAssociationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -161,6 +178,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
     });
     this._attachmentTarget = config.attachmentTarget;
     this._firewallPolicy = config.firewallPolicy;
+    this._id = config.id;
     this._name = config.name;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -196,8 +214,19 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -242,6 +271,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
     return {
       attachment_target: cdktf.stringToTerraform(this._attachmentTarget),
       firewall_policy: cdktf.stringToTerraform(this._firewallPolicy),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       timeouts: computeFirewallPolicyAssociationTimeoutsToTerraform(this._timeouts.internalValue),
     };

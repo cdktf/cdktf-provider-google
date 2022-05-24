@@ -18,6 +18,13 @@ export interface AppEngineApplicationConfig extends cdktf.TerraformMetaArguments
   */
   readonly databaseType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#id AppEngineApplication#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location to serve the app from.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application#location_id AppEngineApplication#location_id}
@@ -338,6 +345,7 @@ export function appEngineApplicationTimeoutsToTerraform(struct?: AppEngineApplic
 
 export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -347,7 +355,10 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppEngineApplicationTimeouts | undefined {
+  public get internalValue(): AppEngineApplicationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -361,14 +372,20 @@ export class AppEngineApplicationTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppEngineApplicationTimeouts | undefined) {
+  public set internalValue(value: AppEngineApplicationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._update = value.update;
     }
@@ -443,6 +460,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
     });
     this._authDomain = config.authDomain;
     this._databaseType = config.databaseType;
+    this._id = config.id;
     this._locationId = config.locationId;
     this._project = config.project;
     this._servingStatus = config.servingStatus;
@@ -513,8 +531,19 @@ export class AppEngineApplication extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location_id - computed: false, optional: false, required: true
@@ -629,6 +658,7 @@ export class AppEngineApplication extends cdktf.TerraformResource {
     return {
       auth_domain: cdktf.stringToTerraform(this._authDomain),
       database_type: cdktf.stringToTerraform(this._databaseType),
+      id: cdktf.stringToTerraform(this._id),
       location_id: cdktf.stringToTerraform(this._locationId),
       project: cdktf.stringToTerraform(this._project),
       serving_status: cdktf.stringToTerraform(this._servingStatus),

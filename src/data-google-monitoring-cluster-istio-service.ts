@@ -15,6 +15,13 @@ export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.Ter
   */
   readonly clusterName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/monitoring_cluster_istio_service#id DataGoogleMonitoringClusterIstioService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the location resource label in k8s_cluster resources.
   * 
@@ -140,6 +147,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
       lifecycle: config.lifecycle
     });
     this._clusterName = config.clusterName;
+    this._id = config.id;
     this._location = config.location;
     this._project = config.project;
     this._serviceName = config.serviceName;
@@ -169,8 +177,19 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -251,6 +270,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_name: cdktf.stringToTerraform(this._clusterName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       service_name: cdktf.stringToTerraform(this._serviceName),

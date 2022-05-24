@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudRunServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#id DataGoogleCloudRunService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location of the cloud run instance. eg us-central1
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#location DataGoogleCloudRunService#location}
@@ -68,8 +75,9 @@ export class DataGoogleCloudRunServiceMetadataOutputReference extends cdktf.Comp
   }
 
   // annotations - computed: true, optional: false, required: false
-  public annotations(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'annotations').lookup(key);
+  private _annotations = new cdktf.StringMap(this, "annotations");
+  public get annotations() {
+    return this._annotations;
   }
 
   // generation - computed: true, optional: false, required: false
@@ -78,8 +86,9 @@ export class DataGoogleCloudRunServiceMetadataOutputReference extends cdktf.Comp
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // namespace - computed: true, optional: false, required: false
@@ -326,8 +335,9 @@ export class DataGoogleCloudRunServiceTemplateMetadataOutputReference extends cd
   }
 
   // annotations - computed: true, optional: false, required: false
-  public annotations(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'annotations').lookup(key);
+  private _annotations = new cdktf.StringMap(this, "annotations");
+  public get annotations() {
+    return this._annotations;
   }
 
   // generation - computed: true, optional: false, required: false
@@ -336,8 +346,9 @@ export class DataGoogleCloudRunServiceTemplateMetadataOutputReference extends cd
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // name - computed: true, optional: false, required: false
@@ -1052,13 +1063,15 @@ export class DataGoogleCloudRunServiceTemplateSpecContainersResourcesOutputRefer
   }
 
   // limits - computed: true, optional: false, required: false
-  public limits(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'limits').lookup(key);
+  private _limits = new cdktf.StringMap(this, "limits");
+  public get limits() {
+    return this._limits;
   }
 
   // requests - computed: true, optional: false, required: false
-  public requests(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'requests').lookup(key);
+  private _requests = new cdktf.StringMap(this, "requests");
+  public get requests() {
+    return this._requests;
   }
 }
 
@@ -1758,6 +1771,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
@@ -1773,8 +1787,19 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1849,6 +1874,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

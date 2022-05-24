@@ -14,6 +14,13 @@ export interface AccessContextManagerAccessLevelConfig extends cdktf.TerraformMe
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_level#id AccessContextManagerAccessLevel#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Resource name for the Access Level. The short_name component must begin
 with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
@@ -88,6 +95,127 @@ export function accessContextManagerAccessLevelBasicConditionsDevicePolicyOsCons
   }
 }
 
+export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._minimumVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimumVersion = this._minimumVersion;
+    }
+    if (this._osType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.osType = this._osType;
+    }
+    if (this._requireVerifiedChromeOs !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requireVerifiedChromeOs = this._requireVerifiedChromeOs;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._minimumVersion = undefined;
+      this._osType = undefined;
+      this._requireVerifiedChromeOs = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._minimumVersion = value.minimumVersion;
+      this._osType = value.osType;
+      this._requireVerifiedChromeOs = value.requireVerifiedChromeOs;
+    }
+  }
+
+  // minimum_version - computed: false, optional: true, required: false
+  private _minimumVersion?: string; 
+  public get minimumVersion() {
+    return this.getStringAttribute('minimum_version');
+  }
+  public set minimumVersion(value: string) {
+    this._minimumVersion = value;
+  }
+  public resetMinimumVersion() {
+    this._minimumVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumVersionInput() {
+    return this._minimumVersion;
+  }
+
+  // os_type - computed: false, optional: false, required: true
+  private _osType?: string; 
+  public get osType() {
+    return this.getStringAttribute('os_type');
+  }
+  public set osType(value: string) {
+    this._osType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osTypeInput() {
+    return this._osType;
+  }
+
+  // require_verified_chrome_os - computed: false, optional: true, required: false
+  private _requireVerifiedChromeOs?: boolean | cdktf.IResolvable; 
+  public get requireVerifiedChromeOs() {
+    return this.getBooleanAttribute('require_verified_chrome_os');
+  }
+  public set requireVerifiedChromeOs(value: boolean | cdktf.IResolvable) {
+    this._requireVerifiedChromeOs = value;
+  }
+  public resetRequireVerifiedChromeOs() {
+    this._requireVerifiedChromeOs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireVerifiedChromeOsInput() {
+    return this._requireVerifiedChromeOs;
+  }
+}
+
+export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsOutputReference {
+    return new AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerAccessLevelBasicConditionsDevicePolicy {
   /**
   * A list of allowed device management levels.
@@ -179,9 +307,9 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
       hasAnyValues = true;
       internalValueResult.requireScreenLock = this._requireScreenLock;
     }
-    if (this._osConstraints !== undefined) {
+    if (this._osConstraints?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.osConstraints = this._osConstraints;
+      internalValueResult.osConstraints = this._osConstraints?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -194,7 +322,7 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
       this._requireAdminApproval = undefined;
       this._requireCorpOwned = undefined;
       this._requireScreenLock = undefined;
-      this._osConstraints = undefined;
+      this._osConstraints.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -203,7 +331,7 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
       this._requireAdminApproval = value.requireAdminApproval;
       this._requireCorpOwned = value.requireCorpOwned;
       this._requireScreenLock = value.requireScreenLock;
-      this._osConstraints = value.osConstraints;
+      this._osConstraints.internalValue = value.osConstraints;
     }
   }
 
@@ -288,20 +416,19 @@ export class AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputRef
   }
 
   // os_constraints - computed: false, optional: true, required: false
-  private _osConstraints?: AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints[] | cdktf.IResolvable; 
+  private _osConstraints = new AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsList(this, "os_constraints", false);
   public get osConstraints() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('os_constraints');
+    return this._osConstraints;
   }
-  public set osConstraints(value: AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints[] | cdktf.IResolvable) {
-    this._osConstraints = value;
+  public putOsConstraints(value: AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints[] | cdktf.IResolvable) {
+    this._osConstraints.internalValue = value;
   }
   public resetOsConstraints() {
-    this._osConstraints = undefined;
+    this._osConstraints.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get osConstraintsInput() {
-    return this._osConstraints;
+    return this._osConstraints.internalValue;
   }
 }
 export interface AccessContextManagerAccessLevelBasicConditions {
@@ -382,6 +509,196 @@ export function accessContextManagerAccessLevelBasicConditionsToTerraform(struct
   }
 }
 
+export class AccessContextManagerAccessLevelBasicConditionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AccessContextManagerAccessLevelBasicConditions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ipSubnetworks !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipSubnetworks = this._ipSubnetworks;
+    }
+    if (this._members !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.members = this._members;
+    }
+    if (this._negate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negate = this._negate;
+    }
+    if (this._regions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regions = this._regions;
+    }
+    if (this._requiredAccessLevels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requiredAccessLevels = this._requiredAccessLevels;
+    }
+    if (this._devicePolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.devicePolicy = this._devicePolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AccessContextManagerAccessLevelBasicConditions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ipSubnetworks = undefined;
+      this._members = undefined;
+      this._negate = undefined;
+      this._regions = undefined;
+      this._requiredAccessLevels = undefined;
+      this._devicePolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ipSubnetworks = value.ipSubnetworks;
+      this._members = value.members;
+      this._negate = value.negate;
+      this._regions = value.regions;
+      this._requiredAccessLevels = value.requiredAccessLevels;
+      this._devicePolicy.internalValue = value.devicePolicy;
+    }
+  }
+
+  // ip_subnetworks - computed: false, optional: true, required: false
+  private _ipSubnetworks?: string[]; 
+  public get ipSubnetworks() {
+    return this.getListAttribute('ip_subnetworks');
+  }
+  public set ipSubnetworks(value: string[]) {
+    this._ipSubnetworks = value;
+  }
+  public resetIpSubnetworks() {
+    this._ipSubnetworks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipSubnetworksInput() {
+    return this._ipSubnetworks;
+  }
+
+  // members - computed: false, optional: true, required: false
+  private _members?: string[]; 
+  public get members() {
+    return this.getListAttribute('members');
+  }
+  public set members(value: string[]) {
+    this._members = value;
+  }
+  public resetMembers() {
+    this._members = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get membersInput() {
+    return this._members;
+  }
+
+  // negate - computed: false, optional: true, required: false
+  private _negate?: boolean | cdktf.IResolvable; 
+  public get negate() {
+    return this.getBooleanAttribute('negate');
+  }
+  public set negate(value: boolean | cdktf.IResolvable) {
+    this._negate = value;
+  }
+  public resetNegate() {
+    this._negate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateInput() {
+    return this._negate;
+  }
+
+  // regions - computed: false, optional: true, required: false
+  private _regions?: string[]; 
+  public get regions() {
+    return this.getListAttribute('regions');
+  }
+  public set regions(value: string[]) {
+    this._regions = value;
+  }
+  public resetRegions() {
+    this._regions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionsInput() {
+    return this._regions;
+  }
+
+  // required_access_levels - computed: false, optional: true, required: false
+  private _requiredAccessLevels?: string[]; 
+  public get requiredAccessLevels() {
+    return this.getListAttribute('required_access_levels');
+  }
+  public set requiredAccessLevels(value: string[]) {
+    this._requiredAccessLevels = value;
+  }
+  public resetRequiredAccessLevels() {
+    this._requiredAccessLevels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requiredAccessLevelsInput() {
+    return this._requiredAccessLevels;
+  }
+
+  // device_policy - computed: false, optional: true, required: false
+  private _devicePolicy = new AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputReference(this, "device_policy");
+  public get devicePolicy() {
+    return this._devicePolicy;
+  }
+  public putDevicePolicy(value: AccessContextManagerAccessLevelBasicConditionsDevicePolicy) {
+    this._devicePolicy.internalValue = value;
+  }
+  public resetDevicePolicy() {
+    this._devicePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get devicePolicyInput() {
+    return this._devicePolicy.internalValue;
+  }
+}
+
+export class AccessContextManagerAccessLevelBasicConditionsList extends cdktf.ComplexList {
+  public internalValue? : AccessContextManagerAccessLevelBasicConditions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AccessContextManagerAccessLevelBasicConditionsOutputReference {
+    return new AccessContextManagerAccessLevelBasicConditionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AccessContextManagerAccessLevelBasic {
   /**
   * How the conditions list should be combined to determine if a request
@@ -430,9 +747,9 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.combiningFunction = this._combiningFunction;
     }
-    if (this._conditions !== undefined) {
+    if (this._conditions?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.conditions = this._conditions;
+      internalValueResult.conditions = this._conditions?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -441,12 +758,12 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
     if (value === undefined) {
       this.isEmptyObject = false;
       this._combiningFunction = undefined;
-      this._conditions = undefined;
+      this._conditions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._combiningFunction = value.combiningFunction;
-      this._conditions = value.conditions;
+      this._conditions.internalValue = value.conditions;
     }
   }
 
@@ -467,17 +784,16 @@ export class AccessContextManagerAccessLevelBasicOutputReference extends cdktf.C
   }
 
   // conditions - computed: false, optional: false, required: true
-  private _conditions?: AccessContextManagerAccessLevelBasicConditions[] | cdktf.IResolvable; 
+  private _conditions = new AccessContextManagerAccessLevelBasicConditionsList(this, "conditions", false);
   public get conditions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('conditions');
+    return this._conditions;
   }
-  public set conditions(value: AccessContextManagerAccessLevelBasicConditions[] | cdktf.IResolvable) {
-    this._conditions = value;
+  public putConditions(value: AccessContextManagerAccessLevelBasicConditions[] | cdktf.IResolvable) {
+    this._conditions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get conditionsInput() {
-    return this._conditions;
+    return this._conditions.internalValue;
   }
 }
 export interface AccessContextManagerAccessLevelCustomExpr {
@@ -724,6 +1040,7 @@ export function accessContextManagerAccessLevelTimeoutsToTerraform(struct?: Acce
 
 export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -733,7 +1050,10 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AccessContextManagerAccessLevelTimeouts | undefined {
+  public get internalValue(): AccessContextManagerAccessLevelTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -751,15 +1071,21 @@ export class AccessContextManagerAccessLevelTimeoutsOutputReference extends cdkt
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AccessContextManagerAccessLevelTimeouts | undefined) {
+  public set internalValue(value: AccessContextManagerAccessLevelTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -850,6 +1176,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._parent = config.parent;
     this._title = config.title;
@@ -879,8 +1206,19 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -977,6 +1315,7 @@ export class AccessContextManagerAccessLevel extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       parent: cdktf.stringToTerraform(this._parent),
       title: cdktf.stringToTerraform(this._title),

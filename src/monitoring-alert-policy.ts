@@ -30,6 +30,13 @@ name is limited to 512 Unicode characters.
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#id MonitoringAlertPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
 on an already opened incident. Each element of this array corresponds
@@ -421,6 +428,152 @@ export function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerr
   }
 }
 
+export class MonitoringAlertPolicyConditionsConditionAbsentAggregationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionAbsentAggregations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._alignmentPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alignmentPeriod = this._alignmentPeriod;
+    }
+    if (this._crossSeriesReducer !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crossSeriesReducer = this._crossSeriesReducer;
+    }
+    if (this._groupByFields !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupByFields = this._groupByFields;
+    }
+    if (this._perSeriesAligner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.perSeriesAligner = this._perSeriesAligner;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._alignmentPeriod = undefined;
+      this._crossSeriesReducer = undefined;
+      this._groupByFields = undefined;
+      this._perSeriesAligner = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._alignmentPeriod = value.alignmentPeriod;
+      this._crossSeriesReducer = value.crossSeriesReducer;
+      this._groupByFields = value.groupByFields;
+      this._perSeriesAligner = value.perSeriesAligner;
+    }
+  }
+
+  // alignment_period - computed: false, optional: true, required: false
+  private _alignmentPeriod?: string; 
+  public get alignmentPeriod() {
+    return this.getStringAttribute('alignment_period');
+  }
+  public set alignmentPeriod(value: string) {
+    this._alignmentPeriod = value;
+  }
+  public resetAlignmentPeriod() {
+    this._alignmentPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alignmentPeriodInput() {
+    return this._alignmentPeriod;
+  }
+
+  // cross_series_reducer - computed: false, optional: true, required: false
+  private _crossSeriesReducer?: string; 
+  public get crossSeriesReducer() {
+    return this.getStringAttribute('cross_series_reducer');
+  }
+  public set crossSeriesReducer(value: string) {
+    this._crossSeriesReducer = value;
+  }
+  public resetCrossSeriesReducer() {
+    this._crossSeriesReducer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossSeriesReducerInput() {
+    return this._crossSeriesReducer;
+  }
+
+  // group_by_fields - computed: false, optional: true, required: false
+  private _groupByFields?: string[]; 
+  public get groupByFields() {
+    return this.getListAttribute('group_by_fields');
+  }
+  public set groupByFields(value: string[]) {
+    this._groupByFields = value;
+  }
+  public resetGroupByFields() {
+    this._groupByFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupByFieldsInput() {
+    return this._groupByFields;
+  }
+
+  // per_series_aligner - computed: false, optional: true, required: false
+  private _perSeriesAligner?: string; 
+  public get perSeriesAligner() {
+    return this.getStringAttribute('per_series_aligner');
+  }
+  public set perSeriesAligner(value: string) {
+    this._perSeriesAligner = value;
+  }
+  public resetPerSeriesAligner() {
+    this._perSeriesAligner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perSeriesAlignerInput() {
+    return this._perSeriesAligner;
+  }
+}
+
+export class MonitoringAlertPolicyConditionsConditionAbsentAggregationsList extends cdktf.ComplexList {
+  public internalValue? : MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringAlertPolicyConditionsConditionAbsentAggregationsOutputReference {
+    return new MonitoringAlertPolicyConditionsConditionAbsentAggregationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitoringAlertPolicyConditionsConditionAbsentTrigger {
   /**
   * The absolute number of time series
@@ -598,9 +751,9 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
       hasAnyValues = true;
       internalValueResult.filter = this._filter;
     }
-    if (this._aggregations !== undefined) {
+    if (this._aggregations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.aggregations = this._aggregations;
+      internalValueResult.aggregations = this._aggregations?.internalValue;
     }
     if (this._trigger?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -614,14 +767,14 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
       this.isEmptyObject = false;
       this._duration = undefined;
       this._filter = undefined;
-      this._aggregations = undefined;
+      this._aggregations.internalValue = undefined;
       this._trigger.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._duration = value.duration;
       this._filter = value.filter;
-      this._aggregations = value.aggregations;
+      this._aggregations.internalValue = value.aggregations;
       this._trigger.internalValue = value.trigger;
     }
   }
@@ -656,20 +809,19 @@ export class MonitoringAlertPolicyConditionsConditionAbsentOutputReference exten
   }
 
   // aggregations - computed: false, optional: true, required: false
-  private _aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable; 
+  private _aggregations = new MonitoringAlertPolicyConditionsConditionAbsentAggregationsList(this, "aggregations", false);
   public get aggregations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aggregations');
+    return this._aggregations;
   }
-  public set aggregations(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable) {
-    this._aggregations = value;
+  public putAggregations(value: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable) {
+    this._aggregations.internalValue = value;
   }
   public resetAggregations() {
-    this._aggregations = undefined;
+    this._aggregations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationsInput() {
-    return this._aggregations;
+    return this._aggregations.internalValue;
   }
 
   // trigger - computed: false, optional: true, required: false
@@ -1129,6 +1281,152 @@ export function monitoringAlertPolicyConditionsConditionThresholdAggregationsToT
   }
 }
 
+export class MonitoringAlertPolicyConditionsConditionThresholdAggregationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionThresholdAggregations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._alignmentPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alignmentPeriod = this._alignmentPeriod;
+    }
+    if (this._crossSeriesReducer !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crossSeriesReducer = this._crossSeriesReducer;
+    }
+    if (this._groupByFields !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupByFields = this._groupByFields;
+    }
+    if (this._perSeriesAligner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.perSeriesAligner = this._perSeriesAligner;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._alignmentPeriod = undefined;
+      this._crossSeriesReducer = undefined;
+      this._groupByFields = undefined;
+      this._perSeriesAligner = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._alignmentPeriod = value.alignmentPeriod;
+      this._crossSeriesReducer = value.crossSeriesReducer;
+      this._groupByFields = value.groupByFields;
+      this._perSeriesAligner = value.perSeriesAligner;
+    }
+  }
+
+  // alignment_period - computed: false, optional: true, required: false
+  private _alignmentPeriod?: string; 
+  public get alignmentPeriod() {
+    return this.getStringAttribute('alignment_period');
+  }
+  public set alignmentPeriod(value: string) {
+    this._alignmentPeriod = value;
+  }
+  public resetAlignmentPeriod() {
+    this._alignmentPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alignmentPeriodInput() {
+    return this._alignmentPeriod;
+  }
+
+  // cross_series_reducer - computed: false, optional: true, required: false
+  private _crossSeriesReducer?: string; 
+  public get crossSeriesReducer() {
+    return this.getStringAttribute('cross_series_reducer');
+  }
+  public set crossSeriesReducer(value: string) {
+    this._crossSeriesReducer = value;
+  }
+  public resetCrossSeriesReducer() {
+    this._crossSeriesReducer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossSeriesReducerInput() {
+    return this._crossSeriesReducer;
+  }
+
+  // group_by_fields - computed: false, optional: true, required: false
+  private _groupByFields?: string[]; 
+  public get groupByFields() {
+    return this.getListAttribute('group_by_fields');
+  }
+  public set groupByFields(value: string[]) {
+    this._groupByFields = value;
+  }
+  public resetGroupByFields() {
+    this._groupByFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupByFieldsInput() {
+    return this._groupByFields;
+  }
+
+  // per_series_aligner - computed: false, optional: true, required: false
+  private _perSeriesAligner?: string; 
+  public get perSeriesAligner() {
+    return this.getStringAttribute('per_series_aligner');
+  }
+  public set perSeriesAligner(value: string) {
+    this._perSeriesAligner = value;
+  }
+  public resetPerSeriesAligner() {
+    this._perSeriesAligner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perSeriesAlignerInput() {
+    return this._perSeriesAligner;
+  }
+}
+
+export class MonitoringAlertPolicyConditionsConditionThresholdAggregationsList extends cdktf.ComplexList {
+  public internalValue? : MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringAlertPolicyConditionsConditionThresholdAggregationsOutputReference {
+    return new MonitoringAlertPolicyConditionsConditionThresholdAggregationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations {
   /**
   * The alignment period for per-time
@@ -1238,6 +1536,152 @@ export function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggr
   }
 }
 
+export class MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._alignmentPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.alignmentPeriod = this._alignmentPeriod;
+    }
+    if (this._crossSeriesReducer !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crossSeriesReducer = this._crossSeriesReducer;
+    }
+    if (this._groupByFields !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupByFields = this._groupByFields;
+    }
+    if (this._perSeriesAligner !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.perSeriesAligner = this._perSeriesAligner;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._alignmentPeriod = undefined;
+      this._crossSeriesReducer = undefined;
+      this._groupByFields = undefined;
+      this._perSeriesAligner = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._alignmentPeriod = value.alignmentPeriod;
+      this._crossSeriesReducer = value.crossSeriesReducer;
+      this._groupByFields = value.groupByFields;
+      this._perSeriesAligner = value.perSeriesAligner;
+    }
+  }
+
+  // alignment_period - computed: false, optional: true, required: false
+  private _alignmentPeriod?: string; 
+  public get alignmentPeriod() {
+    return this.getStringAttribute('alignment_period');
+  }
+  public set alignmentPeriod(value: string) {
+    this._alignmentPeriod = value;
+  }
+  public resetAlignmentPeriod() {
+    this._alignmentPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alignmentPeriodInput() {
+    return this._alignmentPeriod;
+  }
+
+  // cross_series_reducer - computed: false, optional: true, required: false
+  private _crossSeriesReducer?: string; 
+  public get crossSeriesReducer() {
+    return this.getStringAttribute('cross_series_reducer');
+  }
+  public set crossSeriesReducer(value: string) {
+    this._crossSeriesReducer = value;
+  }
+  public resetCrossSeriesReducer() {
+    this._crossSeriesReducer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossSeriesReducerInput() {
+    return this._crossSeriesReducer;
+  }
+
+  // group_by_fields - computed: false, optional: true, required: false
+  private _groupByFields?: string[]; 
+  public get groupByFields() {
+    return this.getListAttribute('group_by_fields');
+  }
+  public set groupByFields(value: string[]) {
+    this._groupByFields = value;
+  }
+  public resetGroupByFields() {
+    this._groupByFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupByFieldsInput() {
+    return this._groupByFields;
+  }
+
+  // per_series_aligner - computed: false, optional: true, required: false
+  private _perSeriesAligner?: string; 
+  public get perSeriesAligner() {
+    return this.getStringAttribute('per_series_aligner');
+  }
+  public set perSeriesAligner(value: string) {
+    this._perSeriesAligner = value;
+  }
+  public resetPerSeriesAligner() {
+    this._perSeriesAligner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perSeriesAlignerInput() {
+    return this._perSeriesAligner;
+  }
+}
+
+export class MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsList extends cdktf.ComplexList {
+  public internalValue? : MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsOutputReference {
+    return new MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitoringAlertPolicyConditionsConditionThresholdTrigger {
   /**
   * The absolute number of time series
@@ -1487,13 +1931,13 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       hasAnyValues = true;
       internalValueResult.thresholdValue = this._thresholdValue;
     }
-    if (this._aggregations !== undefined) {
+    if (this._aggregations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.aggregations = this._aggregations;
+      internalValueResult.aggregations = this._aggregations?.internalValue;
     }
-    if (this._denominatorAggregations !== undefined) {
+    if (this._denominatorAggregations?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.denominatorAggregations = this._denominatorAggregations;
+      internalValueResult.denominatorAggregations = this._denominatorAggregations?.internalValue;
     }
     if (this._trigger?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1510,8 +1954,8 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       this._duration = undefined;
       this._filter = undefined;
       this._thresholdValue = undefined;
-      this._aggregations = undefined;
-      this._denominatorAggregations = undefined;
+      this._aggregations.internalValue = undefined;
+      this._denominatorAggregations.internalValue = undefined;
       this._trigger.internalValue = undefined;
     }
     else {
@@ -1521,8 +1965,8 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       this._duration = value.duration;
       this._filter = value.filter;
       this._thresholdValue = value.thresholdValue;
-      this._aggregations = value.aggregations;
-      this._denominatorAggregations = value.denominatorAggregations;
+      this._aggregations.internalValue = value.aggregations;
+      this._denominatorAggregations.internalValue = value.denominatorAggregations;
       this._trigger.internalValue = value.trigger;
     }
   }
@@ -1602,37 +2046,35 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   }
 
   // aggregations - computed: false, optional: true, required: false
-  private _aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable; 
+  private _aggregations = new MonitoringAlertPolicyConditionsConditionThresholdAggregationsList(this, "aggregations", false);
   public get aggregations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aggregations');
+    return this._aggregations;
   }
-  public set aggregations(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable) {
-    this._aggregations = value;
+  public putAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable) {
+    this._aggregations.internalValue = value;
   }
   public resetAggregations() {
-    this._aggregations = undefined;
+    this._aggregations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationsInput() {
-    return this._aggregations;
+    return this._aggregations.internalValue;
   }
 
   // denominator_aggregations - computed: false, optional: true, required: false
-  private _denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable; 
+  private _denominatorAggregations = new MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsList(this, "denominator_aggregations", false);
   public get denominatorAggregations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('denominator_aggregations');
+    return this._denominatorAggregations;
   }
-  public set denominatorAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable) {
-    this._denominatorAggregations = value;
+  public putDenominatorAggregations(value: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable) {
+    this._denominatorAggregations.internalValue = value;
   }
   public resetDenominatorAggregations() {
-    this._denominatorAggregations = undefined;
+    this._denominatorAggregations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get denominatorAggregationsInput() {
-    return this._denominatorAggregations;
+    return this._denominatorAggregations.internalValue;
   }
 
   // trigger - computed: false, optional: true, required: false
@@ -1702,6 +2144,176 @@ export function monitoringAlertPolicyConditionsToTerraform(struct?: MonitoringAl
   }
 }
 
+export class MonitoringAlertPolicyConditionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitoringAlertPolicyConditions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._displayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
+    if (this._conditionAbsent?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditionAbsent = this._conditionAbsent?.internalValue;
+    }
+    if (this._conditionMatchedLog?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditionMatchedLog = this._conditionMatchedLog?.internalValue;
+    }
+    if (this._conditionMonitoringQueryLanguage?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditionMonitoringQueryLanguage = this._conditionMonitoringQueryLanguage?.internalValue;
+    }
+    if (this._conditionThreshold?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.conditionThreshold = this._conditionThreshold?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringAlertPolicyConditions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._displayName = undefined;
+      this._conditionAbsent.internalValue = undefined;
+      this._conditionMatchedLog.internalValue = undefined;
+      this._conditionMonitoringQueryLanguage.internalValue = undefined;
+      this._conditionThreshold.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._displayName = value.displayName;
+      this._conditionAbsent.internalValue = value.conditionAbsent;
+      this._conditionMatchedLog.internalValue = value.conditionMatchedLog;
+      this._conditionMonitoringQueryLanguage.internalValue = value.conditionMonitoringQueryLanguage;
+      this._conditionThreshold.internalValue = value.conditionThreshold;
+    }
+  }
+
+  // display_name - computed: false, optional: false, required: true
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // condition_absent - computed: false, optional: true, required: false
+  private _conditionAbsent = new MonitoringAlertPolicyConditionsConditionAbsentOutputReference(this, "condition_absent");
+  public get conditionAbsent() {
+    return this._conditionAbsent;
+  }
+  public putConditionAbsent(value: MonitoringAlertPolicyConditionsConditionAbsent) {
+    this._conditionAbsent.internalValue = value;
+  }
+  public resetConditionAbsent() {
+    this._conditionAbsent.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionAbsentInput() {
+    return this._conditionAbsent.internalValue;
+  }
+
+  // condition_matched_log - computed: false, optional: true, required: false
+  private _conditionMatchedLog = new MonitoringAlertPolicyConditionsConditionMatchedLogOutputReference(this, "condition_matched_log");
+  public get conditionMatchedLog() {
+    return this._conditionMatchedLog;
+  }
+  public putConditionMatchedLog(value: MonitoringAlertPolicyConditionsConditionMatchedLog) {
+    this._conditionMatchedLog.internalValue = value;
+  }
+  public resetConditionMatchedLog() {
+    this._conditionMatchedLog.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionMatchedLogInput() {
+    return this._conditionMatchedLog.internalValue;
+  }
+
+  // condition_monitoring_query_language - computed: false, optional: true, required: false
+  private _conditionMonitoringQueryLanguage = new MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutputReference(this, "condition_monitoring_query_language");
+  public get conditionMonitoringQueryLanguage() {
+    return this._conditionMonitoringQueryLanguage;
+  }
+  public putConditionMonitoringQueryLanguage(value: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage) {
+    this._conditionMonitoringQueryLanguage.internalValue = value;
+  }
+  public resetConditionMonitoringQueryLanguage() {
+    this._conditionMonitoringQueryLanguage.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionMonitoringQueryLanguageInput() {
+    return this._conditionMonitoringQueryLanguage.internalValue;
+  }
+
+  // condition_threshold - computed: false, optional: true, required: false
+  private _conditionThreshold = new MonitoringAlertPolicyConditionsConditionThresholdOutputReference(this, "condition_threshold");
+  public get conditionThreshold() {
+    return this._conditionThreshold;
+  }
+  public putConditionThreshold(value: MonitoringAlertPolicyConditionsConditionThreshold) {
+    this._conditionThreshold.internalValue = value;
+  }
+  public resetConditionThreshold() {
+    this._conditionThreshold.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionThresholdInput() {
+    return this._conditionThreshold.internalValue;
+  }
+}
+
+export class MonitoringAlertPolicyConditionsList extends cdktf.ComplexList {
+  public internalValue? : MonitoringAlertPolicyConditions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitoringAlertPolicyConditionsOutputReference {
+    return new MonitoringAlertPolicyConditionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitoringAlertPolicyDocumentation {
   /**
   * The text of the documentation, interpreted according to mimeType.
@@ -1831,6 +2443,7 @@ export function monitoringAlertPolicyTimeoutsToTerraform(struct?: MonitoringAler
 
 export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1840,7 +2453,10 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitoringAlertPolicyTimeouts | undefined {
+  public get internalValue(): MonitoringAlertPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1858,15 +2474,21 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitoringAlertPolicyTimeouts | undefined) {
+  public set internalValue(value: MonitoringAlertPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -1959,11 +2581,12 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
     this._combiner = config.combiner;
     this._displayName = config.displayName;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._notificationChannels = config.notificationChannels;
     this._project = config.project;
     this._userLabels = config.userLabels;
     this._alertStrategy.internalValue = config.alertStrategy;
-    this._conditions = config.conditions;
+    this._conditions.internalValue = config.conditions;
     this._documentation.internalValue = config.documentation;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -2021,8 +2644,19 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -2095,17 +2729,16 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   }
 
   // conditions - computed: false, optional: false, required: true
-  private _conditions?: MonitoringAlertPolicyConditions[] | cdktf.IResolvable; 
+  private _conditions = new MonitoringAlertPolicyConditionsList(this, "conditions", false);
   public get conditions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('conditions');
+    return this._conditions;
   }
-  public set conditions(value: MonitoringAlertPolicyConditions[] | cdktf.IResolvable) {
-    this._conditions = value;
+  public putConditions(value: MonitoringAlertPolicyConditions[] | cdktf.IResolvable) {
+    this._conditions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get conditionsInput() {
-    return this._conditions;
+    return this._conditions.internalValue;
   }
 
   // documentation - computed: false, optional: true, required: false
@@ -2149,11 +2782,12 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       combiner: cdktf.stringToTerraform(this._combiner),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       notification_channels: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationChannels),
       project: cdktf.stringToTerraform(this._project),
       user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
       alert_strategy: monitoringAlertPolicyAlertStrategyToTerraform(this._alertStrategy.internalValue),
-      conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions),
+      conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions.internalValue),
       documentation: monitoringAlertPolicyDocumentationToTerraform(this._documentation.internalValue),
       timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -15,6 +15,13 @@ export interface HealthcareHl7V2StoreConfig extends cdktf.TerraformMetaArguments
   */
   readonly dataset: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store#id HealthcareHl7V2Store#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * User-supplied key-value pairs used to organize HL7v2 stores.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -176,6 +183,105 @@ export function healthcareHl7V2StoreNotificationConfigsToTerraform(struct?: Heal
   }
 }
 
+export class HealthcareHl7V2StoreNotificationConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HealthcareHl7V2StoreNotificationConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._filter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    if (this._pubsubTopic !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pubsubTopic = this._pubsubTopic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HealthcareHl7V2StoreNotificationConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._filter = undefined;
+      this._pubsubTopic = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._filter = value.filter;
+      this._pubsubTopic = value.pubsubTopic;
+    }
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter?: string; 
+  public get filter() {
+    return this.getStringAttribute('filter');
+  }
+  public set filter(value: string) {
+    this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter;
+  }
+
+  // pubsub_topic - computed: false, optional: false, required: true
+  private _pubsubTopic?: string; 
+  public get pubsubTopic() {
+    return this.getStringAttribute('pubsub_topic');
+  }
+  public set pubsubTopic(value: string) {
+    this._pubsubTopic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubTopicInput() {
+    return this._pubsubTopic;
+  }
+}
+
+export class HealthcareHl7V2StoreNotificationConfigsList extends cdktf.ComplexList {
+  public internalValue? : HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HealthcareHl7V2StoreNotificationConfigsOutputReference {
+    return new HealthcareHl7V2StoreNotificationConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HealthcareHl7V2StoreParserConfig {
   /**
   * Determines whether messages with no header are allowed.
@@ -362,6 +468,7 @@ export function healthcareHl7V2StoreTimeoutsToTerraform(struct?: HealthcareHl7V2
 
 export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -371,7 +478,10 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): HealthcareHl7V2StoreTimeouts | undefined {
+  public get internalValue(): HealthcareHl7V2StoreTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -389,15 +499,21 @@ export class HealthcareHl7V2StoreTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: HealthcareHl7V2StoreTimeouts | undefined) {
+  public set internalValue(value: HealthcareHl7V2StoreTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -488,10 +604,11 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._dataset = config.dataset;
+    this._id = config.id;
     this._labels = config.labels;
     this._name = config.name;
     this._notificationConfig.internalValue = config.notificationConfig;
-    this._notificationConfigs = config.notificationConfigs;
+    this._notificationConfigs.internalValue = config.notificationConfigs;
     this._parserConfig.internalValue = config.parserConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -514,8 +631,19 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -569,20 +697,19 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   }
 
   // notification_configs - computed: false, optional: true, required: false
-  private _notificationConfigs?: HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable; 
+  private _notificationConfigs = new HealthcareHl7V2StoreNotificationConfigsList(this, "notification_configs", false);
   public get notificationConfigs() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('notification_configs');
+    return this._notificationConfigs;
   }
-  public set notificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable) {
-    this._notificationConfigs = value;
+  public putNotificationConfigs(value: HealthcareHl7V2StoreNotificationConfigs[] | cdktf.IResolvable) {
+    this._notificationConfigs.internalValue = value;
   }
   public resetNotificationConfigs() {
-    this._notificationConfigs = undefined;
+    this._notificationConfigs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get notificationConfigsInput() {
-    return this._notificationConfigs;
+    return this._notificationConfigs.internalValue;
   }
 
   // parser_config - computed: false, optional: true, required: false
@@ -624,10 +751,11 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset: cdktf.stringToTerraform(this._dataset),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       notification_config: healthcareHl7V2StoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
-      notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs),
+      notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs.internalValue),
       parser_config: healthcareHl7V2StoreParserConfigToTerraform(this._parserConfig.internalValue),
       timeouts: healthcareHl7V2StoreTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -12,6 +12,13 @@ export interface PrivatecaCaPoolIamBindingConfig extends cdktf.TerraformMetaArgu
   */
   readonly caPool: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_binding#id PrivatecaCaPoolIamBinding#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool_iam_binding#location PrivatecaCaPoolIamBinding#location}
   */
   readonly location?: string;
@@ -183,6 +190,7 @@ export class PrivatecaCaPoolIamBinding extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._caPool = config.caPool;
+    this._id = config.id;
     this._location = config.location;
     this._members = config.members;
     this._project = config.project;
@@ -213,8 +221,19 @@ export class PrivatecaCaPoolIamBinding extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: true, optional: true, required: false
@@ -298,6 +317,7 @@ export class PrivatecaCaPoolIamBinding extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ca_pool: cdktf.stringToTerraform(this._caPool),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
       project: cdktf.stringToTerraform(this._project),

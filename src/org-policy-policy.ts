@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface OrgPolicyPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#id OrgPolicyPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/org_policy_policy#name OrgPolicyPolicy#name}
@@ -329,6 +336,174 @@ export function orgPolicyPolicySpecRulesToTerraform(struct?: OrgPolicyPolicySpec
   }
 }
 
+export class OrgPolicyPolicySpecRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrgPolicyPolicySpecRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowAll !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowAll = this._allowAll;
+    }
+    if (this._denyAll !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.denyAll = this._denyAll;
+    }
+    if (this._enforce !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enforce = this._enforce;
+    }
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    if (this._values?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrgPolicyPolicySpecRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowAll = undefined;
+      this._denyAll = undefined;
+      this._enforce = undefined;
+      this._condition.internalValue = undefined;
+      this._values.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowAll = value.allowAll;
+      this._denyAll = value.denyAll;
+      this._enforce = value.enforce;
+      this._condition.internalValue = value.condition;
+      this._values.internalValue = value.values;
+    }
+  }
+
+  // allow_all - computed: false, optional: true, required: false
+  private _allowAll?: string; 
+  public get allowAll() {
+    return this.getStringAttribute('allow_all');
+  }
+  public set allowAll(value: string) {
+    this._allowAll = value;
+  }
+  public resetAllowAll() {
+    this._allowAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowAllInput() {
+    return this._allowAll;
+  }
+
+  // deny_all - computed: false, optional: true, required: false
+  private _denyAll?: string; 
+  public get denyAll() {
+    return this.getStringAttribute('deny_all');
+  }
+  public set denyAll(value: string) {
+    this._denyAll = value;
+  }
+  public resetDenyAll() {
+    this._denyAll = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get denyAllInput() {
+    return this._denyAll;
+  }
+
+  // enforce - computed: false, optional: true, required: false
+  private _enforce?: string; 
+  public get enforce() {
+    return this.getStringAttribute('enforce');
+  }
+  public set enforce(value: string) {
+    this._enforce = value;
+  }
+  public resetEnforce() {
+    this._enforce = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforceInput() {
+    return this._enforce;
+  }
+
+  // condition - computed: false, optional: true, required: false
+  private _condition = new OrgPolicyPolicySpecRulesConditionOutputReference(this, "condition");
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: OrgPolicyPolicySpecRulesCondition) {
+    this._condition.internalValue = value;
+  }
+  public resetCondition() {
+    this._condition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+
+  // values - computed: false, optional: true, required: false
+  private _values = new OrgPolicyPolicySpecRulesValuesOutputReference(this, "values");
+  public get values() {
+    return this._values;
+  }
+  public putValues(value: OrgPolicyPolicySpecRulesValues) {
+    this._values.internalValue = value;
+  }
+  public resetValues() {
+    this._values.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values.internalValue;
+  }
+}
+
+export class OrgPolicyPolicySpecRulesList extends cdktf.ComplexList {
+  public internalValue? : OrgPolicyPolicySpecRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrgPolicyPolicySpecRulesOutputReference {
+    return new OrgPolicyPolicySpecRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrgPolicyPolicySpec {
   /**
   * Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.
@@ -384,9 +559,9 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.reset = this._reset;
     }
-    if (this._rules !== undefined) {
+    if (this._rules?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.rules = this._rules;
+      internalValueResult.rules = this._rules?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -396,13 +571,13 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = false;
       this._inheritFromParent = undefined;
       this._reset = undefined;
-      this._rules = undefined;
+      this._rules.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._inheritFromParent = value.inheritFromParent;
       this._reset = value.reset;
-      this._rules = value.rules;
+      this._rules.internalValue = value.rules;
     }
   }
 
@@ -449,20 +624,19 @@ export class OrgPolicyPolicySpecOutputReference extends cdktf.ComplexObject {
   }
 
   // rules - computed: false, optional: true, required: false
-  private _rules?: OrgPolicyPolicySpecRules[] | cdktf.IResolvable; 
+  private _rules = new OrgPolicyPolicySpecRulesList(this, "rules", false);
   public get rules() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rules');
+    return this._rules;
   }
-  public set rules(value: OrgPolicyPolicySpecRules[] | cdktf.IResolvable) {
-    this._rules = value;
+  public putRules(value: OrgPolicyPolicySpecRules[] | cdktf.IResolvable) {
+    this._rules.internalValue = value;
   }
   public resetRules() {
-    this._rules = undefined;
+    this._rules.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rulesInput() {
-    return this._rules;
+    return this._rules.internalValue;
   }
 }
 export interface OrgPolicyPolicyTimeouts {
@@ -494,6 +668,7 @@ export function orgPolicyPolicyTimeoutsToTerraform(struct?: OrgPolicyPolicyTimeo
 
 export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -503,7 +678,10 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): OrgPolicyPolicyTimeouts | undefined {
+  public get internalValue(): OrgPolicyPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -521,15 +699,21 @@ export class OrgPolicyPolicyTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: OrgPolicyPolicyTimeouts | undefined) {
+  public set internalValue(value: OrgPolicyPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -619,6 +803,7 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._parent = config.parent;
     this._spec.internalValue = config.spec;
@@ -630,8 +815,19 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -698,6 +894,7 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       parent: cdktf.stringToTerraform(this._parent),
       spec: orgPolicyPolicySpecToTerraform(this._spec.internalValue),

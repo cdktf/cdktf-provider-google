@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface AccessContextManagerAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_access_policy#id AccessContextManagerAccessPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The parent of this AccessPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id}
   * 
@@ -63,6 +70,7 @@ export function accessContextManagerAccessPolicyTimeoutsToTerraform(struct?: Acc
 
 export class AccessContextManagerAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -72,7 +80,10 @@ export class AccessContextManagerAccessPolicyTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AccessContextManagerAccessPolicyTimeouts | undefined {
+  public get internalValue(): AccessContextManagerAccessPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -90,15 +101,21 @@ export class AccessContextManagerAccessPolicyTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AccessContextManagerAccessPolicyTimeouts | undefined) {
+  public set internalValue(value: AccessContextManagerAccessPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -188,6 +205,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._parent = config.parent;
     this._scopes = config.scopes;
     this._title = config.title;
@@ -204,8 +222,19 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -282,6 +311,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       parent: cdktf.stringToTerraform(this._parent),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
       title: cdktf.stringToTerraform(this._title),

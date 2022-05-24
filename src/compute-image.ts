@@ -31,6 +31,13 @@ RFC1035.
   */
   readonly family?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image#id ComputeImage#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Labels to apply to this Image.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_image#labels ComputeImage#labels}
@@ -130,6 +137,83 @@ export function computeImageGuestOsFeaturesToTerraform(struct?: ComputeImageGues
   }
 }
 
+export class ComputeImageGuestOsFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeImageGuestOsFeatures | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeImageGuestOsFeatures | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class ComputeImageGuestOsFeaturesList extends cdktf.ComplexList {
+  public internalValue? : ComputeImageGuestOsFeatures[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeImageGuestOsFeaturesOutputReference {
+    return new ComputeImageGuestOsFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeImageRawDisk {
   /**
   * The format used to encode and transmit the block device, which
@@ -287,6 +371,7 @@ export function computeImageTimeoutsToTerraform(struct?: ComputeImageTimeoutsOut
 
 export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -296,7 +381,10 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeImageTimeouts | undefined {
+  public get internalValue(): ComputeImageTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -314,15 +402,21 @@ export class ComputeImageTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeImageTimeouts | undefined) {
+  public set internalValue(value: ComputeImageTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -415,6 +509,7 @@ export class ComputeImage extends cdktf.TerraformResource {
     this._description = config.description;
     this._diskSizeGb = config.diskSizeGb;
     this._family = config.family;
+    this._id = config.id;
     this._labels = config.labels;
     this._licenses = config.licenses;
     this._name = config.name;
@@ -422,7 +517,7 @@ export class ComputeImage extends cdktf.TerraformResource {
     this._sourceDisk = config.sourceDisk;
     this._sourceImage = config.sourceImage;
     this._sourceSnapshot = config.sourceSnapshot;
-    this._guestOsFeatures = config.guestOsFeatures;
+    this._guestOsFeatures.internalValue = config.guestOsFeatures;
     this._rawDisk.internalValue = config.rawDisk;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -490,8 +585,19 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // label_fingerprint - computed: true, optional: false, required: false
@@ -614,20 +720,19 @@ export class ComputeImage extends cdktf.TerraformResource {
   }
 
   // guest_os_features - computed: false, optional: true, required: false
-  private _guestOsFeatures?: ComputeImageGuestOsFeatures[] | cdktf.IResolvable; 
+  private _guestOsFeatures = new ComputeImageGuestOsFeaturesList(this, "guest_os_features", true);
   public get guestOsFeatures() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('guest_os_features')));
+    return this._guestOsFeatures;
   }
-  public set guestOsFeatures(value: ComputeImageGuestOsFeatures[] | cdktf.IResolvable) {
-    this._guestOsFeatures = value;
+  public putGuestOsFeatures(value: ComputeImageGuestOsFeatures[] | cdktf.IResolvable) {
+    this._guestOsFeatures.internalValue = value;
   }
   public resetGuestOsFeatures() {
-    this._guestOsFeatures = undefined;
+    this._guestOsFeatures.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get guestOsFeaturesInput() {
-    return this._guestOsFeatures;
+    return this._guestOsFeatures.internalValue;
   }
 
   // raw_disk - computed: false, optional: true, required: false
@@ -671,6 +776,7 @@ export class ComputeImage extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
       family: cdktf.stringToTerraform(this._family),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       licenses: cdktf.listMapper(cdktf.stringToTerraform)(this._licenses),
       name: cdktf.stringToTerraform(this._name),
@@ -678,7 +784,7 @@ export class ComputeImage extends cdktf.TerraformResource {
       source_disk: cdktf.stringToTerraform(this._sourceDisk),
       source_image: cdktf.stringToTerraform(this._sourceImage),
       source_snapshot: cdktf.stringToTerraform(this._sourceSnapshot),
-      guest_os_features: cdktf.listMapper(computeImageGuestOsFeaturesToTerraform)(this._guestOsFeatures),
+      guest_os_features: cdktf.listMapper(computeImageGuestOsFeaturesToTerraform)(this._guestOsFeatures.internalValue),
       raw_disk: computeImageRawDiskToTerraform(this._rawDisk.internalValue),
       timeouts: computeImageTimeoutsToTerraform(this._timeouts.internalValue),
     };

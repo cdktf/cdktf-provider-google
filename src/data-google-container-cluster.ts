@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleContainerClusterConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_cluster#id DataGoogleContainerCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The location (region or zone) in which the cluster master will be created, as well as the default node location. If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_cluster#location DataGoogleContainerCluster#location}
@@ -2405,8 +2412,9 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
@@ -2420,8 +2428,9 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'metadata').lookup(key);
+  private _metadata = new cdktf.StringMap(this, "metadata");
+  public get metadata() {
+    return this._metadata;
   }
 
   // min_cpu_platform - computed: true, optional: false, required: false
@@ -3117,8 +3126,9 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
@@ -3132,8 +3142,9 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'metadata').lookup(key);
+  private _metadata = new cdktf.StringMap(this, "metadata");
+  public get metadata() {
+    return this._metadata;
   }
 
   // min_cpu_platform - computed: true, optional: false, required: false
@@ -3925,6 +3936,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
@@ -4037,8 +4049,19 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // initial_node_count - computed: true, optional: false, required: false
@@ -4218,8 +4241,9 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   }
 
   // resource_labels - computed: true, optional: false, required: false
-  public resourceLabels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'resource_labels').lookup(key);
+  private _resourceLabels = new cdktf.StringMap(this, "resource_labels");
+  public get resourceLabels() {
+    return this._resourceLabels;
   }
 
   // resource_usage_export_config - computed: true, optional: false, required: false
@@ -4266,6 +4290,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

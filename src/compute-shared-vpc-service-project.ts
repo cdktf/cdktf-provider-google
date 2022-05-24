@@ -14,6 +14,13 @@ export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMet
   */
   readonly hostProject: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project#id ComputeSharedVpcServiceProject#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The ID of the project that will serve as a Shared VPC service project.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project#service_project ComputeSharedVpcServiceProject#service_project}
@@ -50,6 +57,7 @@ export function computeSharedVpcServiceProjectTimeoutsToTerraform(struct?: Compu
 
 export class ComputeSharedVpcServiceProjectTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -59,7 +67,10 @@ export class ComputeSharedVpcServiceProjectTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeSharedVpcServiceProjectTimeouts | undefined {
+  public get internalValue(): ComputeSharedVpcServiceProjectTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -73,14 +84,20 @@ export class ComputeSharedVpcServiceProjectTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeSharedVpcServiceProjectTimeouts | undefined) {
+  public set internalValue(value: ComputeSharedVpcServiceProjectTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -154,6 +171,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._hostProject = config.hostProject;
+    this._id = config.id;
     this._serviceProject = config.serviceProject;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -176,8 +194,19 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // service_project - computed: false, optional: false, required: true
@@ -216,6 +245,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       host_project: cdktf.stringToTerraform(this._hostProject),
+      id: cdktf.stringToTerraform(this._id),
       service_project: cdktf.stringToTerraform(this._serviceProject),
       timeouts: computeSharedVpcServiceProjectTimeoutsToTerraform(this._timeouts.internalValue),
     };

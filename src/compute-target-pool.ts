@@ -32,6 +32,13 @@ export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly healthChecks?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#id ComputeTargetPool#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * List of instances in the pool. They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#instances ComputeTargetPool#instances}
@@ -97,6 +104,7 @@ export function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolT
 
 export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -106,7 +114,10 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeTargetPoolTimeouts | undefined {
+  public get internalValue(): ComputeTargetPoolTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -124,15 +135,21 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeTargetPoolTimeouts | undefined) {
+  public set internalValue(value: ComputeTargetPoolTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -226,6 +243,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
     this._description = config.description;
     this._failoverRatio = config.failoverRatio;
     this._healthChecks = config.healthChecks;
+    this._id = config.id;
     this._instances = config.instances;
     this._name = config.name;
     this._project = config.project;
@@ -303,8 +321,19 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instances - computed: true, optional: true, required: false
@@ -415,6 +444,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       failover_ratio: cdktf.numberToTerraform(this._failoverRatio),
       health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
+      id: cdktf.stringToTerraform(this._id),
       instances: cdktf.listMapper(cdktf.stringToTerraform)(this._instances),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface GkeHubMembershipConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/gke_hub_membership#id GkeHubMembership#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Labels to apply to this membership.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/gke_hub_membership#labels GkeHubMembership#labels}
@@ -271,6 +278,7 @@ export function gkeHubMembershipTimeoutsToTerraform(struct?: GkeHubMembershipTim
 
 export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -280,7 +288,10 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): GkeHubMembershipTimeouts | undefined {
+  public get internalValue(): GkeHubMembershipTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -298,15 +309,21 @@ export class GkeHubMembershipTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: GkeHubMembershipTimeouts | undefined) {
+  public set internalValue(value: GkeHubMembershipTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -396,6 +413,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._labels = config.labels;
     this._membershipId = config.membershipId;
     this._project = config.project;
@@ -409,8 +427,19 @@ export class GkeHubMembership extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -517,6 +546,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       membership_id: cdktf.stringToTerraform(this._membershipId),
       project: cdktf.stringToTerraform(this._project),

@@ -14,6 +14,13 @@ export interface ApikeysKeyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly displayName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apikeys_key#id ApikeysKey#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The resource name of the key. The name must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the name must match the regular expression: [a-z]([a-z0-9-]{0,61}[a-z0-9])?.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apikeys_key#name ApikeysKey#name}
@@ -64,6 +71,102 @@ export function apikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsT
   }
 }
 
+export class ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._packageName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.packageName = this._packageName;
+    }
+    if (this._sha1Fingerprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sha1Fingerprint = this._sha1Fingerprint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._packageName = undefined;
+      this._sha1Fingerprint = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._packageName = value.packageName;
+      this._sha1Fingerprint = value.sha1Fingerprint;
+    }
+  }
+
+  // package_name - computed: false, optional: false, required: true
+  private _packageName?: string; 
+  public get packageName() {
+    return this.getStringAttribute('package_name');
+  }
+  public set packageName(value: string) {
+    this._packageName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageNameInput() {
+    return this._packageName;
+  }
+
+  // sha1_fingerprint - computed: false, optional: false, required: true
+  private _sha1Fingerprint?: string; 
+  public get sha1Fingerprint() {
+    return this.getStringAttribute('sha1_fingerprint');
+  }
+  public set sha1Fingerprint(value: string) {
+    this._sha1Fingerprint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sha1FingerprintInput() {
+    return this._sha1Fingerprint;
+  }
+}
+
+export class ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsList extends cdktf.ComplexList {
+  public internalValue? : ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference {
+    return new ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApikeysKeyRestrictionsAndroidKeyRestrictions {
   /**
   * allowed_applications block
@@ -97,9 +200,9 @@ export class ApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference extends
   public get internalValue(): ApikeysKeyRestrictionsAndroidKeyRestrictions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedApplications !== undefined) {
+    if (this._allowedApplications?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.allowedApplications = this._allowedApplications;
+      internalValueResult.allowedApplications = this._allowedApplications?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -107,26 +210,25 @@ export class ApikeysKeyRestrictionsAndroidKeyRestrictionsOutputReference extends
   public set internalValue(value: ApikeysKeyRestrictionsAndroidKeyRestrictions | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._allowedApplications = undefined;
+      this._allowedApplications.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._allowedApplications = value.allowedApplications;
+      this._allowedApplications.internalValue = value.allowedApplications;
     }
   }
 
   // allowed_applications - computed: false, optional: false, required: true
-  private _allowedApplications?: ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications[] | cdktf.IResolvable; 
+  private _allowedApplications = new ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsList(this, "allowed_applications", false);
   public get allowedApplications() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allowed_applications');
+    return this._allowedApplications;
   }
-  public set allowedApplications(value: ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications[] | cdktf.IResolvable) {
-    this._allowedApplications = value;
+  public putAllowedApplications(value: ApikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplications[] | cdktf.IResolvable) {
+    this._allowedApplications.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get allowedApplicationsInput() {
-    return this._allowedApplications;
+    return this._allowedApplications.internalValue;
   }
 }
 export interface ApikeysKeyRestrictionsApiTargets {
@@ -155,6 +257,105 @@ export function apikeysKeyRestrictionsApiTargetsToTerraform(struct?: ApikeysKeyR
   }
 }
 
+export class ApikeysKeyRestrictionsApiTargetsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApikeysKeyRestrictionsApiTargets | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._methods !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.methods = this._methods;
+    }
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApikeysKeyRestrictionsApiTargets | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._methods = undefined;
+      this._service = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._methods = value.methods;
+      this._service = value.service;
+    }
+  }
+
+  // methods - computed: false, optional: true, required: false
+  private _methods?: string[]; 
+  public get methods() {
+    return this.getListAttribute('methods');
+  }
+  public set methods(value: string[]) {
+    this._methods = value;
+  }
+  public resetMethods() {
+    this._methods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodsInput() {
+    return this._methods;
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+}
+
+export class ApikeysKeyRestrictionsApiTargetsList extends cdktf.ComplexList {
+  public internalValue? : ApikeysKeyRestrictionsApiTargets[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApikeysKeyRestrictionsApiTargetsOutputReference {
+    return new ApikeysKeyRestrictionsApiTargetsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApikeysKeyRestrictionsBrowserKeyRestrictions {
   /**
   * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
@@ -412,9 +613,9 @@ export class ApikeysKeyRestrictionsOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.androidKeyRestrictions = this._androidKeyRestrictions?.internalValue;
     }
-    if (this._apiTargets !== undefined) {
+    if (this._apiTargets?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.apiTargets = this._apiTargets;
+      internalValueResult.apiTargets = this._apiTargets?.internalValue;
     }
     if (this._browserKeyRestrictions?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -435,7 +636,7 @@ export class ApikeysKeyRestrictionsOutputReference extends cdktf.ComplexObject {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._androidKeyRestrictions.internalValue = undefined;
-      this._apiTargets = undefined;
+      this._apiTargets.internalValue = undefined;
       this._browserKeyRestrictions.internalValue = undefined;
       this._iosKeyRestrictions.internalValue = undefined;
       this._serverKeyRestrictions.internalValue = undefined;
@@ -443,7 +644,7 @@ export class ApikeysKeyRestrictionsOutputReference extends cdktf.ComplexObject {
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._androidKeyRestrictions.internalValue = value.androidKeyRestrictions;
-      this._apiTargets = value.apiTargets;
+      this._apiTargets.internalValue = value.apiTargets;
       this._browserKeyRestrictions.internalValue = value.browserKeyRestrictions;
       this._iosKeyRestrictions.internalValue = value.iosKeyRestrictions;
       this._serverKeyRestrictions.internalValue = value.serverKeyRestrictions;
@@ -467,20 +668,19 @@ export class ApikeysKeyRestrictionsOutputReference extends cdktf.ComplexObject {
   }
 
   // api_targets - computed: false, optional: true, required: false
-  private _apiTargets?: ApikeysKeyRestrictionsApiTargets[] | cdktf.IResolvable; 
+  private _apiTargets = new ApikeysKeyRestrictionsApiTargetsList(this, "api_targets", false);
   public get apiTargets() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('api_targets');
+    return this._apiTargets;
   }
-  public set apiTargets(value: ApikeysKeyRestrictionsApiTargets[] | cdktf.IResolvable) {
-    this._apiTargets = value;
+  public putApiTargets(value: ApikeysKeyRestrictionsApiTargets[] | cdktf.IResolvable) {
+    this._apiTargets.internalValue = value;
   }
   public resetApiTargets() {
-    this._apiTargets = undefined;
+    this._apiTargets.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get apiTargetsInput() {
-    return this._apiTargets;
+    return this._apiTargets.internalValue;
   }
 
   // browser_key_restrictions - computed: false, optional: true, required: false
@@ -560,6 +760,7 @@ export function apikeysKeyTimeoutsToTerraform(struct?: ApikeysKeyTimeoutsOutputR
 
 export class ApikeysKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -569,7 +770,10 @@ export class ApikeysKeyTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApikeysKeyTimeouts | undefined {
+  public get internalValue(): ApikeysKeyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -587,15 +791,21 @@ export class ApikeysKeyTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApikeysKeyTimeouts | undefined) {
+  public set internalValue(value: ApikeysKeyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -686,6 +896,7 @@ export class ApikeysKey extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._displayName = config.displayName;
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._restrictions.internalValue = config.restrictions;
@@ -713,8 +924,19 @@ export class ApikeysKey extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key_string - computed: true, optional: false, required: false
@@ -790,6 +1012,7 @@ export class ApikeysKey extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       restrictions: apikeysKeyRestrictionsToTerraform(this._restrictions.internalValue),

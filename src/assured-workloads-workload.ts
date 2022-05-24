@@ -26,6 +26,13 @@ export interface AssuredWorkloadsWorkloadConfig extends cdktf.TerraformMetaArgum
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#id AssuredWorkloadsWorkload#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Optional. Labels applied to the workload.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#labels AssuredWorkloadsWorkload#labels}
@@ -253,6 +260,108 @@ export function assuredWorkloadsWorkloadResourceSettingsToTerraform(struct?: Ass
   }
 }
 
+export class AssuredWorkloadsWorkloadResourceSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AssuredWorkloadsWorkloadResourceSettings | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._resourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceId = this._resourceId;
+    }
+    if (this._resourceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceType = this._resourceType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AssuredWorkloadsWorkloadResourceSettings | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._resourceId = undefined;
+      this._resourceType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._resourceId = value.resourceId;
+      this._resourceType = value.resourceType;
+    }
+  }
+
+  // resource_id - computed: false, optional: true, required: false
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  public resetResourceId() {
+    this._resourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+
+  // resource_type - computed: false, optional: true, required: false
+  private _resourceType?: string; 
+  public get resourceType() {
+    return this.getStringAttribute('resource_type');
+  }
+  public set resourceType(value: string) {
+    this._resourceType = value;
+  }
+  public resetResourceType() {
+    this._resourceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceTypeInput() {
+    return this._resourceType;
+  }
+}
+
+export class AssuredWorkloadsWorkloadResourceSettingsList extends cdktf.ComplexList {
+  public internalValue? : AssuredWorkloadsWorkloadResourceSettings[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AssuredWorkloadsWorkloadResourceSettingsOutputReference {
+    return new AssuredWorkloadsWorkloadResourceSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AssuredWorkloadsWorkloadTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/assured_workloads_workload#create AssuredWorkloadsWorkload#create}
@@ -282,6 +391,7 @@ export function assuredWorkloadsWorkloadTimeoutsToTerraform(struct?: AssuredWork
 
 export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -291,7 +401,10 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AssuredWorkloadsWorkloadTimeouts | undefined {
+  public get internalValue(): AssuredWorkloadsWorkloadTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -309,15 +422,21 @@ export class AssuredWorkloadsWorkloadTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AssuredWorkloadsWorkloadTimeouts | undefined) {
+  public set internalValue(value: AssuredWorkloadsWorkloadTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -410,12 +529,13 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
     this._billingAccount = config.billingAccount;
     this._complianceRegime = config.complianceRegime;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
     this._organization = config.organization;
     this._provisionedResourcesParent = config.provisionedResourcesParent;
     this._kmsSettings.internalValue = config.kmsSettings;
-    this._resourceSettings = config.resourceSettings;
+    this._resourceSettings.internalValue = config.resourceSettings;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -468,8 +588,19 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -558,20 +689,19 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
   }
 
   // resource_settings - computed: false, optional: true, required: false
-  private _resourceSettings?: AssuredWorkloadsWorkloadResourceSettings[] | cdktf.IResolvable; 
+  private _resourceSettings = new AssuredWorkloadsWorkloadResourceSettingsList(this, "resource_settings", false);
   public get resourceSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_settings');
+    return this._resourceSettings;
   }
-  public set resourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[] | cdktf.IResolvable) {
-    this._resourceSettings = value;
+  public putResourceSettings(value: AssuredWorkloadsWorkloadResourceSettings[] | cdktf.IResolvable) {
+    this._resourceSettings.internalValue = value;
   }
   public resetResourceSettings() {
-    this._resourceSettings = undefined;
+    this._resourceSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceSettingsInput() {
-    return this._resourceSettings;
+    return this._resourceSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -599,12 +729,13 @@ export class AssuredWorkloadsWorkload extends cdktf.TerraformResource {
       billing_account: cdktf.stringToTerraform(this._billingAccount),
       compliance_regime: cdktf.stringToTerraform(this._complianceRegime),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       organization: cdktf.stringToTerraform(this._organization),
       provisioned_resources_parent: cdktf.stringToTerraform(this._provisionedResourcesParent),
       kms_settings: assuredWorkloadsWorkloadKmsSettingsToTerraform(this._kmsSettings.internalValue),
-      resource_settings: cdktf.listMapper(assuredWorkloadsWorkloadResourceSettingsToTerraform)(this._resourceSettings),
+      resource_settings: cdktf.listMapper(assuredWorkloadsWorkloadResourceSettingsToTerraform)(this._resourceSettings.internalValue),
       timeouts: assuredWorkloadsWorkloadTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -14,6 +14,13 @@ export interface ComputeRegionTargetHttpProxyConfig extends cdktf.TerraformMetaA
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_target_http_proxy#id ComputeRegionTargetHttpProxy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -79,6 +86,7 @@ export function computeRegionTargetHttpProxyTimeoutsToTerraform(struct?: Compute
 
 export class ComputeRegionTargetHttpProxyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -88,7 +96,10 @@ export class ComputeRegionTargetHttpProxyTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeRegionTargetHttpProxyTimeouts | undefined {
+  public get internalValue(): ComputeRegionTargetHttpProxyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -106,15 +117,21 @@ export class ComputeRegionTargetHttpProxyTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeRegionTargetHttpProxyTimeouts | undefined) {
+  public set internalValue(value: ComputeRegionTargetHttpProxyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -205,6 +222,7 @@ export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
@@ -238,8 +256,19 @@ export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -333,6 +362,7 @@ export class ComputeRegionTargetHttpProxy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

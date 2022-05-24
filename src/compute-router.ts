@@ -23,6 +23,13 @@ Not currently available publicly.
   */
   readonly encryptedInterconnectRouter?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#id ComputeRouter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
@@ -89,6 +96,105 @@ export function computeRouterBgpAdvertisedIpRangesToTerraform(struct?: ComputeRo
   }
 }
 
+export class ComputeRouterBgpAdvertisedIpRangesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRouterBgpAdvertisedIpRanges | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._range !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.range = this._range;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterBgpAdvertisedIpRanges | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._range = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._range = value.range;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // range - computed: false, optional: false, required: true
+  private _range?: string; 
+  public get range() {
+    return this.getStringAttribute('range');
+  }
+  public set range(value: string) {
+    this._range = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeInput() {
+    return this._range;
+  }
+}
+
+export class ComputeRouterBgpAdvertisedIpRangesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRouterBgpAdvertisedIpRangesOutputReference {
+    return new ComputeRouterBgpAdvertisedIpRangesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRouterBgp {
   /**
   * User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
@@ -179,9 +285,9 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.keepaliveInterval = this._keepaliveInterval;
     }
-    if (this._advertisedIpRanges !== undefined) {
+    if (this._advertisedIpRanges?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.advertisedIpRanges = this._advertisedIpRanges;
+      internalValueResult.advertisedIpRanges = this._advertisedIpRanges?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -193,7 +299,7 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
       this._advertisedGroups = undefined;
       this._asn = undefined;
       this._keepaliveInterval = undefined;
-      this._advertisedIpRanges = undefined;
+      this._advertisedIpRanges.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -201,7 +307,7 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
       this._advertisedGroups = value.advertisedGroups;
       this._asn = value.asn;
       this._keepaliveInterval = value.keepaliveInterval;
-      this._advertisedIpRanges = value.advertisedIpRanges;
+      this._advertisedIpRanges.internalValue = value.advertisedIpRanges;
     }
   }
 
@@ -267,20 +373,19 @@ export class ComputeRouterBgpOutputReference extends cdktf.ComplexObject {
   }
 
   // advertised_ip_ranges - computed: false, optional: true, required: false
-  private _advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable; 
+  private _advertisedIpRanges = new ComputeRouterBgpAdvertisedIpRangesList(this, "advertised_ip_ranges", false);
   public get advertisedIpRanges() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('advertised_ip_ranges');
+    return this._advertisedIpRanges;
   }
-  public set advertisedIpRanges(value: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable) {
-    this._advertisedIpRanges = value;
+  public putAdvertisedIpRanges(value: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable) {
+    this._advertisedIpRanges.internalValue = value;
   }
   public resetAdvertisedIpRanges() {
-    this._advertisedIpRanges = undefined;
+    this._advertisedIpRanges.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get advertisedIpRangesInput() {
-    return this._advertisedIpRanges;
+    return this._advertisedIpRanges.internalValue;
   }
 }
 export interface ComputeRouterTimeouts {
@@ -312,6 +417,7 @@ export function computeRouterTimeoutsToTerraform(struct?: ComputeRouterTimeoutsO
 
 export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -321,7 +427,10 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeRouterTimeouts | undefined {
+  public get internalValue(): ComputeRouterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -339,15 +448,21 @@ export class ComputeRouterTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeRouterTimeouts | undefined) {
+  public set internalValue(value: ComputeRouterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -439,6 +554,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._encryptedInterconnectRouter = config.encryptedInterconnectRouter;
+    this._id = config.id;
     this._name = config.name;
     this._network = config.network;
     this._project = config.project;
@@ -489,8 +605,19 @@ export class ComputeRouter extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -596,6 +723,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       encrypted_interconnect_router: cdktf.booleanToTerraform(this._encryptedInterconnectRouter),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),

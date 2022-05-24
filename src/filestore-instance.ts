@@ -14,6 +14,13 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#id FilestoreInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * KMS key name used for data encryption.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#kms_key_name FilestoreInstance#kms_key_name}
@@ -128,6 +135,174 @@ export function filestoreInstanceFileSharesNfsExportOptionsToTerraform(struct?: 
   }
 }
 
+export class FilestoreInstanceFileSharesNfsExportOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FilestoreInstanceFileSharesNfsExportOptions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessMode = this._accessMode;
+    }
+    if (this._anonGid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.anonGid = this._anonGid;
+    }
+    if (this._anonUid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.anonUid = this._anonUid;
+    }
+    if (this._ipRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRanges = this._ipRanges;
+    }
+    if (this._squashMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.squashMode = this._squashMode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FilestoreInstanceFileSharesNfsExportOptions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessMode = undefined;
+      this._anonGid = undefined;
+      this._anonUid = undefined;
+      this._ipRanges = undefined;
+      this._squashMode = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessMode = value.accessMode;
+      this._anonGid = value.anonGid;
+      this._anonUid = value.anonUid;
+      this._ipRanges = value.ipRanges;
+      this._squashMode = value.squashMode;
+    }
+  }
+
+  // access_mode - computed: false, optional: true, required: false
+  private _accessMode?: string; 
+  public get accessMode() {
+    return this.getStringAttribute('access_mode');
+  }
+  public set accessMode(value: string) {
+    this._accessMode = value;
+  }
+  public resetAccessMode() {
+    this._accessMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessModeInput() {
+    return this._accessMode;
+  }
+
+  // anon_gid - computed: false, optional: true, required: false
+  private _anonGid?: number; 
+  public get anonGid() {
+    return this.getNumberAttribute('anon_gid');
+  }
+  public set anonGid(value: number) {
+    this._anonGid = value;
+  }
+  public resetAnonGid() {
+    this._anonGid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get anonGidInput() {
+    return this._anonGid;
+  }
+
+  // anon_uid - computed: false, optional: true, required: false
+  private _anonUid?: number; 
+  public get anonUid() {
+    return this.getNumberAttribute('anon_uid');
+  }
+  public set anonUid(value: number) {
+    this._anonUid = value;
+  }
+  public resetAnonUid() {
+    this._anonUid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get anonUidInput() {
+    return this._anonUid;
+  }
+
+  // ip_ranges - computed: false, optional: true, required: false
+  private _ipRanges?: string[]; 
+  public get ipRanges() {
+    return this.getListAttribute('ip_ranges');
+  }
+  public set ipRanges(value: string[]) {
+    this._ipRanges = value;
+  }
+  public resetIpRanges() {
+    this._ipRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRangesInput() {
+    return this._ipRanges;
+  }
+
+  // squash_mode - computed: false, optional: true, required: false
+  private _squashMode?: string; 
+  public get squashMode() {
+    return this.getStringAttribute('squash_mode');
+  }
+  public set squashMode(value: string) {
+    this._squashMode = value;
+  }
+  public resetSquashMode() {
+    this._squashMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get squashModeInput() {
+    return this._squashMode;
+  }
+}
+
+export class FilestoreInstanceFileSharesNfsExportOptionsList extends cdktf.ComplexList {
+  public internalValue? : FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FilestoreInstanceFileSharesNfsExportOptionsOutputReference {
+    return new FilestoreInstanceFileSharesNfsExportOptionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FilestoreInstanceFileShares {
   /**
   * File share capacity in GiB. This must be at least 1024 GiB
@@ -184,9 +359,9 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._nfsExportOptions !== undefined) {
+    if (this._nfsExportOptions?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.nfsExportOptions = this._nfsExportOptions;
+      internalValueResult.nfsExportOptions = this._nfsExportOptions?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -196,13 +371,13 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = false;
       this._capacityGb = undefined;
       this._name = undefined;
-      this._nfsExportOptions = undefined;
+      this._nfsExportOptions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._capacityGb = value.capacityGb;
       this._name = value.name;
-      this._nfsExportOptions = value.nfsExportOptions;
+      this._nfsExportOptions.internalValue = value.nfsExportOptions;
     }
   }
 
@@ -233,20 +408,19 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
   }
 
   // nfs_export_options - computed: false, optional: true, required: false
-  private _nfsExportOptions?: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable; 
+  private _nfsExportOptions = new FilestoreInstanceFileSharesNfsExportOptionsList(this, "nfs_export_options", false);
   public get nfsExportOptions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('nfs_export_options');
+    return this._nfsExportOptions;
   }
-  public set nfsExportOptions(value: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable) {
-    this._nfsExportOptions = value;
+  public putNfsExportOptions(value: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable) {
+    this._nfsExportOptions.internalValue = value;
   }
   public resetNfsExportOptions() {
-    this._nfsExportOptions = undefined;
+    this._nfsExportOptions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nfsExportOptionsInput() {
-    return this._nfsExportOptions;
+    return this._nfsExportOptions.internalValue;
   }
 }
 export interface FilestoreInstanceNetworks {
@@ -294,6 +468,151 @@ export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceN
   }
 }
 
+export class FilestoreInstanceNetworksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FilestoreInstanceNetworks | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectMode = this._connectMode;
+    }
+    if (this._modes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.modes = this._modes;
+    }
+    if (this._network !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.network = this._network;
+    }
+    if (this._reservedIpRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reservedIpRange = this._reservedIpRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FilestoreInstanceNetworks | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._connectMode = undefined;
+      this._modes = undefined;
+      this._network = undefined;
+      this._reservedIpRange = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._connectMode = value.connectMode;
+      this._modes = value.modes;
+      this._network = value.network;
+      this._reservedIpRange = value.reservedIpRange;
+    }
+  }
+
+  // connect_mode - computed: false, optional: true, required: false
+  private _connectMode?: string; 
+  public get connectMode() {
+    return this.getStringAttribute('connect_mode');
+  }
+  public set connectMode(value: string) {
+    this._connectMode = value;
+  }
+  public resetConnectMode() {
+    this._connectMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectModeInput() {
+    return this._connectMode;
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // modes - computed: false, optional: false, required: true
+  private _modes?: string[]; 
+  public get modes() {
+    return this.getListAttribute('modes');
+  }
+  public set modes(value: string[]) {
+    this._modes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modesInput() {
+    return this._modes;
+  }
+
+  // network - computed: false, optional: false, required: true
+  private _network?: string; 
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+  public set network(value: string) {
+    this._network = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network;
+  }
+
+  // reserved_ip_range - computed: true, optional: true, required: false
+  private _reservedIpRange?: string; 
+  public get reservedIpRange() {
+    return this.getStringAttribute('reserved_ip_range');
+  }
+  public set reservedIpRange(value: string) {
+    this._reservedIpRange = value;
+  }
+  public resetReservedIpRange() {
+    this._reservedIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservedIpRangeInput() {
+    return this._reservedIpRange;
+  }
+}
+
+export class FilestoreInstanceNetworksList extends cdktf.ComplexList {
+  public internalValue? : FilestoreInstanceNetworks[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FilestoreInstanceNetworksOutputReference {
+    return new FilestoreInstanceNetworksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FilestoreInstanceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_instance#create FilestoreInstance#create}
@@ -323,6 +642,7 @@ export function filestoreInstanceTimeoutsToTerraform(struct?: FilestoreInstanceT
 
 export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -332,7 +652,10 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FilestoreInstanceTimeouts | undefined {
+  public get internalValue(): FilestoreInstanceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -350,15 +673,21 @@ export class FilestoreInstanceTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FilestoreInstanceTimeouts | undefined) {
+  public set internalValue(value: FilestoreInstanceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -449,6 +778,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._kmsKeyName = config.kmsKeyName;
     this._labels = config.labels;
     this._location = config.location;
@@ -457,7 +787,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
     this._tier = config.tier;
     this._zone = config.zone;
     this._fileShares.internalValue = config.fileShares;
-    this._networks = config.networks;
+    this._networks.internalValue = config.networks;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -492,8 +822,19 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kms_key_name - computed: false, optional: true, required: false
@@ -616,17 +957,16 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   }
 
   // networks - computed: false, optional: false, required: true
-  private _networks?: FilestoreInstanceNetworks[] | cdktf.IResolvable; 
+  private _networks = new FilestoreInstanceNetworksList(this, "networks", false);
   public get networks() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('networks');
+    return this._networks;
   }
-  public set networks(value: FilestoreInstanceNetworks[] | cdktf.IResolvable) {
-    this._networks = value;
+  public putNetworks(value: FilestoreInstanceNetworks[] | cdktf.IResolvable) {
+    this._networks.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get networksInput() {
-    return this._networks;
+    return this._networks.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -652,6 +992,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       kms_key_name: cdktf.stringToTerraform(this._kmsKeyName),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
@@ -660,7 +1001,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       tier: cdktf.stringToTerraform(this._tier),
       zone: cdktf.stringToTerraform(this._zone),
       file_shares: filestoreInstanceFileSharesToTerraform(this._fileShares.internalValue),
-      networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform)(this._networks),
+      networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform)(this._networks.internalValue),
       timeouts: filestoreInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

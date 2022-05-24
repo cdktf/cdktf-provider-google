@@ -45,6 +45,13 @@ for a list of the currently supported language codes. This field cannot be updat
   */
   readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent#id DialogflowCxAgent#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The name of the location this agent is located in.
 
 ~> **Note:** The first time you are deploying an Agent in your project you must configure location settings.
@@ -186,6 +193,7 @@ export function dialogflowCxAgentTimeoutsToTerraform(struct?: DialogflowCxAgentT
 
 export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -195,7 +203,10 @@ export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DialogflowCxAgentTimeouts | undefined {
+  public get internalValue(): DialogflowCxAgentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -213,15 +224,21 @@ export class DialogflowCxAgentTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DialogflowCxAgentTimeouts | undefined) {
+  public set internalValue(value: DialogflowCxAgentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -317,6 +334,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._enableSpellCorrection = config.enableSpellCorrection;
     this._enableStackdriverLogging = config.enableStackdriverLogging;
+    this._id = config.id;
     this._location = config.location;
     this._project = config.project;
     this._securitySettings = config.securitySettings;
@@ -421,8 +439,19 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -553,6 +582,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       enable_spell_correction: cdktf.booleanToTerraform(this._enableSpellCorrection),
       enable_stackdriver_logging: cdktf.booleanToTerraform(this._enableStackdriverLogging),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
       security_settings: cdktf.stringToTerraform(this._securitySettings),

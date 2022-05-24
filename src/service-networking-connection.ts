@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceNetworkingConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection#id ServiceNetworkingConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of VPC network connected with service producers using VPC peering.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_networking_connection#network ServiceNetworkingConnection#network}
@@ -61,6 +68,7 @@ export function serviceNetworkingConnectionTimeoutsToTerraform(struct?: ServiceN
 
 export class ServiceNetworkingConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -70,7 +78,10 @@ export class ServiceNetworkingConnectionTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ServiceNetworkingConnectionTimeouts | undefined {
+  public get internalValue(): ServiceNetworkingConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -88,15 +99,21 @@ export class ServiceNetworkingConnectionTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ServiceNetworkingConnectionTimeouts | undefined) {
+  public set internalValue(value: ServiceNetworkingConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -186,6 +203,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._network = config.network;
     this._reservedPeeringRanges = config.reservedPeeringRanges;
     this._service = config.service;
@@ -197,8 +215,19 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // network - computed: false, optional: false, required: true
@@ -267,6 +296,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       network: cdktf.stringToTerraform(this._network),
       reserved_peering_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._reservedPeeringRanges),
       service: cdktf.stringToTerraform(this._service),

@@ -20,6 +20,13 @@ export interface ComputeAttachedDiskConfig extends cdktf.TerraformMetaArguments 
   */
   readonly disk: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk#id ComputeAttachedDisk#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * name or self_link of the compute instance that the disk will be attached to. If the self_link is provided then zone and project are extracted from the self link. If only the name is used then zone and project must be defined as properties on the resource or provider.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_attached_disk#instance ComputeAttachedDisk#instance}
@@ -74,6 +81,7 @@ export function computeAttachedDiskTimeoutsToTerraform(struct?: ComputeAttachedD
 
 export class ComputeAttachedDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -83,7 +91,10 @@ export class ComputeAttachedDiskTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeAttachedDiskTimeouts | undefined {
+  public get internalValue(): ComputeAttachedDiskTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -97,14 +108,20 @@ export class ComputeAttachedDiskTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeAttachedDiskTimeouts | undefined) {
+  public set internalValue(value: ComputeAttachedDiskTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -179,6 +196,7 @@ export class ComputeAttachedDisk extends cdktf.TerraformResource {
     });
     this._deviceName = config.deviceName;
     this._disk = config.disk;
+    this._id = config.id;
     this._instance = config.instance;
     this._mode = config.mode;
     this._project = config.project;
@@ -220,8 +238,19 @@ export class ComputeAttachedDisk extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance - computed: false, optional: false, required: true
@@ -309,6 +338,7 @@ export class ComputeAttachedDisk extends cdktf.TerraformResource {
     return {
       device_name: cdktf.stringToTerraform(this._deviceName),
       disk: cdktf.stringToTerraform(this._disk),
+      id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
       mode: cdktf.stringToTerraform(this._mode),
       project: cdktf.stringToTerraform(this._project),

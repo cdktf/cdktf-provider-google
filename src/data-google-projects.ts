@@ -11,6 +11,13 @@ export interface DataGoogleProjectsConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/projects#filter DataGoogleProjects#filter}
   */
   readonly filter: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/projects#id DataGoogleProjects#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
 }
 export interface DataGoogleProjectsProjects {
 }
@@ -58,8 +65,9 @@ export class DataGoogleProjectsProjectsOutputReference extends cdktf.ComplexObje
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // lifecycle_state - computed: true, optional: false, required: false
@@ -78,8 +86,9 @@ export class DataGoogleProjectsProjectsOutputReference extends cdktf.ComplexObje
   }
 
   // parent - computed: true, optional: false, required: false
-  public parent(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'parent').lookup(key);
+  private _parent = new cdktf.StringMap(this, "parent");
+  public get parent() {
+    return this._parent;
   }
 
   // project_id - computed: true, optional: false, required: false
@@ -142,6 +151,7 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._filter = config.filter;
+    this._id = config.id;
   }
 
   // ==========
@@ -162,8 +172,19 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // projects - computed: true, optional: false, required: false
@@ -179,6 +200,7 @@ export class DataGoogleProjects extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       filter: cdktf.stringToTerraform(this._filter),
+      id: cdktf.stringToTerraform(this._id),
     };
   }
 }

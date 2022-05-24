@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceManagerLienConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/resource_manager_lien#id ResourceManagerLien#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
@@ -72,6 +79,7 @@ export function resourceManagerLienTimeoutsToTerraform(struct?: ResourceManagerL
 
 export class ResourceManagerLienTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -81,7 +89,10 @@ export class ResourceManagerLienTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ResourceManagerLienTimeouts | undefined {
+  public get internalValue(): ResourceManagerLienTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -95,14 +106,20 @@ export class ResourceManagerLienTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ResourceManagerLienTimeouts | undefined) {
+  public set internalValue(value: ResourceManagerLienTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
     }
@@ -175,6 +192,7 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._origin = config.origin;
     this._parent = config.parent;
     this._reason = config.reason;
@@ -192,8 +210,19 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -275,6 +304,7 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       origin: cdktf.stringToTerraform(this._origin),
       parent: cdktf.stringToTerraform(this._parent),
       reason: cdktf.stringToTerraform(this._reason),

@@ -33,6 +33,13 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
   */
   readonly determinismLevel?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#id BigqueryRoutine#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
   * 
@@ -144,6 +151,152 @@ export function bigqueryRoutineArgumentsToTerraform(struct?: BigqueryRoutineArgu
   }
 }
 
+export class BigqueryRoutineArgumentsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryRoutineArguments | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._argumentKind !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.argumentKind = this._argumentKind;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryRoutineArguments | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._argumentKind = undefined;
+      this._dataType = undefined;
+      this._mode = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._argumentKind = value.argumentKind;
+      this._dataType = value.dataType;
+      this._mode = value.mode;
+      this._name = value.name;
+    }
+  }
+
+  // argument_kind - computed: false, optional: true, required: false
+  private _argumentKind?: string; 
+  public get argumentKind() {
+    return this.getStringAttribute('argument_kind');
+  }
+  public set argumentKind(value: string) {
+    this._argumentKind = value;
+  }
+  public resetArgumentKind() {
+    this._argumentKind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argumentKindInput() {
+    return this._argumentKind;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class BigqueryRoutineArgumentsList extends cdktf.ComplexList {
+  public internalValue? : BigqueryRoutineArguments[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryRoutineArgumentsOutputReference {
+    return new BigqueryRoutineArgumentsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BigqueryRoutineTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_routine#create BigqueryRoutine#create}
@@ -173,6 +326,7 @@ export function bigqueryRoutineTimeoutsToTerraform(struct?: BigqueryRoutineTimeo
 
 export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -182,7 +336,10 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BigqueryRoutineTimeouts | undefined {
+  public get internalValue(): BigqueryRoutineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -200,15 +357,21 @@ export class BigqueryRoutineTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BigqueryRoutineTimeouts | undefined) {
+  public set internalValue(value: BigqueryRoutineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -302,6 +465,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
     this._definitionBody = config.definitionBody;
     this._description = config.description;
     this._determinismLevel = config.determinismLevel;
+    this._id = config.id;
     this._importedLibraries = config.importedLibraries;
     this._language = config.language;
     this._project = config.project;
@@ -309,7 +473,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
     this._returnType = config.returnType;
     this._routineId = config.routineId;
     this._routineType = config.routineType;
-    this._arguments = config.arguments;
+    this._arguments.internalValue = config.arguments;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -381,8 +545,19 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // imported_libraries - computed: false, optional: true, required: false
@@ -500,20 +675,19 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
   }
 
   // arguments - computed: false, optional: true, required: false
-  private _arguments?: BigqueryRoutineArguments[] | cdktf.IResolvable; 
+  private _arguments = new BigqueryRoutineArgumentsList(this, "arguments", false);
   public get arguments() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('arguments');
+    return this._arguments;
   }
-  public set arguments(value: BigqueryRoutineArguments[] | cdktf.IResolvable) {
-    this._arguments = value;
+  public putArguments(value: BigqueryRoutineArguments[] | cdktf.IResolvable) {
+    this._arguments.internalValue = value;
   }
   public resetArguments() {
-    this._arguments = undefined;
+    this._arguments.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get argumentsInput() {
-    return this._arguments;
+    return this._arguments.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -542,6 +716,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       definition_body: cdktf.stringToTerraform(this._definitionBody),
       description: cdktf.stringToTerraform(this._description),
       determinism_level: cdktf.stringToTerraform(this._determinismLevel),
+      id: cdktf.stringToTerraform(this._id),
       imported_libraries: cdktf.listMapper(cdktf.stringToTerraform)(this._importedLibraries),
       language: cdktf.stringToTerraform(this._language),
       project: cdktf.stringToTerraform(this._project),
@@ -549,7 +724,7 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       return_type: cdktf.stringToTerraform(this._returnType),
       routine_id: cdktf.stringToTerraform(this._routineId),
       routine_type: cdktf.stringToTerraform(this._routineType),
-      arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform)(this._arguments),
+      arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform)(this._arguments.internalValue),
       timeouts: bigqueryRoutineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -18,6 +18,13 @@ export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   */
   readonly exportSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#id ComputeNetworkPeering#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Whether to export the custom routes from the peer network. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#import_custom_routes ComputeNetworkPeering#import_custom_routes}
@@ -81,6 +88,7 @@ export function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetwork
 
 export class ComputeNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -90,7 +98,10 @@ export class ComputeNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeNetworkPeeringTimeouts | undefined {
+  public get internalValue(): ComputeNetworkPeeringTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -108,15 +119,21 @@ export class ComputeNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeNetworkPeeringTimeouts | undefined) {
+  public set internalValue(value: ComputeNetworkPeeringTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -208,6 +225,7 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
     });
     this._exportCustomRoutes = config.exportCustomRoutes;
     this._exportSubnetRoutesWithPublicIp = config.exportSubnetRoutesWithPublicIp;
+    this._id = config.id;
     this._importCustomRoutes = config.importCustomRoutes;
     this._importSubnetRoutesWithPublicIp = config.importSubnetRoutesWithPublicIp;
     this._name = config.name;
@@ -253,8 +271,19 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // import_custom_routes - computed: false, optional: true, required: false
@@ -362,6 +391,7 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
     return {
       export_custom_routes: cdktf.booleanToTerraform(this._exportCustomRoutes),
       export_subnet_routes_with_public_ip: cdktf.booleanToTerraform(this._exportSubnetRoutesWithPublicIp),
+      id: cdktf.stringToTerraform(this._id),
       import_custom_routes: cdktf.booleanToTerraform(this._importCustomRoutes),
       import_subnet_routes_with_public_ip: cdktf.booleanToTerraform(this._importSubnetRoutesWithPublicIp),
       name: cdktf.stringToTerraform(this._name),

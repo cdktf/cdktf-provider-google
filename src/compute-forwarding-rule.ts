@@ -32,6 +32,13 @@ export interface ComputeForwardingRuleConfig extends cdktf.TerraformMetaArgument
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#id ComputeForwardingRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in `https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name` * Partial URL or by name, as in: * `projects/project_id/regions/region/addresses/address-name` * `regions/region/addresses/address-name` * `global/addresses/address-name` * `address-name` The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#ip_address ComputeForwardingRule#ip_address}
@@ -184,6 +191,108 @@ export function computeForwardingRuleServiceDirectoryRegistrationsToTerraform(st
   }
 }
 
+export class ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeForwardingRuleServiceDirectoryRegistrations | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._namespace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.namespace = this._namespace;
+    }
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeForwardingRuleServiceDirectoryRegistrations | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._namespace = undefined;
+      this._service = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._namespace = value.namespace;
+      this._service = value.service;
+    }
+  }
+
+  // namespace - computed: true, optional: true, required: false
+  private _namespace?: string; 
+  public get namespace() {
+    return this.getStringAttribute('namespace');
+  }
+  public set namespace(value: string) {
+    this._namespace = value;
+  }
+  public resetNamespace() {
+    this._namespace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceInput() {
+    return this._namespace;
+  }
+
+  // service - computed: false, optional: true, required: false
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  public resetService() {
+    this._service = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+}
+
+export class ComputeForwardingRuleServiceDirectoryRegistrationsList extends cdktf.ComplexList {
+  public internalValue? : ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference {
+    return new ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeForwardingRuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_forwarding_rule#create ComputeForwardingRule#create}
@@ -213,6 +322,7 @@ export function computeForwardingRuleTimeoutsToTerraform(struct?: ComputeForward
 
 export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -222,7 +332,10 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeForwardingRuleTimeouts | undefined {
+  public get internalValue(): ComputeForwardingRuleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -240,15 +353,21 @@ export class ComputeForwardingRuleTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeForwardingRuleTimeouts | undefined) {
+  public set internalValue(value: ComputeForwardingRuleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -342,6 +461,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     this._allowGlobalAccess = config.allowGlobalAccess;
     this._backendService = config.backendService;
     this._description = config.description;
+    this._id = config.id;
     this._ipAddress = config.ipAddress;
     this._ipProtocol = config.ipProtocol;
     this._isMirroringCollector = config.isMirroringCollector;
@@ -357,7 +477,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
     this._serviceLabel = config.serviceLabel;
     this._subnetwork = config.subnetwork;
     this._target = config.target;
-    this._serviceDirectoryRegistrations = config.serviceDirectoryRegistrations;
+    this._serviceDirectoryRegistrations.internalValue = config.serviceDirectoryRegistrations;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -435,8 +555,19 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_address - computed: true, optional: true, required: false
@@ -692,20 +823,19 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
   }
 
   // service_directory_registrations - computed: false, optional: true, required: false
-  private _serviceDirectoryRegistrations?: ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable; 
+  private _serviceDirectoryRegistrations = new ComputeForwardingRuleServiceDirectoryRegistrationsList(this, "service_directory_registrations", false);
   public get serviceDirectoryRegistrations() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('service_directory_registrations');
+    return this._serviceDirectoryRegistrations;
   }
-  public set serviceDirectoryRegistrations(value: ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable) {
-    this._serviceDirectoryRegistrations = value;
+  public putServiceDirectoryRegistrations(value: ComputeForwardingRuleServiceDirectoryRegistrations[] | cdktf.IResolvable) {
+    this._serviceDirectoryRegistrations.internalValue = value;
   }
   public resetServiceDirectoryRegistrations() {
-    this._serviceDirectoryRegistrations = undefined;
+    this._serviceDirectoryRegistrations.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get serviceDirectoryRegistrationsInput() {
-    return this._serviceDirectoryRegistrations;
+    return this._serviceDirectoryRegistrations.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -734,6 +864,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       allow_global_access: cdktf.booleanToTerraform(this._allowGlobalAccess),
       backend_service: cdktf.stringToTerraform(this._backendService),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       ip_protocol: cdktf.stringToTerraform(this._ipProtocol),
       is_mirroring_collector: cdktf.booleanToTerraform(this._isMirroringCollector),
@@ -749,7 +880,7 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       service_label: cdktf.stringToTerraform(this._serviceLabel),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       target: cdktf.stringToTerraform(this._target),
-      service_directory_registrations: cdktf.listMapper(computeForwardingRuleServiceDirectoryRegistrationsToTerraform)(this._serviceDirectoryRegistrations),
+      service_directory_registrations: cdktf.listMapper(computeForwardingRuleServiceDirectoryRegistrationsToTerraform)(this._serviceDirectoryRegistrations.internalValue),
       timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

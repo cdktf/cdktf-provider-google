@@ -12,6 +12,13 @@ export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.Terraform
   */
   readonly filter?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#id DataGoogleComputeInstanceTemplate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#most_recent DataGoogleComputeInstanceTemplate#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
@@ -307,8 +314,9 @@ export class DataGoogleComputeInstanceTemplateDiskOutputReference extends cdktf.
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // mode - computed: true, optional: false, required: false
@@ -1250,6 +1258,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
       lifecycle: config.lifecycle
     });
     this._filter = config.filter;
+    this._id = config.id;
     this._mostRecent = config.mostRecent;
     this._name = config.name;
     this._project = config.project;
@@ -1310,8 +1319,19 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance_description - computed: true, optional: false, required: false
@@ -1320,8 +1340,9 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // labels - computed: true, optional: false, required: false
-  public labels(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'labels').lookup(key);
+  private _labels = new cdktf.StringMap(this, "labels");
+  public get labels() {
+    return this._labels;
   }
 
   // machine_type - computed: true, optional: false, required: false
@@ -1330,8 +1351,9 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'metadata').lookup(key);
+  private _metadata = new cdktf.StringMap(this, "metadata");
+  public get metadata() {
+    return this._metadata;
   }
 
   // metadata_fingerprint - computed: true, optional: false, required: false
@@ -1459,6 +1481,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       filter: cdktf.stringToTerraform(this._filter),
+      id: cdktf.stringToTerraform(this._id),
       most_recent: cdktf.booleanToTerraform(this._mostRecent),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

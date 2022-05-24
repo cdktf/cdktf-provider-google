@@ -14,6 +14,13 @@ export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group#id ComputeInstanceGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * List of instances in the group. They should be given as self_link URLs. When adding instances they must all be in the same network and zone as the instance group.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group#instances ComputeInstanceGroup#instances}
@@ -82,6 +89,102 @@ export function computeInstanceGroupNamedPortToTerraform(struct?: ComputeInstanc
   }
 }
 
+export class ComputeInstanceGroupNamedPortOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeInstanceGroupNamedPort | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceGroupNamedPort | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._port = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._port = value.port;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+}
+
+export class ComputeInstanceGroupNamedPortList extends cdktf.ComplexList {
+  public internalValue? : ComputeInstanceGroupNamedPort[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeInstanceGroupNamedPortOutputReference {
+    return new ComputeInstanceGroupNamedPortOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeInstanceGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_group#create ComputeInstanceGroup#create}
@@ -111,6 +214,7 @@ export function computeInstanceGroupTimeoutsToTerraform(struct?: ComputeInstance
 
 export class ComputeInstanceGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -120,7 +224,10 @@ export class ComputeInstanceGroupTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeInstanceGroupTimeouts | undefined {
+  public get internalValue(): ComputeInstanceGroupTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -138,15 +245,21 @@ export class ComputeInstanceGroupTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeInstanceGroupTimeouts | undefined) {
+  public set internalValue(value: ComputeInstanceGroupTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -237,12 +350,13 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._instances = config.instances;
     this._name = config.name;
     this._network = config.network;
     this._project = config.project;
     this._zone = config.zone;
-    this._namedPort = config.namedPort;
+    this._namedPort.internalValue = config.namedPort;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -267,8 +381,19 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instances - computed: true, optional: true, required: false
@@ -359,20 +484,19 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   }
 
   // named_port - computed: false, optional: true, required: false
-  private _namedPort?: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable; 
+  private _namedPort = new ComputeInstanceGroupNamedPortList(this, "named_port", false);
   public get namedPort() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('named_port');
+    return this._namedPort;
   }
-  public set namedPort(value: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable) {
-    this._namedPort = value;
+  public putNamedPort(value: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable) {
+    this._namedPort.internalValue = value;
   }
   public resetNamedPort() {
-    this._namedPort = undefined;
+    this._namedPort.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namedPortInput() {
-    return this._namedPort;
+    return this._namedPort.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -398,12 +522,13 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       instances: cdktf.listMapper(cdktf.stringToTerraform)(this._instances),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       zone: cdktf.stringToTerraform(this._zone),
-      named_port: cdktf.listMapper(computeInstanceGroupNamedPortToTerraform)(this._namedPort),
+      named_port: cdktf.listMapper(computeInstanceGroupNamedPortToTerraform)(this._namedPort.internalValue),
       timeouts: computeInstanceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

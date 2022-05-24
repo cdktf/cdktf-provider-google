@@ -14,6 +14,13 @@ export interface ComputeNodeGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group#id ComputeNodeGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The initial number of nodes in the node group. One of 'initial_size' or 'size' must be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_node_group#initial_size ComputeNodeGroup#initial_size}
@@ -297,6 +304,7 @@ export function computeNodeGroupTimeoutsToTerraform(struct?: ComputeNodeGroupTim
 
 export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -306,7 +314,10 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeNodeGroupTimeouts | undefined {
+  public get internalValue(): ComputeNodeGroupTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -324,15 +335,21 @@ export class ComputeNodeGroupTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeNodeGroupTimeouts | undefined) {
+  public set internalValue(value: ComputeNodeGroupTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -423,6 +440,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._initialSize = config.initialSize;
     this._maintenancePolicy = config.maintenancePolicy;
     this._name = config.name;
@@ -461,8 +479,19 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // initial_size - computed: false, optional: true, required: false
@@ -634,6 +663,7 @@ export class ComputeNodeGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       initial_size: cdktf.numberToTerraform(this._initialSize),
       maintenance_policy: cdktf.stringToTerraform(this._maintenancePolicy),
       name: cdktf.stringToTerraform(this._name),

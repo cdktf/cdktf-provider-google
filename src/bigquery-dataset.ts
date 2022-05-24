@@ -70,6 +70,13 @@ expiration time indicated by this property.
   */
   readonly friendlyName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#id BigqueryDataset#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * The labels associated with this dataset. You can use these to
 organize and group your datasets
   * 
@@ -494,6 +501,218 @@ export function bigqueryDatasetAccessToTerraform(struct?: BigqueryDatasetAccess 
   }
 }
 
+export class BigqueryDatasetAccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BigqueryDatasetAccess | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._domain !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.domain = this._domain;
+    }
+    if (this._groupByEmail !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupByEmail = this._groupByEmail;
+    }
+    if (this._role !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.role = this._role;
+    }
+    if (this._specialGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.specialGroup = this._specialGroup;
+    }
+    if (this._userByEmail !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userByEmail = this._userByEmail;
+    }
+    if (this._dataset?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataset = this._dataset?.internalValue;
+    }
+    if (this._view?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.view = this._view?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccess | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._domain = undefined;
+      this._groupByEmail = undefined;
+      this._role = undefined;
+      this._specialGroup = undefined;
+      this._userByEmail = undefined;
+      this._dataset.internalValue = undefined;
+      this._view.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._domain = value.domain;
+      this._groupByEmail = value.groupByEmail;
+      this._role = value.role;
+      this._specialGroup = value.specialGroup;
+      this._userByEmail = value.userByEmail;
+      this._dataset.internalValue = value.dataset;
+      this._view.internalValue = value.view;
+    }
+  }
+
+  // domain - computed: false, optional: true, required: false
+  private _domain?: string; 
+  public get domain() {
+    return this.getStringAttribute('domain');
+  }
+  public set domain(value: string) {
+    this._domain = value;
+  }
+  public resetDomain() {
+    this._domain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainInput() {
+    return this._domain;
+  }
+
+  // group_by_email - computed: false, optional: true, required: false
+  private _groupByEmail?: string; 
+  public get groupByEmail() {
+    return this.getStringAttribute('group_by_email');
+  }
+  public set groupByEmail(value: string) {
+    this._groupByEmail = value;
+  }
+  public resetGroupByEmail() {
+    this._groupByEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupByEmailInput() {
+    return this._groupByEmail;
+  }
+
+  // role - computed: false, optional: true, required: false
+  private _role?: string; 
+  public get role() {
+    return this.getStringAttribute('role');
+  }
+  public set role(value: string) {
+    this._role = value;
+  }
+  public resetRole() {
+    this._role = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role;
+  }
+
+  // special_group - computed: false, optional: true, required: false
+  private _specialGroup?: string; 
+  public get specialGroup() {
+    return this.getStringAttribute('special_group');
+  }
+  public set specialGroup(value: string) {
+    this._specialGroup = value;
+  }
+  public resetSpecialGroup() {
+    this._specialGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get specialGroupInput() {
+    return this._specialGroup;
+  }
+
+  // user_by_email - computed: false, optional: true, required: false
+  private _userByEmail?: string; 
+  public get userByEmail() {
+    return this.getStringAttribute('user_by_email');
+  }
+  public set userByEmail(value: string) {
+    this._userByEmail = value;
+  }
+  public resetUserByEmail() {
+    this._userByEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userByEmailInput() {
+    return this._userByEmail;
+  }
+
+  // dataset - computed: false, optional: true, required: false
+  private _dataset = new BigqueryDatasetAccessDatasetOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: BigqueryDatasetAccessDataset) {
+    this._dataset.internalValue = value;
+  }
+  public resetDataset() {
+    this._dataset.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
+
+  // view - computed: false, optional: true, required: false
+  private _view = new BigqueryDatasetAccessViewOutputReference(this, "view");
+  public get view() {
+    return this._view;
+  }
+  public putView(value: BigqueryDatasetAccessView) {
+    this._view.internalValue = value;
+  }
+  public resetView() {
+    this._view.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get viewInput() {
+    return this._view.internalValue;
+  }
+}
+
+export class BigqueryDatasetAccessList extends cdktf.ComplexList {
+  public internalValue? : BigqueryDatasetAccess[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BigqueryDatasetAccessOutputReference {
+    return new BigqueryDatasetAccessOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BigqueryDatasetDefaultEncryptionConfiguration {
   /**
   * Describes the Cloud KMS encryption key that will be used to protect destination
@@ -589,6 +808,7 @@ export function bigqueryDatasetTimeoutsToTerraform(struct?: BigqueryDatasetTimeo
 
 export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -598,7 +818,10 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BigqueryDatasetTimeouts | undefined {
+  public get internalValue(): BigqueryDatasetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -616,15 +839,21 @@ export class BigqueryDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BigqueryDatasetTimeouts | undefined) {
+  public set internalValue(value: BigqueryDatasetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -720,10 +949,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
     this._deleteContentsOnDestroy = config.deleteContentsOnDestroy;
     this._description = config.description;
     this._friendlyName = config.friendlyName;
+    this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
     this._project = config.project;
-    this._access = config.access;
+    this._access.internalValue = config.access;
     this._defaultEncryptionConfiguration.internalValue = config.defaultEncryptionConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -836,8 +1066,19 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // labels - computed: false, optional: true, required: false
@@ -899,20 +1140,19 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   }
 
   // access - computed: false, optional: true, required: false
-  private _access?: BigqueryDatasetAccess[] | cdktf.IResolvable; 
+  private _access = new BigqueryDatasetAccessList(this, "access", true);
   public get access() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('access')));
+    return this._access;
   }
-  public set access(value: BigqueryDatasetAccess[] | cdktf.IResolvable) {
-    this._access = value;
+  public putAccess(value: BigqueryDatasetAccess[] | cdktf.IResolvable) {
+    this._access.internalValue = value;
   }
   public resetAccess() {
-    this._access = undefined;
+    this._access.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get accessInput() {
-    return this._access;
+    return this._access.internalValue;
   }
 
   // default_encryption_configuration - computed: false, optional: true, required: false
@@ -959,10 +1199,11 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       delete_contents_on_destroy: cdktf.booleanToTerraform(this._deleteContentsOnDestroy),
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
-      access: cdktf.listMapper(bigqueryDatasetAccessToTerraform)(this._access),
+      access: cdktf.listMapper(bigqueryDatasetAccessToTerraform)(this._access.internalValue),
       default_encryption_configuration: bigqueryDatasetDefaultEncryptionConfigurationToTerraform(this._defaultEncryptionConfiguration.internalValue),
       timeouts: bigqueryDatasetTimeoutsToTerraform(this._timeouts.internalValue),
     };

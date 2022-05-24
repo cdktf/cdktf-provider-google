@@ -12,6 +12,13 @@ export interface BinaryAuthorizationAttestorIamMemberConfig extends cdktf.Terraf
   */
   readonly attestor: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#id BinaryAuthorizationAttestorIamMember#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_member#member BinaryAuthorizationAttestorIamMember#member}
   */
   readonly member: string;
@@ -179,6 +186,7 @@ export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResourc
       lifecycle: config.lifecycle
     });
     this._attestor = config.attestor;
+    this._id = config.id;
     this._member = config.member;
     this._project = config.project;
     this._role = config.role;
@@ -208,8 +216,19 @@ export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResourc
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // member - computed: false, optional: false, required: true
@@ -277,6 +296,7 @@ export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       attestor: cdktf.stringToTerraform(this._attestor),
+      id: cdktf.stringToTerraform(this._id),
       member: cdktf.stringToTerraform(this._member),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),

@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#id DataGoogleIamPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * audit_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#audit_config DataGoogleIamPolicy#audit_config}
@@ -42,6 +49,105 @@ export function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?
   }
 }
 
+export class DataGoogleIamPolicyAuditConfigAuditLogConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleIamPolicyAuditConfigAuditLogConfigs | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exemptedMembers !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exemptedMembers = this._exemptedMembers;
+    }
+    if (this._logType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logType = this._logType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleIamPolicyAuditConfigAuditLogConfigs | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exemptedMembers = undefined;
+      this._logType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exemptedMembers = value.exemptedMembers;
+      this._logType = value.logType;
+    }
+  }
+
+  // exempted_members - computed: false, optional: true, required: false
+  private _exemptedMembers?: string[]; 
+  public get exemptedMembers() {
+    return cdktf.Fn.tolist(this.getListAttribute('exempted_members'));
+  }
+  public set exemptedMembers(value: string[]) {
+    this._exemptedMembers = value;
+  }
+  public resetExemptedMembers() {
+    this._exemptedMembers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exemptedMembersInput() {
+    return this._exemptedMembers;
+  }
+
+  // log_type - computed: false, optional: false, required: true
+  private _logType?: string; 
+  public get logType() {
+    return this.getStringAttribute('log_type');
+  }
+  public set logType(value: string) {
+    this._logType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logTypeInput() {
+    return this._logType;
+  }
+}
+
+export class DataGoogleIamPolicyAuditConfigAuditLogConfigsList extends cdktf.ComplexList {
+  public internalValue? : DataGoogleIamPolicyAuditConfigAuditLogConfigs[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleIamPolicyAuditConfigAuditLogConfigsOutputReference {
+    return new DataGoogleIamPolicyAuditConfigAuditLogConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleIamPolicyAuditConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#service DataGoogleIamPolicy#service}
@@ -66,6 +172,102 @@ export function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIam
   }
 }
 
+export class DataGoogleIamPolicyAuditConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleIamPolicyAuditConfig | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._auditLogConfigs?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.auditLogConfigs = this._auditLogConfigs?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleIamPolicyAuditConfig | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._service = undefined;
+      this._auditLogConfigs.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._service = value.service;
+      this._auditLogConfigs.internalValue = value.auditLogConfigs;
+    }
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+
+  // audit_log_configs - computed: false, optional: false, required: true
+  private _auditLogConfigs = new DataGoogleIamPolicyAuditConfigAuditLogConfigsList(this, "audit_log_configs", true);
+  public get auditLogConfigs() {
+    return this._auditLogConfigs;
+  }
+  public putAuditLogConfigs(value: DataGoogleIamPolicyAuditConfigAuditLogConfigs[] | cdktf.IResolvable) {
+    this._auditLogConfigs.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get auditLogConfigsInput() {
+    return this._auditLogConfigs.internalValue;
+  }
+}
+
+export class DataGoogleIamPolicyAuditConfigList extends cdktf.ComplexList {
+  public internalValue? : DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleIamPolicyAuditConfigOutputReference {
+    return new DataGoogleIamPolicyAuditConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleIamPolicyBindingCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_policy#description DataGoogleIamPolicy#description}
@@ -208,6 +410,124 @@ export function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPoli
   }
 }
 
+export class DataGoogleIamPolicyBindingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleIamPolicyBinding | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._members !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.members = this._members;
+    }
+    if (this._role !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.role = this._role;
+    }
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleIamPolicyBinding | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._members = undefined;
+      this._role = undefined;
+      this._condition.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._members = value.members;
+      this._role = value.role;
+      this._condition.internalValue = value.condition;
+    }
+  }
+
+  // members - computed: false, optional: false, required: true
+  private _members?: string[]; 
+  public get members() {
+    return cdktf.Fn.tolist(this.getListAttribute('members'));
+  }
+  public set members(value: string[]) {
+    this._members = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get membersInput() {
+    return this._members;
+  }
+
+  // role - computed: false, optional: false, required: true
+  private _role?: string; 
+  public get role() {
+    return this.getStringAttribute('role');
+  }
+  public set role(value: string) {
+    this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role;
+  }
+
+  // condition - computed: false, optional: true, required: false
+  private _condition = new DataGoogleIamPolicyBindingConditionOutputReference(this, "condition");
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: DataGoogleIamPolicyBindingCondition) {
+    this._condition.internalValue = value;
+  }
+  public resetCondition() {
+    this._condition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+}
+
+export class DataGoogleIamPolicyBindingList extends cdktf.ComplexList {
+  public internalValue? : DataGoogleIamPolicyBinding[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleIamPolicyBindingOutputReference {
+    return new DataGoogleIamPolicyBindingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_policy google_iam_policy}
@@ -243,8 +563,9 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._auditConfig = config.auditConfig;
-    this._binding = config.binding;
+    this._id = config.id;
+    this._auditConfig.internalValue = config.auditConfig;
+    this._binding.internalValue = config.binding;
   }
 
   // ==========
@@ -252,8 +573,19 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // policy_data - computed: true, optional: false, required: false
@@ -262,37 +594,35 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   }
 
   // audit_config - computed: false, optional: true, required: false
-  private _auditConfig?: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable; 
+  private _auditConfig = new DataGoogleIamPolicyAuditConfigList(this, "audit_config", true);
   public get auditConfig() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('audit_config')));
+    return this._auditConfig;
   }
-  public set auditConfig(value: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable) {
-    this._auditConfig = value;
+  public putAuditConfig(value: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable) {
+    this._auditConfig.internalValue = value;
   }
   public resetAuditConfig() {
-    this._auditConfig = undefined;
+    this._auditConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get auditConfigInput() {
-    return this._auditConfig;
+    return this._auditConfig.internalValue;
   }
 
   // binding - computed: false, optional: true, required: false
-  private _binding?: DataGoogleIamPolicyBinding[] | cdktf.IResolvable; 
+  private _binding = new DataGoogleIamPolicyBindingList(this, "binding", true);
   public get binding() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('binding')));
+    return this._binding;
   }
-  public set binding(value: DataGoogleIamPolicyBinding[] | cdktf.IResolvable) {
-    this._binding = value;
+  public putBinding(value: DataGoogleIamPolicyBinding[] | cdktf.IResolvable) {
+    this._binding.internalValue = value;
   }
   public resetBinding() {
-    this._binding = undefined;
+    this._binding.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bindingInput() {
-    return this._binding;
+    return this._binding.internalValue;
   }
 
   // =========
@@ -301,8 +631,9 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      audit_config: cdktf.listMapper(dataGoogleIamPolicyAuditConfigToTerraform)(this._auditConfig),
-      binding: cdktf.listMapper(dataGoogleIamPolicyBindingToTerraform)(this._binding),
+      id: cdktf.stringToTerraform(this._id),
+      audit_config: cdktf.listMapper(dataGoogleIamPolicyAuditConfigToTerraform)(this._auditConfig.internalValue),
+      binding: cdktf.listMapper(dataGoogleIamPolicyBindingToTerraform)(this._binding.internalValue),
     };
   }
 }

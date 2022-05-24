@@ -27,6 +27,13 @@ you create the resource.
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#id ComputeRegionUrlMap#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -354,6 +361,124 @@ export function computeRegionUrlMapHostRuleToTerraform(struct?: ComputeRegionUrl
   }
 }
 
+export class ComputeRegionUrlMapHostRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapHostRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._hosts !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hosts = this._hosts;
+    }
+    if (this._pathMatcher !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathMatcher = this._pathMatcher;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapHostRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._hosts = undefined;
+      this._pathMatcher = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._hosts = value.hosts;
+      this._pathMatcher = value.pathMatcher;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // hosts - computed: false, optional: false, required: true
+  private _hosts?: string[]; 
+  public get hosts() {
+    return cdktf.Fn.tolist(this.getListAttribute('hosts'));
+  }
+  public set hosts(value: string[]) {
+    this._hosts = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostsInput() {
+    return this._hosts;
+  }
+
+  // path_matcher - computed: false, optional: false, required: true
+  private _pathMatcher?: string; 
+  public get pathMatcher() {
+    return this.getStringAttribute('path_matcher');
+  }
+  public set pathMatcher(value: string) {
+    this._pathMatcher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathMatcherInput() {
+    return this._pathMatcher;
+  }
+}
+
+export class ComputeRegionUrlMapHostRuleList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapHostRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapHostRuleOutputReference {
+    return new ComputeRegionUrlMapHostRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherDefaultUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one that was
@@ -1777,6 +1902,121 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackend
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: false, required: true
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
@@ -1812,6 +2052,121 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackend
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: false, required: true
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
@@ -1876,13 +2231,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd !== undefined) {
+    if (this._requestHeadersToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd?.internalValue;
     }
-    if (this._responseHeadersToAdd !== undefined) {
+    if (this._responseHeadersToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1892,15 +2247,15 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
       this.isEmptyObject = false;
       this._requestHeadersToRemove = undefined;
       this._responseHeadersToRemove = undefined;
-      this._requestHeadersToAdd = undefined;
-      this._responseHeadersToAdd = undefined;
+      this._requestHeadersToAdd.internalValue = undefined;
+      this._responseHeadersToAdd.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeadersToRemove = value.requestHeadersToRemove;
       this._responseHeadersToRemove = value.responseHeadersToRemove;
-      this._requestHeadersToAdd = value.requestHeadersToAdd;
-      this._responseHeadersToAdd = value.responseHeadersToAdd;
+      this._requestHeadersToAdd.internalValue = value.requestHeadersToAdd;
+      this._responseHeadersToAdd.internalValue = value.responseHeadersToAdd;
     }
   }
 
@@ -1937,37 +2292,35 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
+  private _requestHeadersToAdd = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(this, "request_headers_to_add", false);
   public get requestHeadersToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add');
+    return this._requestHeadersToAdd;
   }
-  public set requestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
-    this._requestHeadersToAdd = value;
+  public putRequestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
+    this._requestHeadersToAdd.internalValue = value;
   }
   public resetRequestHeadersToAdd() {
-    this._requestHeadersToAdd = undefined;
+    this._requestHeadersToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd;
+    return this._requestHeadersToAdd.internalValue;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
+  private _responseHeadersToAdd = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(this, "response_headers_to_add", false);
   public get responseHeadersToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add');
+    return this._responseHeadersToAdd;
   }
-  public set responseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
-    this._responseHeadersToAdd = value;
+  public putResponseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
+    this._responseHeadersToAdd.internalValue = value;
   }
   public resetResponseHeadersToAdd() {
-    this._responseHeadersToAdd = undefined;
+    this._responseHeadersToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd;
+    return this._responseHeadersToAdd.internalValue;
   }
 }
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices {
@@ -2010,6 +2363,124 @@ export function computeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackend
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendService !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    if (this._headerAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerAction = this._headerAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendService = undefined;
+      this._weight = undefined;
+      this._headerAction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendService = value.backendService;
+      this._weight = value.weight;
+      this._headerAction.internalValue = value.headerAction;
+    }
+  }
+
+  // backend_service - computed: false, optional: false, required: true
+  private _backendService?: string; 
+  public get backendService() {
+    return this.getStringAttribute('backend_service');
+  }
+  public set backendService(value: string) {
+    this._backendService = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService;
+  }
+
+  // weight - computed: false, optional: false, required: true
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+
+  // header_action - computed: false, optional: true, required: false
+  private _headerAction = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionOutputReference(this, "header_action");
+  public get headerAction() {
+    return this._headerAction;
+  }
+  public putHeaderAction(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction) {
+    this._headerAction.internalValue = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference {
+    return new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteAction {
   /**
   * cors_policy block
@@ -2109,9 +2580,9 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices !== undefined) {
+    if (this._weightedBackendServices?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.weightedBackendServices = this._weightedBackendServices;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2125,7 +2596,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
       this._retryPolicy.internalValue = undefined;
       this._timeout.internalValue = undefined;
       this._urlRewrite.internalValue = undefined;
-      this._weightedBackendServices = undefined;
+      this._weightedBackendServices.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2135,7 +2606,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
       this._retryPolicy.internalValue = value.retryPolicy;
       this._timeout.internalValue = value.timeout;
       this._urlRewrite.internalValue = value.urlRewrite;
-      this._weightedBackendServices = value.weightedBackendServices;
+      this._weightedBackendServices.internalValue = value.weightedBackendServices;
     }
   }
 
@@ -2236,20 +2707,19 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference ex
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable; 
+  private _weightedBackendServices = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesList(this, "weighted_backend_services", false);
   public get weightedBackendServices() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weighted_backend_services');
+    return this._weightedBackendServices;
   }
-  public set weightedBackendServices(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
-    this._weightedBackendServices = value;
+  public putWeightedBackendServices(value: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
+    this._weightedBackendServices.internalValue = value;
   }
   public resetWeightedBackendServices() {
-    this._weightedBackendServices = undefined;
+    this._weightedBackendServices.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weightedBackendServicesInput() {
-    return this._weightedBackendServices;
+    return this._weightedBackendServices.internalValue;
   }
 }
 export interface ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect {
@@ -2540,6 +3010,149 @@ export function computeRegionUrlMapPathMatcherPathRuleToTerraform(struct?: Compu
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherPathRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherPathRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._paths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.paths = this._paths;
+    }
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._routeAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routeAction = this._routeAction?.internalValue;
+    }
+    if (this._urlRedirect?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRedirect = this._urlRedirect?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherPathRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._paths = undefined;
+      this._service = undefined;
+      this._routeAction.internalValue = undefined;
+      this._urlRedirect.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._paths = value.paths;
+      this._service = value.service;
+      this._routeAction.internalValue = value.routeAction;
+      this._urlRedirect.internalValue = value.urlRedirect;
+    }
+  }
+
+  // paths - computed: false, optional: false, required: true
+  private _paths?: string[]; 
+  public get paths() {
+    return cdktf.Fn.tolist(this.getListAttribute('paths'));
+  }
+  public set paths(value: string[]) {
+    this._paths = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathsInput() {
+    return this._paths;
+  }
+
+  // service - computed: false, optional: true, required: false
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  public resetService() {
+    this._service = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+
+  // route_action - computed: false, optional: true, required: false
+  private _routeAction = new ComputeRegionUrlMapPathMatcherPathRuleRouteActionOutputReference(this, "route_action");
+  public get routeAction() {
+    return this._routeAction;
+  }
+  public putRouteAction(value: ComputeRegionUrlMapPathMatcherPathRuleRouteAction) {
+    this._routeAction.internalValue = value;
+  }
+  public resetRouteAction() {
+    this._routeAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeActionInput() {
+    return this._routeAction.internalValue;
+  }
+
+  // url_redirect - computed: false, optional: true, required: false
+  private _urlRedirect = new ComputeRegionUrlMapPathMatcherPathRuleUrlRedirectOutputReference(this, "url_redirect");
+  public get urlRedirect() {
+    return this._urlRedirect;
+  }
+  public putUrlRedirect(value: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect) {
+    this._urlRedirect.internalValue = value;
+  }
+  public resetUrlRedirect() {
+    this._urlRedirect.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRedirectInput() {
+    return this._urlRedirect.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherPathRuleList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherPathRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherPathRuleOutputReference {
+    return new ComputeRegionUrlMapPathMatcherPathRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
@@ -2575,6 +3188,121 @@ export function computeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeade
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: false, required: true
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
@@ -2610,6 +3338,121 @@ export function computeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHead
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: false, required: true
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
@@ -2674,13 +3517,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd !== undefined) {
+    if (this._requestHeadersToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd?.internalValue;
     }
-    if (this._responseHeadersToAdd !== undefined) {
+    if (this._responseHeadersToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2690,15 +3533,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
       this.isEmptyObject = false;
       this._requestHeadersToRemove = undefined;
       this._responseHeadersToRemove = undefined;
-      this._requestHeadersToAdd = undefined;
-      this._responseHeadersToAdd = undefined;
+      this._requestHeadersToAdd.internalValue = undefined;
+      this._responseHeadersToAdd.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeadersToRemove = value.requestHeadersToRemove;
       this._responseHeadersToRemove = value.responseHeadersToRemove;
-      this._requestHeadersToAdd = value.requestHeadersToAdd;
-      this._responseHeadersToAdd = value.responseHeadersToAdd;
+      this._requestHeadersToAdd.internalValue = value.requestHeadersToAdd;
+      this._responseHeadersToAdd.internalValue = value.responseHeadersToAdd;
     }
   }
 
@@ -2735,37 +3578,35 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
+  private _requestHeadersToAdd = new ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddList(this, "request_headers_to_add", false);
   public get requestHeadersToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add');
+    return this._requestHeadersToAdd;
   }
-  public set requestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
-    this._requestHeadersToAdd = value;
+  public putRequestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
+    this._requestHeadersToAdd.internalValue = value;
   }
   public resetRequestHeadersToAdd() {
-    this._requestHeadersToAdd = undefined;
+    this._requestHeadersToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd;
+    return this._requestHeadersToAdd.internalValue;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
+  private _responseHeadersToAdd = new ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddList(this, "response_headers_to_add", false);
   public get responseHeadersToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add');
+    return this._responseHeadersToAdd;
   }
-  public set responseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
-    this._responseHeadersToAdd = value;
+  public putResponseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
+    this._responseHeadersToAdd.internalValue = value;
   }
   public resetResponseHeadersToAdd() {
-    this._responseHeadersToAdd = undefined;
+    this._responseHeadersToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd;
+    return this._responseHeadersToAdd.internalValue;
   }
 }
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
@@ -2943,6 +3784,237 @@ export function computeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesT
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exactMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exactMatch = this._exactMatch;
+    }
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._invertMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.invertMatch = this._invertMatch;
+    }
+    if (this._prefixMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefixMatch = this._prefixMatch;
+    }
+    if (this._presentMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.presentMatch = this._presentMatch;
+    }
+    if (this._regexMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regexMatch = this._regexMatch;
+    }
+    if (this._suffixMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.suffixMatch = this._suffixMatch;
+    }
+    if (this._rangeMatch?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rangeMatch = this._rangeMatch?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exactMatch = undefined;
+      this._headerName = undefined;
+      this._invertMatch = undefined;
+      this._prefixMatch = undefined;
+      this._presentMatch = undefined;
+      this._regexMatch = undefined;
+      this._suffixMatch = undefined;
+      this._rangeMatch.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exactMatch = value.exactMatch;
+      this._headerName = value.headerName;
+      this._invertMatch = value.invertMatch;
+      this._prefixMatch = value.prefixMatch;
+      this._presentMatch = value.presentMatch;
+      this._regexMatch = value.regexMatch;
+      this._suffixMatch = value.suffixMatch;
+      this._rangeMatch.internalValue = value.rangeMatch;
+    }
+  }
+
+  // exact_match - computed: false, optional: true, required: false
+  private _exactMatch?: string; 
+  public get exactMatch() {
+    return this.getStringAttribute('exact_match');
+  }
+  public set exactMatch(value: string) {
+    this._exactMatch = value;
+  }
+  public resetExactMatch() {
+    this._exactMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exactMatchInput() {
+    return this._exactMatch;
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // invert_match - computed: false, optional: true, required: false
+  private _invertMatch?: boolean | cdktf.IResolvable; 
+  public get invertMatch() {
+    return this.getBooleanAttribute('invert_match');
+  }
+  public set invertMatch(value: boolean | cdktf.IResolvable) {
+    this._invertMatch = value;
+  }
+  public resetInvertMatch() {
+    this._invertMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get invertMatchInput() {
+    return this._invertMatch;
+  }
+
+  // prefix_match - computed: false, optional: true, required: false
+  private _prefixMatch?: string; 
+  public get prefixMatch() {
+    return this.getStringAttribute('prefix_match');
+  }
+  public set prefixMatch(value: string) {
+    this._prefixMatch = value;
+  }
+  public resetPrefixMatch() {
+    this._prefixMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixMatchInput() {
+    return this._prefixMatch;
+  }
+
+  // present_match - computed: false, optional: true, required: false
+  private _presentMatch?: boolean | cdktf.IResolvable; 
+  public get presentMatch() {
+    return this.getBooleanAttribute('present_match');
+  }
+  public set presentMatch(value: boolean | cdktf.IResolvable) {
+    this._presentMatch = value;
+  }
+  public resetPresentMatch() {
+    this._presentMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get presentMatchInput() {
+    return this._presentMatch;
+  }
+
+  // regex_match - computed: false, optional: true, required: false
+  private _regexMatch?: string; 
+  public get regexMatch() {
+    return this.getStringAttribute('regex_match');
+  }
+  public set regexMatch(value: string) {
+    this._regexMatch = value;
+  }
+  public resetRegexMatch() {
+    this._regexMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexMatchInput() {
+    return this._regexMatch;
+  }
+
+  // suffix_match - computed: false, optional: true, required: false
+  private _suffixMatch?: string; 
+  public get suffixMatch() {
+    return this.getStringAttribute('suffix_match');
+  }
+  public set suffixMatch(value: string) {
+    this._suffixMatch = value;
+  }
+  public resetSuffixMatch() {
+    this._suffixMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suffixMatchInput() {
+    return this._suffixMatch;
+  }
+
+  // range_match - computed: false, optional: true, required: false
+  private _rangeMatch = new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatchOutputReference(this, "range_match");
+  public get rangeMatch() {
+    return this._rangeMatch;
+  }
+  public putRangeMatch(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch) {
+    this._rangeMatch.internalValue = value;
+  }
+  public resetRangeMatch() {
+    this._rangeMatch.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeMatchInput() {
+    return this._rangeMatch.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels {
   /**
   * Name of metadata label. The name can have a maximum length of 1024 characters
@@ -2971,6 +4043,102 @@ export function computeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilter
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters {
   /**
   * Specifies how individual filterLabel matches within the list of filterLabels
@@ -3003,6 +4171,102 @@ export function computeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilter
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._filterMatchCriteria !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filterMatchCriteria = this._filterMatchCriteria;
+    }
+    if (this._filterLabels?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filterLabels = this._filterLabels?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._filterMatchCriteria = undefined;
+      this._filterLabels.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._filterMatchCriteria = value.filterMatchCriteria;
+      this._filterLabels.internalValue = value.filterLabels;
+    }
+  }
+
+  // filter_match_criteria - computed: false, optional: false, required: true
+  private _filterMatchCriteria?: string; 
+  public get filterMatchCriteria() {
+    return this.getStringAttribute('filter_match_criteria');
+  }
+  public set filterMatchCriteria(value: string) {
+    this._filterMatchCriteria = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterMatchCriteriaInput() {
+    return this._filterMatchCriteria;
+  }
+
+  // filter_labels - computed: false, optional: false, required: true
+  private _filterLabels = new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsList(this, "filter_labels", false);
+  public get filterLabels() {
+    return this._filterLabels;
+  }
+  public putFilterLabels(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[] | cdktf.IResolvable) {
+    this._filterLabels.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterLabelsInput() {
+    return this._filterLabels.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches {
   /**
   * The queryParameterMatch matches if the value of the parameter exactly matches
@@ -3051,6 +4315,149 @@ export function computeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameter
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exactMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exactMatch = this._exactMatch;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._presentMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.presentMatch = this._presentMatch;
+    }
+    if (this._regexMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regexMatch = this._regexMatch;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exactMatch = undefined;
+      this._name = undefined;
+      this._presentMatch = undefined;
+      this._regexMatch = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exactMatch = value.exactMatch;
+      this._name = value.name;
+      this._presentMatch = value.presentMatch;
+      this._regexMatch = value.regexMatch;
+    }
+  }
+
+  // exact_match - computed: false, optional: true, required: false
+  private _exactMatch?: string; 
+  public get exactMatch() {
+    return this.getStringAttribute('exact_match');
+  }
+  public set exactMatch(value: string) {
+    this._exactMatch = value;
+  }
+  public resetExactMatch() {
+    this._exactMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exactMatchInput() {
+    return this._exactMatch;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // present_match - computed: false, optional: true, required: false
+  private _presentMatch?: boolean | cdktf.IResolvable; 
+  public get presentMatch() {
+    return this.getBooleanAttribute('present_match');
+  }
+  public set presentMatch(value: boolean | cdktf.IResolvable) {
+    this._presentMatch = value;
+  }
+  public resetPresentMatch() {
+    this._presentMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get presentMatchInput() {
+    return this._presentMatch;
+  }
+
+  // regex_match - computed: false, optional: true, required: false
+  private _regexMatch?: string; 
+  public get regexMatch() {
+    return this.getStringAttribute('regex_match');
+  }
+  public set regexMatch(value: string) {
+    this._regexMatch = value;
+  }
+  public resetRegexMatch() {
+    this._regexMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexMatchInput() {
+    return this._regexMatch;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRules {
   /**
   * For satisfying the matchRule condition, the path of the request must exactly
@@ -3124,6 +4531,218 @@ export function computeRegionUrlMapPathMatcherRouteRulesMatchRulesToTerraform(st
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesMatchRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fullPathMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fullPathMatch = this._fullPathMatch;
+    }
+    if (this._ignoreCase !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreCase = this._ignoreCase;
+    }
+    if (this._prefixMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefixMatch = this._prefixMatch;
+    }
+    if (this._regexMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regexMatch = this._regexMatch;
+    }
+    if (this._headerMatches?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerMatches = this._headerMatches?.internalValue;
+    }
+    if (this._metadataFilters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metadataFilters = this._metadataFilters?.internalValue;
+    }
+    if (this._queryParameterMatches?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryParameterMatches = this._queryParameterMatches?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fullPathMatch = undefined;
+      this._ignoreCase = undefined;
+      this._prefixMatch = undefined;
+      this._regexMatch = undefined;
+      this._headerMatches.internalValue = undefined;
+      this._metadataFilters.internalValue = undefined;
+      this._queryParameterMatches.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fullPathMatch = value.fullPathMatch;
+      this._ignoreCase = value.ignoreCase;
+      this._prefixMatch = value.prefixMatch;
+      this._regexMatch = value.regexMatch;
+      this._headerMatches.internalValue = value.headerMatches;
+      this._metadataFilters.internalValue = value.metadataFilters;
+      this._queryParameterMatches.internalValue = value.queryParameterMatches;
+    }
+  }
+
+  // full_path_match - computed: false, optional: true, required: false
+  private _fullPathMatch?: string; 
+  public get fullPathMatch() {
+    return this.getStringAttribute('full_path_match');
+  }
+  public set fullPathMatch(value: string) {
+    this._fullPathMatch = value;
+  }
+  public resetFullPathMatch() {
+    this._fullPathMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fullPathMatchInput() {
+    return this._fullPathMatch;
+  }
+
+  // ignore_case - computed: false, optional: true, required: false
+  private _ignoreCase?: boolean | cdktf.IResolvable; 
+  public get ignoreCase() {
+    return this.getBooleanAttribute('ignore_case');
+  }
+  public set ignoreCase(value: boolean | cdktf.IResolvable) {
+    this._ignoreCase = value;
+  }
+  public resetIgnoreCase() {
+    this._ignoreCase = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreCaseInput() {
+    return this._ignoreCase;
+  }
+
+  // prefix_match - computed: false, optional: true, required: false
+  private _prefixMatch?: string; 
+  public get prefixMatch() {
+    return this.getStringAttribute('prefix_match');
+  }
+  public set prefixMatch(value: string) {
+    this._prefixMatch = value;
+  }
+  public resetPrefixMatch() {
+    this._prefixMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixMatchInput() {
+    return this._prefixMatch;
+  }
+
+  // regex_match - computed: false, optional: true, required: false
+  private _regexMatch?: string; 
+  public get regexMatch() {
+    return this.getStringAttribute('regex_match');
+  }
+  public set regexMatch(value: string) {
+    this._regexMatch = value;
+  }
+  public resetRegexMatch() {
+    this._regexMatch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexMatchInput() {
+    return this._regexMatch;
+  }
+
+  // header_matches - computed: false, optional: true, required: false
+  private _headerMatches = new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesList(this, "header_matches", false);
+  public get headerMatches() {
+    return this._headerMatches;
+  }
+  public putHeaderMatches(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches[] | cdktf.IResolvable) {
+    this._headerMatches.internalValue = value;
+  }
+  public resetHeaderMatches() {
+    this._headerMatches.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerMatchesInput() {
+    return this._headerMatches.internalValue;
+  }
+
+  // metadata_filters - computed: false, optional: true, required: false
+  private _metadataFilters = new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersList(this, "metadata_filters", false);
+  public get metadataFilters() {
+    return this._metadataFilters;
+  }
+  public putMetadataFilters(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters[] | cdktf.IResolvable) {
+    this._metadataFilters.internalValue = value;
+  }
+  public resetMetadataFilters() {
+    this._metadataFilters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataFiltersInput() {
+    return this._metadataFilters.internalValue;
+  }
+
+  // query_parameter_matches - computed: false, optional: true, required: false
+  private _queryParameterMatches = new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesList(this, "query_parameter_matches", false);
+  public get queryParameterMatches() {
+    return this._queryParameterMatches;
+  }
+  public putQueryParameterMatches(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[] | cdktf.IResolvable) {
+    this._queryParameterMatches.internalValue = value;
+  }
+  public resetQueryParameterMatches() {
+    this._queryParameterMatches.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryParameterMatchesInput() {
+    return this._queryParameterMatches.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesMatchRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy {
   /**
   * In response to a preflight request, setting this to true indicates that the
@@ -4324,6 +5943,121 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBacke
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: false, required: true
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
@@ -4359,6 +6093,121 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBacke
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: false, required: true
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
@@ -4423,13 +6272,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
       hasAnyValues = true;
       internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
     }
-    if (this._requestHeadersToAdd !== undefined) {
+    if (this._requestHeadersToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd?.internalValue;
     }
-    if (this._responseHeadersToAdd !== undefined) {
+    if (this._responseHeadersToAdd?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -4439,15 +6288,15 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
       this.isEmptyObject = false;
       this._requestHeadersToRemove = undefined;
       this._responseHeadersToRemove = undefined;
-      this._requestHeadersToAdd = undefined;
-      this._responseHeadersToAdd = undefined;
+      this._requestHeadersToAdd.internalValue = undefined;
+      this._responseHeadersToAdd.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeadersToRemove = value.requestHeadersToRemove;
       this._responseHeadersToRemove = value.responseHeadersToRemove;
-      this._requestHeadersToAdd = value.requestHeadersToAdd;
-      this._responseHeadersToAdd = value.responseHeadersToAdd;
+      this._requestHeadersToAdd.internalValue = value.requestHeadersToAdd;
+      this._responseHeadersToAdd.internalValue = value.responseHeadersToAdd;
     }
   }
 
@@ -4484,37 +6333,35 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
   }
 
   // request_headers_to_add - computed: false, optional: true, required: false
-  private _requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable; 
+  private _requestHeadersToAdd = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(this, "request_headers_to_add", false);
   public get requestHeadersToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_headers_to_add');
+    return this._requestHeadersToAdd;
   }
-  public set requestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
-    this._requestHeadersToAdd = value;
+  public putRequestHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
+    this._requestHeadersToAdd.internalValue = value;
   }
   public resetRequestHeadersToAdd() {
-    this._requestHeadersToAdd = undefined;
+    this._requestHeadersToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeadersToAddInput() {
-    return this._requestHeadersToAdd;
+    return this._requestHeadersToAdd.internalValue;
   }
 
   // response_headers_to_add - computed: false, optional: true, required: false
-  private _responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable; 
+  private _responseHeadersToAdd = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(this, "response_headers_to_add", false);
   public get responseHeadersToAdd() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_headers_to_add');
+    return this._responseHeadersToAdd;
   }
-  public set responseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
-    this._responseHeadersToAdd = value;
+  public putResponseHeadersToAdd(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
+    this._responseHeadersToAdd.internalValue = value;
   }
   public resetResponseHeadersToAdd() {
-    this._responseHeadersToAdd = undefined;
+    this._responseHeadersToAdd.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeadersToAddInput() {
-    return this._responseHeadersToAdd;
+    return this._responseHeadersToAdd.internalValue;
   }
 }
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices {
@@ -4557,6 +6404,124 @@ export function computeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBacke
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendService !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    if (this._headerAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerAction = this._headerAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendService = undefined;
+      this._weight = undefined;
+      this._headerAction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendService = value.backendService;
+      this._weight = value.weight;
+      this._headerAction.internalValue = value.headerAction;
+    }
+  }
+
+  // backend_service - computed: false, optional: false, required: true
+  private _backendService?: string; 
+  public get backendService() {
+    return this.getStringAttribute('backend_service');
+  }
+  public set backendService(value: string) {
+    this._backendService = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService;
+  }
+
+  // weight - computed: false, optional: false, required: true
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+
+  // header_action - computed: false, optional: true, required: false
+  private _headerAction = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionOutputReference(this, "header_action");
+  public get headerAction() {
+    return this._headerAction;
+  }
+  public putHeaderAction(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction) {
+    this._headerAction.internalValue = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteAction {
   /**
   * cors_policy block
@@ -4656,9 +6621,9 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
       hasAnyValues = true;
       internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
     }
-    if (this._weightedBackendServices !== undefined) {
+    if (this._weightedBackendServices?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.weightedBackendServices = this._weightedBackendServices;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -4672,7 +6637,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
       this._retryPolicy.internalValue = undefined;
       this._timeout.internalValue = undefined;
       this._urlRewrite.internalValue = undefined;
-      this._weightedBackendServices = undefined;
+      this._weightedBackendServices.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -4682,7 +6647,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
       this._retryPolicy.internalValue = value.retryPolicy;
       this._timeout.internalValue = value.timeout;
       this._urlRewrite.internalValue = value.urlRewrite;
-      this._weightedBackendServices = value.weightedBackendServices;
+      this._weightedBackendServices.internalValue = value.weightedBackendServices;
     }
   }
 
@@ -4783,20 +6748,19 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference 
   }
 
   // weighted_backend_services - computed: false, optional: true, required: false
-  private _weightedBackendServices?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable; 
+  private _weightedBackendServices = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesList(this, "weighted_backend_services", false);
   public get weightedBackendServices() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('weighted_backend_services');
+    return this._weightedBackendServices;
   }
-  public set weightedBackendServices(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
-    this._weightedBackendServices = value;
+  public putWeightedBackendServices(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
+    this._weightedBackendServices.internalValue = value;
   }
   public resetWeightedBackendServices() {
-    this._weightedBackendServices = undefined;
+    this._weightedBackendServices.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weightedBackendServicesInput() {
-    return this._weightedBackendServices;
+    return this._weightedBackendServices.internalValue;
   }
 }
 export interface ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect {
@@ -5114,6 +7078,193 @@ export function computeRegionUrlMapPathMatcherRouteRulesToTerraform(struct?: Com
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherRouteRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcherRouteRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    if (this._headerAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerAction = this._headerAction?.internalValue;
+    }
+    if (this._matchRules?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchRules = this._matchRules?.internalValue;
+    }
+    if (this._routeAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routeAction = this._routeAction?.internalValue;
+    }
+    if (this._urlRedirect?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRedirect = this._urlRedirect?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcherRouteRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._priority = undefined;
+      this._service = undefined;
+      this._headerAction.internalValue = undefined;
+      this._matchRules.internalValue = undefined;
+      this._routeAction.internalValue = undefined;
+      this._urlRedirect.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._priority = value.priority;
+      this._service = value.service;
+      this._headerAction.internalValue = value.headerAction;
+      this._matchRules.internalValue = value.matchRules;
+      this._routeAction.internalValue = value.routeAction;
+      this._urlRedirect.internalValue = value.urlRedirect;
+    }
+  }
+
+  // priority - computed: false, optional: false, required: true
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service - computed: false, optional: true, required: false
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  public resetService() {
+    this._service = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+
+  // header_action - computed: false, optional: true, required: false
+  private _headerAction = new ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference(this, "header_action");
+  public get headerAction() {
+    return this._headerAction;
+  }
+  public putHeaderAction(value: ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction) {
+    this._headerAction.internalValue = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction.internalValue;
+  }
+
+  // match_rules - computed: false, optional: true, required: false
+  private _matchRules = new ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesList(this, "match_rules", false);
+  public get matchRules() {
+    return this._matchRules;
+  }
+  public putMatchRules(value: ComputeRegionUrlMapPathMatcherRouteRulesMatchRules[] | cdktf.IResolvable) {
+    this._matchRules.internalValue = value;
+  }
+  public resetMatchRules() {
+    this._matchRules.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchRulesInput() {
+    return this._matchRules.internalValue;
+  }
+
+  // route_action - computed: false, optional: true, required: false
+  private _routeAction = new ComputeRegionUrlMapPathMatcherRouteRulesRouteActionOutputReference(this, "route_action");
+  public get routeAction() {
+    return this._routeAction;
+  }
+  public putRouteAction(value: ComputeRegionUrlMapPathMatcherRouteRulesRouteAction) {
+    this._routeAction.internalValue = value;
+  }
+  public resetRouteAction() {
+    this._routeAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeActionInput() {
+    return this._routeAction.internalValue;
+  }
+
+  // url_redirect - computed: false, optional: true, required: false
+  private _urlRedirect = new ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirectOutputReference(this, "url_redirect");
+  public get urlRedirect() {
+    return this._urlRedirect;
+  }
+  public putUrlRedirect(value: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect) {
+    this._urlRedirect.internalValue = value;
+  }
+  public resetUrlRedirect() {
+    this._urlRedirect.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRedirectInput() {
+    return this._urlRedirect.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherRouteRulesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcherRouteRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherRouteRulesOutputReference {
+    return new ComputeRegionUrlMapPathMatcherRouteRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapPathMatcher {
   /**
   * A reference to a RegionBackendService resource. This will be used if
@@ -5170,6 +7321,193 @@ export function computeRegionUrlMapPathMatcherToTerraform(struct?: ComputeRegion
   }
 }
 
+export class ComputeRegionUrlMapPathMatcherOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapPathMatcher | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultService !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultService = this._defaultService;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._defaultUrlRedirect?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultUrlRedirect = this._defaultUrlRedirect?.internalValue;
+    }
+    if (this._pathRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathRule = this._pathRule?.internalValue;
+    }
+    if (this._routeRules?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routeRules = this._routeRules?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapPathMatcher | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultService = undefined;
+      this._description = undefined;
+      this._name = undefined;
+      this._defaultUrlRedirect.internalValue = undefined;
+      this._pathRule.internalValue = undefined;
+      this._routeRules.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultService = value.defaultService;
+      this._description = value.description;
+      this._name = value.name;
+      this._defaultUrlRedirect.internalValue = value.defaultUrlRedirect;
+      this._pathRule.internalValue = value.pathRule;
+      this._routeRules.internalValue = value.routeRules;
+    }
+  }
+
+  // default_service - computed: false, optional: true, required: false
+  private _defaultService?: string; 
+  public get defaultService() {
+    return this.getStringAttribute('default_service');
+  }
+  public set defaultService(value: string) {
+    this._defaultService = value;
+  }
+  public resetDefaultService() {
+    this._defaultService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultServiceInput() {
+    return this._defaultService;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // default_url_redirect - computed: false, optional: true, required: false
+  private _defaultUrlRedirect = new ComputeRegionUrlMapPathMatcherDefaultUrlRedirectOutputReference(this, "default_url_redirect");
+  public get defaultUrlRedirect() {
+    return this._defaultUrlRedirect;
+  }
+  public putDefaultUrlRedirect(value: ComputeRegionUrlMapPathMatcherDefaultUrlRedirect) {
+    this._defaultUrlRedirect.internalValue = value;
+  }
+  public resetDefaultUrlRedirect() {
+    this._defaultUrlRedirect.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultUrlRedirectInput() {
+    return this._defaultUrlRedirect.internalValue;
+  }
+
+  // path_rule - computed: false, optional: true, required: false
+  private _pathRule = new ComputeRegionUrlMapPathMatcherPathRuleList(this, "path_rule", false);
+  public get pathRule() {
+    return this._pathRule;
+  }
+  public putPathRule(value: ComputeRegionUrlMapPathMatcherPathRule[] | cdktf.IResolvable) {
+    this._pathRule.internalValue = value;
+  }
+  public resetPathRule() {
+    this._pathRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathRuleInput() {
+    return this._pathRule.internalValue;
+  }
+
+  // route_rules - computed: false, optional: true, required: false
+  private _routeRules = new ComputeRegionUrlMapPathMatcherRouteRulesList(this, "route_rules", false);
+  public get routeRules() {
+    return this._routeRules;
+  }
+  public putRouteRules(value: ComputeRegionUrlMapPathMatcherRouteRules[] | cdktf.IResolvable) {
+    this._routeRules.internalValue = value;
+  }
+  public resetRouteRules() {
+    this._routeRules.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeRulesInput() {
+    return this._routeRules.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapPathMatcherList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapPathMatcher[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapPathMatcherOutputReference {
+    return new ComputeRegionUrlMapPathMatcherOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapTest {
   /**
   * Description of this test case.
@@ -5210,6 +7548,143 @@ export function computeRegionUrlMapTestToTerraform(struct?: ComputeRegionUrlMapT
   }
 }
 
+export class ComputeRegionUrlMapTestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapTest | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._host !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.host = this._host;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._service !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapTest | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._host = undefined;
+      this._path = undefined;
+      this._service = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._host = value.host;
+      this._path = value.path;
+      this._service = value.service;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // host - computed: false, optional: false, required: true
+  private _host?: string; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string) {
+    this._host = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: string; 
+  public get service() {
+    return this.getStringAttribute('service');
+  }
+  public set service(value: string) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service;
+  }
+}
+
+export class ComputeRegionUrlMapTestList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapTest[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapTestOutputReference {
+    return new ComputeRegionUrlMapTestOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeRegionUrlMapTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#create ComputeRegionUrlMap#create}
@@ -5239,6 +7714,7 @@ export function computeRegionUrlMapTimeoutsToTerraform(struct?: ComputeRegionUrl
 
 export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -5248,7 +7724,10 @@ export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ComputeRegionUrlMapTimeouts | undefined {
+  public get internalValue(): ComputeRegionUrlMapTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -5266,15 +7745,21 @@ export class ComputeRegionUrlMapTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ComputeRegionUrlMapTimeouts | undefined) {
+  public set internalValue(value: ComputeRegionUrlMapTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._update = value.update;
@@ -5366,13 +7851,14 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
     });
     this._defaultService = config.defaultService;
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
     this._defaultUrlRedirect.internalValue = config.defaultUrlRedirect;
-    this._hostRule = config.hostRule;
-    this._pathMatcher = config.pathMatcher;
-    this._test = config.test;
+    this._hostRule.internalValue = config.hostRule;
+    this._pathMatcher.internalValue = config.pathMatcher;
+    this._test.internalValue = config.test;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -5423,8 +7909,19 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // map_id - computed: true, optional: false, required: false
@@ -5499,54 +7996,51 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
   }
 
   // host_rule - computed: false, optional: true, required: false
-  private _hostRule?: ComputeRegionUrlMapHostRule[] | cdktf.IResolvable; 
+  private _hostRule = new ComputeRegionUrlMapHostRuleList(this, "host_rule", true);
   public get hostRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('host_rule')));
+    return this._hostRule;
   }
-  public set hostRule(value: ComputeRegionUrlMapHostRule[] | cdktf.IResolvable) {
-    this._hostRule = value;
+  public putHostRule(value: ComputeRegionUrlMapHostRule[] | cdktf.IResolvable) {
+    this._hostRule.internalValue = value;
   }
   public resetHostRule() {
-    this._hostRule = undefined;
+    this._hostRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hostRuleInput() {
-    return this._hostRule;
+    return this._hostRule.internalValue;
   }
 
   // path_matcher - computed: false, optional: true, required: false
-  private _pathMatcher?: ComputeRegionUrlMapPathMatcher[] | cdktf.IResolvable; 
+  private _pathMatcher = new ComputeRegionUrlMapPathMatcherList(this, "path_matcher", false);
   public get pathMatcher() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('path_matcher');
+    return this._pathMatcher;
   }
-  public set pathMatcher(value: ComputeRegionUrlMapPathMatcher[] | cdktf.IResolvable) {
-    this._pathMatcher = value;
+  public putPathMatcher(value: ComputeRegionUrlMapPathMatcher[] | cdktf.IResolvable) {
+    this._pathMatcher.internalValue = value;
   }
   public resetPathMatcher() {
-    this._pathMatcher = undefined;
+    this._pathMatcher.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get pathMatcherInput() {
-    return this._pathMatcher;
+    return this._pathMatcher.internalValue;
   }
 
   // test - computed: false, optional: true, required: false
-  private _test?: ComputeRegionUrlMapTest[] | cdktf.IResolvable; 
+  private _test = new ComputeRegionUrlMapTestList(this, "test", false);
   public get test() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('test');
+    return this._test;
   }
-  public set test(value: ComputeRegionUrlMapTest[] | cdktf.IResolvable) {
-    this._test = value;
+  public putTest(value: ComputeRegionUrlMapTest[] | cdktf.IResolvable) {
+    this._test.internalValue = value;
   }
   public resetTest() {
-    this._test = undefined;
+    this._test.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get testInput() {
-    return this._test;
+    return this._test.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -5573,13 +8067,14 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
     return {
       default_service: cdktf.stringToTerraform(this._defaultService),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       default_url_redirect: computeRegionUrlMapDefaultUrlRedirectToTerraform(this._defaultUrlRedirect.internalValue),
-      host_rule: cdktf.listMapper(computeRegionUrlMapHostRuleToTerraform)(this._hostRule),
-      path_matcher: cdktf.listMapper(computeRegionUrlMapPathMatcherToTerraform)(this._pathMatcher),
-      test: cdktf.listMapper(computeRegionUrlMapTestToTerraform)(this._test),
+      host_rule: cdktf.listMapper(computeRegionUrlMapHostRuleToTerraform)(this._hostRule.internalValue),
+      path_matcher: cdktf.listMapper(computeRegionUrlMapPathMatcherToTerraform)(this._pathMatcher.internalValue),
+      test: cdktf.listMapper(computeRegionUrlMapTestToTerraform)(this._test.internalValue),
       timeouts: computeRegionUrlMapTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
