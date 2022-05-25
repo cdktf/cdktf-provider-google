@@ -1,6 +1,7 @@
 {
   "language": "typescript",
   "app": "echo noop",
+  "sendCrashReports": false,
   "terraformProviders": [
     "google@~> 4.0"
   ],
