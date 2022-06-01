@@ -36,7 +36,10 @@ export interface BigqueryConnectionConfig extends cdktf.TerraformMetaArguments {
   * The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
-Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
+Examples: US, EU, asia-northeast1, us-central1, europe-west1.
+Spanner Connections same as spanner region
+AWS allowed regions are aws-us-east-1
+Azure allowed regions are azure-eastus2
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#location BigqueryConnection#location}
   */
@@ -46,11 +49,29 @@ Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value 
   */
   readonly project?: string;
   /**
+  * aws block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#aws BigqueryConnection#aws}
+  */
+  readonly aws?: BigqueryConnectionAws;
+  /**
+  * azure block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#azure BigqueryConnection#azure}
+  */
+  readonly azure?: BigqueryConnectionAzure;
+  /**
   * cloud_resource block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#cloud_resource BigqueryConnection#cloud_resource}
   */
   readonly cloudResource?: BigqueryConnectionCloudResource;
+  /**
+  * cloud_spanner block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#cloud_spanner BigqueryConnection#cloud_spanner}
+  */
+  readonly cloudSpanner?: BigqueryConnectionCloudSpanner;
   /**
   * cloud_sql block
   * 
@@ -63,6 +84,223 @@ Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#timeouts BigqueryConnection#timeouts}
   */
   readonly timeouts?: BigqueryConnectionTimeouts;
+}
+export interface BigqueryConnectionAwsAccessRole {
+  /**
+  * The user’s AWS IAM Role that trusts the Google-owned AWS IAM user Connection.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#iam_role_id BigqueryConnection#iam_role_id}
+  */
+  readonly iamRoleId: string;
+}
+
+export function bigqueryConnectionAwsAccessRoleToTerraform(struct?: BigqueryConnectionAwsAccessRoleOutputReference | BigqueryConnectionAwsAccessRole): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    iam_role_id: cdktf.stringToTerraform(struct!.iamRoleId),
+  }
+}
+
+export class BigqueryConnectionAwsAccessRoleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryConnectionAwsAccessRole | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._iamRoleId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.iamRoleId = this._iamRoleId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryConnectionAwsAccessRole | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._iamRoleId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._iamRoleId = value.iamRoleId;
+    }
+  }
+
+  // iam_role_id - computed: false, optional: false, required: true
+  private _iamRoleId?: string; 
+  public get iamRoleId() {
+    return this.getStringAttribute('iam_role_id');
+  }
+  public set iamRoleId(value: string) {
+    this._iamRoleId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iamRoleIdInput() {
+    return this._iamRoleId;
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public get identity() {
+    return this.getStringAttribute('identity');
+  }
+}
+export interface BigqueryConnectionAws {
+  /**
+  * access_role block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#access_role BigqueryConnection#access_role}
+  */
+  readonly accessRole: BigqueryConnectionAwsAccessRole;
+}
+
+export function bigqueryConnectionAwsToTerraform(struct?: BigqueryConnectionAwsOutputReference | BigqueryConnectionAws): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_role: bigqueryConnectionAwsAccessRoleToTerraform(struct!.accessRole),
+  }
+}
+
+export class BigqueryConnectionAwsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryConnectionAws | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessRole?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessRole = this._accessRole?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryConnectionAws | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._accessRole.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._accessRole.internalValue = value.accessRole;
+    }
+  }
+
+  // access_role - computed: false, optional: false, required: true
+  private _accessRole = new BigqueryConnectionAwsAccessRoleOutputReference(this, "access_role");
+  public get accessRole() {
+    return this._accessRole;
+  }
+  public putAccessRole(value: BigqueryConnectionAwsAccessRole) {
+    this._accessRole.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessRoleInput() {
+    return this._accessRole.internalValue;
+  }
+}
+export interface BigqueryConnectionAzure {
+  /**
+  * The id of customer's directory that host the data.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#customer_tenant_id BigqueryConnection#customer_tenant_id}
+  */
+  readonly customerTenantId: string;
+}
+
+export function bigqueryConnectionAzureToTerraform(struct?: BigqueryConnectionAzureOutputReference | BigqueryConnectionAzure): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    customer_tenant_id: cdktf.stringToTerraform(struct!.customerTenantId),
+  }
+}
+
+export class BigqueryConnectionAzureOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryConnectionAzure | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customerTenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customerTenantId = this._customerTenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryConnectionAzure | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._customerTenantId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._customerTenantId = value.customerTenantId;
+    }
+  }
+
+  // application - computed: true, optional: false, required: false
+  public get application() {
+    return this.getStringAttribute('application');
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // customer_tenant_id - computed: false, optional: false, required: true
+  private _customerTenantId?: string; 
+  public get customerTenantId() {
+    return this.getStringAttribute('customer_tenant_id');
+  }
+  public set customerTenantId(value: string) {
+    this._customerTenantId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerTenantIdInput() {
+    return this._customerTenantId;
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // redirect_uri - computed: true, optional: false, required: false
+  public get redirectUri() {
+    return this.getStringAttribute('redirect_uri');
+  }
 }
 export interface BigqueryConnectionCloudResource {
 }
@@ -105,6 +343,99 @@ export class BigqueryConnectionCloudResourceOutputReference extends cdktf.Comple
   // service_account_id - computed: true, optional: false, required: false
   public get serviceAccountId() {
     return this.getStringAttribute('service_account_id');
+  }
+}
+export interface BigqueryConnectionCloudSpanner {
+  /**
+  * Cloud Spanner database in the form 'project/instance/database'
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#database BigqueryConnection#database}
+  */
+  readonly database: string;
+  /**
+  * If parallelism should be used when reading from Cloud Spanner
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#use_parallelism BigqueryConnection#use_parallelism}
+  */
+  readonly useParallelism?: boolean | cdktf.IResolvable;
+}
+
+export function bigqueryConnectionCloudSpannerToTerraform(struct?: BigqueryConnectionCloudSpannerOutputReference | BigqueryConnectionCloudSpanner): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    database: cdktf.stringToTerraform(struct!.database),
+    use_parallelism: cdktf.booleanToTerraform(struct!.useParallelism),
+  }
+}
+
+export class BigqueryConnectionCloudSpannerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryConnectionCloudSpanner | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._database !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.database = this._database;
+    }
+    if (this._useParallelism !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useParallelism = this._useParallelism;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryConnectionCloudSpanner | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._database = undefined;
+      this._useParallelism = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._database = value.database;
+      this._useParallelism = value.useParallelism;
+    }
+  }
+
+  // database - computed: false, optional: false, required: true
+  private _database?: string; 
+  public get database() {
+    return this.getStringAttribute('database');
+  }
+  public set database(value: string) {
+    this._database = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseInput() {
+    return this._database;
+  }
+
+  // use_parallelism - computed: false, optional: true, required: false
+  private _useParallelism?: boolean | cdktf.IResolvable; 
+  public get useParallelism() {
+    return this.getBooleanAttribute('use_parallelism');
+  }
+  public set useParallelism(value: boolean | cdktf.IResolvable) {
+    this._useParallelism = value;
+  }
+  public resetUseParallelism() {
+    this._useParallelism = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useParallelismInput() {
+    return this._useParallelism;
   }
 }
 export interface BigqueryConnectionCloudSqlCredential {
@@ -495,7 +826,7 @@ export class BigqueryConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -509,7 +840,10 @@ export class BigqueryConnection extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._project = config.project;
+    this._aws.internalValue = config.aws;
+    this._azure.internalValue = config.azure;
     this._cloudResource.internalValue = config.cloudResource;
+    this._cloudSpanner.internalValue = config.cloudSpanner;
     this._cloudSql.internalValue = config.cloudSql;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -624,6 +958,38 @@ export class BigqueryConnection extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // aws - computed: false, optional: true, required: false
+  private _aws = new BigqueryConnectionAwsOutputReference(this, "aws");
+  public get aws() {
+    return this._aws;
+  }
+  public putAws(value: BigqueryConnectionAws) {
+    this._aws.internalValue = value;
+  }
+  public resetAws() {
+    this._aws.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get awsInput() {
+    return this._aws.internalValue;
+  }
+
+  // azure - computed: false, optional: true, required: false
+  private _azure = new BigqueryConnectionAzureOutputReference(this, "azure");
+  public get azure() {
+    return this._azure;
+  }
+  public putAzure(value: BigqueryConnectionAzure) {
+    this._azure.internalValue = value;
+  }
+  public resetAzure() {
+    this._azure.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureInput() {
+    return this._azure.internalValue;
+  }
+
   // cloud_resource - computed: false, optional: true, required: false
   private _cloudResource = new BigqueryConnectionCloudResourceOutputReference(this, "cloud_resource");
   public get cloudResource() {
@@ -638,6 +1004,22 @@ export class BigqueryConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get cloudResourceInput() {
     return this._cloudResource.internalValue;
+  }
+
+  // cloud_spanner - computed: false, optional: true, required: false
+  private _cloudSpanner = new BigqueryConnectionCloudSpannerOutputReference(this, "cloud_spanner");
+  public get cloudSpanner() {
+    return this._cloudSpanner;
+  }
+  public putCloudSpanner(value: BigqueryConnectionCloudSpanner) {
+    this._cloudSpanner.internalValue = value;
+  }
+  public resetCloudSpanner() {
+    this._cloudSpanner.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudSpannerInput() {
+    return this._cloudSpanner.internalValue;
   }
 
   // cloud_sql - computed: false, optional: true, required: false
@@ -684,7 +1066,10 @@ export class BigqueryConnection extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
+      aws: bigqueryConnectionAwsToTerraform(this._aws.internalValue),
+      azure: bigqueryConnectionAzureToTerraform(this._azure.internalValue),
       cloud_resource: bigqueryConnectionCloudResourceToTerraform(this._cloudResource.internalValue),
+      cloud_spanner: bigqueryConnectionCloudSpannerToTerraform(this._cloudSpanner.internalValue),
       cloud_sql: bigqueryConnectionCloudSqlToTerraform(this._cloudSql.internalValue),
       timeouts: bigqueryConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };

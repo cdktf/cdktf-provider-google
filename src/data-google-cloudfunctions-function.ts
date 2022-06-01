@@ -496,7 +496,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -528,6 +528,11 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
+  }
+
+  // docker_registry - computed: true, optional: false, required: false
+  public get dockerRegistry() {
+    return this.getStringAttribute('docker_registry');
   }
 
   // docker_repository - computed: true, optional: false, required: false

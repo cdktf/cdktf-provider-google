@@ -71,6 +71,12 @@ provided, all zones will be used.
   */
   readonly zones?: string[];
   /**
+  * maintenance_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#maintenance_policy MemcacheInstance#maintenance_policy}
+  */
+  readonly maintenancePolicy?: MemcacheInstanceMaintenancePolicy;
+  /**
   * memcache_parameters block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#memcache_parameters MemcacheInstance#memcache_parameters}
@@ -88,6 +94,80 @@ provided, all zones will be used.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#timeouts MemcacheInstance#timeouts}
   */
   readonly timeouts?: MemcacheInstanceTimeouts;
+}
+export interface MemcacheInstanceMaintenanceSchedule {
+}
+
+export function memcacheInstanceMaintenanceScheduleToTerraform(struct?: MemcacheInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class MemcacheInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MemcacheInstanceMaintenanceSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemcacheInstanceMaintenanceSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // schedule_deadline_time - computed: true, optional: false, required: false
+  public get scheduleDeadlineTime() {
+    return this.getStringAttribute('schedule_deadline_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
+
+export class MemcacheInstanceMaintenanceScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MemcacheInstanceMaintenanceScheduleOutputReference {
+    return new MemcacheInstanceMaintenanceScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface MemcacheInstanceMemcacheNodes {
 }
@@ -171,6 +251,425 @@ export class MemcacheInstanceMemcacheNodesList extends cdktf.ComplexList {
   */
   public get(index: number): MemcacheInstanceMemcacheNodesOutputReference {
     return new MemcacheInstanceMemcacheNodesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
+  /**
+  * Hours of day in 24 hour format. Should be from 0 to 23.
+An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#hours MemcacheInstance#hours}
+  */
+  readonly hours?: number;
+  /**
+  * Minutes of hour of day. Must be from 0 to 59.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#minutes MemcacheInstance#minutes}
+  */
+  readonly minutes?: number;
+  /**
+  * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#nanos MemcacheInstance#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Seconds of minutes of the time. Must normally be from 0 to 59.
+An API may allow the value 60 if it allows leap-seconds.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#seconds MemcacheInstance#seconds}
+  */
+  readonly seconds?: number;
+}
+
+export function memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct?: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference | MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hours: cdktf.numberToTerraform(struct!.hours),
+    minutes: cdktf.numberToTerraform(struct!.minutes),
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.numberToTerraform(struct!.seconds),
+  }
+}
+
+export class MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // hours - computed: false, optional: true, required: false
+  private _hours?: number; 
+  public get hours() {
+    return this.getNumberAttribute('hours');
+  }
+  public set hours(value: number) {
+    this._hours = value;
+  }
+  public resetHours() {
+    this._hours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number; 
+  public get minutes() {
+    return this.getNumberAttribute('minutes');
+  }
+  public set minutes(value: number) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes;
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: number; 
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+  public set seconds(value: number) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow {
+  /**
+  * Required. The day of week that maintenance updates occur.
+- DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified.
+- MONDAY: Monday
+- TUESDAY: Tuesday
+- WEDNESDAY: Wednesday
+- THURSDAY: Thursday
+- FRIDAY: Friday
+- SATURDAY: Saturday
+- SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#day MemcacheInstance#day}
+  */
+  readonly day: string;
+  /**
+  * Required. The length of the maintenance window, ranging from 3 hours to 8 hours.
+A duration in seconds with up to nine fractional digits,
+terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#duration MemcacheInstance#duration}
+  */
+  readonly duration: string;
+  /**
+  * start_time block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#start_time MemcacheInstance#start_time}
+  */
+  readonly startTime: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
+}
+
+export function memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform(struct?: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.stringToTerraform(struct!.day),
+    duration: cdktf.stringToTerraform(struct!.duration),
+    start_time: memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeToTerraform(struct!.startTime),
+  }
+}
+
+export class MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._duration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._startTime?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._day = undefined;
+      this._duration = undefined;
+      this._startTime.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._day = value.day;
+      this._duration = value.duration;
+      this._startTime.internalValue = value.startTime;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: string; 
+  public get day() {
+    return this.getStringAttribute('day');
+  }
+  public set day(value: string) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // duration - computed: false, optional: false, required: true
+  private _duration?: string; 
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+  public set duration(value: string) {
+    this._duration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration;
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime = new MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeOutputReference(this, "start_time");
+  public get startTime() {
+    return this._startTime;
+  }
+  public putStartTime(value: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime) {
+    this._startTime.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime.internalValue;
+  }
+}
+
+export class MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowList extends cdktf.ComplexList {
+  public internalValue? : MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference {
+    return new MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface MemcacheInstanceMaintenancePolicy {
+  /**
+  * Optional. Description of what this policy is for.
+Create/Update methods return INVALID_ARGUMENT if the
+length is greater than 512.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#description MemcacheInstance#description}
+  */
+  readonly description?: string;
+  /**
+  * weekly_maintenance_window block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/memcache_instance#weekly_maintenance_window MemcacheInstance#weekly_maintenance_window}
+  */
+  readonly weeklyMaintenanceWindow: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable;
+}
+
+export function memcacheInstanceMaintenancePolicyToTerraform(struct?: MemcacheInstanceMaintenancePolicyOutputReference | MemcacheInstanceMaintenancePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    weekly_maintenance_window: cdktf.listMapper(memcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowToTerraform)(struct!.weeklyMaintenanceWindow),
+  }
+}
+
+export class MemcacheInstanceMaintenancePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MemcacheInstanceMaintenancePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._weeklyMaintenanceWindow?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weeklyMaintenanceWindow = this._weeklyMaintenanceWindow?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MemcacheInstanceMaintenancePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._description = undefined;
+      this._weeklyMaintenanceWindow.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._description = value.description;
+      this._weeklyMaintenanceWindow.internalValue = value.weeklyMaintenanceWindow;
+    }
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+
+  // weekly_maintenance_window - computed: false, optional: false, required: true
+  private _weeklyMaintenanceWindow = new MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindowList(this, "weekly_maintenance_window", false);
+  public get weeklyMaintenanceWindow() {
+    return this._weeklyMaintenanceWindow;
+  }
+  public putWeeklyMaintenanceWindow(value: MemcacheInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable) {
+    this._weeklyMaintenanceWindow.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeklyMaintenanceWindowInput() {
+    return this._weeklyMaintenanceWindow.internalValue;
   }
 }
 export interface MemcacheInstanceMemcacheParameters {
@@ -491,7 +990,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_memcache_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -509,6 +1008,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._zones = config.zones;
+    this._maintenancePolicy.internalValue = config.maintenancePolicy;
     this._memcacheParameters.internalValue = config.memcacheParameters;
     this._nodeConfig.internalValue = config.nodeConfig;
     this._timeouts.internalValue = config.timeouts;
@@ -590,6 +1090,12 @@ export class MemcacheInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
     return this._labels;
+  }
+
+  // maintenance_schedule - computed: true, optional: false, required: false
+  private _maintenanceSchedule = new MemcacheInstanceMaintenanceScheduleList(this, "maintenance_schedule", false);
+  public get maintenanceSchedule() {
+    return this._maintenanceSchedule;
   }
 
   // memcache_full_version - computed: true, optional: false, required: false
@@ -693,6 +1199,22 @@ export class MemcacheInstance extends cdktf.TerraformResource {
     return this._zones;
   }
 
+  // maintenance_policy - computed: false, optional: true, required: false
+  private _maintenancePolicy = new MemcacheInstanceMaintenancePolicyOutputReference(this, "maintenance_policy");
+  public get maintenancePolicy() {
+    return this._maintenancePolicy;
+  }
+  public putMaintenancePolicy(value: MemcacheInstanceMaintenancePolicy) {
+    this._maintenancePolicy.internalValue = value;
+  }
+  public resetMaintenancePolicy() {
+    this._maintenancePolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenancePolicyInput() {
+    return this._maintenancePolicy.internalValue;
+  }
+
   // memcache_parameters - computed: false, optional: true, required: false
   private _memcacheParameters = new MemcacheInstanceMemcacheParametersOutputReference(this, "memcache_parameters");
   public get memcacheParameters() {
@@ -754,6 +1276,7 @@ export class MemcacheInstance extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      maintenance_policy: memcacheInstanceMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),
       memcache_parameters: memcacheInstanceMemcacheParametersToTerraform(this._memcacheParameters.internalValue),
       node_config: memcacheInstanceNodeConfigToTerraform(this._nodeConfig.internalValue),
       timeouts: memcacheInstanceTimeoutsToTerraform(this._timeouts.internalValue),

@@ -1323,7 +1323,7 @@ export class AccessContextManagerAccessLevels extends cdktf.TerraformResource {
       terraformResourceType: 'google_access_context_manager_access_levels',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
