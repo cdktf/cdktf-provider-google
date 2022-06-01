@@ -26,6 +26,12 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly description?: string;
   /**
+  * Docker Registry to use for storing the function's Docker images. Allowed values are CONTAINER_REGISTRY (default) and ARTIFACT_REGISTRY.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#docker_registry CloudfunctionsFunction#docker_registry}
+  */
+  readonly dockerRegistry?: string;
+  /**
   * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry for storing images built with Cloud Build.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#docker_repository CloudfunctionsFunction#docker_repository}
@@ -1103,7 +1109,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1114,6 +1120,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     this._availableMemoryMb = config.availableMemoryMb;
     this._buildEnvironmentVariables = config.buildEnvironmentVariables;
     this._description = config.description;
+    this._dockerRegistry = config.dockerRegistry;
     this._dockerRepository = config.dockerRepository;
     this._entryPoint = config.entryPoint;
     this._environmentVariables = config.environmentVariables;
@@ -1193,6 +1200,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // docker_registry - computed: true, optional: true, required: false
+  private _dockerRegistry?: string; 
+  public get dockerRegistry() {
+    return this.getStringAttribute('docker_registry');
+  }
+  public set dockerRegistry(value: string) {
+    this._dockerRegistry = value;
+  }
+  public resetDockerRegistry() {
+    this._dockerRegistry = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dockerRegistryInput() {
+    return this._dockerRegistry;
   }
 
   // docker_repository - computed: false, optional: true, required: false
@@ -1630,6 +1653,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       available_memory_mb: cdktf.numberToTerraform(this._availableMemoryMb),
       build_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._buildEnvironmentVariables),
       description: cdktf.stringToTerraform(this._description),
+      docker_registry: cdktf.stringToTerraform(this._dockerRegistry),
       docker_repository: cdktf.stringToTerraform(this._dockerRepository),
       entry_point: cdktf.stringToTerraform(this._entryPoint),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),

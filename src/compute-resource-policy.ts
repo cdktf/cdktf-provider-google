@@ -85,7 +85,9 @@ attached. Possible values: ["COLLOCATED"]
   */
   readonly collocation?: string;
   /**
-  * Number of vms in this placement group.
+  * Number of VMs in this placement group. Google does not recommend that you use this field
+unless you use a compact policy and you want your policy to work only if it contains this
+exact number of VMs.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_resource_policy#vm_count ComputeResourcePolicy#vm_count}
   */
@@ -1473,7 +1475,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.22.0',
+        providerVersion: '4.23.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
