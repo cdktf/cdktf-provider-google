@@ -74,6 +74,105 @@ last character, which cannot be a dash.
   */
   readonly timeouts?: ComputeBackendBucketTimeouts;
 }
+export interface ComputeBackendBucketCdnPolicyCacheKeyPolicy {
+  /**
+  * Allows HTTP request headers (by name) to be used in the
+cache key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#include_http_headers ComputeBackendBucket#include_http_headers}
+  */
+  readonly includeHttpHeaders?: string[];
+  /**
+  * Names of query string parameters to include in cache keys.
+Default parameters are always included. '&' and '=' will
+be percent encoded and not treated as delimiters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#query_string_whitelist ComputeBackendBucket#query_string_whitelist}
+  */
+  readonly queryStringWhitelist?: string[];
+}
+
+export function computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct?: ComputeBackendBucketCdnPolicyCacheKeyPolicyOutputReference | ComputeBackendBucketCdnPolicyCacheKeyPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    include_http_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includeHttpHeaders),
+    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringWhitelist),
+  }
+}
+
+export class ComputeBackendBucketCdnPolicyCacheKeyPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeBackendBucketCdnPolicyCacheKeyPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._includeHttpHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeHttpHeaders = this._includeHttpHeaders;
+    }
+    if (this._queryStringWhitelist !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryStringWhitelist = this._queryStringWhitelist;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendBucketCdnPolicyCacheKeyPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._includeHttpHeaders = undefined;
+      this._queryStringWhitelist = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._includeHttpHeaders = value.includeHttpHeaders;
+      this._queryStringWhitelist = value.queryStringWhitelist;
+    }
+  }
+
+  // include_http_headers - computed: false, optional: true, required: false
+  private _includeHttpHeaders?: string[]; 
+  public get includeHttpHeaders() {
+    return this.getListAttribute('include_http_headers');
+  }
+  public set includeHttpHeaders(value: string[]) {
+    this._includeHttpHeaders = value;
+  }
+  public resetIncludeHttpHeaders() {
+    this._includeHttpHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeHttpHeadersInput() {
+    return this._includeHttpHeaders;
+  }
+
+  // query_string_whitelist - computed: false, optional: true, required: false
+  private _queryStringWhitelist?: string[]; 
+  public get queryStringWhitelist() {
+    return this.getListAttribute('query_string_whitelist');
+  }
+  public set queryStringWhitelist(value: string[]) {
+    this._queryStringWhitelist = value;
+  }
+  public resetQueryStringWhitelist() {
+    this._queryStringWhitelist = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryStringWhitelistInput() {
+    return this._queryStringWhitelist;
+  }
+}
 export interface ComputeBackendBucketCdnPolicyNegativeCachingPolicy {
   /**
   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
@@ -257,6 +356,12 @@ header. The actual headers served in responses will not be altered.
   */
   readonly signedUrlCacheMaxAgeSec?: number;
   /**
+  * cache_key_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#cache_key_policy ComputeBackendBucket#cache_key_policy}
+  */
+  readonly cacheKeyPolicy?: ComputeBackendBucketCdnPolicyCacheKeyPolicy;
+  /**
   * negative_caching_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#negative_caching_policy ComputeBackendBucket#negative_caching_policy}
@@ -277,6 +382,7 @@ export function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackend
     negative_caching: cdktf.booleanToTerraform(struct!.negativeCaching),
     serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
+    cache_key_policy: computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
     negative_caching_policy: cdktf.listMapper(computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
   }
 }
@@ -323,6 +429,10 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
     }
+    if (this._cacheKeyPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
+    }
     if (this._negativeCachingPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.negativeCachingPolicy = this._negativeCachingPolicy?.internalValue;
@@ -340,6 +450,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       this._negativeCaching = undefined;
       this._serveWhileStale = undefined;
       this._signedUrlCacheMaxAgeSec = undefined;
+      this._cacheKeyPolicy.internalValue = undefined;
       this._negativeCachingPolicy.internalValue = undefined;
     }
     else {
@@ -351,6 +462,7 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       this._negativeCaching = value.negativeCaching;
       this._serveWhileStale = value.serveWhileStale;
       this._signedUrlCacheMaxAgeSec = value.signedUrlCacheMaxAgeSec;
+      this._cacheKeyPolicy.internalValue = value.cacheKeyPolicy;
       this._negativeCachingPolicy.internalValue = value.negativeCachingPolicy;
     }
   }
@@ -465,6 +577,22 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get signedUrlCacheMaxAgeSecInput() {
     return this._signedUrlCacheMaxAgeSec;
+  }
+
+  // cache_key_policy - computed: false, optional: true, required: false
+  private _cacheKeyPolicy = new ComputeBackendBucketCdnPolicyCacheKeyPolicyOutputReference(this, "cache_key_policy");
+  public get cacheKeyPolicy() {
+    return this._cacheKeyPolicy;
+  }
+  public putCacheKeyPolicy(value: ComputeBackendBucketCdnPolicyCacheKeyPolicy) {
+    this._cacheKeyPolicy.internalValue = value;
+  }
+  public resetCacheKeyPolicy() {
+    this._cacheKeyPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheKeyPolicyInput() {
+    return this._cacheKeyPolicy.internalValue;
   }
 
   // negative_caching_policy - computed: false, optional: true, required: false
@@ -639,7 +767,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.23.0',
+        providerVersion: '4.24.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
