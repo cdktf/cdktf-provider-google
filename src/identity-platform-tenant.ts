@@ -207,7 +207,7 @@ export class IdentityPlatformTenant extends cdktf.TerraformResource {
       terraformResourceType: 'google_identity_platform_tenant',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.23.0',
+        providerVersion: '4.24.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
