@@ -1042,9 +1042,9 @@ constant-case@^3.0.4:
     upper-case "^2.0.2"
 
 constructs@^10.0.0, constructs@^10.0.25:
-  version "10.1.36"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.36.tgz#33aca274b44ffe3d6e3537498e1b11635cf3a104"
-  integrity sha512-6yJOPlPJ5/LHWyFJ7h/26CAiDhblqaOGOSsSqvZR6jzjc1RWY+J6I7I/vzyM1iTrP7ZlWWHuC5NBEwQOp3X87w==
+  version "10.1.37"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.37.tgz#2200e542d86a40dafb0766b940d9ce1f5cd36e79"
+  integrity sha512-MieKDdWuzBhXCF5u8ors90K/u1HH56VykWRLZnaHFG1pJ05aqpOgXDT7oxhNDu2uvHmQpliCnFL1KAXIRfX+Gg==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2449,9 +2449,9 @@ jsii-rosetta@^1.55.1, jsii-rosetta@^1.60.1:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.520:
-  version "0.1.587"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.587.tgz#ff7080f747d3e004f1cd4781fe01fa3ee65f851f"
-  integrity sha512-DFNMOqvy+pwpl55X3DxfmBjlZAFFO3Xm2E03QW3m8a/3sBwjnnNgBIKvALrafYs8fhaAIc28cY3XP3QoCTWroQ==
+  version "0.1.589"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.589.tgz#62f5451d23cdcd1e63fab17f6abbb5f74f34cd8e"
+  integrity sha512-UZmEcexDc0UiOjh7d/b9Oy6n0STitX1X0hubldBYwS8RyLY80ty93iHu19jmFJQr6hStHmyLrjQjxRKv0wvvYQ==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.60.1"
@@ -3443,10 +3443,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.58.5:
-  version "0.58.5"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.58.5.tgz#82e6bb34c43ceb38e90c8b6fcc4fe1ffa79d9d85"
-  integrity sha512-ygtv1LR/ht4Jph0u9MDKssQXiNV7TxqfuPaRAZy+ED7wNrD5KLVuDFHqS4C7m4o2rkBRYow7tBaCt9Q2+lbOmA==
+projen@^0.58.6:
+  version "0.58.6"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.58.6.tgz#3b9824b3f48cc82ea88ed3a52ae5317b51adbcf0"
+  integrity sha512-cBeAl1CUraT0hCWKYOqlO2M7SSSzmXYJct99Bmw2yn7dZFcxDXwkmPYwLRkCEgP5zIvayWvfvllCRadlgMgQ9g==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -4350,12 +4350,12 @@ validate-npm-package-name@^4.0.0:
 webidl-conversions@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
-  integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+  integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
 
 whatwg-url@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
-  integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  integrity sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==
   dependencies:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
@@ -4384,7 +4384,7 @@ which-collection@^1.0.1:
 which-module@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
-  integrity sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
+  integrity sha512-B+enWhmw6cjfVC7kS8Pj9pCrKSc5txArRyaYGe088shv/FGWH+0Rjx/xPgtsWfsUtS27FkP697E4DDhgrgoc0Q==
 
 which-typed-array@^1.1.2:
   version "1.1.8"
@@ -4422,7 +4422,7 @@ widest-line@^3.1.0:
 wordwrap@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
-  integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
+  integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 workerpool@^6.2.1:
   version "6.2.1"
@@ -4450,7 +4450,7 @@ wrap-ansi@^7.0.0:
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
-  integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+  integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
 write-file-atomic@^3.0.0:
   version "3.0.3"
