@@ -2464,6 +2464,11 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
     return this._shieldedInstanceConfig;
   }
 
+  // spot - computed: true, optional: false, required: false
+  public get spot() {
+    return this.getBooleanAttribute('spot');
+  }
+
   // tags - computed: true, optional: false, required: false
   public get tags() {
     return this.getListAttribute('tags');
@@ -3176,6 +3181,11 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   private _shieldedInstanceConfig = new DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfigList(this, "shielded_instance_config", false);
   public get shieldedInstanceConfig() {
     return this._shieldedInstanceConfig;
+  }
+
+  // spot - computed: true, optional: false, required: false
+  public get spot() {
+    return this.getBooleanAttribute('spot');
   }
 
   // tags - computed: true, optional: false, required: false
@@ -3928,7 +3938,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

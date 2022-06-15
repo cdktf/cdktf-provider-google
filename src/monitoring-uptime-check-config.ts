@@ -85,6 +85,99 @@ export interface MonitoringUptimeCheckConfigConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: MonitoringUptimeCheckConfigTimeouts;
 }
+export interface MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher {
+  /**
+  * Options to perform JSONPath content matching. Default value: "EXACT_MATCH" Possible values: ["EXACT_MATCH", "REGEX_MATCH"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#json_matcher MonitoringUptimeCheckConfig#json_matcher}
+  */
+  readonly jsonMatcher?: string;
+  /**
+  * JSONPath within the response output pointing to the expected 'ContentMatcher::content' to match against.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#json_path MonitoringUptimeCheckConfig#json_path}
+  */
+  readonly jsonPath: string;
+}
+
+export function monitoringUptimeCheckConfigContentMatchersJsonPathMatcherToTerraform(struct?: MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference | MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    json_matcher: cdktf.stringToTerraform(struct!.jsonMatcher),
+    json_path: cdktf.stringToTerraform(struct!.jsonPath),
+  }
+}
+
+export class MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._jsonMatcher !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jsonMatcher = this._jsonMatcher;
+    }
+    if (this._jsonPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jsonPath = this._jsonPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._jsonMatcher = undefined;
+      this._jsonPath = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._jsonMatcher = value.jsonMatcher;
+      this._jsonPath = value.jsonPath;
+    }
+  }
+
+  // json_matcher - computed: false, optional: true, required: false
+  private _jsonMatcher?: string; 
+  public get jsonMatcher() {
+    return this.getStringAttribute('json_matcher');
+  }
+  public set jsonMatcher(value: string) {
+    this._jsonMatcher = value;
+  }
+  public resetJsonMatcher() {
+    this._jsonMatcher = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jsonMatcherInput() {
+    return this._jsonMatcher;
+  }
+
+  // json_path - computed: false, optional: false, required: true
+  private _jsonPath?: string; 
+  public get jsonPath() {
+    return this.getStringAttribute('json_path');
+  }
+  public set jsonPath(value: string) {
+    this._jsonPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jsonPathInput() {
+    return this._jsonPath;
+  }
+}
 export interface MonitoringUptimeCheckConfigContentMatchers {
   /**
   * String or regex content to match (max 1024 bytes)
@@ -93,11 +186,17 @@ export interface MonitoringUptimeCheckConfigContentMatchers {
   */
   readonly content: string;
   /**
-  * The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value: "CONTAINS_STRING" Possible values: ["CONTAINS_STRING", "NOT_CONTAINS_STRING", "MATCHES_REGEX", "NOT_MATCHES_REGEX"]
+  * The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value: "CONTAINS_STRING" Possible values: ["CONTAINS_STRING", "NOT_CONTAINS_STRING", "MATCHES_REGEX", "NOT_MATCHES_REGEX", "MATCHES_JSON_PATH", "NOT_MATCHES_JSON_PATH"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#matcher MonitoringUptimeCheckConfig#matcher}
   */
   readonly matcher?: string;
+  /**
+  * json_path_matcher block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_uptime_check_config#json_path_matcher MonitoringUptimeCheckConfig#json_path_matcher}
+  */
+  readonly jsonPathMatcher?: MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher;
 }
 
 export function monitoringUptimeCheckConfigContentMatchersToTerraform(struct?: MonitoringUptimeCheckConfigContentMatchers | cdktf.IResolvable): any {
@@ -108,6 +207,7 @@ export function monitoringUptimeCheckConfigContentMatchersToTerraform(struct?: M
   return {
     content: cdktf.stringToTerraform(struct!.content),
     matcher: cdktf.stringToTerraform(struct!.matcher),
+    json_path_matcher: monitoringUptimeCheckConfigContentMatchersJsonPathMatcherToTerraform(struct!.jsonPathMatcher),
   }
 }
 
@@ -139,6 +239,10 @@ export class MonitoringUptimeCheckConfigContentMatchersOutputReference extends c
       hasAnyValues = true;
       internalValueResult.matcher = this._matcher;
     }
+    if (this._jsonPathMatcher?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jsonPathMatcher = this._jsonPathMatcher?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -148,6 +252,7 @@ export class MonitoringUptimeCheckConfigContentMatchersOutputReference extends c
       this.resolvableValue = undefined;
       this._content = undefined;
       this._matcher = undefined;
+      this._jsonPathMatcher.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -158,6 +263,7 @@ export class MonitoringUptimeCheckConfigContentMatchersOutputReference extends c
       this.resolvableValue = undefined;
       this._content = value.content;
       this._matcher = value.matcher;
+      this._jsonPathMatcher.internalValue = value.jsonPathMatcher;
     }
   }
 
@@ -188,6 +294,22 @@ export class MonitoringUptimeCheckConfigContentMatchersOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get matcherInput() {
     return this._matcher;
+  }
+
+  // json_path_matcher - computed: false, optional: true, required: false
+  private _jsonPathMatcher = new MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference(this, "json_path_matcher");
+  public get jsonPathMatcher() {
+    return this._jsonPathMatcher;
+  }
+  public putJsonPathMatcher(value: MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher) {
+    this._jsonPathMatcher.internalValue = value;
+  }
+  public resetJsonPathMatcher() {
+    this._jsonPathMatcher.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jsonPathMatcherInput() {
+    return this._jsonPathMatcher.internalValue;
   }
 }
 
@@ -1034,7 +1156,7 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_uptime_check_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

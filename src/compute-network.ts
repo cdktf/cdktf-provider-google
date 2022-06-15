@@ -30,12 +30,29 @@ recreated to modify this field.
   */
   readonly description?: string;
   /**
+  * Enable ULA internal ipv6 on this network. Enabling this feature will assign 
+a /48 from google defined ULA prefix fd20::/20.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#enable_ula_internal_ipv6 ComputeNetwork#enable_ula_internal_ipv6}
+  */
+  readonly enableUlaInternalIpv6?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#id ComputeNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * When enabling ula internal ipv6, caller optionally can specify the /48 range 
+they want from the google defined ULA prefix fd20::/20. The input must be a 
+valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will 
+fail if the speficied /48 is already in used by another resource. 
+If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#internal_ipv6_range ComputeNetwork#internal_ipv6_range}
+  */
+  readonly internalIpv6Range?: string;
   /**
   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
@@ -232,7 +249,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -243,7 +260,9 @@ export class ComputeNetwork extends cdktf.TerraformResource {
     this._autoCreateSubnetworks = config.autoCreateSubnetworks;
     this._deleteDefaultRoutesOnCreate = config.deleteDefaultRoutesOnCreate;
     this._description = config.description;
+    this._enableUlaInternalIpv6 = config.enableUlaInternalIpv6;
     this._id = config.id;
+    this._internalIpv6Range = config.internalIpv6Range;
     this._mtu = config.mtu;
     this._name = config.name;
     this._project = config.project;
@@ -303,6 +322,22 @@ export class ComputeNetwork extends cdktf.TerraformResource {
     return this._description;
   }
 
+  // enable_ula_internal_ipv6 - computed: false, optional: true, required: false
+  private _enableUlaInternalIpv6?: boolean | cdktf.IResolvable; 
+  public get enableUlaInternalIpv6() {
+    return this.getBooleanAttribute('enable_ula_internal_ipv6');
+  }
+  public set enableUlaInternalIpv6(value: boolean | cdktf.IResolvable) {
+    this._enableUlaInternalIpv6 = value;
+  }
+  public resetEnableUlaInternalIpv6() {
+    this._enableUlaInternalIpv6 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableUlaInternalIpv6Input() {
+    return this._enableUlaInternalIpv6;
+  }
+
   // gateway_ipv4 - computed: true, optional: false, required: false
   public get gatewayIpv4() {
     return this.getStringAttribute('gateway_ipv4');
@@ -322,6 +357,22 @@ export class ComputeNetwork extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // internal_ipv6_range - computed: true, optional: true, required: false
+  private _internalIpv6Range?: string; 
+  public get internalIpv6Range() {
+    return this.getStringAttribute('internal_ipv6_range');
+  }
+  public set internalIpv6Range(value: string) {
+    this._internalIpv6Range = value;
+  }
+  public resetInternalIpv6Range() {
+    this._internalIpv6Range = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internalIpv6RangeInput() {
+    return this._internalIpv6Range;
   }
 
   // mtu - computed: true, optional: true, required: false
@@ -415,7 +466,9 @@ export class ComputeNetwork extends cdktf.TerraformResource {
       auto_create_subnetworks: cdktf.booleanToTerraform(this._autoCreateSubnetworks),
       delete_default_routes_on_create: cdktf.booleanToTerraform(this._deleteDefaultRoutesOnCreate),
       description: cdktf.stringToTerraform(this._description),
+      enable_ula_internal_ipv6: cdktf.booleanToTerraform(this._enableUlaInternalIpv6),
       id: cdktf.stringToTerraform(this._id),
+      internal_ipv6_range: cdktf.stringToTerraform(this._internalIpv6Range),
       mtu: cdktf.numberToTerraform(this._mtu),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

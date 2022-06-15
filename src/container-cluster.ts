@@ -3557,6 +3557,12 @@ export interface ContainerClusterNodeConfig {
   */
   readonly serviceAccount?: string;
   /**
+  * Whether the nodes are created as spot VM instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#spot ContainerCluster#spot}
+  */
+  readonly spot?: boolean | cdktf.IResolvable;
+  /**
   * The list of instance tags applied to all nodes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#tags ContainerCluster#tags}
@@ -3614,6 +3620,7 @@ export function containerClusterNodeConfigToTerraform(struct?: ContainerClusterN
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    spot: cdktf.booleanToTerraform(struct!.spot),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     taint: cdktf.listMapper(containerClusterNodeConfigTaintToTerraform)(struct!.taint),
     gcfs_config: containerClusterNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
@@ -3693,6 +3700,10 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
+    if (this._spot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spot = this._spot;
+    }
     if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
@@ -3737,6 +3748,7 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       this._oauthScopes = undefined;
       this._preemptible = undefined;
       this._serviceAccount = undefined;
+      this._spot = undefined;
       this._tags = undefined;
       this._taint.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
@@ -3760,6 +3772,7 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       this._oauthScopes = value.oauthScopes;
       this._preemptible = value.preemptible;
       this._serviceAccount = value.serviceAccount;
+      this._spot = value.spot;
       this._tags = value.tags;
       this._taint.internalValue = value.taint;
       this._gcfsConfig.internalValue = value.gcfsConfig;
@@ -3991,6 +4004,22 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
     return this._serviceAccount;
+  }
+
+  // spot - computed: false, optional: true, required: false
+  private _spot?: boolean | cdktf.IResolvable; 
+  public get spot() {
+    return this.getBooleanAttribute('spot');
+  }
+  public set spot(value: boolean | cdktf.IResolvable) {
+    this._spot = value;
+  }
+  public resetSpot() {
+    this._spot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spotInput() {
+    return this._spot;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -4951,6 +4980,12 @@ export interface ContainerClusterNodePoolNodeConfig {
   */
   readonly serviceAccount?: string;
   /**
+  * Whether the nodes are created as spot VM instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#spot ContainerCluster#spot}
+  */
+  readonly spot?: boolean | cdktf.IResolvable;
+  /**
   * The list of instance tags applied to all nodes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#tags ContainerCluster#tags}
@@ -5008,6 +5043,7 @@ export function containerClusterNodePoolNodeConfigToTerraform(struct?: Container
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    spot: cdktf.booleanToTerraform(struct!.spot),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     taint: cdktf.listMapper(containerClusterNodePoolNodeConfigTaintToTerraform)(struct!.taint),
     gcfs_config: containerClusterNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
@@ -5087,6 +5123,10 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
+    if (this._spot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spot = this._spot;
+    }
     if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
@@ -5131,6 +5171,7 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       this._oauthScopes = undefined;
       this._preemptible = undefined;
       this._serviceAccount = undefined;
+      this._spot = undefined;
       this._tags = undefined;
       this._taint.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
@@ -5154,6 +5195,7 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       this._oauthScopes = value.oauthScopes;
       this._preemptible = value.preemptible;
       this._serviceAccount = value.serviceAccount;
+      this._spot = value.spot;
       this._tags = value.tags;
       this._taint.internalValue = value.taint;
       this._gcfsConfig.internalValue = value.gcfsConfig;
@@ -5385,6 +5427,22 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
     return this._serviceAccount;
+  }
+
+  // spot - computed: false, optional: true, required: false
+  private _spot?: boolean | cdktf.IResolvable; 
+  public get spot() {
+    return this.getBooleanAttribute('spot');
+  }
+  public set spot(value: boolean | cdktf.IResolvable) {
+    this._spot = value;
+  }
+  public resetSpot() {
+    this._spot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spotInput() {
+    return this._spot;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -6770,7 +6828,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

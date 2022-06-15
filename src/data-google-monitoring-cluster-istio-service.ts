@@ -138,7 +138,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
       terraformResourceType: 'google_monitoring_cluster_istio_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -261,6 +261,12 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   private _telemetry = new DataGoogleMonitoringClusterIstioServiceTelemetryList(this, "telemetry", false);
   public get telemetry() {
     return this._telemetry;
+  }
+
+  // user_labels - computed: true, optional: false, required: false
+  private _userLabels = new cdktf.StringMap(this, "user_labels");
+  public get userLabels() {
+    return this._userLabels;
   }
 
   // =========

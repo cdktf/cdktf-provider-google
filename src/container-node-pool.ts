@@ -967,6 +967,12 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly serviceAccount?: string;
   /**
+  * Whether the nodes are created as spot VM instances.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#spot ContainerNodePool#spot}
+  */
+  readonly spot?: boolean | cdktf.IResolvable;
+  /**
   * The list of instance tags applied to all nodes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#tags ContainerNodePool#tags}
@@ -1024,6 +1030,7 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    spot: cdktf.booleanToTerraform(struct!.spot),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform)(struct!.taint),
     gcfs_config: containerNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
@@ -1103,6 +1110,10 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
+    if (this._spot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.spot = this._spot;
+    }
     if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
@@ -1147,6 +1158,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._oauthScopes = undefined;
       this._preemptible = undefined;
       this._serviceAccount = undefined;
+      this._spot = undefined;
       this._tags = undefined;
       this._taint.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
@@ -1170,6 +1182,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._oauthScopes = value.oauthScopes;
       this._preemptible = value.preemptible;
       this._serviceAccount = value.serviceAccount;
+      this._spot = value.spot;
       this._tags = value.tags;
       this._taint.internalValue = value.taint;
       this._gcfsConfig.internalValue = value.gcfsConfig;
@@ -1401,6 +1414,22 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
     return this._serviceAccount;
+  }
+
+  // spot - computed: false, optional: true, required: false
+  private _spot?: boolean | cdktf.IResolvable; 
+  public get spot() {
+    return this.getBooleanAttribute('spot');
+  }
+  public set spot(value: boolean | cdktf.IResolvable) {
+    this._spot = value;
+  }
+  public resetSpot() {
+    this._spot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spotInput() {
+    return this._spot;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -1745,7 +1774,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
