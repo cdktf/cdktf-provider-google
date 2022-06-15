@@ -624,6 +624,12 @@ export interface BigqueryTableExternalDataConfiguration {
   */
   readonly compression?: string;
   /**
+  * The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connectionId can have the form "{{project}}.{{location}}.{{connection_id}}" or "projects/{{project}}/locations/{{location}}/connections/{{connection_id}}".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#connection_id BigqueryTable#connection_id}
+  */
+  readonly connectionId?: string;
+  /**
   * Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#ignore_unknown_values BigqueryTable#ignore_unknown_values}
@@ -681,6 +687,7 @@ export function bigqueryTableExternalDataConfigurationToTerraform(struct?: Bigqu
   return {
     autodetect: cdktf.booleanToTerraform(struct!.autodetect),
     compression: cdktf.stringToTerraform(struct!.compression),
+    connection_id: cdktf.stringToTerraform(struct!.connectionId),
     ignore_unknown_values: cdktf.booleanToTerraform(struct!.ignoreUnknownValues),
     max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
     schema: cdktf.stringToTerraform(struct!.schema),
@@ -713,6 +720,10 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
     if (this._compression !== undefined) {
       hasAnyValues = true;
       internalValueResult.compression = this._compression;
+    }
+    if (this._connectionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionId = this._connectionId;
     }
     if (this._ignoreUnknownValues !== undefined) {
       hasAnyValues = true;
@@ -754,6 +765,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this.isEmptyObject = false;
       this._autodetect = undefined;
       this._compression = undefined;
+      this._connectionId = undefined;
       this._ignoreUnknownValues = undefined;
       this._maxBadRecords = undefined;
       this._schema = undefined;
@@ -767,6 +779,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this.isEmptyObject = Object.keys(value).length === 0;
       this._autodetect = value.autodetect;
       this._compression = value.compression;
+      this._connectionId = value.connectionId;
       this._ignoreUnknownValues = value.ignoreUnknownValues;
       this._maxBadRecords = value.maxBadRecords;
       this._schema = value.schema;
@@ -805,6 +818,22 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get compressionInput() {
     return this._compression;
+  }
+
+  // connection_id - computed: false, optional: true, required: false
+  private _connectionId?: string; 
+  public get connectionId() {
+    return this.getStringAttribute('connection_id');
+  }
+  public set connectionId(value: string) {
+    this._connectionId = value;
+  }
+  public resetConnectionId() {
+    this._connectionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionIdInput() {
+    return this._connectionId;
   }
 
   // ignore_unknown_values - computed: false, optional: true, required: false
@@ -1528,7 +1557,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

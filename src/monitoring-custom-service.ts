@@ -32,6 +32,17 @@ service ID.
   */
   readonly serviceId?: string;
   /**
+  * Labels which have been used to annotate the service. Label keys must start
+with a letter. Label keys and values may contain lowercase letters,
+numbers, underscores, and dashes. Label keys and values have a maximum
+length of 63 characters, and must be less than 128 bytes in size. Up to 64
+label entries may be stored. For labels which do not have a semantic value,
+the empty string may be supplied for the label value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#user_labels MonitoringCustomService#user_labels}
+  */
+  readonly userLabels?: { [key: string]: string };
+  /**
   * telemetry block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_custom_service#telemetry MonitoringCustomService#telemetry}
@@ -269,7 +280,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_custom_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -281,6 +292,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
     this._id = config.id;
     this._project = config.project;
     this._serviceId = config.serviceId;
+    this._userLabels = config.userLabels;
     this._telemetry.internalValue = config.telemetry;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -358,6 +370,22 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
     return this._serviceId;
   }
 
+  // user_labels - computed: false, optional: true, required: false
+  private _userLabels?: { [key: string]: string }; 
+  public get userLabels() {
+    return this.getStringMapAttribute('user_labels');
+  }
+  public set userLabels(value: { [key: string]: string }) {
+    this._userLabels = value;
+  }
+  public resetUserLabels() {
+    this._userLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userLabelsInput() {
+    return this._userLabels;
+  }
+
   // telemetry - computed: false, optional: true, required: false
   private _telemetry = new MonitoringCustomServiceTelemetryOutputReference(this, "telemetry");
   public get telemetry() {
@@ -400,6 +428,7 @@ export class MonitoringCustomService extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
       service_id: cdktf.stringToTerraform(this._serviceId),
+      user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
       telemetry: monitoringCustomServiceTelemetryToTerraform(this._telemetry.internalValue),
       timeouts: monitoringCustomServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };

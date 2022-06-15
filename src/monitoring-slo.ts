@@ -58,6 +58,16 @@ Must be between 1 to 30 days, inclusive.
   */
   readonly sloId?: string;
   /**
+  * This field is intended to be used for organizing and identifying the AlertPolicy
+objects.The field can contain up to 64 entries. Each key and value is limited
+to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+can contain only lowercase letters, numerals, underscores, and dashes. Keys
+must begin with a letter.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#user_labels MonitoringSlo#user_labels}
+  */
+  readonly userLabels?: { [key: string]: string };
+  /**
   * basic_sli block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#basic_sli MonitoringSlo#basic_sli}
@@ -2479,7 +2489,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_slo',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2495,6 +2505,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
     this._rollingPeriodDays = config.rollingPeriodDays;
     this._service = config.service;
     this._sloId = config.sloId;
+    this._userLabels = config.userLabels;
     this._basicSli.internalValue = config.basicSli;
     this._requestBasedSli.internalValue = config.requestBasedSli;
     this._timeouts.internalValue = config.timeouts;
@@ -2632,6 +2643,22 @@ export class MonitoringSlo extends cdktf.TerraformResource {
     return this._sloId;
   }
 
+  // user_labels - computed: false, optional: true, required: false
+  private _userLabels?: { [key: string]: string }; 
+  public get userLabels() {
+    return this.getStringMapAttribute('user_labels');
+  }
+  public set userLabels(value: { [key: string]: string }) {
+    this._userLabels = value;
+  }
+  public resetUserLabels() {
+    this._userLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userLabelsInput() {
+    return this._userLabels;
+  }
+
   // basic_sli - computed: false, optional: true, required: false
   private _basicSli = new MonitoringSloBasicSliOutputReference(this, "basic_sli");
   public get basicSli() {
@@ -2710,6 +2737,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
       rolling_period_days: cdktf.numberToTerraform(this._rollingPeriodDays),
       service: cdktf.stringToTerraform(this._service),
       slo_id: cdktf.stringToTerraform(this._sloId),
+      user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
       basic_sli: monitoringSloBasicSliToTerraform(this._basicSli.internalValue),
       request_based_sli: monitoringSloRequestBasedSliToTerraform(this._requestBasedSli.internalValue),
       timeouts: monitoringSloTimeoutsToTerraform(this._timeouts.internalValue),

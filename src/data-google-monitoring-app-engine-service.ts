@@ -118,7 +118,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
       terraformResourceType: 'google_monitoring_app_engine_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -199,6 +199,12 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
   private _telemetry = new DataGoogleMonitoringAppEngineServiceTelemetryList(this, "telemetry", false);
   public get telemetry() {
     return this._telemetry;
+  }
+
+  // user_labels - computed: true, optional: false, required: false
+  private _userLabels = new cdktf.StringMap(this, "user_labels");
+  public get userLabels() {
+    return this._userLabels;
   }
 
   // =========

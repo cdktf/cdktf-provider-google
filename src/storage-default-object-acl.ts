@@ -50,7 +50,7 @@ export class StorageDefaultObjectAcl extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_default_object_acl',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.24.0',
+        providerVersion: '4.25.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
