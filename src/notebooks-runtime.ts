@@ -2009,7 +2009,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_runtime',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

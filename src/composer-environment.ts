@@ -726,6 +726,12 @@ export interface ComposerEnvironmentConfigNodeConfig {
   */
   readonly diskSizeGb?: number;
   /**
+  * Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for all destination addresses, except between pods traffic. See: https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#enable_ip_masq_agent ComposerEnvironment#enable_ip_masq_agent}
+  */
+  readonly enableIpMasqAgent?: boolean | cdktf.IResolvable;
+  /**
   * Configuration for controlling how IPs are allocated in the GKE cluster. Cannot be updated.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#ip_allocation_policy ComposerEnvironment#ip_allocation_policy}
@@ -782,6 +788,7 @@ export function composerEnvironmentConfigNodeConfigToTerraform(struct?: Composer
   }
   return {
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    enable_ip_masq_agent: cdktf.booleanToTerraform(struct!.enableIpMasqAgent),
     ip_allocation_policy: cdktf.listMapper(composerEnvironmentConfigNodeConfigIpAllocationPolicyToTerraform)(struct!.ipAllocationPolicy),
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     network: cdktf.stringToTerraform(struct!.network),
@@ -810,6 +817,10 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
     if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._enableIpMasqAgent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableIpMasqAgent = this._enableIpMasqAgent;
     }
     if (this._ipAllocationPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -850,6 +861,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
     if (value === undefined) {
       this.isEmptyObject = false;
       this._diskSizeGb = undefined;
+      this._enableIpMasqAgent = undefined;
       this._ipAllocationPolicy.internalValue = undefined;
       this._machineType = undefined;
       this._network = undefined;
@@ -862,6 +874,7 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._diskSizeGb = value.diskSizeGb;
+      this._enableIpMasqAgent = value.enableIpMasqAgent;
       this._ipAllocationPolicy.internalValue = value.ipAllocationPolicy;
       this._machineType = value.machineType;
       this._network = value.network;
@@ -887,6 +900,22 @@ export class ComposerEnvironmentConfigNodeConfigOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
     return this._diskSizeGb;
+  }
+
+  // enable_ip_masq_agent - computed: true, optional: true, required: false
+  private _enableIpMasqAgent?: boolean | cdktf.IResolvable; 
+  public get enableIpMasqAgent() {
+    return this.getBooleanAttribute('enable_ip_masq_agent');
+  }
+  public set enableIpMasqAgent(value: boolean | cdktf.IResolvable) {
+    this._enableIpMasqAgent = value;
+  }
+  public resetEnableIpMasqAgent() {
+    this._enableIpMasqAgent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIpMasqAgentInput() {
+    return this._enableIpMasqAgent;
   }
 
   // ip_allocation_policy - computed: true, optional: true, required: false
@@ -1043,6 +1072,12 @@ export interface ComposerEnvironmentConfigPrivateEnvironmentConfig {
   */
   readonly enablePrivateEndpoint?: boolean | cdktf.IResolvable;
   /**
+  * When enabled, IPs from public (non-RFC1918) ranges can be used for ip_allocation_policy.cluster_ipv4_cidr_block and ip_allocation_policy.service_ipv4_cidr_block.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#enable_privately_used_public_ips ComposerEnvironment#enable_privately_used_public_ips}
+  */
+  readonly enablePrivatelyUsedPublicIps?: boolean | cdktf.IResolvable;
+  /**
   * The IP range in CIDR notation to use for the hosted master network. This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network. If left blank, the default value of '172.16.0.0/28' is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#master_ipv4_cidr_block ComposerEnvironment#master_ipv4_cidr_block}
@@ -1066,6 +1101,7 @@ export function composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(str
     cloud_composer_network_ipv4_cidr_block: cdktf.stringToTerraform(struct!.cloudComposerNetworkIpv4CidrBlock),
     cloud_sql_ipv4_cidr_block: cdktf.stringToTerraform(struct!.cloudSqlIpv4CidrBlock),
     enable_private_endpoint: cdktf.booleanToTerraform(struct!.enablePrivateEndpoint),
+    enable_privately_used_public_ips: cdktf.booleanToTerraform(struct!.enablePrivatelyUsedPublicIps),
     master_ipv4_cidr_block: cdktf.stringToTerraform(struct!.masterIpv4CidrBlock),
     web_server_ipv4_cidr_block: cdktf.stringToTerraform(struct!.webServerIpv4CidrBlock),
   }
@@ -1101,6 +1137,10 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
       hasAnyValues = true;
       internalValueResult.enablePrivateEndpoint = this._enablePrivateEndpoint;
     }
+    if (this._enablePrivatelyUsedPublicIps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enablePrivatelyUsedPublicIps = this._enablePrivatelyUsedPublicIps;
+    }
     if (this._masterIpv4CidrBlock !== undefined) {
       hasAnyValues = true;
       internalValueResult.masterIpv4CidrBlock = this._masterIpv4CidrBlock;
@@ -1119,6 +1159,7 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
       this._cloudComposerNetworkIpv4CidrBlock = undefined;
       this._cloudSqlIpv4CidrBlock = undefined;
       this._enablePrivateEndpoint = undefined;
+      this._enablePrivatelyUsedPublicIps = undefined;
       this._masterIpv4CidrBlock = undefined;
       this._webServerIpv4CidrBlock = undefined;
     }
@@ -1128,6 +1169,7 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
       this._cloudComposerNetworkIpv4CidrBlock = value.cloudComposerNetworkIpv4CidrBlock;
       this._cloudSqlIpv4CidrBlock = value.cloudSqlIpv4CidrBlock;
       this._enablePrivateEndpoint = value.enablePrivateEndpoint;
+      this._enablePrivatelyUsedPublicIps = value.enablePrivatelyUsedPublicIps;
       this._masterIpv4CidrBlock = value.masterIpv4CidrBlock;
       this._webServerIpv4CidrBlock = value.webServerIpv4CidrBlock;
     }
@@ -1195,6 +1237,22 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get enablePrivateEndpointInput() {
     return this._enablePrivateEndpoint;
+  }
+
+  // enable_privately_used_public_ips - computed: true, optional: true, required: false
+  private _enablePrivatelyUsedPublicIps?: boolean | cdktf.IResolvable; 
+  public get enablePrivatelyUsedPublicIps() {
+    return this.getBooleanAttribute('enable_privately_used_public_ips');
+  }
+  public set enablePrivatelyUsedPublicIps(value: boolean | cdktf.IResolvable) {
+    this._enablePrivatelyUsedPublicIps = value;
+  }
+  public resetEnablePrivatelyUsedPublicIps() {
+    this._enablePrivatelyUsedPublicIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePrivatelyUsedPublicIpsInput() {
+    return this._enablePrivatelyUsedPublicIps;
   }
 
   // master_ipv4_cidr_block - computed: true, optional: true, required: false
@@ -2841,7 +2899,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

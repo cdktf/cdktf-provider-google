@@ -397,6 +397,14 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecEgressPol
 }
 export interface AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo {
   /**
+  * A list of external resources that are allowed to be accessed. A request
+matches if it contains an external resource in this list (Example:
+s3://bucket/path). Currently '*' is not allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters#external_resources AccessContextManagerServicePerimeters#external_resources}
+  */
+  readonly externalResources?: string[];
+  /**
   * A list of resources, currently only projects in the form 
 'projects/<projectnumber>', that match this to stanza. A request matches 
 if it contains a resource in this list. If * is specified for resources, 
@@ -420,6 +428,7 @@ export function accessContextManagerServicePerimetersServicePerimetersSpecEgress
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    external_resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalResources),
     resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
     operations: cdktf.listMapper(accessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressToOperationsToTerraform)(struct!.operations),
   }
@@ -439,6 +448,10 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecEgressPol
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._externalResources !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalResources = this._externalResources;
+    }
     if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
@@ -453,14 +466,32 @@ export class AccessContextManagerServicePerimetersServicePerimetersSpecEgressPol
   public set internalValue(value: AccessContextManagerServicePerimetersServicePerimetersSpecEgressPoliciesEgressTo | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._externalResources = undefined;
       this._resources = undefined;
       this._operations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._externalResources = value.externalResources;
       this._resources = value.resources;
       this._operations.internalValue = value.operations;
     }
+  }
+
+  // external_resources - computed: false, optional: true, required: false
+  private _externalResources?: string[]; 
+  public get externalResources() {
+    return this.getListAttribute('external_resources');
+  }
+  public set externalResources(value: string[]) {
+    this._externalResources = value;
+  }
+  public resetExternalResources() {
+    this._externalResources = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalResourcesInput() {
+    return this._externalResources;
   }
 
   // resources - computed: false, optional: true, required: false
@@ -2072,6 +2103,14 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusEgressP
 }
 export interface AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo {
   /**
+  * A list of external resources that are allowed to be accessed. A request
+matches if it contains an external resource in this list (Example:
+s3://bucket/path). Currently '*' is not allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/access_context_manager_service_perimeters#external_resources AccessContextManagerServicePerimeters#external_resources}
+  */
+  readonly externalResources?: string[];
+  /**
   * A list of resources, currently only projects in the form 
 'projects/<projectnumber>', that match this to stanza. A request matches 
 if it contains a resource in this list. If * is specified for resources, 
@@ -2095,6 +2134,7 @@ export function accessContextManagerServicePerimetersServicePerimetersStatusEgre
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    external_resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalResources),
     resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
     operations: cdktf.listMapper(accessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressToOperationsToTerraform)(struct!.operations),
   }
@@ -2114,6 +2154,10 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusEgressP
   public get internalValue(): AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._externalResources !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.externalResources = this._externalResources;
+    }
     if (this._resources !== undefined) {
       hasAnyValues = true;
       internalValueResult.resources = this._resources;
@@ -2128,14 +2172,32 @@ export class AccessContextManagerServicePerimetersServicePerimetersStatusEgressP
   public set internalValue(value: AccessContextManagerServicePerimetersServicePerimetersStatusEgressPoliciesEgressTo | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._externalResources = undefined;
       this._resources = undefined;
       this._operations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._externalResources = value.externalResources;
       this._resources = value.resources;
       this._operations.internalValue = value.operations;
     }
+  }
+
+  // external_resources - computed: false, optional: true, required: false
+  private _externalResources?: string[]; 
+  public get externalResources() {
+    return this.getListAttribute('external_resources');
+  }
+  public set externalResources(value: string[]) {
+    this._externalResources = value;
+  }
+  public resetExternalResources() {
+    this._externalResources = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalResourcesInput() {
+    return this._externalResources;
   }
 
   // resources - computed: false, optional: true, required: false
@@ -3843,7 +3905,7 @@ export class AccessContextManagerServicePerimeters extends cdktf.TerraformResour
       terraformResourceType: 'google_access_context_manager_service_perimeters',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
