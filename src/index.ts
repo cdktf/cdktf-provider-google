@@ -241,6 +241,8 @@ export * from './dialogflow-intent';
 export * from './dns-managed-zone';
 export * from './dns-policy';
 export * from './dns-record-set';
+export * from './document-ai-processor';
+export * from './document-ai-processor-default-version';
 export * from './endpoints-service';
 export * from './endpoints-service-consumers-iam-binding';
 export * from './endpoints-service-consumers-iam-member';

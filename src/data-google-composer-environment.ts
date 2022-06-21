@@ -503,6 +503,11 @@ export class DataGoogleComposerEnvironmentConfigNodeConfigOutputReference extend
     return this.getNumberAttribute('disk_size_gb');
   }
 
+  // enable_ip_masq_agent - computed: true, optional: false, required: false
+  public get enableIpMasqAgent() {
+    return this.getBooleanAttribute('enable_ip_masq_agent');
+  }
+
   // ip_allocation_policy - computed: true, optional: false, required: false
   private _ipAllocationPolicy = new DataGoogleComposerEnvironmentConfigNodeConfigIpAllocationPolicyList(this, "ip_allocation_policy", false);
   public get ipAllocationPolicy() {
@@ -621,6 +626,11 @@ export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigOutputRe
   // enable_private_endpoint - computed: true, optional: false, required: false
   public get enablePrivateEndpoint() {
     return this.getBooleanAttribute('enable_private_endpoint');
+  }
+
+  // enable_privately_used_public_ips - computed: true, optional: false, required: false
+  public get enablePrivatelyUsedPublicIps() {
+    return this.getBooleanAttribute('enable_privately_used_public_ips');
   }
 
   // master_ipv4_cidr_block - computed: true, optional: false, required: false
@@ -1427,7 +1437,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

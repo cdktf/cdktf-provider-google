@@ -196,6 +196,10 @@ export interface GoogleProviderConfig {
   */
   readonly dnsCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}
+  */
+  readonly documentAiCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}
   */
   readonly essentialContactsCustomEndpoint?: string;
@@ -481,7 +485,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -533,6 +537,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._dialogflowCustomEndpoint = config.dialogflowCustomEndpoint;
     this._dialogflowCxCustomEndpoint = config.dialogflowCxCustomEndpoint;
     this._dnsCustomEndpoint = config.dnsCustomEndpoint;
+    this._documentAiCustomEndpoint = config.documentAiCustomEndpoint;
     this._essentialContactsCustomEndpoint = config.essentialContactsCustomEndpoint;
     this._eventarcCustomEndpoint = config.eventarcCustomEndpoint;
     this._filestoreCustomEndpoint = config.filestoreCustomEndpoint;
@@ -1347,6 +1352,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get dnsCustomEndpointInput() {
     return this._dnsCustomEndpoint;
+  }
+
+  // document_ai_custom_endpoint - computed: false, optional: true, required: false
+  private _documentAiCustomEndpoint?: string; 
+  public get documentAiCustomEndpoint() {
+    return this._documentAiCustomEndpoint;
+  }
+  public set documentAiCustomEndpoint(value: string | undefined) {
+    this._documentAiCustomEndpoint = value;
+  }
+  public resetDocumentAiCustomEndpoint() {
+    this._documentAiCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get documentAiCustomEndpointInput() {
+    return this._documentAiCustomEndpoint;
   }
 
   // essential_contacts_custom_endpoint - computed: false, optional: true, required: false
@@ -2330,6 +2351,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       dialogflow_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCustomEndpoint),
       dialogflow_cx_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCxCustomEndpoint),
       dns_custom_endpoint: cdktf.stringToTerraform(this._dnsCustomEndpoint),
+      document_ai_custom_endpoint: cdktf.stringToTerraform(this._documentAiCustomEndpoint),
       essential_contacts_custom_endpoint: cdktf.stringToTerraform(this._essentialContactsCustomEndpoint),
       eventarc_custom_endpoint: cdktf.stringToTerraform(this._eventarcCustomEndpoint),
       filestore_custom_endpoint: cdktf.stringToTerraform(this._filestoreCustomEndpoint),

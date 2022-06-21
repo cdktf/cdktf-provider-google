@@ -55,6 +55,14 @@ of the ignoredFiles globs, then we do not trigger a build.
   */
   readonly ignoredFiles?: string[];
   /**
+  * Build logs will be sent back to GitHub as part of the checkrun
+result.  Values can be INCLUDE_BUILD_LOGS_UNSPECIFIED or
+INCLUDE_BUILD_LOGS_WITH_STATUS Possible values: ["INCLUDE_BUILD_LOGS_UNSPECIFIED", "INCLUDE_BUILD_LOGS_WITH_STATUS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#include_build_logs CloudbuildTrigger#include_build_logs}
+  */
+  readonly includeBuildLogs?: string;
+  /**
   * ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for '**'.
 
@@ -4055,7 +4063,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.25.0',
+        providerVersion: '4.26.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -4069,6 +4077,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._filter = config.filter;
     this._id = config.id;
     this._ignoredFiles = config.ignoredFiles;
+    this._includeBuildLogs = config.includeBuildLogs;
     this._includedFiles = config.includedFiles;
     this._name = config.name;
     this._project = config.project;
@@ -4189,6 +4198,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ignoredFilesInput() {
     return this._ignoredFiles;
+  }
+
+  // include_build_logs - computed: false, optional: true, required: false
+  private _includeBuildLogs?: string; 
+  public get includeBuildLogs() {
+    return this.getStringAttribute('include_build_logs');
+  }
+  public set includeBuildLogs(value: string) {
+    this._includeBuildLogs = value;
+  }
+  public resetIncludeBuildLogs() {
+    this._includeBuildLogs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeBuildLogsInput() {
+    return this._includeBuildLogs;
   }
 
   // included_files - computed: false, optional: true, required: false
@@ -4448,6 +4473,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       filter: cdktf.stringToTerraform(this._filter),
       id: cdktf.stringToTerraform(this._id),
       ignored_files: cdktf.listMapper(cdktf.stringToTerraform)(this._ignoredFiles),
+      include_build_logs: cdktf.stringToTerraform(this._includeBuildLogs),
       included_files: cdktf.listMapper(cdktf.stringToTerraform)(this._includedFiles),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
