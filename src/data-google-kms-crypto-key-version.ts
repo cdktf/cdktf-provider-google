@@ -119,7 +119,7 @@ export class DataGoogleKmsCryptoKeyVersion extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_kms_crypto_key_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.26.0',
+        providerVersion: '4.27.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

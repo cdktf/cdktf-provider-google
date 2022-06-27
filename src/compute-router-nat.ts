@@ -16,8 +16,10 @@ valid static external IPs that have been assigned to the NAT.
   readonly drainNatIps?: string[];
   /**
   * Enable Dynamic Port Allocation.
-If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. 
+If minPortsPerVm is set, minPortsPerVm must be set to a power of two greater than or equal to 32.
 If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
+If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater than minPortsPerVm.
+If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
 
 Mutually exclusive with enableEndpointIndependentMapping.
   * 
@@ -44,6 +46,13 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * Maximum number of ports allocated to a VM from this NAT.
+This field can only be set when enableDynamicPortAllocation is enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#max_ports_per_vm ComputeRouterNat#max_ports_per_vm}
+  */
+  readonly maxPortsPerVm?: number;
   /**
   * Minimum number of ports allocated to a VM from this NAT.
   * 
@@ -545,7 +554,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.26.0',
+        providerVersion: '4.27.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -558,6 +567,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     this._enableEndpointIndependentMapping = config.enableEndpointIndependentMapping;
     this._icmpIdleTimeoutSec = config.icmpIdleTimeoutSec;
     this._id = config.id;
+    this._maxPortsPerVm = config.maxPortsPerVm;
     this._minPortsPerVm = config.minPortsPerVm;
     this._name = config.name;
     this._natIpAllocateOption = config.natIpAllocateOption;
@@ -594,7 +604,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     return this._drainNatIps;
   }
 
-  // enable_dynamic_port_allocation - computed: false, optional: true, required: false
+  // enable_dynamic_port_allocation - computed: true, optional: true, required: false
   private _enableDynamicPortAllocation?: boolean | cdktf.IResolvable; 
   public get enableDynamicPortAllocation() {
     return this.getBooleanAttribute('enable_dynamic_port_allocation');
@@ -656,6 +666,22 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // max_ports_per_vm - computed: false, optional: true, required: false
+  private _maxPortsPerVm?: number; 
+  public get maxPortsPerVm() {
+    return this.getNumberAttribute('max_ports_per_vm');
+  }
+  public set maxPortsPerVm(value: number) {
+    this._maxPortsPerVm = value;
+  }
+  public resetMaxPortsPerVm() {
+    this._maxPortsPerVm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxPortsPerVmInput() {
+    return this._maxPortsPerVm;
   }
 
   // min_ports_per_vm - computed: false, optional: true, required: false
@@ -881,6 +907,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       enable_endpoint_independent_mapping: cdktf.booleanToTerraform(this._enableEndpointIndependentMapping),
       icmp_idle_timeout_sec: cdktf.numberToTerraform(this._icmpIdleTimeoutSec),
       id: cdktf.stringToTerraform(this._id),
+      max_ports_per_vm: cdktf.numberToTerraform(this._maxPortsPerVm),
       min_ports_per_vm: cdktf.numberToTerraform(this._minPortsPerVm),
       name: cdktf.stringToTerraform(this._name),
       nat_ip_allocate_option: cdktf.stringToTerraform(this._natIpAllocateOption),

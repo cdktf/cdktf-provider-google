@@ -51,6 +51,12 @@ export interface ClouddeployDeliveryPipelineConfig extends cdktf.TerraformMetaAr
   */
   readonly project?: string;
   /**
+  * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_delivery_pipeline#suspended ClouddeployDeliveryPipeline#suspended}
+  */
+  readonly suspended?: boolean | cdktf.IResolvable;
+  /**
   * serial_pipeline block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_delivery_pipeline#serial_pipeline ClouddeployDeliveryPipeline#serial_pipeline}
@@ -628,7 +634,7 @@ export class ClouddeployDeliveryPipeline extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_delivery_pipeline',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.26.0',
+        providerVersion: '4.27.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -643,6 +649,7 @@ export class ClouddeployDeliveryPipeline extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
+    this._suspended = config.suspended;
     this._serialPipeline.internalValue = config.serialPipeline;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -773,6 +780,22 @@ export class ClouddeployDeliveryPipeline extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // suspended - computed: false, optional: true, required: false
+  private _suspended?: boolean | cdktf.IResolvable; 
+  public get suspended() {
+    return this.getBooleanAttribute('suspended');
+  }
+  public set suspended(value: boolean | cdktf.IResolvable) {
+    this._suspended = value;
+  }
+  public resetSuspended() {
+    this._suspended = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suspendedInput() {
+    return this._suspended;
+  }
+
   // uid - computed: true, optional: false, required: false
   public get uid() {
     return this.getStringAttribute('uid');
@@ -828,6 +851,7 @@ export class ClouddeployDeliveryPipeline extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      suspended: cdktf.booleanToTerraform(this._suspended),
       serial_pipeline: clouddeployDeliveryPipelineSerialPipelineToTerraform(this._serialPipeline.internalValue),
       timeouts: clouddeployDeliveryPipelineTimeoutsToTerraform(this._timeouts.internalValue),
     };
