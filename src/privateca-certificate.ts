@@ -8,7 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface PrivatecaCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Certificate Authority name.
+  * The Certificate Authority ID that should issue the certificate. For example, to issue a Certificate from
+a Certificate Authority with resource name 'projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca',
+argument 'pool' should be set to 'projects/my-project/locations/us-central1/caPools/my-pool', argument 'certificate_authority'
+should be set to 'my-ca'.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate#certificate_authority PrivatecaCertificate#certificate_authority}
   */
@@ -4414,7 +4417,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

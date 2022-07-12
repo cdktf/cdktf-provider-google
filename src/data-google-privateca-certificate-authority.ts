@@ -1200,6 +1200,140 @@ export class DataGooglePrivatecaCertificateAuthorityKeySpecList extends cdktf.Co
     return new DataGooglePrivatecaCertificateAuthorityKeySpecOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain {
+}
+
+export function dataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainToTerraform(struct?: DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // pem_certificates - computed: true, optional: false, required: false
+  public get pemCertificates() {
+    return this.getListAttribute('pem_certificates');
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference {
+    return new DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGooglePrivatecaCertificateAuthoritySubordinateConfig {
+}
+
+export function dataGooglePrivatecaCertificateAuthoritySubordinateConfigToTerraform(struct?: DataGooglePrivatecaCertificateAuthoritySubordinateConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthoritySubordinateConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePrivatecaCertificateAuthoritySubordinateConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePrivatecaCertificateAuthoritySubordinateConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // certificate_authority - computed: true, optional: false, required: false
+  public get certificateAuthority() {
+    return this.getStringAttribute('certificate_authority');
+  }
+
+  // pem_issuer_chain - computed: true, optional: false, required: false
+  private _pemIssuerChain = new DataGooglePrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainList(this, "pem_issuer_chain", false);
+  public get pemIssuerChain() {
+    return this._pemIssuerChain;
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthoritySubordinateConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePrivatecaCertificateAuthoritySubordinateConfigOutputReference {
+    return new DataGooglePrivatecaCertificateAuthoritySubordinateConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/privateca_certificate_authority google_privateca_certificate_authority}
@@ -1227,7 +1361,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1353,6 +1487,11 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
     return this.getStringAttribute('name');
   }
 
+  // pem_ca_certificate - computed: true, optional: false, required: false
+  public get pemCaCertificate() {
+    return this.getStringAttribute('pem_ca_certificate');
+  }
+
   // pem_ca_certificates - computed: true, optional: false, required: false
   public get pemCaCertificates() {
     return this.getListAttribute('pem_ca_certificates');
@@ -1398,6 +1537,12 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
+  }
+
+  // subordinate_config - computed: true, optional: false, required: false
+  private _subordinateConfig = new DataGooglePrivatecaCertificateAuthoritySubordinateConfigList(this, "subordinate_config", false);
+  public get subordinateConfig() {
+    return this._subordinateConfig;
   }
 
   // type - computed: true, optional: false, required: false

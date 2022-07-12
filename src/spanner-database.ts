@@ -9,10 +9,7 @@ import * as cdktf from 'cdktf';
 export interface SpannerDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The dialect of the Cloud Spanner Database.
-If it is not provided, "GOOGLE_STANDARD_SQL" will be used. 
-Note: Databases that are created with POSTGRESQL dialect do not support 
-extra DDL statements in the 'CreateDatabase' call. You must therefore re-apply 
-terraform with ddl on the same database after creation. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"]
+If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#database_dialect SpannerDatabase#database_dialect}
   */
@@ -54,6 +51,16 @@ the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#project SpannerDatabase#project}
   */
   readonly project?: string;
+  /**
+  * The retention period for the database. The retention period must be between 1 hour
+and 7 days, and can be specified in days, hours, minutes, or seconds. For example,
+the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
+If this property is used, you must avoid adding new DDL statements to 'ddl' that
+update the database's version_retention_period.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_database#version_retention_period SpannerDatabase#version_retention_period}
+  */
+  readonly versionRetentionPeriod?: string;
   /**
   * encryption_config block
   * 
@@ -288,7 +295,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -303,6 +310,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
     this._instance = config.instance;
     this._name = config.name;
     this._project = config.project;
+    this._versionRetentionPeriod = config.versionRetentionPeriod;
     this._encryptionConfig.internalValue = config.encryptionConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -422,6 +430,22 @@ export class SpannerDatabase extends cdktf.TerraformResource {
     return this.getStringAttribute('state');
   }
 
+  // version_retention_period - computed: true, optional: true, required: false
+  private _versionRetentionPeriod?: string; 
+  public get versionRetentionPeriod() {
+    return this.getStringAttribute('version_retention_period');
+  }
+  public set versionRetentionPeriod(value: string) {
+    this._versionRetentionPeriod = value;
+  }
+  public resetVersionRetentionPeriod() {
+    this._versionRetentionPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionRetentionPeriodInput() {
+    return this._versionRetentionPeriod;
+  }
+
   // encryption_config - computed: false, optional: true, required: false
   private _encryptionConfig = new SpannerDatabaseEncryptionConfigOutputReference(this, "encryption_config");
   public get encryptionConfig() {
@@ -467,6 +491,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
       instance: cdktf.stringToTerraform(this._instance),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      version_retention_period: cdktf.stringToTerraform(this._versionRetentionPeriod),
       encryption_config: spannerDatabaseEncryptionConfigToTerraform(this._encryptionConfig.internalValue),
       timeouts: spannerDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };

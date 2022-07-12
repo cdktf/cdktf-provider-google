@@ -119,6 +119,12 @@ create the disk. Provide this when creating the disk.
 }
 export interface ComputeRegionDiskDiskEncryptionKey {
   /**
+  * The name of the encryption key that is stored in Google Cloud KMS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk#kms_key_name ComputeRegionDisk#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
+  /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
   * 
@@ -133,6 +139,7 @@ export function computeRegionDiskDiskEncryptionKeyToTerraform(struct?: ComputeRe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
     raw_key: cdktf.stringToTerraform(struct!.rawKey),
   }
 }
@@ -151,6 +158,10 @@ export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.Com
   public get internalValue(): ComputeRegionDiskDiskEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
     if (this._rawKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.rawKey = this._rawKey;
@@ -161,12 +172,30 @@ export class ComputeRegionDiskDiskEncryptionKeyOutputReference extends cdktf.Com
   public set internalValue(value: ComputeRegionDiskDiskEncryptionKey | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._kmsKeyName = undefined;
       this._rawKey = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeyName = value.kmsKeyName;
       this._rawKey = value.rawKey;
     }
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
   }
 
   // raw_key - computed: false, optional: true, required: false
@@ -419,7 +448,7 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_disk',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -39,6 +39,13 @@ will be used.
   */
   readonly connectMode?: string;
   /**
+  * Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis
+instance. If this is provided, CMEK is enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
+  */
+  readonly customerManagedKey?: string;
+  /**
   * An arbitrary and optional user-provided name for the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#display_name RedisInstance#display_name}
@@ -942,7 +949,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -954,6 +961,7 @@ export class RedisInstance extends cdktf.TerraformResource {
     this._authEnabled = config.authEnabled;
     this._authorizedNetwork = config.authorizedNetwork;
     this._connectMode = config.connectMode;
+    this._customerManagedKey = config.customerManagedKey;
     this._displayName = config.displayName;
     this._id = config.id;
     this._labels = config.labels;
@@ -1056,6 +1064,22 @@ export class RedisInstance extends cdktf.TerraformResource {
   // current_location_id - computed: true, optional: false, required: false
   public get currentLocationId() {
     return this.getStringAttribute('current_location_id');
+  }
+
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey?: string; 
+  public get customerManagedKey() {
+    return this.getStringAttribute('customer_managed_key');
+  }
+  public set customerManagedKey(value: string) {
+    this._customerManagedKey = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey;
   }
 
   // display_name - computed: false, optional: true, required: false
@@ -1403,6 +1427,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       auth_enabled: cdktf.booleanToTerraform(this._authEnabled),
       authorized_network: cdktf.stringToTerraform(this._authorizedNetwork),
       connect_mode: cdktf.stringToTerraform(this._connectMode),
+      customer_managed_key: cdktf.stringToTerraform(this._customerManagedKey),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
