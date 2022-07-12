@@ -231,7 +231,10 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 }
 export interface ComputeRegionBackendServiceBackend {
   /**
-  * Specifies the balancing mode for this backend. Default value: "CONNECTION" Possible values: ["UTILIZATION", "RATE", "CONNECTION"]
+  * Specifies the balancing mode for this backend.
+
+See the [Backend Services Overview](https://cloud.google.com/load-balancing/docs/backend-service#balancing-mode)
+for an explanation of load balancing modes. Default value: "CONNECTION" Possible values: ["UTILIZATION", "RATE", "CONNECTION"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_backend_service#balancing_mode ComputeRegionBackendService#balancing_mode}
   */
@@ -2955,7 +2958,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -70,6 +70,12 @@ running 'gcloud privateca locations list'.
   */
   readonly location: string;
   /**
+  * The signed CA certificate issued from the subordinated CA's CSR. This is needed when activating the subordiante CA with a third party issuer.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#pem_ca_certificate PrivatecaCertificateAuthority#pem_ca_certificate}
+  */
+  readonly pemCaCertificate?: string;
+  /**
   * The name of the CaPool this Certificate Authority belongs to.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#pool PrivatecaCertificateAuthority#pool}
@@ -83,8 +89,7 @@ running 'gcloud privateca locations list'.
   * The Type of this CertificateAuthority.
 
 ~> **Note:** For 'SUBORDINATE' Certificate Authorities, they need to
-be manually activated (via Cloud Console of 'gcloud') before they can
-issue certificates. Default value: "SELF_SIGNED" Possible values: ["SELF_SIGNED", "SUBORDINATE"]
+be activated before they can issue certificates. Default value: "SELF_SIGNED" Possible values: ["SELF_SIGNED", "SUBORDINATE"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#type PrivatecaCertificateAuthority#type}
   */
@@ -101,6 +106,12 @@ issue certificates. Default value: "SELF_SIGNED" Possible values: ["SELF_SIGNED"
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#key_spec PrivatecaCertificateAuthority#key_spec}
   */
   readonly keySpec: PrivatecaCertificateAuthorityKeySpec;
+  /**
+  * subordinate_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#subordinate_config PrivatecaCertificateAuthority#subordinate_config}
+  */
+  readonly subordinateConfig?: PrivatecaCertificateAuthoritySubordinateConfig;
   /**
   * timeouts block
   * 
@@ -2244,6 +2255,172 @@ export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.C
     return this._cloudKmsKeyVersion;
   }
 }
+export interface PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain {
+  /**
+  * Expected to be in leaf-to-root order according to RFC 5246.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#pem_certificates PrivatecaCertificateAuthority#pem_certificates}
+  */
+  readonly pemCertificates?: string[];
+}
+
+export function privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToTerraform(struct?: PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference | PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    pem_certificates: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pemCertificates),
+  }
+}
+
+export class PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._pemCertificates !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pemCertificates = this._pemCertificates;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._pemCertificates = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._pemCertificates = value.pemCertificates;
+    }
+  }
+
+  // pem_certificates - computed: false, optional: true, required: false
+  private _pemCertificates?: string[]; 
+  public get pemCertificates() {
+    return this.getListAttribute('pem_certificates');
+  }
+  public set pemCertificates(value: string[]) {
+    this._pemCertificates = value;
+  }
+  public resetPemCertificates() {
+    this._pemCertificates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemCertificatesInput() {
+    return this._pemCertificates;
+  }
+}
+export interface PrivatecaCertificateAuthoritySubordinateConfig {
+  /**
+  * This can refer to a CertificateAuthority that was used to create a
+subordinate CertificateAuthority. This field is used for information
+and usability purposes only. The resource name is in the format
+'projects/*\/locations/*\/caPools/*\/certificateAuthorities/*'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#certificate_authority PrivatecaCertificateAuthority#certificate_authority}
+  */
+  readonly certificateAuthority?: string;
+  /**
+  * pem_issuer_chain block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#pem_issuer_chain PrivatecaCertificateAuthority#pem_issuer_chain}
+  */
+  readonly pemIssuerChain?: PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain;
+}
+
+export function privatecaCertificateAuthoritySubordinateConfigToTerraform(struct?: PrivatecaCertificateAuthoritySubordinateConfigOutputReference | PrivatecaCertificateAuthoritySubordinateConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    certificate_authority: cdktf.stringToTerraform(struct!.certificateAuthority),
+    pem_issuer_chain: privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToTerraform(struct!.pemIssuerChain),
+  }
+}
+
+export class PrivatecaCertificateAuthoritySubordinateConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PrivatecaCertificateAuthoritySubordinateConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateAuthority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateAuthority = this._certificateAuthority;
+    }
+    if (this._pemIssuerChain?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pemIssuerChain = this._pemIssuerChain?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCertificateAuthoritySubordinateConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._certificateAuthority = undefined;
+      this._pemIssuerChain.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._certificateAuthority = value.certificateAuthority;
+      this._pemIssuerChain.internalValue = value.pemIssuerChain;
+    }
+  }
+
+  // certificate_authority - computed: false, optional: true, required: false
+  private _certificateAuthority?: string; 
+  public get certificateAuthority() {
+    return this.getStringAttribute('certificate_authority');
+  }
+  public set certificateAuthority(value: string) {
+    this._certificateAuthority = value;
+  }
+  public resetCertificateAuthority() {
+    this._certificateAuthority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateAuthorityInput() {
+    return this._certificateAuthority;
+  }
+
+  // pem_issuer_chain - computed: false, optional: true, required: false
+  private _pemIssuerChain = new PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChainOutputReference(this, "pem_issuer_chain");
+  public get pemIssuerChain() {
+    return this._pemIssuerChain;
+  }
+  public putPemIssuerChain(value: PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain) {
+    this._pemIssuerChain.internalValue = value;
+  }
+  public resetPemIssuerChain() {
+    this._pemIssuerChain.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemIssuerChainInput() {
+    return this._pemIssuerChain.internalValue;
+  }
+}
 export interface PrivatecaCertificateAuthorityTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#create PrivatecaCertificateAuthority#create}
@@ -2400,7 +2577,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2417,11 +2594,13 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     this._labels = config.labels;
     this._lifetime = config.lifetime;
     this._location = config.location;
+    this._pemCaCertificate = config.pemCaCertificate;
     this._pool = config.pool;
     this._project = config.project;
     this._type = config.type;
     this._config.internalValue = config.config;
     this._keySpec.internalValue = config.keySpec;
+    this._subordinateConfig.internalValue = config.subordinateConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -2583,6 +2762,22 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     return this.getStringAttribute('name');
   }
 
+  // pem_ca_certificate - computed: false, optional: true, required: false
+  private _pemCaCertificate?: string; 
+  public get pemCaCertificate() {
+    return this.getStringAttribute('pem_ca_certificate');
+  }
+  public set pemCaCertificate(value: string) {
+    this._pemCaCertificate = value;
+  }
+  public resetPemCaCertificate() {
+    this._pemCaCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemCaCertificateInput() {
+    return this._pemCaCertificate;
+  }
+
   // pem_ca_certificates - computed: true, optional: false, required: false
   public get pemCaCertificates() {
     return this.getListAttribute('pem_ca_certificates');
@@ -2669,6 +2864,22 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     return this._keySpec.internalValue;
   }
 
+  // subordinate_config - computed: false, optional: true, required: false
+  private _subordinateConfig = new PrivatecaCertificateAuthoritySubordinateConfigOutputReference(this, "subordinate_config");
+  public get subordinateConfig() {
+    return this._subordinateConfig;
+  }
+  public putSubordinateConfig(value: PrivatecaCertificateAuthoritySubordinateConfig) {
+    this._subordinateConfig.internalValue = value;
+  }
+  public resetSubordinateConfig() {
+    this._subordinateConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subordinateConfigInput() {
+    return this._subordinateConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new PrivatecaCertificateAuthorityTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -2700,11 +2911,13 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       lifetime: cdktf.stringToTerraform(this._lifetime),
       location: cdktf.stringToTerraform(this._location),
+      pem_ca_certificate: cdktf.stringToTerraform(this._pemCaCertificate),
       pool: cdktf.stringToTerraform(this._pool),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
       config: privatecaCertificateAuthorityConfigAToTerraform(this._config.internalValue),
       key_spec: privatecaCertificateAuthorityKeySpecToTerraform(this._keySpec.internalValue),
+      subordinate_config: privatecaCertificateAuthoritySubordinateConfigToTerraform(this._subordinateConfig.internalValue),
       timeouts: privatecaCertificateAuthorityTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

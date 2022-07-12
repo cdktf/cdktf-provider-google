@@ -228,10 +228,6 @@ export interface GoogleProviderConfig {
   */
   readonly gkeHubCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gkehub_feature_custom_endpoint GoogleProvider#gkehub_feature_custom_endpoint}
-  */
-  readonly gkehubFeatureCustomEndpoint?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}
   */
   readonly healthcareCustomEndpoint?: string;
@@ -485,7 +481,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -545,7 +541,6 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._firestoreCustomEndpoint = config.firestoreCustomEndpoint;
     this._gameServicesCustomEndpoint = config.gameServicesCustomEndpoint;
     this._gkeHubCustomEndpoint = config.gkeHubCustomEndpoint;
-    this._gkehubFeatureCustomEndpoint = config.gkehubFeatureCustomEndpoint;
     this._healthcareCustomEndpoint = config.healthcareCustomEndpoint;
     this._iamCredentialsCustomEndpoint = config.iamCredentialsCustomEndpoint;
     this._iamCustomEndpoint = config.iamCustomEndpoint;
@@ -1482,22 +1477,6 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._gkeHubCustomEndpoint;
   }
 
-  // gkehub_feature_custom_endpoint - computed: false, optional: true, required: false
-  private _gkehubFeatureCustomEndpoint?: string; 
-  public get gkehubFeatureCustomEndpoint() {
-    return this._gkehubFeatureCustomEndpoint;
-  }
-  public set gkehubFeatureCustomEndpoint(value: string | undefined) {
-    this._gkehubFeatureCustomEndpoint = value;
-  }
-  public resetGkehubFeatureCustomEndpoint() {
-    this._gkehubFeatureCustomEndpoint = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get gkehubFeatureCustomEndpointInput() {
-    return this._gkehubFeatureCustomEndpoint;
-  }
-
   // healthcare_custom_endpoint - computed: false, optional: true, required: false
   private _healthcareCustomEndpoint?: string; 
   public get healthcareCustomEndpoint() {
@@ -2359,7 +2338,6 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       firestore_custom_endpoint: cdktf.stringToTerraform(this._firestoreCustomEndpoint),
       game_services_custom_endpoint: cdktf.stringToTerraform(this._gameServicesCustomEndpoint),
       gke_hub_custom_endpoint: cdktf.stringToTerraform(this._gkeHubCustomEndpoint),
-      gkehub_feature_custom_endpoint: cdktf.stringToTerraform(this._gkehubFeatureCustomEndpoint),
       healthcare_custom_endpoint: cdktf.stringToTerraform(this._healthcareCustomEndpoint),
       iam_credentials_custom_endpoint: cdktf.stringToTerraform(this._iamCredentialsCustomEndpoint),
       iam_custom_endpoint: cdktf.stringToTerraform(this._iamCustomEndpoint),

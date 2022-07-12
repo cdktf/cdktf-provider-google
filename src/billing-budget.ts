@@ -453,14 +453,346 @@ export class BillingBudgetAmountOutputReference extends cdktf.ComplexObject {
     return this._specifiedAmount.internalValue;
   }
 }
+export interface BillingBudgetBudgetFilterCustomPeriodEndDate {
+  /**
+  * Day of a month. Must be from 1 to 31 and valid for the year and month.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#day BillingBudget#day}
+  */
+  readonly day: number;
+  /**
+  * Month of a year. Must be from 1 to 12.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#month BillingBudget#month}
+  */
+  readonly month: number;
+  /**
+  * Year of the date. Must be from 1 to 9999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#year BillingBudget#year}
+  */
+  readonly year: number;
+}
+
+export function billingBudgetBudgetFilterCustomPeriodEndDateToTerraform(struct?: BillingBudgetBudgetFilterCustomPeriodEndDateOutputReference | BillingBudgetBudgetFilterCustomPeriodEndDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.numberToTerraform(struct!.day),
+    month: cdktf.numberToTerraform(struct!.month),
+    year: cdktf.numberToTerraform(struct!.year),
+  }
+}
+
+export class BillingBudgetBudgetFilterCustomPeriodEndDateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BillingBudgetBudgetFilterCustomPeriodEndDate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._month !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.month = this._month;
+    }
+    if (this._year !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.year = this._year;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetBudgetFilterCustomPeriodEndDate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._day = undefined;
+      this._month = undefined;
+      this._year = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._day = value.day;
+      this._month = value.month;
+      this._year = value.year;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: number; 
+  public get day() {
+    return this.getNumberAttribute('day');
+  }
+  public set day(value: number) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // month - computed: false, optional: false, required: true
+  private _month?: number; 
+  public get month() {
+    return this.getNumberAttribute('month');
+  }
+  public set month(value: number) {
+    this._month = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthInput() {
+    return this._month;
+  }
+
+  // year - computed: false, optional: false, required: true
+  private _year?: number; 
+  public get year() {
+    return this.getNumberAttribute('year');
+  }
+  public set year(value: number) {
+    this._year = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get yearInput() {
+    return this._year;
+  }
+}
+export interface BillingBudgetBudgetFilterCustomPeriodStartDate {
+  /**
+  * Day of a month. Must be from 1 to 31 and valid for the year and month.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#day BillingBudget#day}
+  */
+  readonly day: number;
+  /**
+  * Month of a year. Must be from 1 to 12.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#month BillingBudget#month}
+  */
+  readonly month: number;
+  /**
+  * Year of the date. Must be from 1 to 9999.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#year BillingBudget#year}
+  */
+  readonly year: number;
+}
+
+export function billingBudgetBudgetFilterCustomPeriodStartDateToTerraform(struct?: BillingBudgetBudgetFilterCustomPeriodStartDateOutputReference | BillingBudgetBudgetFilterCustomPeriodStartDate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day: cdktf.numberToTerraform(struct!.day),
+    month: cdktf.numberToTerraform(struct!.month),
+    year: cdktf.numberToTerraform(struct!.year),
+  }
+}
+
+export class BillingBudgetBudgetFilterCustomPeriodStartDateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BillingBudgetBudgetFilterCustomPeriodStartDate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._month !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.month = this._month;
+    }
+    if (this._year !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.year = this._year;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetBudgetFilterCustomPeriodStartDate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._day = undefined;
+      this._month = undefined;
+      this._year = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._day = value.day;
+      this._month = value.month;
+      this._year = value.year;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: number; 
+  public get day() {
+    return this.getNumberAttribute('day');
+  }
+  public set day(value: number) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // month - computed: false, optional: false, required: true
+  private _month?: number; 
+  public get month() {
+    return this.getNumberAttribute('month');
+  }
+  public set month(value: number) {
+    this._month = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthInput() {
+    return this._month;
+  }
+
+  // year - computed: false, optional: false, required: true
+  private _year?: number; 
+  public get year() {
+    return this.getNumberAttribute('year');
+  }
+  public set year(value: number) {
+    this._year = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get yearInput() {
+    return this._year;
+  }
+}
+export interface BillingBudgetBudgetFilterCustomPeriod {
+  /**
+  * end_date block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#end_date BillingBudget#end_date}
+  */
+  readonly endDate?: BillingBudgetBudgetFilterCustomPeriodEndDate;
+  /**
+  * start_date block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#start_date BillingBudget#start_date}
+  */
+  readonly startDate: BillingBudgetBudgetFilterCustomPeriodStartDate;
+}
+
+export function billingBudgetBudgetFilterCustomPeriodToTerraform(struct?: BillingBudgetBudgetFilterCustomPeriodOutputReference | BillingBudgetBudgetFilterCustomPeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    end_date: billingBudgetBudgetFilterCustomPeriodEndDateToTerraform(struct!.endDate),
+    start_date: billingBudgetBudgetFilterCustomPeriodStartDateToTerraform(struct!.startDate),
+  }
+}
+
+export class BillingBudgetBudgetFilterCustomPeriodOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BillingBudgetBudgetFilterCustomPeriod | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endDate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endDate = this._endDate?.internalValue;
+    }
+    if (this._startDate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startDate = this._startDate?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BillingBudgetBudgetFilterCustomPeriod | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._endDate.internalValue = undefined;
+      this._startDate.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._endDate.internalValue = value.endDate;
+      this._startDate.internalValue = value.startDate;
+    }
+  }
+
+  // end_date - computed: false, optional: true, required: false
+  private _endDate = new BillingBudgetBudgetFilterCustomPeriodEndDateOutputReference(this, "end_date");
+  public get endDate() {
+    return this._endDate;
+  }
+  public putEndDate(value: BillingBudgetBudgetFilterCustomPeriodEndDate) {
+    this._endDate.internalValue = value;
+  }
+  public resetEndDate() {
+    this._endDate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endDateInput() {
+    return this._endDate.internalValue;
+  }
+
+  // start_date - computed: false, optional: false, required: true
+  private _startDate = new BillingBudgetBudgetFilterCustomPeriodStartDateOutputReference(this, "start_date");
+  public get startDate() {
+    return this._startDate;
+  }
+  public putStartDate(value: BillingBudgetBudgetFilterCustomPeriodStartDate) {
+    this._startDate.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startDateInput() {
+    return this._startDate.internalValue;
+  }
+}
 export interface BillingBudgetBudgetFilter {
   /**
-  * A set of subaccounts of the form billingAccounts/{account_id},
-specifying that usage from only this set of subaccounts should
-be included in the budget. If a subaccount is set to the name of
-the parent account, usage from the parent account will be included.
-If the field is omitted, the report will include usage from the parent
-account and all subaccounts, if they exist.
+  * A CalendarPeriod represents the abstract concept of a recurring time period that has a
+canonical start. Grammatically, "the start of the current CalendarPeriod".
+All calendar times begin at 12 AM US and Canadian Pacific Time (UTC-8).
+
+Exactly one of 'calendar_period', 'custom_period' must be provided. Possible values: ["MONTH", "QUARTER", "YEAR", "CALENDAR_PERIOD_UNSPECIFIED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#calendar_period BillingBudget#calendar_period}
+  */
+  readonly calendarPeriod?: string;
+  /**
+  * Optional. If creditTypesTreatment is INCLUDE_SPECIFIED_CREDITS,
+this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See a list of acceptable credit type values.
+If creditTypesTreatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#credit_types BillingBudget#credit_types}
   */
@@ -511,6 +843,12 @@ account and all subaccounts, if they exist.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#subaccounts BillingBudget#subaccounts}
   */
   readonly subaccounts?: string[];
+  /**
+  * custom_period block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#custom_period BillingBudget#custom_period}
+  */
+  readonly customPeriod?: BillingBudgetBudgetFilterCustomPeriod;
 }
 
 export function billingBudgetBudgetFilterToTerraform(struct?: BillingBudgetBudgetFilterOutputReference | BillingBudgetBudgetFilter): any {
@@ -519,12 +857,14 @@ export function billingBudgetBudgetFilterToTerraform(struct?: BillingBudgetBudge
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    calendar_period: cdktf.stringToTerraform(struct!.calendarPeriod),
     credit_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.creditTypes),
     credit_types_treatment: cdktf.stringToTerraform(struct!.creditTypesTreatment),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     projects: cdktf.listMapper(cdktf.stringToTerraform)(struct!.projects),
     services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.services),
     subaccounts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subaccounts),
+    custom_period: billingBudgetBudgetFilterCustomPeriodToTerraform(struct!.customPeriod),
   }
 }
 
@@ -542,6 +882,10 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   public get internalValue(): BillingBudgetBudgetFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._calendarPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.calendarPeriod = this._calendarPeriod;
+    }
     if (this._creditTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.creditTypes = this._creditTypes;
@@ -566,28 +910,52 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.subaccounts = this._subaccounts;
     }
+    if (this._customPeriod?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customPeriod = this._customPeriod?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
   public set internalValue(value: BillingBudgetBudgetFilter | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._calendarPeriod = undefined;
       this._creditTypes = undefined;
       this._creditTypesTreatment = undefined;
       this._labels = undefined;
       this._projects = undefined;
       this._services = undefined;
       this._subaccounts = undefined;
+      this._customPeriod.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._calendarPeriod = value.calendarPeriod;
       this._creditTypes = value.creditTypes;
       this._creditTypesTreatment = value.creditTypesTreatment;
       this._labels = value.labels;
       this._projects = value.projects;
       this._services = value.services;
       this._subaccounts = value.subaccounts;
+      this._customPeriod.internalValue = value.customPeriod;
     }
+  }
+
+  // calendar_period - computed: false, optional: true, required: false
+  private _calendarPeriod?: string; 
+  public get calendarPeriod() {
+    return this.getStringAttribute('calendar_period');
+  }
+  public set calendarPeriod(value: string) {
+    this._calendarPeriod = value;
+  }
+  public resetCalendarPeriod() {
+    this._calendarPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get calendarPeriodInput() {
+    return this._calendarPeriod;
   }
 
   // credit_types - computed: true, optional: true, required: false
@@ -684,6 +1052,22 @@ export class BillingBudgetBudgetFilterOutputReference extends cdktf.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get subaccountsInput() {
     return this._subaccounts;
+  }
+
+  // custom_period - computed: false, optional: true, required: false
+  private _customPeriod = new BillingBudgetBudgetFilterCustomPeriodOutputReference(this, "custom_period");
+  public get customPeriod() {
+    return this._customPeriod;
+  }
+  public putCustomPeriod(value: BillingBudgetBudgetFilterCustomPeriod) {
+    this._customPeriod.internalValue = value;
+  }
+  public resetCustomPeriod() {
+    this._customPeriod.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPeriodInput() {
+    return this._customPeriod.internalValue;
   }
 }
 export interface BillingBudgetThresholdRules {
@@ -969,7 +1353,7 @@ export class BillingBudget extends cdktf.TerraformResource {
       terraformResourceType: 'google_billing_budget',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

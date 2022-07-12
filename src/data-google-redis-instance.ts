@@ -519,7 +519,7 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -570,6 +570,11 @@ export class DataGoogleRedisInstance extends cdktf.TerraformDataSource {
   // current_location_id - computed: true, optional: false, required: false
   public get currentLocationId() {
     return this.getStringAttribute('current_location_id');
+  }
+
+  // customer_managed_key - computed: true, optional: false, required: false
+  public get customerManagedKey() {
+    return this.getStringAttribute('customer_managed_key');
   }
 
   // display_name - computed: true, optional: false, required: false

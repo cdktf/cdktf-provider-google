@@ -32,6 +32,12 @@ export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArgumen
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
+  /**
+  * Project ID of the project that contains the instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#project DataGoogleSqlBackupRun#project}
+  */
+  readonly project?: string;
 }
 
 /**
@@ -60,7 +66,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_backup_run',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.27.0',
+        providerVersion: '4.28.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -72,6 +78,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._instance = config.instance;
     this._mostRecent = config.mostRecent;
+    this._project = config.project;
   }
 
   // ==========
@@ -144,6 +151,22 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
     return this._mostRecent;
   }
 
+  // project - computed: true, optional: true, required: false
+  private _project?: string; 
+  public get project() {
+    return this.getStringAttribute('project');
+  }
+  public set project(value: string) {
+    this._project = value;
+  }
+  public resetProject() {
+    this._project = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectInput() {
+    return this._project;
+  }
+
   // start_time - computed: true, optional: false, required: false
   public get startTime() {
     return this.getStringAttribute('start_time');
@@ -164,6 +187,7 @@ export class DataGoogleSqlBackupRun extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
       most_recent: cdktf.booleanToTerraform(this._mostRecent),
+      project: cdktf.stringToTerraform(this._project),
     };
   }
 }
