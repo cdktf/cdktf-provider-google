@@ -183,6 +183,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly authenticatorGroupsConfig?: ContainerClusterAuthenticatorGroupsConfig;
   /**
+  * binary_authorization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#binary_authorization ContainerCluster#binary_authorization}
+  */
+  readonly binaryAuthorization?: ContainerClusterBinaryAuthorization;
+  /**
   * cluster_autoscaling block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#cluster_autoscaling ContainerCluster#cluster_autoscaling}
@@ -1073,6 +1079,102 @@ export class ContainerClusterAuthenticatorGroupsConfigOutputReference extends cd
   // Temporarily expose input value. Use with caution.
   public get securityGroupInput() {
     return this._securityGroup;
+  }
+}
+export interface ContainerClusterBinaryAuthorization {
+  /**
+  * Enable Binary Authorization for this cluster.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Mode of operation for Binary Authorization policy evaluation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#evaluation_mode ContainerCluster#evaluation_mode}
+  */
+  readonly evaluationMode?: string;
+}
+
+export function containerClusterBinaryAuthorizationToTerraform(struct?: ContainerClusterBinaryAuthorizationOutputReference | ContainerClusterBinaryAuthorization): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    evaluation_mode: cdktf.stringToTerraform(struct!.evaluationMode),
+  }
+}
+
+export class ContainerClusterBinaryAuthorizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterBinaryAuthorization | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._evaluationMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.evaluationMode = this._evaluationMode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterBinaryAuthorization | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._evaluationMode = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._evaluationMode = value.evaluationMode;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // evaluation_mode - computed: false, optional: true, required: false
+  private _evaluationMode?: string; 
+  public get evaluationMode() {
+    return this.getStringAttribute('evaluation_mode');
+  }
+  public set evaluationMode(value: string) {
+    this._evaluationMode = value;
+  }
+  public resetEvaluationMode() {
+    this._evaluationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationModeInput() {
+    return this._evaluationMode;
   }
 }
 export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
@@ -7173,7 +7275,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -7210,6 +7312,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._subnetwork = config.subnetwork;
     this._addonsConfig.internalValue = config.addonsConfig;
     this._authenticatorGroupsConfig.internalValue = config.authenticatorGroupsConfig;
+    this._binaryAuthorization.internalValue = config.binaryAuthorization;
     this._clusterAutoscaling.internalValue = config.clusterAutoscaling;
     this._confidentialNodes.internalValue = config.confidentialNodes;
     this._databaseEncryption.internalValue = config.databaseEncryption;
@@ -7733,6 +7836,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._authenticatorGroupsConfig.internalValue;
   }
 
+  // binary_authorization - computed: false, optional: true, required: false
+  private _binaryAuthorization = new ContainerClusterBinaryAuthorizationOutputReference(this, "binary_authorization");
+  public get binaryAuthorization() {
+    return this._binaryAuthorization;
+  }
+  public putBinaryAuthorization(value: ContainerClusterBinaryAuthorization) {
+    this._binaryAuthorization.internalValue = value;
+  }
+  public resetBinaryAuthorization() {
+    this._binaryAuthorization.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get binaryAuthorizationInput() {
+    return this._binaryAuthorization.internalValue;
+  }
+
   // cluster_autoscaling - computed: false, optional: true, required: false
   private _clusterAutoscaling = new ContainerClusterClusterAutoscalingOutputReference(this, "cluster_autoscaling");
   public get clusterAutoscaling() {
@@ -8104,6 +8223,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       addons_config: containerClusterAddonsConfigToTerraform(this._addonsConfig.internalValue),
       authenticator_groups_config: containerClusterAuthenticatorGroupsConfigToTerraform(this._authenticatorGroupsConfig.internalValue),
+      binary_authorization: containerClusterBinaryAuthorizationToTerraform(this._binaryAuthorization.internalValue),
       cluster_autoscaling: containerClusterClusterAutoscalingToTerraform(this._clusterAutoscaling.internalValue),
       confidential_nodes: containerClusterConfidentialNodesToTerraform(this._confidentialNodes.internalValue),
       database_encryption: containerClusterDatabaseEncryptionToTerraform(this._databaseEncryption.internalValue),

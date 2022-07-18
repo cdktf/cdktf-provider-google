@@ -15,7 +15,7 @@ export interface FirebaserulesReleaseConfig extends cdktf.TerraformMetaArguments
   */
   readonly id?: string;
   /**
-  * Format: `projects/{project_id}/releases/{release_id}`
+  * Format: `projects/{project_id}/releases/{release_id}`\Firestore Rules Releases will **always** have the name 'cloud.firestore'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#name FirebaserulesRelease#name}
   */
@@ -27,7 +27,7 @@ export interface FirebaserulesReleaseConfig extends cdktf.TerraformMetaArguments
   */
   readonly project?: string;
   /**
-  * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+  * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the `Release` to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
   */
@@ -195,7 +195,7 @@ export class FirebaserulesRelease extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebaserules_release',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

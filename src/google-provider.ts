@@ -36,6 +36,10 @@ export interface GoogleProviderConfig {
   */
   readonly appEngineCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}
+  */
+  readonly artifactRegistryCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}
   */
   readonly assuredWorkloadsCustomEndpoint?: string;
@@ -176,6 +180,10 @@ export interface GoogleProviderConfig {
   */
   readonly dataprocCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}
+  */
+  readonly dataprocMetastoreCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}
   */
   readonly datastoreCustomEndpoint?: string;
@@ -231,6 +239,10 @@ export interface GoogleProviderConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}
   */
   readonly healthcareCustomEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}
+  */
+  readonly iamBetaCustomEndpoint?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}
   */
@@ -481,7 +493,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -493,6 +505,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._apigeeCustomEndpoint = config.apigeeCustomEndpoint;
     this._apikeysCustomEndpoint = config.apikeysCustomEndpoint;
     this._appEngineCustomEndpoint = config.appEngineCustomEndpoint;
+    this._artifactRegistryCustomEndpoint = config.artifactRegistryCustomEndpoint;
     this._assuredWorkloadsCustomEndpoint = config.assuredWorkloadsCustomEndpoint;
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
     this._bigqueryConnectionCustomEndpoint = config.bigqueryConnectionCustomEndpoint;
@@ -528,6 +541,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._dataflowCustomEndpoint = config.dataflowCustomEndpoint;
     this._dataplexCustomEndpoint = config.dataplexCustomEndpoint;
     this._dataprocCustomEndpoint = config.dataprocCustomEndpoint;
+    this._dataprocMetastoreCustomEndpoint = config.dataprocMetastoreCustomEndpoint;
     this._datastoreCustomEndpoint = config.datastoreCustomEndpoint;
     this._deploymentManagerCustomEndpoint = config.deploymentManagerCustomEndpoint;
     this._dialogflowCustomEndpoint = config.dialogflowCustomEndpoint;
@@ -542,6 +556,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._gameServicesCustomEndpoint = config.gameServicesCustomEndpoint;
     this._gkeHubCustomEndpoint = config.gkeHubCustomEndpoint;
     this._healthcareCustomEndpoint = config.healthcareCustomEndpoint;
+    this._iamBetaCustomEndpoint = config.iamBetaCustomEndpoint;
     this._iamCredentialsCustomEndpoint = config.iamCredentialsCustomEndpoint;
     this._iamCustomEndpoint = config.iamCustomEndpoint;
     this._iapCustomEndpoint = config.iapCustomEndpoint;
@@ -707,6 +722,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get appEngineCustomEndpointInput() {
     return this._appEngineCustomEndpoint;
+  }
+
+  // artifact_registry_custom_endpoint - computed: false, optional: true, required: false
+  private _artifactRegistryCustomEndpoint?: string; 
+  public get artifactRegistryCustomEndpoint() {
+    return this._artifactRegistryCustomEndpoint;
+  }
+  public set artifactRegistryCustomEndpoint(value: string | undefined) {
+    this._artifactRegistryCustomEndpoint = value;
+  }
+  public resetArtifactRegistryCustomEndpoint() {
+    this._artifactRegistryCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get artifactRegistryCustomEndpointInput() {
+    return this._artifactRegistryCustomEndpoint;
   }
 
   // assured_workloads_custom_endpoint - computed: false, optional: true, required: false
@@ -1269,6 +1300,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._dataprocCustomEndpoint;
   }
 
+  // dataproc_metastore_custom_endpoint - computed: false, optional: true, required: false
+  private _dataprocMetastoreCustomEndpoint?: string; 
+  public get dataprocMetastoreCustomEndpoint() {
+    return this._dataprocMetastoreCustomEndpoint;
+  }
+  public set dataprocMetastoreCustomEndpoint(value: string | undefined) {
+    this._dataprocMetastoreCustomEndpoint = value;
+  }
+  public resetDataprocMetastoreCustomEndpoint() {
+    this._dataprocMetastoreCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataprocMetastoreCustomEndpointInput() {
+    return this._dataprocMetastoreCustomEndpoint;
+  }
+
   // datastore_custom_endpoint - computed: false, optional: true, required: false
   private _datastoreCustomEndpoint?: string; 
   public get datastoreCustomEndpoint() {
@@ -1491,6 +1538,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get healthcareCustomEndpointInput() {
     return this._healthcareCustomEndpoint;
+  }
+
+  // iam_beta_custom_endpoint - computed: false, optional: true, required: false
+  private _iamBetaCustomEndpoint?: string; 
+  public get iamBetaCustomEndpoint() {
+    return this._iamBetaCustomEndpoint;
+  }
+  public set iamBetaCustomEndpoint(value: string | undefined) {
+    this._iamBetaCustomEndpoint = value;
+  }
+  public resetIamBetaCustomEndpoint() {
+    this._iamBetaCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iamBetaCustomEndpointInput() {
+    return this._iamBetaCustomEndpoint;
   }
 
   // iam_credentials_custom_endpoint - computed: false, optional: true, required: false
@@ -2290,6 +2353,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       apigee_custom_endpoint: cdktf.stringToTerraform(this._apigeeCustomEndpoint),
       apikeys_custom_endpoint: cdktf.stringToTerraform(this._apikeysCustomEndpoint),
       app_engine_custom_endpoint: cdktf.stringToTerraform(this._appEngineCustomEndpoint),
+      artifact_registry_custom_endpoint: cdktf.stringToTerraform(this._artifactRegistryCustomEndpoint),
       assured_workloads_custom_endpoint: cdktf.stringToTerraform(this._assuredWorkloadsCustomEndpoint),
       big_query_custom_endpoint: cdktf.stringToTerraform(this._bigQueryCustomEndpoint),
       bigquery_connection_custom_endpoint: cdktf.stringToTerraform(this._bigqueryConnectionCustomEndpoint),
@@ -2325,6 +2389,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       dataflow_custom_endpoint: cdktf.stringToTerraform(this._dataflowCustomEndpoint),
       dataplex_custom_endpoint: cdktf.stringToTerraform(this._dataplexCustomEndpoint),
       dataproc_custom_endpoint: cdktf.stringToTerraform(this._dataprocCustomEndpoint),
+      dataproc_metastore_custom_endpoint: cdktf.stringToTerraform(this._dataprocMetastoreCustomEndpoint),
       datastore_custom_endpoint: cdktf.stringToTerraform(this._datastoreCustomEndpoint),
       deployment_manager_custom_endpoint: cdktf.stringToTerraform(this._deploymentManagerCustomEndpoint),
       dialogflow_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCustomEndpoint),
@@ -2339,6 +2404,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       game_services_custom_endpoint: cdktf.stringToTerraform(this._gameServicesCustomEndpoint),
       gke_hub_custom_endpoint: cdktf.stringToTerraform(this._gkeHubCustomEndpoint),
       healthcare_custom_endpoint: cdktf.stringToTerraform(this._healthcareCustomEndpoint),
+      iam_beta_custom_endpoint: cdktf.stringToTerraform(this._iamBetaCustomEndpoint),
       iam_credentials_custom_endpoint: cdktf.stringToTerraform(this._iamCredentialsCustomEndpoint),
       iam_custom_endpoint: cdktf.stringToTerraform(this._iamCustomEndpoint),
       iap_custom_endpoint: cdktf.stringToTerraform(this._iapCustomEndpoint),

@@ -250,7 +250,7 @@ export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.Comp
     }
   }
 
-  // artifact_storage - computed: false, optional: true, required: false
+  // artifact_storage - computed: true, optional: true, required: false
   private _artifactStorage?: string; 
   public get artifactStorage() {
     return this.getStringAttribute('artifact_storage');
@@ -266,7 +266,7 @@ export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.Comp
     return this._artifactStorage;
   }
 
-  // service_account - computed: false, optional: true, required: false
+  // service_account - computed: true, optional: true, required: false
   private _serviceAccount?: string; 
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
@@ -583,7 +583,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_target',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

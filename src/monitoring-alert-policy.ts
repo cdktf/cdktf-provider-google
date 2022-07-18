@@ -2570,7 +2570,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_alert_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
