@@ -49,7 +49,7 @@ Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   /**
   * The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs. Default value: "ENCRYPT_DECRYPT" Possible values: ["ENCRYPT_DECRYPT", "ASYMMETRIC_SIGN", "ASYMMETRIC_DECRYPT"]
+for possible inputs. Default value: "ENCRYPT_DECRYPT" Possible values: ["ENCRYPT_DECRYPT", "ASYMMETRIC_SIGN", "ASYMMETRIC_DECRYPT", "MAC"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key#purpose KmsCryptoKey#purpose}
   */
@@ -333,7 +333,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_crypto_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

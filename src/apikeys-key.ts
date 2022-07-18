@@ -21,7 +21,7 @@ export interface ApikeysKeyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
-  * The resource name of the key. The name must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the name must match the regular expression: [a-z]([a-z0-9-]{0,61}[a-z0-9])?.
+  * The resource name of the key. The name must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the name must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apikeys_key#name ApikeysKey#name}
   */
@@ -887,7 +887,7 @@ export class ApikeysKey extends cdktf.TerraformResource {
       terraformResourceType: 'google_apikeys_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

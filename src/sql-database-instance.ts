@@ -20,6 +20,10 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#encryption_key_name SqlDatabaseInstance#encryption_key_name}
+  */
+  readonly encryptionKeyName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#id SqlDatabaseInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -2944,7 +2948,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.28.0',
+        providerVersion: '4.29.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2954,6 +2958,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     });
     this._databaseVersion = config.databaseVersion;
     this._deletionProtection = config.deletionProtection;
+    this._encryptionKeyName = config.encryptionKeyName;
     this._id = config.id;
     this._masterInstanceName = config.masterInstanceName;
     this._name = config.name;
@@ -3003,6 +3008,22 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get deletionProtectionInput() {
     return this._deletionProtection;
+  }
+
+  // encryption_key_name - computed: true, optional: true, required: false
+  private _encryptionKeyName?: string; 
+  public get encryptionKeyName() {
+    return this.getStringAttribute('encryption_key_name');
+  }
+  public set encryptionKeyName(value: string) {
+    this._encryptionKeyName = value;
+  }
+  public resetEncryptionKeyName() {
+    this._encryptionKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionKeyNameInput() {
+    return this._encryptionKeyName;
   }
 
   // first_ip_address - computed: true, optional: false, required: false
@@ -3226,6 +3247,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     return {
       database_version: cdktf.stringToTerraform(this._databaseVersion),
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
+      encryption_key_name: cdktf.stringToTerraform(this._encryptionKeyName),
       id: cdktf.stringToTerraform(this._id),
       master_instance_name: cdktf.stringToTerraform(this._masterInstanceName),
       name: cdktf.stringToTerraform(this._name),
