@@ -74,6 +74,105 @@ last character, which cannot be a dash.
   */
   readonly timeouts?: ComputeBackendBucketTimeouts;
 }
+export interface ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders {
+  /**
+  * The header field name to match on when bypassing cache. Values are case-insensitive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#header_name ComputeBackendBucket#header_name}
+  */
+  readonly headerName?: string;
+}
+
+export function computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToTerraform(struct?: ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+  }
+}
+
+export class ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+    }
+  }
+
+  // header_name - computed: false, optional: true, required: false
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  public resetHeaderName() {
+    this._headerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+}
+
+export class ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersList extends cdktf.ComplexList {
+  public internalValue? : ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference {
+    return new ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeBackendBucketCdnPolicyCacheKeyPolicy {
   /**
   * Allows HTTP request headers (by name) to be used in the
@@ -337,6 +436,12 @@ that do not have an existing valid TTL (max-age or s-max-age).
   */
   readonly negativeCaching?: boolean | cdktf.IResolvable;
   /**
+  * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#request_coalescing ComputeBackendBucket#request_coalescing}
+  */
+  readonly requestCoalescing?: boolean | cdktf.IResolvable;
+  /**
   * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#serve_while_stale ComputeBackendBucket#serve_while_stale}
@@ -355,6 +460,12 @@ header. The actual headers served in responses will not be altered.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#signed_url_cache_max_age_sec ComputeBackendBucket#signed_url_cache_max_age_sec}
   */
   readonly signedUrlCacheMaxAgeSec?: number;
+  /**
+  * bypass_cache_on_request_headers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#bypass_cache_on_request_headers ComputeBackendBucket#bypass_cache_on_request_headers}
+  */
+  readonly bypassCacheOnRequestHeaders?: ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders[] | cdktf.IResolvable;
   /**
   * cache_key_policy block
   * 
@@ -380,8 +491,10 @@ export function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackend
     default_ttl: cdktf.numberToTerraform(struct!.defaultTtl),
     max_ttl: cdktf.numberToTerraform(struct!.maxTtl),
     negative_caching: cdktf.booleanToTerraform(struct!.negativeCaching),
+    request_coalescing: cdktf.booleanToTerraform(struct!.requestCoalescing),
     serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
+    bypass_cache_on_request_headers: cdktf.listMapper(computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToTerraform)(struct!.bypassCacheOnRequestHeaders),
     cache_key_policy: computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
     negative_caching_policy: cdktf.listMapper(computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
   }
@@ -421,6 +534,10 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.negativeCaching = this._negativeCaching;
     }
+    if (this._requestCoalescing !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestCoalescing = this._requestCoalescing;
+    }
     if (this._serveWhileStale !== undefined) {
       hasAnyValues = true;
       internalValueResult.serveWhileStale = this._serveWhileStale;
@@ -428,6 +545,10 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
     if (this._signedUrlCacheMaxAgeSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.signedUrlCacheMaxAgeSec = this._signedUrlCacheMaxAgeSec;
+    }
+    if (this._bypassCacheOnRequestHeaders?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bypassCacheOnRequestHeaders = this._bypassCacheOnRequestHeaders?.internalValue;
     }
     if (this._cacheKeyPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -448,8 +569,10 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       this._defaultTtl = undefined;
       this._maxTtl = undefined;
       this._negativeCaching = undefined;
+      this._requestCoalescing = undefined;
       this._serveWhileStale = undefined;
       this._signedUrlCacheMaxAgeSec = undefined;
+      this._bypassCacheOnRequestHeaders.internalValue = undefined;
       this._cacheKeyPolicy.internalValue = undefined;
       this._negativeCachingPolicy.internalValue = undefined;
     }
@@ -460,8 +583,10 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
       this._defaultTtl = value.defaultTtl;
       this._maxTtl = value.maxTtl;
       this._negativeCaching = value.negativeCaching;
+      this._requestCoalescing = value.requestCoalescing;
       this._serveWhileStale = value.serveWhileStale;
       this._signedUrlCacheMaxAgeSec = value.signedUrlCacheMaxAgeSec;
+      this._bypassCacheOnRequestHeaders.internalValue = value.bypassCacheOnRequestHeaders;
       this._cacheKeyPolicy.internalValue = value.cacheKeyPolicy;
       this._negativeCachingPolicy.internalValue = value.negativeCachingPolicy;
     }
@@ -547,6 +672,22 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
     return this._negativeCaching;
   }
 
+  // request_coalescing - computed: false, optional: true, required: false
+  private _requestCoalescing?: boolean | cdktf.IResolvable; 
+  public get requestCoalescing() {
+    return this.getBooleanAttribute('request_coalescing');
+  }
+  public set requestCoalescing(value: boolean | cdktf.IResolvable) {
+    this._requestCoalescing = value;
+  }
+  public resetRequestCoalescing() {
+    this._requestCoalescing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestCoalescingInput() {
+    return this._requestCoalescing;
+  }
+
   // serve_while_stale - computed: true, optional: true, required: false
   private _serveWhileStale?: number; 
   public get serveWhileStale() {
@@ -577,6 +718,22 @@ export class ComputeBackendBucketCdnPolicyOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get signedUrlCacheMaxAgeSecInput() {
     return this._signedUrlCacheMaxAgeSec;
+  }
+
+  // bypass_cache_on_request_headers - computed: false, optional: true, required: false
+  private _bypassCacheOnRequestHeaders = new ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersList(this, "bypass_cache_on_request_headers", false);
+  public get bypassCacheOnRequestHeaders() {
+    return this._bypassCacheOnRequestHeaders;
+  }
+  public putBypassCacheOnRequestHeaders(value: ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders[] | cdktf.IResolvable) {
+    this._bypassCacheOnRequestHeaders.internalValue = value;
+  }
+  public resetBypassCacheOnRequestHeaders() {
+    this._bypassCacheOnRequestHeaders.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bypassCacheOnRequestHeadersInput() {
+    return this._bypassCacheOnRequestHeaders.internalValue;
   }
 
   // cache_key_policy - computed: false, optional: true, required: false
@@ -767,7 +924,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1061,6 +1061,14 @@ alerted on quickly.
   */
   readonly duration: string;
   /**
+  * A condition control that determines how
+metric-threshold conditions are evaluated when
+data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
+  */
+  readonly evaluationMissingData?: string;
+  /**
   * Monitoring Query Language query that outputs a boolean stream.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#query MonitoringAlertPolicy#query}
@@ -1081,6 +1089,7 @@ export function monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageT
   }
   return {
     duration: cdktf.stringToTerraform(struct!.duration),
+    evaluation_missing_data: cdktf.stringToTerraform(struct!.evaluationMissingData),
     query: cdktf.stringToTerraform(struct!.query),
     trigger: monitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTriggerToTerraform(struct!.trigger),
   }
@@ -1104,6 +1113,10 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
+    if (this._evaluationMissingData !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.evaluationMissingData = this._evaluationMissingData;
+    }
     if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
@@ -1119,12 +1132,14 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
     if (value === undefined) {
       this.isEmptyObject = false;
       this._duration = undefined;
+      this._evaluationMissingData = undefined;
       this._query = undefined;
       this._trigger.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._duration = value.duration;
+      this._evaluationMissingData = value.evaluationMissingData;
       this._query = value.query;
       this._trigger.internalValue = value.trigger;
     }
@@ -1141,6 +1156,22 @@ export class MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageOutp
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
     return this._duration;
+  }
+
+  // evaluation_missing_data - computed: false, optional: true, required: false
+  private _evaluationMissingData?: string; 
+  public get evaluationMissingData() {
+    return this.getStringAttribute('evaluation_missing_data');
+  }
+  public set evaluationMissingData(value: string) {
+    this._evaluationMissingData = value;
+  }
+  public resetEvaluationMissingData() {
+    this._evaluationMissingData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationMissingDataInput() {
+    return this._evaluationMissingData;
   }
 
   // query - computed: false, optional: false, required: true
@@ -1837,6 +1868,14 @@ alerted on quickly.
   */
   readonly duration: string;
   /**
+  * A condition control that determines how
+metric-threshold conditions are evaluated when
+data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
+  */
+  readonly evaluationMissingData?: string;
+  /**
   * A filter that identifies which time series
 should be compared with the threshold.The
 filter is similar to the one that is
@@ -1889,6 +1928,7 @@ export function monitoringAlertPolicyConditionsConditionThresholdToTerraform(str
     comparison: cdktf.stringToTerraform(struct!.comparison),
     denominator_filter: cdktf.stringToTerraform(struct!.denominatorFilter),
     duration: cdktf.stringToTerraform(struct!.duration),
+    evaluation_missing_data: cdktf.stringToTerraform(struct!.evaluationMissingData),
     filter: cdktf.stringToTerraform(struct!.filter),
     threshold_value: cdktf.numberToTerraform(struct!.thresholdValue),
     aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform)(struct!.aggregations),
@@ -1923,6 +1963,10 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
+    if (this._evaluationMissingData !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.evaluationMissingData = this._evaluationMissingData;
+    }
     if (this._filter !== undefined) {
       hasAnyValues = true;
       internalValueResult.filter = this._filter;
@@ -1952,6 +1996,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       this._comparison = undefined;
       this._denominatorFilter = undefined;
       this._duration = undefined;
+      this._evaluationMissingData = undefined;
       this._filter = undefined;
       this._thresholdValue = undefined;
       this._aggregations.internalValue = undefined;
@@ -1963,6 +2008,7 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
       this._comparison = value.comparison;
       this._denominatorFilter = value.denominatorFilter;
       this._duration = value.duration;
+      this._evaluationMissingData = value.evaluationMissingData;
       this._filter = value.filter;
       this._thresholdValue = value.thresholdValue;
       this._aggregations.internalValue = value.aggregations;
@@ -2011,6 +2057,22 @@ export class MonitoringAlertPolicyConditionsConditionThresholdOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
     return this._duration;
+  }
+
+  // evaluation_missing_data - computed: false, optional: true, required: false
+  private _evaluationMissingData?: string; 
+  public get evaluationMissingData() {
+    return this.getStringAttribute('evaluation_missing_data');
+  }
+  public set evaluationMissingData(value: string) {
+    this._evaluationMissingData = value;
+  }
+  public resetEvaluationMissingData() {
+    this._evaluationMissingData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationMissingDataInput() {
+    return this._evaluationMissingData;
   }
 
   // filter - computed: false, optional: true, required: false
@@ -2570,7 +2632,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_alert_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

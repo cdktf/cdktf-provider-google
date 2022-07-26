@@ -2445,6 +2445,12 @@ export interface ComputeInstanceFromTemplateScheduling {
   */
   readonly automaticRestart?: boolean | cdktf.IResolvable;
   /**
+  * Specifies the action GCE should take when SPOT VM is preempted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#instance_termination_action ComputeInstanceFromTemplate#instance_termination_action}
+  */
+  readonly instanceTerminationAction?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#min_node_cpus ComputeInstanceFromTemplate#min_node_cpus}
   */
   readonly minNodeCpus?: number;
@@ -2481,6 +2487,7 @@ export function computeInstanceFromTemplateSchedulingToTerraform(struct?: Comput
   }
   return {
     automatic_restart: cdktf.booleanToTerraform(struct!.automaticRestart),
+    instance_termination_action: cdktf.stringToTerraform(struct!.instanceTerminationAction),
     min_node_cpus: cdktf.numberToTerraform(struct!.minNodeCpus),
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
@@ -2506,6 +2513,10 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
     if (this._automaticRestart !== undefined) {
       hasAnyValues = true;
       internalValueResult.automaticRestart = this._automaticRestart;
+    }
+    if (this._instanceTerminationAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instanceTerminationAction = this._instanceTerminationAction;
     }
     if (this._minNodeCpus !== undefined) {
       hasAnyValues = true;
@@ -2534,6 +2545,7 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
     if (value === undefined) {
       this.isEmptyObject = false;
       this._automaticRestart = undefined;
+      this._instanceTerminationAction = undefined;
       this._minNodeCpus = undefined;
       this._onHostMaintenance = undefined;
       this._preemptible = undefined;
@@ -2543,6 +2555,7 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._automaticRestart = value.automaticRestart;
+      this._instanceTerminationAction = value.instanceTerminationAction;
       this._minNodeCpus = value.minNodeCpus;
       this._onHostMaintenance = value.onHostMaintenance;
       this._preemptible = value.preemptible;
@@ -2565,6 +2578,22 @@ export class ComputeInstanceFromTemplateSchedulingOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get automaticRestartInput() {
     return this._automaticRestart;
+  }
+
+  // instance_termination_action - computed: true, optional: true, required: false
+  private _instanceTerminationAction?: string; 
+  public get instanceTerminationAction() {
+    return this.getStringAttribute('instance_termination_action');
+  }
+  public set instanceTerminationAction(value: string) {
+    this._instanceTerminationAction = value;
+  }
+  public resetInstanceTerminationAction() {
+    this._instanceTerminationAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceTerminationActionInput() {
+    return this._instanceTerminationAction;
   }
 
   // min_node_cpus - computed: true, optional: true, required: false
@@ -2928,7 +2957,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_from_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
