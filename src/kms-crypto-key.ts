@@ -221,7 +221,7 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
   */
   readonly algorithm: string;
   /**
-  * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL". Defaults to "SOFTWARE".
+  * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL", "EXTERNAL_VPC". Defaults to "SOFTWARE".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_crypto_key#protection_level KmsCryptoKey#protection_level}
   */
@@ -333,7 +333,7 @@ export class KmsCryptoKey extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_crypto_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

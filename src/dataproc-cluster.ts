@@ -191,6 +191,76 @@ export class DataprocClusterClusterConfigEncryptionConfigOutputReference extends
     return this._kmsKeyName;
   }
 }
+export interface DataprocClusterClusterConfigEndpointConfig {
+  /**
+  * The flag to enable http access to specific ports on the cluster from external sources (aka Component Gateway). Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#enable_http_port_access DataprocCluster#enable_http_port_access}
+  */
+  readonly enableHttpPortAccess: boolean | cdktf.IResolvable;
+}
+
+export function dataprocClusterClusterConfigEndpointConfigToTerraform(struct?: DataprocClusterClusterConfigEndpointConfigOutputReference | DataprocClusterClusterConfigEndpointConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_http_port_access: cdktf.booleanToTerraform(struct!.enableHttpPortAccess),
+  }
+}
+
+export class DataprocClusterClusterConfigEndpointConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocClusterClusterConfigEndpointConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableHttpPortAccess !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableHttpPortAccess = this._enableHttpPortAccess;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigEndpointConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableHttpPortAccess = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableHttpPortAccess = value.enableHttpPortAccess;
+    }
+  }
+
+  // enable_http_port_access - computed: false, optional: false, required: true
+  private _enableHttpPortAccess?: boolean | cdktf.IResolvable; 
+  public get enableHttpPortAccess() {
+    return this.getBooleanAttribute('enable_http_port_access');
+  }
+  public set enableHttpPortAccess(value: boolean | cdktf.IResolvable) {
+    this._enableHttpPortAccess = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableHttpPortAccessInput() {
+    return this._enableHttpPortAccess;
+  }
+
+  // http_ports - computed: true, optional: false, required: false
+  private _httpPorts = new cdktf.StringMap(this, "http_ports");
+  public get httpPorts() {
+    return this._httpPorts;
+  }
+}
 export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
   /**
   * Defines whether instances have integrity monitoring enabled.
@@ -738,6 +808,107 @@ export class DataprocClusterClusterConfigInitializationActionList extends cdktf.
   */
   public get(index: number): DataprocClusterClusterConfigInitializationActionOutputReference {
     return new DataprocClusterClusterConfigInitializationActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataprocClusterClusterConfigLifecycleConfig {
+  /**
+  * The time when cluster will be auto-deleted. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#auto_delete_time DataprocCluster#auto_delete_time}
+  */
+  readonly autoDeleteTime?: string;
+  /**
+  * The duration to keep the cluster alive while idling (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#idle_delete_ttl DataprocCluster#idle_delete_ttl}
+  */
+  readonly idleDeleteTtl?: string;
+}
+
+export function dataprocClusterClusterConfigLifecycleConfigToTerraform(struct?: DataprocClusterClusterConfigLifecycleConfigOutputReference | DataprocClusterClusterConfigLifecycleConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_delete_time: cdktf.stringToTerraform(struct!.autoDeleteTime),
+    idle_delete_ttl: cdktf.stringToTerraform(struct!.idleDeleteTtl),
+  }
+}
+
+export class DataprocClusterClusterConfigLifecycleConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocClusterClusterConfigLifecycleConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoDeleteTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoDeleteTime = this._autoDeleteTime;
+    }
+    if (this._idleDeleteTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.idleDeleteTtl = this._idleDeleteTtl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigLifecycleConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._autoDeleteTime = undefined;
+      this._idleDeleteTtl = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoDeleteTime = value.autoDeleteTime;
+      this._idleDeleteTtl = value.idleDeleteTtl;
+    }
+  }
+
+  // auto_delete_time - computed: false, optional: true, required: false
+  private _autoDeleteTime?: string; 
+  public get autoDeleteTime() {
+    return this.getStringAttribute('auto_delete_time');
+  }
+  public set autoDeleteTime(value: string) {
+    this._autoDeleteTime = value;
+  }
+  public resetAutoDeleteTime() {
+    this._autoDeleteTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoDeleteTimeInput() {
+    return this._autoDeleteTime;
+  }
+
+  // idle_delete_ttl - computed: false, optional: true, required: false
+  private _idleDeleteTtl?: string; 
+  public get idleDeleteTtl() {
+    return this.getStringAttribute('idle_delete_ttl');
+  }
+  public set idleDeleteTtl(value: string) {
+    this._idleDeleteTtl = value;
+  }
+  public resetIdleDeleteTtl() {
+    this._idleDeleteTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idleDeleteTtlInput() {
+    return this._idleDeleteTtl;
+  }
+
+  // idle_start_time - computed: true, optional: false, required: false
+  public get idleStartTime() {
+    return this.getStringAttribute('idle_start_time');
   }
 }
 export interface DataprocClusterClusterConfigMasterConfigAccelerators {
@@ -2678,6 +2849,12 @@ export interface DataprocClusterClusterConfig {
   */
   readonly encryptionConfig?: DataprocClusterClusterConfigEncryptionConfig;
   /**
+  * endpoint_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#endpoint_config DataprocCluster#endpoint_config}
+  */
+  readonly endpointConfig?: DataprocClusterClusterConfigEndpointConfig;
+  /**
   * gce_cluster_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#gce_cluster_config DataprocCluster#gce_cluster_config}
@@ -2689,6 +2866,12 @@ export interface DataprocClusterClusterConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#initialization_action DataprocCluster#initialization_action}
   */
   readonly initializationAction?: DataprocClusterClusterConfigInitializationAction[] | cdktf.IResolvable;
+  /**
+  * lifecycle_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#lifecycle_config DataprocCluster#lifecycle_config}
+  */
+  readonly lifecycleConfig?: DataprocClusterClusterConfigLifecycleConfig;
   /**
   * master_config block
   * 
@@ -2737,8 +2920,10 @@ export function dataprocClusterClusterConfigToTerraform(struct?: DataprocCluster
     temp_bucket: cdktf.stringToTerraform(struct!.tempBucket),
     autoscaling_config: dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct!.autoscalingConfig),
     encryption_config: dataprocClusterClusterConfigEncryptionConfigToTerraform(struct!.encryptionConfig),
+    endpoint_config: dataprocClusterClusterConfigEndpointConfigToTerraform(struct!.endpointConfig),
     gce_cluster_config: dataprocClusterClusterConfigGceClusterConfigToTerraform(struct!.gceClusterConfig),
     initialization_action: cdktf.listMapper(dataprocClusterClusterConfigInitializationActionToTerraform)(struct!.initializationAction),
+    lifecycle_config: dataprocClusterClusterConfigLifecycleConfigToTerraform(struct!.lifecycleConfig),
     master_config: dataprocClusterClusterConfigMasterConfigToTerraform(struct!.masterConfig),
     metastore_config: dataprocClusterClusterConfigMetastoreConfigToTerraform(struct!.metastoreConfig),
     preemptible_worker_config: dataprocClusterClusterConfigPreemptibleWorkerConfigToTerraform(struct!.preemptibleWorkerConfig),
@@ -2778,6 +2963,10 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.encryptionConfig = this._encryptionConfig?.internalValue;
     }
+    if (this._endpointConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointConfig = this._endpointConfig?.internalValue;
+    }
     if (this._gceClusterConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gceClusterConfig = this._gceClusterConfig?.internalValue;
@@ -2785,6 +2974,10 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
     if (this._initializationAction?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.initializationAction = this._initializationAction?.internalValue;
+    }
+    if (this._lifecycleConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lifecycleConfig = this._lifecycleConfig?.internalValue;
     }
     if (this._masterConfig?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -2820,8 +3013,10 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       this._tempBucket = undefined;
       this._autoscalingConfig.internalValue = undefined;
       this._encryptionConfig.internalValue = undefined;
+      this._endpointConfig.internalValue = undefined;
       this._gceClusterConfig.internalValue = undefined;
       this._initializationAction.internalValue = undefined;
+      this._lifecycleConfig.internalValue = undefined;
       this._masterConfig.internalValue = undefined;
       this._metastoreConfig.internalValue = undefined;
       this._preemptibleWorkerConfig.internalValue = undefined;
@@ -2835,8 +3030,10 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       this._tempBucket = value.tempBucket;
       this._autoscalingConfig.internalValue = value.autoscalingConfig;
       this._encryptionConfig.internalValue = value.encryptionConfig;
+      this._endpointConfig.internalValue = value.endpointConfig;
       this._gceClusterConfig.internalValue = value.gceClusterConfig;
       this._initializationAction.internalValue = value.initializationAction;
+      this._lifecycleConfig.internalValue = value.lifecycleConfig;
       this._masterConfig.internalValue = value.masterConfig;
       this._metastoreConfig.internalValue = value.metastoreConfig;
       this._preemptibleWorkerConfig.internalValue = value.preemptibleWorkerConfig;
@@ -2915,6 +3112,22 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
     return this._encryptionConfig.internalValue;
   }
 
+  // endpoint_config - computed: false, optional: true, required: false
+  private _endpointConfig = new DataprocClusterClusterConfigEndpointConfigOutputReference(this, "endpoint_config");
+  public get endpointConfig() {
+    return this._endpointConfig;
+  }
+  public putEndpointConfig(value: DataprocClusterClusterConfigEndpointConfig) {
+    this._endpointConfig.internalValue = value;
+  }
+  public resetEndpointConfig() {
+    this._endpointConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointConfigInput() {
+    return this._endpointConfig.internalValue;
+  }
+
   // gce_cluster_config - computed: false, optional: true, required: false
   private _gceClusterConfig = new DataprocClusterClusterConfigGceClusterConfigOutputReference(this, "gce_cluster_config");
   public get gceClusterConfig() {
@@ -2945,6 +3158,22 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get initializationActionInput() {
     return this._initializationAction.internalValue;
+  }
+
+  // lifecycle_config - computed: false, optional: true, required: false
+  private _lifecycleConfig = new DataprocClusterClusterConfigLifecycleConfigOutputReference(this, "lifecycle_config");
+  public get lifecycleConfig() {
+    return this._lifecycleConfig;
+  }
+  public putLifecycleConfig(value: DataprocClusterClusterConfigLifecycleConfig) {
+    this._lifecycleConfig.internalValue = value;
+  }
+  public resetLifecycleConfig() {
+    this._lifecycleConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lifecycleConfigInput() {
+    return this._lifecycleConfig.internalValue;
   }
 
   // master_config - computed: false, optional: true, required: false
@@ -4414,7 +4643,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

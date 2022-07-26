@@ -155,7 +155,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
   */
   readonly direction?: string;
   /**
-  * Protocols that apply as a filter on mirrored traffic. Possible values: ["tcp", "udp", "icmp"]
+  * Possible IP protocols including tcp, udp, icmp and esp
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_packet_mirroring#ip_protocols ComputePacketMirroring#ip_protocols}
   */
@@ -803,7 +803,7 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_packet_mirroring',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

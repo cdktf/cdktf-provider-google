@@ -21,7 +21,7 @@ export interface NotebooksRuntimeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
-  * The name specified for the Notebook instance.
+  * The name specified for the Notebook runtime.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#name NotebooksRuntime#name}
   */
@@ -1516,6 +1516,13 @@ or VirtioNet. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
   */
   readonly nicType?: string;
   /**
+  * Reserved IP Range name is used for VPC Peering. The
+subnetwork allocation will use the range *name* if it's assigned.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#reserved_ip_range NotebooksRuntime#reserved_ip_range}
+  */
+  readonly reservedIpRange?: string;
+  /**
   * The Compute Engine subnetwork to be used for machine
 communications. Cannot be specified with network. A full URL or
 partial URI are valid. Examples:
@@ -1578,6 +1585,7 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigToTerraform(st
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     network: cdktf.stringToTerraform(struct!.network),
     nic_type: cdktf.stringToTerraform(struct!.nicType),
+    reserved_ip_range: cdktf.stringToTerraform(struct!.reservedIpRange),
     subnet: cdktf.stringToTerraform(struct!.subnet),
     tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
     accelerator_config: notebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigToTerraform(struct!.acceleratorConfig),
@@ -1626,6 +1634,10 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
       hasAnyValues = true;
       internalValueResult.nicType = this._nicType;
     }
+    if (this._reservedIpRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reservedIpRange = this._reservedIpRange;
+    }
     if (this._subnet !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnet = this._subnet;
@@ -1666,6 +1678,7 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
       this._metadata = undefined;
       this._network = undefined;
       this._nicType = undefined;
+      this._reservedIpRange = undefined;
       this._subnet = undefined;
       this._tags = undefined;
       this._acceleratorConfig.internalValue = undefined;
@@ -1682,6 +1695,7 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
       this._metadata = value.metadata;
       this._network = value.network;
       this._nicType = value.nicType;
+      this._reservedIpRange = value.reservedIpRange;
       this._subnet = value.subnet;
       this._tags = value.tags;
       this._acceleratorConfig.internalValue = value.acceleratorConfig;
@@ -1789,6 +1803,22 @@ export class NotebooksRuntimeVirtualMachineVirtualMachineConfigOutputReference e
   // Temporarily expose input value. Use with caution.
   public get nicTypeInput() {
     return this._nicType;
+  }
+
+  // reserved_ip_range - computed: false, optional: true, required: false
+  private _reservedIpRange?: string; 
+  public get reservedIpRange() {
+    return this.getStringAttribute('reserved_ip_range');
+  }
+  public set reservedIpRange(value: string) {
+    this._reservedIpRange = value;
+  }
+  public resetReservedIpRange() {
+    this._reservedIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservedIpRangeInput() {
+    return this._reservedIpRange;
   }
 
   // subnet - computed: false, optional: true, required: false
@@ -2009,7 +2039,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_runtime',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

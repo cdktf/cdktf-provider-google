@@ -177,7 +177,7 @@ export class ComputeSnapshotIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_snapshot_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

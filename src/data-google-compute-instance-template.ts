@@ -1034,6 +1034,11 @@ export class DataGoogleComputeInstanceTemplateSchedulingOutputReference extends 
     return this.getBooleanAttribute('automatic_restart');
   }
 
+  // instance_termination_action - computed: true, optional: false, required: false
+  public get instanceTerminationAction() {
+    return this.getStringAttribute('instance_termination_action');
+  }
+
   // min_node_cpus - computed: true, optional: false, required: false
   public get minNodeCpus() {
     return this.getNumberAttribute('min_node_cpus');
@@ -1249,7 +1254,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

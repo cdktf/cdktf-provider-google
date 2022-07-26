@@ -31,6 +31,70 @@ last character, which cannot be a dash.
   */
   readonly project?: string;
 }
+export interface DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders {
+}
+
+export function dataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToTerraform(struct?: DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // header_name - computed: true, optional: false, required: false
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+}
+
+export class DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference {
+    return new DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleComputeBackendBucketCdnPolicyCacheKeyPolicy {
 }
 
@@ -209,6 +273,12 @@ export class DataGoogleComputeBackendBucketCdnPolicyOutputReference extends cdkt
     }
   }
 
+  // bypass_cache_on_request_headers - computed: true, optional: false, required: false
+  private _bypassCacheOnRequestHeaders = new DataGoogleComputeBackendBucketCdnPolicyBypassCacheOnRequestHeadersList(this, "bypass_cache_on_request_headers", false);
+  public get bypassCacheOnRequestHeaders() {
+    return this._bypassCacheOnRequestHeaders;
+  }
+
   // cache_key_policy - computed: true, optional: false, required: false
   private _cacheKeyPolicy = new DataGoogleComputeBackendBucketCdnPolicyCacheKeyPolicyList(this, "cache_key_policy", false);
   public get cacheKeyPolicy() {
@@ -244,6 +314,11 @@ export class DataGoogleComputeBackendBucketCdnPolicyOutputReference extends cdkt
   private _negativeCachingPolicy = new DataGoogleComputeBackendBucketCdnPolicyNegativeCachingPolicyList(this, "negative_caching_policy", false);
   public get negativeCachingPolicy() {
     return this._negativeCachingPolicy;
+  }
+
+  // request_coalescing - computed: true, optional: false, required: false
+  public get requestCoalescing() {
+    return this.getBooleanAttribute('request_coalescing');
   }
 
   // serve_while_stale - computed: true, optional: false, required: false
@@ -302,7 +377,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.29.0',
+        providerVersion: '4.30.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
